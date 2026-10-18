@@ -5151,18 +5151,6 @@
     ]
   },
   {
-    "key": "Respect received",
-    "files": [
-      "underworld.js"
-    ]
-  },
-  {
-    "key": "{v0} gave you respect. Your respect rank and bonuses have been updated.",
-    "files": [
-      "underworld.js"
-    ]
-  },
-  {
     "key": "Gave respect to {v0}. +${v1} and {v2} energy.",
     "files": [
       "underworld.js"

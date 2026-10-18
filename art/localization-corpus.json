@@ -6296,7 +6296,7 @@
     "translated": true
   },
   {
-    "key": "Mafia: The new Era © · v1.19.0",
+    "key": "Mafia: The new Era © · v1.19.1",
     "files": [
       "app.js"
     ],
@@ -7043,6 +7043,13 @@
     "key": "No cars in this garage yet.",
     "files": [
       "vehicles-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "No changed fields.",
+    "files": [
+      "staff-changes.js"
     ],
     "translated": true
   },
@@ -9243,6 +9250,13 @@
     "key": "Respect given to ",
     "files": [
       "profile-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Respect received",
+    "files": [
+      "feedback.js"
     ],
     "translated": true
   },

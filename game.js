@@ -574,6 +574,14 @@ export function installGame(db, { hash, log, json, onNotify=()=>{}, bribeRoll = 
       const target=settleRaw(body.id); if(!target) fail('Player not found',404);
 
       const audit={};
+      const original={
+       possessions:all('SELECT category,item_id,quantity FROM possessions WHERE user_id=? ORDER BY category,item_id',body.id),
+       cooldowns:all('SELECT kind,available_at FROM actions WHERE user_id=? ORDER BY kind',body.id),
+       familyId:q('SELECT family_id FROM family_members WHERE user_id=?',body.id)?.family_id??null,
+       familyRole:q('SELECT family_role FROM family_members WHERE user_id=?',body.id)?.family_role??null,
+       selected_title:target.selected_title,
+       revokeSessions:q('SELECT COUNT(*) n FROM sessions WHERE user_id=?',body.id).n
+      };
 
       for(const [field,value] of Object.entries(changes)) {
 
@@ -691,7 +699,12 @@ export function installGame(db, { hash, log, json, onNotify=()=>{}, bribeRoll = 
 
       underworld.syncOwner(body.id,target,changes);
 
-      run('INSERT INTO owner_audit(actor_id,target_id,details,created_at) VALUES(?,?,?,?)',actor,body.id,JSON.stringify(audit),clock());
+      if('possessions' in audit)audit.possessions={before:original.possessions,after:all('SELECT category,item_id,quantity FROM possessions WHERE user_id=? ORDER BY category,item_id',body.id)};
+      if('cooldowns' in audit||audit.resetCooldowns){audit.cooldowns={before:original.cooldowns,after:all('SELECT kind,available_at FROM actions WHERE user_id=? ORDER BY kind',body.id)};delete audit.resetCooldowns;}
+      for(const field of ['familyId','familyRole','selected_title'])if(field in audit)audit[field]={before:original[field],after:audit[field]};
+      if('revokeSessions' in audit)audit.revokeSessions={before:original.revokeSessions,after:q('SELECT COUNT(*) n FROM sessions WHERE user_id=?',body.id).n};
+      for(const [field,value] of Object.entries(audit))if(value&&typeof value==='object'&&'before' in value&&JSON.stringify(value.before)===JSON.stringify(value.after))delete audit[field];
+      if(Object.keys(audit).length)run('INSERT INTO owner_audit(actor_id,target_id,details,created_at) VALUES(?,?,?,?)',actor,body.id,JSON.stringify(audit),clock());
 
       log(actor,`Owner updated ${target.username}: ${Object.keys(audit).join(', ')}.`);
 

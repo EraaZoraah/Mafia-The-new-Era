@@ -3,11 +3,12 @@ import {activeLocale as gameLocale} from './i18n.js';
 import {html as lhtml,text as ltext} from './localization.js';
 import {outcomeImage} from './outcome-images.js';
 import {createBriberyUI} from './bribery-ui.js';
+export const silentNotification=n=>['Respect received',t('Respect received')].includes(n.title);
 export function createFeedback({api,getMe,esc,refresh}) {
  const police=createBriberyUI({api,getMe,esc,refresh});
  const queue=[],seen=new Set();let busy=false;
  function enqueue(item){if(item.id&&seen.has(item.id))return;if(item.id)seen.add(item.id);queue.push(item);}
- async function poll(){if(!getMe()||document.hidden||busy)return;busy=true;try{const b=await api('bribery');if(b.offer){police.offer(b.offer);if(b.offer.notificationId)seen.add(b.offer.notificationId)}const d=await api('notifications');const received=d.notifications.filter(n=>!seen.has(n.id));const fresh=[];for(const n of received){if(document.querySelector('#midnight-circuit')&&[t('Midnight Circuit victory'),t('Midnight Circuit result')].includes(n.title)){await api('notifications/ack',{id:n.id});seen.add(n.id)}else if(n.title==='Private message received'&&document.querySelector('#conversation')){await api('notifications/ack',{id:n.id});seen.add(n.id)}else fresh.push(n)}for(const n of fresh)enqueue({...n,persistent:true});if(fresh.length)await refresh()}catch{}finally{busy=false}}
+ async function poll(){if(!getMe()||document.hidden||busy)return;busy=true;try{const b=await api('bribery');if(b.offer){police.offer(b.offer);if(b.offer.notificationId)seen.add(b.offer.notificationId)}const d=await api('notifications');const received=d.notifications.filter(n=>!seen.has(n.id));const fresh=[];for(const n of received){if(silentNotification(n)){await api('notifications/ack',{id:n.id});seen.add(n.id)}else if(document.querySelector('#midnight-circuit')&&[t('Midnight Circuit victory'),t('Midnight Circuit result')].includes(n.title)){await api('notifications/ack',{id:n.id});seen.add(n.id)}else if(n.title==='Private message received'&&document.querySelector('#conversation')){await api('notifications/ack',{id:n.id});seen.add(n.id)}else fresh.push(n)}for(const n of fresh)enqueue({...n,persistent:true});if(fresh.length)await refresh()}catch{}finally{busy=false}}
  function pump(){
   if(!getMe()||!queue.length||document.querySelector('dialog[open]'))return;
   const item=queue.shift(),dialog=document.createElement('dialog');

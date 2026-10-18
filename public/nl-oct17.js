@@ -98,3 +98,9 @@ Object.assign(octoberDutch,{'Item':'Bezit','Quantity':'Aantal','Coin':'Munt','Co
 Object.assign(octoberDutch,{'Mafia: The new Era © · v1.19.0':'Mafia: The new Era © · v1.19.0'});
 
 Object.assign(octoberDutch,{'name':'Naam','don':'Don','treasury':'Familiekas','drugs xp':'Drugs-XP','guns xp':'Wapenhandel-XP','created at':'Aangemaakt op','shield until':'Schild tot','guard until':'Bewaking tot','raid until':'Raid-cooldown tot'});
+
+Object.assign(octoberDutch,{'No changed fields.':'Geen gewijzigde velden.','Family dashboard':'Familiedashboard','Logistics & protection':'Logistiek & bescherming','Social & help':'Sociaal & hulp','A clearer navigation menu':'Een overzichtelijker menu','Pages are grouped into family, logistics, finances and help sections. Only one menu group stays open at a time.':'Pagina’s zijn gegroepeerd in familie, logistiek, financiën en hulp. Er blijft telkens één menugroep open.','Receiving respect no longer opens a popup.':'Bij ontvangen respect verschijnt geen pop-up meer.'});
+
+Object.assign(octoberDutch,{"Most submitted actions produce an illustrated result popup; casino games reveal their results directly at the selected table. Incoming attacks, arrests, coma and rescues create persistent notifications, including while you are offline. Receiving respect updates your standing without opening a popup.": "De meeste uitgevoerde acties tonen een pop-up met afbeelding; casinospellen tonen de uitslag rechtstreeks aan de gekozen tafel. Aanvallen, arrestaties, coma en reddingen leveren blijvende meldingen op, ook als je offline bent. Ontvangen respect werkt je status bij zonder een pop-up te openen."});
+
+Object.assign(octoberDutch,{'Mafia: The new Era © · v1.19.1':'Mafia: The new Era © · v1.19.1'});
