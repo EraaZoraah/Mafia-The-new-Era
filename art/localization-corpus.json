@@ -1903,7 +1903,21 @@
     "translated": true
   },
   {
-    "key": "Administrative edits do not move cash. Adjust cash or treasury separately. Active principal remains capped at $1 billion.",
+    "key": "Administrative change saved.",
+    "files": [
+      "owner-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Administrative edits do not move cash. Adjust cash or treasury separately. Active principal remains capped at $100 billion.",
+    "files": [
+      "owner-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Administrative edits do not move cash. Auction, race and shipment locks remain protected. Every change requires a reason and is audited.",
     "files": [
       "owner-ui.js"
     ],
@@ -3821,6 +3835,13 @@
     "translated": true
   },
   {
+    "key": "Current settings",
+    "files": [
+      "owner-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Customize your profile",
     "files": [
       "profile-ui.js"
@@ -4525,6 +4546,13 @@
     "key": "Explore investments",
     "files": [
       "premium.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Extended management",
+    "files": [
+      "owner-ui.js"
     ],
     "translated": true
   },
@@ -6268,7 +6296,7 @@
     "translated": true
   },
   {
-    "key": "Mafia: The new Era © · v1.18.6",
+    "key": "Mafia: The new Era © · v1.19.0",
     "files": [
       "app.js"
     ],
@@ -6779,6 +6807,13 @@
   },
   {
     "key": "New investment",
+    "files": [
+      "owner-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "New item",
     "files": [
       "owner-ui.js"
     ],
@@ -8713,6 +8748,7 @@
     "key": "Reason",
     "files": [
       "care-ui.js",
+      "owner-ui.js",
       "shop-ui.js"
     ],
     "translated": true
@@ -9038,6 +9074,20 @@
     "key": "Remove Capo role",
     "files": [
       "empire-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Remove this item without payout?",
+    "files": [
+      "owner-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Remove without payout",
+    "files": [
+      "owner-ui.js"
     ],
     "translated": true
   },
@@ -9399,7 +9449,8 @@
   {
     "key": "Save",
     "files": [
-      "app.js"
+      "app.js",
+      "owner-ui.js"
     ],
     "translated": true
   },

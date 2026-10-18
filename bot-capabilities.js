@@ -1,4 +1,5 @@
 // Gameplay coverage ledger; tests require an autonomous caller for every command.
+// /api/admin/state is staff-only maintenance, deliberately excluded from autonomous play.
 export const botCapabilities={
  circuit:['circuit/solo','circuit/create','circuit/join','circuit/workshop'],
  art:['art/heist','art/appraise','art/list','art/bid'],

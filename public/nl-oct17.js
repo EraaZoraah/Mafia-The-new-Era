@@ -33,3 +33,68 @@ export const octoberDutch={
  'The $100 billion limit covers all active principal per account, including matured positions awaiting collection. Personal and family limits are separate. Rates are quoted for 15 minutes and fixed when you invest. There is no early withdrawal.':'De limiet van $100 miljard geldt voor alle actieve hoofdsommen per rekening, inclusief verlopen investeringen die nog niet zijn opgehaald. Persoonlijke en familielimieten zijn gescheiden. Offertes gelden 15 minuten en de rente staat vast zodra je investeert. Vervroegd opnemen is niet mogelijk.',
  'Use an owned private jet to relocate instantly. Fares start at $1 million and increase with the distance between cities. Your destination has its own heat record. Higher heat raises the arrest chance after a failed crime from 45% to 70%. Heat in cities you have left falls by one point per hour; returning restores that city’s remaining heat. Flying never removes prison, hospital, hostage or operation cooldowns.':'Gebruik je eigen privéjet om direct te verhuizen. Vluchten kosten vanaf $1 miljoen en worden duurder naarmate de afstand tussen steden groter is. Je bestemming heeft een eigen heatniveau. Hogere heat verhoogt de arrestatiekans na een mislukte misdaad van 45% naar 70%. Heat in verlaten steden daalt elk uur met één punt; bij terugkeer geldt de resterende heat van die stad. Vliegen heft gevangenis, ziekenhuis, gijzeling of wachttijden voor acties nooit op.'
 };
+
+Object.assign(octoberDutch,{
+ "Extended management": "Uitgebreid beheer",
+ "Administrative edits do not move cash. Auction, race and shipment locks remain protected. Every change requires a reason and is audited.": "Beheerwijzigingen verplaatsen geen geld. Veiling-, race- en transportblokkeringen blijven behouden. Elke wijziging vereist een reden en wordt vastgelegd.",
+ "Crypto holdings": "Cryptobezit",
+ "Art collection": "Kunstcollectie",
+ "Stolen vehicles": "Gestolen voertuigen",
+ "Racing progress": "Racevoortgang",
+ "24-hour income cycle": "24-uursinkomenscyclus",
+ "Compound extensions": "Compound-uitbreidingen",
+ "City territories": "Stadsgebieden",
+ "Current settings": "Huidige instellingen",
+ "New item": "Nieuw item",
+ "Remove without payout": "Verwijderen zonder uitbetaling",
+ "Remove this item without payout?": "Dit bezit verwijderen zonder uitbetaling?",
+ "Administrative change saved.": "Beheerwijziging opgeslagen.",
+ "item id": "Object",
+ "quantity": "Aantal",
+ "coin": "Munt",
+ "basis": "Aankoopwaarde",
+ "spec id": "Kunstobject",
+ "authentic": "Authentiek (0 of 1)",
+ "condition": "Conditie",
+ "appraised": "Getaxeerd (0 of 1)",
+ "vehicle id": "Voertuig",
+ "condition stars": "Conditiesterren",
+ "city": "Stad",
+ "xp": "XP",
+ "next at": "Volgende race (tijdstempel)",
+ "active ms": "Verstreken actieve tijd (milliseconden)",
+ "pending income": "Opgeslagen inkomen",
+ "upgrade id": "Uitbreiding",
+ "id": "Gebied",
+ "captured": "Veroverd (0 of 1)",
+ "This item is locked in an auction.": "Dit bezit zit vast in een veiling.",
+ "Wait until this shipment arrives before editing it.": "Wacht tot deze zending aankomt voordat je deze bewerkt.",
+ "This item is locked in an auction or race.": "Dit bezit zit vast in een veiling of race.",
+ "Choose an existing item.": "Kies een bestaand bezit.",
+ "Invalid administrative edit.": "Ongeldige beheerwijziging.",
+ "Invalid administrative fields.": "Ongeldige beheervelden.",
+ "Invalid administrative value.": "Ongeldige beheerwaarde.",
+ "Unknown catalog item.": "Onbekend catalogusitem.",
+ "Item not found in this account.": "Bezit niet gevonden bij dit account.",
+ "Employee limit exceeded.": "Werknemerslimiet overschreden.",
+ "The item type cannot be changed.": "Het type bezit kan niet worden gewijzigd.",
+ "An empty holding must have zero cost basis.": "Leeg cryptobezit moet een aankoopwaarde van nul hebben.",
+ "Art collection capacity exceeded.": "Kunstcollectiecapaciteit overschreden.",
+ "Vehicle warehouse capacity exceeded.": "Voertuigopslagcapaciteit overschreden.",
+ "A master compound is required.": "Een mastercompound is vereist.",
+ "Territory not found.": "Gebied niet gevonden.",
+ "Release this territory from its current family first.": "Verwijder dit gebied eerst bij de huidige familie.",
+ "Territory ownership limit exceeded.": "Gebiedsbezitlimiet overschreden.",
+ "Choose a section and enter a reason.": "Kies een onderdeel en vul een reden in.",
+ "This account changed. Reload before saving.": "Dit account is gewijzigd. Herlaad voordat je opslaat.",
+ "Active principal would exceed $100 billion.": "De actieve inleg zou $100 miljard overschrijden.",
+ "Administrative edits do not move cash. Adjust cash or treasury separately. Active principal remains capped at $100 billion.": "Beheerwijzigingen verplaatsen geen geld. Pas cash of de familiekas afzonderlijk aan. De actieve inleg blijft beperkt tot $100 miljard."
+});
+
+Object.assign(octoberDutch,{'Invalid account.':'Ongeldig account.','Staff updated {v0} #{v1} · {v2}.':'Medewerker wijzigde {v0} #{v1} · {v2}.'});
+
+Object.assign(octoberDutch,{'Item':'Bezit','Quantity':'Aantal','Coin':'Munt','Cost basis':'Aankoopwaarde','Artwork':'Kunstobject','Authentic (0 or 1)':'Authentiek (0 of 1)','Condition (1–100)':'Conditie (1–100)','Appraised (0 or 1)':'Getaxeerd (0 of 1)','Vehicle':'Voertuig','Condition stars':'Conditiesterren','Next race (timestamp)':'Volgende race (tijdstempel)','Active time (milliseconds)':'Actieve tijd (milliseconden)','Saved income':'Opgeslagen inkomen','Extension':'Uitbreiding','Captured (0 or 1)':'Veroverd (0 of 1)'});
+
+Object.assign(octoberDutch,{'Mafia: The new Era © · v1.19.0':'Mafia: The new Era © · v1.19.0'});
+
+Object.assign(octoberDutch,{'name':'Naam','don':'Don','treasury':'Familiekas','drugs xp':'Drugs-XP','guns xp':'Wapenhandel-XP','created at':'Aangemaakt op','shield until':'Schild tot','guard until':'Bewaking tot','raid until':'Raid-cooldown tot'});

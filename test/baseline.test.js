@@ -19,7 +19,7 @@ test('isolated prototype baseline', { timeout: 90000 }, async t => {
   let server;
   let db;
   try {
-    for (const name of ['territory-income.js','skins.js','money.js','staff-totals.js','bot-players.js','calendar-events.js','crew-operations.js','game-guide.js','casino-extra.js','city-expansion.js','release-notes.js','player-systems.js','presence.js','player-care.js','economy.js','diplomacy.js','auth-security.js', 'shop.js', 'season-events.js', 'server.js', 'owner-setup.js', 'package.json', 'catalog.js', 'game.js', 'progression.js', 'empire.js', 'empire-catalog.js', 'investments.js','owner-admin.js','transfers.js','underworld.js','profiles.js','staff.js','community.js','logistics.js','daily.js','casino.js','purchases.js','family-wars.js','war-operations.js','territory-map.js','family-command.js','legacy.js']) {
+    for (const name of ['territory-income.js','skins.js','money.js','staff-totals.js','bot-players.js','calendar-events.js','crew-operations.js','game-guide.js','casino-extra.js','city-expansion.js','release-notes.js','player-systems.js','presence.js','player-care.js','economy.js','diplomacy.js','auth-security.js', 'shop.js', 'season-events.js', 'server.js', 'owner-setup.js', 'package.json', 'catalog.js', 'game.js', 'progression.js', 'empire.js', 'empire-catalog.js', 'investments.js','owner-admin.js','staff-state.js','transfers.js','underworld.js','profiles.js','staff.js','community.js','logistics.js','daily.js','casino.js','purchases.js','family-wars.js','war-operations.js','territory-map.js','family-command.js','legacy.js']) {
       await copyFile(path.join(source, name), path.join(fixture, name));
     }
     for(const name of ['income-cycle.js','referral-guide.js','referrals.js','push-notifications.js','circuit-guide.js','midnight-circuit.js','midnight-catalog.js','database-bootstrap.js','bribery.js','art-market.js','collector-cars.js','guide-nl.js','bot-capabilities.js','bot-autonomy.js','bank.js','game-knowledge.js','drug-markets.js','vehicle-catalog.js','vehicle-auctions.js','vehicles.js'])await copyFile(path.join(source,name),path.join(fixture,name));
@@ -155,6 +155,15 @@ test('isolated prototype baseline', { timeout: 90000 }, async t => {
       assert.equal((await api('me',undefined,alice.cookie)).body.user.energy,53);
       db.prepare('UPDATE users SET energy_at=? WHERE username=?').run(Date.now()-86400000,'Alice');
       assert.equal((await api('me',undefined,alice.cookie)).body.user.energy,100);
+    });
+    await t.test('extended staff editor is authenticated, scoped and available through HTTP',async()=>{
+      const endpoint='admin/state?scope=personal&id='+bob.body.user.id;
+      assert.equal((await api(endpoint)).status,401);
+      assert.equal((await api(endpoint,undefined,alice.cookie)).status,403);
+      const state=await api(endpoint,undefined,owner.cookie);assert.equal(state.status,200);
+      const racing=state.body.sections.find(s=>s.section==='racing');assert.ok(racing);
+      const result=await api('admin/state',{scope:'personal',targetId:bob.body.user.id,section:'racing',revision:racing.revision,reason:'HTTP race correction',operation:'save',values:{xp:500,next_at:0}},owner.cookie);
+      assert.equal(result.status,200);assert.equal(db.prepare('SELECT xp FROM race_profiles WHERE user_id=?').get(bob.body.user.id).xp,500);
     });
     await t.test('Owner edits own statistics and player possessions atomically with audit records',async()=>{
       assert.equal((await api('admin/player',{id:bob.body.user.id,changes:{cash:50000,energy:75,health:88,xp:1000}},owner.cookie)).status,200);

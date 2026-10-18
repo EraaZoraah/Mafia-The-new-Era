@@ -1105,7 +1105,8 @@
   {
     "key": "Unsupported request.",
     "files": [
-      "community.js"
+      "community.js",
+      "staff-state.js"
     ]
   },
   {
@@ -3569,7 +3570,8 @@
   {
     "key": "Account not found.",
     "files": [
-      "owner-admin.js"
+      "owner-admin.js",
+      "staff-state.js"
     ]
   },
   {
@@ -3597,7 +3599,7 @@
     ]
   },
   {
-    "key": "Active principal would exceed $1 billion.",
+    "key": "Active principal would exceed $100 billion.",
     "files": [
       "owner-admin.js"
     ]
@@ -3605,7 +3607,8 @@
   {
     "key": "Administrative edit. No funds moved.",
     "files": [
-      "owner-admin.js"
+      "owner-admin.js",
+      "staff-state.js"
     ]
   },
   {
@@ -4072,6 +4075,7 @@
       "presence.js",
       "referrals.js",
       "shop.js",
+      "staff-state.js",
       "staff.js"
     ]
   },
@@ -4528,6 +4532,145 @@
     ]
   },
   {
+    "key": "This item is locked in an auction.",
+    "files": [
+      "staff-state.js"
+    ]
+  },
+  {
+    "key": "Wait until this shipment arrives before editing it.",
+    "files": [
+      "staff-state.js"
+    ]
+  },
+  {
+    "key": "This item is locked in an auction or race.",
+    "files": [
+      "staff-state.js"
+    ]
+  },
+  {
+    "key": "Choose an existing item.",
+    "files": [
+      "staff-state.js"
+    ]
+  },
+  {
+    "key": "Invalid administrative edit.",
+    "files": [
+      "staff-state.js"
+    ]
+  },
+  {
+    "key": "Invalid administrative fields.",
+    "files": [
+      "staff-state.js"
+    ]
+  },
+  {
+    "key": "Invalid administrative value.",
+    "files": [
+      "staff-state.js"
+    ]
+  },
+  {
+    "key": "Unknown catalog item.",
+    "files": [
+      "staff-state.js"
+    ]
+  },
+  {
+    "key": "Item not found in this account.",
+    "files": [
+      "staff-state.js"
+    ]
+  },
+  {
+    "key": "Employee limit exceeded.",
+    "files": [
+      "staff-state.js"
+    ]
+  },
+  {
+    "key": "The item type cannot be changed.",
+    "files": [
+      "staff-state.js"
+    ]
+  },
+  {
+    "key": "An empty holding must have zero cost basis.",
+    "files": [
+      "staff-state.js"
+    ]
+  },
+  {
+    "key": "Art collection capacity exceeded.",
+    "files": [
+      "staff-state.js"
+    ]
+  },
+  {
+    "key": "Vehicle warehouse capacity exceeded.",
+    "files": [
+      "staff-state.js"
+    ]
+  },
+  {
+    "key": "A master compound is required.",
+    "files": [
+      "staff-state.js"
+    ]
+  },
+  {
+    "key": "Territory not found.",
+    "files": [
+      "staff-state.js"
+    ]
+  },
+  {
+    "key": "Release this territory from its current family first.",
+    "files": [
+      "staff-state.js"
+    ]
+  },
+  {
+    "key": "Territory ownership limit exceeded.",
+    "files": [
+      "staff-state.js"
+    ]
+  },
+  {
+    "key": "Invalid account.",
+    "files": [
+      "staff-state.js"
+    ]
+  },
+  {
+    "key": "Owner accounts are protected.",
+    "files": [
+      "staff-state.js",
+      "staff.js"
+    ]
+  },
+  {
+    "key": "Choose a section and enter a reason.",
+    "files": [
+      "staff-state.js"
+    ]
+  },
+  {
+    "key": "This account changed. Reload before saving.",
+    "files": [
+      "staff-state.js"
+    ]
+  },
+  {
+    "key": "Staff updated {v0} #{v1} · {v2}.",
+    "files": [
+      "staff-state.js"
+    ]
+  },
+  {
     "key": "This account has been deleted.",
     "files": [
       "staff.js"
@@ -4547,12 +4690,6 @@
   },
   {
     "key": "Admins cannot change their own role.",
-    "files": [
-      "staff.js"
-    ]
-  },
-  {
-    "key": "Owner accounts are protected.",
     "files": [
       "staff.js"
     ]
