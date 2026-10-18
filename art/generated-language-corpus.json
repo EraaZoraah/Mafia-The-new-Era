@@ -1,0 +1,5448 @@
+[
+  {
+    "key": "Not enough wallet space to settle this auction.",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "Auction ended without bids",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "Your artwork has returned to your collection.",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "Art auction #{v0}: received ${v1} after ${v2} commission.",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "Artwork sold",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "Auction #{v0} paid ${v1} after commission.",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "Auction won",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "Your winning artwork is now in your collection.",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "Method not allowed.",
+    "files": [
+      "art-market.js",
+      "family-command.js",
+      "logistics.js",
+      "midnight-circuit.js",
+      "push-notifications.js",
+      "vehicles.js"
+    ]
+  },
+  {
+    "key": "Choose an art heist.",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "Insufficient XP or energy for this heist.",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "Your art crew is still on cooldown.",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "Your collection is full. Sell an artwork first.",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "Insufficient cash or energy.",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "Art heist failed: {v0}",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "The art heist failed. Your stake and supplies were lost.",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "Recovered artwork #{v0}: {v1}",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "A unique artwork recovered. Appraise it before trading.",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "Choose an artwork.",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "Artwork unavailable.",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "This artwork is already appraised.",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "Insufficient cash.",
+    "files": [
+      "art-market.js",
+      "casino-extra.js",
+      "casino.js",
+      "city-expansion.js",
+      "empire.js",
+      "logistics.js",
+      "player-systems.js",
+      "underworld.js",
+      "vehicle-auctions.js",
+      "vehicles.js"
+    ]
+  },
+  {
+    "key": "Authentic artwork certified.",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "The appraisal revealed a reproduction.",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "Appraise the artwork before listing it.",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "Choose 6, 12 or 24 hours and a reserve between 25% and 300% of appraised value.",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "Maximum five active listings.",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "Artwork listed. Bids are held in escrow; commission is 8%.",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "Choose a valid bid.",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "Auction closed.",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "You cannot bid against yourself.",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "Bid below the current minimum.",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "Reserve collection space before bidding.",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "Reserved bids and refund credit have reached the account limit.",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "You were outbid",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "Your previous bid has been refunded.",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "Bid reserved. You will be refunded automatically if outbid.",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "Unknown art action.",
+    "files": [
+      "art-market.js"
+    ]
+  },
+  {
+    "key": "Sign-in service is busy. Please try again shortly.",
+    "files": [
+      "auth-security.js"
+    ]
+  },
+  {
+    "key": "Invalid transaction",
+    "files": [
+      "bank.js"
+    ]
+  },
+  {
+    "key": "Insufficient funds",
+    "files": [
+      "bank.js"
+    ]
+  },
+  {
+    "key": "Deposited: ${v0}",
+    "files": [
+      "bank.js"
+    ]
+  },
+  {
+    "key": "Withdrawn: ${v0}",
+    "files": [
+      "bank.js"
+    ]
+  },
+  {
+    "key": "Supplies first, then we make our next move.",
+    "files": [
+      "bot-autonomy.js"
+    ]
+  },
+  {
+    "key": "I am an automated game character. You can invite me to team missions or interact through my profile.",
+    "files": [
+      "bot-autonomy.js"
+    ]
+  },
+  {
+    "key": "Ready to build an empire? Check the team mission board.",
+    "files": [
+      "bot-autonomy.js"
+    ]
+  },
+  {
+    "key": "Inactive player",
+    "files": [
+      "bot-players.js"
+    ]
+  },
+  {
+    "key": "Unsupported game action",
+    "files": [
+      "bot-players.js"
+    ]
+  },
+  {
+    "key": "Unknown bot domain",
+    "files": [
+      "bot-players.js"
+    ]
+  },
+  {
+    "key": "I am an automated game character. You can invite me to a crew or interact with me through my profile; I cannot answer free-form questions.",
+    "files": [
+      "bot-players.js"
+    ]
+  },
+  {
+    "key": "An Owner account is required before adding the bot wave.",
+    "files": [
+      "bot-wave.js"
+    ]
+  },
+  {
+    "key": "Could not allocate fifty unique names.",
+    "files": [
+      "bot-wave.js"
+    ]
+  },
+  {
+    "key": "Choose a police offer.",
+    "files": [
+      "bribery.js"
+    ]
+  },
+  {
+    "key": "Police offer not found.",
+    "files": [
+      "bribery.js"
+    ]
+  },
+  {
+    "key": "This police offer has already been paid.",
+    "files": [
+      "bribery.js"
+    ]
+  },
+  {
+    "key": "This police offer has expired or the sentence has changed.",
+    "files": [
+      "bribery.js"
+    ]
+  },
+  {
+    "key": "Offer declined. Your prison sentence continues.",
+    "files": [
+      "bribery.js"
+    ]
+  },
+  {
+    "key": "Refresh the police offer before paying.",
+    "files": [
+      "bribery.js"
+    ]
+  },
+  {
+    "key": "Not enough cash for this bribe. Your sentence continues.",
+    "files": [
+      "bribery.js"
+    ]
+  },
+  {
+    "key": "You paid ${v0} to a corrupt officer and avoided the remaining prison sentence.",
+    "files": [
+      "bribery.js"
+    ]
+  },
+  {
+    "key": "Police bribe: paid ${v0} after {v1}.",
+    "files": [
+      "bribery.js"
+    ]
+  },
+  {
+    "key": "The officer accepted your bribe. You are free to continue.",
+    "files": [
+      "bribery.js"
+    ]
+  },
+  {
+    "key": "Royal flush",
+    "files": [
+      "casino-extra.js"
+    ]
+  },
+  {
+    "key": "Straight flush",
+    "files": [
+      "casino-extra.js"
+    ]
+  },
+  {
+    "key": "Four of a kind",
+    "files": [
+      "casino-extra.js"
+    ]
+  },
+  {
+    "key": "Full house",
+    "files": [
+      "casino-extra.js"
+    ]
+  },
+  {
+    "key": "Flush",
+    "files": [
+      "casino-extra.js"
+    ]
+  },
+  {
+    "key": "Straight",
+    "files": [
+      "casino-extra.js"
+    ]
+  },
+  {
+    "key": "Three of a kind",
+    "files": [
+      "casino-extra.js"
+    ]
+  },
+  {
+    "key": "Two pair",
+    "files": [
+      "casino-extra.js"
+    ]
+  },
+  {
+    "key": "Jacks or better",
+    "files": [
+      "casino-extra.js"
+    ]
+  },
+  {
+    "key": "No winning hand",
+    "files": [
+      "casino-extra.js"
+    ]
+  },
+  {
+    "key": "Casino {v0}: {v1}; stake ${v2}; return ${v3}",
+    "files": [
+      "casino-extra.js"
+    ]
+  },
+  {
+    "key": "Request key required.",
+    "files": [
+      "casino-extra.js"
+    ]
+  },
+  {
+    "key": "Request key already used.",
+    "files": [
+      "casino-extra.js",
+      "player-systems.js"
+    ]
+  },
+  {
+    "key": "Maximum 100 tickets per player per daily draw.",
+    "files": [
+      "casino-extra.js"
+    ]
+  },
+  {
+    "key": "A new lottery has started. Refresh before buying.",
+    "files": [
+      "casino-extra.js"
+    ]
+  },
+  {
+    "key": "Your lottery tickets are reserved.",
+    "files": [
+      "casino-extra.js"
+    ]
+  },
+  {
+    "key": "No unclaimed prize.",
+    "files": [
+      "casino-extra.js"
+    ]
+  },
+  {
+    "key": "Make room for your prize.",
+    "files": [
+      "casino-extra.js"
+    ]
+  },
+  {
+    "key": "Lottery prize collected!",
+    "files": [
+      "casino-extra.js"
+    ]
+  },
+  {
+    "key": "No unclaimed return.",
+    "files": [
+      "casino-extra.js",
+      "casino.js"
+    ]
+  },
+  {
+    "key": "Make room in your wallet.",
+    "files": [
+      "casino-extra.js"
+    ]
+  },
+  {
+    "key": "Casino return collected.",
+    "files": [
+      "casino-extra.js"
+    ]
+  },
+  {
+    "key": "No active poker hand.",
+    "files": [
+      "casino-extra.js"
+    ]
+  },
+  {
+    "key": "Choose which of the five cards to hold.",
+    "files": [
+      "casino-extra.js"
+    ]
+  },
+  {
+    "key": "Choose a game and stake from $1,000 to $1,000,000.",
+    "files": [
+      "casino-extra.js"
+    ]
+  },
+  {
+    "key": "Finish and collect your current hand first.",
+    "files": [
+      "casino-extra.js"
+    ]
+  },
+  {
+    "key": "Wait two seconds between plays.",
+    "files": [
+      "casino-extra.js"
+    ]
+  },
+  {
+    "key": "Select a valid roulette bet.",
+    "files": [
+      "casino-extra.js"
+    ]
+  },
+  {
+    "key": "Roulette: {v0} — win",
+    "files": [
+      "casino-extra.js"
+    ]
+  },
+  {
+    "key": "Roulette: {v0} — house wins",
+    "files": [
+      "casino-extra.js"
+    ]
+  },
+  {
+    "key": "Enter a two-digit code (00–99).",
+    "files": [
+      "casino-extra.js"
+    ]
+  },
+  {
+    "key": "Safe code: {v0} — unlocked",
+    "files": [
+      "casino-extra.js"
+    ]
+  },
+  {
+    "key": "Safe code: {v0} — locked",
+    "files": [
+      "casino-extra.js"
+    ]
+  },
+  {
+    "key": "Reels: {v0}",
+    "files": [
+      "casino-extra.js"
+    ]
+  },
+  {
+    "key": "Choose cards to hold, then draw once.",
+    "files": [
+      "casino-extra.js"
+    ]
+  },
+  {
+    "key": "Casino {v0}: {v1}. Stake ${v2}; total return ${v3}.",
+    "files": [
+      "casino.js"
+    ]
+  },
+  {
+    "key": "Push",
+    "files": [
+      "casino.js"
+    ]
+  },
+  {
+    "key": "Blackjack",
+    "files": [
+      "casino.js"
+    ]
+  },
+  {
+    "key": "Dealer blackjack",
+    "files": [
+      "casino.js"
+    ]
+  },
+  {
+    "key": "A valid request key is required.",
+    "files": [
+      "casino.js",
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Request key already used for another action.",
+    "files": [
+      "casino.js",
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Choose a game and a whole stake between $1,000 and $1,000,000.",
+    "files": [
+      "casino.js"
+    ]
+  },
+  {
+    "key": "Finish your current round and collect its return first.",
+    "files": [
+      "casino.js"
+    ]
+  },
+  {
+    "key": "Wait two seconds between new rounds.",
+    "files": [
+      "casino.js"
+    ]
+  },
+  {
+    "key": "Invalid round.",
+    "files": [
+      "casino.js"
+    ]
+  },
+  {
+    "key": "Round not found.",
+    "files": [
+      "casino.js"
+    ]
+  },
+  {
+    "key": "This round has changed. Refresh the table.",
+    "files": [
+      "casino.js"
+    ]
+  },
+  {
+    "key": "Make room in your cash wallet for the full return.",
+    "files": [
+      "casino.js"
+    ]
+  },
+  {
+    "key": "Round already finished.",
+    "files": [
+      "casino.js"
+    ]
+  },
+  {
+    "key": "Choose a possible higher or lower outcome.",
+    "files": [
+      "casino.js"
+    ]
+  },
+  {
+    "key": "Correct prediction",
+    "files": [
+      "casino.js"
+    ]
+  },
+  {
+    "key": "Tie — house wins",
+    "files": [
+      "casino.js"
+    ]
+  },
+  {
+    "key": "Incorrect prediction",
+    "files": [
+      "casino.js"
+    ]
+  },
+  {
+    "key": "Choose hit or stand.",
+    "files": [
+      "casino.js"
+    ]
+  },
+  {
+    "key": "Bust",
+    "files": [
+      "casino.js"
+    ]
+  },
+  {
+    "key": "Dealer bust",
+    "files": [
+      "casino.js"
+    ]
+  },
+  {
+    "key": "You win",
+    "files": [
+      "casino.js"
+    ]
+  },
+  {
+    "key": "Dealer wins",
+    "files": [
+      "casino.js"
+    ]
+  },
+  {
+    "key": "{v0}. Total return: ${v1}.",
+    "files": [
+      "casino.js"
+    ]
+  },
+  {
+    "key": "{v0}. Total return: ${v1} — waiting for wallet space.",
+    "files": [
+      "casino.js"
+    ]
+  },
+  {
+    "key": "Your move.",
+    "files": [
+      "casino.js"
+    ]
+  },
+  {
+    "key": "A request key is required.",
+    "files": [
+      "city-expansion.js"
+    ]
+  },
+  {
+    "key": "Request key reused for another action.",
+    "files": [
+      "city-expansion.js"
+    ]
+  },
+  {
+    "key": "Invalid news receipt.",
+    "files": [
+      "city-expansion.js"
+    ]
+  },
+  {
+    "key": "Only Owner and Admin can send gifts.",
+    "files": [
+      "city-expansion.js"
+    ]
+  },
+  {
+    "key": "Choose valid rewards.",
+    "files": [
+      "city-expansion.js"
+    ]
+  },
+  {
+    "key": "Invalid {v0} reward.",
+    "files": [
+      "city-expansion.js"
+    ]
+  },
+  {
+    "key": "Enter a message and at least one reward.",
+    "files": [
+      "city-expansion.js"
+    ]
+  },
+  {
+    "key": "Complimentary gift reserved for {v0} players.",
+    "files": [
+      "city-expansion.js"
+    ]
+  },
+  {
+    "key": "Choose a gift.",
+    "files": [
+      "city-expansion.js"
+    ]
+  },
+  {
+    "key": "Gift not found.",
+    "files": [
+      "city-expansion.js"
+    ]
+  },
+  {
+    "key": "Already collected.",
+    "files": [
+      "city-expansion.js"
+    ]
+  },
+  {
+    "key": "Make room for the full ammunition gift first. Your gift is saved.",
+    "files": [
+      "city-expansion.js"
+    ]
+  },
+  {
+    "key": "Make room for the full {v0} gift first.",
+    "files": [
+      "city-expansion.js"
+    ]
+  },
+  {
+    "key": "Collected Complimentary gift #{v0}",
+    "files": [
+      "city-expansion.js"
+    ]
+  },
+  {
+    "key": "Complimentary gift collected. Energy is restored up to your maximum.",
+    "files": [
+      "city-expansion.js"
+    ]
+  },
+  {
+    "key": "Choose a quantity within this employee type limit.",
+    "files": [
+      "city-expansion.js"
+    ]
+  },
+  {
+    "key": "Hired {v0} {v1} for ${v2}",
+    "files": [
+      "city-expansion.js"
+    ]
+  },
+  {
+    "key": "Your new employees provide their listed income, Power or respect benefits.",
+    "files": [
+      "city-expansion.js"
+    ]
+  },
+  {
+    "key": "Choose a coin, side and whole quantity.",
+    "files": [
+      "city-expansion.js"
+    ]
+  },
+  {
+    "key": "The ten-minute quote changed. Refresh prices.",
+    "files": [
+      "city-expansion.js"
+    ]
+  },
+  {
+    "key": "Maximum cost basis is $100 million per coin.",
+    "files": [
+      "city-expansion.js"
+    ]
+  },
+  {
+    "key": "Insufficient coins.",
+    "files": [
+      "city-expansion.js"
+    ]
+  },
+  {
+    "key": "Make room in your cash wallet.",
+    "files": [
+      "city-expansion.js"
+    ]
+  },
+  {
+    "key": "Crypto {v0} {v1} {v2} for ${v3}",
+    "files": [
+      "city-expansion.js"
+    ]
+  },
+  {
+    "key": "Coins added to your wallet.",
+    "files": [
+      "city-expansion.js"
+    ]
+  },
+  {
+    "key": "Coins sold; proceeds added to cash.",
+    "files": [
+      "city-expansion.js"
+    ]
+  },
+  {
+    "key": "Only the Don and Capos may manage the family.",
+    "files": [
+      "community.js"
+    ]
+  },
+  {
+    "key": "Family not found.",
+    "files": [
+      "community.js",
+      "empire.js",
+      "owner-admin.js"
+    ]
+  },
+  {
+    "key": "This player already belongs to a family.",
+    "files": [
+      "community.js"
+    ]
+  },
+  {
+    "key": "Player not found.",
+    "files": [
+      "community.js",
+      "player-care.js",
+      "profiles.js"
+    ]
+  },
+  {
+    "key": "Wait for the rejoin cooldown.",
+    "files": [
+      "community.js"
+    ]
+  },
+  {
+    "key": "This family has reached its member capacity.",
+    "files": [
+      "community.js"
+    ]
+  },
+  {
+    "key": "Family membership accepted",
+    "files": [
+      "community.js"
+    ]
+  },
+  {
+    "key": "You joined {v0}.",
+    "files": [
+      "community.js"
+    ]
+  },
+  {
+    "key": "You joined the family.",
+    "files": [
+      "community.js"
+    ]
+  },
+  {
+    "key": "Choose another player.",
+    "files": [
+      "community.js"
+    ]
+  },
+  {
+    "key": "Invalid conversation receipt.",
+    "files": [
+      "community.js"
+    ]
+  },
+  {
+    "key": "You already belong to a family.",
+    "files": [
+      "community.js",
+      "empire.js"
+    ]
+  },
+  {
+    "key": "This family requires an invitation.",
+    "files": [
+      "community.js"
+    ]
+  },
+  {
+    "key": "Leave your current family first.",
+    "files": [
+      "community.js"
+    ]
+  },
+  {
+    "key": "Your membership application has been sent.",
+    "files": [
+      "community.js"
+    ]
+  },
+  {
+    "key": "Choose valid family presets and a motto up to 160 characters.",
+    "files": [
+      "community.js"
+    ]
+  },
+  {
+    "key": "Choose a family-owned cover image.",
+    "files": [
+      "community.js"
+    ]
+  },
+  {
+    "key": "Family names must contain 3–40 characters.",
+    "files": [
+      "community.js"
+    ]
+  },
+  {
+    "key": "A family can be renamed at most three times.",
+    "files": [
+      "community.js"
+    ]
+  },
+  {
+    "key": "This family name is already in use.",
+    "files": [
+      "community.js"
+    ]
+  },
+  {
+    "key": "Renaming requires $1 million in the family treasury.",
+    "files": [
+      "community.js"
+    ]
+  },
+  {
+    "key": "Renamed family {v0} to {v1} for $1000000.",
+    "files": [
+      "community.js"
+    ]
+  },
+  {
+    "key": "Updated family appearance and admission policy.",
+    "files": [
+      "community.js"
+    ]
+  },
+  {
+    "key": "Family settings saved.",
+    "files": [
+      "community.js"
+    ]
+  },
+  {
+    "key": "Choose a player who has no family.",
+    "files": [
+      "community.js"
+    ]
+  },
+  {
+    "key": "Family is full.",
+    "files": [
+      "community.js"
+    ]
+  },
+  {
+    "key": "Family invitation",
+    "files": [
+      "community.js"
+    ]
+  },
+  {
+    "key": "{v0} invited you. Visit My family to accept.",
+    "files": [
+      "community.js"
+    ]
+  },
+  {
+    "key": "Invitation sent.",
+    "files": [
+      "community.js"
+    ]
+  },
+  {
+    "key": "Application not found.",
+    "files": [
+      "community.js"
+    ]
+  },
+  {
+    "key": "Application declined.",
+    "files": [
+      "community.js"
+    ]
+  },
+  {
+    "key": "Unsupported request.",
+    "files": [
+      "community.js"
+    ]
+  },
+  {
+    "key": "Every crew member must be active.",
+    "files": [
+      "crew-operations.js"
+    ]
+  },
+  {
+    "key": "Every crew member needs {v0} XP.",
+    "files": [
+      "crew-operations.js"
+    ]
+  },
+  {
+    "key": "{v0} must wait for the team-mission cooldown.",
+    "files": [
+      "crew-operations.js"
+    ]
+  },
+  {
+    "key": "{v0} needs the listed cash and energy.",
+    "files": [
+      "crew-operations.js"
+    ]
+  },
+  {
+    "key": "Only Don and Capo can buy compound extensions.",
+    "files": [
+      "crew-operations.js"
+    ]
+  },
+  {
+    "key": "Buy a master compound first.",
+    "files": [
+      "crew-operations.js"
+    ]
+  },
+  {
+    "key": "Extension already installed.",
+    "files": [
+      "crew-operations.js"
+    ]
+  },
+  {
+    "key": "Insufficient family funds.",
+    "files": [
+      "crew-operations.js"
+    ]
+  },
+  {
+    "key": "{v0} installed. Extensions follow the family when moving to a better compound.",
+    "files": [
+      "crew-operations.js"
+    ]
+  },
+  {
+    "key": "Choose a team mission.",
+    "files": [
+      "crew-operations.js"
+    ]
+  },
+  {
+    "key": "You are already in a recruiting crew.",
+    "files": [
+      "crew-operations.js"
+    ]
+  },
+  {
+    "key": "Crew created. Recruit exactly {v0} players. No costs charged until launch.",
+    "files": [
+      "crew-operations.js"
+    ]
+  },
+  {
+    "key": "Choose a crew.",
+    "files": [
+      "crew-operations.js"
+    ]
+  },
+  {
+    "key": "Crew not found.",
+    "files": [
+      "crew-operations.js"
+    ]
+  },
+  {
+    "key": "This crew is no longer recruiting.",
+    "files": [
+      "crew-operations.js"
+    ]
+  },
+  {
+    "key": "Crew is full.",
+    "files": [
+      "crew-operations.js"
+    ]
+  },
+  {
+    "key": "You joined and approved the listed launch costs. You can leave before launch.",
+    "files": [
+      "crew-operations.js"
+    ]
+  },
+  {
+    "key": "You are not in this crew.",
+    "files": [
+      "crew-operations.js"
+    ]
+  },
+  {
+    "key": "Crew cancelled; no charges.",
+    "files": [
+      "crew-operations.js"
+    ]
+  },
+  {
+    "key": "You left the crew; no charges.",
+    "files": [
+      "crew-operations.js"
+    ]
+  },
+  {
+    "key": "Only the crew leader can launch.",
+    "files": [
+      "crew-operations.js"
+    ]
+  },
+  {
+    "key": "The full crew must join before launch.",
+    "files": [
+      "crew-operations.js"
+    ]
+  },
+  {
+    "key": "Succes!",
+    "files": [
+      "crew-operations.js"
+    ]
+  },
+  {
+    "key": "Failed!",
+    "files": [
+      "crew-operations.js"
+    ]
+  },
+  {
+    "key": "{v0}: ${v1} and {v2} XP. Costs: ${v3}, {v4} energy and {v5} rounds.",
+    "files": [
+      "crew-operations.js"
+    ]
+  },
+  {
+    "key": "Crew mission {v0}: success; ${v1} and {v2} XP.",
+    "files": [
+      "crew-operations.js"
+    ]
+  },
+  {
+    "key": "Crew mission {v0}: failed; ${v1} and {v2} XP.",
+    "files": [
+      "crew-operations.js"
+    ]
+  },
+  {
+    "key": "{v0} completed. Each crew member received their own result.",
+    "files": [
+      "crew-operations.js"
+    ]
+  },
+  {
+    "key": "{v0} failed. Each crew member received their own result.",
+    "files": [
+      "crew-operations.js"
+    ]
+  },
+  {
+    "key": "Event: {v0}",
+    "files": [
+      "daily.js"
+    ]
+  },
+  {
+    "key": "Announcement: {v0}",
+    "files": [
+      "daily.js"
+    ]
+  },
+  {
+    "key": "Staff access required",
+    "files": [
+      "daily.js",
+      "game.js",
+      "owner-admin.js",
+      "server.js"
+    ]
+  },
+  {
+    "key": "Invalid announcement ID",
+    "files": [
+      "daily.js"
+    ]
+  },
+  {
+    "key": "Announcement not found",
+    "files": [
+      "daily.js"
+    ]
+  },
+  {
+    "key": "Automatic season events are managed by the season system.",
+    "files": [
+      "daily.js"
+    ]
+  },
+  {
+    "key": "This announcement was edited elsewhere. Reload before saving.",
+    "files": [
+      "daily.js"
+    ]
+  },
+  {
+    "key": "Provide a title (3–100 characters), message (1–3,000 characters), valid type and status.",
+    "files": [
+      "daily.js"
+    ]
+  },
+  {
+    "key": "End time must be after the start time.",
+    "files": [
+      "daily.js"
+    ]
+  },
+  {
+    "key": "A published message must end in the future.",
+    "files": [
+      "daily.js"
+    ]
+  },
+  {
+    "key": "Announcement saved. Scheduled messages become visible automatically during their publication period.",
+    "files": [
+      "daily.js"
+    ]
+  },
+  {
+    "key": "A new day has started. Refresh your daily objectives.",
+    "files": [
+      "daily.js"
+    ]
+  },
+  {
+    "key": "Unknown daily objective",
+    "files": [
+      "daily.js"
+    ]
+  },
+  {
+    "key": "Reward already claimed.",
+    "files": [
+      "daily.js"
+    ]
+  },
+  {
+    "key": "Complete this objective first.",
+    "files": [
+      "daily.js"
+    ]
+  },
+  {
+    "key": "Make room for the full reward before claiming.",
+    "files": [
+      "daily.js"
+    ]
+  },
+  {
+    "key": "Daily objective completed: {v0}.",
+    "files": [
+      "daily.js"
+    ]
+  },
+  {
+    "key": "Daily reward claimed: {v0}.",
+    "files": [
+      "daily.js"
+    ]
+  },
+  {
+    "key": "Allied families cannot raid, capture territory or declare war on each other.",
+    "files": [
+      "diplomacy.js"
+    ]
+  },
+  {
+    "key": "Appoint or recruit an active successor before the last Don leaves, resets or deletes their account.",
+    "files": [
+      "diplomacy.js"
+    ]
+  },
+  {
+    "key": "The economy analytics dashboard is Owner-only.",
+    "files": [
+      "economy.js"
+    ]
+  },
+  {
+    "key": "Choose 1, 7 or 28 days.",
+    "files": [
+      "economy.js"
+    ]
+  },
+  {
+    "key": "Wallet inflows/outflows, not all new money: bank movements net to zero; transfers, investments, assets surrendered and staff changes are listed separately. Growth includes staff XP changes under their own source. History begins when this update is installed.",
+    "files": [
+      "economy.js"
+    ]
+  },
+  {
+    "key": "Join a family first.",
+    "files": [
+      "empire.js",
+      "legacy.js",
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Only the Don or a Capo can spend family funds.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "This operation is on cooldown.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "The family treasury has insufficient funds.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "Choose a career and scope.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "Unknown shipment.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "Reach the required career rank for this shipment.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "Not enough energy.",
+    "files": [
+      "empire.js",
+      "game.js",
+      "transfers.js"
+    ]
+  },
+  {
+    "key": "The family treasury cannot cover its share of shipment costs.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "{v0} ({v1}): success. Personal payout ${v2}. Career +{v3} XP.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "{v0} ({v1}): failed. Personal payout ${v2}. Career +{v3} XP.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "Choose whether to accept this offer.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "This invitation is no longer available.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "This invitation has expired.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "The contact mission failed. Arrested for {v0} minutes.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "Anonymous invitation: completed. ${v0} earned. No energy spent.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "Anonymous invitation: unsuccessful. ${v0} earned. No energy spent.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "Choose a rival family.",
+    "files": [
+      "empire.js",
+      "war-operations.js"
+    ]
+  },
+  {
+    "key": "Choose another family.",
+    "files": [
+      "empire.js",
+      "family-command.js",
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "Requires 500 normal XP.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "New families have one hour of protection.",
+    "files": [
+      "empire.js",
+      "family-wars.js",
+      "war-operations.js"
+    ]
+  },
+  {
+    "key": "Your family is regrouping after its last raid.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "This family has a recovery shield.",
+    "files": [
+      "empire.js",
+      "war-operations.js"
+    ]
+  },
+  {
+    "key": "A family raid costs 35 energy.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "A ceasefire protects these families from mutual raids.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "Your family was raided",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "{v0} attempted a raid. Treasury lost ${v1}. A 20-minute shield is active.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "Family raid against {v0}: success.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "Family raid against {v0}: failed.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "Raid succeeded against {v0}. War score updated.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "Raid succeeded against {v0}.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "Raid failed against {v0}. War score updated.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "Raid failed against {v0}.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "Personal protection is fully upgraded.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "Upgraded permanent personal protection to level {v0}{v1}.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "Unknown escort package.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "Use your current escort or wait for it to expire.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "Hired {v0}.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "Wait one hour after leaving before joining another family.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "Enter a whole positive donation.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "The treasury has reached its capacity.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "Unknown family asset.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "This family asset is fully acquired.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "Choose a better master compound. Only one base is allowed.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "{v0} × {v1} added to your family.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "Extra guards are already active.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "Your family already has maximum raid defense.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "Only the Don and Capos manage members.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "Member not found.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "Choose another member, excluding the Don.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "Only the Don or a Capo can manage lower-ranking members.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "The Owner account is protected.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "Member removed. A one-hour rejoin cooldown applies.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "Only the Don can appoint a Capo.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "Member role updated to {v0}.",
+    "files": [
+      "empire.js"
+    ]
+  },
+  {
+    "key": "Choose an operation and airport city.",
+    "files": [
+      "family-command.js"
+    ]
+  },
+  {
+    "key": "Schedule the attack within the next seven days.",
+    "files": [
+      "family-command.js"
+    ]
+  },
+  {
+    "key": "Plan notes may contain up to 1,000 characters.",
+    "files": [
+      "family-command.js"
+    ]
+  },
+  {
+    "key": "Choose the territory to capture.",
+    "files": [
+      "family-command.js"
+    ]
+  },
+  {
+    "key": "The selected territory does not belong to this rival in this city.",
+    "files": [
+      "family-command.js"
+    ]
+  },
+  {
+    "key": "Invalid message cursor.",
+    "files": [
+      "family-command.js"
+    ]
+  },
+  {
+    "key": "Write a message of 1–1,000 characters.",
+    "files": [
+      "family-command.js"
+    ]
+  },
+  {
+    "key": "Invalid message request.",
+    "files": [
+      "family-command.js"
+    ]
+  },
+  {
+    "key": "Message request was already used.",
+    "files": [
+      "family-command.js"
+    ]
+  },
+  {
+    "key": "Wait three seconds between messages.",
+    "files": [
+      "family-command.js"
+    ]
+  },
+  {
+    "key": "This plan is unavailable.",
+    "files": [
+      "family-command.js"
+    ]
+  },
+  {
+    "key": "Plan updated. Members must volunteer again for the revised operation.",
+    "files": [
+      "family-command.js"
+    ]
+  },
+  {
+    "key": "Finish or cancel an existing plan before creating another.",
+    "files": [
+      "family-command.js"
+    ]
+  },
+  {
+    "key": "Attack planned. This does not automatically declare war, spend resources or launch an attack.",
+    "files": [
+      "family-command.js"
+    ]
+  },
+  {
+    "key": "Choose a plan.",
+    "files": [
+      "family-command.js"
+    ]
+  },
+  {
+    "key": "Plan not found.",
+    "files": [
+      "family-command.js"
+    ]
+  },
+  {
+    "key": "This plan is closed.",
+    "files": [
+      "family-command.js"
+    ]
+  },
+  {
+    "key": "The scheduled time has passed. Ask a commander to reschedule.",
+    "files": [
+      "family-command.js"
+    ]
+  },
+  {
+    "key": "You volunteered. Join the live assault team separately before launch.",
+    "files": [
+      "family-command.js"
+    ]
+  },
+  {
+    "key": "You left this plan.",
+    "files": [
+      "family-command.js"
+    ]
+  },
+  {
+    "key": "Choose completed or cancelled.",
+    "files": [
+      "family-command.js"
+    ]
+  },
+  {
+    "key": "Plan marked {v0}. This is a planning status, not a battle result.",
+    "files": [
+      "family-command.js"
+    ]
+  },
+  {
+    "key": "Unknown command.",
+    "files": [
+      "family-command.js"
+    ]
+  },
+  {
+    "key": "Each family can fight one active war at a time.",
+    "files": [
+      "family-wars.js"
+    ]
+  },
+  {
+    "key": "A 24-hour ceasefire is still active between these families.",
+    "files": [
+      "family-wars.js"
+    ]
+  },
+  {
+    "key": "Your family has no active war.",
+    "files": [
+      "family-wars.js"
+    ]
+  },
+  {
+    "key": "Your family surrendered. A 24-hour ceasefire is active.",
+    "files": [
+      "family-wars.js"
+    ]
+  },
+  {
+    "key": "{v0} family crest",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "De Don of Capo kiest dit familiewapen via My family → Edit family. Opgeslagen op het familieprofiel en in de familielijst. Alleen uiterlijk; geen bonus.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "The Don or Capo selects this family crest through My family → Edit family. Saved on the family profile and in the family directory. Cosmetic only; no bonus.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Registration referral bonus: ${v0}; referrer reward: ${v1} after rank {v2} and {v3} distinct active UTC days. Five qualified human friends earn 30 free Supporter days; ten earn 30 free Grand Supporter days, once each. No purchase cash/XP. Existing paid membership time is preserved. Suspicious network/email aliases require staff review; bots never qualify. Player-to-player spending stays locked until qualification and review. Staff referral overview lists every link and totals.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "All families",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Browse every family, including your own, without joining one first. Search names and compare members, assets, Power, net worth and drugs/guns ranks. This is separate from the top ten rankings.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Midnight Circuit",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Driver XP {v0}. Racing handling bonus +{v1}.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Vehicle condition & auctions",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Stolen cars have 1–5 stars: Worn 55%, Used 25%, Good 13%, Perfect 6%, Pristine 1%. Value uses the model, condition, city and hourly quote. Condition factors are 35%, 55%, 75%, 100% and 135%. Store the car before listing. Choose a minimum price and 6, 12 or 24 hours. Non-refundable listing fee: 0.25% of the current quote, minimum $500, maximum $250,000. Successful sales charge 3% commission. Bids reserve cash and one warehouse bay. Minimum bid increment 5%. Outbid cash is refunded with protected credit if full. Listed cars cannot be sold, shipped or replaced.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Open this game page from the navigation menu.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "{v0} Base price {v1}. Maximum {v2} per type. Base hourly income {v3}. {v4}.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Hire up to {v0}. Price {v1}, base hourly cash {v2}, Power {v3}, respect per active day {v4}. Income pauses during detention and stops after 24 active earning hours until saved personal income is fully claimed.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "{v0} Price {v1}, maximum {v2}, defense {v3}, shipment bonus {v4} points, hourly treasury income {v5}.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Requires {v0} XP, {v1} energy, {v2} rounds and weapon tier {v3}, {v4} ownership. Base chance {v5}%, cooldown {v6} seconds. Account-specific rewards and chance are shown on the crime card. Failures can cause fines or prison; Big Score chance is 5%.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Requires {v0} XP, {v1} energy, {v2} rounds and weapon tier {v3}. Base chance {v4}%, cooldown {v5} seconds. Account-specific rewards and chance are shown on the crime card. Failures can cause fines or prison; Big Score chance is 5%.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Tier {v0}, base price {v1}, Power {v2}. Maximum 10,000 copies; each further copy raises its unit price by 1% of base price. Ammunition costs {v3} per round, capacity {v4}.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Unlocks at drugs career level {v0}. Base six-hour production cost {v1} before city factors. Terms 6, 12 or 24 hours. Up to 1,000 unsold crates per type; five occupied slots. Each production warehouse adds 1,000 total crates of capacity; buy warehouses before starting production. Each of {v2} cities has separate production and sale factors. Cargo must arrive before sale. {v3}. Destination, distance and cargo size affect the displayed quote. Detention pauses personal production and prevents dispatch/sale.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "{v0}: base {v1}h, {v2}% interception risk",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "{v0} Exactly {v1} people. Each participant: base cash {v2}, XP {v3}, cost {v4}, energy {v5}, rounds {v6}, weapon tier {v7}; minimum {v8} XP. Base chance {v9}%.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Unlocks at career level {v0}, requires {v1} energy and base stake {v2}, awards base {v3} career XP with a {v4}% base success chance. Live cards apply current account and family bonuses.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Breakout career level {v0}/15, threshold {v1} breakout XP, success bonus {v2} percentage points.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "{v0} Optional contact mission: failure can cause prison. Invitations are not guaranteed.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "{v0} Price {v1}, Power {v2}. One permanent extension per family, retained when moving.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Price {v0}, lasts {v1} minutes for {v2} attempts. Adds {v3} percentage points success.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Rank {v0}/25, requires {v1} cumulative XP. Active income factor {v2}. Rank-up restores energy and adds 10 maximum energy within the cap.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Career level {v0}/15, threshold {v1} career XP, payout factor {v2}. Personal and family careers progress separately.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "{v0} Target {v1}. Permanent title: {v2}, profile color {v3}.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "{v0} Target {v1}. Permanent title: {v2}.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Price €{v0}. {v1} {v2}",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Price €{v0}. {v1} ",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Car theft can recover this collectible vehicle. Base city sale value {v0}; relative draw weight {v1}. Store in a purchased vehicle warehouse (20 bays, five maximum), sell immediately, or ship between airport cities with small interception risk. Purchased cars instead use private garages with six bays and 80% paid-price resale.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Fictional tradable coin. Ten-minute live buy/sell quotes include spread. Holdings track purchase basis and profit/loss. Recheck the current quote before trading; base reference {v0} is not an executable price.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "{v0} respect",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "{v0} received respect, {v1}% income bonus and {v2}% defense bonus.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "{v0}-hour sentence",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Reporting cost {v0} before optional anonymous fee; court fine up to {v1}. Bail is scaled to rank and decreases with remaining time. Use the live release quote.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Curated character skin. Premium cosmetic, €{v0}. Choose only unlocked skins in Edit profile. Cosmetic appearance does not itself grant Power.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Curated character skin. Standard skin. Choose only unlocked skins in Edit profile. Cosmetic appearance does not itself grant Power.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "{v0} city map",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Interactive approximate historical city outline with {v0} fictional game territories. Gold is your family, green allies, red rivals and neutral unclaimed. Hover highlights a plot; select to inspect purchase/capture options. These are not official districts.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Unique collectible {v0}. Base reference ${v1}; rarity weight {v2}. Appraisal costs 4% of base reference and reveals authenticity and condition-adjusted value. Trade via cash-backed auctions; estimates are not guaranteed bids.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Important notifications",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Device push is temporarily paused. In-game notices remain available. Future activation requires HTTPS, browser permission, VAPID keys and real-device tests. Bots do not register browser devices.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Sovereign Curator",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Personally steal the Diamond Phoenix and Platinum Crown from The Sovereign Collection, then appraise and certify both as originals. Auction purchases do not count. One item per successful heist; exclusive ascending pools contain 7, 6, 6 and 6 objects, with rarer high-value loot.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Requires {v0} XP, {v1} energy, {v2} rounds, tier {v3}, ${v4} fee. Shared art cooldown {v5} hours. Fixed loot pool: {v6}. Higher-value objects are rarer. Failure can cause arrest; recovered pieces may be reproductions.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Promoted to {v0} · Legacy distinction {v1}. Maximum energy is now {v2}; energy fully restored.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Promoted to {v0} · Legacy distinction {v1}. Maximum energy is now {v2}; Owner energy override applied.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Promoted to {v0}. Maximum energy is now {v1}; energy fully restored.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Promoted to {v0}. Maximum energy is now {v1}; Owner energy override applied.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Hospital stay completed",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "You have recovered. Income and activities are available again.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Sentence completed",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "You are free. Income and activities are available again.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "You are in prison. Arrange bail or wait for release.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "You are recovering in hospital.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "You are being held. Wait for your release.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "You need at least 10 health. Health recovers automatically.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Wait {v0} seconds.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Unknown action",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Purchase a {v0} to unlock this operation.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Not enough energy. Your energy regenerates automatically.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Requires {v0} XP.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Choose {v0}–10,000 liquidation contract rounds.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "{v0} failed. Arrested for {v1} minutes.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "BIG SCORE! {v0}: success · ${v1} earned, including extra loot (+{v2} XP). Arrested for {v3} minutes.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "BIG SCORE! {v0}: success · ${v1} earned, including extra loot (+{v2} XP). Fine: ${v3}.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "BIG SCORE! {v0}: success · ${v1} earned, including extra loot (+{v2} XP).",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "BIG SCORE! {v0}: unsuccessful · ${v1} earned, including extra loot (+{v2} XP). Arrested for {v3} minutes.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "BIG SCORE! {v0}: unsuccessful · ${v1} earned, including extra loot (+{v2} XP). Fine: ${v3}.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "BIG SCORE! {v0}: unsuccessful · ${v1} earned, including extra loot (+{v2} XP).",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "{v0}: success · ${v1} earned, including extra loot (+{v2} XP). Arrested for {v3} minutes.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "{v0}: success · ${v1} earned, including extra loot (+{v2} XP). Fine: ${v3}.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "{v0}: success · ${v1} earned, including extra loot (+{v2} XP).",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "{v0}: unsuccessful · ${v1} earned, including extra loot (+{v2} XP). Arrested for {v3} minutes.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "{v0}: unsuccessful · ${v1} earned, including extra loot (+{v2} XP). Fine: ${v3}.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "{v0}: unsuccessful · ${v1} earned, including extra loot (+{v2} XP).",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "BIG SCORE! Triple payout and XP.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Crime succeeded.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Crime failed. Arrested for {v0} minutes.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Crime failed. Fine: ${v0}.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Choose an action and a player.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Choose another active player.",
+    "files": [
+      "game.js",
+      "transfers.js",
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "This referral player is protected until qualification and review.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Both players need at least 500 XP. New players are protected.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "This player is temporarily protected.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "You cannot rob, kidnap or liquidate a member of your own family.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Choose a valid anonymity option.",
+    "files": [
+      "game.js",
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Anonymous operations are available for liquidation attempts only.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Anonymous attempts require an extra $500,000.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Choose 60–10,000 liquidation rounds.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "{v0} liquidated you. You are in a coma for up to 72 hours. Treatment is scaled to your rank and decreases with time.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "An attack left you in hospital for one hour.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "You were attacked",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "{v0} used {v1}. Lost {v2} health and ${v3}.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "An attack was repelled",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "{v0} failed a {v1} against you.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "{v0} returned fire. You are in a coma.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Backfire resolved",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Your guards used {v0} rounds. The attacker was also put into a coma.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Your guards used {v0} rounds. The attacker survived your return fire.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "{v0} against {v1}: success. Loot: ${v2}. Anonymity fee: ${v3}.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "{v0} against {v1}: failed. Loot: ${v2}. Anonymity fee: ${v3}.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "{v0}: {v1} succeeded. Cash lost: ${v2}.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "{v0}: {v1} failed. Cash lost: ${v2}.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Return fire put you in a coma too. Liquidation succeeded. The target is in a 72-hour coma.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Return fire put you in a coma too. {v0} succeeded. Loot: {v1}.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Return fire put you in a coma too. The operation failed. You lost {v0} health.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Liquidation succeeded. The target is in a 72-hour coma.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "{v0} succeeded. Loot: {v1}.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "The operation failed. You lost {v0} health.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Player not found",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Invalid player ID",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Invalid changes",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Unknown player field: {v0}",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Invalid {v0}",
+    "files": [
+      "game.js",
+      "owner-admin.js"
+    ]
+  },
+  {
+    "key": "Invalid username",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Invalid email",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Invalid city",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Invalid account role.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "New passwords must contain 15–128 characters.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Title is not unlocked",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Keep at least one active Owner account.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Invalid family",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "A family leader must remain in their family.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Family member capacity reached.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Invalid mystery offer",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Invalid family role",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Invalid session reset",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Invalid cooldowns",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Invalid cooldown",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Invalid possessions",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Unknown possession",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Quantity must be between 1 and {v0}",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Duplicate possession",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Energy exceeds the capacity provided by this player’s rank and assets (maximum 1,000).",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Invalid cooldown reset",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Owner updated {v0}: {v1}.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Arrested after an art heist.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Arrested after a Midnight Circuit race.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "All available personal hourly income collected.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "All available hourly income has already been credited automatically. Family income is credited directly to its treasury.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "This Sunday event is no longer active.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Prison or hospital: income and activities are suspended. Arrange your release first.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Invalid recipient or message",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Private message received",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "A new private message from {v0}.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Owner access required.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Choose enabled or paused.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Invalid family name",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "You already belong to a family",
+    "files": [
+      "game.js",
+      "server.js"
+    ]
+  },
+  {
+    "key": "Wait before creating another family.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Creating a family costs $1,000,000",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Invalid promotion ID",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "This title is not unlocked.",
+    "files": [
+      "game.js",
+      "profiles.js"
+    ]
+  },
+  {
+    "key": "Unknown item",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Collection limit: {v0} per asset type.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Insufficient cash",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Purchased {v0} Ã— {v1} for ${v2}.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Protection is already active.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "VIP protection costs $50,000.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Purchased 30 minutes of VIP protection.",
+    "files": [
+      "game.js"
+    ]
+  },
+  {
+    "key": "Username or email already taken",
+    "files": [
+      "game.js",
+      "server.js"
+    ]
+  },
+  {
+    "key": "Choose personal or family funds.",
+    "files": [
+      "investments.js",
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Choose a valid amount and a supported term of up to 72 hours.",
+    "files": [
+      "investments.js"
+    ]
+  },
+  {
+    "key": "Active investments are limited to $100 billion per account.",
+    "files": [
+      "investments.js"
+    ]
+  },
+  {
+    "key": "Your quote expired or changed. Refresh investment rates before opening.",
+    "files": [
+      "investments.js"
+    ]
+  },
+  {
+    "key": "Insufficient available funds.",
+    "files": [
+      "investments.js"
+    ]
+  },
+  {
+    "key": "Choose a valid investment.",
+    "files": [
+      "investments.js"
+    ]
+  },
+  {
+    "key": "Investment not found or already claimed.",
+    "files": [
+      "investments.js"
+    ]
+  },
+  {
+    "key": "This investment has not matured yet.",
+    "files": [
+      "investments.js"
+    ]
+  },
+  {
+    "key": "Make room in the receiving balance before claiming. Your investment is safe.",
+    "files": [
+      "investments.js"
+    ]
+  },
+  {
+    "key": "Earn this achievement first.",
+    "files": [
+      "legacy.js"
+    ]
+  },
+  {
+    "key": "This XP reward has already been claimed.",
+    "files": [
+      "legacy.js"
+    ]
+  },
+  {
+    "key": "Claim your reward after release.",
+    "files": [
+      "legacy.js"
+    ]
+  },
+  {
+    "key": "Your XP balance is full.",
+    "files": [
+      "legacy.js"
+    ]
+  },
+  {
+    "key": "{v0} completed. +{v1} XP. Your permanent title and medal are unlocked.",
+    "files": [
+      "legacy.js"
+    ]
+  },
+  {
+    "key": "You already gave family respect today. It resets at 00:00 UTC.",
+    "files": [
+      "legacy.js"
+    ]
+  },
+  {
+    "key": "Your family earned one respect. This is separate from donation respect and player respect.",
+    "files": [
+      "legacy.js"
+    ]
+  },
+  {
+    "key": "Invalid player search.",
+    "files": [
+      "legacy.js"
+    ]
+  },
+  {
+    "key": "Write 1–1,000 characters.",
+    "files": [
+      "legacy.js"
+    ]
+  },
+  {
+    "key": "Message request already used.",
+    "files": [
+      "legacy.js"
+    ]
+  },
+  {
+    "key": "Wait five seconds between world chat messages.",
+    "files": [
+      "legacy.js"
+    ]
+  },
+  {
+    "key": "Staff only.",
+    "files": [
+      "legacy.js"
+    ]
+  },
+  {
+    "key": "Choose a message.",
+    "files": [
+      "legacy.js"
+    ]
+  },
+  {
+    "key": "Message not found.",
+    "files": [
+      "legacy.js"
+    ]
+  },
+  {
+    "key": "Owner messages are protected.",
+    "files": [
+      "legacy.js"
+    ]
+  },
+  {
+    "key": "Only the Don and Capos may buy or manage family supplies.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Requires a tier {v0} weapon in the {v1} armory.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Not enough {v0} ammunition. This attempt needs {v1} rounds.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Insufficient family treasury.",
+    "files": [
+      "logistics.js",
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Target not found.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Invalid armory quantities.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Staff updated {v0} armory #{v1}.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Armory updated.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Buy a private jet before using this airport.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Choose another destination.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Your jet is being prepared. Flights have a 15-minute cooldown.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Flew from {v0} to {v1} for ${v2}. Local heat: {v3}.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Arrived in {v0}. Local heat: {v1}/100. Heat in {v2} remains on record.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Purchased {v0} rounds.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "{v0} rounds added to the {v1} armory.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Choose weapons or ammunition.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Unknown weapon.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Purchased {v0} × {v1}.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "{v0} × {v1} acquired. +{v2} Power.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Hourly market quotes have changed. Refresh before committing.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Choose a product, 6/12/24 hours and 1–1,000 crates.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Reach drugs career level {v0} first.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "All five production slots are occupied. Sell a completed batch first.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Maximum 1,000 unsold crates per drug type.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Buy a production warehouse before starting. Each warehouse holds 1,000 unsold crates across all products.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Started {v0} crates of {v1} ({v2} hours).",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Production started. {v0} crate of {v1} in {v2} active hours.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Production started. {v0} crates of {v1} in {v2} active hours.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Choose a batch.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Choose a completed batch that is not in transit.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "This route is unavailable. Trucks can only travel within the same connected region.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Dispatched batch #{v0} from {v1} to {v2} by {v3}.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Cargo dispatched to {v0}. Arrival in {v1} hours. Interception risk {v2}%.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Batch unavailable or already sold.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "This batch is still in production.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "This batch is still in transit.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Not enough wallet capacity to sell this batch.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Sold production batch #{v0} at {v1}% for ${v2}.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Batch sold at {v0}% of its locked base value.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Unsupported operation.",
+    "files": [
+      "logistics.js"
+    ]
+  },
+  {
+    "key": "Make room in your racing credit first.",
+    "files": [
+      "midnight-circuit.js"
+    ]
+  },
+  {
+    "key": "Race refunded",
+    "files": [
+      "midnight-circuit.js"
+    ]
+  },
+  {
+    "key": "The race was cancelled. Your entry and mechanic fees were returned.",
+    "files": [
+      "midnight-circuit.js"
+    ]
+  },
+  {
+    "key": "Midnight Circuit victory",
+    "files": [
+      "midnight-circuit.js"
+    ]
+  },
+  {
+    "key": "Midnight Circuit result",
+    "files": [
+      "midnight-circuit.js"
+    ]
+  },
+  {
+    "key": "Your saved race result is ready. Open Midnight Circuit to replay it.",
+    "files": [
+      "midnight-circuit.js"
+    ]
+  },
+  {
+    "key": "Weekly circuit trophy",
+    "files": [
+      "midnight-circuit.js"
+    ]
+  },
+  {
+    "key": "Your city racing trophy is ready in your garage.",
+    "files": [
+      "midnight-circuit.js"
+    ]
+  },
+  {
+    "key": "Insufficient cash for the race quote.",
+    "files": [
+      "midnight-circuit.js"
+    ]
+  },
+  {
+    "key": "Choose an available garaged car or locally stored unlisted vehicle.",
+    "files": [
+      "midnight-circuit.js"
+    ]
+  },
+  {
+    "key": "Repair this vehicle before racing.",
+    "files": [
+      "midnight-circuit.js"
+    ]
+  },
+  {
+    "key": "Choose a driving strategy, setup and mechanic option.",
+    "files": [
+      "midnight-circuit.js"
+    ]
+  },
+  {
+    "key": "Race quote changed. Refresh before entering.",
+    "files": [
+      "midnight-circuit.js"
+    ]
+  },
+  {
+    "key": "Racing requires 8 energy.",
+    "files": [
+      "midnight-circuit.js"
+    ]
+  },
+  {
+    "key": "Choose repair or tuning.",
+    "files": [
+      "midnight-circuit.js"
+    ]
+  },
+  {
+    "key": "This car does not need repairs.",
+    "files": [
+      "midnight-circuit.js"
+    ]
+  },
+  {
+    "key": "This class has reached its tuning limit.",
+    "files": [
+      "midnight-circuit.js"
+    ]
+  },
+  {
+    "key": "Workshop quote changed. Refresh before paying.",
+    "files": [
+      "midnight-circuit.js"
+    ]
+  },
+  {
+    "key": "Workshop service completed.",
+    "files": [
+      "midnight-circuit.js"
+    ]
+  },
+  {
+    "key": "Unknown circuit action.",
+    "files": [
+      "midnight-circuit.js"
+    ]
+  },
+  {
+    "key": "A valid race request key is required.",
+    "files": [
+      "midnight-circuit.js"
+    ]
+  },
+  {
+    "key": "This race request key was already used for different choices.",
+    "files": [
+      "midnight-circuit.js"
+    ]
+  },
+  {
+    "key": "Finish or await your current race first.",
+    "files": [
+      "midnight-circuit.js"
+    ]
+  },
+  {
+    "key": "Your driver is resting. Races share a ten-minute cooldown.",
+    "files": [
+      "midnight-circuit.js"
+    ]
+  },
+  {
+    "key": "Travel to a racing city first.",
+    "files": [
+      "midnight-circuit.js"
+    ]
+  },
+  {
+    "key": "Choose a race lobby.",
+    "files": [
+      "midnight-circuit.js"
+    ]
+  },
+  {
+    "key": "Race unavailable: match the city, class and rating within 80 points.",
+    "files": [
+      "midnight-circuit.js"
+    ]
+  },
+  {
+    "key": "Choose a route and a two-to-four-player field.",
+    "files": [
+      "midnight-circuit.js"
+    ]
+  },
+  {
+    "key": "Invalid family edit.",
+    "files": [
+      "owner-admin.js"
+    ]
+  },
+  {
+    "key": "Unknown family field: {v0}",
+    "files": [
+      "owner-admin.js"
+    ]
+  },
+  {
+    "key": "Invalid family name.",
+    "files": [
+      "owner-admin.js"
+    ]
+  },
+  {
+    "key": "Enter the Don’s username.",
+    "files": [
+      "owner-admin.js"
+    ]
+  },
+  {
+    "key": "The Don must be an existing player.",
+    "files": [
+      "owner-admin.js"
+    ]
+  },
+  {
+    "key": "Use 1–50 family members.",
+    "files": [
+      "owner-admin.js"
+    ]
+  },
+  {
+    "key": "Each member needs a username, member/capo role and non-negative donation total.",
+    "files": [
+      "owner-admin.js"
+    ]
+  },
+  {
+    "key": "Unknown or duplicate family member.",
+    "files": [
+      "owner-admin.js"
+    ]
+  },
+  {
+    "key": "{v0} leads another family. Change that family’s Don first.",
+    "files": [
+      "owner-admin.js"
+    ]
+  },
+  {
+    "key": "Include the Don in the member list.",
+    "files": [
+      "owner-admin.js"
+    ]
+  },
+  {
+    "key": "Invalid assets.",
+    "files": [
+      "owner-admin.js"
+    ]
+  },
+  {
+    "key": "Invalid or duplicate family asset.",
+    "files": [
+      "owner-admin.js"
+    ]
+  },
+  {
+    "key": "A family may own only one master compound.",
+    "files": [
+      "owner-admin.js"
+    ]
+  },
+  {
+    "key": "Member count exceeds this family’s rank and compound capacity.",
+    "files": [
+      "owner-admin.js"
+    ]
+  },
+  {
+    "key": "Owner updated family {v0}.",
+    "files": [
+      "owner-admin.js"
+    ]
+  },
+  {
+    "key": "Choose an investment account.",
+    "files": [
+      "owner-admin.js"
+    ]
+  },
+  {
+    "key": "Account not found.",
+    "files": [
+      "owner-admin.js"
+    ]
+  },
+  {
+    "key": "Investment not found.",
+    "files": [
+      "owner-admin.js"
+    ]
+  },
+  {
+    "key": "Choose an existing investment.",
+    "files": [
+      "owner-admin.js"
+    ]
+  },
+  {
+    "key": "Unknown investment operation.",
+    "files": [
+      "owner-admin.js"
+    ]
+  },
+  {
+    "key": "Invalid investment: positive principal, rate 0–8%, term up to 72 hours and valid claim state required.",
+    "files": [
+      "owner-admin.js"
+    ]
+  },
+  {
+    "key": "Active principal would exceed $1 billion.",
+    "files": [
+      "owner-admin.js"
+    ]
+  },
+  {
+    "key": "Administrative edit. No funds moved.",
+    "files": [
+      "owner-admin.js"
+    ]
+  },
+  {
+    "key": "Owner edited an investment for {v0} #{v1}. No funds moved.",
+    "files": [
+      "owner-admin.js"
+    ]
+  },
+  {
+    "key": "Invalid family ID",
+    "files": [
+      "owner-admin.js"
+    ]
+  },
+  {
+    "key": "Invalid account",
+    "files": [
+      "owner-admin.js"
+    ]
+  },
+  {
+    "key": "Unsupported Owner request.",
+    "files": [
+      "owner-admin.js"
+    ]
+  },
+  {
+    "key": "Owner assigned. Sign in again with your new password.",
+    "files": [
+      "owner-setup.js"
+    ]
+  },
+  {
+    "key": "Only the Don may decide alliances or transfer leadership.",
+    "files": [
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "Chat muted until {v0}. Support remains available.",
+    "files": [
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "Private messages are blocked between these players.",
+    "files": [
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "Confirm the exact player and action.",
+    "files": [
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "Admins cannot reset/delete the Owner or their own staff account.",
+    "files": [
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "The last active Owner cannot be deleted.",
+    "files": [
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "Resolve auction refunds before resetting this player.",
+    "files": [
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "Make room in the bidder bank before resetting this auction seller.",
+    "files": [
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "Account removed and sign-in revoked. Historical moderation and transaction records remain.",
+    "files": [
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "Gameplay reset to a new player. Login, staff role, cosmetic entitlements and anti-abuse history are preserved.",
+    "files": [
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "Choose a category, subject and message (up to 3,000 characters).",
+    "files": [
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "Request key reused.",
+    "files": [
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "Maximum ten new tickets per day. Reply to an existing ticket instead.",
+    "files": [
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "New support ticket #{v0}",
+    "files": [
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "Your report was sent privately to the Owner and Admin.",
+    "files": [
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "Ticket not found.",
+    "files": [
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "Write a reply of 1–3,000 characters.",
+    "files": [
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "Wait three seconds before replying again.",
+    "files": [
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "Staff must choose a valid ticket status.",
+    "files": [
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "Support ticket updated #{v0}",
+    "files": [
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "{v0} replied to a support ticket.",
+    "files": [
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "Support replied to ticket #{v0}",
+    "files": [
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "Open Dashboard → Support & reports to read the reply.",
+    "files": [
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "Choose another player and valid controls.",
+    "files": [
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "This player is protected or unavailable.",
+    "files": [
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "Use 0–720 hours and a reason.",
+    "files": [
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "An alliance or request already exists.",
+    "files": [
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "Only the receiving Don can accept this request.",
+    "files": [
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "End the war before accepting an alliance.",
+    "files": [
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "Alliance state changed.",
+    "files": [
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "Choose a valid alliance action.",
+    "files": [
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "Family diplomacy",
+    "files": [
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "Alliance {v0}. Open My family to review.",
+    "files": [
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "Choose an active Capo in your family.",
+    "files": [
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "{v0} is the new Don. You are now Capo.",
+    "files": [
+      "player-care.js"
+    ]
+  },
+  {
+    "key": "Bounty completed",
+    "files": [
+      "player-systems.js"
+    ]
+  },
+  {
+    "key": "Your bounty #{v0} was completed. The escrow reward was assigned to its successful hunter.",
+    "files": [
+      "player-systems.js"
+    ]
+  },
+  {
+    "key": "Incoming player operations recorded since the bounty/backfire update. Success percentage means the attacker succeeded against you. Rejected operations do not count.",
+    "files": [
+      "player-systems.js"
+    ]
+  },
+  {
+    "key": "Choose 0–10,000 backfire rounds.",
+    "files": [
+      "player-systems.js"
+    ]
+  },
+  {
+    "key": "Backfire preference saved. Rounds are only consumed when a valid liquidation attempt targets you.",
+    "files": [
+      "player-systems.js"
+    ]
+  },
+  {
+    "key": "Available bounty credit collected.",
+    "files": [
+      "player-systems.js"
+    ]
+  },
+  {
+    "key": "Choose a player and a whole-dollar bounty you can afford.",
+    "files": [
+      "player-systems.js"
+    ]
+  },
+  {
+    "key": "Choose an active player outside your own family.",
+    "files": [
+      "player-systems.js"
+    ]
+  },
+  {
+    "key": "Both players need 500 XP.",
+    "files": [
+      "player-systems.js",
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Total open bounties on a player cannot exceed $1 trillion.",
+    "files": [
+      "player-systems.js"
+    ]
+  },
+  {
+    "key": "At most ten open bounties per sponsor.",
+    "files": [
+      "player-systems.js"
+    ]
+  },
+  {
+    "key": "A bounty bears your name",
+    "files": [
+      "player-systems.js"
+    ]
+  },
+  {
+    "key": "A bounty of ${v0} has been funded. View Bounties under Crimes & missions.",
+    "files": [
+      "player-systems.js"
+    ]
+  },
+  {
+    "key": "Bounty funded and held in escrow. Another eligible player must successfully liquidate the target to earn it.",
+    "files": [
+      "player-systems.js"
+    ]
+  },
+  {
+    "key": "Choose another unmarried player.",
+    "files": [
+      "player-systems.js"
+    ]
+  },
+  {
+    "key": "At most five wedding invitations per day.",
+    "files": [
+      "player-systems.js"
+    ]
+  },
+  {
+    "key": "Player invitations are blocked.",
+    "files": [
+      "player-systems.js"
+    ]
+  },
+  {
+    "key": "You already have an outstanding proposal. Cancel it first.",
+    "files": [
+      "player-systems.js"
+    ]
+  },
+  {
+    "key": "A marriage proposal",
+    "files": [
+      "player-systems.js"
+    ]
+  },
+  {
+    "key": "{v0} invited you to marry. Open Marriage in the main menu. Nothing is charged until you accept.",
+    "files": [
+      "player-systems.js"
+    ]
+  },
+  {
+    "key": "Proposal sent. No money has been charged.",
+    "files": [
+      "player-systems.js"
+    ]
+  },
+  {
+    "key": "Proposal unavailable.",
+    "files": [
+      "player-systems.js"
+    ]
+  },
+  {
+    "key": "This proposal has ended.",
+    "files": [
+      "player-systems.js"
+    ]
+  },
+  {
+    "key": "Proposal declined. No money charged.",
+    "files": [
+      "player-systems.js"
+    ]
+  },
+  {
+    "key": "Proposal cancelled. No money charged.",
+    "files": [
+      "player-systems.js"
+    ]
+  },
+  {
+    "key": "Both players must be active and unmarried.",
+    "files": [
+      "player-systems.js"
+    ]
+  },
+  {
+    "key": "The wedding payer no longer has enough cash.",
+    "files": [
+      "player-systems.js"
+    ]
+  },
+  {
+    "key": "Congratulations — married",
+    "files": [
+      "player-systems.js"
+    ]
+  },
+  {
+    "key": "Your wedding is complete. Both partners now earn +10% on eligible activity cash and XP.",
+    "files": [
+      "player-systems.js"
+    ]
+  },
+  {
+    "key": "Wedding completed. {v0} paid for both partners. +10% eligible cash and XP for each spouse.",
+    "files": [
+      "player-systems.js"
+    ]
+  },
+  {
+    "key": "Confirm the end of your current marriage.",
+    "files": [
+      "player-systems.js"
+    ]
+  },
+  {
+    "key": "Marriage ended",
+    "files": [
+      "player-systems.js"
+    ]
+  },
+  {
+    "key": "{v0} ended your marriage. Both marriage bonuses have stopped.",
+    "files": [
+      "player-systems.js"
+    ]
+  },
+  {
+    "key": "Marriage ended. No wedding refund; both bonuses have stopped.",
+    "files": [
+      "player-systems.js"
+    ]
+  },
+  {
+    "key": "Choose at most 100 player IDs.",
+    "files": [
+      "presence.js"
+    ]
+  },
+  {
+    "key": "Invalid player ID.",
+    "files": [
+      "presence.js",
+      "profiles.js"
+    ]
+  },
+  {
+    "key": "Staff access required.",
+    "files": [
+      "presence.js",
+      "referrals.js",
+      "shop.js",
+      "staff.js"
+    ]
+  },
+  {
+    "key": "Invalid player filter.",
+    "files": [
+      "presence.js"
+    ]
+  },
+  {
+    "key": "Method not allowed",
+    "files": [
+      "profiles.js",
+      "server.js",
+      "transfers.js"
+    ]
+  },
+  {
+    "key": "Choose the available profile styles and a bio of at most 160 characters.",
+    "files": [
+      "profiles.js"
+    ]
+  },
+  {
+    "key": "Your profile has been updated.",
+    "files": [
+      "profiles.js"
+    ]
+  },
+  {
+    "key": "Choose a positive whole quantity or Buy MAX.",
+    "files": [
+      "purchases.js"
+    ]
+  },
+  {
+    "key": "Insufficient funds.",
+    "files": [
+      "purchases.js"
+    ]
+  },
+  {
+    "key": "Collection limit reached.",
+    "files": [
+      "purchases.js"
+    ]
+  },
+  {
+    "key": "Quantity exceeds your funds or collection limit.",
+    "files": [
+      "purchases.js"
+    ]
+  },
+  {
+    "key": "Invalid push subscription.",
+    "files": [
+      "push-notifications.js"
+    ]
+  },
+  {
+    "key": "Disable notifications for the previous account on this device first.",
+    "files": [
+      "push-notifications.js"
+    ]
+  },
+  {
+    "key": "Unknown push action.",
+    "files": [
+      "push-notifications.js"
+    ]
+  },
+  {
+    "key": "Push notifications are not configured on this server.",
+    "files": [
+      "push-notifications.js"
+    ]
+  },
+  {
+    "key": "Maximum five notification devices per account.",
+    "files": [
+      "push-notifications.js"
+    ]
+  },
+  {
+    "key": "Choose notification preferences.",
+    "files": [
+      "push-notifications.js"
+    ]
+  },
+  {
+    "key": "Tijdens het referral-bèta-event krijgt een nieuw account ${v0} startgeld als het bij registratie een bestaande menselijke verwijzer invult. Die verwijzer krijgt ${v1} zodra rang {v2} en {v3} verschillende actieve UTC-dagen zijn behaald. Jij hebt {v4} kwalificerende vrienden. Bij 5 krijg je 30 dagen Supporter en bij 10 30 dagen Grand Supporter; zonder aankoopgeld of XP. Verdachte koppelingen vereisen staffcontrole. Betaalde lidmaatschapstijd blijft behouden. Bekijk Beta-referrals voor de actuele koppelingen en status. Owner en Admin beoordelen verdachte koppelingen in hun paneel en kunnen onbetaalde beslissingen heropenen.",
+    "files": [
+      "referral-guide.js"
+    ]
+  },
+  {
+    "key": "During the beta referral event, a new account receives ${v0} starting cash when it names an existing human referrer at registration. The referrer receives ${v1} after rank {v2} and {v3} distinct active UTC days. You have {v4} qualifying friends. At 5 you earn 30 Supporter days; at 10, 30 Grand Supporter days, without purchase cash or XP. Suspicious links require staff review. Existing paid membership time is preserved. Open Beta referrals for current links and status. Owner and Admin review suspicious links in their panel and can reopen unpaid decisions.",
+    "files": [
+      "referral-guide.js"
+    ]
+  },
+  {
+    "key": "Enter a valid referrer username.",
+    "files": [
+      "referrals.js"
+    ]
+  },
+  {
+    "key": "Choose an existing human referrer.",
+    "files": [
+      "referrals.js"
+    ]
+  },
+  {
+    "key": "Beta referral starter bonus: $10000000.",
+    "files": [
+      "referrals.js"
+    ]
+  },
+  {
+    "key": "Qualified beta referral #{v0}: $25000000.",
+    "files": [
+      "referrals.js"
+    ]
+  },
+  {
+    "key": "Referral qualified",
+    "files": [
+      "referrals.js"
+    ]
+  },
+  {
+    "key": "A friend reached rank 5 and three active days. Your $25,000,000 beta reward was credited.",
+    "files": [
+      "referrals.js"
+    ]
+  },
+  {
+    "key": "Referral milestone unlocked",
+    "files": [
+      "referrals.js"
+    ]
+  },
+  {
+    "key": "{v0} qualified friends: 30 free days of Grand Supporter. Existing paid time is preserved; no purchase cash or XP is granted.",
+    "files": [
+      "referrals.js"
+    ]
+  },
+  {
+    "key": "{v0} qualified friends: 30 free days of Supporter. Existing paid time is preserved; no purchase cash or XP is granted.",
+    "files": [
+      "referrals.js"
+    ]
+  },
+  {
+    "key": "Choose a referral decision and a reason of 5–500 characters.",
+    "files": [
+      "referrals.js"
+    ]
+  },
+  {
+    "key": "Only a pending review can be decided.",
+    "files": [
+      "referrals.js"
+    ]
+  },
+  {
+    "key": "Referral review #{v0}: {v1} · {v2}",
+    "files": [
+      "referrals.js"
+    ]
+  },
+  {
+    "key": "Referral beta accounts unlock player-to-player spending after qualification and any required review.",
+    "files": [
+      "referrals.js"
+    ]
+  },
+  {
+    "key": "Image not found",
+    "files": [
+      "server.js"
+    ]
+  },
+  {
+    "key": "Icon not found",
+    "files": [
+      "server.js"
+    ]
+  },
+  {
+    "key": "Avatar not found",
+    "files": [
+      "server.js"
+    ]
+  },
+  {
+    "key": "Not found",
+    "files": [
+      "server.js"
+    ]
+  },
+  {
+    "key": "Cross-site requests are not allowed",
+    "files": [
+      "server.js"
+    ]
+  },
+  {
+    "key": "Untrusted request origin",
+    "files": [
+      "server.js"
+    ]
+  },
+  {
+    "key": "Use application/json",
+    "files": [
+      "server.js"
+    ]
+  },
+  {
+    "key": "Request too large",
+    "files": [
+      "server.js"
+    ]
+  },
+  {
+    "key": "Expected a JSON object",
+    "files": [
+      "server.js"
+    ]
+  },
+  {
+    "key": "Invalid JSON",
+    "files": [
+      "server.js"
+    ]
+  },
+  {
+    "key": "Please log in",
+    "files": [
+      "server.js"
+    ]
+  },
+  {
+    "key": "Too many attempts. Please try again later.",
+    "files": [
+      "server.js"
+    ]
+  },
+  {
+    "key": "Registration is closed",
+    "files": [
+      "server.js"
+    ]
+  },
+  {
+    "key": "Use a 3–20 character username, valid email address, and a password of 15–128 characters.",
+    "files": [
+      "server.js"
+    ]
+  },
+  {
+    "key": "Welcome to Mafia: The New Era",
+    "files": [
+      "server.js"
+    ]
+  },
+  {
+    "key": "Invalid login credentials",
+    "files": [
+      "server.js"
+    ]
+  },
+  {
+    "key": "Please sign in",
+    "files": [
+      "server.js"
+    ]
+  },
+  {
+    "key": "Too many attempts. Try again later.",
+    "files": [
+      "server.js"
+    ]
+  },
+  {
+    "key": "Use a new password of 15–128 characters.",
+    "files": [
+      "server.js"
+    ]
+  },
+  {
+    "key": "Current password is incorrect",
+    "files": [
+      "server.js"
+    ]
+  },
+  {
+    "key": "Your session was revoked. Please sign in again.",
+    "files": [
+      "server.js"
+    ]
+  },
+  {
+    "key": "Account changed. Sign in again.",
+    "files": [
+      "server.js"
+    ]
+  },
+  {
+    "key": "Password changed. All other sessions were signed out.",
+    "files": [
+      "server.js"
+    ]
+  },
+  {
+    "key": "Family not found",
+    "files": [
+      "server.js"
+    ]
+  },
+  {
+    "key": "Invalid setting",
+    "files": [
+      "server.js"
+    ]
+  },
+  {
+    "key": "Invalid value",
+    "files": [
+      "server.js"
+    ]
+  },
+  {
+    "key": "Internal server error",
+    "files": [
+      "server.js"
+    ]
+  },
+  {
+    "key": "Invalid request URL",
+    "files": [
+      "server.js"
+    ]
+  },
+  {
+    "key": "Mafia: The New Era running at http://localhost:{v0}",
+    "files": [
+      "server.js"
+    ]
+  },
+  {
+    "key": "Checkout is not available yet. No payment has been taken.",
+    "files": [
+      "shop.js"
+    ]
+  },
+  {
+    "key": "Only Owner and Admin can grant shop products.",
+    "files": [
+      "shop.js"
+    ]
+  },
+  {
+    "key": "Choose a player and product, and provide a reason of 1–200 characters.",
+    "files": [
+      "shop.js"
+    ]
+  },
+  {
+    "key": "This request key was already used for another grant.",
+    "files": [
+      "shop.js"
+    ]
+  },
+  {
+    "key": "This grant was already delivered.",
+    "files": [
+      "shop.js"
+    ]
+  },
+  {
+    "key": "Choose an active player.",
+    "files": [
+      "shop.js"
+    ]
+  },
+  {
+    "key": "This player already owns every item in this product.",
+    "files": [
+      "shop.js"
+    ]
+  },
+  {
+    "key": "This player already has an active supporter membership. Renew after it expires.",
+    "files": [
+      "shop.js"
+    ]
+  },
+  {
+    "key": "Make room for the full cash and XP reward first.",
+    "files": [
+      "shop.js"
+    ]
+  },
+  {
+    "key": "Make room for the full reward first. Purchased energy can exceed your normal capacity, up to one billion stored energy.",
+    "files": [
+      "shop.js"
+    ]
+  },
+  {
+    "key": "A gift for your collection",
+    "files": [
+      "shop.js"
+    ]
+  },
+  {
+    "key": "{v0}: {v1} delivered once.",
+    "files": [
+      "shop.js"
+    ]
+  },
+  {
+    "key": "{v0}: ${v1} and {v2} XP delivered once. Your {v3} name, diamond and +{v4}% earnings/XP bonus last 30 days. No automatic renewal.",
+    "files": [
+      "shop.js"
+    ]
+  },
+  {
+    "key": "{v0} was granted by staff. Your {v1} new cosmetic item(s) are permanent. Equip them in My profile.",
+    "files": [
+      "shop.js"
+    ]
+  },
+  {
+    "key": "{v0} delivered once. No payment was required.",
+    "files": [
+      "shop.js"
+    ]
+  },
+  {
+    "key": "{v0} granted for 30 days. ${v1} and {v2} XP delivered once. No payment was required.",
+    "files": [
+      "shop.js"
+    ]
+  },
+  {
+    "key": "{v0} granted. {v1} permanent cosmetic item(s) unlocked. No payment was required.",
+    "files": [
+      "shop.js"
+    ]
+  },
+  {
+    "key": "This account has been deleted.",
+    "files": [
+      "staff.js"
+    ]
+  },
+  {
+    "key": "Owner accounts are protected from Admin access.",
+    "files": [
+      "staff.js"
+    ]
+  },
+  {
+    "key": "Admins cannot grant this role.",
+    "files": [
+      "staff.js"
+    ]
+  },
+  {
+    "key": "Admins cannot change their own role.",
+    "files": [
+      "staff.js"
+    ]
+  },
+  {
+    "key": "Owner accounts are protected.",
+    "files": [
+      "staff.js"
+    ]
+  },
+  {
+    "key": "Admins cannot change the Owner’s family leadership.",
+    "files": [
+      "staff.js"
+    ]
+  },
+  {
+    "key": "Preserve the Owner’s membership, role and contributions.",
+    "files": [
+      "staff.js"
+    ]
+  },
+  {
+    "key": "Admins cannot move the Owner.",
+    "files": [
+      "staff.js"
+    ]
+  },
+  {
+    "key": "Not enough unclaimed map territory to place these holdings. No assets were changed.",
+    "files": [
+      "territory-map.js"
+    ]
+  },
+  {
+    "key": "Territory capture attempts have a one-hour cooldown.",
+    "files": [
+      "territory-map.js"
+    ]
+  },
+  {
+    "key": "Only one successful territory capture per 24 hours.",
+    "files": [
+      "territory-map.js"
+    ]
+  },
+  {
+    "key": "Your family already holds ten conquered territories worldwide.",
+    "files": [
+      "territory-map.js"
+    ]
+  },
+  {
+    "key": "This family has a 24-hour territory recovery shield.",
+    "files": [
+      "territory-map.js"
+    ]
+  },
+  {
+    "key": "Choose a map territory.",
+    "files": [
+      "territory-map.js"
+    ]
+  },
+  {
+    "key": "The rival no longer owns this territory.",
+    "files": [
+      "territory-map.js"
+    ]
+  },
+  {
+    "key": "Your family controls the maximum of thirty territories in this city.",
+    "files": [
+      "territory-map.js"
+    ]
+  },
+  {
+    "key": "Newly acquired territory has one hour of protection.",
+    "files": [
+      "territory-map.js"
+    ]
+  },
+  {
+    "key": "Your family has reached the worldwide limit for this territory type.",
+    "files": [
+      "territory-map.js"
+    ]
+  },
+  {
+    "key": "Territory ownership changed. Refresh the map.",
+    "files": [
+      "territory-map.js"
+    ]
+  },
+  {
+    "key": "Choose an airport city.",
+    "files": [
+      "territory-map.js"
+    ]
+  },
+  {
+    "key": "Choose map territories.",
+    "files": [
+      "territory-map.js"
+    ]
+  },
+  {
+    "key": "Invalid quantity.",
+    "files": [
+      "territory-map.js"
+    ]
+  },
+  {
+    "key": "Not enough unclaimed territory in this city.",
+    "files": [
+      "territory-map.js"
+    ]
+  },
+  {
+    "key": "Select one to twenty different territories.",
+    "files": [
+      "territory-map.js"
+    ]
+  },
+  {
+    "key": "Only twenty territories per city may be bought. Capture to grow to thirty.",
+    "files": [
+      "territory-map.js"
+    ]
+  },
+  {
+    "key": "A selected territory is unavailable. Refresh the map.",
+    "files": [
+      "territory-map.js"
+    ]
+  },
+  {
+    "key": "Worldwide territory-type limit reached.",
+    "files": [
+      "territory-map.js"
+    ]
+  },
+  {
+    "key": "Territory acquired in {v0}. Ownership is visible on the city map.",
+    "files": [
+      "territory-map.js"
+    ]
+  },
+  {
+    "key": "Choose a player, transfer type and positive whole amount.",
+    "files": [
+      "transfers.js"
+    ]
+  },
+  {
+    "key": "This transfer reference has already been used.",
+    "files": [
+      "transfers.js"
+    ]
+  },
+  {
+    "key": "Not enough cash.",
+    "files": [
+      "transfers.js"
+    ]
+  },
+  {
+    "key": "The recipient can receive at most {v0} more cash.",
+    "files": [
+      "transfers.js"
+    ]
+  },
+  {
+    "key": "The recipient can receive at most {v0} more energy.",
+    "files": [
+      "transfers.js"
+    ]
+  },
+  {
+    "key": "Sent {v0} to {v1}.",
+    "files": [
+      "transfers.js"
+    ]
+  },
+  {
+    "key": "Received {v0} from {v1}.",
+    "files": [
+      "transfers.js"
+    ]
+  },
+  {
+    "key": "Transfer received",
+    "files": [
+      "transfers.js"
+    ]
+  },
+  {
+    "key": "You have been arrested",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Critical condition — coma",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Hospital admission",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "You are free to play again",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Only this family’s Don or Capos can spend its treasury.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Choose a current stay.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "This stay has already ended.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "You can only arrange your own release while detained.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Refresh the release quote.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Select assets to surrender.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Invalid surrendered asset.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Make room in your bank for the asset change.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Insufficient funds for release.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Choose cash, bank, combined funds, selected assets or family treasury.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "{v0} paid ${v1} for your release.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Paid ${v0} to release player #{v1}.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Release completed. Total paid: ${v0}.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Enter a target username.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Choose another active player and a sentence.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "This player is detained or has release protection.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "You can report a player once every six hours.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "An anonymous informant reported you. Sentence: {v0} hours.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "{v0} reported you. Sentence: {v1} hours.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Court fine",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "${v0} deducted from cash and bank. Bail decreases as time passes.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Reported {v0} for ${v1}. Fine charged: ${v2}.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "{v0} imprisoned for {v1} hours. Fee: ${v2}; fine: ${v3}.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Choose a current prisoner.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Choose another current prisoner.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Your breakout crew is regrouping.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "A breakout requires 40 energy.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Choose who funds the mission.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Insufficient treasury.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Breakout rank up",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "{v0} · +{v1} percentage points to breakout success.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "{v0} broke you out of prison.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Your failed breakout led to a six-hour prison sentence.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Breakout: success. Cost ${v0} and 40 energy.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Breakout: failed. Cost ${v0} and 40 energy.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Breakout succeeded. The prisoner is free.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Breakout failed. You were arrested for six hours.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Breakout failed. You escaped arrest.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Enter a player username.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Daily limit: five different players. Resets at 00:00 UTC.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "You already respected this player today.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Respect received",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "{v0} gave you respect. Your respect rank and bonuses have been updated.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Gave respect to {v0}. +${v1} and {v2} energy.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Respect given to {v0}. +${v1} and {v2} energy.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Invalid notification",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Owner access required",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Catalog base value; active assets including weapons, unsold production at cost, recovered vehicles at current city quotes and investment principal, open casino stakes and unpaid returns. Ammunition is excluded. Archived holdings excluded.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Net worth = cash + bank/treasury + active assets and weapons at catalog base value + unsold production at cost + recovered vehicles at current city quotes + invested principal + saved passive income + open casino stakes/unpaid returns. Family assets are counted separately.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "A player cannot be in prison and hospital simultaneously.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Owner updated your status",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Your {v0} stay now ends at {v1}.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Owner released you",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Your restrictions have been removed.",
+    "files": [
+      "underworld.js"
+    ]
+  },
+  {
+    "key": "Vehicle auction won",
+    "files": [
+      "vehicle-auctions.js"
+    ]
+  },
+  {
+    "key": "Your vehicle is in your warehouse.",
+    "files": [
+      "vehicle-auctions.js"
+    ]
+  },
+  {
+    "key": "Vehicle auction sold",
+    "files": [
+      "vehicle-auctions.js"
+    ]
+  },
+  {
+    "key": "Net proceeds: ${v0}.",
+    "files": [
+      "vehicle-auctions.js"
+    ]
+  },
+  {
+    "key": "Choose a valid vehicle or auction.",
+    "files": [
+      "vehicle-auctions.js"
+    ]
+  },
+  {
+    "key": "Store an unlisted vehicle before auctioning it.",
+    "files": [
+      "vehicle-auctions.js"
+    ]
+  },
+  {
+    "key": "Choose a positive minimum price and a 6, 12 or 24 hour auction.",
+    "files": [
+      "vehicle-auctions.js"
+    ]
+  },
+  {
+    "key": "You may have five active vehicle auctions.",
+    "files": [
+      "vehicle-auctions.js"
+    ]
+  },
+  {
+    "key": "Listing quote changed. Refresh before confirming.",
+    "files": [
+      "vehicle-auctions.js"
+    ]
+  },
+  {
+    "key": "Vehicle listed. The listing fee is non-refundable; successful sales incur 3% commission.",
+    "files": [
+      "vehicle-auctions.js"
+    ]
+  },
+  {
+    "key": "Auction has ended.",
+    "files": [
+      "vehicle-auctions.js"
+    ]
+  },
+  {
+    "key": "You cannot bid on your own auction or raise your own leading bid.",
+    "files": [
+      "vehicle-auctions.js"
+    ]
+  },
+  {
+    "key": "Bid is below the next minimum or above the money limit.",
+    "files": [
+      "vehicle-auctions.js"
+    ]
+  },
+  {
+    "key": "Buy a vehicle warehouse with a free bay before bidding.",
+    "files": [
+      "vehicle-auctions.js"
+    ]
+  },
+  {
+    "key": "Your auction escrow limit has been reached.",
+    "files": [
+      "vehicle-auctions.js"
+    ]
+  },
+  {
+    "key": "Bid placed. Cash and a warehouse bay are reserved until you win or are outbid.",
+    "files": [
+      "vehicle-auctions.js"
+    ]
+  },
+  {
+    "key": "Buy a private garage before buying another car. Each garage holds six purchased cars.",
+    "files": [
+      "vehicles.js"
+    ]
+  },
+  {
+    "key": "Vehicle shipment intercepted",
+    "files": [
+      "vehicles.js"
+    ]
+  },
+  {
+    "key": "Vehicle shipment delivered",
+    "files": [
+      "vehicles.js"
+    ]
+  },
+  {
+    "key": "{v0} was intercepted. The vehicle and transport fee were lost.",
+    "files": [
+      "vehicles.js"
+    ]
+  },
+  {
+    "key": "{v0} arrived in {v1}.",
+    "files": [
+      "vehicles.js"
+    ]
+  },
+  {
+    "key": "Resolve your recovered vehicle first: sell it, store it or exchange it from Vehicle warehouses.",
+    "files": [
+      "vehicles.js"
+    ]
+  },
+  {
+    "key": "Make room in your cash wallet before selling.",
+    "files": [
+      "vehicles.js"
+    ]
+  },
+  {
+    "key": "This car is reserved for a pending race.",
+    "files": [
+      "vehicles.js"
+    ]
+  },
+  {
+    "key": "Car not owned.",
+    "files": [
+      "vehicles.js"
+    ]
+  },
+  {
+    "key": "Sold {v0} for ${v1}.",
+    "files": [
+      "vehicles.js"
+    ]
+  },
+  {
+    "key": "Car sold for 80% of its purchase price.",
+    "files": [
+      "vehicles.js"
+    ]
+  },
+  {
+    "key": "Choose a recovered vehicle.",
+    "files": [
+      "vehicles.js"
+    ]
+  },
+  {
+    "key": "Vehicle unavailable, already sold or in transit.",
+    "files": [
+      "vehicles.js"
+    ]
+  },
+  {
+    "key": "Sold recovered {v0} in {v1} for ${v2}.",
+    "files": [
+      "vehicles.js"
+    ]
+  },
+  {
+    "key": "Recovered vehicle sold at the current city quote.",
+    "files": [
+      "vehicles.js"
+    ]
+  },
+  {
+    "key": "This vehicle is already stored.",
+    "files": [
+      "vehicles.js"
+    ]
+  },
+  {
+    "key": "Warehouse full. Select one stored car to sell and replace, or sell this car.",
+    "files": [
+      "vehicles.js"
+    ]
+  },
+  {
+    "key": "Choose one of your stored vehicles to replace.",
+    "files": [
+      "vehicles.js"
+    ]
+  },
+  {
+    "key": "Buy a vehicle warehouse first.",
+    "files": [
+      "vehicles.js"
+    ]
+  },
+  {
+    "key": "Vehicle added to your secured collection.",
+    "files": [
+      "vehicles.js"
+    ]
+  },
+  {
+    "key": "Store the vehicle before shipping.",
+    "files": [
+      "vehicles.js"
+    ]
+  },
+  {
+    "key": "Choose an available transport route.",
+    "files": [
+      "vehicles.js"
+    ]
+  },
+  {
+    "key": "Vehicle dispatched. Its warehouse bay remains reserved until delivery or interception.",
+    "files": [
+      "vehicles.js"
+    ]
+  },
+  {
+    "key": "Unknown vehicle action.",
+    "files": [
+      "vehicles.js"
+    ]
+  },
+  {
+    "key": "This operation requires an active war against that family.",
+    "files": [
+      "war-operations.js"
+    ]
+  },
+  {
+    "key": "Every participant must be active and outside coma.",
+    "files": [
+      "war-operations.js"
+    ]
+  },
+  {
+    "key": "Every participant must still belong to this family.",
+    "files": [
+      "war-operations.js"
+    ]
+  },
+  {
+    "key": "Every participant needs 500 XP and {v0} energy.",
+    "files": [
+      "war-operations.js"
+    ]
+  },
+  {
+    "key": "Your family must own territory before launching war operations.",
+    "files": [
+      "war-operations.js"
+    ]
+  },
+  {
+    "key": "Your family is regrouping. All attacks share the raid cooldown.",
+    "files": [
+      "war-operations.js"
+    ]
+  },
+  {
+    "key": "A joint assault requires 2–5 consenting members.",
+    "files": [
+      "war-operations.js"
+    ]
+  },
+  {
+    "key": "The commander must join the team before launching.",
+    "files": [
+      "war-operations.js"
+    ]
+  },
+  {
+    "key": "This family is already sabotaged. Effects do not stack.",
+    "files": [
+      "war-operations.js"
+    ]
+  },
+  {
+    "key": "Buy family territory before assembling an assault.",
+    "files": [
+      "war-operations.js"
+    ]
+  },
+  {
+    "key": "Your family already has an assault recruiting.",
+    "files": [
+      "war-operations.js"
+    ]
+  },
+  {
+    "key": "Assault created. At least one other member must join.",
+    "files": [
+      "war-operations.js"
+    ]
+  },
+  {
+    "key": "Choose an assault team.",
+    "files": [
+      "war-operations.js"
+    ]
+  },
+  {
+    "key": "This assault is unavailable or has expired.",
+    "files": [
+      "war-operations.js"
+    ]
+  },
+  {
+    "key": "You already joined this assault.",
+    "files": [
+      "war-operations.js"
+    ]
+  },
+  {
+    "key": "This assault is full.",
+    "files": [
+      "war-operations.js"
+    ]
+  },
+  {
+    "key": "You joined. On launch you spend 35 energy and your family spends 50 rounds for you.",
+    "files": [
+      "war-operations.js"
+    ]
+  },
+  {
+    "key": "You left the assault. No resources were spent.",
+    "files": [
+      "war-operations.js"
+    ]
+  },
+  {
+    "key": "Assault cancelled. No resources were spent.",
+    "files": [
+      "war-operations.js"
+    ]
+  }
+]

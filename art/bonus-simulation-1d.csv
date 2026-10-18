@@ -1,0 +1,11 @@
+profile,day,cash,bank,xp,rank,distinctions,propertyValue,weaponValue,employeeValue,personalValue,energy,power,drugs,guns,familyDrugs,familyGuns,familyTreasury,packCash,packXp,income,expenses,netCashFlow,passive
+"No membership or marriage",0,5000,0,0,"Outsider",0,0,0,0,5000,100,0,1,1,0,0,0,0,0,0,0,0,0
+"No membership or marriage",1,436144,0,14580,"Errand Runner",0,0,5000,0,441144,110,100,1,1,0,0,0,0,0,462747,31603,431144,0
+"Marriage",0,5000,0,0,"Outsider",0,0,0,0,5000,100,0,1,1,0,0,0,0,0,0,0,0,0
+"Marriage",1,436144,0,14580,"Errand Runner",0,0,5000,0,441144,110,100,1,1,0,0,0,0,0,462747,31603,431144,0
+"Supporter",0,5000,0,0,"Outsider",0,0,0,0,5000,100,0,1,1,0,0,0,0,0,0,0,0,0
+"Supporter",1,20030630,0,62210,"Street Operator",0,3000000,1105000,100000,24235630,150,1970,1,1,1,1,1076029,25000000,50000,1425378,6399748,-4974370,103165
+"Supporter + marriage",0,5000,0,0,"Outsider",0,0,0,0,5000,100,0,1,1,0,0,0,0,0,0,0,0,0
+"Supporter + marriage",1,15349178,0,62710,"Street Operator",0,3000000,1105000,100000,19554178,150,1970,1,1,1,1,923085,25000000,50000,1492278,11148100,-9655822,113481
+"Grand Supporter + marriage",0,5000,0,0,"Outsider",0,0,0,0,5000,100,0,1,1,0,0,0,0,0,0,0,0,0
+"Grand Supporter + marriage",1,59498570,0,204183,"Racketeer",0,20500000,1105000,200000,81303570,210,1990,1,1,1,1,7160571,75000000,150000,19607732,35114162,-15506430,984528

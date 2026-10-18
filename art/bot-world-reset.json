@@ -1,0 +1,365 @@
+{
+  "database": "C:\\Users\\Jeffrey Berwald\\Downloads\\mafia-the-new-era-english\\mafia-the-new-era\\data\\mafia.sqlite",
+  "backup": "C:\\Users\\Jeffrey Berwald\\Downloads\\mafia-the-new-era-english\\mafia-the-new-era\\backups\\before-bot-reset-1791984916467.sqlite",
+  "createdAt": 1791984916467,
+  "removed": [
+    "Test_AlleyJoe",
+    "Test_PennyPete",
+    "Test_SmallFry",
+    "Test_StreetSam",
+    "Test_LuckyLou",
+    "Test_BrickVinny",
+    "Test_NicoCash",
+    "Test_RubyKnox",
+    "Test_FrankieD",
+    "Test_MiloSteel",
+    "Test_TonyWest",
+    "Test_LenaBlaze",
+    "Test_MarcoVale",
+    "Test_VeraStone",
+    "Test_SalFalcone",
+    "Test_CleoBanks",
+    "Test_DanteGold",
+    "Test_EvaCrown",
+    "Test_VitoRoyale",
+    "Test_LucaNoir",
+    "Test_RosaSilk",
+    "Test_EnzoVault",
+    "Test_NadiaOnyx",
+    "Test_CarloKing",
+    "Test_VinceCrown",
+    "Test_BiancaLux",
+    "Test_DonSterling",
+    "Test_GoldEmperor",
+    "Test_Godfather",
+    "Test_LegacyKing",
+    "Test_Axel814",
+    "Test_Blaire615",
+    "Test_Cassio564",
+    "Test_Daria864",
+    "Test_Elio920",
+    "Test_Faye476",
+    "Test_Gino809",
+    "Test_Hazel242",
+    "Test_Ivo172",
+    "Test_Jade833",
+    "Test_Kane306",
+    "Test_Livia526",
+    "Test_Mason293",
+    "Test_Nora261",
+    "Test_Orion340",
+    "Test_Petra445",
+    "Test_Quinn588",
+    "Test_Rocco813",
+    "Test_Sienna892",
+    "Test_Troy440"
+  ],
+  "reset": [
+    "MrGadget"
+  ],
+  "ownersPreserved": [
+    "EraaZoraah"
+  ],
+  "bots": [
+    {
+      "id": 53,
+      "username": "Vito Moretti",
+      "personality": "builder",
+      "membership": "supporter"
+    },
+    {
+      "id": 54,
+      "username": "Luca Ricci",
+      "personality": "trader",
+      "membership": "supporter"
+    },
+    {
+      "id": 55,
+      "username": "Salvatore Russo",
+      "personality": "enforcer",
+      "membership": "supporter"
+    },
+    {
+      "id": 56,
+      "username": "Enzo Caruso",
+      "personality": "leader",
+      "membership": "supporter"
+    },
+    {
+      "id": 57,
+      "username": "Marco Romano",
+      "personality": "gambler",
+      "membership": "supporter"
+    },
+    {
+      "id": 58,
+      "username": "Dante Ferraro",
+      "personality": "builder",
+      "membership": "supporter"
+    },
+    {
+      "id": 59,
+      "username": "Carlo Bruno",
+      "personality": "trader",
+      "membership": "grand-supporter"
+    },
+    {
+      "id": 60,
+      "username": "Nico Valenti",
+      "personality": "enforcer",
+      "membership": "grand-supporter"
+    },
+    {
+      "id": 61,
+      "username": "Rocco Marino",
+      "personality": "leader",
+      "membership": "grand-supporter"
+    },
+    {
+      "id": 62,
+      "username": "Vincenzo Costa",
+      "personality": "gambler",
+      "membership": "grand-supporter"
+    },
+    {
+      "id": 63,
+      "username": "Rosa Fontana",
+      "personality": "builder",
+      "membership": null
+    },
+    {
+      "id": 64,
+      "username": "Bianca Falcone",
+      "personality": "trader",
+      "membership": null
+    },
+    {
+      "id": 65,
+      "username": "Lucia Lombardi",
+      "personality": "enforcer",
+      "membership": null
+    },
+    {
+      "id": 66,
+      "username": "Sofia Rizzo",
+      "personality": "leader",
+      "membership": null
+    },
+    {
+      "id": 67,
+      "username": "Valentina Leone",
+      "personality": "gambler",
+      "membership": null
+    },
+    {
+      "id": 68,
+      "username": "Alessio DeLuca",
+      "personality": "builder",
+      "membership": null
+    },
+    {
+      "id": 69,
+      "username": "Giovanni Mancini",
+      "personality": "trader",
+      "membership": null
+    },
+    {
+      "id": 70,
+      "username": "Antonio Bianchi",
+      "personality": "enforcer",
+      "membership": null
+    },
+    {
+      "id": 71,
+      "username": "Francesca Bellini",
+      "personality": "leader",
+      "membership": null
+    },
+    {
+      "id": 72,
+      "username": "Isabella Conti",
+      "personality": "gambler",
+      "membership": null
+    },
+    {
+      "id": 73,
+      "username": "Matteo Gallo",
+      "personality": "builder",
+      "membership": null
+    },
+    {
+      "id": 74,
+      "username": "Pietro Santoro",
+      "personality": "trader",
+      "membership": null
+    },
+    {
+      "id": 75,
+      "username": "Santino Vitale",
+      "personality": "enforcer",
+      "membership": null
+    },
+    {
+      "id": 76,
+      "username": "Carmine Greco",
+      "personality": "leader",
+      "membership": null
+    },
+    {
+      "id": 77,
+      "username": "Domenico Serra",
+      "personality": "gambler",
+      "membership": null
+    },
+    {
+      "id": 78,
+      "username": "Vito Bellini",
+      "personality": "builder",
+      "membership": null
+    },
+    {
+      "id": 79,
+      "username": "Luca Conti",
+      "personality": "trader",
+      "membership": null
+    },
+    {
+      "id": 80,
+      "username": "Salvatore Gallo",
+      "personality": "enforcer",
+      "membership": null
+    },
+    {
+      "id": 81,
+      "username": "Enzo Santoro",
+      "personality": "leader",
+      "membership": null
+    },
+    {
+      "id": 82,
+      "username": "Marco Vitale",
+      "personality": "gambler",
+      "membership": null
+    },
+    {
+      "id": 83,
+      "username": "Dante Greco",
+      "personality": "builder",
+      "membership": null
+    },
+    {
+      "id": 84,
+      "username": "Carlo Serra",
+      "personality": "trader",
+      "membership": null
+    },
+    {
+      "id": 85,
+      "username": "Nico Moretti",
+      "personality": "enforcer",
+      "membership": null
+    },
+    {
+      "id": 86,
+      "username": "Rocco Ricci",
+      "personality": "leader",
+      "membership": null
+    },
+    {
+      "id": 87,
+      "username": "Vincenzo Russo",
+      "personality": "gambler",
+      "membership": null
+    },
+    {
+      "id": 88,
+      "username": "Rosa Caruso",
+      "personality": "builder",
+      "membership": null
+    },
+    {
+      "id": 89,
+      "username": "Bianca Romano",
+      "personality": "trader",
+      "membership": null
+    },
+    {
+      "id": 90,
+      "username": "Lucia Ferraro",
+      "personality": "enforcer",
+      "membership": null
+    },
+    {
+      "id": 91,
+      "username": "Sofia Bruno",
+      "personality": "leader",
+      "membership": null
+    },
+    {
+      "id": 92,
+      "username": "Valentina Valenti",
+      "personality": "gambler",
+      "membership": null
+    },
+    {
+      "id": 93,
+      "username": "Alessio Marino",
+      "personality": "builder",
+      "membership": null
+    },
+    {
+      "id": 94,
+      "username": "Giovanni Costa",
+      "personality": "trader",
+      "membership": null
+    },
+    {
+      "id": 95,
+      "username": "Antonio Fontana",
+      "personality": "enforcer",
+      "membership": null
+    },
+    {
+      "id": 96,
+      "username": "Francesca Falcone",
+      "personality": "leader",
+      "membership": null
+    },
+    {
+      "id": 97,
+      "username": "Isabella Lombardi",
+      "personality": "gambler",
+      "membership": null
+    },
+    {
+      "id": 98,
+      "username": "Matteo Rizzo",
+      "personality": "builder",
+      "membership": null
+    },
+    {
+      "id": 99,
+      "username": "Pietro Leone",
+      "personality": "trader",
+      "membership": null
+    },
+    {
+      "id": 100,
+      "username": "Santino DeLuca",
+      "personality": "enforcer",
+      "membership": null
+    },
+    {
+      "id": 101,
+      "username": "Carmine Mancini",
+      "personality": "leader",
+      "membership": null
+    },
+    {
+      "id": 102,
+      "username": "Domenico Bianchi",
+      "personality": "gambler",
+      "membership": null
+    }
+  ]
+}

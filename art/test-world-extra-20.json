@@ -1,0 +1,637 @@
+{
+  "batch": "test-world-extra-20-v1",
+  "backup": "backups/mafia-before-extra-20-2026-10-10T16-23-00-844Z.sqlite",
+  "players": [
+    {
+      "id": 32,
+      "username": "Test_Axel814",
+      "rank": "Crime Lord",
+      "xp": 702986,
+      "cash": 29638,
+      "bank": 6975,
+      "protection": 0,
+      "family": null,
+      "assets": []
+    },
+    {
+      "id": 33,
+      "username": "Test_Blaire615",
+      "rank": "Senior Capo",
+      "xp": 194022,
+      "cash": 1247001,
+      "bank": 3242202,
+      "protection": 1,
+      "family": "TEST Imperial Dynasty",
+      "assets": [
+        {
+          "category": "car",
+          "item_id": "bmw330",
+          "quantity": 1
+        },
+        {
+          "category": "business",
+          "item_id": "laundry",
+          "quantity": 2
+        },
+        {
+          "category": "home",
+          "item_id": "apartment",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "username": "Test_Cassio564",
+      "rank": "Hustler",
+      "xp": 1281,
+      "cash": 205582586,
+      "bank": 41116517,
+      "protection": 5,
+      "family": "TEST Imperial Dynasty",
+      "assets": [
+        {
+          "category": "car",
+          "item_id": "temerario",
+          "quantity": 4
+        },
+        {
+          "category": "business",
+          "item_id": "coffee",
+          "quantity": 3
+        },
+        {
+          "category": "car",
+          "item_id": "amg",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "username": "Test_Daria864",
+      "rank": "Soldier",
+      "xp": 24489,
+      "cash": 1243806113,
+      "bank": 3482657116,
+      "protection": 1,
+      "family": "TEST Imperial Dynasty",
+      "assets": [
+        {
+          "category": "business",
+          "item_id": "club",
+          "quantity": 4
+        },
+        {
+          "category": "home",
+          "item_id": "studio",
+          "quantity": 4
+        },
+        {
+          "category": "business",
+          "item_id": "casino",
+          "quantity": 4
+        },
+        {
+          "category": "helicopter",
+          "item_id": "monarch",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "username": "Test_Elio920",
+      "rank": "Capo",
+      "xp": 140369,
+      "cash": 214735451712,
+      "bank": 407997358252,
+      "protection": 2,
+      "family": "TEST Iron Syndicate",
+      "assets": [
+        {
+          "category": "jet",
+          "item_id": "horizon",
+          "quantity": 4
+        },
+        {
+          "category": "business",
+          "item_id": "hotel",
+          "quantity": 4
+        },
+        {
+          "category": "car",
+          "item_id": "civic",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "username": "Test_Faye476",
+      "rank": "Consigliere",
+      "xp": 266046,
+      "cash": 29546,
+      "bank": 6570,
+      "protection": 1,
+      "family": null,
+      "assets": []
+    },
+    {
+      "id": 38,
+      "username": "Test_Gino809",
+      "rank": "Pickpocket",
+      "xp": 747,
+      "cash": 4556776,
+      "bank": 11847617,
+      "protection": 1,
+      "family": "TEST Backstreet Crew",
+      "assets": [
+        {
+          "category": "business",
+          "item_id": "coffee",
+          "quantity": 2
+        },
+        {
+          "category": "home",
+          "item_id": "apartment",
+          "quantity": 2
+        },
+        {
+          "category": "car",
+          "item_id": "g63",
+          "quantity": 2
+        },
+        {
+          "category": "car",
+          "item_id": "amg",
+          "quantity": 1
+        },
+        {
+          "category": "car",
+          "item_id": "civic",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "username": "Test_Hazel242",
+      "rank": "Made Member",
+      "xp": 12812,
+      "cash": 197910562,
+      "bank": 39582112,
+      "protection": 2,
+      "family": "TEST Imperial Dynasty",
+      "assets": [
+        {
+          "category": "car",
+          "item_id": "model3",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "username": "Test_Ivo172",
+      "rank": "Crime Lord",
+      "xp": 724668,
+      "cash": 6949315302,
+      "bank": 12508767543,
+      "protection": 2,
+      "family": "TEST Dockside Mob",
+      "assets": [
+        {
+          "category": "home",
+          "item_id": "loft",
+          "quantity": 1
+        },
+        {
+          "category": "car",
+          "item_id": "jesko",
+          "quantity": 4
+        },
+        {
+          "category": "car",
+          "item_id": "tourbillon",
+          "quantity": 2
+        },
+        {
+          "category": "business",
+          "item_id": "resort",
+          "quantity": 4
+        },
+        {
+          "category": "home",
+          "item_id": "penthouse",
+          "quantity": 3
+        },
+        {
+          "category": "business",
+          "item_id": "club",
+          "quantity": 4
+        },
+        {
+          "category": "jet",
+          "item_id": "swift",
+          "quantity": 3
+        },
+        {
+          "category": "garage",
+          "item_id": "collector",
+          "quantity": 4
+        },
+        {
+          "category": "jet",
+          "item_id": "altitude",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "username": "Test_Jade833",
+      "rank": "Enforcer",
+      "xp": 4966,
+      "cash": 774735279213,
+      "bank": 852208807134,
+      "protection": 5,
+      "family": "TEST Iron Syndicate",
+      "assets": [
+        {
+          "category": "car",
+          "item_id": "12cilindri",
+          "quantity": 4
+        },
+        {
+          "category": "car",
+          "item_id": "750s",
+          "quantity": 2
+        },
+        {
+          "category": "home",
+          "item_id": "loft",
+          "quantity": 4
+        },
+        {
+          "category": "car",
+          "item_id": "fiat500",
+          "quantity": 1
+        },
+        {
+          "category": "car",
+          "item_id": "civic",
+          "quantity": 3
+        },
+        {
+          "category": "business",
+          "item_id": "garage",
+          "quantity": 3
+        },
+        {
+          "category": "home",
+          "item_id": "townhouse",
+          "quantity": 4
+        },
+        {
+          "category": "car",
+          "item_id": "utopia",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "username": "Test_Kane306",
+      "rank": "Hustler",
+      "xp": 1929,
+      "cash": 18395,
+      "bank": 4619,
+      "protection": 0,
+      "family": null,
+      "assets": []
+    },
+    {
+      "id": 43,
+      "username": "Test_Livia526",
+      "rank": "Racketeer",
+      "xp": 49927,
+      "cash": 2482836,
+      "bank": 4469104,
+      "protection": 2,
+      "family": "TEST Golden Cartel",
+      "assets": [
+        {
+          "category": "car",
+          "item_id": "fiat500",
+          "quantity": 2
+        },
+        {
+          "category": "car",
+          "item_id": "g63",
+          "quantity": 1
+        },
+        {
+          "category": "car",
+          "item_id": "yaris",
+          "quantity": 4
+        },
+        {
+          "category": "car",
+          "item_id": "amg",
+          "quantity": 2
+        },
+        {
+          "category": "business",
+          "item_id": "laundry",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "username": "Test_Mason293",
+      "rank": "Racketeer",
+      "xp": 51796,
+      "cash": 164174215,
+      "bank": 295513587,
+      "protection": 4,
+      "family": "TEST Imperial Dynasty",
+      "assets": [
+        {
+          "category": "car",
+          "item_id": "bmw330",
+          "quantity": 1
+        },
+        {
+          "category": "business",
+          "item_id": "coffee",
+          "quantity": 3
+        },
+        {
+          "category": "home",
+          "item_id": "apartment",
+          "quantity": 2
+        },
+        {
+          "category": "business",
+          "item_id": "hotel",
+          "quantity": 1
+        },
+        {
+          "category": "car",
+          "item_id": "jesko",
+          "quantity": 3
+        },
+        {
+          "category": "car",
+          "item_id": "db12",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "username": "Test_Nora261",
+      "rank": "Shadow Sovereign",
+      "xp": 973785,
+      "cash": 1300410851,
+      "bank": 2210698446,
+      "protection": 7,
+      "family": "TEST Golden Cartel",
+      "assets": [
+        {
+          "category": "helicopter",
+          "item_id": "monarch",
+          "quantity": 4
+        },
+        {
+          "category": "yacht",
+          "item_id": "sovereign",
+          "quantity": 4
+        },
+        {
+          "category": "yacht",
+          "item_id": "riviera",
+          "quantity": 3
+        },
+        {
+          "category": "business",
+          "item_id": "garage",
+          "quantity": 3
+        },
+        {
+          "category": "car",
+          "item_id": "amg",
+          "quantity": 1
+        },
+        {
+          "category": "car",
+          "item_id": "fiat500",
+          "quantity": 4
+        },
+        {
+          "category": "car",
+          "item_id": "nevera",
+          "quantity": 3
+        },
+        {
+          "category": "car",
+          "item_id": "750s",
+          "quantity": 2
+        },
+        {
+          "category": "car",
+          "item_id": "civic",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "username": "Test_Orion340",
+      "rank": "Underboss",
+      "xp": 305864,
+      "cash": 191091477793,
+      "bank": 477728694482,
+      "protection": 4,
+      "family": "TEST Iron Syndicate",
+      "assets": [
+        {
+          "category": "yacht",
+          "item_id": "sovereign",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "username": "Test_Petra445",
+      "rank": "Don",
+      "xp": 576239,
+      "cash": 42404,
+      "bank": 6930,
+      "protection": 1,
+      "family": null,
+      "assets": []
+    },
+    {
+      "id": 48,
+      "username": "Test_Quinn588",
+      "rank": "Senior Capo",
+      "xp": 167011,
+      "cash": 4170833,
+      "bank": 9175832,
+      "protection": 0,
+      "family": "TEST Imperial Dynasty",
+      "assets": [
+        {
+          "category": "business",
+          "item_id": "garage",
+          "quantity": 4
+        },
+        {
+          "category": "home",
+          "item_id": "studio",
+          "quantity": 3
+        },
+        {
+          "category": "car",
+          "item_id": "audiS5",
+          "quantity": 3
+        },
+        {
+          "category": "business",
+          "item_id": "coffee",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "username": "Test_Rocco813",
+      "rank": "The Godfather",
+      "xp": 1428442,
+      "cash": 183754136,
+      "bank": 147003308,
+      "protection": 4,
+      "family": "TEST Dockside Mob",
+      "assets": [
+        {
+          "category": "car",
+          "item_id": "911",
+          "quantity": 2
+        },
+        {
+          "category": "business",
+          "item_id": "garage",
+          "quantity": 3
+        },
+        {
+          "category": "car",
+          "item_id": "amg",
+          "quantity": 2
+        },
+        {
+          "category": "garage",
+          "item_id": "collector",
+          "quantity": 2
+        },
+        {
+          "category": "home",
+          "item_id": "apartment",
+          "quantity": 4
+        },
+        {
+          "category": "car",
+          "item_id": "audiS5",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "username": "Test_Sienna892",
+      "rank": "Underboss",
+      "xp": 328007,
+      "cash": 1627801283,
+      "bank": 3906723079,
+      "protection": 4,
+      "family": "TEST Dockside Mob",
+      "assets": [
+        {
+          "category": "business",
+          "item_id": "laundry",
+          "quantity": 4
+        },
+        {
+          "category": "business",
+          "item_id": "coffee",
+          "quantity": 2
+        },
+        {
+          "category": "car",
+          "item_id": "m5",
+          "quantity": 4
+        },
+        {
+          "category": "car",
+          "item_id": "tourbillon",
+          "quantity": 2
+        },
+        {
+          "category": "car",
+          "item_id": "911",
+          "quantity": 3
+        },
+        {
+          "category": "car",
+          "item_id": "cullinan",
+          "quantity": 1
+        },
+        {
+          "category": "car",
+          "item_id": "temerario",
+          "quantity": 3
+        },
+        {
+          "category": "helicopter",
+          "item_id": "sparrow",
+          "quantity": 4
+        },
+        {
+          "category": "business",
+          "item_id": "casino",
+          "quantity": 2
+        },
+        {
+          "category": "car",
+          "item_id": "ghost",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "username": "Test_Troy440",
+      "rank": "Crew Leader",
+      "xp": 69469,
+      "cash": 422704137176,
+      "bank": 950000000000,
+      "protection": 8,
+      "family": "TEST Iron Syndicate",
+      "assets": [
+        {
+          "category": "car",
+          "item_id": "fiat500",
+          "quantity": 4
+        },
+        {
+          "category": "garage",
+          "item_id": "collector",
+          "quantity": 2
+        }
+      ]
+    }
+  ]
+}

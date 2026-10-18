@@ -1,0 +1,25 @@
+{
+  "language": "nl",
+  "ready": true,
+  "scope": "Controlled UI templates, full rulebook, catalog descriptions and literal server validation. Generated result patterns, catalog labels, changelogs and shared guide facts included; live recommendations and desktop/mobile scenarios reviewed separately.",
+  "counts": {
+    "templates": 0,
+    "rulebook": 0,
+    "catalogDescriptions": 0,
+    "validation": 0,
+    "generatedResults": 0,
+    "catalogLabels": 0,
+    "changelogs": 0,
+    "guideFacts": 0
+  },
+  "missing": {
+    "templates": [],
+    "rulebook": [],
+    "catalogDescriptions": [],
+    "validation": [],
+    "generatedResults": [],
+    "catalogLabels": [],
+    "changelogs": [],
+    "guideFacts": []
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "mode": "built-in image_gen",
+  "assets": [
+    {
+      "key": "family-safehouse-starter",
+      "prompt": "Photorealistic cinematic editorial photograph for a premium fictional mafia browser game: a modest aging brick rowhouse safehouse on an ordinary rainy city street, warm window light. Landscape 3:2, rich charcoal and muted warm gold palette, realistic materials, refined lighting, no text, no watermarks, no logos. Clear subject for an asset card.",
+      "hint": "Generated images are saved to C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789 as C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-99610931-52de-4119-b2ad-944ecee40cbd.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-99610931-52de-4119-b2ad-944ecee40cbd.png"
+    },
+    {
+      "key": "family-safehouse-modern",
+      "prompt": "Photorealistic cinematic editorial photograph for a premium fictional mafia browser game: a discreet contemporary 2026 urban townhouse safehouse with dark stone and private entrance. Landscape 3:2, rich charcoal and muted warm gold palette, realistic materials, refined lighting, no text, no watermarks, no logos. Clear subject for an asset card.",
+      "hint": "Generated images are saved to C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789 as C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-4e310a7f-7901-468c-a3a0-4bc2ac23746f.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-4e310a7f-7901-468c-a3a0-4bc2ac23746f.png"
+    },
+    {
+      "key": "family-compound-yard",
+      "prompt": "Photorealistic cinematic editorial photograph for a premium fictional mafia browser game: a modest converted industrial courtyard compound with brick offices and enclosed parking. Landscape 3:2, rich charcoal and muted warm gold palette, realistic materials, refined lighting, no text, no watermarks, no logos. Clear subject for an asset card.",
+      "hint": "Generated images are saved to C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789 as C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-d094cb20-e5a9-4bf2-beee-9eb6f47fa8c5.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-d094cb20-e5a9-4bf2-beee-9eb6f47fa8c5.png"
+    },
+    {
+      "key": "family-safehouse-penthouse",
+      "prompt": "Photorealistic cinematic editorial photograph for a premium fictional mafia browser game: an ultra luxury 2026 secure penthouse with rooftop garden and illuminated skyline. Landscape 3:2, rich charcoal and muted warm gold palette, realistic materials, refined lighting, no text, no watermarks, no logos. Clear subject for an asset card.",
+      "hint": "Generated images are saved to C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789 as C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-c2fc7122-1921-4991-8495-91f799a2b9fe.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-c2fc7122-1921-4991-8495-91f799a2b9fe.png"
+    },
+    {
+      "key": "family-compound-estate",
+      "prompt": "Photorealistic cinematic editorial photograph for a premium fictional mafia browser game: a luxurious contemporary 2026 walled country estate compound with guest wings and private drive. Landscape 3:2, rich charcoal and muted warm gold palette, realistic materials, refined lighting, no text, no watermarks, no logos. Clear subject for an asset card.",
+      "hint": "Generated images are saved to C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789 as C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-7d3924a1-b867-4950-bcad-842f874d32fc.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-7d3924a1-b867-4950-bcad-842f874d32fc.png"
+    },
+    {
+      "key": "family-compound-palace",
+      "prompt": "Photorealistic cinematic editorial photograph for a premium fictional mafia browser game: an extraordinary 2026 ultra deluxe coastal family compound with several marble villas, infinity pools and private marina. Landscape 3:2, rich charcoal and muted warm gold palette, realistic materials, refined lighting, no text, no watermarks, no logos. Clear subject for an asset card.",
+      "hint": "Generated images are saved to C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789 as C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-c89289df-86be-40e4-9104-d98032ba7b49.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-c89289df-86be-40e4-9104-d98032ba7b49.png"
+    },
+    {
+      "key": "family-suv-armored",
+      "prompt": "Photorealistic cinematic editorial photograph for a premium fictional mafia browser game: an unbranded 2026 ultra luxury armored black SUV with subtle gold trim at a marble compound, full vehicle view. Landscape 3:2, rich charcoal and muted warm gold palette, realistic materials, refined lighting, no text, no watermarks, no logos. Clear subject for an asset card.",
+      "hint": "Generated images are saved to C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789 as C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-a96870e6-3898-4e89-bc3c-196a24f4083c.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-a96870e6-3898-4e89-bc3c-196a24f4083c.png"
+    },
+    {
+      "key": "family-suv-utility",
+      "prompt": "Photorealistic cinematic editorial photograph for a premium fictional mafia browser game: an unbranded practical dark grey used SUV outside a brick courtyard, full vehicle three quarter view. Landscape 3:2, rich charcoal and muted warm gold palette, realistic materials, refined lighting, no text, no watermarks, no logos. Clear subject for an asset card.",
+      "hint": "Generated images are saved to C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789 as C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-02ec94bf-e080-4001-a79a-745127249082.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-02ec94bf-e080-4001-a79a-745127249082.png"
+    },
+    {
+      "key": "family-upgrade-guards",
+      "prompt": "Photorealistic cinematic editorial photograph for a premium fictional mafia browser game: professional suited private security personnel standing calmly at a luxurious entrance, no weapons visible. Landscape 3:2, rich charcoal and muted warm gold palette, realistic materials, refined lighting, no text, no watermarks, no logos. Clear subject for an asset card.",
+      "hint": "Generated images are saved to C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789 as C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-139d8d31-4f40-4998-aefe-81ab9181895c.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-139d8d31-4f40-4998-aefe-81ab9181895c.png"
+    },
+    {
+      "key": "family-suv-executive",
+      "prompt": "Photorealistic cinematic editorial photograph for a premium fictional mafia browser game: an unbranded new 2026 black executive SUV with elegant chrome outside a modern estate, full vehicle view. Landscape 3:2, rich charcoal and muted warm gold palette, realistic materials, refined lighting, no text, no watermarks, no logos. Clear subject for an asset card.",
+      "hint": "Generated images are saved to C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789 as C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-5cddfa0e-09ec-4497-bc41-e8ba1f534e4a.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-5cddfa0e-09ec-4497-bc41-e8ba1f534e4a.png"
+    },
+    {
+      "key": "family-upgrade-surveillance",
+      "prompt": "Photorealistic cinematic editorial photograph for a premium fictional mafia browser game: a premium private security monitoring room, screens showing estate grounds, no readable text. Landscape 3:2, rich charcoal and muted warm gold palette, realistic materials, refined lighting, no text, no watermarks, no logos. Clear subject for an asset card.",
+      "hint": "Generated images are saved to C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789 as C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-c429c05b-b66e-483c-9270-59a4394e663a.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-c429c05b-b66e-483c-9270-59a4394e663a.png"
+    },
+    {
+      "key": "family-upgrade-vault",
+      "prompt": "Photorealistic cinematic editorial photograph for a premium fictional mafia browser game: a luxurious secure underground vault with a heavy steel circular door and warm architectural lights. Landscape 3:2, rich charcoal and muted warm gold palette, realistic materials, refined lighting, no text, no watermarks, no logos. Clear subject for an asset card.",
+      "hint": "Generated images are saved to C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789 as C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-62a5b778-a116-4723-9928-0826bf99d249.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-62a5b778-a116-4723-9928-0826bf99d249.png"
+    },
+    {
+      "key": "personal-protection",
+      "prompt": "Photorealistic cinematic editorial photograph for a premium fictional mafia browser game: a composed professional personal bodyguard in a dark suit beside an executive sedan at night, no visible weapons. Landscape 3:2, rich charcoal and muted warm gold palette, realistic materials, refined lighting, no text, no watermarks, no logos. Clear subject for an asset card.",
+      "hint": "Generated images are saved to C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789 as C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-31a55eeb-35c4-4cb1-b668-d96d6206769d.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-31a55eeb-35c4-4cb1-b668-d96d6206769d.png"
+    },
+    {
+      "key": "shipment-escort",
+      "prompt": "Photorealistic cinematic editorial photograph for a premium fictional mafia browser game: three discreet dark escort SUVs in a convoy on a cinematic rain lit private driveway, no people or weapons. Landscape 3:2, rich charcoal and muted warm gold palette, realistic materials, refined lighting, no text, no watermarks, no logos. Clear subject for an asset card.",
+      "hint": "Generated images are saved to C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789 as C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-7e5ffe17-f5ff-4cae-a68b-09b392d0ff94.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-7e5ffe17-f5ff-4cae-a68b-09b392d0ff94.png"
+    },
+    {
+      "key": "family-upgrade-perimeter",
+      "prompt": "Photorealistic cinematic editorial photograph for a premium fictional mafia browser game: a contemporary estate entrance with reinforced architectural gates, landscaping and discreet bollards. Landscape 3:2, rich charcoal and muted warm gold palette, realistic materials, refined lighting, no text, no watermarks, no logos. Clear subject for an asset card.",
+      "hint": "Generated images are saved to C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789 as C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-9a628b13-b35d-46da-964b-186714f12d07.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-9a628b13-b35d-46da-964b-186714f12d07.png"
+    },
+    {
+      "key": "shipment-drugs",
+      "prompt": "Photorealistic cinematic editorial photograph for a premium fictional mafia browser game: sealed unmarked cargo crates in a cinematic fictional port warehouse with a distant cargo ship, atmospheric noir. Landscape 3:2, rich charcoal and muted warm gold palette, realistic materials, refined lighting, no text, no watermarks, no logos. Clear subject for an asset card.",
+      "hint": "Generated images are saved to C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789 as C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-122d7f15-e01b-4698-8504-a54c6a919d90.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-122d7f15-e01b-4698-8504-a54c6a919d90.png"
+    },
+    {
+      "key": "shipment-guns",
+      "prompt": "Photorealistic cinematic editorial photograph for a premium fictional mafia browser game: sealed reinforced unmarked transport cases beside a cargo aircraft at dusk, fictional noir game scene, no visible weapons. Landscape 3:2, rich charcoal and muted warm gold palette, realistic materials, refined lighting, no text, no watermarks, no logos. Clear subject for an asset card.",
+      "hint": "Generated images are saved to C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789 as C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-089fd391-8841-4bba-a363-ec90daf692c2.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-089fd391-8841-4bba-a363-ec90daf692c2.png"
+    },
+    {
+      "key": "mystery-contact",
+      "prompt": "Photorealistic cinematic editorial photograph for a premium fictional mafia browser game: a mysterious adult stranger in a tailored suit sitting in shadow at a luxurious hotel bar, face mostly obscured, a sealed envelope on the table. Landscape 3:2, rich charcoal and muted warm gold palette, realistic materials, refined lighting, no text, no watermarks, no logos. Clear subject for an asset card.",
+      "hint": "Generated images are saved to C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789 as C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-ad0099a8-9a8c-45b2-89ec-cf5ff3d6db03.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-ad0099a8-9a8c-45b2-89ec-cf5ff3d6db03.png"
+    },
+    {
+      "key": "yacht-harbor",
+      "prompt": "Photorealistic cinematic luxury photograph for a fictional mafia browser game: a modest elegant 9 meter motor cruiser at an ordinary marina. Clear whole subject, landscape 3:2, charcoal and warm gold light, realistic water and materials, no text or logos, no weapons.",
+      "hint": "Generated images are saved to C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789 as C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-0bd77eb6-aafc-498a-bd30-38bc5e09099e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-0bd77eb6-aafc-498a-bd30-38bc5e09099e.png"
+    },
+    {
+      "key": "yacht-riviera",
+      "prompt": "Photorealistic cinematic luxury photograph for a fictional mafia browser game: a refined modern 20 meter white motor yacht at a Mediterranean marina. Clear whole subject, landscape 3:2, charcoal and warm gold light, realistic water and materials, no text or logos, no weapons.",
+      "hint": "Generated images are saved to C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789 as C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-d43ebea3-7ea3-495a-8ba2-f475c07eaaf9.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-d43ebea3-7ea3-495a-8ba2-f475c07eaaf9.png"
+    },
+    {
+      "key": "yacht-sovereign",
+      "prompt": "Photorealistic cinematic luxury photograph for a fictional mafia browser game: a luxurious 45 meter contemporary 2026 superyacht at anchor off a private estate. Clear whole subject, landscape 3:2, charcoal and warm gold light, realistic water and materials, no text or logos, no weapons.",
+      "hint": "Generated images are saved to C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789 as C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-b72da3d5-008a-424d-ad16-aabedbb5401d.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-b72da3d5-008a-424d-ad16-aabedbb5401d.png"
+    },
+    {
+      "key": "yacht-imperial",
+      "prompt": "Photorealistic cinematic luxury photograph for a fictional mafia browser game: an ultra luxury 85 meter black and white megayacht with terraces and a pool at sunset. Clear whole subject, landscape 3:2, charcoal and warm gold light, realistic water and materials, no text or logos, no weapons.",
+      "hint": "Generated images are saved to C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789 as C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-c046d160-766b-4ced-be40-c2935766c75f.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-c046d160-766b-4ced-be40-c2935766c75f.png"
+    },
+    {
+      "key": "yacht-elysium",
+      "prompt": "Photorealistic cinematic luxury photograph for a fictional mafia browser game: a breathtaking fictional 150 meter 2026 private megayacht with cascading decks and pools on a calm turquoise sea. Clear whole subject, landscape 3:2, charcoal and warm gold light, realistic water and materials, no text or logos, no weapons.",
+      "hint": "Generated images are saved to C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789 as C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-3b107eb5-bba5-4240-a1de-68a7a5ed9ff7.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-3b107eb5-bba5-4240-a1de-68a7a5ed9ff7.png"
+    },
+    {
+      "key": "crime-maritime",
+      "prompt": "Photorealistic cinematic luxury photograph for a fictional mafia browser game: an elegant private yacht approaching a cinematic modern harbor at dusk, discreet fictional maritime commission atmosphere. Clear whole subject, landscape 3:2, charcoal and warm gold light, realistic water and materials, no text or logos, no weapons.",
+      "hint": "Generated images are saved to C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789 as C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-7d6f2445-9536-4f0b-b726-1d2330dd61aa.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-7d6f2445-9536-4f0b-b726-1d2330dd61aa.png"
+    }
+  ]
+}

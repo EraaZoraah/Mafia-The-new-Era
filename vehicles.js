@@ -1,0 +1,67 @@
+import {installVehicleAuctions} from './vehicle-auctions.js';
+import {catalog} from './catalog.js';
+import {cities} from './logistics.js';
+import {transportModes,truckRoute} from './drug-markets.js';
+import {stolenVehicles,chooseVehicle,chooseVehicleCondition,vehicleCondition,vehicleSaleValue} from './vehicle-catalog.js';
+import {MAX_CASH} from './money.js';
+
+export function installVehicles(db,{clock,transaction,settleRaw,available,fail,draw,log,notify=()=>{}}){
+ const q=(s,...a)=>db.prepare(s).get(...a),all=(s,...a)=>db.prepare(s).all(...a),run=(s,...a)=>db.prepare(s).run(...a);
+ db.exec(`CREATE TABLE IF NOT EXISTS vehicle_loot(id INTEGER PRIMARY KEY,user_id INTEGER NOT NULL REFERENCES users(id),vehicle_id TEXT NOT NULL,city TEXT NOT NULL,state TEXT NOT NULL CHECK(state IN ('pending','stored','transit','sold','seized')),created_at INTEGER NOT NULL,arrives_at INTEGER NOT NULL DEFAULT 0,destination TEXT NOT NULL DEFAULT '',intercepted INTEGER NOT NULL DEFAULT 0,freight_cost INTEGER NOT NULL DEFAULT 0);
+ CREATE INDEX IF NOT EXISTS vehicle_loot_owner ON vehicle_loot(user_id,state);
+ CREATE TABLE IF NOT EXISTS purchased_car_bays(user_id INTEGER NOT NULL REFERENCES users(id),item_id TEXT NOT NULL,garage_id TEXT NOT NULL,bay INTEGER NOT NULL,basis INTEGER NOT NULL,PRIMARY KEY(user_id,item_id),UNIQUE(user_id,garage_id,bay));`);
+ if(!all('PRAGMA table_info(vehicle_loot)').some(x=>x.name==='value_multiplier'))db.exec('ALTER TABLE vehicle_loot ADD COLUMN value_multiplier INTEGER NOT NULL DEFAULT 1');
+ if(!all('PRAGMA table_info(vehicle_loot)').some(x=>x.name==='condition_stars'))db.exec('ALTER TABLE vehicle_loot ADD COLUMN condition_stars INTEGER NOT NULL DEFAULT 4 CHECK(condition_stars BETWEEN 1 AND 5)');
+ const warehouses=(id,kind)=>q("SELECT COALESCE(SUM(quantity),0) n FROM possessions WHERE user_id=? AND item_id=?",id,kind==='vehicle'?'vehicle-warehouse':'production-warehouse').n;
+ function garageBoard(id){
+  const garages=all("SELECT * FROM possessions WHERE user_id=? AND category='garage' AND item_id NOT IN ('vehicle-warehouse','production-warehouse')",id).filter(p=>catalog.some(x=>x.category==='garage'&&x.id===p.item_id));
+  run("DELETE FROM purchased_car_bays WHERE user_id=? AND (NOT EXISTS(SELECT 1 FROM possessions p WHERE p.user_id=purchased_car_bays.user_id AND p.category='car' AND p.item_id=purchased_car_bays.item_id) OR NOT EXISTS(SELECT 1 FROM possessions p WHERE p.user_id=purchased_car_bays.user_id AND p.category='garage' AND p.item_id=purchased_car_bays.garage_id))",id);
+  const cars=all("SELECT * FROM possessions WHERE user_id=? AND category='car' ORDER BY acquired_at,item_id",id).filter(p=>catalog.some(x=>x.category==='car'&&x.id===p.item_id));
+  for(const car of cars){if(q('SELECT 1 FROM purchased_car_bays WHERE user_id=? AND item_id=?',id,car.item_id))continue;let placed=false;for(const g of garages){for(let bay=1;bay<=6;bay++){if(!q('SELECT 1 FROM purchased_car_bays WHERE user_id=? AND garage_id=? AND bay=?',id,g.item_id,bay)){run('INSERT INTO purchased_car_bays VALUES(?,?,?,?,?)',id,car.item_id,g.item_id,bay,catalog.find(x=>x.category==='car'&&x.id===car.item_id).price);placed=true;break}}if(placed)break}}
+  const placements=all('SELECT * FROM purchased_car_bays WHERE user_id=?',id);
+  const details=car=>{const item=catalog.find(x=>x.category==='car'&&x.id===car.item_id),p=placements.find(p=>p.item_id===car.item_id);return {...item,bay:p?.bay||null,resale:Math.floor((p?.basis||item.price)*.8)}};
+  return {garages:garages.map(g=>({...catalog.find(x=>x.category==='garage'&&x.id===g.item_id),capacity:6,cars:cars.filter(c=>placements.some(p=>p.item_id===c.item_id&&p.garage_id===g.item_id)).map(details)})),unassigned:cars.filter(c=>!placements.some(p=>p.item_id===c.item_id)).map(details),capacity:garages.length*6,used:cars.length};
+ }
+ function assertSpace(id){const b=garageBoard(id);if(b.used>=b.capacity)fail('Buy a private garage before buying another car. Each garage holds six purchased cars.',409)}
+ function recordPurchase(id,itemId,basis){garageBoard(id);run('UPDATE purchased_car_bays SET basis=? WHERE user_id=? AND item_id=?',basis,id,itemId)}
+ const quote=(spec,city,multiplier=1,stars=4)=>vehicleSaleValue(spec,city,clock(),multiplier,stars);
+ function finish(id){
+  for(const row of all("SELECT * FROM vehicle_loot WHERE user_id=? AND state='transit' AND arrives_at<=?",id,clock())){
+   run("UPDATE vehicle_loot SET state=?,city=destination,destination='',arrives_at=0 WHERE id=?",row.intercepted?'seized':'stored',row.id);
+   const car=stolenVehicles.find(x=>x.id===row.vehicle_id);notify(id,row.intercepted?'Vehicle shipment intercepted':'Vehicle shipment delivered',car.name+(row.intercepted?' was intercepted. The vehicle and transport fee were lost.':' arrived in '+row.destination+'.'),car.image);
+  }
+ }
+ function occupied(id){return q("SELECT COUNT(*) n FROM vehicle_loot WHERE user_id=? AND state IN ('stored','transit')",id).n}
+ const auctions=installVehicleAuctions(db,{clock,fail,warehouses,occupied,notify});
+ transaction(()=>db.exec(`CREATE TABLE IF NOT EXISTS vehicle_thefts(id INTEGER PRIMARY KEY,user_id INTEGER NOT NULL REFERENCES users(id),stars INTEGER NOT NULL,created_at INTEGER NOT NULL);CREATE TABLE IF NOT EXISTS vehicle_history_meta(key TEXT PRIMARY KEY);INSERT INTO vehicle_thefts(user_id,stars,created_at) SELECT COALESCE((SELECT seller_id FROM vehicle_auctions a WHERE a.vehicle_id=v.id ORDER BY a.id LIMIT 1),v.user_id),v.condition_stars,v.created_at FROM vehicle_loot v WHERE NOT EXISTS(SELECT 1 FROM vehicle_history_meta WHERE key='theft-achievements-v1');INSERT OR IGNORE INTO vehicle_history_meta VALUES('theft-achievements-v1');`));
+ function pending(id){return q("SELECT * FROM vehicle_loot WHERE user_id=? AND state='pending'",id)}
+ function assertResolved(id){if(pending(id))fail('Resolve your recovered vehicle first: sell it, store it or exchange it from Vehicle warehouses.',409)}
+ function theft(id,city,multiplier=1){city=cities.includes(city)?city:cities[0];assertResolved(id);const car=chooseVehicle(draw),condition=chooseVehicleCondition(draw),r=run("INSERT INTO vehicle_loot(user_id,vehicle_id,city,state,created_at) VALUES(?,?,?,'pending',?)",id,car.id,city,clock());run('UPDATE vehicle_loot SET value_multiplier=?,condition_stars=? WHERE id=?',multiplier,condition.stars,r.lastInsertRowid);run('INSERT INTO vehicle_thefts(user_id,stars,created_at) VALUES(?,?,?)',id,condition.stars,clock());return {...car,id:Number(r.lastInsertRowid),vehicleId:car.id,condition,condition_stars:condition.stars,saleValue:quote(car,city,multiplier,condition.stars),city,capacity:warehouses(id,'vehicle')*20,used:occupied(id)+auctions.reserved(id)}}
+ function credit(id,amount){if(!run('UPDATE users SET cash=cash+? WHERE id=? AND cash<=?',amount,id,MAX_CASH-amount).changes)fail('Make room in your cash wallet before selling.',409)}
+ function shipment(row,city,mode){if(city===row.city||!cities.includes(city)||!transportModes.some(m=>m.id===mode)||mode==='truck'&&!truckRoute(row.city,city))return null;const m=transportModes.find(m=>m.id===mode),spec=stolenVehicles.find(x=>x.id===row.vehicle_id),distance=truckRoute(row.city,city)?1:2;return {city,mode,cost:Math.max(5000,Math.ceil(spec.value*(mode==='plane'?.025:mode==='boat'?.012:.008))),hours:m.hours*distance,risk:mode==='plane'?.04:mode==='boat'?.025:.015};}
+ function view(id){finish(id);auctions.settle();const entries=all("SELECT * FROM vehicle_loot WHERE user_id=? AND state IN ('pending','stored','transit') ORDER BY id",id).map(row=>{const spec=stolenVehicles.find(x=>x.id===row.vehicle_id);return {...row,auctioned:auctions.locked(row.id),listingFee:auctions.listingFee(row),intercepted:undefined,name:spec.name,image:spec.image,condition:vehicleCondition(row.condition_stars),saleValue:quote(spec,row.city,row.value_multiplier,row.condition_stars),destinations:cities.filter(c=>c!==row.city).map(city=>({city,saleValue:quote(spec,city,row.value_multiplier,row.condition_stars),routes:transportModes.map(m=>shipment(row,city,m.id)).filter(Boolean)}))}});return {...auctions.board(id),serverTime:clock(),entries,warehouseCount:warehouses(id,'vehicle'),capacity:warehouses(id,'vehicle')*20,used:occupied(id)+auctions.reserved(id),garages:garageBoard(id),marketUntil:(Math.floor(clock()/3600000)+1)*3600000,catalog:stolenVehicles};}
+ function raceLocked(id,key){return q("SELECT 1 FROM sqlite_master WHERE name='race_entries'")&&q("SELECT 1 FROM race_entries WHERE user_id=? AND car_key=? AND state='pending'",id,key);}
+ function route(req,path,body,user){
+  if(!path.startsWith('/api/vehicles'))return null;
+  return transaction(()=>{const u=settleRaw(user.id);finish(u.id);if(req.method==='GET'&&path==='/api/vehicles')return view(u.id);if(req.method!=='POST')fail('Method not allowed.',405);available(u);auctions.settle();if(path==='/api/vehicles/auction/list'&&raceLocked(u.id,'s:'+body.id))fail('This car is reserved for a pending race.',409);const auctionResult=auctions.action(path,body,u.id);if(auctionResult!==null)return auctionResult;
+   if(path==='/api/vehicles/car/sell'){if(raceLocked(u.id,'p:'+body.itemId))fail('This car is reserved for a pending race.',409);const item=catalog.find(x=>x.category==='car'&&x.id===body.itemId);if(!item||!q("SELECT 1 FROM possessions WHERE user_id=? AND category='car' AND item_id=?",u.id,item.id))fail('Car not owned.',404);garageBoard(u.id);const basis=q('SELECT basis FROM purchased_car_bays WHERE user_id=? AND item_id=?',u.id,item.id)?.basis||item.price,payout=Math.floor(basis*.8);credit(u.id,payout);run("DELETE FROM possessions WHERE user_id=? AND category='car' AND item_id=?",u.id,item.id);run('DELETE FROM purchased_car_bays WHERE user_id=? AND item_id=?',u.id,item.id);if(q("SELECT 1 FROM sqlite_master WHERE name='race_vehicle_state'"))run('DELETE FROM race_vehicle_state WHERE user_id=? AND car_key=?',u.id,'p:'+item.id);log(u.id,'Sold '+item.name+' for $'+payout+'.');return {ok:true,payout,message:'Car sold for 80% of its purchase price.',image:item.image};}
+   if(!Number.isSafeInteger(body.id))fail('Choose a recovered vehicle.');const row=q('SELECT * FROM vehicle_loot WHERE id=? AND user_id=?',body.id,u.id);if(!row||raceLocked(u.id,'s:'+row.id)||auctions.locked(row.id)||!['pending','stored'].includes(row.state))fail('Vehicle unavailable, already sold or in transit.',409);const spec=stolenVehicles.find(x=>x.id===row.vehicle_id);
+   if(path==='/api/vehicles/sell'){const payout=quote(spec,row.city,row.value_multiplier,row.condition_stars);credit(u.id,payout);run("UPDATE vehicle_loot SET state='sold' WHERE id=?",row.id);log(u.id,'Sold recovered '+spec.name+' in '+row.city+' for $'+payout+'.');return {ok:true,payout,message:'Recovered vehicle sold at the current city quote.',image:spec.image};}
+   if(path==='/api/vehicles/store'){
+    if(row.state!=='pending')fail('This vehicle is already stored.',409);if(occupied(u.id)+auctions.reserved(u.id)>=warehouses(u.id,'vehicle')*20){if(!Number.isSafeInteger(body.replaceId))fail('Warehouse full. Select one stored car to sell and replace, or sell this car.',409);const old=q("SELECT * FROM vehicle_loot WHERE id=? AND user_id=? AND state='stored'",body.replaceId,u.id);if(!old||raceLocked(u.id,'s:'+old.id)||auctions.locked(old.id)||old.id===row.id)fail('Choose one of your stored vehicles to replace.',409);const payout=quote(stolenVehicles.find(x=>x.id===old.vehicle_id),old.city,old.value_multiplier,old.condition_stars);credit(u.id,payout);run("UPDATE vehicle_loot SET state='sold' WHERE id=?",old.id);}if(warehouses(u.id,'vehicle')<1)fail('Buy a vehicle warehouse first.',409);run("UPDATE vehicle_loot SET state='stored' WHERE id=?",row.id);return {ok:true,message:'Vehicle added to your secured collection.',image:spec.image};
+   }
+   if(path==='/api/vehicles/ship'){if(row.state!=='stored')fail('Store the vehicle before shipping.',409);const offer=shipment(row,body.city,body.mode);if(!offer)fail('Choose an available transport route.');if(!run('UPDATE users SET cash=cash-? WHERE id=? AND cash>=?',offer.cost,u.id,offer.cost).changes)fail('Insufficient cash.');run("UPDATE vehicle_loot SET state='transit',destination=?,arrives_at=?,intercepted=?,freight_cost=freight_cost+? WHERE id=?",body.city,clock()+offer.hours*3600000,draw(1,10000)<=offer.risk*10000?1:0,offer.cost,row.id);return {ok:true,cost:offer.cost,message:'Vehicle dispatched. Its warehouse bay remains reserved until delivery or interception.',image:spec.image};}
+   fail('Unknown vehicle action.',404);
+  });
+ }
+ function advice(id){
+  const b=view(id);let best=null;
+  const funds=q('SELECT cash FROM users WHERE id=?',id).cash;
+  for(const car of b.entries.filter(c=>c.state==='stored'&&!c.auctioned))for(const destination of car.destinations)for(const route of destination.routes){
+   const expected=destination.saleValue*(1-route.risk)-route.cost;
+   if(route.cost<=funds&&expected>car.saleValue&&(!best||expected-car.saleValue>best.improvement))best={id:car.id,name:car.name,city:car.city,destination:destination.city,mode:route.mode,cost:route.cost,hours:route.hours,risk:route.risk,localValue:car.saleValue,saleValue:destination.saleValue,expected,improvement:expected-car.saleValue};
+  }
+  return {capacity:b.capacity,used:b.used,pending:b.entries.find(c=>c.state==='pending')||null,best,garageCapacity:b.garages.capacity,garageUsed:b.garages.used,until:b.marketUntil};
+ }
+ return {settle:()=>transaction(auctions.settle),route,theft,assertResolved,assertSpace,recordPurchase,view,warehouses,advice};
+}

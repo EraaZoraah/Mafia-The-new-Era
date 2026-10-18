@@ -1,0 +1,20 @@
+[
+  {
+    "key": "scene-arrest",
+    "prompt": "Use case: photorealistic-natural. Project asset for premium dark mafia browser game. Landscape 3:2, cinematic photographic realism, charcoal and warm gold palette, realistic contemporary 2026 environment. A fictional adult mafia character in a charcoal tailored suit being calmly handcuffed by two police officers outside a luxury city building at night, blue emergency lights reflected on wet pavement. No blood, no injury, no text, no logos.",
+    "source": "C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-a3353879-e357-4abe-9804-4ffb97eddcbd.png",
+    "mode": "built-in"
+  },
+  {
+    "key": "scene-coma",
+    "prompt": "Use case: photorealistic-natural. Project asset for premium dark mafia browser game. Landscape 3:2, cinematic photographic realism, charcoal and warm gold palette, realistic contemporary 2026 environment. A fictional adult mafia boss resting unconscious but alive in a premium private hospital room, tasteful medical monitors, white bedding, subdued nighttime skyline behind glass, warm bedside lamp. No blood, no wounds, no readable text, no logos.",
+    "source": "C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-a510f564-ba26-438f-9feb-12ca92d0afd6.png",
+    "mode": "built-in"
+  },
+  {
+    "key": "scene-breakout",
+    "prompt": "Use case: photorealistic-natural. Project asset for premium dark mafia browser game. Landscape 3:2, cinematic photographic realism, charcoal and warm gold palette, realistic contemporary 2026 environment. Cinematic fictional prison escape scene: distant adult silhouettes leaving a secure prison service gate toward a black SUV in mist at night, dramatic searchlights, non-graphic, no weapons in focus, no instructions, no text or logos.",
+    "source": "C:\\Users\\Jeffrey Berwald\\.codex\\generated_images\\01a12256-ba14-7f03-a6f4-f53dd5a40789\\exec-8c58b979-3546-4541-b47b-082faeda8690.png",
+    "mode": "built-in"
+  }
+]

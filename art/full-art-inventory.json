@@ -1,0 +1,2168 @@
+[
+  {
+    "group": "recoveredVehicles",
+    "id": "dacia-sandero",
+    "name": "Dacia Sandero",
+    "image": "/images/vehicle-dacia-sandero.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "nissan-micra",
+    "name": "Nissan Micra",
+    "image": "/images/vehicle-nissan-micra.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "opel-corsa",
+    "name": "Opel Corsa",
+    "image": "/images/vehicle-opel-corsa.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "ford-fiesta",
+    "name": "Ford Fiesta",
+    "image": "/images/vehicle-ford-fiesta.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "renault-clio",
+    "name": "Renault Clio",
+    "image": "/images/vehicle-renault-clio.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "skoda-fabia",
+    "name": "Skoda Fabia",
+    "image": "/images/vehicle-skoda-fabia.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "kia-rio",
+    "name": "Kia Rio",
+    "image": "/images/vehicle-kia-rio.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "hyundai-i20",
+    "name": "Hyundai i20",
+    "image": "/images/vehicle-hyundai-i20.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "seat-ibiza",
+    "name": "SEAT Ibiza",
+    "image": "/images/vehicle-seat-ibiza.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "suzuki-swift",
+    "name": "Suzuki Swift",
+    "image": "/images/vehicle-suzuki-swift.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "mazda2",
+    "name": "Mazda 2",
+    "image": "/images/vehicle-mazda2.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "peugeot-208",
+    "name": "Peugeot 208",
+    "image": "/images/vehicle-peugeot-208.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "ford-focus",
+    "name": "Ford Focus",
+    "image": "/images/vehicle-ford-focus.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "skoda-octavia",
+    "name": "Skoda Octavia",
+    "image": "/images/vehicle-skoda-octavia.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "peugeot-508",
+    "name": "Peugeot 508",
+    "image": "/images/vehicle-peugeot-508.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "volvo-v60",
+    "name": "Volvo V60",
+    "image": "/images/vehicle-volvo-v60.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "lexus-is",
+    "name": "Lexus IS",
+    "image": "/images/vehicle-lexus-is.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "audi-a6",
+    "name": "Audi A6",
+    "image": "/images/vehicle-audi-a6.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "bmw-540i",
+    "name": "BMW 540i",
+    "image": "/images/vehicle-bmw-540i.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "mercedes-eclass",
+    "name": "Mercedes-Benz E-Class",
+    "image": "/images/vehicle-mercedes-eclass.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "nissan-gtr",
+    "name": "Nissan GT-R",
+    "image": "/images/vehicle-nissan-gtr.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "lexus-lc",
+    "name": "Lexus LC 500",
+    "image": "/images/vehicle-lexus-lc.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "bmw-m8",
+    "name": "BMW M8",
+    "image": "/images/vehicle-bmw-m8.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "corvette-z06",
+    "name": "Chevrolet Corvette Z06",
+    "image": "/images/vehicle-corvette-z06.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "maserati-mc20",
+    "name": "Maserati MC20",
+    "image": "/images/vehicle-maserati-mc20.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "huracan-evo",
+    "name": "Lamborghini Huracán EVO",
+    "image": "/images/vehicle-huracan-evo.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "ferrari-296",
+    "name": "Ferrari 296 GTB",
+    "image": "/images/vehicle-ferrari-296.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "carrera-gt",
+    "name": "Porsche Carrera GT",
+    "image": "/images/vehicle-carrera-gt.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "mclaren-p1",
+    "name": "McLaren P1",
+    "image": "/images/vehicle-mclaren-p1.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "chiron",
+    "name": "Bugatti Chiron",
+    "image": "/images/vehicle-chiron.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "citroen-2cv",
+    "name": "Citroën 2CV",
+    "image": "/images/vehicle-citroen-2cv.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "vw-beetle-classic",
+    "name": "Volkswagen Beetle Classic",
+    "image": "/images/vehicle-vw-beetle-classic.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "volvo-240",
+    "name": "Volvo 240 Estate",
+    "image": "/images/vehicle-volvo-240.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "ford-mustang-1965",
+    "name": "Ford Mustang 1965",
+    "image": "/images/vehicle-ford-mustang-1965.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "mini-cooper-classic",
+    "name": "Mini Cooper Classic",
+    "image": "/images/vehicle-mini-cooper-classic.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "alfa-spider",
+    "name": "Alfa Romeo Spider",
+    "image": "/images/vehicle-alfa-spider.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "bmw-e30",
+    "name": "BMW 325i E30",
+    "image": "/images/vehicle-bmw-e30.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "mercedes-190e",
+    "name": "Mercedes-Benz 190 E",
+    "image": "/images/vehicle-mercedes-190e.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "toyota-supra-mk4",
+    "name": "Toyota Supra Mk IV",
+    "image": "/images/vehicle-toyota-supra-mk4.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "honda-nsx-classic",
+    "name": "Honda NSX Classic",
+    "image": "/images/vehicle-honda-nsx-classic.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "jaguar-xjs",
+    "name": "Jaguar XJS Convertible",
+    "image": "/images/vehicle-jaguar-xjs.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "porsche-944",
+    "name": "Porsche 944 Turbo",
+    "image": "/images/vehicle-porsche-944.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "cadillac-eldorado",
+    "name": "Cadillac Eldorado",
+    "image": "/images/vehicle-cadillac-eldorado.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "bentley-azure",
+    "name": "Bentley Azure",
+    "image": "/images/vehicle-bentley-azure.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "aston-db9",
+    "name": "Aston Martin DB9",
+    "image": "/images/vehicle-aston-db9.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "ferrari-testarossa",
+    "name": "Ferrari Testarossa",
+    "image": "/images/vehicle-ferrari-testarossa.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "lamborghini-countach",
+    "name": "Lamborghini Countach",
+    "image": "/images/vehicle-lamborghini-countach.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "jaguar-etype",
+    "name": "Jaguar E-Type Roadster",
+    "image": "/images/vehicle-jaguar-etype.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "porsche-959",
+    "name": "Porsche 959",
+    "image": "/images/vehicle-porsche-959.png"
+  },
+  {
+    "group": "recoveredVehicles",
+    "id": "ferrari-f40",
+    "name": "Ferrari F40",
+    "image": "/images/vehicle-ferrari-f40.png"
+  },
+  {
+    "group": "personal",
+    "id": "coffee",
+    "name": "Neighborhood coffeeshop",
+    "image": "/images/business-coffee.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "laundry",
+    "name": "Laundromat",
+    "image": "/images/business-laundry-v2.png"
+  },
+  {
+    "group": "personal",
+    "id": "bar",
+    "name": "Cocktail bar",
+    "image": "/images/business-bar.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "garage",
+    "name": "Auto workshop",
+    "image": "/images/business-garage.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "restaurant",
+    "name": "Fine dining restaurant",
+    "image": "/images/business-restaurant.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "club",
+    "name": "Nightclub",
+    "image": "/images/business-club.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "logistics",
+    "name": "Logistics company",
+    "image": "/images/business-logistics.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "hotel",
+    "name": "Boutique hotel",
+    "image": "/images/business-hotel.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "resort",
+    "name": "Five-star resort",
+    "image": "/images/business-resort.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "casino",
+    "name": "Grand casino",
+    "image": "/images/business-casino.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "palace",
+    "name": "Palace casino resort",
+    "image": "/images/business-palace.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "fiat500",
+    "name": "Fiat 500",
+    "image": "/images/car-fiat500.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "yaris",
+    "name": "Toyota Yaris",
+    "image": "/images/car-yaris.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "golf",
+    "name": "Volkswagen Golf",
+    "image": "/images/car-golf.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "civic",
+    "name": "Honda Civic",
+    "image": "/images/car-civic.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "model3",
+    "name": "Tesla Model 3",
+    "image": "/images/car-model3.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "bmw330",
+    "name": "BMW 330i",
+    "image": "/images/car-bmw330.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "audiS5",
+    "name": "Audi S5",
+    "image": "/images/car-audis5.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "amg",
+    "name": "Mercedes-AMG C 63",
+    "image": "/images/car-amg.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "m5",
+    "name": "BMW M5",
+    "image": "/images/car-m5.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "g63",
+    "name": "Mercedes-AMG G 63",
+    "image": "/images/car-g63.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "911",
+    "name": "Porsche 911 Turbo S",
+    "image": "/images/car-911.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "continental",
+    "name": "Bentley Continental GT",
+    "image": "/images/car-continental.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "ghost",
+    "name": "Rolls-Royce Ghost",
+    "image": "/images/car-ghost.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "cullinan",
+    "name": "Rolls-Royce Cullinan",
+    "image": "/images/car-cullinan.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "750s",
+    "name": "McLaren 750S",
+    "image": "/images/car-750s.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "db12",
+    "name": "Aston Martin DB12",
+    "image": "/images/car-db12.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "temerario",
+    "name": "Lamborghini Temerario",
+    "image": "/images/car-temerario.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "revuelto",
+    "name": "Lamborghini Revuelto",
+    "image": "/images/car-revuelto.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "12cilindri",
+    "name": "Ferrari 12Cilindri",
+    "image": "/images/car-12cilindri.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "nevera",
+    "name": "Rimac Nevera",
+    "image": "/images/car-nevera.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "jesko",
+    "name": "Koenigsegg Jesko",
+    "image": "/images/car-jesko.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "utopia",
+    "name": "Pagani Utopia",
+    "image": "/images/car-utopia.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "f80",
+    "name": "Ferrari F80",
+    "image": "/images/car-f80.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "tourbillon",
+    "name": "Bugatti Tourbillon",
+    "image": "/images/car-tourbillon.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "studio",
+    "name": "Downtown studio",
+    "image": "/images/home-studio-v2.png"
+  },
+  {
+    "group": "personal",
+    "id": "apartment",
+    "name": "City apartment",
+    "image": "/images/home-apartment.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "loft",
+    "name": "Warehouse loft",
+    "image": "/images/home-loft.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "townhouse",
+    "name": "Historic townhouse",
+    "image": "/images/home-townhouse.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "familyhome",
+    "name": "Suburban family home",
+    "image": "/images/home-familyhome.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "penthouse",
+    "name": "Skyline penthouse",
+    "image": "/images/home-penthouse.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "beach",
+    "name": "Oceanfront villa",
+    "image": "/images/home-beach.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "estate",
+    "name": "Lakefront estate",
+    "image": "/images/home-estate.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "chateau",
+    "name": "Royal chateau",
+    "image": "/images/home-chateau.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "island",
+    "name": "Private island residence",
+    "image": "/images/home-island.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "sky",
+    "name": "Billionaire sky palace",
+    "image": "/images/home-sky.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "elysium",
+    "name": "Elysium Sovereign Villa",
+    "image": "/images/home-elysium.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "sparrow",
+    "name": "Sparrow Executive",
+    "image": "/images/helicopter-sparrow.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "meridian",
+    "name": "Meridian Twin",
+    "image": "/images/helicopter-meridian.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "sovereign",
+    "name": "Sovereign VIP",
+    "image": "/images/helicopter-sovereign.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "monarch",
+    "name": "Monarch Grand",
+    "image": "/images/helicopter-monarch.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "obsidian",
+    "name": "Obsidian One",
+    "image": "/images/helicopter-obsidian-v2.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "swift",
+    "name": "Swift Citation",
+    "image": "/images/jet-swift.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "altitude",
+    "name": "Altitude Executive",
+    "image": "/images/jet-altitude.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "horizon",
+    "name": "Horizon Intercontinental",
+    "image": "/images/jet-horizon.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "regent",
+    "name": "Regent Global",
+    "image": "/images/jet-regent.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "imperium",
+    "name": "Imperium Air Palace",
+    "image": "/images/jet-imperium.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "collector",
+    "name": "Private collector garage",
+    "image": "/images/garage-collector.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "harbor",
+    "name": "Harbor motor cruiser",
+    "image": "/images/yacht-harbor.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "riviera",
+    "name": "Riviera yacht",
+    "image": "/images/yacht-riviera.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "sovereign",
+    "name": "Sovereign superyacht",
+    "image": "/images/yacht-sovereign.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "imperial",
+    "name": "Imperial megayacht",
+    "image": "/images/yacht-imperial.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "elysium",
+    "name": "Elysium ocean palace",
+    "image": "/images/yacht-elysium.jpg"
+  },
+  {
+    "group": "personal",
+    "id": "vehicle-warehouse",
+    "name": "Grand Vehicle Warehouse",
+    "image": "/images/warehouse-vehicle.png"
+  },
+  {
+    "group": "personal",
+    "id": "production-warehouse",
+    "name": "Obsidian Production Warehouse",
+    "image": "/images/warehouse-production.png"
+  },
+  {
+    "group": "personal",
+    "id": "rs7",
+    "name": "Audi RS7 Sportback",
+    "image": "/images/vehicle-rs7.png"
+  },
+  {
+    "group": "personal",
+    "id": "rsq8",
+    "name": "Audi RS Q8 · Obsidian Black",
+    "image": "/images/vehicle-rsq8.png"
+  },
+  {
+    "group": "personal",
+    "id": "executive",
+    "name": "Executive Gallery Garage",
+    "image": "/images/garage-executive.png"
+  },
+  {
+    "group": "personal",
+    "id": "skyline",
+    "name": "Skyline Motor Gallery",
+    "image": "/images/garage-skyline.png"
+  },
+  {
+    "group": "personal",
+    "id": "vault",
+    "name": "Obsidian Motor Vault",
+    "image": "/images/garage-vault.png"
+  },
+  {
+    "group": "personal",
+    "id": "sovereign",
+    "name": "Sovereign Automobile Pavilion",
+    "image": "/images/garage-sovereign.png"
+  },
+  {
+    "group": "personal",
+    "id": "audi-a7",
+    "name": "Audi A7 Sportback",
+    "image": "/images/car-audi-a7.png"
+  },
+  {
+    "group": "personal",
+    "id": "bmw-m440",
+    "name": "BMW M440i Convertible",
+    "image": "/images/car-bmw-m440.png"
+  },
+  {
+    "group": "personal",
+    "id": "mercedes-cle",
+    "name": "Mercedes-Benz CLE Cabriolet",
+    "image": "/images/car-mercedes-cle.png"
+  },
+  {
+    "group": "personal",
+    "id": "lexus-ls",
+    "name": "Lexus LS 500",
+    "image": "/images/car-lexus-ls.png"
+  },
+  {
+    "group": "personal",
+    "id": "genesis-g90",
+    "name": "Genesis G90",
+    "image": "/images/car-genesis-g90.png"
+  },
+  {
+    "group": "personal",
+    "id": "porsche-panamera",
+    "name": "Porsche Panamera Turbo",
+    "image": "/images/car-porsche-panamera.png"
+  },
+  {
+    "group": "personal",
+    "id": "maserati-granturismo",
+    "name": "Maserati GranTurismo",
+    "image": "/images/car-maserati-granturismo.png"
+  },
+  {
+    "group": "personal",
+    "id": "bentley-flying-spur",
+    "name": "Bentley Flying Spur",
+    "image": "/images/car-bentley-flying-spur.png"
+  },
+  {
+    "group": "personal",
+    "id": "rolls-dawn",
+    "name": "Rolls-Royce Dawn",
+    "image": "/images/car-rolls-dawn.png"
+  },
+  {
+    "group": "personal",
+    "id": "mercedes-pagoda",
+    "name": "Mercedes-Benz 280 SL Pagoda",
+    "image": "/images/car-mercedes-pagoda.png"
+  },
+  {
+    "group": "personal",
+    "id": "bmw-507",
+    "name": "BMW 507 Roadster",
+    "image": "/images/car-bmw-507.png"
+  },
+  {
+    "group": "personal",
+    "id": "mercedes-300sl-roadster",
+    "name": "Mercedes-Benz 300 SL Roadster",
+    "image": "/images/car-mercedes-300sl-roadster.png"
+  },
+  {
+    "group": "personal",
+    "id": "aston-db5",
+    "name": "Aston Martin DB5",
+    "image": "/images/car-aston-db5.png"
+  },
+  {
+    "group": "personal",
+    "id": "lamborghini-miura",
+    "name": "Lamborghini Miura SV",
+    "image": "/images/car-lamborghini-miura.png"
+  },
+  {
+    "group": "personal",
+    "id": "alfa-8c-classic",
+    "name": "Alfa Romeo 8C 2900 Spider",
+    "image": "/images/car-alfa-8c-classic.png"
+  },
+  {
+    "group": "personal",
+    "id": "ferrari-250-california",
+    "name": "Ferrari 250 GT California Spyder",
+    "image": "/images/car-ferrari-250-california.png"
+  },
+  {
+    "group": "personal",
+    "id": "bugatti-57sc",
+    "name": "Bugatti Type 57SC Atlantic",
+    "image": "/images/car-bugatti-57sc.png"
+  },
+  {
+    "group": "personal",
+    "id": "ferrari-250-gto",
+    "name": "Ferrari 250 GTO",
+    "image": "/images/car-ferrari-250-gto.png"
+  },
+  {
+    "group": "crimes",
+    "id": "courier",
+    "name": "Discreet courier",
+    "image": "/images/crime-courier.jpg"
+  },
+  {
+    "group": "crimes",
+    "id": "crime",
+    "name": "Street crime",
+    "image": "/images/crime-crime.jpg"
+  },
+  {
+    "group": "crimes",
+    "id": "mugging",
+    "name": "Back-alley mugging",
+    "image": "/images/crime-mugging.jpg"
+  },
+  {
+    "group": "crimes",
+    "id": "shop",
+    "name": "Shop robbery",
+    "image": "/images/crime-shop-v2.png"
+  },
+  {
+    "group": "crimes",
+    "id": "car",
+    "name": "Car theft",
+    "image": "/images/crime-car.jpg"
+  },
+  {
+    "group": "crimes",
+    "id": "assault",
+    "name": "Enforcer assault",
+    "image": "/images/crime-assault.png"
+  },
+  {
+    "group": "crimes",
+    "id": "vip",
+    "name": "VIP protection contract",
+    "image": "/images/crime-vip.jpg"
+  },
+  {
+    "group": "crimes",
+    "id": "smuggle",
+    "name": "Smuggling operation",
+    "image": "/images/crime-smuggle.jpg"
+  },
+  {
+    "group": "crimes",
+    "id": "chop",
+    "name": "Chop shop delivery",
+    "image": "/images/crime-chop.jpg"
+  },
+  {
+    "group": "crimes",
+    "id": "getaway",
+    "name": "Midnight getaway",
+    "image": "/images/crime-getaway.jpg"
+  },
+  {
+    "group": "crimes",
+    "id": "summit",
+    "name": "Private estate summit",
+    "image": "/images/crime-summit.jpg"
+  },
+  {
+    "group": "crimes",
+    "id": "syndicate",
+    "name": "Private syndicate deal",
+    "image": "/images/crime-syndicate.jpg"
+  },
+  {
+    "group": "crimes",
+    "id": "jewelry",
+    "name": "Jewelry store heist",
+    "image": "/images/crime-jewelry.jpg"
+  },
+  {
+    "group": "crimes",
+    "id": "cargo",
+    "name": "Harbor cargo job",
+    "image": "/images/crime-cargo.jpg"
+  },
+  {
+    "group": "crimes",
+    "id": "airlift",
+    "name": "Skyline extraction",
+    "image": "/images/crime-airlift-v2.png"
+  },
+  {
+    "group": "crimes",
+    "id": "maritime",
+    "name": "Private maritime commission",
+    "image": "/images/crime-maritime.jpg"
+  },
+  {
+    "group": "crimes",
+    "id": "hostage",
+    "name": "Hostage contract",
+    "image": "/images/crime-hostage.jpg"
+  },
+  {
+    "group": "crimes",
+    "id": "overseas",
+    "name": "Overseas commission",
+    "image": "/images/crime-overseas.jpg"
+  },
+  {
+    "group": "crimes",
+    "id": "hit",
+    "name": "Liquidation contract",
+    "image": "/images/crime-hit.jpg"
+  },
+  {
+    "group": "crimes",
+    "id": "vault",
+    "name": "Casino vault heist",
+    "image": "/images/crime-vault.jpg"
+  },
+  {
+    "group": "family",
+    "id": "safehouse-starter",
+    "name": "Backstreet safehouse",
+    "image": "/images/family-safehouse-starter.jpg"
+  },
+  {
+    "group": "family",
+    "id": "safehouse-modern",
+    "name": "Modern city safehouse",
+    "image": "/images/family-safehouse-modern.jpg"
+  },
+  {
+    "group": "family",
+    "id": "safehouse-penthouse",
+    "name": "Skyline sanctuary",
+    "image": "/images/family-safehouse-penthouse.jpg"
+  },
+  {
+    "group": "family",
+    "id": "compound-yard",
+    "name": "Founders’ courtyard",
+    "image": "/images/family-compound-yard.jpg"
+  },
+  {
+    "group": "family",
+    "id": "compound-estate",
+    "name": "Sovereign estate",
+    "image": "/images/family-compound-estate.jpg"
+  },
+  {
+    "group": "family",
+    "id": "compound-palace",
+    "name": "Imperium coastal compound",
+    "image": "/images/family-compound-palace.jpg"
+  },
+  {
+    "group": "family",
+    "id": "suv-utility",
+    "name": "Crew utility SUV",
+    "image": "/images/family-suv-utility.jpg"
+  },
+  {
+    "group": "family",
+    "id": "suv-executive",
+    "name": "Executive family SUV",
+    "image": "/images/family-suv-executive.jpg"
+  },
+  {
+    "group": "family",
+    "id": "suv-armored",
+    "name": "Armored sovereign SUV",
+    "image": "/images/family-suv-armored.jpg"
+  },
+  {
+    "group": "family",
+    "id": "upgrade-guards",
+    "name": "Security detail",
+    "image": "/images/family-upgrade-guards.jpg"
+  },
+  {
+    "group": "family",
+    "id": "upgrade-surveillance",
+    "name": "Surveillance suite",
+    "image": "/images/family-upgrade-surveillance.jpg"
+  },
+  {
+    "group": "family",
+    "id": "upgrade-vault",
+    "name": "Treasury vault",
+    "image": "/images/family-upgrade-vault.jpg"
+  },
+  {
+    "group": "family",
+    "id": "upgrade-perimeter",
+    "name": "Reinforced perimeter",
+    "image": "/images/family-upgrade-perimeter.jpg"
+  },
+  {
+    "group": "family",
+    "id": "territory-block",
+    "name": "Street block",
+    "image": "/images/territory-block.jpg"
+  },
+  {
+    "group": "family",
+    "id": "territory-district",
+    "name": "Commercial district",
+    "image": "/images/territory-district.jpg"
+  },
+  {
+    "group": "family",
+    "id": "territory-harbor",
+    "name": "Harbor territory",
+    "image": "/images/territory-harbor.jpg"
+  },
+  {
+    "group": "family",
+    "id": "safehouse-sanctuary",
+    "name": "Obsidian Sanctuary",
+    "image": "/images/family-safehouse-sanctuary.png"
+  },
+  {
+    "group": "family",
+    "id": "compound-castle",
+    "name": "Aurelius Royal Dominion",
+    "image": "/images/family-compound-castle.png"
+  },
+  {
+    "group": "family",
+    "id": "car-sedan",
+    "name": "Executive Command Sedan",
+    "image": "/images/family-car-sedan.png"
+  },
+  {
+    "group": "family",
+    "id": "car-limousine",
+    "name": "Sovereign Armored Limousine",
+    "image": "/images/family-car-limousine.png"
+  },
+  {
+    "group": "family",
+    "id": "warehouse-production-family",
+    "name": "Family Production Warehouse",
+    "image": "/images/warehouse-production.png"
+  },
+  {
+    "group": "weapons",
+    "id": "street-sidearm",
+    "name": "Street sidearm",
+    "image": "/images/weapon-street-sidearm.png"
+  },
+  {
+    "group": "weapons",
+    "id": "executive-pistol",
+    "name": "Executive pistol",
+    "image": "/images/weapon-executive-pistol.png"
+  },
+  {
+    "group": "weapons",
+    "id": "crew-smg",
+    "name": "Crew SMG",
+    "image": "/images/weapon-crew-smg.png"
+  },
+  {
+    "group": "weapons",
+    "id": "security-carbine",
+    "name": "Security carbine",
+    "image": "/images/weapon-security-carbine.png"
+  },
+  {
+    "group": "weapons",
+    "id": "enforcer-rifle",
+    "name": "Enforcer rifle",
+    "image": "/images/weapon-enforcer-rifle.png"
+  },
+  {
+    "group": "weapons",
+    "id": "sovereign-arsenal",
+    "name": "Sovereign weapon system",
+    "image": "/images/weapon-sovereign-arsenal.png"
+  },
+  {
+    "group": "drugs",
+    "id": "cannabis",
+    "name": "Cannabis",
+    "image": "/images/product-cannabis.png"
+  },
+  {
+    "group": "drugs",
+    "id": "hashish",
+    "name": "Hashish",
+    "image": "/images/product-hashish.png"
+  },
+  {
+    "group": "drugs",
+    "id": "ecstasy",
+    "name": "Ecstasy",
+    "image": "/images/product-ecstasy.png"
+  },
+  {
+    "group": "drugs",
+    "id": "cocaine",
+    "name": "Cocaine",
+    "image": "/images/product-cocaine.png"
+  },
+  {
+    "group": "drugs",
+    "id": "methamphetamine",
+    "name": "Methamphetamine",
+    "image": "/images/product-methamphetamine.png"
+  },
+  {
+    "group": "employees",
+    "id": "runner",
+    "name": "Street Runner",
+    "image": "/images/employee-runner.png"
+  },
+  {
+    "group": "employees",
+    "id": "driver",
+    "name": "Personal Chauffeur",
+    "image": "/images/employee-driver.png"
+  },
+  {
+    "group": "employees",
+    "id": "bookkeeper",
+    "name": "Bookkeeper",
+    "image": "/images/employee-bookkeeper.png"
+  },
+  {
+    "group": "employees",
+    "id": "broker",
+    "name": "Underworld Broker",
+    "image": "/images/employee-broker.png"
+  },
+  {
+    "group": "employees",
+    "id": "guard",
+    "name": "Elite Personal Bodyguard",
+    "image": "/images/employee-guard.png"
+  },
+  {
+    "group": "employees",
+    "id": "director",
+    "name": "Operations Leaders",
+    "image": "/images/employee-director.png"
+  },
+  {
+    "group": "team",
+    "id": "velvet-handoff",
+    "name": "The Velvet Handoff",
+    "image": "/images/team-velvet-handoff.png"
+  },
+  {
+    "group": "team",
+    "id": "midnight-express",
+    "name": "Midnight Express",
+    "image": "/images/team-midnight-express.png"
+  },
+  {
+    "group": "team",
+    "id": "gilded-gallery",
+    "name": "The Gilded Gallery",
+    "image": "/images/team-gilded-gallery.png"
+  },
+  {
+    "group": "team",
+    "id": "crown-vault",
+    "name": "The Crown Vault",
+    "image": "/images/team-crown-vault.png"
+  },
+  {
+    "group": "extensions",
+    "id": "command-suite",
+    "name": "Command suite",
+    "image": "/images/extension-command.png"
+  },
+  {
+    "group": "extensions",
+    "id": "training-wing",
+    "name": "Training wing",
+    "image": "/images/extension-training.png"
+  },
+  {
+    "group": "extensions",
+    "id": "private-dock",
+    "name": "Private loading dock",
+    "image": "/images/extension-dock.png"
+  },
+  {
+    "group": "extensions",
+    "id": "communications",
+    "name": "Communications center",
+    "image": "/images/extension-communications.png"
+  },
+  {
+    "group": "extensions",
+    "id": "council-wing",
+    "name": "Grand council wing",
+    "image": "/images/extension-council.png"
+  },
+  {
+    "group": "daily",
+    "id": "streets",
+    "name": "Work the streets",
+    "image": "/images/daily-streets.png"
+  },
+  {
+    "group": "daily",
+    "id": "shipment",
+    "name": "Keep the goods moving",
+    "image": "/images/daily-shipment.png"
+  },
+  {
+    "group": "daily",
+    "id": "respect",
+    "name": "Make connections",
+    "image": "/images/daily-respect.png"
+  },
+  {
+    "group": "daily",
+    "id": "professional",
+    "name": "A clean operation",
+    "image": "/images/daily-professional.png"
+  },
+  {
+    "group": "daily",
+    "id": "supply-line",
+    "name": "Build a supply line",
+    "image": "/images/daily-supply-line.png"
+  },
+  {
+    "group": "daily",
+    "id": "contact",
+    "name": "Answer the call",
+    "image": "/images/daily-contact.png"
+  },
+  {
+    "group": "skins",
+    "id": "street-runner",
+    "name": "The Street Runner",
+    "image": "/images/skin-street-runner.png"
+  },
+  {
+    "group": "skins",
+    "id": "street-fixer",
+    "name": "The Street Fixer",
+    "image": "/images/skin-street-fixer.png"
+  },
+  {
+    "group": "skins",
+    "id": "getaway-driver",
+    "name": "The Getaway Driver",
+    "image": "/images/skin-getaway-driver.png"
+  },
+  {
+    "group": "skins",
+    "id": "night-driver",
+    "name": "The Night Driver",
+    "image": "/images/skin-night-driver.png"
+  },
+  {
+    "group": "skins",
+    "id": "street-broker",
+    "name": "The Street Broker",
+    "image": "/images/skin-street-broker.png"
+  },
+  {
+    "group": "skins",
+    "id": "city-broker",
+    "name": "The City Broker",
+    "image": "/images/skin-city-broker.png"
+  },
+  {
+    "group": "skins",
+    "id": "capo-vittorio",
+    "name": "Capo Vittorio",
+    "image": "/images/skin-capo-vittorio.png"
+  },
+  {
+    "group": "skins",
+    "id": "capo-valentina",
+    "name": "Capo Valentina",
+    "image": "/images/skin-capo-valentina.png"
+  },
+  {
+    "group": "skins",
+    "id": "consigliere-lorenzo",
+    "name": "Consigliere Lorenzo",
+    "image": "/images/skin-consigliere-lorenzo.png"
+  },
+  {
+    "group": "skins",
+    "id": "consigliere-isabella",
+    "name": "Consigliere Isabella",
+    "image": "/images/skin-consigliere-isabella.png"
+  },
+  {
+    "group": "skins",
+    "id": "underboss-dante",
+    "name": "Underboss Dante",
+    "image": "/images/skin-underboss-dante.png"
+  },
+  {
+    "group": "skins",
+    "id": "underboss-bianca",
+    "name": "Underboss Bianca",
+    "image": "/images/skin-underboss-bianca.png"
+  },
+  {
+    "group": "skins",
+    "id": "don-salvatore",
+    "name": "Don Salvatore",
+    "image": "/images/skin-don-salvatore.png"
+  },
+  {
+    "group": "skins",
+    "id": "donna-francesca",
+    "name": "Donna Francesca",
+    "image": "/images/skin-donna-francesca.png"
+  },
+  {
+    "group": "skins",
+    "id": "capo-antonio",
+    "name": "Capo Antonio",
+    "image": "/images/skin-capo-antonio.png"
+  },
+  {
+    "group": "skins",
+    "id": "capo-rosalia",
+    "name": "Capo Rosalia",
+    "image": "/images/skin-capo-rosalia.png"
+  },
+  {
+    "group": "skins",
+    "id": "don-marcello",
+    "name": "Don Marcello",
+    "image": "/images/skin-don-marcello.png"
+  },
+  {
+    "group": "skins",
+    "id": "donna-caterina",
+    "name": "Donna Caterina",
+    "image": "/images/skin-donna-caterina.png"
+  },
+  {
+    "group": "skins",
+    "id": "godfather",
+    "name": "The Godfather",
+    "image": "/images/skin-godfather.png"
+  },
+  {
+    "group": "skins",
+    "id": "godmother",
+    "name": "The Godmother",
+    "image": "/images/skin-godmother.png"
+  },
+  {
+    "group": "skins",
+    "id": "owner-god",
+    "name": "The Mafia God",
+    "image": "/images/skin-owner-god.png"
+  },
+  {
+    "group": "skins",
+    "id": "owner-goddess",
+    "name": "The Mafia Goddess",
+    "image": "/images/skin-owner-goddess-v2.png"
+  },
+  {
+    "group": "page",
+    "id": "referrals",
+    "name": "referrals",
+    "image": "/images/page-referrals.png"
+  },
+  {
+    "group": "page",
+    "id": "family-directory",
+    "name": "family-directory",
+    "image": "/images/page-family-directory.png"
+  },
+  {
+    "group": "page",
+    "id": "circuit",
+    "name": "circuit",
+    "image": "/images/midnight-circuit-overview.png"
+  },
+  {
+    "group": "page",
+    "id": "auction-house",
+    "name": "auction-house",
+    "image": "/images/page-art-market.png"
+  },
+  {
+    "group": "page",
+    "id": "art-market",
+    "name": "art-market",
+    "image": "/images/art-collection-overview-v2.png"
+  },
+  {
+    "group": "page",
+    "id": "warehouses",
+    "name": "warehouses",
+    "image": "/images/page-warehouses.png"
+  },
+  {
+    "group": "page",
+    "id": "dashboard",
+    "name": "dashboard",
+    "image": "/images/page-dashboard.png"
+  },
+  {
+    "group": "page",
+    "id": "login",
+    "name": "login",
+    "image": "/images/page-login.png"
+  },
+  {
+    "group": "page",
+    "id": "register",
+    "name": "register",
+    "image": "/images/page-register.png"
+  },
+  {
+    "group": "page",
+    "id": "crypto",
+    "name": "crypto",
+    "image": "/images/page-crypto.png"
+  },
+  {
+    "group": "page",
+    "id": "airport",
+    "name": "airport",
+    "image": "/images/page-airport.png"
+  },
+  {
+    "group": "page",
+    "id": "bulletins",
+    "name": "bulletins",
+    "image": "/images/page-bulletins.png"
+  },
+  {
+    "group": "page",
+    "id": "achievements",
+    "name": "achievements",
+    "image": "/images/achievements-trophy-gallery-v3.png"
+  },
+  {
+    "group": "page",
+    "id": "directory",
+    "name": "directory",
+    "image": "/images/page-directory.png"
+  },
+  {
+    "group": "page",
+    "id": "seasons",
+    "name": "seasons",
+    "image": "/images/page-seasons.png"
+  },
+  {
+    "group": "page",
+    "id": "ranks",
+    "name": "ranks",
+    "image": "/images/page-ranks.png"
+  },
+  {
+    "group": "page",
+    "id": "inventory",
+    "name": "inventory",
+    "image": "/images/page-inventory.png"
+  },
+  {
+    "group": "page",
+    "id": "respect",
+    "name": "respect",
+    "image": "/images/page-respect.png"
+  },
+  {
+    "group": "page",
+    "id": "bank",
+    "name": "bank",
+    "image": "/images/page-bank.png"
+  },
+  {
+    "group": "page",
+    "id": "transfers",
+    "name": "transfers",
+    "image": "/images/page-transfers.png"
+  },
+  {
+    "group": "page",
+    "id": "production",
+    "name": "production",
+    "image": "/images/page-production.png"
+  },
+  {
+    "group": "page",
+    "id": "combat",
+    "name": "combat",
+    "image": "/images/page-player-operations.png"
+  },
+  {
+    "group": "page",
+    "id": "bounties",
+    "name": "bounties",
+    "image": "/images/page-bounties.png"
+  },
+  {
+    "group": "page",
+    "id": "family-chat",
+    "name": "family-chat",
+    "image": "/images/page-family-chat.png"
+  },
+  {
+    "group": "page",
+    "id": "family-plans",
+    "name": "family-plans",
+    "image": "/images/page-family-plans.png"
+  },
+  {
+    "group": "page",
+    "id": "family-assets",
+    "name": "family-assets",
+    "image": "/images/page-family-assets.png"
+  },
+  {
+    "group": "page",
+    "id": "family-armory",
+    "name": "family-armory",
+    "image": "/images/page-family-armory.png"
+  },
+  {
+    "group": "page",
+    "id": "family-safehouses",
+    "name": "family-safehouses",
+    "image": "/images/page-family-safehouses.png"
+  },
+  {
+    "group": "page",
+    "id": "family-compounds",
+    "name": "family-compounds",
+    "image": "/images/page-family-compounds.png"
+  },
+  {
+    "group": "page",
+    "id": "family-fleet",
+    "name": "family-fleet",
+    "image": "/images/page-family-cars.png"
+  },
+  {
+    "group": "page",
+    "id": "family-upgrades",
+    "name": "family-upgrades",
+    "image": "/images/page-family-security.png"
+  },
+  {
+    "group": "page",
+    "id": "employees",
+    "name": "employees",
+    "image": "/images/page-employees.png"
+  },
+  {
+    "group": "page",
+    "id": "shipments",
+    "name": "shipments",
+    "image": "/images/page-shipments.png"
+  },
+  {
+    "group": "page",
+    "id": "daily",
+    "name": "daily",
+    "image": "/images/page-daily.png"
+  },
+  {
+    "group": "page",
+    "id": "support",
+    "name": "support",
+    "image": "/images/page-support.png"
+  },
+  {
+    "group": "page",
+    "id": "tickets",
+    "name": "tickets",
+    "image": "/images/page-tickets.png"
+  },
+  {
+    "group": "page",
+    "id": "policy",
+    "name": "policy",
+    "image": "/images/page-community.png"
+  },
+  {
+    "group": "page",
+    "id": "rules",
+    "name": "rules",
+    "image": "/images/page-rules.png"
+  },
+  {
+    "group": "page",
+    "id": "faq",
+    "name": "faq",
+    "image": "/images/page-faq.png"
+  },
+  {
+    "group": "page",
+    "id": "casino",
+    "name": "casino",
+    "image": "/images/casino-interior.png"
+  },
+  {
+    "group": "page",
+    "id": "marriage",
+    "name": "marriage",
+    "image": "/images/marriage-banner.png"
+  },
+  {
+    "group": "page",
+    "id": "boutique",
+    "name": "boutique",
+    "image": "/images/premium-shop-banner.png"
+  },
+  {
+    "group": "page",
+    "id": "prison",
+    "name": "prison",
+    "image": "/images/scene-arrest.jpg"
+  },
+  {
+    "group": "page",
+    "id": "hospital",
+    "name": "hospital",
+    "image": "/images/scene-coma.jpg"
+  },
+  {
+    "group": "page",
+    "id": "missions",
+    "name": "missions",
+    "image": "/images/scene-operations.jpg"
+  },
+  {
+    "group": "page",
+    "id": "underworld",
+    "name": "underworld",
+    "image": "/images/scene-leaderboard.jpg"
+  },
+  {
+    "group": "page",
+    "id": "messages",
+    "name": "messages",
+    "image": "/images/scene-messages.jpg"
+  },
+  {
+    "group": "page",
+    "id": "rivals",
+    "name": "rivals",
+    "image": "/images/scene-families.jpg"
+  },
+  {
+    "group": "page",
+    "id": "armory",
+    "name": "armory",
+    "image": "/images/page-family-armory.png"
+  },
+  {
+    "group": "page",
+    "id": "business",
+    "name": "business",
+    "image": "/images/page-businesses.png"
+  },
+  {
+    "group": "page",
+    "id": "home",
+    "name": "home",
+    "image": "/images/page-real-estate.png"
+  },
+  {
+    "group": "page",
+    "id": "car",
+    "name": "car",
+    "image": "/images/page-cars.png"
+  },
+  {
+    "group": "page",
+    "id": "jet",
+    "name": "jet",
+    "image": "/images/page-jets.png"
+  },
+  {
+    "group": "page",
+    "id": "helicopter",
+    "name": "helicopter",
+    "image": "/images/page-helicopters.png"
+  },
+  {
+    "group": "page",
+    "id": "yacht",
+    "name": "yacht",
+    "image": "/images/page-yachts.png"
+  },
+  {
+    "group": "page",
+    "id": "garage",
+    "name": "garage",
+    "image": "/images/page-garages.png"
+  },
+  {
+    "group": "page",
+    "id": "security",
+    "name": "security",
+    "image": "/images/page-protection.png"
+  },
+  {
+    "group": "page",
+    "id": "team-missions",
+    "name": "team-missions",
+    "image": "/images/page-team-missions.png"
+  },
+  {
+    "group": "page",
+    "id": "investments",
+    "name": "investments",
+    "image": "/images/page-investments.png"
+  },
+  {
+    "group": "city",
+    "id": "New York",
+    "name": "New York",
+    "image": "/images/city-new-york.png"
+  },
+  {
+    "group": "city",
+    "id": "Miami",
+    "name": "Miami",
+    "image": "/images/city-miami.png"
+  },
+  {
+    "group": "city",
+    "id": "Los Angeles",
+    "name": "Los Angeles",
+    "image": "/images/city-los-angeles.png"
+  },
+  {
+    "group": "city",
+    "id": "Chicago",
+    "name": "Chicago",
+    "image": "/images/city-chicago.png"
+  },
+  {
+    "group": "city",
+    "id": "London",
+    "name": "London",
+    "image": "/images/city-london.png"
+  },
+  {
+    "group": "city",
+    "id": "Amsterdam",
+    "name": "Amsterdam",
+    "image": "/images/city-amsterdam.png"
+  },
+  {
+    "group": "city",
+    "id": "Paris",
+    "name": "Paris",
+    "image": "/images/city-paris.png"
+  },
+  {
+    "group": "city",
+    "id": "Rome",
+    "name": "Rome",
+    "image": "/images/city-rome.png"
+  },
+  {
+    "group": "city",
+    "id": "Istanbul",
+    "name": "Istanbul",
+    "image": "/images/city-istanbul.png"
+  },
+  {
+    "group": "city",
+    "id": "Dubai",
+    "name": "Dubai",
+    "image": "/images/city-dubai.png"
+  },
+  {
+    "group": "city",
+    "id": "Singapore",
+    "name": "Singapore",
+    "image": "/images/city-singapore.png"
+  },
+  {
+    "group": "city",
+    "id": "Hong Kong",
+    "name": "Hong Kong",
+    "image": "/images/city-hong-kong.png"
+  },
+  {
+    "group": "city",
+    "id": "Tokyo",
+    "name": "Tokyo",
+    "image": "/images/city-tokyo.png"
+  },
+  {
+    "group": "city",
+    "id": "Sydney",
+    "name": "Sydney",
+    "image": "/images/city-sydney.png"
+  },
+  {
+    "group": "city",
+    "id": "São Paulo",
+    "name": "São Paulo",
+    "image": "/images/city-sao-paulo.png"
+  },
+  {
+    "group": "achievement",
+    "id": "art-crown-jewels",
+    "name": "Crown jewels of the underworld",
+    "image": "/icons/achievement-art-crown-jewels.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "art-first",
+    "name": "A discerning eye",
+    "image": "/icons/achievement-art-first.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "art-five",
+    "name": "Private gallery",
+    "image": "/icons/achievement-art-five.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "art-ten",
+    "name": "An exceptional collection",
+    "image": "/icons/achievement-art-ten.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "art-complete",
+    "name": "The complete gallery",
+    "image": "/icons/achievement-art-complete.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "pristine-first",
+    "name": "A perfect recovery",
+    "image": "/icons/achievement-pristine-first.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "pristine-five",
+    "name": "Flawless acquisitions",
+    "image": "/icons/achievement-pristine-five.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "pristine-twenty-five",
+    "name": "Untouched legends",
+    "image": "/icons/achievement-pristine-twenty-five.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "first-crime",
+    "name": "First footsteps",
+    "image": "/icons/achievement-first-crime.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "first-business",
+    "name": "Build your income",
+    "image": "/icons/achievement-first-business.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "first-family",
+    "name": "Find your people",
+    "image": "/icons/achievement-first-family.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "first-team",
+    "name": "Stronger together",
+    "image": "/icons/achievement-first-team.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "crime-100",
+    "name": "Made in the streets",
+    "image": "/icons/achievement-crime-100.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "business-4",
+    "name": "The portfolio",
+    "image": "/icons/achievement-business-4.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "respect-10",
+    "name": "A name worth knowing",
+    "image": "/icons/achievement-respect-10.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "millionaire",
+    "name": "Your first million",
+    "image": "/icons/achievement-millionaire.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "collector",
+    "name": "The collection",
+    "image": "/icons/achievement-collector.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "big-score",
+    "name": "Fortune favors the bold",
+    "image": "/icons/achievement-big-score.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "crime-10",
+    "name": "Finding your feet",
+    "image": "/icons/achievement-crime-10.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "crime-500",
+    "name": "City legend",
+    "image": "/icons/achievement-crime-500.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "crime-1000",
+    "name": "The long game",
+    "image": "/icons/achievement-crime-1000.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "shipment-1",
+    "name": "First delivery",
+    "image": "/icons/achievement-shipment-1.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "shipment-25",
+    "name": "Reliable connections",
+    "image": "/icons/achievement-shipment-25.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "shipment-100",
+    "name": "Across the borders",
+    "image": "/icons/achievement-shipment-100.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "first-home",
+    "name": "A place of your own",
+    "image": "/icons/achievement-first-home.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "first-car",
+    "name": "Your first set of keys",
+    "image": "/icons/achievement-first-car.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "first-jet",
+    "name": "Above the city",
+    "image": "/icons/achievement-first-jet.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "first-yacht",
+    "name": "Beyond the shore",
+    "image": "/icons/achievement-first-yacht.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "business-12",
+    "name": "An expanding empire",
+    "image": "/icons/achievement-business-12.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "respect-50",
+    "name": "A reputation earned",
+    "image": "/icons/achievement-respect-50.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "respect-100",
+    "name": "The name everyone knows",
+    "image": "/icons/achievement-respect-100.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "wealth-100m",
+    "name": "Nine figures",
+    "image": "/icons/achievement-wealth-100m.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "wealth-1b",
+    "name": "The billionaires circle",
+    "image": "/icons/achievement-wealth-1b.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "collection-25",
+    "name": "A remarkable collection",
+    "image": "/icons/achievement-collection-25.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "collection-50",
+    "name": "A private dynasty",
+    "image": "/icons/achievement-collection-50.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "big-score-10",
+    "name": "A lucky streak",
+    "image": "/icons/achievement-big-score-10.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "big-score-50",
+    "name": "Luck becomes legend",
+    "image": "/icons/achievement-big-score-50.svg"
+  },
+  {
+    "group": "achievement",
+    "id": "team-10",
+    "name": "Brothers in arms",
+    "image": "/icons/achievement-team-10.svg"
+  },
+  {
+    "group": "coin",
+    "id": "omerta",
+    "name": "Omerta",
+    "image": "/icons/coin-omerta.svg"
+  },
+  {
+    "group": "coin",
+    "id": "vendetta",
+    "name": "Vendetta",
+    "image": "/icons/coin-vendetta.svg"
+  },
+  {
+    "group": "coin",
+    "id": "sovereign",
+    "name": "Sovereign",
+    "image": "/icons/coin-sovereign.svg"
+  },
+  {
+    "group": "coin",
+    "id": "nightfall",
+    "name": "Nightfall",
+    "image": "/icons/coin-nightfall.svg"
+  },
+  {
+    "group": "coin",
+    "id": "vesper",
+    "name": "Vesper",
+    "image": "/icons/coin-vesper.svg"
+  },
+  {
+    "group": "coin",
+    "id": "onyx",
+    "name": "Onyx",
+    "image": "/icons/coin-onyx.svg"
+  },
+  {
+    "group": "coin",
+    "id": "crown",
+    "name": "Crown",
+    "image": "/icons/coin-crown.svg"
+  },
+  {
+    "group": "coin",
+    "id": "silk",
+    "name": "Silk",
+    "image": "/icons/coin-silk.svg"
+  },
+  {
+    "group": "coin",
+    "id": "harbor",
+    "name": "Harbor",
+    "image": "/icons/coin-harbor.svg"
+  },
+  {
+    "group": "coin",
+    "id": "cipher",
+    "name": "Cipher",
+    "image": "/icons/coin-cipher.svg"
+  },
+  {
+    "group": "coin",
+    "id": "ember",
+    "name": "Ember",
+    "image": "/icons/coin-ember.svg"
+  },
+  {
+    "group": "coin",
+    "id": "ghost",
+    "name": "Ghost",
+    "image": "/icons/coin-ghost.svg"
+  },
+  {
+    "group": "coin",
+    "id": "vault",
+    "name": "Vault",
+    "image": "/icons/coin-vault.svg"
+  },
+  {
+    "group": "coin",
+    "id": "aureus",
+    "name": "Aureus",
+    "image": "/icons/coin-aureus.svg"
+  },
+  {
+    "group": "coin",
+    "id": "raven",
+    "name": "Raven",
+    "image": "/icons/coin-raven.svg"
+  }
+]

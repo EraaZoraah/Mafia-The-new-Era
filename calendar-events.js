@@ -1,0 +1,2 @@
+export const sundayBonus=time=>new Date(time).getUTCDay()===0?1.5:1;
+export function sundayEvent(time){const d=new Date(time),midnight=Date.UTC(d.getUTCFullYear(),d.getUTCMonth(),d.getUTCDate()),active=d.getUTCDay()===0,start=active?midnight:midnight+(7-d.getUTCDay())*86400000;return {id:new Date(start).toISOString().slice(0,10),title:'Sunday Funday',active,startsAt:start,endsAt:start+86400000,multiplier:1.5,description:'Every Sunday, 00:00–24:00 UTC: 1.5× earned payouts and XP. Returned stakes, principal, transfers, stolen funds and gifts are excluded.'}}

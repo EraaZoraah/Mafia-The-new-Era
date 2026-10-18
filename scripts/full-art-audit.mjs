@@ -1,0 +1,22 @@
+import {stolenVehicles} from '../vehicle-catalog.js';
+import fs from 'node:fs';
+import {catalog,crimes} from '../catalog.js';
+import {familyAssets} from '../empire-catalog.js';
+import {weapons,products,cities} from '../logistics.js';
+import {employees,coins} from '../city-expansion.js';
+import {crewMissions,compoundUpgrades} from '../crew-operations.js';
+import {dailyJobs} from '../daily.js';
+import {skins} from '../skins.js';
+import {milestones} from '../legacy.js';
+import {pageArt,cityImage} from '../public/page-art.js';
+const items=[];
+for(const [group,rows] of Object.entries({recoveredVehicles:stolenVehicles,personal:catalog,crimes,family:familyAssets,weapons,drugs:products,employees,team:crewMissions,extensions:compoundUpgrades,daily:dailyJobs,skins}))for(const a of rows)if(a.image)items.push({group,id:a.id,name:a.name,image:a.image});
+for(const [id,image] of Object.entries(pageArt))items.push({group:'page',id,name:id,image:'/images/'+image});
+for(const city of cities)items.push({group:'city',id:city,name:city,image:cityImage(city)});
+for(const m of milestones)items.push({group:'achievement',id:m.id,name:m.name,image:'/icons/achievement-'+m.id+'.svg'});
+for(const c of coins)items.push({group:'coin',id:c.id,name:c.name,image:'/icons/coin-'+c.id+'.svg'});
+fs.writeFileSync('art/full-art-inventory.json',JSON.stringify(items,null,2));
+const svgFiles=fs.readdirSync('public/icons').filter(n=>n.endsWith('.svg'));
+const sets=[['navigation',svgFiles.filter(n=>n.startsWith('menu-')||['personal-assistant.svg'].includes(n))],['achievements-coins',svgFiles.filter(n=>!n.startsWith('menu-')&&!n.startsWith('prestige-')&&n!=='personal-assistant.svg')],['prestige',svgFiles.filter(n=>n.startsWith('prestige-')).sort((a,b)=>parseInt(a.slice(9))-parseInt(b.slice(9)))]];
+for(const [group,names] of sets){fs.writeFileSync('art/audit-icons-'+group+'.html',`<!doctype html><meta charset="utf-8"><title>${group} icon audit</title><style>body{background:#0c141a;color:#e1cd9d;font:12px system-ui;padding:20px}h1{font-size:22px}.grid{display:grid;grid-template-columns:repeat(8,130px);gap:12px}article{border:1px solid #4d483b;padding:8px;text-align:center;overflow-wrap:anywhere}svg{display:block;width:62px;height:62px;margin:0 auto 8px}</style><h1>${group} · ${names.length} icons</h1><div class="grid">`+names.map(name=>'<article>'+fs.readFileSync('public/icons/'+name,'utf8')+'<span>'+name.replace('.svg','')+'</span></article>').join('')+'</div>');}
+console.log(JSON.stringify({references:items.length,rasterFiles:fs.readdirSync('public/images').length,svgFiles:svgFiles.length}));

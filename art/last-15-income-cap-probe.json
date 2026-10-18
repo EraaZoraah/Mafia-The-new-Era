@@ -1,0 +1,7 @@
+{
+  "first24Hours": 67200,
+  "after48HoursWithoutClaim": 134400,
+  "expectedIfHard24HourCap": 67200,
+  "database": "isolated in-memory fixture",
+  "employee": "one Street Runner"
+}

@@ -1,0 +1,562 @@
+{
+  "method": "Five deterministic fresh accounts; 14 simulated days; two active hours/day, minute-by-minute actions; real handlers, seeded randomness, standard starter kit, daily crime rewards; no staff grants, donations, gifts, casino or PvP. Purchases: first coffeeshop and tier-2 weapon when affordable. In-game wait time is advanced, not real elapsed time.",
+  "results": [
+    {
+      "seed": 17,
+      "firstBusiness": {
+        "day": 1,
+        "minutes": 59
+      },
+      "totals": {
+        "crimeGross": 4936919,
+        "fines": 6000,
+        "ammo": 130000,
+        "daily": 525000,
+        "passive": 67042,
+        "purchases": 1620000,
+        "attempts": 516,
+        "successes": 496
+      },
+      "netCrime": 4800919,
+      "final": {
+        "cash": 3777961,
+        "xp": 32950
+      },
+      "days": [
+        {
+          "day": 1,
+          "cash": 45061,
+          "xp": 2760,
+          "rank": "Street Operator"
+        },
+        {
+          "day": 2,
+          "cash": 236098,
+          "xp": 5190,
+          "rank": "Enforcer"
+        },
+        {
+          "day": 3,
+          "cash": 375102,
+          "xp": 6745,
+          "rank": "Enforcer"
+        },
+        {
+          "day": 4,
+          "cash": 579016,
+          "xp": 8905,
+          "rank": "Associate"
+        },
+        {
+          "day": 5,
+          "cash": 763341,
+          "xp": 10715,
+          "rank": "Associate"
+        },
+        {
+          "day": 6,
+          "cash": 982777,
+          "xp": 12640,
+          "rank": "Made Member"
+        },
+        {
+          "day": 7,
+          "cash": 1169210,
+          "xp": 14205,
+          "rank": "Made Member"
+        },
+        {
+          "day": 8,
+          "cash": 1379928,
+          "xp": 16010,
+          "rank": "Made Member"
+        },
+        {
+          "day": 9,
+          "cash": 406744,
+          "xp": 18670,
+          "rank": "Soldier"
+        },
+        {
+          "day": 10,
+          "cash": 1132261,
+          "xp": 21980,
+          "rank": "Soldier"
+        },
+        {
+          "day": 11,
+          "cash": 1703554,
+          "xp": 24770,
+          "rank": "Soldier"
+        },
+        {
+          "day": 12,
+          "cash": 2407615,
+          "xp": 27660,
+          "rank": "Trusted Soldier"
+        },
+        {
+          "day": 13,
+          "cash": 2973443,
+          "xp": 29925,
+          "rank": "Trusted Soldier"
+        },
+        {
+          "day": 14,
+          "cash": 3777961,
+          "xp": 32950,
+          "rank": "Trusted Soldier"
+        }
+      ]
+    },
+    {
+      "seed": 42,
+      "firstBusiness": {
+        "day": 1,
+        "minutes": 52
+      },
+      "totals": {
+        "crimeGross": 4963050,
+        "fines": 23075,
+        "ammo": 128000,
+        "daily": 525000,
+        "passive": 67566,
+        "purchases": 1620000,
+        "attempts": 541,
+        "successes": 518
+      },
+      "netCrime": 4811975,
+      "final": {
+        "cash": 3789541,
+        "xp": 32905
+      },
+      "days": [
+        {
+          "day": 1,
+          "cash": 63827,
+          "xp": 3015,
+          "rank": "Street Operator"
+        },
+        {
+          "day": 2,
+          "cash": 245967,
+          "xp": 5270,
+          "rank": "Enforcer"
+        },
+        {
+          "day": 3,
+          "cash": 384835,
+          "xp": 6860,
+          "rank": "Enforcer"
+        },
+        {
+          "day": 4,
+          "cash": 570463,
+          "xp": 8710,
+          "rank": "Associate"
+        },
+        {
+          "day": 5,
+          "cash": 742953,
+          "xp": 10480,
+          "rank": "Associate"
+        },
+        {
+          "day": 6,
+          "cash": 993066,
+          "xp": 12715,
+          "rank": "Made Member"
+        },
+        {
+          "day": 7,
+          "cash": 1203146,
+          "xp": 14520,
+          "rank": "Made Member"
+        },
+        {
+          "day": 8,
+          "cash": 1438160,
+          "xp": 16475,
+          "rank": "Made Member"
+        },
+        {
+          "day": 9,
+          "cash": 460389,
+          "xp": 19295,
+          "rank": "Soldier"
+        },
+        {
+          "day": 10,
+          "cash": 1016812,
+          "xp": 21895,
+          "rank": "Soldier"
+        },
+        {
+          "day": 11,
+          "cash": 1471625,
+          "xp": 24160,
+          "rank": "Soldier"
+        },
+        {
+          "day": 12,
+          "cash": 2551017,
+          "xp": 28265,
+          "rank": "Trusted Soldier"
+        },
+        {
+          "day": 13,
+          "cash": 3225537,
+          "xp": 30895,
+          "rank": "Trusted Soldier"
+        },
+        {
+          "day": 14,
+          "cash": 3789541,
+          "xp": 32905,
+          "rank": "Trusted Soldier"
+        }
+      ]
+    },
+    {
+      "seed": 91,
+      "firstBusiness": {
+        "day": 1,
+        "minutes": 25
+      },
+      "totals": {
+        "crimeGross": 6136389,
+        "fines": 12581,
+        "ammo": 147000,
+        "daily": 525000,
+        "passive": 69060,
+        "purchases": 1620000,
+        "attempts": 537,
+        "successes": 519
+      },
+      "netCrime": 5976808,
+      "final": {
+        "cash": 4955868,
+        "xp": 36650
+      },
+      "days": [
+        {
+          "day": 1,
+          "cash": 93653,
+          "xp": 3400,
+          "rank": "Street Operator"
+        },
+        {
+          "day": 2,
+          "cash": 266298,
+          "xp": 5520,
+          "rank": "Enforcer"
+        },
+        {
+          "day": 3,
+          "cash": 494897,
+          "xp": 7980,
+          "rank": "Associate"
+        },
+        {
+          "day": 4,
+          "cash": 661648,
+          "xp": 9620,
+          "rank": "Associate"
+        },
+        {
+          "day": 5,
+          "cash": 937923,
+          "xp": 12280,
+          "rank": "Made Member"
+        },
+        {
+          "day": 6,
+          "cash": 1135906,
+          "xp": 13920,
+          "rank": "Made Member"
+        },
+        {
+          "day": 7,
+          "cash": 1332035,
+          "xp": 15560,
+          "rank": "Made Member"
+        },
+        {
+          "day": 8,
+          "cash": 395247,
+          "xp": 18825,
+          "rank": "Soldier"
+        },
+        {
+          "day": 9,
+          "cash": 1158026,
+          "xp": 22215,
+          "rank": "Soldier"
+        },
+        {
+          "day": 10,
+          "cash": 1649453,
+          "xp": 24545,
+          "rank": "Soldier"
+        },
+        {
+          "day": 11,
+          "cash": 2553036,
+          "xp": 27825,
+          "rank": "Trusted Soldier"
+        },
+        {
+          "day": 12,
+          "cash": 3408489,
+          "xp": 31145,
+          "rank": "Trusted Soldier"
+        },
+        {
+          "day": 13,
+          "cash": 4276177,
+          "xp": 34040,
+          "rank": "Trusted Soldier"
+        },
+        {
+          "day": 14,
+          "cash": 4955868,
+          "xp": 36650,
+          "rank": "Trusted Soldier"
+        }
+      ]
+    },
+    {
+      "seed": 123,
+      "firstBusiness": {
+        "day": 1,
+        "minutes": 44
+      },
+      "totals": {
+        "crimeGross": 5493461,
+        "fines": 30397,
+        "ammo": 142000,
+        "daily": 525000,
+        "passive": 69548,
+        "purchases": 1620000,
+        "attempts": 545,
+        "successes": 518
+      },
+      "netCrime": 5321064,
+      "final": {
+        "cash": 4300612,
+        "xp": 34785
+      },
+      "days": [
+        {
+          "day": 1,
+          "cash": 67513,
+          "xp": 3115,
+          "rank": "Street Operator"
+        },
+        {
+          "day": 2,
+          "cash": 261071,
+          "xp": 5535,
+          "rank": "Enforcer"
+        },
+        {
+          "day": 3,
+          "cash": 492004,
+          "xp": 8185,
+          "rank": "Associate"
+        },
+        {
+          "day": 4,
+          "cash": 666577,
+          "xp": 9915,
+          "rank": "Associate"
+        },
+        {
+          "day": 5,
+          "cash": 960566,
+          "xp": 12660,
+          "rank": "Made Member"
+        },
+        {
+          "day": 6,
+          "cash": 1169665,
+          "xp": 14385,
+          "rank": "Made Member"
+        },
+        {
+          "day": 7,
+          "cash": 1385102,
+          "xp": 16205,
+          "rank": "Made Member"
+        },
+        {
+          "day": 8,
+          "cash": 363171,
+          "xp": 18885,
+          "rank": "Soldier"
+        },
+        {
+          "day": 9,
+          "cash": 962203,
+          "xp": 21645,
+          "rank": "Soldier"
+        },
+        {
+          "day": 10,
+          "cash": 1568284,
+          "xp": 24335,
+          "rank": "Soldier"
+        },
+        {
+          "day": 11,
+          "cash": 2441362,
+          "xp": 27570,
+          "rank": "Trusted Soldier"
+        },
+        {
+          "day": 12,
+          "cash": 3235092,
+          "xp": 30490,
+          "rank": "Trusted Soldier"
+        },
+        {
+          "day": 13,
+          "cash": 3726255,
+          "xp": 32510,
+          "rank": "Trusted Soldier"
+        },
+        {
+          "day": 14,
+          "cash": 4300612,
+          "xp": 34785,
+          "rank": "Trusted Soldier"
+        }
+      ]
+    },
+    {
+      "seed": 777,
+      "firstBusiness": {
+        "day": 1,
+        "minutes": 68
+      },
+      "totals": {
+        "crimeGross": 5612845,
+        "fines": 9708,
+        "ammo": 144000,
+        "daily": 525000,
+        "passive": 69360,
+        "purchases": 1620000,
+        "attempts": 540,
+        "successes": 521
+      },
+      "netCrime": 5459137,
+      "final": {
+        "cash": 4438497,
+        "xp": 35875
+      },
+      "days": [
+        {
+          "day": 1,
+          "cash": 78740,
+          "xp": 3210,
+          "rank": "Street Operator"
+        },
+        {
+          "day": 2,
+          "cash": 261201,
+          "xp": 5480,
+          "rank": "Enforcer"
+        },
+        {
+          "day": 3,
+          "cash": 512595,
+          "xp": 8305,
+          "rank": "Associate"
+        },
+        {
+          "day": 4,
+          "cash": 663435,
+          "xp": 9820,
+          "rank": "Associate"
+        },
+        {
+          "day": 5,
+          "cash": 928706,
+          "xp": 12285,
+          "rank": "Made Member"
+        },
+        {
+          "day": 6,
+          "cash": 1124157,
+          "xp": 13940,
+          "rank": "Made Member"
+        },
+        {
+          "day": 7,
+          "cash": 1356281,
+          "xp": 15875,
+          "rank": "Made Member"
+        },
+        {
+          "day": 8,
+          "cash": 385139,
+          "xp": 18825,
+          "rank": "Soldier"
+        },
+        {
+          "day": 9,
+          "cash": 916560,
+          "xp": 21490,
+          "rank": "Soldier"
+        },
+        {
+          "day": 10,
+          "cash": 1300941,
+          "xp": 23470,
+          "rank": "Soldier"
+        },
+        {
+          "day": 11,
+          "cash": 2249376,
+          "xp": 27445,
+          "rank": "Trusted Soldier"
+        },
+        {
+          "day": 12,
+          "cash": 3015065,
+          "xp": 30455,
+          "rank": "Trusted Soldier"
+        },
+        {
+          "day": 13,
+          "cash": 3660107,
+          "xp": 32910,
+          "rank": "Trusted Soldier"
+        },
+        {
+          "day": 14,
+          "cash": 4438497,
+          "xp": 35875,
+          "rank": "Trusted Soldier"
+        }
+      ]
+    }
+  ],
+  "passivePayback": [
+    {
+      "rank": "Outsider",
+      "hourly": 120,
+      "hours": 1000
+    },
+    {
+      "rank": "Capo",
+      "hourly": 457,
+      "hours": 262.12911132734996
+    },
+    {
+      "rank": "The Godfather",
+      "hourly": 2653,
+      "hours": 45.22651356084011
+    }
+  ]
+}

@@ -1,0 +1,588 @@
+{
+  "days": 1,
+  "method": "Five isolated fresh accounts; four 30-minute sessions every six hours (two hours/day), one action opportunity per minute. Real server handlers, seeded random outcomes, calendar Sundays for everyone, normal detention/costs/ammo, daily and achievement claims. No PvP, casino, respect farming, team missions or external donations. Marriage purchased only once affordable; spouse supplies consent, no funding. Family founded and funded from earned money. Supporter packs renewed each 30 days in this comparison, including their stated cash/XP grants; live bots get only one month. Catalog-base asset valuation; purchases are cash outflow, not destroyed wealth. This is a strategy comparison, not a prediction or all-bonus maximum.",
+  "results": [
+    {
+      "profile": {
+        "name": "No membership or marriage"
+      },
+      "seed": 20261014,
+      "milestones": {},
+      "totals": {
+        "income": 462747,
+        "expenses": 31603,
+        "packCash": 0,
+        "packXp": 0,
+        "passive": 0,
+        "crimeAttempts": 44,
+        "crimeSuccesses": 41,
+        "shipments": 6,
+        "shipmentSuccesses": 5,
+        "byActivity": {
+          "armory/buy": {
+            "income": 0,
+            "cost": 28625,
+            "count": 3
+          },
+          "action": {
+            "income": 342185,
+            "cost": 478,
+            "count": 44
+          },
+          "daily/claim": {
+            "income": 92500,
+            "cost": 0,
+            "count": 4
+          },
+          "achievements/claim": {
+            "income": 0,
+            "cost": 0,
+            "count": 4
+          },
+          "shipments/run": {
+            "income": 28062,
+            "cost": 2500,
+            "count": 6
+          }
+        }
+      },
+      "snapshots": [
+        {
+          "day": 0,
+          "cash": 5000,
+          "bank": 0,
+          "xp": 0,
+          "rank": "Outsider",
+          "distinctions": 0,
+          "propertyValue": 0,
+          "weaponValue": 0,
+          "employeeValue": 0,
+          "personalValue": 5000,
+          "energy": 100,
+          "power": 0,
+          "drugs": 1,
+          "guns": 1,
+          "familyDrugs": 0,
+          "familyGuns": 0,
+          "familyTreasury": 0,
+          "packCash": 0,
+          "packXp": 0,
+          "income": 0,
+          "expenses": 0,
+          "netCashFlow": 0,
+          "passive": 0
+        },
+        {
+          "day": 1,
+          "cash": 436144,
+          "bank": 0,
+          "xp": 14580,
+          "rank": "Errand Runner",
+          "distinctions": 0,
+          "propertyValue": 0,
+          "weaponValue": 5000,
+          "employeeValue": 0,
+          "personalValue": 441144,
+          "energy": 110,
+          "power": 100,
+          "drugs": 1,
+          "guns": 1,
+          "familyDrugs": 0,
+          "familyGuns": 0,
+          "familyTreasury": 0,
+          "packCash": 0,
+          "packXp": 0,
+          "income": 462747,
+          "expenses": 31603,
+          "netCashFlow": 431144,
+          "passive": 0
+        }
+      ]
+    },
+    {
+      "profile": {
+        "name": "Marriage",
+        "marry": true
+      },
+      "seed": 20261014,
+      "milestones": {},
+      "totals": {
+        "income": 462747,
+        "expenses": 31603,
+        "packCash": 0,
+        "packXp": 0,
+        "passive": 0,
+        "crimeAttempts": 44,
+        "crimeSuccesses": 41,
+        "shipments": 6,
+        "shipmentSuccesses": 5,
+        "byActivity": {
+          "armory/buy": {
+            "income": 0,
+            "cost": 28625,
+            "count": 3
+          },
+          "action": {
+            "income": 342185,
+            "cost": 478,
+            "count": 44
+          },
+          "daily/claim": {
+            "income": 92500,
+            "cost": 0,
+            "count": 4
+          },
+          "achievements/claim": {
+            "income": 0,
+            "cost": 0,
+            "count": 4
+          },
+          "shipments/run": {
+            "income": 28062,
+            "cost": 2500,
+            "count": 6
+          }
+        }
+      },
+      "snapshots": [
+        {
+          "day": 0,
+          "cash": 5000,
+          "bank": 0,
+          "xp": 0,
+          "rank": "Outsider",
+          "distinctions": 0,
+          "propertyValue": 0,
+          "weaponValue": 0,
+          "employeeValue": 0,
+          "personalValue": 5000,
+          "energy": 100,
+          "power": 0,
+          "drugs": 1,
+          "guns": 1,
+          "familyDrugs": 0,
+          "familyGuns": 0,
+          "familyTreasury": 0,
+          "packCash": 0,
+          "packXp": 0,
+          "income": 0,
+          "expenses": 0,
+          "netCashFlow": 0,
+          "passive": 0
+        },
+        {
+          "day": 1,
+          "cash": 436144,
+          "bank": 0,
+          "xp": 14580,
+          "rank": "Errand Runner",
+          "distinctions": 0,
+          "propertyValue": 0,
+          "weaponValue": 5000,
+          "employeeValue": 0,
+          "personalValue": 441144,
+          "energy": 110,
+          "power": 100,
+          "drugs": 1,
+          "guns": 1,
+          "familyDrugs": 0,
+          "familyGuns": 0,
+          "familyTreasury": 0,
+          "packCash": 0,
+          "packXp": 0,
+          "income": 462747,
+          "expenses": 31603,
+          "netCashFlow": 431144,
+          "passive": 0
+        }
+      ]
+    },
+    {
+      "profile": {
+        "name": "Supporter",
+        "product": "supporter"
+      },
+      "seed": 20261014,
+      "milestones": {
+        "familyDay": 1,
+        "businessDay": 1
+      },
+      "totals": {
+        "income": 1425378,
+        "expenses": 6399748,
+        "packCash": 25000000,
+        "packXp": 50000,
+        "passive": 103165,
+        "crimeAttempts": 16,
+        "crimeSuccesses": 11,
+        "shipments": 8,
+        "shipmentSuccesses": 6,
+        "byActivity": {
+          "armory/buy": {
+            "income": 0,
+            "cost": 1125000,
+            "count": 7
+          },
+          "shipments/run": {
+            "income": 31659,
+            "cost": 3500,
+            "count": 8
+          },
+          "action": {
+            "income": 1227304,
+            "cost": 4362,
+            "count": 16
+          },
+          "daily/claim": {
+            "income": 63250,
+            "cost": 0,
+            "count": 3
+          },
+          "achievements/claim": {
+            "income": 0,
+            "cost": 0,
+            "count": 3
+          },
+          "families": {
+            "income": 0,
+            "cost": 1000000,
+            "count": 1
+          },
+          "family/donate": {
+            "income": 0,
+            "cost": 1166886,
+            "count": 1
+          },
+          "assets/buy": {
+            "income": 0,
+            "cost": 3000000,
+            "count": 1
+          },
+          "employees/hire": {
+            "income": 0,
+            "cost": 100000,
+            "count": 1
+          }
+        }
+      },
+      "snapshots": [
+        {
+          "day": 0,
+          "cash": 5000,
+          "bank": 0,
+          "xp": 0,
+          "rank": "Outsider",
+          "distinctions": 0,
+          "propertyValue": 0,
+          "weaponValue": 0,
+          "employeeValue": 0,
+          "personalValue": 5000,
+          "energy": 100,
+          "power": 0,
+          "drugs": 1,
+          "guns": 1,
+          "familyDrugs": 0,
+          "familyGuns": 0,
+          "familyTreasury": 0,
+          "packCash": 0,
+          "packXp": 0,
+          "income": 0,
+          "expenses": 0,
+          "netCashFlow": 0,
+          "passive": 0
+        },
+        {
+          "day": 1,
+          "cash": 20030630,
+          "bank": 0,
+          "xp": 62210,
+          "rank": "Street Operator",
+          "distinctions": 0,
+          "propertyValue": 3000000,
+          "weaponValue": 1105000,
+          "employeeValue": 100000,
+          "personalValue": 24235630,
+          "energy": 150,
+          "power": 1970,
+          "drugs": 1,
+          "guns": 1,
+          "familyDrugs": 1,
+          "familyGuns": 1,
+          "familyTreasury": 1076029,
+          "packCash": 25000000,
+          "packXp": 50000,
+          "income": 1425378,
+          "expenses": 6399748,
+          "netCashFlow": -4974370,
+          "passive": 103165
+        }
+      ]
+    },
+    {
+      "profile": {
+        "name": "Supporter + marriage",
+        "product": "supporter",
+        "marry": true
+      },
+      "seed": 20261014,
+      "milestones": {
+        "marriageDay": 1,
+        "familyDay": 1,
+        "businessDay": 1
+      },
+      "totals": {
+        "income": 1492278,
+        "expenses": 11148100,
+        "packCash": 25000000,
+        "packXp": 50000,
+        "passive": 113481,
+        "crimeAttempts": 16,
+        "crimeSuccesses": 11,
+        "shipments": 8,
+        "shipmentSuccesses": 6,
+        "byActivity": {
+          "armory/buy": {
+            "income": 0,
+            "cost": 1125000,
+            "count": 6
+          },
+          "shipments/run": {
+            "income": 31237,
+            "cost": 3500,
+            "count": 8
+          },
+          "action": {
+            "income": 1284310,
+            "cost": 2714,
+            "count": 16
+          },
+          "daily/claim": {
+            "income": 63250,
+            "cost": 0,
+            "count": 3
+          },
+          "achievements/claim": {
+            "income": 0,
+            "cost": 0,
+            "count": 3
+          },
+          "marriage/invite": {
+            "income": 0,
+            "cost": 0,
+            "count": 1
+          },
+          "marriage/respond": {
+            "income": 0,
+            "cost": 5000000,
+            "count": 1
+          },
+          "families": {
+            "income": 0,
+            "cost": 1000000,
+            "count": 1
+          },
+          "family/donate": {
+            "income": 0,
+            "cost": 916886,
+            "count": 1
+          },
+          "assets/buy": {
+            "income": 0,
+            "cost": 3000000,
+            "count": 1
+          },
+          "employees/hire": {
+            "income": 0,
+            "cost": 100000,
+            "count": 1
+          }
+        }
+      },
+      "snapshots": [
+        {
+          "day": 0,
+          "cash": 5000,
+          "bank": 0,
+          "xp": 0,
+          "rank": "Outsider",
+          "distinctions": 0,
+          "propertyValue": 0,
+          "weaponValue": 0,
+          "employeeValue": 0,
+          "personalValue": 5000,
+          "energy": 100,
+          "power": 0,
+          "drugs": 1,
+          "guns": 1,
+          "familyDrugs": 0,
+          "familyGuns": 0,
+          "familyTreasury": 0,
+          "packCash": 0,
+          "packXp": 0,
+          "income": 0,
+          "expenses": 0,
+          "netCashFlow": 0,
+          "passive": 0
+        },
+        {
+          "day": 1,
+          "cash": 15349178,
+          "bank": 0,
+          "xp": 62710,
+          "rank": "Street Operator",
+          "distinctions": 0,
+          "propertyValue": 3000000,
+          "weaponValue": 1105000,
+          "employeeValue": 100000,
+          "personalValue": 19554178,
+          "energy": 150,
+          "power": 1970,
+          "drugs": 1,
+          "guns": 1,
+          "familyDrugs": 1,
+          "familyGuns": 1,
+          "familyTreasury": 923085,
+          "packCash": 25000000,
+          "packXp": 50000,
+          "income": 1492278,
+          "expenses": 11148100,
+          "netCashFlow": -9655822,
+          "passive": 113481
+        }
+      ]
+    },
+    {
+      "profile": {
+        "name": "Grand Supporter + marriage",
+        "product": "grand-supporter",
+        "marry": true
+      },
+      "seed": 20261014,
+      "milestones": {
+        "marriageDay": 1,
+        "familyDay": 1,
+        "businessDay": 1
+      },
+      "totals": {
+        "income": 19607732,
+        "expenses": 35114162,
+        "packCash": 75000000,
+        "packXp": 150000,
+        "passive": 984528,
+        "crimeAttempts": 40,
+        "crimeSuccesses": 36,
+        "shipments": 8,
+        "shipmentSuccesses": 7,
+        "byActivity": {
+          "armory/buy": {
+            "income": 0,
+            "cost": 1150000,
+            "count": 8
+          },
+          "shipments/run": {
+            "income": 101805,
+            "cost": 2500,
+            "count": 8
+          },
+          "action": {
+            "income": 18405774,
+            "cost": 19463,
+            "count": 40
+          },
+          "daily/claim": {
+            "income": 115625,
+            "cost": 0,
+            "count": 4
+          },
+          "achievements/claim": {
+            "income": 0,
+            "cost": 0,
+            "count": 7
+          },
+          "marriage/invite": {
+            "income": 0,
+            "cost": 0,
+            "count": 1
+          },
+          "families": {
+            "income": 0,
+            "cost": 1000000,
+            "count": 1
+          },
+          "assets/buy": {
+            "income": 0,
+            "cost": 20500000,
+            "count": 2
+          },
+          "employees/hire": {
+            "income": 0,
+            "cost": 200000,
+            "count": 2
+          },
+          "marriage/respond": {
+            "income": 0,
+            "cost": 5000000,
+            "count": 1
+          },
+          "family/donate": {
+            "income": 0,
+            "cost": 7242199,
+            "count": 2
+          }
+        }
+      },
+      "snapshots": [
+        {
+          "day": 0,
+          "cash": 5000,
+          "bank": 0,
+          "xp": 0,
+          "rank": "Outsider",
+          "distinctions": 0,
+          "propertyValue": 0,
+          "weaponValue": 0,
+          "employeeValue": 0,
+          "personalValue": 5000,
+          "energy": 100,
+          "power": 0,
+          "drugs": 1,
+          "guns": 1,
+          "familyDrugs": 0,
+          "familyGuns": 0,
+          "familyTreasury": 0,
+          "packCash": 0,
+          "packXp": 0,
+          "income": 0,
+          "expenses": 0,
+          "netCashFlow": 0,
+          "passive": 0
+        },
+        {
+          "day": 1,
+          "cash": 59498570,
+          "bank": 0,
+          "xp": 204183,
+          "rank": "Racketeer",
+          "distinctions": 0,
+          "propertyValue": 20500000,
+          "weaponValue": 1105000,
+          "employeeValue": 200000,
+          "personalValue": 81303570,
+          "energy": 210,
+          "power": 1990,
+          "drugs": 1,
+          "guns": 1,
+          "familyDrugs": 1,
+          "familyGuns": 1,
+          "familyTreasury": 7160571,
+          "packCash": 75000000,
+          "packXp": 150000,
+          "income": 19607732,
+          "expenses": 35114162,
+          "netCashFlow": -15506430,
+          "passive": 984528
+        }
+      ]
+    }
+  ]
+}

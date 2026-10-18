@@ -1,0 +1,42 @@
+# Runtime state and secrets — never publish
+/data/
+/backups/
+.preview*/
+node_modules/
+.env
+.env.*
+!.env.example
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.db
+*.db-*
+*.pem
+*.key
+*.p12
+*.pfx
+*.log
+
+# Local exports and disposable previews
+/releases/
+*-preview.png
+*-preview.jpg
+*-mobile-preview.png
+*-mobile-preview.jpg
+*-tiles-preview.png
+/test-run.log
+/seed-test-world.js
+/seed-more-test-players.js
+/TEST-WORLD.md
+/TEST-PLAYERS-EXTRA.md
+/art/*.png
+/art/*.jpg
+/art/*.jpeg
+/art/*.log
+/art/*-prompts.json
+/art/*-art.json
+.DS_Store
+Thumbs.db
+
+# Explicitly authorized private starter world; live databases remain ignored.
+!/starter-data/mafia.sqlite

@@ -1,0 +1,430 @@
+[
+  {
+    "id": "citroen-2cv",
+    "name": "Citroën 2CV",
+    "value": 18000,
+    "weight": 140,
+    "image": "/images/vehicle-citroen-2cv.png"
+  },
+  {
+    "id": "vw-beetle-classic",
+    "name": "Volkswagen Beetle Classic",
+    "value": 26000,
+    "weight": 125,
+    "image": "/images/vehicle-vw-beetle-classic.png"
+  },
+  {
+    "id": "volvo-240",
+    "name": "Volvo 240 Estate",
+    "value": 38000,
+    "weight": 110,
+    "image": "/images/vehicle-volvo-240.png"
+  },
+  {
+    "id": "ford-mustang-1965",
+    "name": "Ford Mustang 1965",
+    "value": 95000,
+    "weight": 65,
+    "image": "/images/vehicle-ford-mustang-1965.png"
+  },
+  {
+    "id": "mini-cooper-classic",
+    "name": "Mini Cooper Classic",
+    "value": 45000,
+    "weight": 100,
+    "image": "/images/vehicle-mini-cooper-classic.png"
+  },
+  {
+    "id": "alfa-spider",
+    "name": "Alfa Romeo Spider",
+    "value": 125000,
+    "weight": 50,
+    "image": "/images/vehicle-alfa-spider.png"
+  },
+  {
+    "id": "bmw-e30",
+    "name": "BMW 325i E30",
+    "value": 180000,
+    "weight": 40,
+    "image": "/images/vehicle-bmw-e30.png"
+  },
+  {
+    "id": "mercedes-190e",
+    "name": "Mercedes-Benz 190 E",
+    "value": 220000,
+    "weight": 35,
+    "image": "/images/vehicle-mercedes-190e.png"
+  },
+  {
+    "id": "toyota-supra-mk4",
+    "name": "Toyota Supra Mk IV",
+    "value": 650000,
+    "weight": 14,
+    "image": "/images/vehicle-toyota-supra-mk4.png"
+  },
+  {
+    "id": "honda-nsx-classic",
+    "name": "Honda NSX Classic",
+    "value": 850000,
+    "weight": 10,
+    "image": "/images/vehicle-honda-nsx-classic.png"
+  },
+  {
+    "id": "jaguar-xjs",
+    "name": "Jaguar XJS Convertible",
+    "value": 400000,
+    "weight": 22,
+    "image": "/images/vehicle-jaguar-xjs.png"
+  },
+  {
+    "id": "porsche-944",
+    "name": "Porsche 944 Turbo",
+    "value": 550000,
+    "weight": 18,
+    "image": "/images/vehicle-porsche-944.png"
+  },
+  {
+    "id": "cadillac-eldorado",
+    "name": "Cadillac Eldorado",
+    "value": 1100000,
+    "weight": 8,
+    "image": "/images/vehicle-cadillac-eldorado.png"
+  },
+  {
+    "id": "bentley-azure",
+    "name": "Bentley Azure",
+    "value": 1600000,
+    "weight": 6,
+    "image": "/images/vehicle-bentley-azure.png"
+  },
+  {
+    "id": "aston-db9",
+    "name": "Aston Martin DB9",
+    "value": 2200000,
+    "weight": 5,
+    "image": "/images/vehicle-aston-db9.png"
+  },
+  {
+    "id": "ferrari-testarossa",
+    "name": "Ferrari Testarossa",
+    "value": 6500000,
+    "weight": 3,
+    "image": "/images/vehicle-ferrari-testarossa.png"
+  },
+  {
+    "id": "lamborghini-countach",
+    "name": "Lamborghini Countach",
+    "value": 12000000,
+    "weight": 2,
+    "image": "/images/vehicle-lamborghini-countach.png"
+  },
+  {
+    "id": "jaguar-etype",
+    "name": "Jaguar E-Type Roadster",
+    "value": 18000000,
+    "weight": 1,
+    "image": "/images/vehicle-jaguar-etype.png"
+  },
+  {
+    "id": "porsche-959",
+    "name": "Porsche 959",
+    "value": 28000000,
+    "weight": 1,
+    "image": "/images/vehicle-porsche-959.png"
+  },
+  {
+    "id": "ferrari-f40",
+    "name": "Ferrari F40",
+    "value": 45000000,
+    "weight": 1,
+    "image": "/images/vehicle-ferrari-f40.png"
+  },
+  {
+    "id": "audi-a7",
+    "name": "Audi A7 Sportback",
+    "price": 1300000,
+    "tier": "Executive",
+    "category": "car",
+    "income": 0,
+    "limit": 1,
+    "image": "/images/car-audi-a7.png",
+    "perks": {
+      "rewardBps": 30
+    },
+    "title": "Collector · Audi A7 Sportback",
+    "unlock": "Midnight getaway",
+    "description": "A private collection car. Requires a free garage bay. One per model; resale returns 80% of the paid price."
+  },
+  {
+    "id": "bmw-m440",
+    "name": "BMW M440i Convertible",
+    "price": 1550000,
+    "tier": "Performance",
+    "category": "car",
+    "income": 0,
+    "limit": 1,
+    "image": "/images/car-bmw-m440.png",
+    "perks": {
+      "rewardBps": 32
+    },
+    "title": "Collector · BMW M440i Convertible",
+    "unlock": "Midnight getaway",
+    "description": "A private collection car. Requires a free garage bay. One per model; resale returns 80% of the paid price."
+  },
+  {
+    "id": "mercedes-cle",
+    "name": "Mercedes-Benz CLE Cabriolet",
+    "price": 1750000,
+    "tier": "Grand touring",
+    "category": "car",
+    "income": 0,
+    "limit": 1,
+    "image": "/images/car-mercedes-cle.png",
+    "perks": {
+      "rewardBps": 34
+    },
+    "title": "Collector · Mercedes-Benz CLE Cabriolet",
+    "unlock": "Midnight getaway",
+    "description": "A private collection car. Requires a free garage bay. One per model; resale returns 80% of the paid price."
+  },
+  {
+    "id": "lexus-ls",
+    "name": "Lexus LS 500",
+    "price": 2100000,
+    "tier": "Luxury",
+    "category": "car",
+    "income": 0,
+    "limit": 1,
+    "image": "/images/car-lexus-ls.png",
+    "perks": {
+      "rewardBps": 36
+    },
+    "title": "Collector · Lexus LS 500",
+    "unlock": "Midnight getaway",
+    "description": "A private collection car. Requires a free garage bay. One per model; resale returns 80% of the paid price."
+  },
+  {
+    "id": "genesis-g90",
+    "name": "Genesis G90",
+    "price": 2350000,
+    "tier": "Luxury",
+    "category": "car",
+    "income": 0,
+    "limit": 1,
+    "image": "/images/car-genesis-g90.png",
+    "perks": {
+      "rewardBps": 38
+    },
+    "title": "Collector · Genesis G90",
+    "unlock": "Midnight getaway",
+    "description": "A private collection car. Requires a free garage bay. One per model; resale returns 80% of the paid price."
+  },
+  {
+    "id": "porsche-panamera",
+    "name": "Porsche Panamera Turbo",
+    "price": 3200000,
+    "tier": "Performance",
+    "category": "car",
+    "income": 0,
+    "limit": 1,
+    "image": "/images/car-porsche-panamera.png",
+    "perks": {
+      "rewardBps": 40
+    },
+    "title": "Collector · Porsche Panamera Turbo",
+    "unlock": "Midnight getaway",
+    "description": "A private collection car. Requires a free garage bay. One per model; resale returns 80% of the paid price."
+  },
+  {
+    "id": "maserati-granturismo",
+    "name": "Maserati GranTurismo",
+    "price": 4200000,
+    "tier": "Grand touring",
+    "category": "car",
+    "income": 0,
+    "limit": 1,
+    "image": "/images/car-maserati-granturismo.png",
+    "perks": {
+      "rewardBps": 42
+    },
+    "title": "Collector · Maserati GranTurismo",
+    "unlock": "Midnight getaway",
+    "description": "A private collection car. Requires a free garage bay. One per model; resale returns 80% of the paid price."
+  },
+  {
+    "id": "bentley-flying-spur",
+    "name": "Bentley Flying Spur",
+    "price": 5800000,
+    "tier": "Ultra luxury",
+    "category": "car",
+    "income": 0,
+    "limit": 1,
+    "image": "/images/car-bentley-flying-spur.png",
+    "perks": {
+      "rewardBps": 44
+    },
+    "title": "Collector · Bentley Flying Spur",
+    "unlock": "Midnight getaway",
+    "description": "A private collection car. Requires a free garage bay. One per model; resale returns 80% of the paid price."
+  },
+  {
+    "id": "rolls-dawn",
+    "name": "Rolls-Royce Dawn",
+    "price": 8500000,
+    "tier": "Ultra luxury",
+    "category": "car",
+    "income": 0,
+    "limit": 1,
+    "image": "/images/car-rolls-dawn.png",
+    "perks": {
+      "rewardBps": 46
+    },
+    "title": "Collector · Rolls-Royce Dawn",
+    "unlock": "Midnight getaway",
+    "description": "A private collection car. Requires a free garage bay. One per model; resale returns 80% of the paid price."
+  },
+  {
+    "id": "mercedes-pagoda",
+    "name": "Mercedes-Benz 280 SL Pagoda",
+    "price": 15000000,
+    "tier": "Classic collector",
+    "category": "car",
+    "income": 0,
+    "limit": 1,
+    "image": "/images/car-mercedes-pagoda.png",
+    "perks": {
+      "rewardBps": 48
+    },
+    "title": "Collector · Mercedes-Benz 280 SL Pagoda",
+    "unlock": "Midnight getaway",
+    "description": "A private collection car. Requires a free garage bay. One per model; resale returns 80% of the paid price."
+  },
+  {
+    "id": "bmw-507",
+    "name": "BMW 507 Roadster",
+    "price": 45000000,
+    "tier": "Classic collector",
+    "category": "car",
+    "income": 0,
+    "limit": 1,
+    "image": "/images/car-bmw-507.png",
+    "perks": {
+      "rewardBps": 50
+    },
+    "title": "Collector · BMW 507 Roadster",
+    "unlock": "Midnight getaway",
+    "description": "A private collection car. Requires a free garage bay. One per model; resale returns 80% of the paid price."
+  },
+  {
+    "id": "mercedes-300sl-roadster",
+    "name": "Mercedes-Benz 300 SL Roadster",
+    "price": 65000000,
+    "tier": "Classic collector",
+    "category": "car",
+    "income": 0,
+    "limit": 1,
+    "image": "/images/car-mercedes-300sl-roadster.png",
+    "perks": {
+      "rewardBps": 52
+    },
+    "title": "Collector · Mercedes-Benz 300 SL Roadster",
+    "unlock": "Midnight getaway",
+    "description": "A private collection car. Requires a free garage bay. One per model; resale returns 80% of the paid price."
+  },
+  {
+    "id": "aston-db5",
+    "name": "Aston Martin DB5",
+    "price": 95000000,
+    "tier": "Classic collector",
+    "category": "car",
+    "income": 0,
+    "limit": 1,
+    "image": "/images/car-aston-db5.png",
+    "perks": {
+      "rewardBps": 54
+    },
+    "title": "Collector · Aston Martin DB5",
+    "unlock": "Midnight getaway",
+    "description": "A private collection car. Requires a free garage bay. One per model; resale returns 80% of the paid price."
+  },
+  {
+    "id": "lamborghini-miura",
+    "name": "Lamborghini Miura SV",
+    "price": 145000000,
+    "tier": "Classic collector",
+    "category": "car",
+    "income": 0,
+    "limit": 1,
+    "image": "/images/car-lamborghini-miura.png",
+    "perks": {
+      "rewardBps": 56
+    },
+    "title": "Collector · Lamborghini Miura SV",
+    "unlock": "Midnight getaway",
+    "description": "A private collection car. Requires a free garage bay. One per model; resale returns 80% of the paid price."
+  },
+  {
+    "id": "alfa-8c-classic",
+    "name": "Alfa Romeo 8C 2900 Spider",
+    "price": 280000000,
+    "tier": "Museum collector",
+    "category": "car",
+    "income": 0,
+    "limit": 1,
+    "image": "/images/car-alfa-8c-classic.png",
+    "perks": {
+      "rewardBps": 58
+    },
+    "title": "Collector · Alfa Romeo 8C 2900 Spider",
+    "unlock": "Midnight getaway",
+    "description": "A private collection car. Requires a free garage bay. One per model; resale returns 80% of the paid price."
+  },
+  {
+    "id": "ferrari-250-california",
+    "name": "Ferrari 250 GT California Spyder",
+    "price": 450000000,
+    "tier": "Museum collector",
+    "category": "car",
+    "income": 0,
+    "limit": 1,
+    "image": "/images/car-ferrari-250-california.png",
+    "perks": {
+      "rewardBps": 60
+    },
+    "title": "Collector · Ferrari 250 GT California Spyder",
+    "unlock": "Midnight getaway",
+    "description": "A private collection car. Requires a free garage bay. One per model; resale returns 80% of the paid price."
+  },
+  {
+    "id": "bugatti-57sc",
+    "name": "Bugatti Type 57SC Atlantic",
+    "price": 850000000,
+    "tier": "Museum collector",
+    "category": "car",
+    "income": 0,
+    "limit": 1,
+    "image": "/images/car-bugatti-57sc.png",
+    "perks": {
+      "rewardBps": 62
+    },
+    "title": "Collector · Bugatti Type 57SC Atlantic",
+    "unlock": "Midnight getaway",
+    "description": "A private collection car. Requires a free garage bay. One per model; resale returns 80% of the paid price."
+  },
+  {
+    "id": "ferrari-250-gto",
+    "name": "Ferrari 250 GTO",
+    "price": 1500000000,
+    "tier": "Museum collector",
+    "category": "car",
+    "income": 0,
+    "limit": 1,
+    "image": "/images/car-ferrari-250-gto.png",
+    "perks": {
+      "rewardBps": 64
+    },
+    "title": "Collector · Ferrari 250 GTO",
+    "unlock": "Midnight getaway",
+    "description": "A private collection car. Requires a free garage bay. One per model; resale returns 80% of the paid price."
+  }
+]

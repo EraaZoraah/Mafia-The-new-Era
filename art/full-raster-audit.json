@@ -1,0 +1,1055 @@
+{
+  "files": 259,
+  "references": 270,
+  "identicalPixels": [],
+  "identicalNormalizedPixels": [],
+  "dimensions": {
+    "page-achievements.png": [
+      1672,
+      941
+    ],
+    "page-admin.png": [
+      1983,
+      793
+    ],
+    "page-airport.png": [
+      1983,
+      793
+    ],
+    "page-bank.png": [
+      1672,
+      941
+    ],
+    "page-bounties.png": [
+      1672,
+      941
+    ],
+    "page-bulletins.png": [
+      1672,
+      941
+    ],
+    "page-businesses.png": [
+      2172,
+      724
+    ],
+    "page-cars.png": [
+      2048,
+      768
+    ],
+    "page-community.png": [
+      1672,
+      941
+    ],
+    "page-crypto.png": [
+      2048,
+      768
+    ],
+    "page-daily.png": [
+      1672,
+      941
+    ],
+    "page-dashboard.png": [
+      1916,
+      821
+    ],
+    "page-directory.png": [
+      1672,
+      941
+    ],
+    "page-employees.png": [
+      1672,
+      941
+    ],
+    "page-family-armory.png": [
+      1672,
+      941
+    ],
+    "page-family-assets.png": [
+      1672,
+      941
+    ],
+    "page-family-cars.png": [
+      1672,
+      941
+    ],
+    "page-family-chat.png": [
+      1672,
+      941
+    ],
+    "page-family-compounds.png": [
+      1672,
+      941
+    ],
+    "page-family-plans.png": [
+      1672,
+      941
+    ],
+    "page-family-safehouses.png": [
+      1672,
+      941
+    ],
+    "page-family-security.png": [
+      1672,
+      941
+    ],
+    "page-faq.png": [
+      1672,
+      941
+    ],
+    "page-garages.png": [
+      1983,
+      793
+    ],
+    "page-helicopters.png": [
+      2048,
+      768
+    ],
+    "page-inventory.png": [
+      1672,
+      941
+    ],
+    "page-investments.png": [
+      2073,
+      758
+    ],
+    "page-jets.png": [
+      2056,
+      765
+    ],
+    "page-login.png": [
+      1672,
+      941
+    ],
+    "page-owner.png": [
+      1672,
+      941
+    ],
+    "page-player-operations.png": [
+      1672,
+      941
+    ],
+    "page-production.png": [
+      1672,
+      941
+    ],
+    "page-protection.png": [
+      2172,
+      724
+    ],
+    "page-ranks.png": [
+      1672,
+      941
+    ],
+    "page-real-estate.png": [
+      2048,
+      768
+    ],
+    "page-register.png": [
+      1672,
+      941
+    ],
+    "page-respect.png": [
+      1672,
+      941
+    ],
+    "page-rules.png": [
+      1672,
+      941
+    ],
+    "page-seasons.png": [
+      1672,
+      941
+    ],
+    "page-shipments.png": [
+      1672,
+      941
+    ],
+    "page-support.png": [
+      1672,
+      941
+    ],
+    "page-team-missions.png": [
+      1983,
+      793
+    ],
+    "page-tickets.png": [
+      1672,
+      941
+    ],
+    "page-transfers.png": [
+      1672,
+      941
+    ],
+    "page-yachts.png": [
+      1916,
+      821
+    ],
+    "armory-ammunition.png": [
+      1536,
+      1024
+    ],
+    "business-bar.jpg": [
+      900,
+      600
+    ],
+    "business-casino.jpg": [
+      900,
+      600
+    ],
+    "business-club.jpg": [
+      900,
+      600
+    ],
+    "business-coffee.jpg": [
+      900,
+      600
+    ],
+    "business-garage.jpg": [
+      900,
+      600
+    ],
+    "business-hotel.jpg": [
+      900,
+      600
+    ],
+    "business-laundry-v2.png": [
+      1774,
+      887
+    ],
+    "business-laundry.jpg": [
+      900,
+      600
+    ],
+    "business-logistics.jpg": [
+      900,
+      600
+    ],
+    "business-palace.jpg": [
+      900,
+      600
+    ],
+    "business-resort.jpg": [
+      900,
+      600
+    ],
+    "business-restaurant.jpg": [
+      900,
+      600
+    ],
+    "car-12cilindri.jpg": [
+      900,
+      600
+    ],
+    "car-750s.jpg": [
+      900,
+      600
+    ],
+    "car-911.jpg": [
+      900,
+      600
+    ],
+    "car-amg.jpg": [
+      900,
+      600
+    ],
+    "car-audis5.jpg": [
+      900,
+      600
+    ],
+    "car-bmw330.jpg": [
+      900,
+      600
+    ],
+    "car-civic.jpg": [
+      900,
+      600
+    ],
+    "car-continental.jpg": [
+      900,
+      600
+    ],
+    "car-cullinan.jpg": [
+      900,
+      600
+    ],
+    "car-db12.jpg": [
+      900,
+      600
+    ],
+    "car-f80.jpg": [
+      900,
+      600
+    ],
+    "car-fiat500.jpg": [
+      900,
+      600
+    ],
+    "car-g63.jpg": [
+      900,
+      600
+    ],
+    "car-ghost.jpg": [
+      900,
+      600
+    ],
+    "car-golf.jpg": [
+      900,
+      600
+    ],
+    "car-jesko.jpg": [
+      900,
+      600
+    ],
+    "car-m5.jpg": [
+      900,
+      600
+    ],
+    "car-model3.jpg": [
+      900,
+      600
+    ],
+    "car-nevera.jpg": [
+      900,
+      600
+    ],
+    "car-revuelto.jpg": [
+      900,
+      600
+    ],
+    "car-temerario.jpg": [
+      900,
+      600
+    ],
+    "car-tourbillon.jpg": [
+      900,
+      600
+    ],
+    "car-utopia.jpg": [
+      900,
+      600
+    ],
+    "car-yaris.jpg": [
+      900,
+      600
+    ],
+    "casino-blackjack.png": [
+      1672,
+      941
+    ],
+    "casino-higher-lower.png": [
+      1672,
+      941
+    ],
+    "casino-interior.png": [
+      1536,
+      1024
+    ],
+    "casino-lottery.png": [
+      1672,
+      941
+    ],
+    "casino-poker.png": [
+      1672,
+      941
+    ],
+    "casino-roulette.png": [
+      1672,
+      941
+    ],
+    "casino-safe.png": [
+      1672,
+      941
+    ],
+    "casino-slots.png": [
+      1672,
+      941
+    ],
+    "city-amsterdam.png": [
+      1672,
+      941
+    ],
+    "city-chicago.png": [
+      1672,
+      941
+    ],
+    "city-dubai.png": [
+      1672,
+      941
+    ],
+    "city-hong-kong.png": [
+      1672,
+      941
+    ],
+    "city-istanbul.png": [
+      1672,
+      941
+    ],
+    "city-london.png": [
+      1672,
+      941
+    ],
+    "city-los-angeles.png": [
+      1672,
+      941
+    ],
+    "city-miami.png": [
+      1672,
+      941
+    ],
+    "city-new-york.png": [
+      1672,
+      941
+    ],
+    "city-paris.png": [
+      1672,
+      941
+    ],
+    "city-rome.png": [
+      1672,
+      941
+    ],
+    "city-sao-paulo.png": [
+      1672,
+      941
+    ],
+    "city-singapore.png": [
+      1672,
+      941
+    ],
+    "city-sydney.png": [
+      1672,
+      941
+    ],
+    "city-tokyo.png": [
+      1672,
+      941
+    ],
+    "complimentary-gift.png": [
+      1672,
+      941
+    ],
+    "crime-airlift-v2.png": [
+      1672,
+      941
+    ],
+    "crime-airlift.jpg": [
+      900,
+      600
+    ],
+    "crime-assault.png": [
+      1672,
+      941
+    ],
+    "crime-car.jpg": [
+      900,
+      600
+    ],
+    "crime-cargo.jpg": [
+      900,
+      600
+    ],
+    "crime-chop.jpg": [
+      900,
+      600
+    ],
+    "crime-courier.jpg": [
+      900,
+      600
+    ],
+    "crime-crime.jpg": [
+      900,
+      600
+    ],
+    "crime-getaway.jpg": [
+      900,
+      600
+    ],
+    "crime-hit.jpg": [
+      900,
+      600
+    ],
+    "crime-hostage.jpg": [
+      900,
+      600
+    ],
+    "crime-jewelry.jpg": [
+      900,
+      600
+    ],
+    "crime-maritime.jpg": [
+      900,
+      600
+    ],
+    "crime-mugging.jpg": [
+      900,
+      600
+    ],
+    "crime-overseas.jpg": [
+      900,
+      600
+    ],
+    "crime-shop-v2.png": [
+      1672,
+      941
+    ],
+    "crime-shop.jpg": [
+      900,
+      600
+    ],
+    "crime-smuggle.jpg": [
+      900,
+      600
+    ],
+    "crime-summit.jpg": [
+      900,
+      600
+    ],
+    "crime-syndicate.jpg": [
+      900,
+      600
+    ],
+    "crime-vault.jpg": [
+      900,
+      600
+    ],
+    "crime-vip.jpg": [
+      900,
+      600
+    ],
+    "daily-contact.png": [
+      1672,
+      941
+    ],
+    "daily-professional.png": [
+      1672,
+      941
+    ],
+    "daily-respect.png": [
+      1672,
+      941
+    ],
+    "daily-shipment.png": [
+      1672,
+      941
+    ],
+    "daily-streets.png": [
+      1672,
+      941
+    ],
+    "daily-supply-line.png": [
+      1672,
+      941
+    ],
+    "employee-bookkeeper.png": [
+      1672,
+      941
+    ],
+    "employee-broker.png": [
+      1672,
+      941
+    ],
+    "employee-director.png": [
+      1672,
+      941
+    ],
+    "employee-driver.png": [
+      1672,
+      941
+    ],
+    "employee-guard.png": [
+      1672,
+      940
+    ],
+    "employee-runner.png": [
+      1672,
+      941
+    ],
+    "extension-command.png": [
+      1916,
+      821
+    ],
+    "extension-communications.png": [
+      1916,
+      821
+    ],
+    "extension-council.png": [
+      1942,
+      809
+    ],
+    "extension-dock.png": [
+      1672,
+      941
+    ],
+    "extension-training.png": [
+      1983,
+      793
+    ],
+    "family-car-limousine.png": [
+      1672,
+      941
+    ],
+    "family-car-sedan.png": [
+      1672,
+      941
+    ],
+    "family-compound-castle.png": [
+      1672,
+      941
+    ],
+    "family-compound-estate.jpg": [
+      900,
+      600
+    ],
+    "family-compound-palace.jpg": [
+      900,
+      600
+    ],
+    "family-compound-yard.jpg": [
+      900,
+      600
+    ],
+    "family-safehouse-modern.jpg": [
+      900,
+      600
+    ],
+    "family-safehouse-penthouse.jpg": [
+      900,
+      600
+    ],
+    "family-safehouse-sanctuary.png": [
+      1672,
+      941
+    ],
+    "family-safehouse-starter.jpg": [
+      900,
+      600
+    ],
+    "family-suv-armored.jpg": [
+      900,
+      600
+    ],
+    "family-suv-executive.jpg": [
+      900,
+      600
+    ],
+    "family-suv-utility.jpg": [
+      900,
+      600
+    ],
+    "family-upgrade-guards.jpg": [
+      900,
+      600
+    ],
+    "family-upgrade-perimeter.jpg": [
+      900,
+      600
+    ],
+    "family-upgrade-surveillance.jpg": [
+      900,
+      600
+    ],
+    "family-upgrade-vault.jpg": [
+      900,
+      600
+    ],
+    "game-logo.png": [
+      1774,
+      887
+    ],
+    "garage-collector.jpg": [
+      900,
+      600
+    ],
+    "helicopter-meridian.jpg": [
+      900,
+      600
+    ],
+    "helicopter-monarch.jpg": [
+      900,
+      600
+    ],
+    "helicopter-obsidian-v2.jpg": [
+      900,
+      600
+    ],
+    "helicopter-obsidian.jpg": [
+      900,
+      600
+    ],
+    "helicopter-sovereign.jpg": [
+      900,
+      600
+    ],
+    "helicopter-sparrow.jpg": [
+      900,
+      600
+    ],
+    "hero.jpg": [
+      1800,
+      771
+    ],
+    "home-apartment.jpg": [
+      900,
+      600
+    ],
+    "home-beach.jpg": [
+      900,
+      600
+    ],
+    "home-chateau.jpg": [
+      900,
+      600
+    ],
+    "home-elysium.jpg": [
+      900,
+      600
+    ],
+    "home-estate.jpg": [
+      900,
+      600
+    ],
+    "home-familyhome.jpg": [
+      900,
+      600
+    ],
+    "home-island.jpg": [
+      900,
+      600
+    ],
+    "home-loft.jpg": [
+      900,
+      600
+    ],
+    "home-penthouse.jpg": [
+      900,
+      600
+    ],
+    "home-sky.jpg": [
+      900,
+      600
+    ],
+    "home-studio-v2.png": [
+      1672,
+      941
+    ],
+    "home-studio.jpg": [
+      900,
+      600
+    ],
+    "home-townhouse.jpg": [
+      900,
+      600
+    ],
+    "jet-altitude.jpg": [
+      900,
+      600
+    ],
+    "jet-horizon.jpg": [
+      900,
+      600
+    ],
+    "jet-imperium.jpg": [
+      900,
+      600
+    ],
+    "jet-regent.jpg": [
+      900,
+      600
+    ],
+    "jet-swift.jpg": [
+      900,
+      600
+    ],
+    "marriage-banner.png": [
+      2172,
+      724
+    ],
+    "mystery-contact.jpg": [
+      900,
+      600
+    ],
+    "outcome-failed.png": [
+      1672,
+      941
+    ],
+    "outcome-notice.png": [
+      1672,
+      940
+    ],
+    "outcome-success.png": [
+      1672,
+      941
+    ],
+    "personal-protection.jpg": [
+      900,
+      600
+    ],
+    "premium-shop-banner.png": [
+      2172,
+      724
+    ],
+    "product-cannabis.png": [
+      1536,
+      1024
+    ],
+    "product-cocaine.png": [
+      1536,
+      1024
+    ],
+    "product-ecstasy.png": [
+      1536,
+      1024
+    ],
+    "product-hashish.png": [
+      1536,
+      1024
+    ],
+    "product-methamphetamine.png": [
+      1536,
+      1024
+    ],
+    "scene-arrest.jpg": [
+      900,
+      600
+    ],
+    "scene-bank.jpg": [
+      900,
+      600
+    ],
+    "scene-breakout.jpg": [
+      900,
+      600
+    ],
+    "scene-coma.jpg": [
+      900,
+      600
+    ],
+    "scene-families.jpg": [
+      900,
+      600
+    ],
+    "scene-leaderboard.jpg": [
+      900,
+      600
+    ],
+    "scene-messages.jpg": [
+      900,
+      600
+    ],
+    "scene-operations.jpg": [
+      900,
+      600
+    ],
+    "shipment-drugs-international.png": [
+      1672,
+      941
+    ],
+    "shipment-drugs-local.png": [
+      1672,
+      941
+    ],
+    "shipment-drugs-regional.png": [
+      1672,
+      941
+    ],
+    "shipment-drugs.jpg": [
+      900,
+      600
+    ],
+    "shipment-escort.jpg": [
+      900,
+      600
+    ],
+    "shipment-guns-international.png": [
+      1672,
+      941
+    ],
+    "shipment-guns-local.png": [
+      1672,
+      941
+    ],
+    "shipment-guns-regional.png": [
+      1672,
+      941
+    ],
+    "shipment-guns.jpg": [
+      900,
+      600
+    ],
+    "skin-capo-antonio.png": [
+      1024,
+      1536
+    ],
+    "skin-capo-rosalia.png": [
+      1024,
+      1536
+    ],
+    "skin-capo-valentina.png": [
+      1024,
+      1536
+    ],
+    "skin-capo-vittorio.png": [
+      1024,
+      1536
+    ],
+    "skin-city-broker.png": [
+      1024,
+      1536
+    ],
+    "skin-consigliere-isabella.png": [
+      1024,
+      1536
+    ],
+    "skin-consigliere-lorenzo.png": [
+      1024,
+      1536
+    ],
+    "skin-don-marcello.png": [
+      1024,
+      1536
+    ],
+    "skin-don-salvatore.png": [
+      1024,
+      1536
+    ],
+    "skin-donna-caterina.png": [
+      1024,
+      1536
+    ],
+    "skin-donna-francesca.png": [
+      1024,
+      1536
+    ],
+    "skin-getaway-driver.png": [
+      1024,
+      1536
+    ],
+    "skin-godfather.png": [
+      1024,
+      1536
+    ],
+    "skin-godmother.png": [
+      1024,
+      1536
+    ],
+    "skin-night-driver.png": [
+      1024,
+      1536
+    ],
+    "skin-owner-god.png": [
+      1024,
+      1536
+    ],
+    "skin-owner-goddess-v2.png": [
+      1024,
+      1536
+    ],
+    "skin-owner-goddess.png": [
+      1024,
+      1536
+    ],
+    "skin-street-broker.png": [
+      1024,
+      1536
+    ],
+    "skin-street-fixer.png": [
+      1024,
+      1536
+    ],
+    "skin-street-runner.png": [
+      1024,
+      1536
+    ],
+    "skin-underboss-bianca.png": [
+      1024,
+      1536
+    ],
+    "skin-underboss-dante.png": [
+      1024,
+      1536
+    ],
+    "team-crown-vault.png": [
+      1536,
+      1024
+    ],
+    "team-gilded-gallery.png": [
+      1536,
+      1024
+    ],
+    "team-midnight-express.png": [
+      1536,
+      1024
+    ],
+    "team-velvet-handoff.png": [
+      1536,
+      1024
+    ],
+    "territory-block.jpg": [
+      1536,
+      1024
+    ],
+    "territory-district.jpg": [
+      1536,
+      1024
+    ],
+    "territory-harbor.jpg": [
+      1536,
+      1024
+    ],
+    "weapon-crew-smg.png": [
+      1536,
+      1024
+    ],
+    "weapon-enforcer-rifle.png": [
+      1536,
+      1024
+    ],
+    "weapon-executive-pistol.png": [
+      1536,
+      1024
+    ],
+    "weapon-security-carbine.png": [
+      1536,
+      1024
+    ],
+    "weapon-sovereign-arsenal.png": [
+      1536,
+      1024
+    ],
+    "weapon-street-sidearm.png": [
+      1536,
+      1024
+    ],
+    "yacht-elysium.jpg": [
+      900,
+      600
+    ],
+    "yacht-harbor.jpg": [
+      900,
+      600
+    ],
+    "yacht-imperial.jpg": [
+      900,
+      600
+    ],
+    "yacht-riviera.jpg": [
+      900,
+      600
+    ],
+    "yacht-sovereign.jpg": [
+      900,
+      600
+    ]
+  },
+  "contactSheets": [
+    "C:\\Users\\Jeffrey Berwald\\Downloads\\mafia-the-new-era-english\\mafia-the-new-era\\art\\audit-rasters-01.jpg",
+    "C:\\Users\\Jeffrey Berwald\\Downloads\\mafia-the-new-era-english\\mafia-the-new-era\\art\\audit-rasters-02.jpg",
+    "C:\\Users\\Jeffrey Berwald\\Downloads\\mafia-the-new-era-english\\mafia-the-new-era\\art\\audit-rasters-03.jpg",
+    "C:\\Users\\Jeffrey Berwald\\Downloads\\mafia-the-new-era-english\\mafia-the-new-era\\art\\audit-rasters-04.jpg",
+    "C:\\Users\\Jeffrey Berwald\\Downloads\\mafia-the-new-era-english\\mafia-the-new-era\\art\\audit-rasters-05.jpg",
+    "C:\\Users\\Jeffrey Berwald\\Downloads\\mafia-the-new-era-english\\mafia-the-new-era\\art\\audit-rasters-06.jpg",
+    "C:\\Users\\Jeffrey Berwald\\Downloads\\mafia-the-new-era-english\\mafia-the-new-era\\art\\audit-rasters-07.jpg",
+    "C:\\Users\\Jeffrey Berwald\\Downloads\\mafia-the-new-era-english\\mafia-the-new-era\\art\\audit-rasters-08.jpg",
+    "C:\\Users\\Jeffrey Berwald\\Downloads\\mafia-the-new-era-english\\mafia-the-new-era\\art\\audit-rasters-09.jpg"
+  ]
+}

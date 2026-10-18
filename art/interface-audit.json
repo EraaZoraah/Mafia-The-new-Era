@@ -1,0 +1,21 @@
+{
+  "menuIcons": 66,
+  "pageHeaders": 59,
+  "compoundExtensionImages": 5,
+  "knowledgeEntries": 614,
+  "missing": [],
+  "duplicateIcons": [],
+  "duplicateHeaders": [
+    [
+      "family-armory",
+      "armory"
+    ]
+  ],
+  "intentionalHeaderShares": [
+    [
+      "armory",
+      "family-armory"
+    ]
+  ],
+  "unexpectedHeaderShares": []
+}

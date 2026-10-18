@@ -1,0 +1,1191 @@
+{
+  "batch": "test-world-v1",
+  "createdAt": 1791640334130,
+  "backup": "backups/mafia-before-test-world-2026-10-10T13-52-14-130Z.sqlite",
+  "players": [
+    {
+      "id": 2,
+      "username": "Test_AlleyJoe",
+      "xp": 650,
+      "rank": "Pickpocket",
+      "distinctions": 0,
+      "cash": 800,
+      "bank": 0,
+      "protection": 0,
+      "assets": [],
+      "family": "TEST Backstreet Crew",
+      "familyRole": "Member"
+    },
+    {
+      "id": 3,
+      "username": "Test_PennyPete",
+      "xp": 1200,
+      "rank": "Hustler",
+      "distinctions": 0,
+      "cash": 2500,
+      "bank": 0,
+      "protection": 0,
+      "assets": [],
+      "family": "TEST Backstreet Crew",
+      "familyRole": "Member"
+    },
+    {
+      "id": 4,
+      "username": "Test_SmallFry",
+      "xp": 2200,
+      "rank": "Street Operator",
+      "distinctions": 0,
+      "cash": 7500,
+      "bank": 0,
+      "protection": 0,
+      "assets": [
+        {
+          "category": "car",
+          "item_id": "fiat500",
+          "quantity": 1
+        }
+      ],
+      "family": "TEST Backstreet Crew",
+      "familyRole": "Member"
+    },
+    {
+      "id": 5,
+      "username": "Test_StreetSam",
+      "xp": 4000,
+      "rank": "Enforcer",
+      "distinctions": 0,
+      "cash": 20000,
+      "bank": 20000,
+      "protection": 0,
+      "assets": [
+        {
+          "category": "car",
+          "item_id": "yaris",
+          "quantity": 1
+        }
+      ],
+      "family": "TEST Backstreet Crew",
+      "familyRole": "Member"
+    },
+    {
+      "id": 6,
+      "username": "Test_LuckyLou",
+      "xp": 7000,
+      "rank": "Associate",
+      "distinctions": 0,
+      "cash": 75000,
+      "bank": 150000,
+      "protection": 0,
+      "assets": [
+        {
+          "category": "car",
+          "item_id": "fiat500",
+          "quantity": 1
+        }
+      ],
+      "family": "TEST Backstreet Crew",
+      "familyRole": "Capo"
+    },
+    {
+      "id": 7,
+      "username": "Test_BrickVinny",
+      "xp": 11000,
+      "rank": "Made Member",
+      "distinctions": 0,
+      "cash": 250000,
+      "bank": 750000,
+      "protection": 0,
+      "assets": [
+        {
+          "category": "car",
+          "item_id": "yaris",
+          "quantity": 1
+        }
+      ],
+      "family": "TEST Backstreet Crew",
+      "familyRole": "Don"
+    },
+    {
+      "id": 8,
+      "username": "Test_NicoCash",
+      "xp": 17000,
+      "rank": "Soldier",
+      "distinctions": 0,
+      "cash": 600000,
+      "bank": 600000,
+      "protection": 1,
+      "assets": [
+        {
+          "category": "car",
+          "item_id": "bmw330",
+          "quantity": 1
+        },
+        {
+          "category": "home",
+          "item_id": "loft",
+          "quantity": 1
+        },
+        {
+          "category": "business",
+          "item_id": "bar",
+          "quantity": 1
+        }
+      ],
+      "family": "TEST Dockside Mob",
+      "familyRole": "Member"
+    },
+    {
+      "id": 9,
+      "username": "Test_RubyKnox",
+      "xp": 25000,
+      "rank": "Trusted Soldier",
+      "distinctions": 0,
+      "cash": 1200000,
+      "bank": 2400000,
+      "protection": 1,
+      "assets": [
+        {
+          "category": "car",
+          "item_id": "audiS5",
+          "quantity": 2
+        },
+        {
+          "category": "home",
+          "item_id": "townhouse",
+          "quantity": 2
+        },
+        {
+          "category": "business",
+          "item_id": "garage",
+          "quantity": 2
+        }
+      ],
+      "family": "TEST Dockside Mob",
+      "familyRole": "Member"
+    },
+    {
+      "id": 10,
+      "username": "Test_FrankieD",
+      "xp": 37000,
+      "rank": "Racketeer",
+      "distinctions": 0,
+      "cash": 3000000,
+      "bank": 9000000,
+      "protection": 1,
+      "assets": [
+        {
+          "category": "car",
+          "item_id": "bmw330",
+          "quantity": 1
+        },
+        {
+          "category": "home",
+          "item_id": "loft",
+          "quantity": 1
+        },
+        {
+          "category": "business",
+          "item_id": "bar",
+          "quantity": 1
+        }
+      ],
+      "family": "TEST Dockside Mob",
+      "familyRole": "Member"
+    },
+    {
+      "id": 11,
+      "username": "Test_MiloSteel",
+      "xp": 54000,
+      "rank": "Crew Leader",
+      "distinctions": 0,
+      "cash": 6000000,
+      "bank": 6000000,
+      "protection": 1,
+      "assets": [
+        {
+          "category": "car",
+          "item_id": "audiS5",
+          "quantity": 2
+        },
+        {
+          "category": "home",
+          "item_id": "townhouse",
+          "quantity": 2
+        },
+        {
+          "category": "business",
+          "item_id": "garage",
+          "quantity": 2
+        }
+      ],
+      "family": "TEST Dockside Mob",
+      "familyRole": "Member"
+    },
+    {
+      "id": 12,
+      "username": "Test_TonyWest",
+      "xp": 78000,
+      "rank": "Captain",
+      "distinctions": 0,
+      "cash": 12000000,
+      "bank": 24000000,
+      "protection": 1,
+      "assets": [
+        {
+          "category": "car",
+          "item_id": "bmw330",
+          "quantity": 1
+        },
+        {
+          "category": "home",
+          "item_id": "loft",
+          "quantity": 1
+        },
+        {
+          "category": "business",
+          "item_id": "bar",
+          "quantity": 1
+        }
+      ],
+      "family": "TEST Dockside Mob",
+      "familyRole": "Capo"
+    },
+    {
+      "id": 13,
+      "username": "Test_LenaBlaze",
+      "xp": 110000,
+      "rank": "Capo",
+      "distinctions": 0,
+      "cash": 25000000,
+      "bank": 75000000,
+      "protection": 1,
+      "assets": [
+        {
+          "category": "car",
+          "item_id": "audiS5",
+          "quantity": 2
+        },
+        {
+          "category": "home",
+          "item_id": "townhouse",
+          "quantity": 2
+        },
+        {
+          "category": "business",
+          "item_id": "garage",
+          "quantity": 2
+        }
+      ],
+      "family": "TEST Dockside Mob",
+      "familyRole": "Don"
+    },
+    {
+      "id": 14,
+      "username": "Test_MarcoVale",
+      "xp": 153000,
+      "rank": "Senior Capo",
+      "distinctions": 0,
+      "cash": 60000000,
+      "bank": 60000000,
+      "protection": 3,
+      "assets": [
+        {
+          "category": "car",
+          "item_id": "continental",
+          "quantity": 1
+        },
+        {
+          "category": "home",
+          "item_id": "penthouse",
+          "quantity": 1
+        },
+        {
+          "category": "business",
+          "item_id": "club",
+          "quantity": 1
+        },
+        {
+          "category": "garage",
+          "item_id": "collector",
+          "quantity": 1
+        }
+      ],
+      "family": "TEST Iron Syndicate",
+      "familyRole": "Member"
+    },
+    {
+      "id": 15,
+      "username": "Test_VeraStone",
+      "xp": 210000,
+      "rank": "Consigliere",
+      "distinctions": 0,
+      "cash": 120000000,
+      "bank": 240000000,
+      "protection": 3,
+      "assets": [
+        {
+          "category": "car",
+          "item_id": "ghost",
+          "quantity": 2
+        },
+        {
+          "category": "home",
+          "item_id": "beach",
+          "quantity": 2
+        },
+        {
+          "category": "business",
+          "item_id": "logistics",
+          "quantity": 2
+        },
+        {
+          "category": "garage",
+          "item_id": "collector",
+          "quantity": 2
+        }
+      ],
+      "family": "TEST Iron Syndicate",
+      "familyRole": "Member"
+    },
+    {
+      "id": 16,
+      "username": "Test_SalFalcone",
+      "xp": 280000,
+      "rank": "Underboss",
+      "distinctions": 0,
+      "cash": 300000000,
+      "bank": 900000000,
+      "protection": 3,
+      "assets": [
+        {
+          "category": "car",
+          "item_id": "continental",
+          "quantity": 3
+        },
+        {
+          "category": "home",
+          "item_id": "penthouse",
+          "quantity": 3
+        },
+        {
+          "category": "business",
+          "item_id": "club",
+          "quantity": 3
+        },
+        {
+          "category": "garage",
+          "item_id": "collector",
+          "quantity": 3
+        }
+      ],
+      "family": "TEST Iron Syndicate",
+      "familyRole": "Member"
+    },
+    {
+      "id": 17,
+      "username": "Test_CleoBanks",
+      "xp": 365000,
+      "rank": "Boss",
+      "distinctions": 0,
+      "cash": 600000000,
+      "bank": 600000000,
+      "protection": 3,
+      "assets": [
+        {
+          "category": "car",
+          "item_id": "ghost",
+          "quantity": 1
+        },
+        {
+          "category": "home",
+          "item_id": "beach",
+          "quantity": 1
+        },
+        {
+          "category": "business",
+          "item_id": "logistics",
+          "quantity": 1
+        },
+        {
+          "category": "garage",
+          "item_id": "collector",
+          "quantity": 1
+        }
+      ],
+      "family": "TEST Iron Syndicate",
+      "familyRole": "Member"
+    },
+    {
+      "id": 18,
+      "username": "Test_DanteGold",
+      "xp": 470000,
+      "rank": "Don",
+      "distinctions": 0,
+      "cash": 1200000000,
+      "bank": 2400000000,
+      "protection": 3,
+      "assets": [
+        {
+          "category": "car",
+          "item_id": "continental",
+          "quantity": 2
+        },
+        {
+          "category": "home",
+          "item_id": "penthouse",
+          "quantity": 2
+        },
+        {
+          "category": "business",
+          "item_id": "club",
+          "quantity": 2
+        },
+        {
+          "category": "garage",
+          "item_id": "collector",
+          "quantity": 2
+        }
+      ],
+      "family": "TEST Iron Syndicate",
+      "familyRole": "Capo"
+    },
+    {
+      "id": 19,
+      "username": "Test_EvaCrown",
+      "xp": 595000,
+      "rank": "Crime Lord",
+      "distinctions": 0,
+      "cash": 3000000000,
+      "bank": 9000000000,
+      "protection": 3,
+      "assets": [
+        {
+          "category": "car",
+          "item_id": "ghost",
+          "quantity": 3
+        },
+        {
+          "category": "home",
+          "item_id": "beach",
+          "quantity": 3
+        },
+        {
+          "category": "business",
+          "item_id": "logistics",
+          "quantity": 3
+        },
+        {
+          "category": "garage",
+          "item_id": "collector",
+          "quantity": 3
+        }
+      ],
+      "family": "TEST Iron Syndicate",
+      "familyRole": "Don"
+    },
+    {
+      "id": 20,
+      "username": "Test_VitoRoyale",
+      "xp": 735000,
+      "rank": "Kingpin",
+      "distinctions": 0,
+      "cash": 6000000000,
+      "bank": 6000000000,
+      "protection": 6,
+      "assets": [
+        {
+          "category": "car",
+          "item_id": "revuelto",
+          "quantity": 3
+        },
+        {
+          "category": "home",
+          "item_id": "chateau",
+          "quantity": 3
+        },
+        {
+          "category": "business",
+          "item_id": "hotel",
+          "quantity": 3
+        },
+        {
+          "category": "garage",
+          "item_id": "collector",
+          "quantity": 3
+        },
+        {
+          "category": "helicopter",
+          "item_id": "monarch",
+          "quantity": 3
+        },
+        {
+          "category": "jet",
+          "item_id": "regent",
+          "quantity": 3
+        },
+        {
+          "category": "yacht",
+          "item_id": "imperial",
+          "quantity": 3
+        }
+      ],
+      "family": "TEST Golden Cartel",
+      "familyRole": "Member"
+    },
+    {
+      "id": 21,
+      "username": "Test_LucaNoir",
+      "xp": 900000,
+      "rank": "Shadow Sovereign",
+      "distinctions": 0,
+      "cash": 12000000000,
+      "bank": 24000000000,
+      "protection": 6,
+      "assets": [
+        {
+          "category": "car",
+          "item_id": "12cilindri",
+          "quantity": 4
+        },
+        {
+          "category": "home",
+          "item_id": "island",
+          "quantity": 4
+        },
+        {
+          "category": "business",
+          "item_id": "resort",
+          "quantity": 4
+        },
+        {
+          "category": "garage",
+          "item_id": "collector",
+          "quantity": 4
+        },
+        {
+          "category": "helicopter",
+          "item_id": "obsidian",
+          "quantity": 4
+        },
+        {
+          "category": "jet",
+          "item_id": "imperium",
+          "quantity": 4
+        },
+        {
+          "category": "yacht",
+          "item_id": "elysium",
+          "quantity": 4
+        }
+      ],
+      "family": "TEST Golden Cartel",
+      "familyRole": "Member"
+    },
+    {
+      "id": 22,
+      "username": "Test_RosaSilk",
+      "xp": 1100000,
+      "rank": "Syndicate Emperor",
+      "distinctions": 0,
+      "cash": 25000000000,
+      "bank": 75000000000,
+      "protection": 6,
+      "assets": [
+        {
+          "category": "car",
+          "item_id": "revuelto",
+          "quantity": 1
+        },
+        {
+          "category": "home",
+          "item_id": "chateau",
+          "quantity": 1
+        },
+        {
+          "category": "business",
+          "item_id": "hotel",
+          "quantity": 1
+        },
+        {
+          "category": "garage",
+          "item_id": "collector",
+          "quantity": 1
+        },
+        {
+          "category": "helicopter",
+          "item_id": "monarch",
+          "quantity": 1
+        },
+        {
+          "category": "jet",
+          "item_id": "regent",
+          "quantity": 1
+        },
+        {
+          "category": "yacht",
+          "item_id": "imperial",
+          "quantity": 1
+        }
+      ],
+      "family": "TEST Golden Cartel",
+      "familyRole": "Member"
+    },
+    {
+      "id": 23,
+      "username": "Test_EnzoVault",
+      "xp": 1350000,
+      "rank": "The Godfather",
+      "distinctions": 0,
+      "cash": 50000000000,
+      "bank": 50000000000,
+      "protection": 6,
+      "assets": [
+        {
+          "category": "car",
+          "item_id": "12cilindri",
+          "quantity": 2
+        },
+        {
+          "category": "home",
+          "item_id": "island",
+          "quantity": 2
+        },
+        {
+          "category": "business",
+          "item_id": "resort",
+          "quantity": 2
+        },
+        {
+          "category": "garage",
+          "item_id": "collector",
+          "quantity": 2
+        },
+        {
+          "category": "helicopter",
+          "item_id": "obsidian",
+          "quantity": 2
+        },
+        {
+          "category": "jet",
+          "item_id": "imperium",
+          "quantity": 2
+        },
+        {
+          "category": "yacht",
+          "item_id": "elysium",
+          "quantity": 2
+        }
+      ],
+      "family": "TEST Golden Cartel",
+      "familyRole": "Don"
+    },
+    {
+      "id": 24,
+      "username": "Test_NadiaOnyx",
+      "xp": 7000,
+      "rank": "Associate",
+      "distinctions": 0,
+      "cash": 100000000000,
+      "bank": 200000000000,
+      "protection": 6,
+      "assets": [
+        {
+          "category": "car",
+          "item_id": "revuelto",
+          "quantity": 3
+        },
+        {
+          "category": "home",
+          "item_id": "chateau",
+          "quantity": 3
+        },
+        {
+          "category": "business",
+          "item_id": "hotel",
+          "quantity": 3
+        },
+        {
+          "category": "garage",
+          "item_id": "collector",
+          "quantity": 3
+        },
+        {
+          "category": "helicopter",
+          "item_id": "monarch",
+          "quantity": 3
+        },
+        {
+          "category": "jet",
+          "item_id": "regent",
+          "quantity": 3
+        },
+        {
+          "category": "yacht",
+          "item_id": "imperial",
+          "quantity": 3
+        }
+      ],
+      "family": "TEST Golden Cartel",
+      "familyRole": "Member"
+    },
+    {
+      "id": 25,
+      "username": "Test_CarloKing",
+      "xp": 110000,
+      "rank": "Capo",
+      "distinctions": 0,
+      "cash": 250000000000,
+      "bank": 750000000000,
+      "protection": 6,
+      "assets": [
+        {
+          "category": "car",
+          "item_id": "12cilindri",
+          "quantity": 4
+        },
+        {
+          "category": "home",
+          "item_id": "island",
+          "quantity": 4
+        },
+        {
+          "category": "business",
+          "item_id": "resort",
+          "quantity": 4
+        },
+        {
+          "category": "garage",
+          "item_id": "collector",
+          "quantity": 4
+        },
+        {
+          "category": "helicopter",
+          "item_id": "obsidian",
+          "quantity": 4
+        },
+        {
+          "category": "jet",
+          "item_id": "imperium",
+          "quantity": 4
+        },
+        {
+          "category": "yacht",
+          "item_id": "elysium",
+          "quantity": 4
+        }
+      ],
+      "family": "TEST Golden Cartel",
+      "familyRole": "Capo"
+    },
+    {
+      "id": 26,
+      "username": "Test_VinceCrown",
+      "xp": 1200,
+      "rank": "Hustler",
+      "distinctions": 0,
+      "cash": 800000000,
+      "bank": 800000000,
+      "protection": 10,
+      "assets": [
+        {
+          "category": "car",
+          "item_id": "tourbillon",
+          "quantity": 1
+        },
+        {
+          "category": "home",
+          "item_id": "elysium",
+          "quantity": 1
+        },
+        {
+          "category": "business",
+          "item_id": "palace",
+          "quantity": 1
+        },
+        {
+          "category": "garage",
+          "item_id": "collector",
+          "quantity": 1
+        },
+        {
+          "category": "helicopter",
+          "item_id": "obsidian",
+          "quantity": 1
+        },
+        {
+          "category": "jet",
+          "item_id": "imperium",
+          "quantity": 1
+        },
+        {
+          "category": "yacht",
+          "item_id": "elysium",
+          "quantity": 1
+        }
+      ],
+      "family": "TEST Imperial Dynasty",
+      "familyRole": "Member"
+    },
+    {
+      "id": 27,
+      "username": "Test_BiancaLux",
+      "xp": 735000,
+      "rank": "Kingpin",
+      "distinctions": 0,
+      "cash": 2000,
+      "bank": 0,
+      "protection": 0,
+      "assets": [],
+      "family": "TEST Imperial Dynasty",
+      "familyRole": "Member"
+    },
+    {
+      "id": 28,
+      "username": "Test_DonSterling",
+      "xp": 1100000,
+      "rank": "Syndicate Emperor",
+      "distinctions": 0,
+      "cash": 80000000000,
+      "bank": 240000000000,
+      "protection": 10,
+      "assets": [
+        {
+          "category": "car",
+          "item_id": "tourbillon",
+          "quantity": 3
+        },
+        {
+          "category": "home",
+          "item_id": "elysium",
+          "quantity": 3
+        },
+        {
+          "category": "business",
+          "item_id": "palace",
+          "quantity": 3
+        },
+        {
+          "category": "garage",
+          "item_id": "collector",
+          "quantity": 3
+        },
+        {
+          "category": "helicopter",
+          "item_id": "obsidian",
+          "quantity": 3
+        },
+        {
+          "category": "jet",
+          "item_id": "imperium",
+          "quantity": 3
+        },
+        {
+          "category": "yacht",
+          "item_id": "elysium",
+          "quantity": 3
+        }
+      ],
+      "family": "TEST Imperial Dynasty",
+      "familyRole": "Member"
+    },
+    {
+      "id": 29,
+      "username": "Test_GoldEmperor",
+      "xp": 1350000,
+      "rank": "The Godfather",
+      "distinctions": 0,
+      "cash": 350000000000,
+      "bank": 350000000000,
+      "protection": 10,
+      "assets": [
+        {
+          "category": "car",
+          "item_id": "tourbillon",
+          "quantity": 4
+        },
+        {
+          "category": "home",
+          "item_id": "elysium",
+          "quantity": 4
+        },
+        {
+          "category": "business",
+          "item_id": "palace",
+          "quantity": 4
+        },
+        {
+          "category": "garage",
+          "item_id": "collector",
+          "quantity": 4
+        },
+        {
+          "category": "helicopter",
+          "item_id": "obsidian",
+          "quantity": 4
+        },
+        {
+          "category": "jet",
+          "item_id": "imperium",
+          "quantity": 4
+        },
+        {
+          "category": "yacht",
+          "item_id": "elysium",
+          "quantity": 4
+        }
+      ],
+      "family": "TEST Imperial Dynasty",
+      "familyRole": "Member"
+    },
+    {
+      "id": 30,
+      "username": "Test_Godfather",
+      "xp": 1350000,
+      "rank": "The Godfather",
+      "distinctions": 0,
+      "cash": 500000000000,
+      "bank": 950000000000,
+      "protection": 10,
+      "assets": [
+        {
+          "category": "car",
+          "item_id": "tourbillon",
+          "quantity": 1
+        },
+        {
+          "category": "home",
+          "item_id": "elysium",
+          "quantity": 1
+        },
+        {
+          "category": "business",
+          "item_id": "palace",
+          "quantity": 1
+        },
+        {
+          "category": "garage",
+          "item_id": "collector",
+          "quantity": 1
+        },
+        {
+          "category": "helicopter",
+          "item_id": "obsidian",
+          "quantity": 1
+        },
+        {
+          "category": "jet",
+          "item_id": "imperium",
+          "quantity": 1
+        },
+        {
+          "category": "yacht",
+          "item_id": "elysium",
+          "quantity": 1
+        }
+      ],
+      "family": "TEST Imperial Dynasty",
+      "familyRole": "Capo"
+    },
+    {
+      "id": 31,
+      "username": "Test_LegacyKing",
+      "xp": 2100000,
+      "rank": "The Godfather",
+      "distinctions": 3,
+      "cash": 900000000000,
+      "bank": 950000000000,
+      "protection": 10,
+      "assets": [
+        {
+          "category": "car",
+          "item_id": "tourbillon",
+          "quantity": 2
+        },
+        {
+          "category": "home",
+          "item_id": "elysium",
+          "quantity": 2
+        },
+        {
+          "category": "business",
+          "item_id": "palace",
+          "quantity": 2
+        },
+        {
+          "category": "garage",
+          "item_id": "collector",
+          "quantity": 2
+        },
+        {
+          "category": "helicopter",
+          "item_id": "obsidian",
+          "quantity": 2
+        },
+        {
+          "category": "jet",
+          "item_id": "imperium",
+          "quantity": 2
+        },
+        {
+          "category": "yacht",
+          "item_id": "elysium",
+          "quantity": 2
+        }
+      ],
+      "family": "TEST Imperial Dynasty",
+      "familyRole": "Don"
+    }
+  ],
+  "families": [
+    {
+      "name": "TEST Backstreet Crew",
+      "tier": "Starter",
+      "treasury": 200000,
+      "drugs": 0,
+      "guns": 100,
+      "assets": [
+        [
+          "safehouse-starter",
+          1
+        ],
+        [
+          "suv-utility",
+          1
+        ]
+      ],
+      "id": 1
+    },
+    {
+      "name": "TEST Dockside Mob",
+      "tier": "Developing",
+      "treasury": 5000000,
+      "drugs": 1200,
+      "guns": 650,
+      "assets": [
+        [
+          "compound-yard",
+          1
+        ],
+        [
+          "safehouse-starter",
+          2
+        ],
+        [
+          "suv-utility",
+          2
+        ],
+        [
+          "upgrade-guards",
+          1
+        ]
+      ],
+      "id": 2
+    },
+    {
+      "name": "TEST Iron Syndicate",
+      "tier": "Established",
+      "treasury": 150000000,
+      "drugs": 11000,
+      "guns": 7000,
+      "assets": [
+        [
+          "compound-estate",
+          1
+        ],
+        [
+          "safehouse-modern",
+          2
+        ],
+        [
+          "suv-executive",
+          2
+        ],
+        [
+          "upgrade-guards",
+          2
+        ],
+        [
+          "upgrade-vault",
+          1
+        ]
+      ],
+      "id": 3
+    },
+    {
+      "name": "TEST Golden Cartel",
+      "tier": "Elite",
+      "treasury": 15000000000,
+      "drugs": 54000,
+      "guns": 37000,
+      "assets": [
+        [
+          "compound-estate",
+          1
+        ],
+        [
+          "safehouse-penthouse",
+          2
+        ],
+        [
+          "suv-armored",
+          3
+        ],
+        [
+          "upgrade-guards",
+          3
+        ],
+        [
+          "upgrade-surveillance",
+          2
+        ],
+        [
+          "upgrade-vault",
+          2
+        ],
+        [
+          "upgrade-perimeter",
+          2
+        ]
+      ],
+      "id": 4
+    },
+    {
+      "name": "TEST Imperial Dynasty",
+      "tier": "The Connect",
+      "treasury": 500000000000,
+      "drugs": 110000,
+      "guns": 110000,
+      "assets": [
+        [
+          "compound-palace",
+          1
+        ],
+        [
+          "safehouse-penthouse",
+          3
+        ],
+        [
+          "suv-armored",
+          4
+        ],
+        [
+          "upgrade-guards",
+          4
+        ],
+        [
+          "upgrade-surveillance",
+          4
+        ],
+        [
+          "upgrade-vault",
+          4
+        ],
+        [
+          "upgrade-perimeter",
+          4
+        ]
+      ],
+      "id": 5
+    }
+  ]
+}

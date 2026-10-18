@@ -1,0 +1,1942 @@
+{
+  "method": "Five deterministic fresh accounts; 60 simulated days; two active hours/day, minute-by-minute actions; real handlers, seeded randomness, standard starter kit, daily crime rewards; no staff grants, donations, gifts, casino or PvP. Purchases: first coffeeshop and tier-2 weapon when affordable. In-game wait time is advanced, not real elapsed time.",
+  "results": [
+    {
+      "seed": 17,
+      "firstBusiness": {
+        "day": 1,
+        "minutes": 59
+      },
+      "totals": {
+        "crimeGross": 95845231,
+        "fines": 121938,
+        "ammo": 821000,
+        "daily": 2250000,
+        "passive": 510433,
+        "purchases": 1620000,
+        "attempts": 2111,
+        "successes": 2039
+      },
+      "netCrime": 94902293,
+      "final": {
+        "cash": 96047726,
+        "xp": 178470
+      },
+      "days": [
+        {
+          "day": 1,
+          "cash": 45061,
+          "xp": 2760,
+          "rank": "Street Operator"
+        },
+        {
+          "day": 2,
+          "cash": 236098,
+          "xp": 5190,
+          "rank": "Enforcer"
+        },
+        {
+          "day": 3,
+          "cash": 375102,
+          "xp": 6745,
+          "rank": "Enforcer"
+        },
+        {
+          "day": 4,
+          "cash": 579016,
+          "xp": 8905,
+          "rank": "Associate"
+        },
+        {
+          "day": 5,
+          "cash": 763341,
+          "xp": 10715,
+          "rank": "Associate"
+        },
+        {
+          "day": 6,
+          "cash": 982777,
+          "xp": 12640,
+          "rank": "Made Member"
+        },
+        {
+          "day": 7,
+          "cash": 1169210,
+          "xp": 14205,
+          "rank": "Made Member"
+        },
+        {
+          "day": 8,
+          "cash": 1379928,
+          "xp": 16010,
+          "rank": "Made Member"
+        },
+        {
+          "day": 9,
+          "cash": 406744,
+          "xp": 18670,
+          "rank": "Soldier"
+        },
+        {
+          "day": 10,
+          "cash": 1132261,
+          "xp": 21980,
+          "rank": "Soldier"
+        },
+        {
+          "day": 11,
+          "cash": 1703554,
+          "xp": 24770,
+          "rank": "Soldier"
+        },
+        {
+          "day": 12,
+          "cash": 2407615,
+          "xp": 27660,
+          "rank": "Trusted Soldier"
+        },
+        {
+          "day": 13,
+          "cash": 2973443,
+          "xp": 29925,
+          "rank": "Trusted Soldier"
+        },
+        {
+          "day": 14,
+          "cash": 3777961,
+          "xp": 32950,
+          "rank": "Trusted Soldier"
+        },
+        {
+          "day": 15,
+          "cash": 4498738,
+          "xp": 35715,
+          "rank": "Trusted Soldier"
+        },
+        {
+          "day": 16,
+          "cash": 5648052,
+          "xp": 39230,
+          "rank": "Racketeer"
+        },
+        {
+          "day": 17,
+          "cash": 6515023,
+          "xp": 41780,
+          "rank": "Racketeer"
+        },
+        {
+          "day": 18,
+          "cash": 7390844,
+          "xp": 44380,
+          "rank": "Racketeer"
+        },
+        {
+          "day": 19,
+          "cash": 8298578,
+          "xp": 47200,
+          "rank": "Racketeer"
+        },
+        {
+          "day": 20,
+          "cash": 9271531,
+          "xp": 49905,
+          "rank": "Racketeer"
+        },
+        {
+          "day": 21,
+          "cash": 10109966,
+          "xp": 52490,
+          "rank": "Racketeer"
+        },
+        {
+          "day": 22,
+          "cash": 11679752,
+          "xp": 56620,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 23,
+          "cash": 12963750,
+          "xp": 59660,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 24,
+          "cash": 13932951,
+          "xp": 62035,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 25,
+          "cash": 15220091,
+          "xp": 64970,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 26,
+          "cash": 16640856,
+          "xp": 67990,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 27,
+          "cash": 17858649,
+          "xp": 70880,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 28,
+          "cash": 18949837,
+          "xp": 73580,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 29,
+          "cash": 20022200,
+          "xp": 76210,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 30,
+          "cash": 22889414,
+          "xp": 81600,
+          "rank": "Captain"
+        },
+        {
+          "day": 31,
+          "cash": 25030585,
+          "xp": 85215,
+          "rank": "Captain"
+        },
+        {
+          "day": 32,
+          "cash": 26558630,
+          "xp": 88080,
+          "rank": "Captain"
+        },
+        {
+          "day": 33,
+          "cash": 28233603,
+          "xp": 91015,
+          "rank": "Captain"
+        },
+        {
+          "day": 34,
+          "cash": 29747346,
+          "xp": 93780,
+          "rank": "Captain"
+        },
+        {
+          "day": 35,
+          "cash": 31450545,
+          "xp": 96920,
+          "rank": "Captain"
+        },
+        {
+          "day": 36,
+          "cash": 32920880,
+          "xp": 99700,
+          "rank": "Captain"
+        },
+        {
+          "day": 37,
+          "cash": 34527201,
+          "xp": 102605,
+          "rank": "Captain"
+        },
+        {
+          "day": 38,
+          "cash": 35948719,
+          "xp": 105265,
+          "rank": "Captain"
+        },
+        {
+          "day": 39,
+          "cash": 37490692,
+          "xp": 107975,
+          "rank": "Captain"
+        },
+        {
+          "day": 40,
+          "cash": 40502993,
+          "xp": 112665,
+          "rank": "Capo"
+        },
+        {
+          "day": 41,
+          "cash": 42784043,
+          "xp": 115510,
+          "rank": "Capo"
+        },
+        {
+          "day": 42,
+          "cash": 44799684,
+          "xp": 118510,
+          "rank": "Capo"
+        },
+        {
+          "day": 43,
+          "cash": 46871861,
+          "xp": 121370,
+          "rank": "Capo"
+        },
+        {
+          "day": 44,
+          "cash": 48741955,
+          "xp": 123995,
+          "rank": "Capo"
+        },
+        {
+          "day": 45,
+          "cash": 51191498,
+          "xp": 127115,
+          "rank": "Capo"
+        },
+        {
+          "day": 46,
+          "cash": 53930111,
+          "xp": 130880,
+          "rank": "Capo"
+        },
+        {
+          "day": 47,
+          "cash": 56308580,
+          "xp": 134095,
+          "rank": "Capo"
+        },
+        {
+          "day": 48,
+          "cash": 59360929,
+          "xp": 138045,
+          "rank": "Capo"
+        },
+        {
+          "day": 49,
+          "cash": 62099113,
+          "xp": 141370,
+          "rank": "Capo"
+        },
+        {
+          "day": 50,
+          "cash": 64091747,
+          "xp": 144210,
+          "rank": "Capo"
+        },
+        {
+          "day": 51,
+          "cash": 66142599,
+          "xp": 147030,
+          "rank": "Capo"
+        },
+        {
+          "day": 52,
+          "cash": 68213370,
+          "xp": 149890,
+          "rank": "Capo"
+        },
+        {
+          "day": 53,
+          "cash": 73538587,
+          "xp": 155665,
+          "rank": "Senior Capo"
+        },
+        {
+          "day": 54,
+          "cash": 76201038,
+          "xp": 158585,
+          "rank": "Senior Capo"
+        },
+        {
+          "day": 55,
+          "cash": 80688118,
+          "xp": 162920,
+          "rank": "Senior Capo"
+        },
+        {
+          "day": 56,
+          "cash": 83438592,
+          "xp": 165800,
+          "rank": "Senior Capo"
+        },
+        {
+          "day": 57,
+          "cash": 86715626,
+          "xp": 169080,
+          "rank": "Senior Capo"
+        },
+        {
+          "day": 58,
+          "cash": 89545793,
+          "xp": 171960,
+          "rank": "Senior Capo"
+        },
+        {
+          "day": 59,
+          "cash": 93104246,
+          "xp": 175375,
+          "rank": "Senior Capo"
+        },
+        {
+          "day": 60,
+          "cash": 96047726,
+          "xp": 178470,
+          "rank": "Senior Capo"
+        }
+      ]
+    },
+    {
+      "seed": 42,
+      "firstBusiness": {
+        "day": 1,
+        "minutes": 52
+      },
+      "totals": {
+        "crimeGross": 91250377,
+        "fines": 219062,
+        "ammo": 788000,
+        "daily": 2250000,
+        "passive": 511040,
+        "purchases": 1620000,
+        "attempts": 2162,
+        "successes": 2092
+      },
+      "netCrime": 90243315,
+      "final": {
+        "cash": 91389355,
+        "xp": 175150
+      },
+      "days": [
+        {
+          "day": 1,
+          "cash": 63827,
+          "xp": 3015,
+          "rank": "Street Operator"
+        },
+        {
+          "day": 2,
+          "cash": 245967,
+          "xp": 5270,
+          "rank": "Enforcer"
+        },
+        {
+          "day": 3,
+          "cash": 384835,
+          "xp": 6860,
+          "rank": "Enforcer"
+        },
+        {
+          "day": 4,
+          "cash": 570463,
+          "xp": 8710,
+          "rank": "Associate"
+        },
+        {
+          "day": 5,
+          "cash": 742953,
+          "xp": 10480,
+          "rank": "Associate"
+        },
+        {
+          "day": 6,
+          "cash": 993066,
+          "xp": 12715,
+          "rank": "Made Member"
+        },
+        {
+          "day": 7,
+          "cash": 1203146,
+          "xp": 14520,
+          "rank": "Made Member"
+        },
+        {
+          "day": 8,
+          "cash": 1438160,
+          "xp": 16475,
+          "rank": "Made Member"
+        },
+        {
+          "day": 9,
+          "cash": 460389,
+          "xp": 19295,
+          "rank": "Soldier"
+        },
+        {
+          "day": 10,
+          "cash": 1016812,
+          "xp": 21895,
+          "rank": "Soldier"
+        },
+        {
+          "day": 11,
+          "cash": 1471625,
+          "xp": 24160,
+          "rank": "Soldier"
+        },
+        {
+          "day": 12,
+          "cash": 2551017,
+          "xp": 28265,
+          "rank": "Trusted Soldier"
+        },
+        {
+          "day": 13,
+          "cash": 3225537,
+          "xp": 30895,
+          "rank": "Trusted Soldier"
+        },
+        {
+          "day": 14,
+          "cash": 3789541,
+          "xp": 32905,
+          "rank": "Trusted Soldier"
+        },
+        {
+          "day": 15,
+          "cash": 4434847,
+          "xp": 35465,
+          "rank": "Trusted Soldier"
+        },
+        {
+          "day": 16,
+          "cash": 5656515,
+          "xp": 39160,
+          "rank": "Racketeer"
+        },
+        {
+          "day": 17,
+          "cash": 6487443,
+          "xp": 41750,
+          "rank": "Racketeer"
+        },
+        {
+          "day": 18,
+          "cash": 7408538,
+          "xp": 44620,
+          "rank": "Racketeer"
+        },
+        {
+          "day": 19,
+          "cash": 8483435,
+          "xp": 47980,
+          "rank": "Racketeer"
+        },
+        {
+          "day": 20,
+          "cash": 9175307,
+          "xp": 50285,
+          "rank": "Racketeer"
+        },
+        {
+          "day": 21,
+          "cash": 9969460,
+          "xp": 52735,
+          "rank": "Racketeer"
+        },
+        {
+          "day": 22,
+          "cash": 11470950,
+          "xp": 56570,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 23,
+          "cash": 13192603,
+          "xp": 60270,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 24,
+          "cash": 14380350,
+          "xp": 63250,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 25,
+          "cash": 15380902,
+          "xp": 65665,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 26,
+          "cash": 16845476,
+          "xp": 68980,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 27,
+          "cash": 18041146,
+          "xp": 71715,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 28,
+          "cash": 19429376,
+          "xp": 74980,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 29,
+          "cash": 20404841,
+          "xp": 77395,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 30,
+          "cash": 22399205,
+          "xp": 81275,
+          "rank": "Captain"
+        },
+        {
+          "day": 31,
+          "cash": 24471127,
+          "xp": 84840,
+          "rank": "Captain"
+        },
+        {
+          "day": 32,
+          "cash": 26365570,
+          "xp": 88210,
+          "rank": "Captain"
+        },
+        {
+          "day": 33,
+          "cash": 28034605,
+          "xp": 91330,
+          "rank": "Captain"
+        },
+        {
+          "day": 34,
+          "cash": 29386917,
+          "xp": 93905,
+          "rank": "Captain"
+        },
+        {
+          "day": 35,
+          "cash": 30941990,
+          "xp": 96645,
+          "rank": "Captain"
+        },
+        {
+          "day": 36,
+          "cash": 32341743,
+          "xp": 99345,
+          "rank": "Captain"
+        },
+        {
+          "day": 37,
+          "cash": 33613047,
+          "xp": 101615,
+          "rank": "Captain"
+        },
+        {
+          "day": 38,
+          "cash": 35519084,
+          "xp": 105125,
+          "rank": "Captain"
+        },
+        {
+          "day": 39,
+          "cash": 37108851,
+          "xp": 107645,
+          "rank": "Captain"
+        },
+        {
+          "day": 40,
+          "cash": 40309966,
+          "xp": 112635,
+          "rank": "Capo"
+        },
+        {
+          "day": 41,
+          "cash": 41953671,
+          "xp": 115085,
+          "rank": "Capo"
+        },
+        {
+          "day": 42,
+          "cash": 43529327,
+          "xp": 117435,
+          "rank": "Capo"
+        },
+        {
+          "day": 43,
+          "cash": 45838879,
+          "xp": 120490,
+          "rank": "Capo"
+        },
+        {
+          "day": 44,
+          "cash": 48174227,
+          "xp": 123505,
+          "rank": "Capo"
+        },
+        {
+          "day": 45,
+          "cash": 50783880,
+          "xp": 127010,
+          "rank": "Capo"
+        },
+        {
+          "day": 46,
+          "cash": 52966284,
+          "xp": 130170,
+          "rank": "Capo"
+        },
+        {
+          "day": 47,
+          "cash": 54900624,
+          "xp": 132815,
+          "rank": "Capo"
+        },
+        {
+          "day": 48,
+          "cash": 57174225,
+          "xp": 135830,
+          "rank": "Capo"
+        },
+        {
+          "day": 49,
+          "cash": 59395182,
+          "xp": 138925,
+          "rank": "Capo"
+        },
+        {
+          "day": 50,
+          "cash": 61861017,
+          "xp": 142265,
+          "rank": "Capo"
+        },
+        {
+          "day": 51,
+          "cash": 63953750,
+          "xp": 145110,
+          "rank": "Capo"
+        },
+        {
+          "day": 52,
+          "cash": 65997501,
+          "xp": 148090,
+          "rank": "Capo"
+        },
+        {
+          "day": 53,
+          "cash": 68779663,
+          "xp": 151715,
+          "rank": "Capo"
+        },
+        {
+          "day": 54,
+          "cash": 72537161,
+          "xp": 155835,
+          "rank": "Senior Capo"
+        },
+        {
+          "day": 55,
+          "cash": 75955253,
+          "xp": 159235,
+          "rank": "Senior Capo"
+        },
+        {
+          "day": 56,
+          "cash": 78639830,
+          "xp": 162040,
+          "rank": "Senior Capo"
+        },
+        {
+          "day": 57,
+          "cash": 82267655,
+          "xp": 165600,
+          "rank": "Senior Capo"
+        },
+        {
+          "day": 58,
+          "cash": 85280508,
+          "xp": 168745,
+          "rank": "Senior Capo"
+        },
+        {
+          "day": 59,
+          "cash": 88319986,
+          "xp": 171890,
+          "rank": "Senior Capo"
+        },
+        {
+          "day": 60,
+          "cash": 91389355,
+          "xp": 175150,
+          "rank": "Senior Capo"
+        }
+      ]
+    },
+    {
+      "seed": 91,
+      "firstBusiness": {
+        "day": 1,
+        "minutes": 25
+      },
+      "totals": {
+        "crimeGross": 95774593,
+        "fines": 160900,
+        "ammo": 781000,
+        "daily": 2250000,
+        "passive": 519024,
+        "purchases": 1620000,
+        "attempts": 2202,
+        "successes": 2149
+      },
+      "netCrime": 94832693,
+      "final": {
+        "cash": 95986717,
+        "xp": 179535
+      },
+      "days": [
+        {
+          "day": 1,
+          "cash": 93653,
+          "xp": 3400,
+          "rank": "Street Operator"
+        },
+        {
+          "day": 2,
+          "cash": 266298,
+          "xp": 5520,
+          "rank": "Enforcer"
+        },
+        {
+          "day": 3,
+          "cash": 494897,
+          "xp": 7980,
+          "rank": "Associate"
+        },
+        {
+          "day": 4,
+          "cash": 661648,
+          "xp": 9620,
+          "rank": "Associate"
+        },
+        {
+          "day": 5,
+          "cash": 937923,
+          "xp": 12280,
+          "rank": "Made Member"
+        },
+        {
+          "day": 6,
+          "cash": 1135906,
+          "xp": 13920,
+          "rank": "Made Member"
+        },
+        {
+          "day": 7,
+          "cash": 1332035,
+          "xp": 15560,
+          "rank": "Made Member"
+        },
+        {
+          "day": 8,
+          "cash": 395247,
+          "xp": 18825,
+          "rank": "Soldier"
+        },
+        {
+          "day": 9,
+          "cash": 1158026,
+          "xp": 22215,
+          "rank": "Soldier"
+        },
+        {
+          "day": 10,
+          "cash": 1649453,
+          "xp": 24545,
+          "rank": "Soldier"
+        },
+        {
+          "day": 11,
+          "cash": 2553036,
+          "xp": 27825,
+          "rank": "Trusted Soldier"
+        },
+        {
+          "day": 12,
+          "cash": 3408489,
+          "xp": 31145,
+          "rank": "Trusted Soldier"
+        },
+        {
+          "day": 13,
+          "cash": 4276177,
+          "xp": 34040,
+          "rank": "Trusted Soldier"
+        },
+        {
+          "day": 14,
+          "cash": 4955868,
+          "xp": 36650,
+          "rank": "Trusted Soldier"
+        },
+        {
+          "day": 15,
+          "cash": 5783048,
+          "xp": 39415,
+          "rank": "Racketeer"
+        },
+        {
+          "day": 16,
+          "cash": 6610567,
+          "xp": 41955,
+          "rank": "Racketeer"
+        },
+        {
+          "day": 17,
+          "cash": 7737421,
+          "xp": 45440,
+          "rank": "Racketeer"
+        },
+        {
+          "day": 18,
+          "cash": 8498029,
+          "xp": 48025,
+          "rank": "Racketeer"
+        },
+        {
+          "day": 19,
+          "cash": 9365171,
+          "xp": 50505,
+          "rank": "Racketeer"
+        },
+        {
+          "day": 20,
+          "cash": 10230405,
+          "xp": 53085,
+          "rank": "Racketeer"
+        },
+        {
+          "day": 21,
+          "cash": 11866367,
+          "xp": 57270,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 22,
+          "cash": 13191627,
+          "xp": 60165,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 23,
+          "cash": 14319466,
+          "xp": 62920,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 24,
+          "cash": 15465401,
+          "xp": 65655,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 25,
+          "cash": 16500132,
+          "xp": 68245,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 26,
+          "cash": 17596410,
+          "xp": 70895,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 27,
+          "cash": 19046710,
+          "xp": 74100,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 28,
+          "cash": 20315760,
+          "xp": 77050,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 29,
+          "cash": 22239225,
+          "xp": 80710,
+          "rank": "Captain"
+        },
+        {
+          "day": 30,
+          "cash": 23882827,
+          "xp": 83640,
+          "rank": "Captain"
+        },
+        {
+          "day": 31,
+          "cash": 25526360,
+          "xp": 86720,
+          "rank": "Captain"
+        },
+        {
+          "day": 32,
+          "cash": 26976012,
+          "xp": 89460,
+          "rank": "Captain"
+        },
+        {
+          "day": 33,
+          "cash": 28306551,
+          "xp": 91985,
+          "rank": "Captain"
+        },
+        {
+          "day": 34,
+          "cash": 29897733,
+          "xp": 94925,
+          "rank": "Captain"
+        },
+        {
+          "day": 35,
+          "cash": 31341055,
+          "xp": 97705,
+          "rank": "Captain"
+        },
+        {
+          "day": 36,
+          "cash": 32763857,
+          "xp": 100435,
+          "rank": "Captain"
+        },
+        {
+          "day": 37,
+          "cash": 34501348,
+          "xp": 103535,
+          "rank": "Captain"
+        },
+        {
+          "day": 38,
+          "cash": 35923615,
+          "xp": 106235,
+          "rank": "Captain"
+        },
+        {
+          "day": 39,
+          "cash": 37592203,
+          "xp": 109455,
+          "rank": "Captain"
+        },
+        {
+          "day": 40,
+          "cash": 39964271,
+          "xp": 112845,
+          "rank": "Capo"
+        },
+        {
+          "day": 41,
+          "cash": 42685245,
+          "xp": 116505,
+          "rank": "Capo"
+        },
+        {
+          "day": 42,
+          "cash": 45048884,
+          "xp": 119600,
+          "rank": "Capo"
+        },
+        {
+          "day": 43,
+          "cash": 47636778,
+          "xp": 122700,
+          "rank": "Capo"
+        },
+        {
+          "day": 44,
+          "cash": 49568562,
+          "xp": 125500,
+          "rank": "Capo"
+        },
+        {
+          "day": 45,
+          "cash": 51413238,
+          "xp": 128225,
+          "rank": "Capo"
+        },
+        {
+          "day": 46,
+          "cash": 53655151,
+          "xp": 131345,
+          "rank": "Capo"
+        },
+        {
+          "day": 47,
+          "cash": 57095589,
+          "xp": 135785,
+          "rank": "Capo"
+        },
+        {
+          "day": 48,
+          "cash": 59834345,
+          "xp": 139320,
+          "rank": "Capo"
+        },
+        {
+          "day": 49,
+          "cash": 62478079,
+          "xp": 142725,
+          "rank": "Capo"
+        },
+        {
+          "day": 50,
+          "cash": 64793609,
+          "xp": 145750,
+          "rank": "Capo"
+        },
+        {
+          "day": 51,
+          "cash": 67103532,
+          "xp": 148910,
+          "rank": "Capo"
+        },
+        {
+          "day": 52,
+          "cash": 70071690,
+          "xp": 152845,
+          "rank": "Capo"
+        },
+        {
+          "day": 53,
+          "cash": 73040683,
+          "xp": 155985,
+          "rank": "Senior Capo"
+        },
+        {
+          "day": 54,
+          "cash": 76340274,
+          "xp": 159265,
+          "rank": "Senior Capo"
+        },
+        {
+          "day": 55,
+          "cash": 79548579,
+          "xp": 162760,
+          "rank": "Senior Capo"
+        },
+        {
+          "day": 56,
+          "cash": 83787046,
+          "xp": 166885,
+          "rank": "Senior Capo"
+        },
+        {
+          "day": 57,
+          "cash": 86823714,
+          "xp": 170160,
+          "rank": "Senior Capo"
+        },
+        {
+          "day": 58,
+          "cash": 90075829,
+          "xp": 173480,
+          "rank": "Senior Capo"
+        },
+        {
+          "day": 59,
+          "cash": 93225307,
+          "xp": 176635,
+          "rank": "Senior Capo"
+        },
+        {
+          "day": 60,
+          "cash": 95986717,
+          "xp": 179535,
+          "rank": "Senior Capo"
+        }
+      ]
+    },
+    {
+      "seed": 123,
+      "firstBusiness": {
+        "day": 1,
+        "minutes": 44
+      },
+      "totals": {
+        "crimeGross": 91717297,
+        "fines": 263798,
+        "ammo": 805000,
+        "daily": 2250000,
+        "passive": 511912,
+        "purchases": 1620000,
+        "attempts": 2165,
+        "successes": 2084
+      },
+      "netCrime": 90648499,
+      "final": {
+        "cash": 91795411,
+        "xp": 175205
+      },
+      "days": [
+        {
+          "day": 1,
+          "cash": 67513,
+          "xp": 3115,
+          "rank": "Street Operator"
+        },
+        {
+          "day": 2,
+          "cash": 261071,
+          "xp": 5535,
+          "rank": "Enforcer"
+        },
+        {
+          "day": 3,
+          "cash": 492004,
+          "xp": 8185,
+          "rank": "Associate"
+        },
+        {
+          "day": 4,
+          "cash": 666577,
+          "xp": 9915,
+          "rank": "Associate"
+        },
+        {
+          "day": 5,
+          "cash": 960566,
+          "xp": 12660,
+          "rank": "Made Member"
+        },
+        {
+          "day": 6,
+          "cash": 1169665,
+          "xp": 14385,
+          "rank": "Made Member"
+        },
+        {
+          "day": 7,
+          "cash": 1385102,
+          "xp": 16205,
+          "rank": "Made Member"
+        },
+        {
+          "day": 8,
+          "cash": 363171,
+          "xp": 18885,
+          "rank": "Soldier"
+        },
+        {
+          "day": 9,
+          "cash": 962203,
+          "xp": 21645,
+          "rank": "Soldier"
+        },
+        {
+          "day": 10,
+          "cash": 1568284,
+          "xp": 24335,
+          "rank": "Soldier"
+        },
+        {
+          "day": 11,
+          "cash": 2441362,
+          "xp": 27570,
+          "rank": "Trusted Soldier"
+        },
+        {
+          "day": 12,
+          "cash": 3235092,
+          "xp": 30490,
+          "rank": "Trusted Soldier"
+        },
+        {
+          "day": 13,
+          "cash": 3726255,
+          "xp": 32510,
+          "rank": "Trusted Soldier"
+        },
+        {
+          "day": 14,
+          "cash": 4300612,
+          "xp": 34785,
+          "rank": "Trusted Soldier"
+        },
+        {
+          "day": 15,
+          "cash": 5214135,
+          "xp": 37925,
+          "rank": "Racketeer"
+        },
+        {
+          "day": 16,
+          "cash": 5933171,
+          "xp": 40280,
+          "rank": "Racketeer"
+        },
+        {
+          "day": 17,
+          "cash": 6736335,
+          "xp": 42820,
+          "rank": "Racketeer"
+        },
+        {
+          "day": 18,
+          "cash": 7653059,
+          "xp": 45625,
+          "rank": "Racketeer"
+        },
+        {
+          "day": 19,
+          "cash": 8464932,
+          "xp": 48285,
+          "rank": "Racketeer"
+        },
+        {
+          "day": 20,
+          "cash": 9142387,
+          "xp": 50570,
+          "rank": "Racketeer"
+        },
+        {
+          "day": 21,
+          "cash": 9953787,
+          "xp": 53180,
+          "rank": "Racketeer"
+        },
+        {
+          "day": 22,
+          "cash": 11566366,
+          "xp": 56850,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 23,
+          "cash": 13343339,
+          "xp": 60800,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 24,
+          "cash": 14261366,
+          "xp": 63155,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 25,
+          "cash": 15306676,
+          "xp": 65775,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 26,
+          "cash": 16574344,
+          "xp": 68775,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 27,
+          "cash": 17503352,
+          "xp": 71230,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 28,
+          "cash": 18709201,
+          "xp": 73930,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 29,
+          "cash": 19845674,
+          "xp": 76480,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 30,
+          "cash": 22100643,
+          "xp": 80740,
+          "rank": "Captain"
+        },
+        {
+          "day": 31,
+          "cash": 23766707,
+          "xp": 83880,
+          "rank": "Captain"
+        },
+        {
+          "day": 32,
+          "cash": 25157149,
+          "xp": 86455,
+          "rank": "Captain"
+        },
+        {
+          "day": 33,
+          "cash": 26664503,
+          "xp": 89120,
+          "rank": "Captain"
+        },
+        {
+          "day": 34,
+          "cash": 28164163,
+          "xp": 91860,
+          "rank": "Captain"
+        },
+        {
+          "day": 35,
+          "cash": 29498659,
+          "xp": 94485,
+          "rank": "Captain"
+        },
+        {
+          "day": 36,
+          "cash": 30960821,
+          "xp": 97225,
+          "rank": "Captain"
+        },
+        {
+          "day": 37,
+          "cash": 32726020,
+          "xp": 100440,
+          "rank": "Captain"
+        },
+        {
+          "day": 38,
+          "cash": 34110296,
+          "xp": 103140,
+          "rank": "Captain"
+        },
+        {
+          "day": 39,
+          "cash": 35254759,
+          "xp": 105420,
+          "rank": "Captain"
+        },
+        {
+          "day": 40,
+          "cash": 36792154,
+          "xp": 108245,
+          "rank": "Captain"
+        },
+        {
+          "day": 41,
+          "cash": 40647596,
+          "xp": 113535,
+          "rank": "Capo"
+        },
+        {
+          "day": 42,
+          "cash": 42425434,
+          "xp": 116120,
+          "rank": "Capo"
+        },
+        {
+          "day": 43,
+          "cash": 44691959,
+          "xp": 119085,
+          "rank": "Capo"
+        },
+        {
+          "day": 44,
+          "cash": 46445930,
+          "xp": 121710,
+          "rank": "Capo"
+        },
+        {
+          "day": 45,
+          "cash": 48715449,
+          "xp": 124685,
+          "rank": "Capo"
+        },
+        {
+          "day": 46,
+          "cash": 50994215,
+          "xp": 127965,
+          "rank": "Capo"
+        },
+        {
+          "day": 47,
+          "cash": 53388260,
+          "xp": 131540,
+          "rank": "Capo"
+        },
+        {
+          "day": 48,
+          "cash": 55650179,
+          "xp": 134475,
+          "rank": "Capo"
+        },
+        {
+          "day": 49,
+          "cash": 57748629,
+          "xp": 137480,
+          "rank": "Capo"
+        },
+        {
+          "day": 50,
+          "cash": 60347797,
+          "xp": 140680,
+          "rank": "Capo"
+        },
+        {
+          "day": 51,
+          "cash": 62494579,
+          "xp": 143480,
+          "rank": "Capo"
+        },
+        {
+          "day": 52,
+          "cash": 64960447,
+          "xp": 146755,
+          "rank": "Capo"
+        },
+        {
+          "day": 53,
+          "cash": 67628182,
+          "xp": 150355,
+          "rank": "Capo"
+        },
+        {
+          "day": 54,
+          "cash": 72169088,
+          "xp": 155305,
+          "rank": "Senior Capo"
+        },
+        {
+          "day": 55,
+          "cash": 75251913,
+          "xp": 158370,
+          "rank": "Senior Capo"
+        },
+        {
+          "day": 56,
+          "cash": 79292851,
+          "xp": 162470,
+          "rank": "Senior Capo"
+        },
+        {
+          "day": 57,
+          "cash": 82772396,
+          "xp": 165870,
+          "rank": "Senior Capo"
+        },
+        {
+          "day": 58,
+          "cash": 85855833,
+          "xp": 169170,
+          "rank": "Senior Capo"
+        },
+        {
+          "day": 59,
+          "cash": 88633616,
+          "xp": 172050,
+          "rank": "Senior Capo"
+        },
+        {
+          "day": 60,
+          "cash": 91795411,
+          "xp": 175205,
+          "rank": "Senior Capo"
+        }
+      ]
+    },
+    {
+      "seed": 777,
+      "firstBusiness": {
+        "day": 1,
+        "minutes": 68
+      },
+      "totals": {
+        "crimeGross": 98926901,
+        "fines": 122617,
+        "ammo": 820000,
+        "daily": 2250000,
+        "passive": 522757,
+        "purchases": 1620000,
+        "attempts": 2168,
+        "successes": 2106
+      },
+      "netCrime": 97984284,
+      "final": {
+        "cash": 99142041,
+        "xp": 181600
+      },
+      "days": [
+        {
+          "day": 1,
+          "cash": 78740,
+          "xp": 3210,
+          "rank": "Street Operator"
+        },
+        {
+          "day": 2,
+          "cash": 261201,
+          "xp": 5480,
+          "rank": "Enforcer"
+        },
+        {
+          "day": 3,
+          "cash": 512595,
+          "xp": 8305,
+          "rank": "Associate"
+        },
+        {
+          "day": 4,
+          "cash": 663435,
+          "xp": 9820,
+          "rank": "Associate"
+        },
+        {
+          "day": 5,
+          "cash": 928706,
+          "xp": 12285,
+          "rank": "Made Member"
+        },
+        {
+          "day": 6,
+          "cash": 1124157,
+          "xp": 13940,
+          "rank": "Made Member"
+        },
+        {
+          "day": 7,
+          "cash": 1356281,
+          "xp": 15875,
+          "rank": "Made Member"
+        },
+        {
+          "day": 8,
+          "cash": 385139,
+          "xp": 18825,
+          "rank": "Soldier"
+        },
+        {
+          "day": 9,
+          "cash": 916560,
+          "xp": 21490,
+          "rank": "Soldier"
+        },
+        {
+          "day": 10,
+          "cash": 1300941,
+          "xp": 23470,
+          "rank": "Soldier"
+        },
+        {
+          "day": 11,
+          "cash": 2249376,
+          "xp": 27445,
+          "rank": "Trusted Soldier"
+        },
+        {
+          "day": 12,
+          "cash": 3015065,
+          "xp": 30455,
+          "rank": "Trusted Soldier"
+        },
+        {
+          "day": 13,
+          "cash": 3660107,
+          "xp": 32910,
+          "rank": "Trusted Soldier"
+        },
+        {
+          "day": 14,
+          "cash": 4438497,
+          "xp": 35875,
+          "rank": "Trusted Soldier"
+        },
+        {
+          "day": 15,
+          "cash": 5837010,
+          "xp": 40125,
+          "rank": "Racketeer"
+        },
+        {
+          "day": 16,
+          "cash": 6640067,
+          "xp": 42735,
+          "rank": "Racketeer"
+        },
+        {
+          "day": 17,
+          "cash": 7464675,
+          "xp": 45315,
+          "rank": "Racketeer"
+        },
+        {
+          "day": 18,
+          "cash": 8602859,
+          "xp": 48685,
+          "rank": "Racketeer"
+        },
+        {
+          "day": 19,
+          "cash": 9622830,
+          "xp": 51960,
+          "rank": "Racketeer"
+        },
+        {
+          "day": 20,
+          "cash": 11418652,
+          "xp": 56235,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 21,
+          "cash": 12985493,
+          "xp": 59625,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 22,
+          "cash": 14363263,
+          "xp": 62760,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 23,
+          "cash": 15749344,
+          "xp": 66000,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 24,
+          "cash": 16803833,
+          "xp": 68495,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 25,
+          "cash": 18052211,
+          "xp": 71290,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 26,
+          "cash": 19241940,
+          "xp": 73985,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 27,
+          "cash": 20228452,
+          "xp": 76350,
+          "rank": "Crew Leader"
+        },
+        {
+          "day": 28,
+          "cash": 22847389,
+          "xp": 81415,
+          "rank": "Captain"
+        },
+        {
+          "day": 29,
+          "cash": 24278961,
+          "xp": 84075,
+          "rank": "Captain"
+        },
+        {
+          "day": 30,
+          "cash": 26226977,
+          "xp": 87490,
+          "rank": "Captain"
+        },
+        {
+          "day": 31,
+          "cash": 27995342,
+          "xp": 90550,
+          "rank": "Captain"
+        },
+        {
+          "day": 32,
+          "cash": 29437546,
+          "xp": 93250,
+          "rank": "Captain"
+        },
+        {
+          "day": 33,
+          "cash": 30682874,
+          "xp": 95735,
+          "rank": "Captain"
+        },
+        {
+          "day": 34,
+          "cash": 32288423,
+          "xp": 98590,
+          "rank": "Captain"
+        },
+        {
+          "day": 35,
+          "cash": 33766410,
+          "xp": 101260,
+          "rank": "Captain"
+        },
+        {
+          "day": 36,
+          "cash": 35185916,
+          "xp": 103960,
+          "rank": "Captain"
+        },
+        {
+          "day": 37,
+          "cash": 36615452,
+          "xp": 106770,
+          "rank": "Captain"
+        },
+        {
+          "day": 38,
+          "cash": 38294835,
+          "xp": 109675,
+          "rank": "Captain"
+        },
+        {
+          "day": 39,
+          "cash": 40771833,
+          "xp": 113070,
+          "rank": "Capo"
+        },
+        {
+          "day": 40,
+          "cash": 43165850,
+          "xp": 116250,
+          "rank": "Capo"
+        },
+        {
+          "day": 41,
+          "cash": 45799630,
+          "xp": 119635,
+          "rank": "Capo"
+        },
+        {
+          "day": 42,
+          "cash": 48287148,
+          "xp": 123135,
+          "rank": "Capo"
+        },
+        {
+          "day": 43,
+          "cash": 50585366,
+          "xp": 126080,
+          "rank": "Capo"
+        },
+        {
+          "day": 44,
+          "cash": 52852575,
+          "xp": 129200,
+          "rank": "Capo"
+        },
+        {
+          "day": 45,
+          "cash": 54898250,
+          "xp": 131980,
+          "rank": "Capo"
+        },
+        {
+          "day": 46,
+          "cash": 56762219,
+          "xp": 134645,
+          "rank": "Capo"
+        },
+        {
+          "day": 47,
+          "cash": 59198697,
+          "xp": 137740,
+          "rank": "Capo"
+        },
+        {
+          "day": 48,
+          "cash": 61685218,
+          "xp": 140950,
+          "rank": "Capo"
+        },
+        {
+          "day": 49,
+          "cash": 64110048,
+          "xp": 144160,
+          "rank": "Capo"
+        },
+        {
+          "day": 50,
+          "cash": 66050255,
+          "xp": 147105,
+          "rank": "Capo"
+        },
+        {
+          "day": 51,
+          "cash": 68723140,
+          "xp": 150445,
+          "rank": "Capo"
+        },
+        {
+          "day": 52,
+          "cash": 74150606,
+          "xp": 156175,
+          "rank": "Senior Capo"
+        },
+        {
+          "day": 53,
+          "cash": 76908343,
+          "xp": 159035,
+          "rank": "Senior Capo"
+        },
+        {
+          "day": 54,
+          "cash": 80938553,
+          "xp": 162875,
+          "rank": "Senior Capo"
+        },
+        {
+          "day": 55,
+          "cash": 83709913,
+          "xp": 165755,
+          "rank": "Senior Capo"
+        },
+        {
+          "day": 56,
+          "cash": 86384542,
+          "xp": 168735,
+          "rank": "Senior Capo"
+        },
+        {
+          "day": 57,
+          "cash": 89670819,
+          "xp": 172095,
+          "rank": "Senior Capo"
+        },
+        {
+          "day": 58,
+          "cash": 92304852,
+          "xp": 174880,
+          "rank": "Senior Capo"
+        },
+        {
+          "day": 59,
+          "cash": 95203971,
+          "xp": 177840,
+          "rank": "Senior Capo"
+        },
+        {
+          "day": 60,
+          "cash": 99142041,
+          "xp": 181600,
+          "rank": "Senior Capo"
+        }
+      ]
+    }
+  ],
+  "passivePayback": [
+    {
+      "rank": "Outsider",
+      "hourly": 120,
+      "hours": 1000
+    },
+    {
+      "rank": "Capo",
+      "hourly": 457,
+      "hours": 262.12911132734996
+    },
+    {
+      "rank": "The Godfather",
+      "hourly": 2653,
+      "hours": 45.22651356084011
+    }
+  ]
+}

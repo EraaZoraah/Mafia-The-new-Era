@@ -1,0 +1,3106 @@
+{
+  "method": "Five deterministic fresh accounts; 180 simulated days; two active hours/day, minute-by-minute actions; real handlers, seeded randomness, standard starter kit, daily crime rewards; no staff grants, donations, gifts, casino or PvP. Purchases: first coffeeshop and tier-2 weapon when affordable. In-game wait time is advanced, not real elapsed time.",
+  "results": [
+    {
+      "seed": 42,
+      "firstBusiness": {
+        "day": 1,
+        "minutes": 35
+      },
+      "totals": {
+        "crimeGross": 149048169530,
+        "fines": 524445,
+        "ammo": 3425000,
+        "daily": 6750000,
+        "passive": 11569806,
+        "purchases": 1620000,
+        "attempts": 7650,
+        "successes": 7593
+      },
+      "netCrime": 149044220085,
+      "final": {
+        "cash": 149060924891,
+        "xp": 3056580
+      },
+      "days": [
+        {
+          "day": 1,
+          "cash": 56432,
+          "xp": 7900,
+          "rank": "Outsider",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 135762,
+            "fines": 1000,
+            "ammo": 1000,
+            "daily": 37500,
+            "passive": 170,
+            "purchases": 120000,
+            "attempts": 36,
+            "successes": 35
+          }
+        },
+        {
+          "day": 2,
+          "cash": 268733,
+          "xp": 13520,
+          "rank": "Errand Runner",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 312714,
+            "fines": 2000,
+            "ammo": 5000,
+            "daily": 75000,
+            "passive": 3019,
+            "purchases": 120000,
+            "attempts": 72,
+            "successes": 68
+          }
+        },
+        {
+          "day": 3,
+          "cash": 458447,
+          "xp": 19660,
+          "rank": "Lookout",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 467918,
+            "fines": 4000,
+            "ammo": 9000,
+            "daily": 112500,
+            "passive": 6029,
+            "purchases": 120000,
+            "attempts": 108,
+            "successes": 101
+          }
+        },
+        {
+          "day": 4,
+          "cash": 688656,
+          "xp": 24980,
+          "rank": "Lookout",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 661430,
+            "fines": 4000,
+            "ammo": 13000,
+            "daily": 150000,
+            "passive": 9226,
+            "purchases": 120000,
+            "attempts": 144,
+            "successes": 137
+          }
+        },
+        {
+          "day": 5,
+          "cash": 1085465,
+          "xp": 35180,
+          "rank": "Pickpocket",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 1025668,
+            "fines": 5102,
+            "ammo": 20000,
+            "daily": 187500,
+            "passive": 12399,
+            "purchases": 120000,
+            "attempts": 187,
+            "successes": 178
+          }
+        },
+        {
+          "day": 6,
+          "cash": 1392982,
+          "xp": 42680,
+          "rank": "Pickpocket",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 1297323,
+            "fines": 5102,
+            "ammo": 25000,
+            "daily": 225000,
+            "passive": 15761,
+            "purchases": 120000,
+            "attempts": 222,
+            "successes": 212
+          }
+        },
+        {
+          "day": 7,
+          "cash": 563384,
+          "xp": 51580,
+          "rank": "Hustler",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 1937948,
+            "fines": 5102,
+            "ammo": 36000,
+            "daily": 262500,
+            "passive": 19038,
+            "purchases": 1620000,
+            "attempts": 251,
+            "successes": 238
+          }
+        },
+        {
+          "day": 8,
+          "cash": 1790175,
+          "xp": 64120,
+          "rank": "Street Operator",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 3140859,
+            "fines": 5102,
+            "ammo": 53000,
+            "daily": 300000,
+            "passive": 22418,
+            "purchases": 1620000,
+            "attempts": 269,
+            "successes": 253
+          }
+        },
+        {
+          "day": 9,
+          "cash": 2481534,
+          "xp": 72160,
+          "rank": "Street Operator",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 3800776,
+            "fines": 5102,
+            "ammo": 63000,
+            "daily": 337500,
+            "passive": 26360,
+            "purchases": 1620000,
+            "attempts": 304,
+            "successes": 288
+          }
+        },
+        {
+          "day": 10,
+          "cash": 3610482,
+          "xp": 83040,
+          "rank": "Enforcer",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 4900253,
+            "fines": 5102,
+            "ammo": 75000,
+            "daily": 375000,
+            "passive": 30331,
+            "purchases": 1620000,
+            "attempts": 342,
+            "successes": 326
+          }
+        },
+        {
+          "day": 11,
+          "cash": 5597519,
+          "xp": 98240,
+          "rank": "Associate",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 6874077,
+            "fines": 15606,
+            "ammo": 93000,
+            "daily": 412500,
+            "passive": 34548,
+            "purchases": 1620000,
+            "attempts": 378,
+            "successes": 360
+          }
+        },
+        {
+          "day": 12,
+          "cash": 7090723,
+          "xp": 108360,
+          "rank": "Associate",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 8373906,
+            "fines": 47117,
+            "ammo": 110000,
+            "daily": 450000,
+            "passive": 38934,
+            "purchases": 1620000,
+            "attempts": 397,
+            "successes": 373
+          }
+        },
+        {
+          "day": 13,
+          "cash": 8938553,
+          "xp": 119580,
+          "rank": "Made Member",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 10218938,
+            "fines": 67254,
+            "ammo": 129000,
+            "daily": 487500,
+            "passive": 43369,
+            "purchases": 1620000,
+            "attempts": 421,
+            "successes": 392
+          }
+        },
+        {
+          "day": 14,
+          "cash": 10272287,
+          "xp": 127500,
+          "rank": "Made Member",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 11544419,
+            "fines": 88574,
+            "ammo": 142000,
+            "daily": 525000,
+            "passive": 48442,
+            "purchases": 1620000,
+            "attempts": 451,
+            "successes": 418
+          }
+        },
+        {
+          "day": 15,
+          "cash": 13663196,
+          "xp": 145240,
+          "rank": "Soldier",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 14922930,
+            "fines": 99924,
+            "ammo": 161000,
+            "daily": 562500,
+            "passive": 53690,
+            "purchases": 1620000,
+            "attempts": 494,
+            "successes": 460
+          }
+        },
+        {
+          "day": 16,
+          "cash": 15643145,
+          "xp": 154580,
+          "rank": "Soldier",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 16882825,
+            "fines": 110019,
+            "ammo": 174000,
+            "daily": 600000,
+            "passive": 59339,
+            "purchases": 1620000,
+            "attempts": 525,
+            "successes": 488
+          }
+        },
+        {
+          "day": 17,
+          "cash": 19720960,
+          "xp": 172480,
+          "rank": "Trusted Soldier",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 20938706,
+            "fines": 110019,
+            "ammo": 195000,
+            "daily": 637500,
+            "passive": 64773,
+            "purchases": 1620000,
+            "attempts": 549,
+            "successes": 509
+          }
+        },
+        {
+          "day": 18,
+          "cash": 22507218,
+          "xp": 183320,
+          "rank": "Trusted Soldier",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 23708570,
+            "fines": 123479,
+            "ammo": 209000,
+            "daily": 675000,
+            "passive": 71127,
+            "purchases": 1620000,
+            "attempts": 580,
+            "successes": 538
+          }
+        },
+        {
+          "day": 19,
+          "cash": 27198510,
+          "xp": 198640,
+          "rank": "Racketeer",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 28399559,
+            "fines": 147201,
+            "ammo": 229000,
+            "daily": 712500,
+            "passive": 77652,
+            "purchases": 1620000,
+            "attempts": 625,
+            "successes": 581
+          }
+        },
+        {
+          "day": 20,
+          "cash": 30236684,
+          "xp": 207840,
+          "rank": "Racketeer",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 31414046,
+            "fines": 156175,
+            "ammo": 241000,
+            "daily": 750000,
+            "passive": 84813,
+            "purchases": 1620000,
+            "attempts": 655,
+            "successes": 609
+          }
+        },
+        {
+          "day": 21,
+          "cash": 32995134,
+          "xp": 217500,
+          "rank": "Racketeer",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 34155335,
+            "fines": 172842,
+            "ammo": 252000,
+            "daily": 787500,
+            "passive": 92141,
+            "purchases": 1620000,
+            "attempts": 693,
+            "successes": 646
+          }
+        },
+        {
+          "day": 22,
+          "cash": 39240860,
+          "xp": 233520,
+          "rank": "Crew Leader",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 40377363,
+            "fines": 172842,
+            "ammo": 273000,
+            "daily": 825000,
+            "passive": 99339,
+            "purchases": 1620000,
+            "attempts": 730,
+            "successes": 682
+          }
+        },
+        {
+          "day": 23,
+          "cash": 43355985,
+          "xp": 243880,
+          "rank": "Crew Leader",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 44458664,
+            "fines": 172842,
+            "ammo": 285000,
+            "daily": 862500,
+            "passive": 107663,
+            "purchases": 1620000,
+            "attempts": 768,
+            "successes": 720
+          }
+        },
+        {
+          "day": 24,
+          "cash": 47292883,
+          "xp": 253700,
+          "rank": "Crew Leader",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 48375796,
+            "fines": 186900,
+            "ammo": 297000,
+            "daily": 900000,
+            "passive": 115987,
+            "purchases": 1620000,
+            "attempts": 806,
+            "successes": 757
+          }
+        },
+        {
+          "day": 25,
+          "cash": 55338793,
+          "xp": 270360,
+          "rank": "Captain",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 56432899,
+            "fines": 223010,
+            "ammo": 318000,
+            "daily": 937500,
+            "passive": 124404,
+            "purchases": 1620000,
+            "attempts": 851,
+            "successes": 801
+          }
+        },
+        {
+          "day": 26,
+          "cash": 60593341,
+          "xp": 280500,
+          "rank": "Captain",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 61680586,
+            "fines": 251176,
+            "ammo": 330000,
+            "daily": 975000,
+            "passive": 133931,
+            "purchases": 1620000,
+            "attempts": 889,
+            "successes": 838
+          }
+        },
+        {
+          "day": 27,
+          "cash": 66802403,
+          "xp": 292000,
+          "rank": "Captain",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 67857859,
+            "fines": 251176,
+            "ammo": 345000,
+            "daily": 1012500,
+            "passive": 143220,
+            "purchases": 1620000,
+            "attempts": 921,
+            "successes": 869
+          }
+        },
+        {
+          "day": 28,
+          "cash": 79347727,
+          "xp": 311080,
+          "rank": "Capo",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 80379124,
+            "fines": 251176,
+            "ammo": 368000,
+            "daily": 1050000,
+            "passive": 152779,
+            "purchases": 1620000,
+            "attempts": 968,
+            "successes": 916
+          }
+        },
+        {
+          "day": 29,
+          "cash": 88941255,
+          "xp": 323880,
+          "rank": "Capo",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 89937165,
+            "fines": 251176,
+            "ammo": 381000,
+            "daily": 1087500,
+            "passive": 163766,
+            "purchases": 1620000,
+            "attempts": 1007,
+            "successes": 955
+          }
+        },
+        {
+          "day": 30,
+          "cash": 96602323,
+          "xp": 335080,
+          "rank": "Capo",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 97562746,
+            "fines": 251176,
+            "ammo": 394000,
+            "daily": 1125000,
+            "passive": 174753,
+            "purchases": 1620000,
+            "attempts": 1046,
+            "successes": 994
+          }
+        },
+        {
+          "day": 31,
+          "cash": 107047457,
+          "xp": 351820,
+          "rank": "Senior Capo",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 107984878,
+            "fines": 263662,
+            "ammo": 407000,
+            "daily": 1162500,
+            "passive": 185741,
+            "purchases": 1620000,
+            "attempts": 1085,
+            "successes": 1032
+          }
+        },
+        {
+          "day": 32,
+          "cash": 121465426,
+          "xp": 366540,
+          "rank": "Senior Capo",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 122365629,
+            "fines": 263662,
+            "ammo": 420000,
+            "daily": 1200000,
+            "passive": 198459,
+            "purchases": 1620000,
+            "attempts": 1124,
+            "successes": 1071
+          }
+        },
+        {
+          "day": 33,
+          "cash": 132344200,
+          "xp": 378060,
+          "rank": "Senior Capo",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 133207184,
+            "fines": 263662,
+            "ammo": 433000,
+            "daily": 1237500,
+            "passive": 211178,
+            "purchases": 1620000,
+            "attempts": 1163,
+            "successes": 1110
+          }
+        },
+        {
+          "day": 34,
+          "cash": 142459084,
+          "xp": 388960,
+          "rank": "Senior Capo",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 143324463,
+            "fines": 302275,
+            "ammo": 447000,
+            "daily": 1275000,
+            "passive": 223896,
+            "purchases": 1620000,
+            "attempts": 1202,
+            "successes": 1148
+          }
+        },
+        {
+          "day": 35,
+          "cash": 153950053,
+          "xp": 400640,
+          "rank": "Senior Capo",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 154778214,
+            "fines": 302275,
+            "ammo": 460000,
+            "daily": 1312500,
+            "passive": 236614,
+            "purchases": 1620000,
+            "attempts": 1241,
+            "successes": 1187
+          }
+        },
+        {
+          "day": 36,
+          "cash": 170624549,
+          "xp": 413720,
+          "rank": "Consigliere",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 171418317,
+            "fines": 302275,
+            "ammo": 476000,
+            "daily": 1350000,
+            "passive": 249507,
+            "purchases": 1620000,
+            "attempts": 1282,
+            "successes": 1228
+          }
+        },
+        {
+          "day": 37,
+          "cash": 188050190,
+          "xp": 427080,
+          "rank": "Consigliere",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 188805626,
+            "fines": 302275,
+            "ammo": 490000,
+            "daily": 1387500,
+            "passive": 264339,
+            "purchases": 1620000,
+            "attempts": 1321,
+            "successes": 1267
+          }
+        },
+        {
+          "day": 38,
+          "cash": 207749976,
+          "xp": 442260,
+          "rank": "Consigliere",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 208469451,
+            "fines": 302275,
+            "ammo": 506000,
+            "daily": 1425000,
+            "passive": 278800,
+            "purchases": 1620000,
+            "attempts": 1354,
+            "successes": 1299
+          }
+        },
+        {
+          "day": 39,
+          "cash": 223490516,
+          "xp": 454520,
+          "rank": "Consigliere",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 224311697,
+            "fines": 442313,
+            "ammo": 520000,
+            "daily": 1462500,
+            "passive": 293632,
+            "purchases": 1620000,
+            "attempts": 1393,
+            "successes": 1337
+          }
+        },
+        {
+          "day": 40,
+          "cash": 259480303,
+          "xp": 475120,
+          "rank": "Underboss",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 260271950,
+            "fines": 442313,
+            "ammo": 543000,
+            "daily": 1500000,
+            "passive": 308666,
+            "purchases": 1620000,
+            "attempts": 1439,
+            "successes": 1383
+          }
+        },
+        {
+          "day": 41,
+          "cash": 280554354,
+          "xp": 487240,
+          "rank": "Underboss",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 281305078,
+            "fines": 442313,
+            "ammo": 557000,
+            "daily": 1537500,
+            "passive": 326089,
+            "purchases": 1620000,
+            "attempts": 1479,
+            "successes": 1423
+          }
+        },
+        {
+          "day": 42,
+          "cash": 301338542,
+          "xp": 499520,
+          "rank": "Underboss",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 302049342,
+            "fines": 442313,
+            "ammo": 572000,
+            "daily": 1575000,
+            "passive": 343513,
+            "purchases": 1620000,
+            "attempts": 1519,
+            "successes": 1463
+          }
+        },
+        {
+          "day": 43,
+          "cash": 327928013,
+          "xp": 513440,
+          "rank": "Underboss",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 328597889,
+            "fines": 442313,
+            "ammo": 586000,
+            "daily": 1612500,
+            "passive": 360937,
+            "purchases": 1620000,
+            "attempts": 1558,
+            "successes": 1502
+          }
+        },
+        {
+          "day": 44,
+          "cash": 348299037,
+          "xp": 525340,
+          "rank": "Underboss",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 349010122,
+            "fines": 524445,
+            "ammo": 600000,
+            "daily": 1650000,
+            "passive": 378360,
+            "purchases": 1620000,
+            "attempts": 1598,
+            "successes": 1541
+          }
+        },
+        {
+          "day": 45,
+          "cash": 386241909,
+          "xp": 541580,
+          "rank": "Boss",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 386916811,
+            "fines": 524445,
+            "ammo": 619000,
+            "daily": 1687500,
+            "passive": 396043,
+            "purchases": 1620000,
+            "attempts": 1641,
+            "successes": 1584
+          }
+        },
+        {
+          "day": 46,
+          "cash": 422353082,
+          "xp": 555620,
+          "rank": "Boss",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 422983868,
+            "fines": 524445,
+            "ammo": 633000,
+            "daily": 1725000,
+            "passive": 416659,
+            "purchases": 1620000,
+            "attempts": 1681,
+            "successes": 1624
+          }
+        },
+        {
+          "day": 47,
+          "cash": 453476922,
+          "xp": 568300,
+          "rank": "Boss",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 454064592,
+            "fines": 524445,
+            "ammo": 648000,
+            "daily": 1762500,
+            "passive": 437275,
+            "purchases": 1620000,
+            "attempts": 1721,
+            "successes": 1664
+          }
+        },
+        {
+          "day": 48,
+          "cash": 487705044,
+          "xp": 582180,
+          "rank": "Boss",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 488249598,
+            "fines": 524445,
+            "ammo": 663000,
+            "daily": 1800000,
+            "passive": 457891,
+            "purchases": 1620000,
+            "attempts": 1761,
+            "successes": 1704
+          }
+        },
+        {
+          "day": 49,
+          "cash": 522000475,
+          "xp": 596140,
+          "rank": "Boss",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 522500913,
+            "fines": 524445,
+            "ammo": 677000,
+            "daily": 1837500,
+            "passive": 478507,
+            "purchases": 1620000,
+            "attempts": 1801,
+            "successes": 1744
+          }
+        },
+        {
+          "day": 50,
+          "cash": 587282691,
+          "xp": 615700,
+          "rank": "Don",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 587748713,
+            "fines": 524445,
+            "ammo": 701000,
+            "daily": 1875000,
+            "passive": 499423,
+            "purchases": 1620000,
+            "attempts": 1848,
+            "successes": 1791
+          }
+        },
+        {
+          "day": 51,
+          "cash": 635060721,
+          "xp": 628620,
+          "rank": "Don",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 635480762,
+            "fines": 524445,
+            "ammo": 717000,
+            "daily": 1912500,
+            "passive": 523904,
+            "purchases": 1620000,
+            "attempts": 1888,
+            "successes": 1831
+          }
+        },
+        {
+          "day": 52,
+          "cash": 693428008,
+          "xp": 644420,
+          "rank": "Don",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 693801069,
+            "fines": 524445,
+            "ammo": 732000,
+            "daily": 1950000,
+            "passive": 548384,
+            "purchases": 1620000,
+            "attempts": 1928,
+            "successes": 1871
+          }
+        },
+        {
+          "day": 53,
+          "cash": 748195987,
+          "xp": 659220,
+          "rank": "Don",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 748522068,
+            "fines": 524445,
+            "ammo": 747000,
+            "daily": 1987500,
+            "passive": 572864,
+            "purchases": 1620000,
+            "attempts": 1968,
+            "successes": 1911
+          }
+        },
+        {
+          "day": 54,
+          "cash": 792462582,
+          "xp": 672100,
+          "rank": "Don",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 792741683,
+            "fines": 524445,
+            "ammo": 762000,
+            "daily": 2025000,
+            "passive": 597344,
+            "purchases": 1620000,
+            "attempts": 2008,
+            "successes": 1951
+          }
+        },
+        {
+          "day": 55,
+          "cash": 844804532,
+          "xp": 686780,
+          "rank": "Don",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 845037653,
+            "fines": 524445,
+            "ammo": 778000,
+            "daily": 2062500,
+            "passive": 621824,
+            "purchases": 1620000,
+            "attempts": 2048,
+            "successes": 1991
+          }
+        },
+        {
+          "day": 56,
+          "cash": 923740182,
+          "xp": 702340,
+          "rank": "Crime Lord",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 923926924,
+            "fines": 524445,
+            "ammo": 794000,
+            "daily": 2100000,
+            "passive": 646703,
+            "purchases": 1620000,
+            "attempts": 2090,
+            "successes": 2033
+          }
+        },
+        {
+          "day": 57,
+          "cash": 988918243,
+          "xp": 715460,
+          "rank": "Crime Lord",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 989054211,
+            "fines": 524445,
+            "ammo": 810000,
+            "daily": 2137500,
+            "passive": 675977,
+            "purchases": 1620000,
+            "attempts": 2131,
+            "successes": 2074
+          }
+        },
+        {
+          "day": 58,
+          "cash": 1064184226,
+          "xp": 731380,
+          "rank": "Crime Lord",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 1064269420,
+            "fines": 524445,
+            "ammo": 826000,
+            "daily": 2175000,
+            "passive": 705251,
+            "purchases": 1620000,
+            "attempts": 2171,
+            "successes": 2114
+          }
+        },
+        {
+          "day": 59,
+          "cash": 1133703391,
+          "xp": 744740,
+          "rank": "Crime Lord",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 1133736811,
+            "fines": 524445,
+            "ammo": 841000,
+            "daily": 2212500,
+            "passive": 734525,
+            "purchases": 1620000,
+            "attempts": 2212,
+            "successes": 2155
+          }
+        },
+        {
+          "day": 60,
+          "cash": 1202157592,
+          "xp": 758220,
+          "rank": "Crime Lord",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 1202141238,
+            "fines": 524445,
+            "ammo": 858000,
+            "daily": 2250000,
+            "passive": 763799,
+            "purchases": 1620000,
+            "attempts": 2252,
+            "successes": 2195
+          }
+        },
+        {
+          "day": 61,
+          "cash": 1272113314,
+          "xp": 772020,
+          "rank": "Crime Lord",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 1272046186,
+            "fines": 524445,
+            "ammo": 874000,
+            "daily": 2287500,
+            "passive": 793073,
+            "purchases": 1620000,
+            "attempts": 2292,
+            "successes": 2235
+          }
+        },
+        {
+          "day": 62,
+          "cash": 1455475948,
+          "xp": 798340,
+          "rank": "Kingpin",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 1455368590,
+            "fines": 524445,
+            "ammo": 901000,
+            "daily": 2325000,
+            "passive": 822803,
+            "purchases": 1620000,
+            "attempts": 2341,
+            "successes": 2284
+          }
+        },
+        {
+          "day": 63,
+          "cash": 1556011952,
+          "xp": 812340,
+          "rank": "Kingpin",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 1555847844,
+            "fines": 524445,
+            "ammo": 917000,
+            "daily": 2362500,
+            "passive": 858053,
+            "purchases": 1620000,
+            "attempts": 2382,
+            "successes": 2325
+          }
+        },
+        {
+          "day": 64,
+          "cash": 1674554898,
+          "xp": 829100,
+          "rank": "Kingpin",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 1674334039,
+            "fines": 524445,
+            "ammo": 933000,
+            "daily": 2400000,
+            "passive": 893304,
+            "purchases": 1620000,
+            "attempts": 2423,
+            "successes": 2366
+          }
+        },
+        {
+          "day": 65,
+          "cash": 1774044196,
+          "xp": 842980,
+          "rank": "Kingpin",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 1773766587,
+            "fines": 524445,
+            "ammo": 949000,
+            "daily": 2437500,
+            "passive": 928554,
+            "purchases": 1620000,
+            "attempts": 2464,
+            "successes": 2407
+          }
+        },
+        {
+          "day": 66,
+          "cash": 1899197851,
+          "xp": 859460,
+          "rank": "Kingpin",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 1898863491,
+            "fines": 524445,
+            "ammo": 965000,
+            "daily": 2475000,
+            "passive": 963805,
+            "purchases": 1620000,
+            "attempts": 2505,
+            "successes": 2448
+          }
+        },
+        {
+          "day": 67,
+          "cash": 2010608534,
+          "xp": 874220,
+          "rank": "Kingpin",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 2010217424,
+            "fines": 524445,
+            "ammo": 981000,
+            "daily": 2512500,
+            "passive": 999055,
+            "purchases": 1620000,
+            "attempts": 2546,
+            "successes": 2489
+          }
+        },
+        {
+          "day": 68,
+          "cash": 2110449888,
+          "xp": 887940,
+          "rank": "Kingpin",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 2110002027,
+            "fines": 524445,
+            "ammo": 997000,
+            "daily": 2550000,
+            "passive": 1034306,
+            "purchases": 1620000,
+            "attempts": 2587,
+            "successes": 2530
+          }
+        },
+        {
+          "day": 69,
+          "cash": 2271353500,
+          "xp": 903700,
+          "rank": "Shadow Sovereign",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 2270851270,
+            "fines": 524445,
+            "ammo": 1016000,
+            "daily": 2587500,
+            "passive": 1070175,
+            "purchases": 1620000,
+            "attempts": 2630,
+            "successes": 2573
+          }
+        },
+        {
+          "day": 70,
+          "cash": 2455958737,
+          "xp": 920620,
+          "rank": "Shadow Sovereign",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 2455392268,
+            "fines": 524445,
+            "ammo": 1032000,
+            "daily": 2625000,
+            "passive": 1112914,
+            "purchases": 1620000,
+            "attempts": 2672,
+            "successes": 2615
+          }
+        },
+        {
+          "day": 71,
+          "cash": 2618081938,
+          "xp": 934900,
+          "rank": "Shadow Sovereign",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 2617453231,
+            "fines": 524445,
+            "ammo": 1050000,
+            "daily": 2662500,
+            "passive": 1155652,
+            "purchases": 1620000,
+            "attempts": 2713,
+            "successes": 2656
+          }
+        },
+        {
+          "day": 72,
+          "cash": 2799990806,
+          "xp": 950900,
+          "rank": "Shadow Sovereign",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 2799298860,
+            "fines": 524445,
+            "ammo": 1067000,
+            "daily": 2700000,
+            "passive": 1198391,
+            "purchases": 1620000,
+            "attempts": 2754,
+            "successes": 2697
+          }
+        },
+        {
+          "day": 73,
+          "cash": 2955230961,
+          "xp": 965020,
+          "rank": "Shadow Sovereign",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 2954475776,
+            "fines": 524445,
+            "ammo": 1084000,
+            "daily": 2737500,
+            "passive": 1241130,
+            "purchases": 1620000,
+            "attempts": 2795,
+            "successes": 2738
+          }
+        },
+        {
+          "day": 74,
+          "cash": 3111957315,
+          "xp": 979220,
+          "rank": "Shadow Sovereign",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 3111137891,
+            "fines": 524445,
+            "ammo": 1100000,
+            "daily": 2775000,
+            "passive": 1283869,
+            "purchases": 1620000,
+            "attempts": 2837,
+            "successes": 2780
+          }
+        },
+        {
+          "day": 75,
+          "cash": 3318793973,
+          "xp": 996700,
+          "rank": "Shadow Sovereign",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 3317911310,
+            "fines": 524445,
+            "ammo": 1117000,
+            "daily": 2812500,
+            "passive": 1326608,
+            "purchases": 1620000,
+            "attempts": 2879,
+            "successes": 2822
+          }
+        },
+        {
+          "day": 76,
+          "cash": 3736884028,
+          "xp": 1025020,
+          "rank": "Syndicate Emperor",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 3735949426,
+            "fines": 524445,
+            "ammo": 1146000,
+            "daily": 2850000,
+            "passive": 1370047,
+            "purchases": 1620000,
+            "attempts": 2930,
+            "successes": 2873
+          }
+        },
+        {
+          "day": 77,
+          "cash": 4030485505,
+          "xp": 1042500,
+          "rank": "Syndicate Emperor",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 4029479409,
+            "fines": 524445,
+            "ammo": 1164000,
+            "daily": 2887500,
+            "passive": 1422041,
+            "purchases": 1620000,
+            "attempts": 2972,
+            "successes": 2915
+          }
+        },
+        {
+          "day": 78,
+          "cash": 4276784684,
+          "xp": 1056780,
+          "rank": "Syndicate Emperor",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 4275706094,
+            "fines": 524445,
+            "ammo": 1181000,
+            "daily": 2925000,
+            "passive": 1474035,
+            "purchases": 1620000,
+            "attempts": 3014,
+            "successes": 2957
+          }
+        },
+        {
+          "day": 79,
+          "cash": 4550518596,
+          "xp": 1072820,
+          "rank": "Syndicate Emperor",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 4549367511,
+            "fines": 524445,
+            "ammo": 1198000,
+            "daily": 2962500,
+            "passive": 1526030,
+            "purchases": 1620000,
+            "attempts": 3056,
+            "successes": 2999
+          }
+        },
+        {
+          "day": 80,
+          "cash": 4782824537,
+          "xp": 1087420,
+          "rank": "Syndicate Emperor",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 4781600958,
+            "fines": 524445,
+            "ammo": 1215000,
+            "daily": 3000000,
+            "passive": 1578024,
+            "purchases": 1620000,
+            "attempts": 3098,
+            "successes": 3041
+          }
+        },
+        {
+          "day": 81,
+          "cash": 5007319279,
+          "xp": 1101940,
+          "rank": "Syndicate Emperor",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 5006023206,
+            "fines": 524445,
+            "ammo": 1232000,
+            "daily": 3037500,
+            "passive": 1630018,
+            "purchases": 1620000,
+            "attempts": 3140,
+            "successes": 3083
+          }
+        },
+        {
+          "day": 82,
+          "cash": 5246378686,
+          "xp": 1116300,
+          "rank": "Syndicate Emperor",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 5245010119,
+            "fines": 524445,
+            "ammo": 1249000,
+            "daily": 3075000,
+            "passive": 1682012,
+            "purchases": 1620000,
+            "attempts": 3182,
+            "successes": 3125
+          }
+        },
+        {
+          "day": 83,
+          "cash": 5483138798,
+          "xp": 1130900,
+          "rank": "Syndicate Emperor",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 5481698737,
+            "fines": 524445,
+            "ammo": 1267000,
+            "daily": 3112500,
+            "passive": 1734006,
+            "purchases": 1620000,
+            "attempts": 3224,
+            "successes": 3167
+          }
+        },
+        {
+          "day": 84,
+          "cash": 6096490169,
+          "xp": 1158380,
+          "rank": "The Godfather",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 6094993184,
+            "fines": 524445,
+            "ammo": 1300000,
+            "daily": 3150000,
+            "passive": 1786430,
+            "purchases": 1620000,
+            "attempts": 3278,
+            "successes": 3221
+          }
+        },
+        {
+          "day": 85,
+          "cash": 6522276504,
+          "xp": 1175300,
+          "rank": "The Godfather",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 6520695340,
+            "fines": 524445,
+            "ammo": 1317000,
+            "daily": 3187500,
+            "passive": 1850109,
+            "purchases": 1620000,
+            "attempts": 3320,
+            "successes": 3263
+          }
+        },
+        {
+          "day": 86,
+          "cash": 6974049519,
+          "xp": 1193100,
+          "rank": "The Godfather",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 6972384175,
+            "fines": 524445,
+            "ammo": 1334000,
+            "daily": 3225000,
+            "passive": 1913789,
+            "purchases": 1620000,
+            "attempts": 3362,
+            "successes": 3305
+          }
+        },
+        {
+          "day": 87,
+          "cash": 7316521377,
+          "xp": 1207700,
+          "rank": "The Godfather",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 7314772854,
+            "fines": 524445,
+            "ammo": 1352000,
+            "daily": 3262500,
+            "passive": 1977468,
+            "purchases": 1620000,
+            "attempts": 3404,
+            "successes": 3347
+          }
+        },
+        {
+          "day": 88,
+          "cash": 7733189161,
+          "xp": 1224740,
+          "rank": "The Godfather",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 7731357458,
+            "fines": 524445,
+            "ammo": 1370000,
+            "daily": 3300000,
+            "passive": 2041148,
+            "purchases": 1620000,
+            "attempts": 3446,
+            "successes": 3389
+          }
+        },
+        {
+          "day": 89,
+          "cash": 8146508388,
+          "xp": 1241260,
+          "rank": "The Godfather",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 8144592506,
+            "fines": 524445,
+            "ammo": 1387000,
+            "daily": 3337500,
+            "passive": 2104827,
+            "purchases": 1620000,
+            "attempts": 3488,
+            "successes": 3431
+          }
+        },
+        {
+          "day": 90,
+          "cash": 8542679842,
+          "xp": 1257300,
+          "rank": "The Godfather",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 8540680780,
+            "fines": 524445,
+            "ammo": 1405000,
+            "daily": 3375000,
+            "passive": 2168507,
+            "purchases": 1620000,
+            "attempts": 3530,
+            "successes": 3473
+          }
+        },
+        {
+          "day": 91,
+          "cash": 8947554050,
+          "xp": 1273540,
+          "rank": "The Godfather",
+          "distinctions": 0,
+          "totals": {
+            "crimeGross": 8945471809,
+            "fines": 524445,
+            "ammo": 1423000,
+            "daily": 3412500,
+            "passive": 2232186,
+            "purchases": 1620000,
+            "attempts": 3572,
+            "successes": 3515
+          }
+        },
+        {
+          "day": 92,
+          "cash": 9522255311,
+          "xp": 1293820,
+          "rank": "The Godfather",
+          "distinctions": 1,
+          "totals": {
+            "crimeGross": 9520096526,
+            "fines": 524445,
+            "ammo": 1448000,
+            "daily": 3450000,
+            "passive": 2296230,
+            "purchases": 1620000,
+            "attempts": 3620,
+            "successes": 3563
+          }
+        },
+        {
+          "day": 93,
+          "cash": 9936382280,
+          "xp": 1309220,
+          "rank": "The Godfather",
+          "distinctions": 1,
+          "totals": {
+            "crimeGross": 9934135706,
+            "fines": 524445,
+            "ammo": 1466000,
+            "daily": 3487500,
+            "passive": 2364519,
+            "purchases": 1620000,
+            "attempts": 3662,
+            "successes": 3605
+          }
+        },
+        {
+          "day": 94,
+          "cash": 10365931858,
+          "xp": 1324660,
+          "rank": "The Godfather",
+          "distinctions": 1,
+          "totals": {
+            "crimeGross": 10363597495,
+            "fines": 524445,
+            "ammo": 1484000,
+            "daily": 3525000,
+            "passive": 2432808,
+            "purchases": 1620000,
+            "attempts": 3704,
+            "successes": 3647
+          }
+        },
+        {
+          "day": 95,
+          "cash": 10870317224,
+          "xp": 1342140,
+          "rank": "The Godfather",
+          "distinctions": 1,
+          "totals": {
+            "crimeGross": 10867895073,
+            "fines": 524445,
+            "ammo": 1502000,
+            "daily": 3562500,
+            "passive": 2501096,
+            "purchases": 1620000,
+            "attempts": 3746,
+            "successes": 3689
+          }
+        },
+        {
+          "day": 96,
+          "cash": 11422744029,
+          "xp": 1360940,
+          "rank": "The Godfather",
+          "distinctions": 1,
+          "totals": {
+            "crimeGross": 11420234089,
+            "fines": 524445,
+            "ammo": 1520000,
+            "daily": 3600000,
+            "passive": 2569385,
+            "purchases": 1620000,
+            "attempts": 3788,
+            "successes": 3731
+          }
+        },
+        {
+          "day": 97,
+          "cash": 11883586605,
+          "xp": 1377780,
+          "rank": "The Godfather",
+          "distinctions": 1,
+          "totals": {
+            "crimeGross": 11880988876,
+            "fines": 524445,
+            "ammo": 1538000,
+            "daily": 3637500,
+            "passive": 2637674,
+            "purchases": 1620000,
+            "attempts": 3830,
+            "successes": 3773
+          }
+        },
+        {
+          "day": 98,
+          "cash": 12384328433,
+          "xp": 1395300,
+          "rank": "The Godfather",
+          "distinctions": 1,
+          "totals": {
+            "crimeGross": 12381642916,
+            "fines": 524445,
+            "ammo": 1556000,
+            "daily": 3675000,
+            "passive": 2705962,
+            "purchases": 1620000,
+            "attempts": 3872,
+            "successes": 3815
+          }
+        },
+        {
+          "day": 99,
+          "cash": 12846925325,
+          "xp": 1411740,
+          "rank": "The Godfather",
+          "distinctions": 1,
+          "totals": {
+            "crimeGross": 12844152019,
+            "fines": 524445,
+            "ammo": 1574000,
+            "daily": 3712500,
+            "passive": 2774251,
+            "purchases": 1620000,
+            "attempts": 3914,
+            "successes": 3857
+          }
+        },
+        {
+          "day": 100,
+          "cash": 13471697368,
+          "xp": 1430900,
+          "rank": "The Godfather",
+          "distinctions": 2,
+          "totals": {
+            "crimeGross": 13468838869,
+            "fines": 524445,
+            "ammo": 1595000,
+            "daily": 3750000,
+            "passive": 2842944,
+            "purchases": 1620000,
+            "attempts": 3959,
+            "successes": 3902
+          }
+        },
+        {
+          "day": 101,
+          "cash": 13991177558,
+          "xp": 1446500,
+          "rank": "The Godfather",
+          "distinctions": 2,
+          "totals": {
+            "crimeGross": 13988227327,
+            "fines": 524445,
+            "ammo": 1614000,
+            "daily": 3787500,
+            "passive": 2916176,
+            "purchases": 1620000,
+            "attempts": 4002,
+            "successes": 3945
+          }
+        },
+        {
+          "day": 102,
+          "cash": 14562305303,
+          "xp": 1463380,
+          "rank": "The Godfather",
+          "distinctions": 2,
+          "totals": {
+            "crimeGross": 14559262341,
+            "fines": 524445,
+            "ammo": 1632000,
+            "daily": 3825000,
+            "passive": 2989407,
+            "purchases": 1620000,
+            "attempts": 4045,
+            "successes": 3988
+          }
+        },
+        {
+          "day": 103,
+          "cash": 15061630478,
+          "xp": 1478820,
+          "rank": "The Godfather",
+          "distinctions": 2,
+          "totals": {
+            "crimeGross": 15058495784,
+            "fines": 524445,
+            "ammo": 1651000,
+            "daily": 3862500,
+            "passive": 3062639,
+            "purchases": 1620000,
+            "attempts": 4088,
+            "successes": 4031
+          }
+        },
+        {
+          "day": 104,
+          "cash": 15568144587,
+          "xp": 1494580,
+          "rank": "The Godfather",
+          "distinctions": 2,
+          "totals": {
+            "crimeGross": 15564917162,
+            "fines": 524445,
+            "ammo": 1669000,
+            "daily": 3900000,
+            "passive": 3135870,
+            "purchases": 1620000,
+            "attempts": 4131,
+            "successes": 4074
+          }
+        },
+        {
+          "day": 105,
+          "cash": 16077735031,
+          "xp": 1509940,
+          "rank": "The Godfather",
+          "distinctions": 2,
+          "totals": {
+            "crimeGross": 16074415875,
+            "fines": 524445,
+            "ammo": 1688000,
+            "daily": 3937500,
+            "passive": 3209101,
+            "purchases": 1620000,
+            "attempts": 4174,
+            "successes": 4117
+          }
+        },
+        {
+          "day": 106,
+          "cash": 16604615441,
+          "xp": 1525220,
+          "rank": "The Godfather",
+          "distinctions": 2,
+          "totals": {
+            "crimeGross": 16601203553,
+            "fines": 524445,
+            "ammo": 1706000,
+            "daily": 3975000,
+            "passive": 3282333,
+            "purchases": 1620000,
+            "attempts": 4217,
+            "successes": 4160
+          }
+        },
+        {
+          "day": 107,
+          "cash": 17137068078,
+          "xp": 1542020,
+          "rank": "The Godfather",
+          "distinctions": 2,
+          "totals": {
+            "crimeGross": 17133564459,
+            "fines": 524445,
+            "ammo": 1725000,
+            "daily": 4012500,
+            "passive": 3355564,
+            "purchases": 1620000,
+            "attempts": 4260,
+            "successes": 4203
+          }
+        },
+        {
+          "day": 108,
+          "cash": 18091964893,
+          "xp": 1566540,
+          "rank": "The Godfather",
+          "distinctions": 3,
+          "totals": {
+            "crimeGross": 18088378130,
+            "fines": 524445,
+            "ammo": 1753000,
+            "daily": 4050000,
+            "passive": 3429208,
+            "purchases": 1620000,
+            "attempts": 4310,
+            "successes": 4253
+          }
+        },
+        {
+          "day": 109,
+          "cash": 18830298718,
+          "xp": 1586220,
+          "rank": "The Godfather",
+          "distinctions": 3,
+          "totals": {
+            "crimeGross": 18826614923,
+            "fines": 524445,
+            "ammo": 1772000,
+            "daily": 4087500,
+            "passive": 3507740,
+            "purchases": 1620000,
+            "attempts": 4353,
+            "successes": 4296
+          }
+        },
+        {
+          "day": 110,
+          "cash": 19520410691,
+          "xp": 1603820,
+          "rank": "The Godfather",
+          "distinctions": 3,
+          "totals": {
+            "crimeGross": 19516630864,
+            "fines": 524445,
+            "ammo": 1792000,
+            "daily": 4125000,
+            "passive": 3586272,
+            "purchases": 1620000,
+            "attempts": 4396,
+            "successes": 4339
+          }
+        },
+        {
+          "day": 111,
+          "cash": 20129415544,
+          "xp": 1619380,
+          "rank": "The Godfather",
+          "distinctions": 3,
+          "totals": {
+            "crimeGross": 20125538686,
+            "fines": 524445,
+            "ammo": 1811000,
+            "daily": 4162500,
+            "passive": 3664803,
+            "purchases": 1620000,
+            "attempts": 4439,
+            "successes": 4382
+          }
+        },
+        {
+          "day": 112,
+          "cash": 20804537579,
+          "xp": 1636540,
+          "rank": "The Godfather",
+          "distinctions": 3,
+          "totals": {
+            "crimeGross": 20800563689,
+            "fines": 524445,
+            "ammo": 1830000,
+            "daily": 4200000,
+            "passive": 3743335,
+            "purchases": 1620000,
+            "attempts": 4482,
+            "successes": 4425
+          }
+        },
+        {
+          "day": 113,
+          "cash": 21483305145,
+          "xp": 1654020,
+          "rank": "The Godfather",
+          "distinctions": 3,
+          "totals": {
+            "crimeGross": 21479234223,
+            "fines": 524445,
+            "ammo": 1849000,
+            "daily": 4237500,
+            "passive": 3821867,
+            "purchases": 1620000,
+            "attempts": 4525,
+            "successes": 4468
+          }
+        },
+        {
+          "day": 114,
+          "cash": 22163497718,
+          "xp": 1671460,
+          "rank": "The Godfather",
+          "distinctions": 3,
+          "totals": {
+            "crimeGross": 22159329764,
+            "fines": 524445,
+            "ammo": 1868000,
+            "daily": 4275000,
+            "passive": 3900399,
+            "purchases": 1620000,
+            "attempts": 4568,
+            "successes": 4511
+          }
+        },
+        {
+          "day": 115,
+          "cash": 23534859881,
+          "xp": 1702700,
+          "rank": "The Godfather",
+          "distinctions": 4,
+          "totals": {
+            "crimeGross": 23530610477,
+            "fines": 524445,
+            "ammo": 1903000,
+            "daily": 4312500,
+            "passive": 3979349,
+            "purchases": 1620000,
+            "attempts": 4623,
+            "successes": 4566
+          }
+        },
+        {
+          "day": 116,
+          "cash": 24582564161,
+          "xp": 1725660,
+          "rank": "The Godfather",
+          "distinctions": 4,
+          "totals": {
+            "crimeGross": 24578212040,
+            "fines": 524445,
+            "ammo": 1922000,
+            "daily": 4350000,
+            "passive": 4063566,
+            "purchases": 1620000,
+            "attempts": 4666,
+            "successes": 4609
+          }
+        },
+        {
+          "day": 117,
+          "cash": 25345550066,
+          "xp": 1743460,
+          "rank": "The Godfather",
+          "distinctions": 4,
+          "totals": {
+            "crimeGross": 25341096229,
+            "fines": 524445,
+            "ammo": 1942000,
+            "daily": 4387500,
+            "passive": 4147782,
+            "purchases": 1620000,
+            "attempts": 4710,
+            "successes": 4653
+          }
+        },
+        {
+          "day": 118,
+          "cash": 26261940434,
+          "xp": 1763220,
+          "rank": "The Godfather",
+          "distinctions": 4,
+          "totals": {
+            "crimeGross": 26257384881,
+            "fines": 524445,
+            "ammo": 1962000,
+            "daily": 4425000,
+            "passive": 4231998,
+            "purchases": 1620000,
+            "attempts": 4753,
+            "successes": 4696
+          }
+        },
+        {
+          "day": 119,
+          "cash": 27146805800,
+          "xp": 1782980,
+          "rank": "The Godfather",
+          "distinctions": 4,
+          "totals": {
+            "crimeGross": 27142147531,
+            "fines": 524445,
+            "ammo": 1981000,
+            "daily": 4462500,
+            "passive": 4316214,
+            "purchases": 1620000,
+            "attempts": 4796,
+            "successes": 4739
+          }
+        },
+        {
+          "day": 120,
+          "cash": 27831827797,
+          "xp": 1798980,
+          "rank": "The Godfather",
+          "distinctions": 4,
+          "totals": {
+            "crimeGross": 27827067812,
+            "fines": 524445,
+            "ammo": 2001000,
+            "daily": 4500000,
+            "passive": 4400430,
+            "purchases": 1620000,
+            "attempts": 4840,
+            "successes": 4783
+          }
+        },
+        {
+          "day": 121,
+          "cash": 28599683336,
+          "xp": 1816700,
+          "rank": "The Godfather",
+          "distinctions": 4,
+          "totals": {
+            "crimeGross": 28594820635,
+            "fines": 524445,
+            "ammo": 2020000,
+            "daily": 4537500,
+            "passive": 4484646,
+            "purchases": 1620000,
+            "attempts": 4884,
+            "successes": 4827
+          }
+        },
+        {
+          "day": 122,
+          "cash": 29969714523,
+          "xp": 1842580,
+          "rank": "The Godfather",
+          "distinctions": 5,
+          "totals": {
+            "crimeGross": 29964751602,
+            "fines": 524445,
+            "ammo": 2042000,
+            "daily": 4575000,
+            "passive": 4569366,
+            "purchases": 1620000,
+            "attempts": 4930,
+            "successes": 4873
+          }
+        },
+        {
+          "day": 123,
+          "cash": 30876566590,
+          "xp": 1860620,
+          "rank": "The Godfather",
+          "distinctions": 5,
+          "totals": {
+            "crimeGross": 30871495857,
+            "fines": 524445,
+            "ammo": 2062000,
+            "daily": 4612500,
+            "passive": 4659678,
+            "purchases": 1620000,
+            "attempts": 4974,
+            "successes": 4917
+          }
+        },
+        {
+          "day": 124,
+          "cash": 31883978913,
+          "xp": 1880420,
+          "rank": "The Godfather",
+          "distinctions": 5,
+          "totals": {
+            "crimeGross": 31878800369,
+            "fines": 524445,
+            "ammo": 2082000,
+            "daily": 4650000,
+            "passive": 4749989,
+            "purchases": 1620000,
+            "attempts": 5018,
+            "successes": 4961
+          }
+        },
+        {
+          "day": 125,
+          "cash": 32899749758,
+          "xp": 1900100,
+          "rank": "The Godfather",
+          "distinctions": 5,
+          "totals": {
+            "crimeGross": 32894463402,
+            "fines": 524445,
+            "ammo": 2102000,
+            "daily": 4687500,
+            "passive": 4840301,
+            "purchases": 1620000,
+            "attempts": 5062,
+            "successes": 5005
+          }
+        },
+        {
+          "day": 126,
+          "cash": 33770276819,
+          "xp": 1917740,
+          "rank": "The Godfather",
+          "distinctions": 5,
+          "totals": {
+            "crimeGross": 33764882651,
+            "fines": 524445,
+            "ammo": 2122000,
+            "daily": 4725000,
+            "passive": 4930613,
+            "purchases": 1620000,
+            "attempts": 5106,
+            "successes": 5049
+          }
+        },
+        {
+          "day": 127,
+          "cash": 34650228450,
+          "xp": 1935780,
+          "rank": "The Godfather",
+          "distinctions": 5,
+          "totals": {
+            "crimeGross": 34644726471,
+            "fines": 524445,
+            "ammo": 2142000,
+            "daily": 4762500,
+            "passive": 5020924,
+            "purchases": 1620000,
+            "attempts": 5150,
+            "successes": 5093
+          }
+        },
+        {
+          "day": 128,
+          "cash": 36624096744,
+          "xp": 1969580,
+          "rank": "The Godfather",
+          "distinctions": 6,
+          "totals": {
+            "crimeGross": 36618505690,
+            "fines": 524445,
+            "ammo": 2181000,
+            "daily": 4800000,
+            "passive": 5111499,
+            "purchases": 1620000,
+            "attempts": 5209,
+            "successes": 5152
+          }
+        },
+        {
+          "day": 129,
+          "cash": 37742367739,
+          "xp": 1988380,
+          "rank": "The Godfather",
+          "distinctions": 6,
+          "totals": {
+            "crimeGross": 37736663336,
+            "fines": 524445,
+            "ammo": 2202000,
+            "daily": 4837500,
+            "passive": 5208348,
+            "purchases": 1620000,
+            "attempts": 5253,
+            "successes": 5196
+          }
+        },
+        {
+          "day": 130,
+          "cash": 38800810530,
+          "xp": 2006820,
+          "rank": "The Godfather",
+          "distinctions": 6,
+          "totals": {
+            "crimeGross": 38794991779,
+            "fines": 524445,
+            "ammo": 2222000,
+            "daily": 4875000,
+            "passive": 5305196,
+            "purchases": 1620000,
+            "attempts": 5297,
+            "successes": 5240
+          }
+        },
+        {
+          "day": 131,
+          "cash": 39846550891,
+          "xp": 2025060,
+          "rank": "The Godfather",
+          "distinctions": 6,
+          "totals": {
+            "crimeGross": 39840618791,
+            "fines": 524445,
+            "ammo": 2243000,
+            "daily": 4912500,
+            "passive": 5402045,
+            "purchases": 1620000,
+            "attempts": 5342,
+            "successes": 5285
+          }
+        },
+        {
+          "day": 132,
+          "cash": 40958123538,
+          "xp": 2043620,
+          "rank": "The Godfather",
+          "distinctions": 6,
+          "totals": {
+            "crimeGross": 40952078090,
+            "fines": 524445,
+            "ammo": 2264000,
+            "daily": 4950000,
+            "passive": 5498893,
+            "purchases": 1620000,
+            "attempts": 5386,
+            "successes": 5329
+          }
+        },
+        {
+          "day": 133,
+          "cash": 41964653090,
+          "xp": 2060820,
+          "rank": "The Godfather",
+          "distinctions": 6,
+          "totals": {
+            "crimeGross": 41958494293,
+            "fines": 524445,
+            "ammo": 2285000,
+            "daily": 4987500,
+            "passive": 5595742,
+            "purchases": 1620000,
+            "attempts": 5430,
+            "successes": 5373
+          }
+        },
+        {
+          "day": 134,
+          "cash": 43049730335,
+          "xp": 2079460,
+          "rank": "The Godfather",
+          "distinctions": 6,
+          "totals": {
+            "crimeGross": 43043457190,
+            "fines": 524445,
+            "ammo": 2305000,
+            "daily": 5025000,
+            "passive": 5692590,
+            "purchases": 1620000,
+            "attempts": 5474,
+            "successes": 5417
+          }
+        },
+        {
+          "day": 135,
+          "cash": 45039701165,
+          "xp": 2109820,
+          "rank": "The Godfather",
+          "distinctions": 7,
+          "totals": {
+            "crimeGross": 45033326141,
+            "fines": 524445,
+            "ammo": 2338000,
+            "daily": 5062500,
+            "passive": 5789969,
+            "purchases": 1620000,
+            "attempts": 5528,
+            "successes": 5471
+          }
+        },
+        {
+          "day": 136,
+          "cash": 46237208519,
+          "xp": 2127340,
+          "rank": "The Godfather",
+          "distinctions": 7,
+          "totals": {
+            "crimeGross": 46230713136,
+            "fines": 524445,
+            "ammo": 2359000,
+            "daily": 5100000,
+            "passive": 5893828,
+            "purchases": 1620000,
+            "attempts": 5573,
+            "successes": 5516
+          }
+        },
+        {
+          "day": 137,
+          "cash": 47527119742,
+          "xp": 2146620,
+          "rank": "The Godfather",
+          "distinctions": 7,
+          "totals": {
+            "crimeGross": 47520504001,
+            "fines": 524445,
+            "ammo": 2380000,
+            "daily": 5137500,
+            "passive": 5997686,
+            "purchases": 1620000,
+            "attempts": 5618,
+            "successes": 5561
+          }
+        },
+        {
+          "day": 138,
+          "cash": 48807805527,
+          "xp": 2165620,
+          "rank": "The Godfather",
+          "distinctions": 7,
+          "totals": {
+            "crimeGross": 48801069427,
+            "fines": 524445,
+            "ammo": 2401000,
+            "daily": 5175000,
+            "passive": 6101545,
+            "purchases": 1620000,
+            "attempts": 5663,
+            "successes": 5606
+          }
+        },
+        {
+          "day": 139,
+          "cash": 49933991633,
+          "xp": 2182860,
+          "rank": "The Godfather",
+          "distinctions": 7,
+          "totals": {
+            "crimeGross": 49927135175,
+            "fines": 524445,
+            "ammo": 2422000,
+            "daily": 5212500,
+            "passive": 6205403,
+            "purchases": 1620000,
+            "attempts": 5708,
+            "successes": 5651
+          }
+        },
+        {
+          "day": 140,
+          "cash": 51139459992,
+          "xp": 2200100,
+          "rank": "The Godfather",
+          "distinctions": 7,
+          "totals": {
+            "crimeGross": 51132482175,
+            "fines": 524445,
+            "ammo": 2442000,
+            "daily": 5250000,
+            "passive": 6309262,
+            "purchases": 1620000,
+            "attempts": 5753,
+            "successes": 5696
+          }
+        },
+        {
+          "day": 141,
+          "cash": 52269353816,
+          "xp": 2217620,
+          "rank": "The Godfather",
+          "distinctions": 7,
+          "totals": {
+            "crimeGross": 52262256641,
+            "fines": 524445,
+            "ammo": 2464000,
+            "daily": 5287500,
+            "passive": 6413120,
+            "purchases": 1620000,
+            "attempts": 5798,
+            "successes": 5741
+          }
+        },
+        {
+          "day": 142,
+          "cash": 54148796535,
+          "xp": 2242180,
+          "rank": "The Godfather",
+          "distinctions": 8,
+          "totals": {
+            "crimeGross": 54141587417,
+            "fines": 524445,
+            "ammo": 2494000,
+            "daily": 5325000,
+            "passive": 6517563,
+            "purchases": 1620000,
+            "attempts": 5850,
+            "successes": 5793
+          }
+        },
+        {
+          "day": 143,
+          "cash": 55471559960,
+          "xp": 2259540,
+          "rank": "The Godfather",
+          "distinctions": 8,
+          "totals": {
+            "crimeGross": 55464222966,
+            "fines": 524445,
+            "ammo": 2515000,
+            "daily": 5362500,
+            "passive": 6628939,
+            "purchases": 1620000,
+            "attempts": 5895,
+            "successes": 5838
+          }
+        },
+        {
+          "day": 144,
+          "cash": 56768794347,
+          "xp": 2276900,
+          "rank": "The Godfather",
+          "distinctions": 8,
+          "totals": {
+            "crimeGross": 56761330477,
+            "fines": 524445,
+            "ammo": 2537000,
+            "daily": 5400000,
+            "passive": 6740315,
+            "purchases": 1620000,
+            "attempts": 5940,
+            "successes": 5883
+          }
+        },
+        {
+          "day": 145,
+          "cash": 58262634163,
+          "xp": 2296020,
+          "rank": "The Godfather",
+          "distinctions": 8,
+          "totals": {
+            "crimeGross": 58255042418,
+            "fines": 524445,
+            "ammo": 2558000,
+            "daily": 5437500,
+            "passive": 6851690,
+            "purchases": 1620000,
+            "attempts": 5985,
+            "successes": 5928
+          }
+        },
+        {
+          "day": 146,
+          "cash": 59846130414,
+          "xp": 2316100,
+          "rank": "The Godfather",
+          "distinctions": 8,
+          "totals": {
+            "crimeGross": 59838411793,
+            "fines": 524445,
+            "ammo": 2580000,
+            "daily": 5475000,
+            "passive": 6963066,
+            "purchases": 1620000,
+            "attempts": 6030,
+            "successes": 5973
+          }
+        },
+        {
+          "day": 147,
+          "cash": 61261134721,
+          "xp": 2335460,
+          "rank": "The Godfather",
+          "distinctions": 8,
+          "totals": {
+            "crimeGross": 61253288224,
+            "fines": 524445,
+            "ammo": 2601000,
+            "daily": 5512500,
+            "passive": 7074442,
+            "purchases": 1620000,
+            "attempts": 6075,
+            "successes": 6018
+          }
+        },
+        {
+          "day": 148,
+          "cash": 62603992534,
+          "xp": 2353140,
+          "rank": "The Godfather",
+          "distinctions": 8,
+          "totals": {
+            "crimeGross": 62596019161,
+            "fines": 524445,
+            "ammo": 2623000,
+            "daily": 5550000,
+            "passive": 7185818,
+            "purchases": 1620000,
+            "attempts": 6120,
+            "successes": 6063
+          }
+        },
+        {
+          "day": 149,
+          "cash": 64740325129,
+          "xp": 2377540,
+          "rank": "The Godfather",
+          "distinctions": 9,
+          "totals": {
+            "crimeGross": 64732233253,
+            "fines": 524445,
+            "ammo": 2654000,
+            "daily": 5587500,
+            "passive": 7297821,
+            "purchases": 1620000,
+            "attempts": 6172,
+            "successes": 6115
+          }
+        },
+        {
+          "day": 150,
+          "cash": 66489996024,
+          "xp": 2396580,
+          "rank": "The Godfather",
+          "distinctions": 9,
+          "totals": {
+            "crimeGross": 66481769211,
+            "fines": 524445,
+            "ammo": 2676000,
+            "daily": 5625000,
+            "passive": 7417258,
+            "purchases": 1620000,
+            "attempts": 6217,
+            "successes": 6160
+          }
+        },
+        {
+          "day": 151,
+          "cash": 68101799875,
+          "xp": 2414500,
+          "rank": "The Godfather",
+          "distinctions": 9,
+          "totals": {
+            "crimeGross": 68093438125,
+            "fines": 524445,
+            "ammo": 2698000,
+            "daily": 5662500,
+            "passive": 7536695,
+            "purchases": 1620000,
+            "attempts": 6262,
+            "successes": 6205
+          }
+        },
+        {
+          "day": 152,
+          "cash": 69696885359,
+          "xp": 2432500,
+          "rank": "The Godfather",
+          "distinctions": 9,
+          "totals": {
+            "crimeGross": 69688387672,
+            "fines": 524445,
+            "ammo": 2719000,
+            "daily": 5700000,
+            "passive": 7656132,
+            "purchases": 1620000,
+            "attempts": 6307,
+            "successes": 6250
+          }
+        },
+        {
+          "day": 153,
+          "cash": 71370039231,
+          "xp": 2452060,
+          "rank": "The Godfather",
+          "distinctions": 9,
+          "totals": {
+            "crimeGross": 71361406607,
+            "fines": 524445,
+            "ammo": 2741000,
+            "daily": 5737500,
+            "passive": 7775569,
+            "purchases": 1620000,
+            "attempts": 6353,
+            "successes": 6296
+          }
+        },
+        {
+          "day": 154,
+          "cash": 72994090060,
+          "xp": 2469620,
+          "rank": "The Godfather",
+          "distinctions": 9,
+          "totals": {
+            "crimeGross": 72985322498,
+            "fines": 524445,
+            "ammo": 2763000,
+            "daily": 5775000,
+            "passive": 7895007,
+            "purchases": 1620000,
+            "attempts": 6398,
+            "successes": 6341
+          }
+        },
+        {
+          "day": 155,
+          "cash": 76700288570,
+          "xp": 2506940,
+          "rank": "The Godfather",
+          "distinctions": 10,
+          "totals": {
+            "crimeGross": 76691395999,
+            "fines": 524445,
+            "ammo": 2795000,
+            "daily": 5812500,
+            "passive": 8014516,
+            "purchases": 1620000,
+            "attempts": 6452,
+            "successes": 6395
+          }
+        },
+        {
+          "day": 156,
+          "cash": 78557656857,
+          "xp": 2525300,
+          "rank": "The Godfather",
+          "distinctions": 10,
+          "totals": {
+            "crimeGross": 78548621704,
+            "fines": 524445,
+            "ammo": 2818000,
+            "daily": 5850000,
+            "passive": 8142598,
+            "purchases": 1620000,
+            "attempts": 6498,
+            "successes": 6441
+          }
+        },
+        {
+          "day": 157,
+          "cash": 80584556795,
+          "xp": 2544700,
+          "rank": "The Godfather",
+          "distinctions": 10,
+          "totals": {
+            "crimeGross": 80575379060,
+            "fines": 524445,
+            "ammo": 2841000,
+            "daily": 5887500,
+            "passive": 8270680,
+            "purchases": 1620000,
+            "attempts": 6544,
+            "successes": 6487
+          }
+        },
+        {
+          "day": 158,
+          "cash": 82600520434,
+          "xp": 2564460,
+          "rank": "The Godfather",
+          "distinctions": 10,
+          "totals": {
+            "crimeGross": 82591199117,
+            "fines": 524445,
+            "ammo": 2863000,
+            "daily": 5925000,
+            "passive": 8398762,
+            "purchases": 1620000,
+            "attempts": 6589,
+            "successes": 6532
+          }
+        },
+        {
+          "day": 159,
+          "cash": 84611140421,
+          "xp": 2584580,
+          "rank": "The Godfather",
+          "distinctions": 10,
+          "totals": {
+            "crimeGross": 84601675522,
+            "fines": 524445,
+            "ammo": 2885000,
+            "daily": 5962500,
+            "passive": 8526844,
+            "purchases": 1620000,
+            "attempts": 6635,
+            "successes": 6578
+          }
+        },
+        {
+          "day": 160,
+          "cash": 86696198547,
+          "xp": 2604220,
+          "rank": "The Godfather",
+          "distinctions": 10,
+          "totals": {
+            "crimeGross": 86686591065,
+            "fines": 524445,
+            "ammo": 2908000,
+            "daily": 6000000,
+            "passive": 8654927,
+            "purchases": 1620000,
+            "attempts": 6681,
+            "successes": 6624
+          }
+        },
+        {
+          "day": 161,
+          "cash": 88749608922,
+          "xp": 2624180,
+          "rank": "The Godfather",
+          "distinctions": 10,
+          "totals": {
+            "crimeGross": 88739857858,
+            "fines": 524445,
+            "ammo": 2930000,
+            "daily": 6037500,
+            "passive": 8783009,
+            "purchases": 1620000,
+            "attempts": 6727,
+            "successes": 6670
+          }
+        },
+        {
+          "day": 162,
+          "cash": 91856227347,
+          "xp": 2650300,
+          "rank": "The Godfather",
+          "distinctions": 11,
+          "totals": {
+            "crimeGross": 91846336948,
+            "fines": 524445,
+            "ammo": 2957000,
+            "daily": 6075000,
+            "passive": 8911844,
+            "purchases": 1620000,
+            "attempts": 6776,
+            "successes": 6719
+          }
+        },
+        {
+          "day": 163,
+          "cash": 94007198320,
+          "xp": 2668620,
+          "rank": "The Godfather",
+          "distinctions": 11,
+          "totals": {
+            "crimeGross": 93997156068,
+            "fines": 524445,
+            "ammo": 2980000,
+            "daily": 6112500,
+            "passive": 9049197,
+            "purchases": 1620000,
+            "attempts": 6822,
+            "successes": 6765
+          }
+        },
+        {
+          "day": 164,
+          "cash": 96667369766,
+          "xp": 2690620,
+          "rank": "The Godfather",
+          "distinctions": 11,
+          "totals": {
+            "crimeGross": 96657175661,
+            "fines": 524445,
+            "ammo": 3003000,
+            "daily": 6150000,
+            "passive": 9186550,
+            "purchases": 1620000,
+            "attempts": 6868,
+            "successes": 6811
+          }
+        },
+        {
+          "day": 165,
+          "cash": 99659394158,
+          "xp": 2714380,
+          "rank": "The Godfather",
+          "distinctions": 11,
+          "totals": {
+            "crimeGross": 99649048200,
+            "fines": 524445,
+            "ammo": 3026000,
+            "daily": 6187500,
+            "passive": 9323903,
+            "purchases": 1620000,
+            "attempts": 6914,
+            "successes": 6857
+          }
+        },
+        {
+          "day": 166,
+          "cash": 101844712398,
+          "xp": 2732860,
+          "rank": "The Godfather",
+          "distinctions": 11,
+          "totals": {
+            "crimeGross": 101834213588,
+            "fines": 524445,
+            "ammo": 3048000,
+            "daily": 6225000,
+            "passive": 9461255,
+            "purchases": 1620000,
+            "attempts": 6960,
+            "successes": 6903
+          }
+        },
+        {
+          "day": 167,
+          "cash": 104156327282,
+          "xp": 2752980,
+          "rank": "The Godfather",
+          "distinctions": 11,
+          "totals": {
+            "crimeGross": 104145676619,
+            "fines": 524445,
+            "ammo": 3071000,
+            "daily": 6262500,
+            "passive": 9598608,
+            "purchases": 1620000,
+            "attempts": 7006,
+            "successes": 6949
+          }
+        },
+        {
+          "day": 168,
+          "cash": 108197827277,
+          "xp": 2784180,
+          "rank": "The Godfather",
+          "distinctions": 12,
+          "totals": {
+            "crimeGross": 108187039029,
+            "fines": 524445,
+            "ammo": 3109000,
+            "daily": 6300000,
+            "passive": 9736693,
+            "purchases": 1620000,
+            "attempts": 7064,
+            "successes": 7007
+          }
+        },
+        {
+          "day": 169,
+          "cash": 110721662494,
+          "xp": 2803340,
+          "rank": "The Godfather",
+          "distinctions": 12,
+          "totals": {
+            "crimeGross": 110710713452,
+            "fines": 524445,
+            "ammo": 3133000,
+            "daily": 6337500,
+            "passive": 9883987,
+            "purchases": 1620000,
+            "attempts": 7110,
+            "successes": 7053
+          }
+        },
+        {
+          "day": 170,
+          "cash": 113205386103,
+          "xp": 2822180,
+          "rank": "The Godfather",
+          "distinctions": 12,
+          "totals": {
+            "crimeGross": 113194275266,
+            "fines": 524445,
+            "ammo": 3156000,
+            "daily": 6375000,
+            "passive": 10031282,
+            "purchases": 1620000,
+            "attempts": 7156,
+            "successes": 7099
+          }
+        },
+        {
+          "day": 171,
+          "cash": 115973599641,
+          "xp": 2842540,
+          "rank": "The Godfather",
+          "distinctions": 12,
+          "totals": {
+            "crimeGross": 115962327010,
+            "fines": 524445,
+            "ammo": 3179000,
+            "daily": 6412500,
+            "passive": 10178576,
+            "purchases": 1620000,
+            "attempts": 7203,
+            "successes": 7146
+          }
+        },
+        {
+          "day": 172,
+          "cash": 119002339795,
+          "xp": 2864420,
+          "rank": "The Godfather",
+          "distinctions": 12,
+          "totals": {
+            "crimeGross": 118990905369,
+            "fines": 524445,
+            "ammo": 3202000,
+            "daily": 6450000,
+            "passive": 10325871,
+            "purchases": 1620000,
+            "attempts": 7250,
+            "successes": 7193
+          }
+        },
+        {
+          "day": 173,
+          "cash": 121789020779,
+          "xp": 2885100,
+          "rank": "The Godfather",
+          "distinctions": 12,
+          "totals": {
+            "crimeGross": 121777424559,
+            "fines": 524445,
+            "ammo": 3225000,
+            "daily": 6487500,
+            "passive": 10473165,
+            "purchases": 1620000,
+            "attempts": 7297,
+            "successes": 7240
+          }
+        },
+        {
+          "day": 174,
+          "cash": 127593583666,
+          "xp": 2922340,
+          "rank": "The Godfather",
+          "distinctions": 13,
+          "totals": {
+            "crimeGross": 127581844896,
+            "fines": 524445,
+            "ammo": 3268000,
+            "daily": 6525000,
+            "passive": 10621215,
+            "purchases": 1620000,
+            "attempts": 7358,
+            "successes": 7301
+          }
+        },
+        {
+          "day": 175,
+          "cash": 131075867211,
+          "xp": 2944700,
+          "rank": "The Godfather",
+          "distinctions": 13,
+          "totals": {
+            "crimeGross": 131063956986,
+            "fines": 524445,
+            "ammo": 3292000,
+            "daily": 6562500,
+            "passive": 10779170,
+            "purchases": 1620000,
+            "attempts": 7405,
+            "successes": 7348
+          }
+        },
+        {
+          "day": 176,
+          "cash": 134160648380,
+          "xp": 2964260,
+          "rank": "The Godfather",
+          "distinctions": 13,
+          "totals": {
+            "crimeGross": 134148566699,
+            "fines": 524445,
+            "ammo": 3316000,
+            "daily": 6600000,
+            "passive": 10937126,
+            "purchases": 1620000,
+            "attempts": 7452,
+            "successes": 7395
+          }
+        },
+        {
+          "day": 177,
+          "cash": 137070552319,
+          "xp": 2983500,
+          "rank": "The Godfather",
+          "distinctions": 13,
+          "totals": {
+            "crimeGross": 137058299182,
+            "fines": 524445,
+            "ammo": 3340000,
+            "daily": 6637500,
+            "passive": 11095082,
+            "purchases": 1620000,
+            "attempts": 7499,
+            "successes": 7442
+          }
+        },
+        {
+          "day": 178,
+          "cash": 140001951973,
+          "xp": 3002740,
+          "rank": "The Godfather",
+          "distinctions": 13,
+          "totals": {
+            "crimeGross": 139989527380,
+            "fines": 524445,
+            "ammo": 3364000,
+            "daily": 6675000,
+            "passive": 11253038,
+            "purchases": 1620000,
+            "attempts": 7546,
+            "successes": 7489
+          }
+        },
+        {
+          "day": 179,
+          "cash": 143378102366,
+          "xp": 3023660,
+          "rank": "The Godfather",
+          "distinctions": 13,
+          "totals": {
+            "crimeGross": 143365506318,
+            "fines": 524445,
+            "ammo": 3388000,
+            "daily": 6712500,
+            "passive": 11410993,
+            "purchases": 1620000,
+            "attempts": 7593,
+            "successes": 7536
+          }
+        },
+        {
+          "day": 180,
+          "cash": 149060924891,
+          "xp": 3056580,
+          "rank": "The Godfather",
+          "distinctions": 14,
+          "totals": {
+            "crimeGross": 149048169530,
+            "fines": 524445,
+            "ammo": 3425000,
+            "daily": 6750000,
+            "passive": 11569806,
+            "purchases": 1620000,
+            "attempts": 7650,
+            "successes": 7593
+          }
+        }
+      ]
+    }
+  ],
+  "passivePayback": [
+    {
+      "rank": "Outsider",
+      "hourly": 120,
+      "hours": 1000
+    },
+    {
+      "rank": "Associate",
+      "hourly": 196,
+      "hours": 611.4338376810797
+    },
+    {
+      "rank": "The Godfather",
+      "hourly": 2845,
+      "hours": 42.17394135542917
+    }
+  ]
+}

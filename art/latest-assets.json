@@ -1,0 +1,15 @@
+{
+  "mode": "built-in image_gen",
+  "selected": [
+    {
+      "file": "public/images/garage-collector.jpg",
+      "source": "exec-d1c1286c-fdfa-49e0-a22e-a22c6572f799.png",
+      "prompt": "Photorealistic cinematic luxury architectural photograph of a private collector underground garage, elegant unbranded sports cars, polished black stone and warm brass interior, warm lighting, no text, no logos, no people, landscape 3:2."
+    },
+    {
+      "file": "public/images/helicopter-obsidian-v2.jpg",
+      "source": "exec-c1374360-25bc-4e37-9f1c-00c88943a73e.png",
+      "note": "Corrected helicopter illustration replacing the unused aircraft outtake; prompt in image-prompts.json."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+# Territory artwork
+
+Generated with the built-in imagegen tool on 11 October 2026. Photorealistic landscape artwork; no reference images. JPEG delivery copies are in public/images/territory-{block,district,harbor}.jpg. Original generated PNG files remain in the Codex generated_images folder.
+
+## block
+
+Use case: photorealistic-natural. Asset type: landscape 3:2 collectible territory card artwork for Mafia: The New Era, premium 2026 browser game. Cinematic realistic architectural photography, dark charcoal and warm amber palette, blue hour, rich realistic detail, legible silhouette when shown small, no lettering, logos, borders, UI, maps or watermark. This is a whole district under a family's influence, NOT a single house, villa, mansion or luxury property product shot. Subject: Street block territory. Elevated oblique view from a rooftop over a complete dense urban street block, several intersecting narrow streets, multiple weathered brick mixed-use buildings, ground floor shops and corner diner, fire escapes, glowing storefront windows, wet asphalt reflecting amber streetlights, parked everyday cars, understated gritty city atmosphere. Show the whole block and its intersections, realistic present-day large international city. No prominent people or weapons.
+
+## district
+
+Use case: photorealistic-natural. Asset type: landscape 3:2 collectible territory card artwork for Mafia: The New Era, premium 2026 browser game. Cinematic realistic architectural photography, dark charcoal and warm amber palette, blue hour, rich realistic detail, legible silhouette when shown small, no lettering, logos, borders, UI, maps or watermark. This is a whole district under a family's influence, NOT a single house, villa, mansion or luxury property product shot. Subject: Commercial district territory. Wide elevated oblique view of several blocks in a modern metropolitan business and retail district, multiple office towers of different heights, busy illuminated shopping avenues, banks and commercial storefronts with no readable logos, a central intersection, restrained traffic and warm lights. Clearly a large organized affluent commercial district, modern 2026 architecture, realistic city geography, monumental but believable scale. No foreground house, no prominent people or weapons.
+
+## harbor
+
+Use case: photorealistic-natural. Asset type: landscape 3:2 collectible territory card artwork for Mafia: The New Era, premium 2026 browser game. Cinematic realistic architectural photography, dark charcoal and warm amber palette, blue hour, rich realistic detail, legible silhouette when shown small, no lettering, logos, borders, UI, maps or watermark. This is a whole district under a family's influence, NOT a single house, villa, mansion or luxury property product shot. Subject: Harbor territory. Wide elevated oblique aerial photograph over a vast working international cargo port at dusk: container terminals with orderly colored container stacks, tall gantry cranes, a large container ship moored at the quay, warehouses, freight roads, a breakwater and dark water reflecting amber industrial lights. City skyline small in distance, realistically connected working logistics infrastructure. Industrial cargo harbor, absolutely no marina, yachts, villas or resorts. No prominent people or weapons.
+

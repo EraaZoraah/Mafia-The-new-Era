@@ -1,0 +1,106 @@
+{
+  "generator": "Built-in image_gen",
+  "date": "2026-10-14",
+  "assets": [
+    {
+      "id": "street-runner",
+      "prompt": "adult white man, age 27, handsome clean-cut face, dark tousled hair, athletic build, fitted black shirt with top button open, charcoal trousers, leather jacket held over one shoulder, wrist tattoos; rainy New York street with warm cafe lights",
+      "file": "public/images/skin-street-runner.png"
+    },
+    {
+      "id": "street-fixer",
+      "prompt": "adult woman 27, Mediterranean complexion, natural curvy hourglass figure and strong healthy build, feminine silhouette, wavy dark hair, fitted burgundy leather jacket over high-neck blouse, tailored charcoal trousers, ankle boots, one hand on hip; rainy brick street corner",
+      "file": "public/images/skin-street-fixer.png"
+    },
+    {
+      "id": "getaway-driver",
+      "prompt": "adult Black man 28, athletic build, dark driving gloves in hand, fitted navy peacoat and gray trousers, polished boots, relaxed frontal stance; a parked understated sedan outside a garage at night",
+      "file": "public/images/skin-getaway-driver.png"
+    },
+    {
+      "id": "night-driver",
+      "prompt": "Photorealistic luxury mafia game character skin, vertical full-body head to shoes portrait, front facing, 29 year old woman with curly dark hair wearing a fitted midnight blue pantsuit and ivory shirt in an elegant garage. Beautiful confident adult fashion model, elegant feminine curves, tasteful modern evening styling, natural face, subtle wrist tattoo. Opaque fully clothed outfit. Cinematic warm gold rim light, deep charcoal shadows, realistic dimensional depth and premium fashion editorial photography. Entire person visible with space above head and below shoes. No text, no watermark, no weapons.",
+      "file": "public/images/skin-night-driver.png"
+    },
+    {
+      "id": "street-broker",
+      "prompt": "adult East Asian man 30, charcoal three-piece business suit slightly worn, silver tie clip, briefcase, calm frontal pose with shoulders slightly turned; an old café doorway in 2026 New York",
+      "file": "public/images/skin-street-broker.png"
+    },
+    {
+      "id": "city-broker",
+      "prompt": "adult Latina woman 31, naturally curvy feminine figure, defined waist and rounded hips, tailored cream blazer and full-length dark wide-leg trousers, chestnut hair, subtle gold earrings, one hand holding a slim portfolio; a discreet café entrance with amber light",
+      "file": "public/images/skin-city-broker.png"
+    },
+    {
+      "id": "capo-vittorio",
+      "prompt": "adult Italian male capo 32, broad shoulders, charcoal pinstripe suit, burgundy tie, gold watch, short dark hair, stern confident gaze, hands loosely clasped; a smoky old-world billiard lounge",
+      "file": "public/images/skin-capo-vittorio.png"
+    },
+    {
+      "id": "capo-valentina",
+      "prompt": "adult female capo 33, naturally curvy hourglass figure, Mediterranean features, fitted burgundy pantsuit, black silk blouse, gold watch, long dark hair, confident one-hand-on-hip pose; a luxurious billiard lounge",
+      "file": "public/images/skin-capo-valentina.png"
+    },
+    {
+      "id": "consigliere-lorenzo",
+      "prompt": "adult male consigliere 34, thick dark hair, dark forest-green three-piece suit, fine eyeglasses, leather portfolio, dignified frontal stance; a private law library of walnut bookshelves",
+      "file": "public/images/skin-consigliere-lorenzo.png"
+    },
+    {
+      "id": "consigliere-isabella",
+      "prompt": "adult female consigliere 27, sophisticated curvy figure, healthy proportions, chestnut shoulder-length hair, ivory tailored blazer and dark floor-length trousers, discreet pearl earrings, leather portfolio in hand; a prestigious walnut law library",
+      "file": "public/images/skin-consigliere-isabella.png"
+    },
+    {
+      "id": "underboss-dante",
+      "prompt": "adult male underboss 28, olive skin, black tailored suit with open collar, subtle scar on cheek, short beard, gold ring, imposing frontal stance; a dark penthouse overlooking a neon harbor",
+      "file": "public/images/skin-underboss-dante.png"
+    },
+    {
+      "id": "underboss-bianca",
+      "prompt": "Photorealistic luxury mafia game character skin, vertical full-body head to shoes portrait, front facing, 29 year old blonde woman in an emerald midi dress and long tailored black coat in a harbor penthouse. Beautiful confident adult fashion model, elegant feminine curves, tasteful modern evening styling, natural face, subtle wrist tattoo. Opaque fully clothed outfit. Cinematic warm gold rim light, deep charcoal shadows, realistic dimensional depth and premium fashion editorial photography. Entire person visible with space above head and below shoes. No text, no watermark, no weapons.",
+      "file": "public/images/skin-underboss-bianca.png"
+    },
+    {
+      "id": "don-salvatore",
+      "prompt": "adult male Don 30, neatly trimmed dark beard, ivory double-breasted dinner jacket and black trousers, black bow tie, polished black shoes, refined commanding frontal pose; a marble villa hall with chandelier and distant sea",
+      "file": "public/images/skin-don-salvatore.png"
+    },
+    {
+      "id": "donna-francesca",
+      "prompt": "adult Donna 31, naturally curvy hourglass figure, black wavy hair , deep navy floor-length tailored evening gown with elegant modest neckline, jeweled brooch, commanding frontal stance; a marble villa hall with chandelier and sea views",
+      "file": "public/images/skin-donna-francesca.png"
+    },
+    {
+      "id": "capo-antonio",
+      "prompt": "adult male capo 32, brown skin, cropped hair, slate-blue bespoke suit, gold tie pin, dark leather shoes, slight turn at waist while facing the viewer; a high-rise private members club with amber lighting",
+      "file": "public/images/skin-capo-antonio.png"
+    },
+    {
+      "id": "capo-rosalia",
+      "prompt": "adult female capo 33, Black woman with natural curvy proportions, elegant braided updo, fitted plum double-breasted suit and full-length trousers, gold earrings, slight turn at waist while facing viewer; a high-rise private members club with amber lighting",
+      "file": "public/images/skin-capo-rosalia.png"
+    },
+    {
+      "id": "don-marcello",
+      "prompt": "adult male Don 34, East Asian features, glossy dark hair, rich black velvet tuxedo, burgundy pocket square, black polished shoes, one hand adjusting cuff; an exclusive coastal compound lobby with carved doors",
+      "file": "public/images/skin-don-marcello.png"
+    },
+    {
+      "id": "donna-caterina",
+      "prompt": "Photorealistic luxury mafia game character skin, vertical full-body head to shoes portrait, front facing, 30 year old auburn haired Latina woman in an ivory floor-length evening gown with cape sleeves in a coastal mansion lobby. Beautiful confident adult fashion model, elegant feminine curves, tasteful modern evening styling, natural face, subtle wrist tattoo. Opaque fully clothed outfit. Cinematic warm gold rim light, deep charcoal shadows, realistic dimensional depth and premium fashion editorial photography. Entire person visible with space above head and below shoes. No text, no watermark, no weapons.",
+      "file": "public/images/skin-donna-caterina.png"
+    },
+    {
+      "id": "godfather",
+      "prompt": "Full-body photorealistic attractive Caucasian mafia leader age 33, tattoos, luxury clothing, cinematic gold light, frontal pose, background.",
+      "file": "public/images/skin-godfather.png"
+    },
+    {
+      "id": "godmother",
+      "prompt": "Full-body photorealistic attractive Caucasian mafia leader age 33, tattoos, luxury clothing, cinematic gold light, frontal pose, background.",
+      "file": "public/images/skin-godmother.png"
+    }
+  ]
+}
