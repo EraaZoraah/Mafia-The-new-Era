@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.18.4 · 2026-10-18
+
+- Restore the opening-page fade and prevent the background image from repeating.
+
+
 ## 1.18.3 · 2026-10-18
 
 - Stop personal passive cash at 24 active earning hours until full collection.
