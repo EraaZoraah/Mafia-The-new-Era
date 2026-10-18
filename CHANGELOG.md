@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.18.6 · 2026-10-18
+
+- Give Sunday Funday its own popup artwork and recover gracefully from missing notification images.
+
+
 ## 1.18.5 · 2026-10-18
 
 - Enlarge login and registration backgrounds, restore their fade and improve form contrast.

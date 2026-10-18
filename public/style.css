@@ -283,3 +283,5 @@ footer,.footer,.sidebarfoot{color:#d8c190!important;text-align:center;line-heigh
 /* All heraldic designs occupy the same complete silhouette box. */
 .family-crest.illustrated-crest{box-sizing:border-box;flex-shrink:0;aspect-ratio:16/19;padding:0;overflow:visible}.family-crest.illustrated-crest>img{display:block;flex:none;width:100%;height:100%;max-width:none;max-height:none;object-fit:fill}.crest-choices .illustrated-crest{width:112px;min-width:112px;height:133px}.crest-choices label{width:144px;box-sizing:border-box}.family-summary>.illustrated-crest{width:140px;height:166px}.family-hero-identity>.illustrated-crest{width:180px;min-width:180px;height:214px}.family-directory-card>.illustrated-crest{width:90px;min-width:90px;height:107px}@media(max-width:600px){.family-hero-identity>.illustrated-crest,.family-summary>.illustrated-crest{width:112px;min-width:112px;height:133px}}
 .family-crest.illustrated-crest>svg{display:block;width:100%;height:100%;filter:none;flex:none;overflow:hidden}
+
+.outcome-dialog.outcome-full-art .mystery-image{height:auto;aspect-ratio:16/9;object-fit:contain;background:#10171d}

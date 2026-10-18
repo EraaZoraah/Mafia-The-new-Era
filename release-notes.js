@@ -1,5 +1,7 @@
 // Historical 0.1.x milestone versions were assigned retrospectively. Keep published versions immutable.
 export const releaseNotes=[
+{"id":"2026-10-18-release-1.18.6","announce":false,"date":"2026-10-18","title":"Sunday Funday artwork","items":["Sunday Funday now has its own popup artwork, with a fallback for unavailable notification images."]},
+
 {"id":"2026-10-18-release-1.18.5","announce":false,"date":"2026-10-18","title":"Login & registration","items":["Login and registration have larger full-page backgrounds with a soft fade and clearer form fields."]},
 
 {"id":"2026-10-18-release-1.18.4","announce":false,"date":"2026-10-18","title":"Welcome screen","items":["The opening page uses one continuous background with a restored fade for readable text."]},

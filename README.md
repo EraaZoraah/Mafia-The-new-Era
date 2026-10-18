@@ -1,11 +1,13 @@
 <!-- Current deployment note -->
-**1.18.5 installation:** run `npm ci` in this folder before `npm start`. The implemented referral event is documented in [REFERRAL-BETA.md](REFERRAL-BETA.md). Optional push configuration and the original historical proposal are documented in [ART-HEISTS-AND-PUSH.md](ART-HEISTS-AND-PUSH.md). Preserve your existing data folder and server environment.
+**1.18.6 installation:** run `npm ci` in this folder before `npm start`. The implemented referral event is documented in [REFERRAL-BETA.md](REFERRAL-BETA.md). Optional push configuration and the original historical proposal are documented in [ART-HEISTS-AND-PUSH.md](ART-HEISTS-AND-PUSH.md). Preserve your existing data folder and server environment.
 
 # Mafia: The New Era
 
-Current version: **1.18.5**, build `2026-10-18-release-1.18.5`. See [OCTOBER-17-REFINEMENTS.md](OCTOBER-17-REFINEMENTS.md), [VERSIONING.md](VERSIONING.md) and [CHANGELOG.md](CHANGELOG.md).
+Current version: **1.18.6**, build `2026-10-18-release-1.18.6`. See [OCTOBER-17-REFINEMENTS.md](OCTOBER-17-REFINEMENTS.md), [VERSIONING.md](VERSIONING.md) and [CHANGELOG.md](CHANGELOG.md).
 
-## Current corrections — 1.18.5
+## Current corrections — 1.18.6
+
+Sunday Funday uses dedicated popup artwork from the calendar response, with a standard notice-image fallback if artwork fails to load.
 
 Login and registration use dedicated full-page artwork, a gradient fade and a dark bordered form with high-contrast labels and input focus. Both pages keep one non-repeating background.
 
@@ -15,7 +17,7 @@ Personal business and employee cash accrues for at most 24 active earning hours 
 
 English is default; Dutch is available above Log out. French/German/Spanish are Coming soon. Luca reads the updated rules/catalogs and account state in English and Dutch. Ranks, player-authored content, dollars and numeric punctuation remain unchanged.
 
-Patch changelogs 1.18.1 through 1.18.5 are included in the in-game news page without new-feature announcements. Device push remains explicitly paused (`PUSH_ENABLED` defaults off), even if VAPID keys exist. See [FUTURE-WORK.md](FUTURE-WORK.md); activate only after a later user request and real-device tests.
+Patch changelogs 1.18.1 through 1.18.6 are included in the in-game news page without new-feature announcements. Device push remains explicitly paused (`PUSH_ENABLED` defaults off), even if VAPID keys exist. See [FUTURE-WORK.md](FUTURE-WORK.md); activate only after a later user request and real-device tests.
 
 Current menu, costs, limits and game rules supersede the historical release sections below. The source catalogs are authoritative.
 
