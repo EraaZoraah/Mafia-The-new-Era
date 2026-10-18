@@ -1,0 +1,24 @@
+# Build-context allowlist. Private starter data must never reach a public image.
+**
+!package.json
+!package-lock.json
+!/*.js
+!public/
+!public/**
+!docker/
+!docker/**
+# Explicit exclusions also protect against future allowlist changes.
+**/node_modules
+**/.git
+**/.env
+**/.env.*
+**/.npmrc
+**/*.pem
+**/*.key
+**/*.sqlite*
+**/*.db
+**/*.db-*
+starter-data/
+data/
+backups/
+secrets/

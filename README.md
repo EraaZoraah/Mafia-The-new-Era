@@ -3,6 +3,9 @@
 
 # Mafia: The New Era
 
+For versioned GHCR images and safe Portainer re-pull updates, see [DEPLOYMENT.md](DEPLOYMENT.md) and [compose.yml](compose.yml).
+The source repository stays private; public images exclude the private starter database.
+
 Current version: **1.18.6**, build `2026-10-18-release-1.18.6`. See [OCTOBER-17-REFINEMENTS.md](OCTOBER-17-REFINEMENTS.md), [VERSIONING.md](VERSIONING.md) and [CHANGELOG.md](CHANGELOG.md).
 
 ## Current corrections — 1.18.6

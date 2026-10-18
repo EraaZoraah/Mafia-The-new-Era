@@ -1,0 +1,33 @@
+services:
+  mafia:
+    image: ${MAFIA_IMAGE:?Set MAFIA_IMAGE to the successfully published GHCR version}
+    pull_policy: always
+    container_name: mafia
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: "3000"
+      PUBLIC_ORIGIN: ${PUBLIC_ORIGIN:?Set PUBLIC_ORIGIN to the existing HTTPS site origin}
+      REQUIRE_EXISTING_DATABASE: "true"
+      PUSH_ENABLED: "false"
+    volumes:
+      - type: bind
+        source: /opt/docker/mafia-the-new-era/data
+        target: /app/data
+        bind:
+          create_host_path: false
+    networks:
+      - proxy
+    labels:
+      com.centurylinklabs.watchtower.enable: "false"
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test: ["CMD", "node", "/app/docker/healthcheck.mjs"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+networks:
+  proxy:
+    external: true
