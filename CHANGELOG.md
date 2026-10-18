@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.18.5 · 2026-10-18
+
+- Enlarge login and registration backgrounds, restore their fade and improve form contrast.
+- Keep each authentication screen to one non-repeating photo across desktop and mobile layouts.
+
+
 ## 1.18.4 · 2026-10-18
 
 - Restore the opening-page fade and prevent the background image from repeating.

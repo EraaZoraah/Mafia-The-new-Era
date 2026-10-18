@@ -197,7 +197,13 @@ footer,.footer,.sidebarfoot{color:#d8c190!important;text-align:center;line-heigh
 
 .image-wrap:has(>.family-crest){display:flex;align-items:center;justify-content:center;background:#111c24}.image-wrap>.family-crest{width:120px;height:160px}
 
-.auth.auth-login .hero{background-image:url('/images/page-login.png')}.auth.auth-register .hero{background-image:url('/images/page-register.png')}.auth .hero p,.auth .hero .eyebrow{text-shadow:0 2px 6px #000}
+/* Full-page auth artwork with a protected, readable form. */
+.auth.auth-login{--auth-scene:url('/images/page-login.png')}.auth.auth-register{--auth-scene:url('/images/page-register.png')}
+.auth{position:relative;isolation:isolate;grid-template-columns:minmax(0,1.2fr) minmax(420px,.8fr);background:linear-gradient(90deg,rgba(6,12,19,.88) 0%,rgba(6,12,19,.48) 48%,rgba(6,12,19,.82) 100%),var(--auth-scene) center/cover no-repeat;background-repeat:no-repeat;background-size:cover}
+.auth .hero{background:none;min-height:100svh;padding:clamp(32px,6vw,96px);min-width:0}.auth .hero p{color:#f2ede4;font-size:17px;text-shadow:0 2px 6px #000}.auth .hero .eyebrow{color:#edcc93;text-shadow:0 2px 6px #000}.auth .hero .pill{align-self:flex-start;background:#111a22d9;border-color:#ba9b5e80;color:#f0d9ac}
+.auth .authpanel{background:none;border:0;padding:36px clamp(20px,3vw,48px)}.auth .authcard{width:min(460px,100%);padding:32px;border:1px solid #bba27170;border-radius:18px;background:rgba(10,18,26,.94);box-shadow:0 20px 65px #0008;backdrop-filter:blur(10px)}.auth .authcard label{color:#e4d8c2;font-size:12px}.auth .authcard .muted{color:#c9c9c4}.auth .authcard input{background:#0b141e;color:#fff3df;border:1px solid #697176;font-size:15px;min-height:46px}.auth .authcard input:focus-visible{border-color:#efd19b;outline:2px solid #d6b57866;outline-offset:2px}.auth .authcard .switch{color:#f1cf97}.auth .game-logo-auth{max-width:100%;height:auto}
+@media(max-width:760px){.auth{grid-template-columns:minmax(0,1fr);background-position:55% center}.auth .hero{min-height:0;padding:36px 24px 22px}.auth .hero p{font-size:15px}.auth .authpanel{padding:12px 16px 32px}.auth .authcard{padding:24px}.auth .game-logo-auth{width:300px}}
+
 
 /* Language choices sit beside logout, outside the account frame. */
 .language-control{position:relative;flex-shrink:0;color:#e2c78f;font-size:14px}.language-control summary{cursor:pointer;list-style:none;padding:12px;border:1px solid #b99b5866;border-radius:10px;background:#111c22}.language-control summary::-webkit-details-marker{display:none}.language-options{position:absolute;right:0;top:100%;z-index:50;min-width:260px;padding:8px;background:#101c23;border:1px solid #b99b58;border-radius:10px;box-shadow:0 12px 30px #0008}.language-options button{display:block;width:100%;text-align:left;padding:12px;color:#e2c78f;border:0;background:transparent}.language-options button:disabled{opacity:.6}.language-control summary:focus-visible{outline:2px solid #e2c78f}

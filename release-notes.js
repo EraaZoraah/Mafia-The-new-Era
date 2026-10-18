@@ -1,5 +1,7 @@
 // Historical 0.1.x milestone versions were assigned retrospectively. Keep published versions immutable.
 export const releaseNotes=[
+{"id":"2026-10-18-release-1.18.5","announce":false,"date":"2026-10-18","title":"Login & registration","items":["Login and registration have larger full-page backgrounds with a soft fade and clearer form fields."]},
+
 {"id":"2026-10-18-release-1.18.4","announce":false,"date":"2026-10-18","title":"Welcome screen","items":["The opening page uses one continuous background with a restored fade for readable text."]},
 
 {"id":"2026-10-18-release-1.18.3","announce":false,"date":"2026-10-18","title":"Income collection & game guide","items":["Personal passive income stops at 24 active earning hours until collection.","The FAQ and Luca reflect the current English and Dutch game.","Device push notifications remain paused; in-game notices stay available."]},
