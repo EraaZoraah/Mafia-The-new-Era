@@ -1,14 +1,16 @@
 <!-- Current deployment note -->
-**1.18.6 installation:** run `npm ci` in this folder before `npm start`. The implemented referral event is documented in [REFERRAL-BETA.md](REFERRAL-BETA.md). Optional push configuration and the original historical proposal are documented in [ART-HEISTS-AND-PUSH.md](ART-HEISTS-AND-PUSH.md). Preserve your existing data folder and server environment.
+**1.19.0 installation:** run `npm ci` in this folder before `npm start`. The implemented referral event is documented in [REFERRAL-BETA.md](REFERRAL-BETA.md). Optional push configuration and the original historical proposal are documented in [ART-HEISTS-AND-PUSH.md](ART-HEISTS-AND-PUSH.md). Preserve your existing data folder and server environment.
 
 # Mafia: The New Era
 
 For versioned GHCR images and safe Portainer re-pull updates, see [DEPLOYMENT.md](DEPLOYMENT.md) and [compose.yml](compose.yml).
 The source repository stays private; public images exclude the private starter database.
 
-Current version: **1.18.6**, build `2026-10-18-release-1.18.6`. See [OCTOBER-17-REFINEMENTS.md](OCTOBER-17-REFINEMENTS.md), [VERSIONING.md](VERSIONING.md) and [CHANGELOG.md](CHANGELOG.md).
+Current version: **1.19.0**, build `2026-10-18-release-1.19.0`. See [OCTOBER-17-REFINEMENTS.md](OCTOBER-17-REFINEMENTS.md), [VERSIONING.md](VERSIONING.md) and [CHANGELOG.md](CHANGELOG.md).
 
-## Current corrections — 1.18.6
+## Current corrections — 1.19.0
+
+Staff maintenance tools are documented privately in [CURRENT-RELEASE-1.19.0.md](CURRENT-RELEASE-1.19.0.md).
 
 Sunday Funday uses dedicated popup artwork from the calendar response, with a standard notice-image fallback if artwork fails to load.
 

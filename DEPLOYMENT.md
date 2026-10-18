@@ -16,7 +16,7 @@ database service, volumes or bootstrap credentials.
   No VPS credentials, SSH access or automatic deployment are involved.
 - Keep `package.json`, `package-lock.json`, the version/build in `server.js` and
   release notes consistent when making a new application release. This deployment
-  PR keeps the current application version, 1.18.6. The repository already has
+  PR keeps the current application version, 1.19.0. The repository already has
   historical `v1.18.x` source tags, so container releases use a separate
   `container-v` tag prefix and never move those source tags. Existing container release tags are
   never rebuilt: bump the version for each subsequent release. Do not use `latest`.
@@ -43,7 +43,7 @@ package, grant the repository Actions access if publishing is denied.
 Verify an anonymous pull of the exact version before using it in Portainer:
 
 ```sh
-docker --config "$(mktemp -d)" pull ghcr.io/eraazoraah/mafia-the-new-era:1.18.6
+docker --config "$(mktemp -d)" pull ghcr.io/eraazoraah/mafia-the-new-era:1.19.0
 ```
 
 Public images expose the included runtime JavaScript and public assets to anyone
@@ -73,7 +73,7 @@ live database. Keep the old local image available until recovery has been tested
 
    | Variable | Value |
    | --- | --- |
-   | `MAFIA_IMAGE` | `ghcr.io/eraazoraah/mafia-the-new-era:1.18.6` (only after it is published) |
+   | `MAFIA_IMAGE` | `ghcr.io/eraazoraah/mafia-the-new-era:1.19.0` (only after it is published) |
    | `PUBLIC_ORIGIN` | The existing final HTTPS origin, e.g. `https://mafia.example.com`, without a trailing slash |
 
 3. Retain any existing required environment settings. `PUSH_ENABLED=false` keeps

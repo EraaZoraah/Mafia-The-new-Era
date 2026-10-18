@@ -152,7 +152,7 @@ test('Owner family edits transfer leadership and holdings atomically and record 
  assert.equal(f.call('admin/families',undefined,2).status,403);
 });
 test('Owner investment editing obeys account boundaries and caps without silently moving funds',t=>{
- const f=fixture(t),changes={principal:1000000000,rateBps:800,openedAt:f.time(),maturesAt:f.time()+72*3600000,claimed:0},cash=f.q('SELECT cash FROM users WHERE id=2').cash;
+ const f=fixture(t),changes={principal:100000000000,rateBps:800,openedAt:f.time(),maturesAt:f.time()+72*3600000,claimed:0},cash=f.q('SELECT cash FROM users WHERE id=2').cash;
  assert.equal(f.call('admin/investment',{scope:'personal',targetId:2,operation:'save',changes},2).status,403);
  assert.equal(f.call('admin/investment',{scope:'personal',targetId:2,operation:'save',changes}).status,200);assert.equal(f.q('SELECT cash FROM users WHERE id=2').cash,cash);
  const id=f.call('admin/investments?scope=personal&id=2').body.investments[0].id;

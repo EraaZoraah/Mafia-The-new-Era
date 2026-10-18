@@ -1,10 +1,13 @@
+import {investmentLimit} from './investments.js';
+import {installStaffState} from './staff-state.js';
 import {MAX_XP} from './money.js';
 import {isStaff} from './staff.js';
 import {familyCapacity} from './community.js';
 import {familyAssets,careerRanks,MAX_CASH} from './empire-catalog.js';
 import {career} from './empire-catalog.js';
 
-export function installOwnerAdmin(db,{transaction,log,syncTerritory=()=>{}}){
+export function installOwnerAdmin(db,{transaction,log,syncTerritory=()=>{},clock=Date.now,settleRaw=()=>{}}){
+ const staffState=installStaffState(db,{transaction,clock,settleRaw,log});
  const q=(sql,...args)=>db.prepare(sql).get(...args),all=(sql,...args)=>db.prepare(sql).all(...args),run=(sql,...args)=>db.prepare(sql).run(...args);
  const fail=(message,status=400)=>{throw Object.assign(new Error(message),{status})};
  const integer=(v,max=MAX_CASH)=>Number.isSafeInteger(v)&&v>=0&&v<=max;
@@ -60,8 +63,8 @@ export function installOwnerAdmin(db,{transaction,log,syncTerritory=()=>{}}){
     if(!before)fail('Choose an existing investment.');run('DELETE FROM investments WHERE id=?',before.id);
    }else{
     if(body.operation!=='save')fail('Unknown investment operation.');const c=body.changes;
-    if(!c||!integer(c.principal,1000000000)||c.principal<1||!integer(c.rateBps,800)||!integer(c.openedAt,8640000000000000)||!integer(c.maturesAt,8640000000000000)||c.maturesAt<c.openedAt||c.maturesAt-c.openedAt>72*3600000||![0,1].includes(c.claimed))fail('Invalid investment: positive principal, rate 0–8%, term up to 72 hours and valid claim state required.');
-    const active=q('SELECT COALESCE(SUM(principal),0) n FROM investments WHERE '+column+'=? AND claimed=0 AND id<>?',body.targetId,before?.id||0).n;if(!c.claimed&&active+c.principal>1000000000)fail('Active principal would exceed $1 billion.',409);
+    if(!c||!integer(c.principal,investmentLimit)||c.principal<1||!integer(c.rateBps,800)||!integer(c.openedAt,8640000000000000)||!integer(c.maturesAt,8640000000000000)||c.maturesAt<c.openedAt||c.maturesAt-c.openedAt>72*3600000||![0,1].includes(c.claimed))fail('Invalid investment: positive principal, rate 0–8%, term up to 72 hours and valid claim state required.');
+    const active=q('SELECT COALESCE(SUM(principal),0) n FROM investments WHERE '+column+'=? AND claimed=0 AND id<>?',body.targetId,before?.id||0).n;if(!c.claimed&&active+c.principal>investmentLimit)fail('Active principal would exceed $100 billion.',409);
     let id=before?.id;
     if(id)run('UPDATE investments SET principal=?,rate_bps=?,opened_at=?,matures_at=?,claimed=? WHERE id=?',c.principal,c.rateBps,c.openedAt,c.maturesAt,c.claimed,id);
     else id=Number(run('INSERT INTO investments('+column+',principal,rate_bps,opened_at,matures_at,claimed) VALUES(?,?,?,?,?,?)',body.targetId,c.principal,c.rateBps,c.openedAt,c.maturesAt,c.claimed).lastInsertRowid);
@@ -74,6 +77,7 @@ export function installOwnerAdmin(db,{transaction,log,syncTerritory=()=>{}}){
   });
  }
  function route(req,path,body,user){
+  const extended=staffState.route(req,path,body,user);if(extended!==null)return extended;
   const routes=['/api/admin/families','/api/admin/family','/api/admin/investments','/api/admin/investment'];if(!routes.includes(path))return null;
   if(!isStaff(user))fail('Staff access required',403);
   const url=new URL(req.url||path,'http://localhost');
@@ -83,7 +87,7 @@ export function installOwnerAdmin(db,{transaction,log,syncTerritory=()=>{}}){
   }
   if(path==='/api/admin/family'&&req.method==='POST')return saveFamily(user.id,body);
   if(path==='/api/admin/investments'&&req.method==='GET'){
-   const scope=url.searchParams.get('scope'),id=Number(url.searchParams.get('id'));if(!['personal','family'].includes(scope)||!integer(id)||id<1)fail('Invalid account');return {investments:positions(scope,id)};
+   const scope=url.searchParams.get('scope'),id=Number(url.searchParams.get('id'));if(!['personal','family'].includes(scope)||!integer(id)||id<1)fail('Invalid account');return {investments:positions(scope,id),limit:investmentLimit};
   }
   if(path==='/api/admin/investment'&&req.method==='POST')return saveInvestment(user.id,body);
   fail('Unsupported Owner request.',405);

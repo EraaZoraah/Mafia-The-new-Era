@@ -750,7 +750,7 @@ export function installGame(db, { hash, log, json, onNotify=()=>{}, bribeRoll = 
   const referrals=installReferrals(db,{clock,transaction,fail,notify:underworld.notify,log});
   const transfers=installTransfers(db,{transaction,settleRaw,benefits,log,fail,notify:underworld.notify});
 
-  const ownerAdmin=installOwnerAdmin(db,{transaction,log,syncTerritory:empire.syncTerritory});
+  const ownerAdmin=installOwnerAdmin(db,{transaction,log,clock,settleRaw,syncTerritory:empire.syncTerritory});
 
   const care=installPlayerCare(db,{transaction,clock,fail,notify:underworld.notify,settleRaw,cancelRaces:id=>circuit?.cancelPlayer(id)});
 
