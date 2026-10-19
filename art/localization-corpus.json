@@ -787,13 +787,6 @@
     "translated": true
   },
   {
-    "key": "{v15} · Power {v16} {v17}",
-    "files": [
-      "profile-ui.js"
-    ],
-    "translated": true
-  },
-  {
     "key": "{v16} · Respect level {v17} / 7",
     "files": [
       "empire-ui.js"
@@ -804,6 +797,13 @@
     "key": "{v16} family funds on launch",
     "files": [
       "war-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "{v17} · Power {v18} {v19}",
+    "files": [
+      "profile-ui.js"
     ],
     "translated": true
   },
@@ -907,14 +907,7 @@
     "translated": true
   },
   {
-    "key": "{v22} XP",
-    "files": [
-      "profile-ui.js"
-    ],
-    "translated": true
-  },
-  {
-    "key": "{v28}% · {v29} XP to go",
+    "key": "{v24} XP",
     "files": [
       "profile-ui.js"
     ],
@@ -978,6 +971,13 @@
   },
   {
     "key": "{v3}/5 respect gifts today · You earn $1,000 and up to 10 energy per gift.",
+    "files": [
+      "profile-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "{v30}% · {v31} XP to go",
     "files": [
       "profile-ui.js"
     ],
@@ -1054,7 +1054,7 @@
     "translated": true
   },
   {
-    "key": "{v41} portfolio value · {v42} potential passive income / hour{v43}",
+    "key": "{v43} portfolio value · {v44} potential passive income / hour{v45}",
     "files": [
       "profile-ui.js"
     ],
@@ -1663,7 +1663,7 @@
     "translated": true
   },
   {
-    "key": "Account created: {v11} · {v12} {v13} played · {v14} hours played",
+    "key": "Account created: {v13} · {v14} {v15} played · {v16} hours played",
     "files": [
       "profile-ui.js"
     ],
@@ -4177,7 +4177,7 @@
     "translated": true
   },
   {
-    "key": "Drugs: {v35} · Level {v36}/15",
+    "key": "Drugs: {v37} · Level {v38}/15",
     "files": [
       "profile-ui.js"
     ],
@@ -5211,6 +5211,7 @@
   {
     "key": "Grand Supporter",
     "files": [
+      "name-badges.js",
       "presence-ui.js"
     ],
     "translated": true
@@ -5252,7 +5253,7 @@
     "translated": true
   },
   {
-    "key": "Guns: {v37} · Level {v38}/15",
+    "key": "Guns: {v39} · Level {v40}/15",
     "files": [
       "profile-ui.js"
     ],
@@ -5808,7 +5809,7 @@
     "translated": true
   },
   {
-    "key": "Joined {v33}",
+    "key": "Joined {v35}",
     "files": [
       "profile-ui.js"
     ],
@@ -6303,7 +6304,7 @@
     "translated": true
   },
   {
-    "key": "Mafia: The new Era © · v1.19.2",
+    "key": "Mafia: The new Era © · v1.19.3",
     "files": [
       "app.js"
     ],
@@ -9965,7 +9966,7 @@
     "translated": true
   },
   {
-    "key": "Signature title: {v39}",
+    "key": "Signature title: {v41}",
     "files": [
       "profile-ui.js"
     ],
@@ -10296,6 +10297,7 @@
   {
     "key": "Supporter",
     "files": [
+      "name-badges.js",
       "presence-ui.js"
     ],
     "translated": true

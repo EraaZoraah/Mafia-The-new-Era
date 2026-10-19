@@ -1,3 +1,8 @@
+# 1.19.3 · 19 October 2026
+
+- Seven purchasable banner cars with dedicated catalog artwork and standard garage/resale rules.
+- Panoramic overview artwork, visible membership gems and a distinct profile diamond.
+
 # Changelog
 
 ## 1.18.6 · 2026-10-18

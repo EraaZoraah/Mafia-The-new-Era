@@ -589,6 +589,55 @@ export const localeCatalog=[
     "unlock": "Midnight getaway"
   },
   {
+    "id": "escalade",
+    "name": "Cadillac Escalade",
+    "description": "A private collection car. Requires a free garage bay. One per model; resale returns 80% of the paid price.",
+    "title": "Collector · Cadillac Escalade",
+    "unlock": "Midnight getaway"
+  },
+  {
+    "id": "maybach-s680",
+    "name": "Mercedes-Maybach S 680",
+    "description": "A private collection car. Requires a free garage bay. One per model; resale returns 80% of the paid price.",
+    "title": "Collector · Mercedes-Maybach S 680",
+    "unlock": "Midnight getaway"
+  },
+  {
+    "id": "phantom-extended",
+    "name": "Rolls-Royce Phantom Extended",
+    "description": "A private collection car. Requires a free garage bay. One per model; resale returns 80% of the paid price.",
+    "title": "Collector · Rolls-Royce Phantom Extended",
+    "unlock": "Midnight getaway"
+  },
+  {
+    "id": "phantom-limousine",
+    "name": "Rolls-Royce Phantom Limousine",
+    "description": "A private collection car. Requires a free garage bay. One per model; resale returns 80% of the paid price.",
+    "title": "Collector · Rolls-Royce Phantom Limousine",
+    "unlock": "Midnight getaway"
+  },
+  {
+    "id": "jaguar-xk120",
+    "name": "Jaguar XK120 Roadster",
+    "description": "A private collection car. Requires a free garage bay. One per model; resale returns 80% of the paid price.",
+    "title": "Collector · Jaguar XK120 Roadster",
+    "unlock": "Midnight getaway"
+  },
+  {
+    "id": "urus",
+    "name": "Lamborghini Urus",
+    "description": "A private collection car. Requires a free garage bay. One per model; resale returns 80% of the paid price.",
+    "title": "Collector · Lamborghini Urus",
+    "unlock": "Midnight getaway"
+  },
+  {
+    "id": "chiron",
+    "name": "Bugatti Chiron",
+    "description": "A private collection car. Requires a free garage bay. One per model; resale returns 80% of the paid price.",
+    "title": "Collector · Bugatti Chiron",
+    "unlock": "Midnight getaway"
+  },
+  {
     "id": "courier",
     "name": "Discreet courier"
   },

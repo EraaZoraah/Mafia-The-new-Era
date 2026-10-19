@@ -138,11 +138,11 @@ test('isolated prototype baseline', { timeout: 90000 }, async t => {
       alice = await api('login', { login: 'Alice', password });
       assert.equal(alice.status, 200);
     });
-    await t.test('catalog has expanded crimes, 44 cars, businesses and residences', async () => {
+    await t.test('catalog has expanded crimes, 51 cars, businesses and residences', async () => {
       const result=await api('catalog',undefined,alice.cookie);
       assert.equal(result.status,200);
       assert.ok(result.body.crimes.length>=13);
-      assert.equal(result.body.catalog.filter(x=>x.category==='car').length,44);
+      assert.equal(result.body.catalog.filter(x=>x.category==='car').length,51);
       assert.equal(result.body.catalog.filter(x=>x.category==='business').length,11);
       assert.equal(result.body.catalog.filter(x=>x.category==='home').length,12);
     });

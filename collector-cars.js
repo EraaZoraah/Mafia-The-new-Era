@@ -22,3 +22,18 @@ export const collectorCars=[
  ['alfa-8c-classic','Alfa Romeo 8C 2900 Spider',280000000,'Museum collector'],['ferrari-250-california','Ferrari 250 GT California Spyder',450000000,'Museum collector'],
  ['bugatti-57sc','Bugatti Type 57SC Atlantic',850000000,'Museum collector'],['ferrari-250-gto','Ferrari 250 GTO',1500000000,'Museum collector']
 ].map(([id,name,price,tier],i)=>({id,name,price,tier,category:'car',income:0,limit:1,image:'/images/car-'+id+'.png',perks:{rewardBps:Math.min(70,30+i*2)},title:'Collector · '+name,unlock:'Midnight getaway',description:'A private collection car. Requires a free garage bay. One per model; resale returns 80% of the paid price.'}));
+
+// Recognizable executive cars pictured in the overview artwork. These are
+// collection vehicles, not passive businesses; all ordinary garage rules apply.
+export const bannerCars=[
+ ['escalade','Cadillac Escalade',3600000,'Luxury SUV'],
+ ['maybach-s680','Mercedes-Maybach S 680',6500000,'Ultra luxury'],
+ ['phantom-extended','Rolls-Royce Phantom Extended',12000000,'Ultra luxury'],
+ ['phantom-limousine','Rolls-Royce Phantom Limousine',22000000,'Bespoke limousine'],
+ ['jaguar-xk120','Jaguar XK120 Roadster',28000000,'Classic collector'],
+ ['urus','Lamborghini Urus',3800000,'Luxury SUV'],
+ ['chiron','Bugatti Chiron',20000000,'Hypercar'],
+].map(([id,name,price,tier])=>({id,name,price,tier,category:'car',income:0,limit:1,
+ image:'/images/car-'+id+'.png',perks:{rewardBps:50},title:'Collector · '+name,
+ unlock:'Midnight getaway',description:'A private collection car. Requires a free garage bay. One per model; resale returns 80% of the paid price.'}));
+collectorCars.push(...bannerCars);

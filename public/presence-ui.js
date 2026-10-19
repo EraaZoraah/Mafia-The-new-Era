@@ -1,3 +1,4 @@
+import {supporterDiamondSVG,supporterClass} from './name-badges.js';
 import {activeLocale as gameLocale} from './i18n.js';
 import {html as lhtml,text as ltext} from './localization.js';
 import {staffTotals} from './staff-totals-ui.js';
@@ -7,11 +8,12 @@ export function createPresenceUI({api,getMe,esc,money}){
  function paint(){
   for(const a of document.querySelectorAll('a[href^="#profile/"], [data-presence-id]')){
    const id=Number(a.dataset.presenceId||a.getAttribute('href')?.split('/')[1]);if(!id)continue;
-   const tier=cache.get(id)?.supporter?.tier||'',color=tier==='gold'?'supporter-gold':tier==='silver'?'supporter-silver':'';
+   const status=cache.get(id)||(getMe()?.user.id===id?{supporter:getMe().user.supporter}:null);if(!status)continue;
+   const tier=status.supporter?.tier||'',color=supporterClass(status.supporter);
    for(const c of ['supporter-gold','supporter-silver'])a.classList.toggle(c,c===color);
    let diamond=a.querySelector(':scope > .supporter-diamond');
-   if(color&&!diamond){diamond=document.createElement('span');diamond.className='supporter-diamond';diamond.innerHTML='<svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m3 15 7-9h20l7 9-17 21zM3 15h34M10 6l10 30L30 6"/></svg>';a.append(diamond)}
-   if(diamond){if(!color)diamond.remove();else {diamond.title=tier==='gold'?ltext('Grand Supporter'):ltext('Supporter');diamond.setAttribute('aria-label',diamond.title);}}
+   if(color&&!diamond){diamond=document.createElement('span');diamond.className='supporter-diamond';diamond.innerHTML=supporterDiamondSVG;const following=a.querySelector(':scope > .staff-badge,:scope > .lucky-winner,:scope > .bot-badge,:scope > .online-dot,:scope > small');a.insertBefore(diamond,following||null)}
+   if(diamond){if(!color)diamond.remove();else {diamond.classList.toggle('supporter-gold',tier==='gold');diamond.classList.toggle('supporter-silver',tier==='silver');diamond.setAttribute('role','img');diamond.title=tier==='gold'?ltext('Grand Supporter'):ltext('Supporter');diamond.setAttribute('aria-label',diamond.title);}}
    let lucky=a.querySelector(':scope > .lucky-winner');if(cache.get(id)?.luckyWinner&&!lucky){lucky=document.createElement('span');lucky.className='lucky-winner';lucky.textContent=' ✦';lucky.title=ltext('Lucky Winner · daily lottery');lucky.setAttribute('aria-label',ltext('Lucky Winner'));a.append(lucky)}else if(!cache.get(id)?.luckyWinner&&lucky)lucky.remove();
    let bot=a.querySelector(':scope > .bot-badge');if(cache.get(id)?.bot&&!bot){bot=document.createElement('span');bot.className='bot-badge';bot.textContent=ltext(' BOT');bot.title=ltext('Autonomous game character');a.append(bot)}else if(!cache.get(id)?.bot&&bot)bot.remove();
    let dot=a.querySelector(':scope > .online-dot');if(cache.get(id)?.online&&!dot){dot=document.createElement('span');dot.className='online-dot';dot.title=ltext('Online');dot.setAttribute('aria-label',ltext('Online'));a.append(dot)}else if(!cache.get(id)?.online&&dot)dot.remove();
