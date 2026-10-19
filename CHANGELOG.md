@@ -1,3 +1,7 @@
+# 1.19.6 - 19 October 2026
+
+- Live energy and purchased overflow appear beside Rounds in the player header.
+
 # 1.19.5 - 19 October 2026
 
 - Dedicated profile editing, emblem previews and reliable membership badges.
