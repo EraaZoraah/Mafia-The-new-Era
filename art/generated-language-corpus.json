@@ -4184,13 +4184,13 @@
     ]
   },
   {
-    "key": "Beta referral starter bonus: $10000000.",
+    "key": "Beta referral starter bonus: $25000000.",
     "files": [
       "referrals.js"
     ]
   },
   {
-    "key": "Qualified beta referral #{v0}: $25000000.",
+    "key": "Qualified beta referral #{v0}: $50000000.",
     "files": [
       "referrals.js"
     ]
@@ -4202,7 +4202,7 @@
     ]
   },
   {
-    "key": "A friend reached rank 5 and three active days. Your $25,000,000 beta reward was credited.",
+    "key": "A friend reached rank 5 and three active days. Your $50,000,000 beta reward was credited.",
     "files": [
       "referrals.js"
     ]

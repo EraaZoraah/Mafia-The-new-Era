@@ -2,9 +2,9 @@
 
 ## Referral event
 
-Registration has an optional referrer username. The username must resolve to an existing, non-banned, non-deleted human account; bots cannot be named. It cannot be added or changed after registration. A new referred account starts with exactly $10,000,000 total cash. Normal registrations keep the normal starting balance. Account creation, referral linkage and starting cash commit or roll back together.
+Registration has an optional referrer username. The username must resolve to an existing, non-banned, non-deleted human account; bots cannot be named. It cannot be added or changed after registration. A new referred account starts with exactly $25,000,000 total cash. Normal registrations keep the normal starting balance. Account creation, referral linkage and starting cash commit or roll back together.
 
-A referred player qualifies after reaching normal rank 5 (Hustler) and playing on three distinct UTC calendar dates, recorded by the existing server-side presence system. This means three active dates, not 72 accumulated play hours. The account must remain a normal player, not banned/deleted or an autonomous bot. Once eligible and cleared of any required review, the referrer receives $25,000,000 exactly once. A full referrer wallet delays credit safely until space is available.
+A referred player qualifies after reaching normal rank 5 (Hustler) and playing on three distinct UTC calendar dates, recorded by the existing server-side presence system. This means three active dates, not 72 accumulated play hours. The account must remain a normal player, not banned/deleted or an autonomous bot. Once eligible and cleared of any required review, the referrer receives $50,000,000 exactly once. A full referrer wallet delays credit safely until space is available.
 
 The referrer gets 30 free Supporter days after five credited qualifying friends and 30 free Grand Supporter days after ten. Each milestone is awarded once. These are membership rewards only: the shop pack's purchase cash/XP is not added. Existing paid membership time is preserved; free time begins afterward. When Grand Supporter is earned, remaining free Supporter time is upgraded to Grand Supporter and the extra 30 days are added. Existing shop bonuses and name/diamond styles automatically use free active membership too.
 

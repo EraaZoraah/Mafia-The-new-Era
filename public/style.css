@@ -304,3 +304,10 @@ footer,.footer,.sidebarfoot{color:#d8c190!important;text-align:center;line-heigh
 .empire-hero{height:auto!important;min-height:0!important;background:#101820}
 .empire-hero>img{position:static!important;display:block;width:100%;height:auto!important;aspect-ratio:3/1;object-fit:contain!important}
 .empire-hero .hero-copy{position:relative;inset:auto;margin:18px;max-width:calc(100% - 36px)}
+
+/* Dashboard copy belongs inside its artwork, with a readable profile-style fade. */
+.empire-hero{height:clamp(300px,30vw,420px)!important;min-height:300px!important}
+.empire-hero>img{position:absolute!important;inset:0;width:100%;height:100%!important;aspect-ratio:auto;object-fit:cover!important;object-position:center}
+.empire-hero:after{display:block;pointer-events:none;background:linear-gradient(90deg,#080e15ed 0%,#080e15a6 38%,#080e1520 75%,transparent 100%)}
+.empire-hero .hero-copy{position:relative;z-index:1;margin:0;padding:30px 36px;max-width:min(540px,80%);background:transparent;border:0;border-radius:0}
+@media(max-width:600px){.empire-hero{height:330px!important}.empire-hero .hero-copy{padding:26px 22px;max-width:100%}.empire-hero .hero-copy h1{font-size:34px}.empire-hero:after{background:linear-gradient(90deg,#080e15ed,#080e1580 80%,#080e1540)}}

@@ -455,7 +455,7 @@ test('isolated prototype baseline', { timeout: 90000 }, async t => {
       db.exec("DELETE FROM auth_limits WHERE key LIKE 'register:%'");
       const ref=db.prepare("SELECT username FROM users WHERE role='owner' AND banned=0 LIMIT 1").get().username;
       const bad=await api('register',{username:'BadRef',email:'badref@example.test',password,referrer:'no_such_player'});assert.equal(bad.status,400);assert.equal(db.prepare("SELECT COUNT(*) n FROM users WHERE username='BadRef'").get().n,0);
-      const good=await api('register',{username:'BetaFriend',email:'betafriend@example.test',password,referrer:ref});assert.equal(good.status,201);assert.equal(good.body.user.cash,10000000);
+      const good=await api('register',{username:'BetaFriend',email:'betafriend@example.test',password,referrer:ref});assert.equal(good.status,201);assert.equal(good.body.user.cash,25000000);
       const list=await api('referrals',undefined,good.cookie);assert.equal(list.status,200);assert.equal(list.body.rows[0].referrer,ref);
       assert.equal((await api('admin/referrals',undefined,good.cookie)).status,403);
       assert.equal((await api('family-directory',undefined,good.cookie)).status,200);

@@ -1,3 +1,8 @@
+# 1.19.4 - 19 October 2026
+
+- Dashboard welcome copy overlays its banner with a readability fade.
+- Beta referral signup cash is $25,000,000; qualified referrers receive $50,000,000. Membership milestones stay unchanged.
+
 # 1.19.3 · 19 October 2026
 
 - Seven purchasable banner cars with dedicated catalog artwork and standard garage/resale rules.
