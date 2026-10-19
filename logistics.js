@@ -193,7 +193,7 @@ export function installLogistics(db,{employeePower=()=>0,marriageBonus=()=>1,tra
     const mode=transportModes.find(m=>m.id===body.mode),offer=mode&&cargoQuote(b,body.city,mode);if(!offer)fail('This route is unavailable. Trucks can only travel within the same connected region.');
     debit(a,offer.cost);const intercepted=parseInt(createHash('sha256').update(marketSeed+':freight:'+b.id+':'+clock()+':'+body.requestKey).digest('hex').slice(0,8),16)/4294967296<offer.risk;
     run('UPDATE production_batches SET transit_to=?,arrives_at=?,intercepted=?,freight_cost=freight_cost+? WHERE id=?',body.city,clock()+offer.hours*3600000,intercepted?1:0,offer.cost,b.id);
-    record(u.id,a,'Dispatched batch #'+b.id+' from '+b.stock_city+' to '+body.city+' by '+mode.name+'.');return {ok:true,cost:offer.cost,message:'Cargo dispatched to '+body.city+'. Arrival in '+offer.hours+' hours. Interception risk '+Math.round(offer.risk*100)+'%.',image:'/images/page-production.png'};
+    record(u.id,a,'Dispatched batch #'+b.id+' from '+b.stock_city+' to '+body.city+' by '+mode.name+'.');return {ok:true,cost:offer.cost,message:'Cargo dispatched to '+body.city+'. Arrival in '+offer.hours+' hours. Interception risk '+Math.round(offer.risk*100)+'%.',image:'/images/banner-production-v3.png'};
    }
    if(path==='/api/production/sell'){
     finishFreight(a.scope,a.ownerId);

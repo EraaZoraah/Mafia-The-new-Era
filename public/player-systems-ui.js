@@ -1,7 +1,7 @@
 import {activeLocale as gameLocale} from './i18n.js';
 import {html as lhtml,text as ltext} from './localization.js';
 export function createPlayerSystemsUI({api,getMe,esc,money,date,refresh,toast}){
- const image='/images/scene-operations.jpg';
+ const image='/images/banner-missions-v3.png';
  const person=(id,name)=>lhtml`<a href="#profile/${id}">${esc(name)}</a>`;
  function bind(form,handler){form.onsubmit=async e=>{e.preventDefault();const b=form.querySelector('button');b.disabled=true;try{await handler(Object.fromEntries(new FormData(form)));await refresh()}catch(error){toast(error.message,true);b.disabled=false}};}
  function backfire(el,d){

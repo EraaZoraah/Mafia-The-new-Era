@@ -1,18 +1,20 @@
 <!-- Current deployment note -->
-**1.19.4 installation:** run `npm ci` in this folder before `npm start`. The implemented referral event is documented in [REFERRAL-BETA.md](REFERRAL-BETA.md). Optional push configuration and the original historical proposal are documented in [ART-HEISTS-AND-PUSH.md](ART-HEISTS-AND-PUSH.md). Preserve your existing data folder and server environment.
+**1.19.5 installation:** run `npm ci` in this folder before `npm start`. The implemented referral event is documented in [REFERRAL-BETA.md](REFERRAL-BETA.md). Optional push configuration and the original historical proposal are documented in [ART-HEISTS-AND-PUSH.md](ART-HEISTS-AND-PUSH.md). Preserve your existing data folder and server environment.
 
 # Mafia: The New Era
 
 For versioned GHCR images and safe Portainer re-pull updates, see [DEPLOYMENT.md](DEPLOYMENT.md) and [compose.yml](compose.yml).
 The source repository stays private; public images exclude the private starter database.
 
-Current version: **1.19.4**, build `2026-10-19-release-1.19.4`. See [OCTOBER-17-REFINEMENTS.md](OCTOBER-17-REFINEMENTS.md), [VERSIONING.md](VERSIONING.md) and [CHANGELOG.md](CHANGELOG.md).
+Current version: **1.19.5**, build `2026-10-19-release-1.19.5`. See [OCTOBER-17-REFINEMENTS.md](OCTOBER-17-REFINEMENTS.md), [VERSIONING.md](VERSIONING.md) and [CHANGELOG.md](CHANGELOG.md).
 
-## Current corrections — 1.19.4
+## Current corrections — 1.19.5
+
+Dedicated profile editing, sortable lists, current banners, restored casino controls and a 10,000-ticket lottery limit. See [CURRENT-RELEASE-1.19.5.md](CURRENT-RELEASE-1.19.5.md).
 
 Dashboard welcome copy overlays its artwork with a readable fade. Beta referral signup cash is $25,000,000 and the qualified referrer reward is $50,000,000; five/ten membership milestones are unchanged.
 
-Seven banner cars join the private collection catalog. Fifty panoramic page scenes, clearer membership diamonds and the revised Owner portrait are included. See [CURRENT-RELEASE-1.19.4.md](CURRENT-RELEASE-1.19.4.md).
+Seven banner cars join the private collection catalog. Fifty panoramic page scenes, clearer membership diamonds and the revised Owner portrait are included. See [CURRENT-RELEASE-1.19.5.md](CURRENT-RELEASE-1.19.5.md).
 
 The reference sidebar has Overview, Your world and Extras & staff sections, page search, seven expandable categories and a mobile drawer. EN/NL navigation paths are shared with Luca.
 

@@ -1,3 +1,10 @@
+# 1.19.5 - 19 October 2026
+
+- Dedicated profile editing, emblem previews and reliable membership badges.
+- Current banners load immediately; family identities, VIP protection and the boutique have refined artwork.
+- Sortable lists, restored casino controls, clear investment controls and a 10,000-ticket lottery limit.
+- Family and world chat no longer receive autonomous bot posts.
+
 # 1.19.4 - 19 October 2026
 
 - Dashboard welcome copy overlays its banner with a readability fade.

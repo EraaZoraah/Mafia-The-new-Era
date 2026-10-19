@@ -302,6 +302,12 @@
     ]
   },
   {
+    "key": "Autonomous chat posting is disabled.",
+    "files": [
+      "bot-players.js"
+    ]
+  },
+  {
     "key": "Unknown bot domain",
     "files": [
       "bot-players.js"
@@ -465,7 +471,7 @@
     ]
   },
   {
-    "key": "Maximum 100 tickets per player per daily draw.",
+    "key": "Maximum 10,000 tickets per player per daily draw.",
     "files": [
       "casino-extra.js"
     ]
@@ -1407,9 +1413,14 @@
     ]
   },
   {
-    "key": "The economy analytics dashboard is Owner-only.",
+    "key": "Staff access required.",
     "files": [
-      "economy.js"
+      "economy.js",
+      "presence.js",
+      "referrals.js",
+      "shop.js",
+      "staff-state.js",
+      "staff.js"
     ]
   },
   {
@@ -1924,6 +1935,60 @@
     "key": "Your family surrendered. A 24-hour ceasefire is active.",
     "files": [
       "family-wars.js"
+    ]
+  },
+  {
+    "key": "Lottery ticket limit",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Je kunt per dagelijkse trekking maximaal {v0} loten kopen. Buy MAX houdt rekening met reeds gekochte loten en je beschikbare cash. Bots plaatsen geen berichten in familie- of wereldchat.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "You can buy up to {v0} lottery tickets per daily draw. Buy MAX accounts for tickets already owned and available cash. Bots never post in family or world chat.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Profile editing screen",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Klik op Edit my profile om alleen de profielbewerking te zien, zonder bezittingen of statistieken. Kies een embleem met de zichtbare voorbeeldknoppen en keer terug via Return to my profile.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Click Edit my profile to open only the appearance editor, without possessions or statistics. Emblem choices include visible previews. Return to the normal profile using Return to my profile.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Sort player and family columns",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Klik op een kolomtitel om oplopend te sorteren en nogmaals voor aflopend. De volledige spelerslijst wordt vóór de paginering gesorteerd. Ranglijsten en de familielijst hebben dezelfde kolomknoppen.",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
+    "key": "Click a column heading to sort ascending, then click again for descending. The full player directory is sorted before pagination. Rankings and the family directory have the same column controls.",
+    "files": [
+      "game-knowledge.js"
     ]
   },
   {
@@ -3015,6 +3080,13 @@
     ]
   },
   {
+    "key": "Invalid player sort.",
+    "files": [
+      "legacy.js",
+      "presence.js"
+    ]
+  },
+  {
     "key": "Write 1–1,000 characters.",
     "files": [
       "legacy.js"
@@ -4061,16 +4133,6 @@
     "files": [
       "presence.js",
       "profiles.js"
-    ]
-  },
-  {
-    "key": "Staff access required.",
-    "files": [
-      "presence.js",
-      "referrals.js",
-      "shop.js",
-      "staff-state.js",
-      "staff.js"
     ]
   },
   {

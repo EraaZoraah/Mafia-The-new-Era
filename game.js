@@ -800,7 +800,7 @@ export function installGame(db, { hash, log, json, onNotify=()=>{}, bribeRoll = 
 
       casinoExtra.settle();
 
-      if(pathname==='/api/income/claim'&&req.method==='POST')return json(res,200,transaction(()=>{const before=q('SELECT cash FROM users WHERE id=?',user.id).cash;const u=settleRaw(user.id);available(u);const amount=u.cash-before;return {ok:true,payout:amount,message:amount?'All available personal hourly income collected.':'All available hourly income has already been credited automatically. Family income is credited directly to its treasury.',image:'/images/page-bank.png'};}));
+      if(pathname==='/api/income/claim'&&req.method==='POST')return json(res,200,transaction(()=>{const before=q('SELECT cash FROM users WHERE id=?',user.id).cash;const u=settleRaw(user.id);available(u);const amount=u.cash-before;return {ok:true,payout:amount,message:amount?'All available personal hourly income collected.':'All available hourly income has already been credited automatically. Family income is credited directly to its treasury.',image:'/images/banner-bank-v3.png'};}));
 
       if(pathname==='/api/calendar'&&req.method==='GET'){const event=sundayEvent(clock());return json(res,200,{...event,seen:!!q('SELECT 1 FROM news_seen WHERE user_id=? AND token=?',user.id,'sunday:'+event.id)});}
 
@@ -879,7 +879,7 @@ export function installGame(db, { hash, log, json, onNotify=()=>{}, bribeRoll = 
 
       if(pathname==='/api/admin/bots'){
 
-        if(user.role!=='owner')fail('Owner access required.',403);
+        if(!['owner','admin'].includes(user.role)||req.method!=='GET'&&user.role!=='owner')fail('Owner access required.',403);
 
         if(req.method==='POST'){if(typeof body.enabled!=='boolean')fail('Choose enabled or paused.');run("INSERT INTO bot_meta VALUES('enabled',?) ON CONFLICT(key) DO UPDATE SET value=excluded.value",String(body.enabled));if(!body.enabled)run('UPDATE users SET online_until=0 WHERE id IN (SELECT user_id FROM bot_players)');}
 

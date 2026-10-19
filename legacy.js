@@ -105,7 +105,10 @@ export function installLegacy(db,{marriageBonus=()=>1,clock,transaction,fail,set
   if(method==='GET'&&path==='/api/directory'){
    const page=Number(params.get('page')||1),search=(params.get('search')||'').trim();if(!Number.isSafeInteger(page)||page<1||page>100000||search.length>30)fail('Invalid player search.');
    const term='%'+search.replace(/[\\%_]/g,'\\$&')+'%',total=q("SELECT COUNT(*) n FROM users WHERE banned=0 AND username LIKE ? ESCAPE '\\'",term).n;
-   return {page,total,pages:Math.max(1,Math.ceil(total/30)),players:all("SELECT u.id,u.username,u.role,u.xp,u.cash,u.city,f.name family FROM users u LEFT JOIN family_members m ON m.user_id=u.id LEFT JOIN families f ON f.id=m.family_id WHERE u.banned=0 AND u.username LIKE ? ESCAPE '\\' ORDER BY u.username COLLATE NOCASE,u.id LIMIT 30 OFFSET ?",term,(page-1)*30).map(p=>({...p,rank:progression(p.xp).rank,power:power(p.id).total}))};
+   const sort=params.get('sort')||'username',direction=params.get('direction')||'asc';if(!['username','xp','power','cash','family','city'].includes(sort)||!['asc','desc'].includes(direction))fail('Invalid player sort.');
+   const rows=all("SELECT u.id,u.username,u.role,u.xp,u.cash,u.city,f.name family FROM users u LEFT JOIN family_members m ON m.user_id=u.id LEFT JOIN families f ON f.id=m.family_id WHERE u.banned=0 AND u.username LIKE ? ESCAPE '\\'",term).map(p=>({...p,rank:progression(p.xp).rank,power:power(p.id).total}));
+   rows.sort((a,b)=>{const x=a[sort]??'',y=b[sort]??'';return (direction==='asc'?1:-1)*(typeof x==='number'&&typeof y==='number'?x-y:String(x).localeCompare(String(y),'en',{numeric:true,sensitivity:'base'}))||a.id-b.id});
+   return {page,total,pages:Math.max(1,Math.ceil(total/30)),sort,direction,players:rows.slice((page-1)*30,page*30)};
   }
   if(method==='GET'&&path==='/api/world-chat')return {messages:all('SELECT c.id,c.user_id,c.created_at,CASE WHEN c.hidden_by IS NULL THEN c.body ELSE \'[Message removed by staff]\' END body,c.hidden_by,u.username,u.role FROM world_chat c JOIN users u ON u.id=c.user_id ORDER BY c.id DESC LIMIT 100').reverse()};
   if(method==='POST'&&path==='/api/world-chat/send')return transaction(()=>{

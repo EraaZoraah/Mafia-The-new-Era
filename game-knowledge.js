@@ -1,3 +1,4 @@
+import {LOTTERY_MAX_TICKETS} from './casino-extra.js';
 import {familyCrests} from './community.js';
 import {referralEvent} from './referrals.js';
 import {circuitRules} from './public/circuit-rules.js';
@@ -26,6 +27,10 @@ const familyTab={Compounds:'family-compounds',Safehouses:'family-safehouses','Fa
 const dollars=n=>'$'+n.toLocaleString('en-US');
 export function gameKnowledge(language='en'){
  const entries=[];const add=(tab,title,text)=>entries.push({tab,title,text});
+ add('casino','Lottery ticket limit',language==='nl'?`Je kunt per dagelijkse trekking maximaal ${LOTTERY_MAX_TICKETS.toLocaleString('en-US')} loten kopen. Buy MAX houdt rekening met reeds gekochte loten en je beschikbare cash. Bots plaatsen geen berichten in familie- of wereldchat.`:`You can buy up to ${LOTTERY_MAX_TICKETS.toLocaleString('en-US')} lottery tickets per daily draw. Buy MAX accounts for tickets already owned and available cash. Bots never post in family or world chat.`);
+ add('profile','Profile editing screen',language==='nl'?'Klik op Edit my profile om alleen de profielbewerking te zien, zonder bezittingen of statistieken. Kies een embleem met de zichtbare voorbeeldknoppen en keer terug via Return to my profile.':'Click Edit my profile to open only the appearance editor, without possessions or statistics. Emblem choices include visible previews. Return to the normal profile using Return to my profile.');
+ add('directory','Sort player and family columns',language==='nl'?'Klik op een kolomtitel om oplopend te sorteren en nogmaals voor aflopend. De volledige spelerslijst wordt vóór de paginering gesorteerd. Ranglijsten en de familielijst hebben dezelfde kolomknoppen.':'Click a column heading to sort ascending, then click again for descending. The full player directory is sorted before pagination. Rankings and the family directory have the same column controls.');
+
  for(const crest of familyCrests)add('family',crest+' family crest',language==='nl'?'De Don of Capo kiest dit familiewapen via My family → Edit family. Opgeslagen op het familieprofiel en in de familielijst. Alleen uiterlijk; geen bonus.':'The Don or Capo selects this family crest through My family → Edit family. Saved on the family profile and in the family directory. Cosmetic only; no bonus.');
  add('referrals',referralEvent.name,`Registration referral bonus: $${referralEvent.starter}; referrer reward: $${referralEvent.reward} after rank ${referralEvent.rank} and ${referralEvent.days} distinct active UTC days. Five qualified human friends earn 30 free Supporter days; ten earn 30 free Grand Supporter days, once each. No purchase cash/XP. Existing paid membership time is preserved. Suspicious network/email aliases require staff review; bots never qualify. Player-to-player spending stays locked until qualification and review. Staff referral overview lists every link and totals.`);
  add('family-directory','All families','Browse every family, including your own, without joining one first. Search names and compare members, assets, Power, net worth and drugs/guns ranks. This is separate from the top ten rankings.');

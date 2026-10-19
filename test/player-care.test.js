@@ -79,10 +79,10 @@ test('reset/delete confirm identity, protect Owner, preserve audit and revoke se
  assert.equal(f.q('SELECT COUNT(*) n FROM player_lifecycle').n,2);
  assert.equal(f.db.prepare('PRAGMA foreign_key_check').all().length,0);
 });
-test('economy ledger is Owner-only, separates donation flows and records beta announcement once',t=>{
+test('economy ledger is staff-readable, separates donation flows and records beta announcement once',t=>{
  const f=fixture(t);f.run("UPDATE users SET role='admin' WHERE id=3");
  assert.equal(f.call('family/donate',{amount:10000},2).status,200);
- assert.equal(f.call('admin/economy/activity',undefined,3).status,403);
+ assert.equal(f.call('admin/economy/activity',undefined,3).status,200);
  const d=f.call('admin/economy/activity').body,rows=d.flows.filter(x=>x.source==='family/donate');
  assert.equal(rows.length,2);assert.equal(rows.reduce((a,r)=>a+r.net,0),0);
  f.tick();f.tick();f.call('support');

@@ -8,7 +8,7 @@ export const botCapabilities={
  shipments:['shipments/run'],familyAssets:['family/buy','compound/upgrade','family/donate'],
  teams:['team-missions/create','team-missions/join','team-missions/leave','team-missions/launch'],
  marriage:['marriage/invite','marriage/respond','marriage/divorce'],crypto:['crypto/trade'],
- respect:['respect/give','family/respect/give'],chat:['world-chat/send','family/chat/send','messages','conversation/read'],
+ respect:['respect/give','family/respect/give'],chat:['messages','conversation/read'],
  mystery:['mystery/resolve'],territory:['family/map/buy','family/war/capture'],
  rewards:['daily/claim','achievements/claim','gifts/collect','bounties/collect','income/claim','promotion/ack','notifications/ack','news/read','calendar/ack'],
  banking:['bank'],casino:['casino/start','casino/action','casino-extra/play','casino-extra/draw','casino-extra/collect','lottery/buy','lottery/collect'],
@@ -23,6 +23,8 @@ export const botCapabilities={
  community:['player-controls','support/create','support/reply'],travel:['airport/fly']
 };
 export const botCommandBoundaries={
+ 'world-chat/send':'Human-only chat; explicitly disabled for autonomous players.',
+ 'family/chat/send':'Human-only chat; explicitly disabled for autonomous players.',
  'push/save':'Browser-device permission and encrypted subscription; bots have no browser devices.',
  'push/remove':'Browser-device notification preferences; no autonomous browser permission.',
  'shop/checkout':'Real payment is disabled for the game; bots never make real purchases.',

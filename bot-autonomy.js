@@ -78,7 +78,7 @@ export function autonomousMove(c,domain){
   if(family&&random(0,2)&&!q('SELECT 1 FROM family_respect_gifts WHERE user_id=? AND day=?',id,new Date(now).toISOString().slice(0,10)))return send('family/respect/give');
   const given=get('respect')?.givenToday||[];if(given.length>=5)return false;const target=pick(peers().filter(p=>!given.some(g=>g.username===p.username)));return target?send('respect/give',{target:target.username}):false;
  }
- case 'chat':return sporadic('chat-choice',86400000,()=>send(family&&random(0,2)?'family/chat/send':'world-chat/send',{text:pick(['Keeping an eye on the streets.','A quiet day is a good day for business.','Building the empire one job at a time.'])}));
+ case 'chat':return false; // Public/family chat is human-only.
  case 'mystery':{
   const m=get('mystery')?.offer;return m?send('mystery/resolve',{id:m.id,choice:random(0,5)?'accept':'decline'}):false;
  }

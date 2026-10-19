@@ -11,7 +11,7 @@ export function installEconomy(db,{clock,fail}){
  CREATE TRIGGER IF NOT EXISTS economy_family AFTER UPDATE OF treasury ON families WHEN NEW.treasury<>OLD.treasury BEGIN INSERT INTO economy_ledger(scope,account_id,source,cash_delta,bank_delta,xp_delta,created_at) SELECT 'family',NEW.id,source,NEW.treasury-OLD.treasury,0,0,at FROM economy_context WHERE id=1; END;`);
  const source=value=>run('UPDATE economy_context SET source=?,at=? WHERE id=1',value,clock());
  function withSource(value,fn){const old=q('SELECT source FROM economy_context WHERE id=1').source;source(value);try{return fn()}finally{source(old)}}
- function route(req,path,b,user){if(path!=='/api/admin/economy/activity'||req.method!=='GET')return null;if(user.role!=='owner')fail('The economy analytics dashboard is Owner-only.',403);const days=Number(new URL(req.url||path,'http://localhost').searchParams.get('days')||7);if(![1,7,28].includes(days))fail('Choose 1, 7 or 28 days.');const since=clock()-days*86400000;
+ function route(req,path,b,user){if(path!=='/api/admin/economy/activity'||req.method!=='GET')return null;if(!['owner','admin'].includes(user.role))fail('Staff access required.',403);const days=Number(new URL(req.url||path,'http://localhost').searchParams.get('days')||7);if(![1,7,28].includes(days))fail('Choose 1, 7 or 28 days.');const since=clock()-days*86400000;
   const grouped=new Map();
   for(const row of all('SELECT scope,source,cash_delta,bank_delta,xp_delta FROM economy_ledger WHERE created_at>=?',since)){
    const key=row.scope+'|'+row.source,v=grouped.get(key)||{scope:row.scope,source:row.source,changes:0,earned:0n,spent:0n,net:0n,xp:0n},delta=BigInt(row.cash_delta)+BigInt(row.bank_delta);

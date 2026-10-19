@@ -394,13 +394,6 @@
     "translated": true
   },
   {
-    "key": "{v0} · {v1} attempts · {v2}% success",
-    "files": [
-      "care-ui.js"
-    ],
-    "translated": true
-  },
-  {
     "key": "{v0} · {v1} each",
     "files": [
       "underworld-ui.js"
@@ -872,7 +865,7 @@
     "translated": true
   },
   {
-    "key": "{v2} per ticket · {v3}/100 tickets owned. One winning ticket drawn from all purchased tickets; 200% of ticket sales becomes the prize. The winner earns a Lucky Winner emblem for 24 hours after the draw. Unclaimed prizes remain available.",
+    "key": "{v2} per ticket · {v3}/{v4} tickets owned. One winning ticket drawn from all purchased tickets; 200% of ticket sales becomes the prize. The winner earns a Lucky Winner emblem for 24 hours after the draw. Unclaimed prizes remain available.",
     "files": [
       "expansion-ui.js"
     ],
@@ -2377,6 +2370,13 @@
     "translated": true
   },
   {
+    "key": "Attempts",
+    "files": [
+      "care-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Attempts by activity",
     "files": [
       "community-ui.js"
@@ -2864,7 +2864,7 @@
     "translated": true
   },
   {
-    "key": "Buy MAX · {v7}",
+    "key": "Buy MAX · {v8}",
     "files": [
       "expansion-ui.js"
     ],
@@ -3408,7 +3408,6 @@
   {
     "key": "Collection limit reached",
     "files": [
-      "bulk-ui.js",
       "logistics-ui.js",
       "premium.js"
     ],
@@ -4143,8 +4142,7 @@
   {
     "key": "Drugs",
     "files": [
-      "empire-ui.js",
-      "underworld-ui.js"
+      "empire-ui.js"
     ],
     "translated": true
   },
@@ -5240,8 +5238,7 @@
   {
     "key": "Guns",
     "files": [
-      "empire-ui.js",
-      "underworld-ui.js"
+      "empire-ui.js"
     ],
     "translated": true
   },
@@ -6304,7 +6301,7 @@
     "translated": true
   },
   {
-    "key": "Mafia: The new Era © · v1.19.4",
+    "key": "Mafia: The new Era © · v1.19.5",
     "files": [
       "app.js"
     ],
@@ -10242,6 +10239,13 @@
     "key": "Success bonus",
     "files": [
       "empire-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Success rate",
+    "files": [
+      "care-ui.js"
     ],
     "translated": true
   },
