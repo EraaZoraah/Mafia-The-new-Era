@@ -10,7 +10,7 @@ import {coins} from './city-expansion.js';
 import {respectRanks,prisonTerms} from './underworld.js';
 import {skins} from './skins.js';
 import {cityGeography} from './public/city-geography.js';
-import {menu} from './public/navigation.js';
+import {navigationSections} from './public/navigation.js';
 import {catalog,crimes} from './catalog.js';
 import {employees,breakoutRanks} from './city-expansion.js';
 import {familyAssets,careerRanks,musclePackages,shipmentTiers,mysteryJobs} from './empire-catalog.js';
@@ -33,7 +33,12 @@ export function gameKnowledge(language='en'){
  for(const r of raceRoutes)add('circuit',r.name,r.description);
  for(const r of driverRanks)add('circuit',r.name,'Driver XP '+r.xp+'. Racing handling bonus +'+r.handlingBonus.toFixed(1)+'.');
  add('warehouses','Vehicle condition & auctions','Stolen cars have 1–5 stars: Worn 55%, Used 25%, Good 13%, Perfect 6%, Pristine 1%. Value uses the model, condition, city and hourly quote. Condition factors are 35%, 55%, 75%, 100% and 135%. Store the car before listing. Choose a minimum price and 6, 12 or 24 hours. Non-refundable listing fee: 0.25% of the current quote, minimum $500, maximum $250,000. Successful sales charge 3% commission. Bids reserve cash and one warehouse bay. Minimum bid increment 5%. Outbid cash is refunded with protected credit if full. Listed cars cannot be sold, shipped or replaced.');
- for(const item of menu){for(const [tab,label] of Array.isArray(item)?[item]:item.items){if(['admin','tickets'].includes(tab))continue;add(tab,label.replace(/^[^A-Za-z]+/,''),'Open this game page from the navigation menu.');}}
+ const translateNavigation=createTranslator(language);
+ for(const section of navigationSections)for(const item of section.items)for(const [tab,label] of Array.isArray(item)?[item]:item.items){
+  if(['admin','tickets'].includes(tab))continue;
+  const path=[section.label,...(Array.isArray(item)?[]:[item.label]),label].map(value=>translateNavigation(value.replace(/^[^A-Za-z]+/,''))).join(' → ');
+  add(tab,label.replace(/^[^A-Za-z]+/,''),translateNavigation('Open this game page from {path}.',{path}));
+ }
  for(const a of catalog)add(a.storageKind?'warehouses':a.category,a.name,`${a.description||''} Base price ${dollars(a.price)}. Maximum ${a.limit|| (a.category==='business'?10:1)} per type. Base hourly income ${dollars(a.income||0)}. ${Object.entries(a.perks||{}).filter(([,v])=>v).map(([k,v])=>k+': '+v).join('; ')}.`);
  for(const a of employees)add('employees',a.name,`Hire up to ${a.limit.toLocaleString('en-US')}. Price ${dollars(a.price)}, base hourly cash ${dollars(a.income)}, Power ${a.power}, respect per active day ${a.respectPerDay||0}. Income pauses during detention and stops after 24 active earning hours until saved personal income is fully claimed.`);
  for(const a of familyAssets)add(familyTab[a.category]||'family-assets',a.name,`${a.description} Price ${dollars(a.price)}, maximum ${a.limit||1}, defense ${a.defense}, shipment bonus ${a.runBonus} points, hourly treasury income ${dollars(a.income||0)}.`);

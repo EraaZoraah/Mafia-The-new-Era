@@ -213,7 +213,7 @@ export function guideAnswer(db,u,question,time=Date.now(),context={}){
 
   if(detained)parts.push('You are detained. Production actions are unavailable until release.');
 
-  if(market.storage&&market.storage.used>=market.storage.capacity)parts.push('Production storage is full or missing. Buy a Production warehouse under Personal assets → Warehouses before starting another batch. Each warehouse holds 1,000 unsold crates shared across all drugs.');
+  if(market.storage&&market.storage.used>=market.storage.capacity)parts.push('Production storage is full or missing. Buy a Production warehouse under My empire → Warehouses before starting another batch. Each warehouse holds 1,000 unsold crates shared across all drugs.');
 
   if(market.bestAvailable)parts.push((market.slotsUsed>=5?'All five production slots are occupied. After freeing a slot, an affordable route would be: ':'Best within your current cash and travel access: ')+describeMarket(market.bestAvailable));else parts.push('No new route fits your current cash and travel access. Earn cash or review existing stock first.');
 

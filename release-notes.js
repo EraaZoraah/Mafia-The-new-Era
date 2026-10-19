@@ -1,5 +1,6 @@
 // Historical 0.1.x milestone versions were assigned retrospectively. Keep published versions immutable.
 export const releaseNotes=[
+{"id": "2026-10-19-release-1.19.2", "announce": false, "date": "2026-10-19", "title": "A refined sidebar", "items": ["The sidebar uses three clear sections and compact expandable categories.", "Find a page searches the menu; Enter opens a result. The mobile menu opens as a side drawer.", "Luca follows the current menu paths in English and Dutch."]},
 {"id": "2026-10-18-release-1.19.1", "announce": false, "date": "2026-10-18", "title": "A clearer navigation menu", "items": ["Pages are grouped into family, logistics, finances and help sections. Only one menu group stays open at a time.", "Receiving respect no longer opens a popup."]},
 {"id":"2026-10-18-release-1.18.6","announce":false,"date":"2026-10-18","title":"Sunday Funday artwork","items":["Sunday Funday now has its own popup artwork, with a fallback for unavailable notification images."]},
 

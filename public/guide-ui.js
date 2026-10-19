@@ -1,3 +1,4 @@
+import {revealNavigation} from './navigation-ui.js';
 import {html as lhtml,text as ltext} from './localization.js';
 import {t,activeLanguage} from './i18n.js';
 export function createGuideUI({api,getMe,esc,navigate}) {
@@ -20,12 +21,12 @@ export function createGuideUI({api,getMe,esc,navigate}) {
     const card=x=>lhtml`<article class="guide-tip"><strong>${esc(x.label)}</strong>${x.text?lhtml`<p>${esc(x.text)}</p>`:''}<div><button class="btn small secondary" data-guide-show="${esc(x.tab)}">${t('Show me')}</button> <button class="btn small" data-guide-open="${esc(x.tab)}">${t('Open page')}</button></div></article>`;
     feed.innerHTML=lhtml`<p>${esc(d.answer)}</p>${d.links.map(card).join('')}<h3>${t('Your next moves')}</h3>${d.suggestions.map(card).join('')}`;
     feed.querySelectorAll('[data-guide-show]').forEach(button=>button.onclick=()=>{
-     const target=[...document.querySelectorAll('.nav [data-tab]')].find(el=>el.dataset.tab===button.dataset.guideShow);
+     const target=revealNavigation(document,button.dataset.guideShow);
      if(!target)return;document.querySelectorAll('.guide-highlight').forEach(el=>el.classList.remove('guide-highlight'));
      const group=target.closest('details');if(group)group.open=true;target.classList.add('guide-highlight');target.scrollIntoView({behavior:'smooth',block:'center'});target.focus({preventScroll:true});setTimeout(()=>target.classList.remove('guide-highlight'),12000);
      win.hidden=true;toggle.setAttribute('aria-expanded','false');
     });
-    feed.querySelectorAll('[data-guide-open]').forEach(button=>button.onclick=()=>{navigate(button.dataset.guideOpen);setOpen(false)});
+    feed.querySelectorAll('[data-guide-open]').forEach(button=>button.onclick=()=>{revealNavigation(document,button.dataset.guideOpen);navigate(button.dataset.guideOpen);setOpen(false)});
    }catch(error){if(generation===request&&widget.isConnected)feed.textContent=error.message}
   }
   widget.querySelector('form').onsubmit=e=>{e.preventDefault();void ask(input.value.trim())};

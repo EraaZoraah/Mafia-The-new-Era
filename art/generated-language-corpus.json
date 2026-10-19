@@ -1987,12 +1987,6 @@
     ]
   },
   {
-    "key": "Open this game page from the navigation menu.",
-    "files": [
-      "game-knowledge.js"
-    ]
-  },
-  {
     "key": "{v0} Base price {v1}. Maximum {v2} per type. Base hourly income {v3}. {v4}.",
     "files": [
       "game-knowledge.js"

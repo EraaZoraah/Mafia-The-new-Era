@@ -31,7 +31,7 @@ test('receiving respect updates standing without a popup; old notices are quiet,
 test('navigation keeps all routes unique, staff protected, artwork present and Luca aligned',()=>{
  const entries=menu.flatMap(x=>Array.isArray(x)?[x]:x.items),ids=entries.map(x=>x[0]);assert.equal(ids.length,new Set(ids).size);
  for(const id of ids)assert.ok(existsSync(new URL('../public/icons/menu-'+id+'.svg',import.meta.url)),id);
- const markup=renderNavigation({user:{role:'player'},tab:'airport',openGroups:new Set(['logistics'])});assert.ok(!markup.includes('data-tab="admin"'));assert.ok(!markup.includes('data-tab="tickets"'));assert.match(markup,/data-menu-group="logistics" open/);assert.match(markup,/data-tab="airport"[^>]*aria-current="page"/);
+ const markup=renderNavigation({user:{role:'player'},tab:'airport',openGroups:new Set(['city'])});assert.ok(!markup.includes('data-tab="admin"'));assert.ok(!markup.includes('data-tab="tickets"'));assert.match(markup,/data-menu-group="city"[^>]* open/);assert.match(markup,/data-tab="airport"[^>]*aria-current="page"/);
  assert.match(renderNavigation({user:{role:'admin'},tab:'admin'}),/Admin Panel/);
  const knowledge=gameKnowledge();for(const id of ids.filter(x=>!['admin','tickets'].includes(x)))assert.ok(knowledge.some(k=>k.tab===id),id);
  const groups=menu.filter(x=>x.items);for(const g of groups)assert.ok(existsSync(new URL('../public/icons/menu-'+g.id+'.svg',import.meta.url)));

@@ -3327,6 +3327,13 @@
     "translated": true
   },
   {
+    "key": "Close navigation",
+    "files": [
+      "app.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Close world chat",
     "files": [
       "legacy-ui.js"
@@ -6296,7 +6303,7 @@
     "translated": true
   },
   {
-    "key": "Mafia: The new Era © · v1.19.1",
+    "key": "Mafia: The new Era © · v1.19.2",
     "files": [
       "app.js"
     ],
