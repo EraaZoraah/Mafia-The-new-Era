@@ -1,5 +1,6 @@
 // Historical 0.1.x milestone versions were assigned retrospectively. Keep published versions immutable.
 export const releaseNotes=[
+{"id":"2026-10-19-release-1.19.7","announce":false,"date":"2026-10-19","title":"Recognize your rivals","items":["Clearer player identity colors and reliable bot labels in changing lists."]},
 {"id":"2026-10-19-release-1.19.6","announce":false,"date":"2026-10-19","title":"Energy at a glance","items":["Live energy and purchased overflow appear beside Rounds in the player header."]},
 {"id": "2026-10-19-release-1.19.5", "announce": false, "date": "2026-10-19", "title": "A clearer view of your empire", "items": ["Edit your profile in a dedicated screen with illustrated emblem choices.", "Sort player, family and ranking columns; the casino keeps its controls visible.", "Lottery entries allow up to 10,000 tickets per player per draw.", "Refined family identities, current page banners, VIP artwork and the premium boutique.", "Bots no longer post in family or world chat."]},
 {"id": "2026-10-19-release-1.19.4", "announce": false, "date": "2026-10-19", "title": "Your inner circle", "items": ["The dashboard welcome panel sits inside its artwork with a readable fade.", "Beta referrals grant new players $25,000,000 and their referrers $50,000,000 after qualification. Five- and ten-friend membership milestones remain unchanged."]},

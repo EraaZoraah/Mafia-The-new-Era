@@ -3083,7 +3083,8 @@
     "key": "Invalid player sort.",
     "files": [
       "legacy.js",
-      "presence.js"
+      "presence.js",
+      "server.js"
     ]
   },
   {

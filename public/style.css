@@ -325,3 +325,6 @@ footer,.footer,.sidebarfoot{color:#d8c190!important;text-align:center;line-heigh
 @media(max-width:600px){.vip-protection-art{float:none;width:100%;max-width:none;margin:0 0 18px}.family-home-hero h1{padding:16px 20px;font-size:clamp(26px,7vw,40px)}.emblem-choice{flex:1 1 140px}}
 
 .family-directory-identity{display:flex;align-items:center;gap:14px;min-width:190px}.family-directory-identity>.illustrated-crest{width:56px;min-width:56px;height:66px}.family-directory-identity strong{font:italic 20px Georgia,serif;color:#edcf91}
+
+/* Ordinary player identities remain distinct from membership metals. */
+a[href^="#profile/"],.player-link,[data-presence-id]{color:#b9d5e8;text-shadow:none}

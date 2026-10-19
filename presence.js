@@ -16,7 +16,7 @@ export function installPresence(db,{clock,fail,membership=()=>null,lucky=()=>nul
    const raw=new URL(req.url,'http://localhost').searchParams.get('ids')||'';
    if(!/^\d+(,\d+)*$/.test(raw)||raw.split(',').length>100)fail('Choose at most 100 player IDs.');
    const ids=[...new Set(raw.split(',').map(Number))];if(ids.some(id=>!Number.isSafeInteger(id)||id<1))fail('Invalid player ID.');
-   return {players:all('SELECT id,last_seen,online_until FROM users WHERE banned=0 AND deleted_at=0 AND id IN ('+ids.map(()=>'?').join(',')+')',...ids).map(p=>({bot:!!q('SELECT 1 FROM bot_players WHERE user_id=?',p.id),id:p.id,lastSeen:p.last_seen,online:p.online_until>clock(),supporter:membership(p.id),luckyWinner:lucky(p.id)}))};
+   return {players:all('SELECT id,banned,last_seen,online_until FROM users WHERE deleted_at=0 AND id IN ('+ids.map(()=>'?').join(',')+')',...ids).map(p=>({bot:!!q('SELECT 1 FROM bot_players WHERE user_id=?',p.id),id:p.id,lastSeen:p.last_seen,online:!p.banned&&p.online_until>clock(),supporter:membership(p.id),luckyWinner:lucky(p.id)}))};
   }
   if(path==='/api/admin/population'&&req.method==='GET'){
    if(!['owner','admin'].includes(u.role))fail('Staff access required.',403);

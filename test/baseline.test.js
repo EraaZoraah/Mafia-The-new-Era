@@ -165,6 +165,19 @@ test('isolated prototype baseline', { timeout: 90000 }, async t => {
       const result=await api('admin/state',{scope:'personal',targetId:bob.body.user.id,section:'racing',revision:racing.revision,reason:'HTTP race correction',operation:'save',values:{xp:500,next_at:0}},owner.cookie);
       assert.equal(result.status,200);assert.equal(db.prepare('SELECT xp FROM race_profiles WHERE user_id=?').get(bob.body.user.id).xp,500);
     });
+    await t.test('staff account order uses creation time and rejects untrusted ordering',async()=>{
+      const a=alice.body.user.id,b=bob.body.user.id;
+      const previous=db.prepare('SELECT id,created_at FROM users WHERE id IN (?,?)').all(a,b);
+      try{
+        db.prepare('UPDATE users SET created_at=? WHERE id=?').run(auditNow+2000,a);
+        db.prepare('UPDATE users SET created_at=? WHERE id=?').run(auditNow+1000,b);
+        const newest=await api('admin?order=newest',undefined,owner.cookie);
+        assert.equal(newest.status,200);assert.equal(newest.body.users[0].id,a);
+        const oldest=await api('admin?order=oldest',undefined,owner.cookie);
+        assert.equal(oldest.status,200);assert.ok(oldest.body.users.findIndex(u=>u.id===b)<oldest.body.users.findIndex(u=>u.id===a));
+        assert.equal((await api('admin?order=DROP',undefined,owner.cookie)).status,400);
+      }finally{for(const row of previous)db.prepare('UPDATE users SET created_at=? WHERE id=?').run(row.created_at,row.id)}
+    });
     await t.test('Owner edits own statistics and player possessions atomically with audit records',async()=>{
       assert.equal((await api('admin/player',{id:bob.body.user.id,changes:{cash:50000,energy:75,health:88,xp:1000}},owner.cookie)).status,200);
       assert.equal((await api('me',undefined,owner.cookie)).body.user.cash,50000);

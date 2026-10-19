@@ -1,3 +1,7 @@
+# 1.19.7 - 19 October 2026
+
+- Clearer player identity colors and reliable bot labels in changing lists.
+
 # 1.19.6 - 19 October 2026
 
 - Live energy and purchased overflow appear beside Rounds in the player header.

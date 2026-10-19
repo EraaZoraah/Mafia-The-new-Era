@@ -12,7 +12,7 @@ test('presence uses server time, avoids duplicate playtime and records distinct 
  f.advance(86400000);pulse();assert.equal(f.call('profiles/2').body.player.daysPlayed,2);
  const d=f.call('admin/population?filter=online').body;assert.equal(d.online,1);assert.equal(d.players[0].id,2);assert.equal(d.players[0].playMillis,30000);assert.equal(d.total,4);
  assert.equal(f.call('admin/population',undefined,2).status,403);assert.equal(f.call('presence?ids=2,0').status,400);assert.equal(f.call('presence?ids=2;DELETE').status,400);
- f.run('UPDATE users SET banned=1 WHERE id=2');assert.equal(f.call('presence?ids=2').body.players.length,0);
+ f.run('UPDATE users SET banned=1 WHERE id=2');assert.equal(f.call('presence?ids=2').body.players[0].online,false);
 });
 
 test('same-family robbery, kidnapping and liquidation reject before spending resources',t=>{
@@ -62,4 +62,13 @@ test('unaffordable anonymous attempts and invalid flags cannot consume ammunitio
  assert.equal(f.call('pvp',{kind:'rob',target:'DonTwo',anonymous:true}).status,400);
  assert.equal(f.call('pvp',{kind:'liquidate',target:'DonTwo',anonymous:'false'}).status,400);
  assert.deepEqual(f.q('SELECT cash,energy FROM users WHERE id=1'),before);assert.equal(f.q("SELECT ammo FROM armory_accounts WHERE scope='personal' AND owner_id=1").ammo,ammo);
+});
+
+test('all registered bots retain their emblem metadata including banned bots',t=>{
+ const f=fixture(t);for(const id of [2,3,4])f.run("INSERT INTO bot_players(user_id,personality,next_at) VALUES(?,'builder',?)",id,f.time());
+ f.run('UPDATE users SET banned=1,online_until=? WHERE id=3',f.time()+90000);
+ const players=f.call('presence?ids=1,2,3,4').body.players;
+ assert.equal(players.length,4);assert.equal(players.find(p=>p.id===1).bot,false);
+ for(const id of [2,3,4])assert.equal(players.find(p=>p.id===id).bot,true);
+ assert.equal(players.find(p=>p.id===3).online,false);
 });

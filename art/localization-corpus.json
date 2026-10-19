@@ -1663,6 +1663,13 @@
     "translated": true
   },
   {
+    "key": "Account order",
+    "files": [
+      "app.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Account security",
     "files": [
       "profile-ui.js"
@@ -3710,6 +3717,7 @@
   {
     "key": "Created",
     "files": [
+      "app.js",
       "presence-ui.js"
     ],
     "translated": true
@@ -4350,6 +4358,7 @@
   {
     "key": "Energy",
     "files": [
+      "app.js",
       "profile-ui.js",
       "transfers-ui.js"
     ],
@@ -6301,7 +6310,7 @@
     "translated": true
   },
   {
-    "key": "Mafia: The new Era © · v1.19.5",
+    "key": "Mafia: The new Era © · v1.19.6",
     "files": [
       "app.js"
     ],
@@ -6857,6 +6866,13 @@
     "key": "New player",
     "files": [
       "referral-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Newest accounts first",
+    "files": [
+      "app.js"
     ],
     "translated": true
   },
@@ -7464,6 +7480,13 @@
     "key": "Official news, important notices and gatherings from your Owner and Admin team.",
     "files": [
       "daily-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Oldest accounts first",
+    "files": [
+      "app.js"
     ],
     "translated": true
   },
