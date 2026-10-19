@@ -1,11 +1,16 @@
 <!-- Current deployment note -->
-**1.19.2 installation:** run `npm ci` in this folder before `npm start`. The implemented referral event is documented in [REFERRAL-BETA.md](REFERRAL-BETA.md). Optional push configuration and the original historical proposal are documented in [ART-HEISTS-AND-PUSH.md](ART-HEISTS-AND-PUSH.md). Preserve your existing data folder and server environment.
+**1.19.3 installation:** run `npm ci` in this folder before `npm start`. The implemented referral event is documented in [REFERRAL-BETA.md](REFERRAL-BETA.md). Optional push configuration and the original historical proposal are documented in [ART-HEISTS-AND-PUSH.md](ART-HEISTS-AND-PUSH.md). Preserve your existing data folder and server environment.
 
 # Mafia: The New Era
 
-Current version: **1.19.2**, build `2026-10-19-release-1.19.2`. See [OCTOBER-17-REFINEMENTS.md](OCTOBER-17-REFINEMENTS.md), [VERSIONING.md](VERSIONING.md) and [CHANGELOG.md](CHANGELOG.md).
+For versioned GHCR images and safe Portainer re-pull updates, see [DEPLOYMENT.md](DEPLOYMENT.md) and [compose.yml](compose.yml).
+The source repository stays private; public images exclude the private starter database.
 
-## Current corrections — 1.19.2
+Current version: **1.19.3**, build `2026-10-19-release-1.19.3`. See [OCTOBER-17-REFINEMENTS.md](OCTOBER-17-REFINEMENTS.md), [VERSIONING.md](VERSIONING.md) and [CHANGELOG.md](CHANGELOG.md).
+
+## Current corrections — 1.19.3
+
+Seven banner cars join the private collection catalog. Fifty panoramic page scenes, clearer membership diamonds and the revised Owner portrait are included. See [CURRENT-RELEASE-1.19.3.md](CURRENT-RELEASE-1.19.3.md).
 
 The reference sidebar has Overview, Your world and Extras & staff sections, page search, seven expandable categories and a mobile drawer. EN/NL navigation paths are shared with Luca.
 

@@ -10,4 +10,4 @@
 - English/Dutch catalog and guide indexing updated; language audit reports zero missing entries. Bots purchase every new model through ordinary validated handlers in isolated tests. Luca indexes all seven in both languages. Existing bot domain coverage and racing tests pass.
 - HTTP baseline: 32 checks passed on a disposable database. Focused vehicle, presence, guide, skin and visual/catalog tests passed. Desktop and narrow-content browser previews show complete banner subjects and silver/gold diamonds.
 
-No live accounts or databases were modified. Real device push remains paused. GitHub main remains untouched; the review branch is update/menu-notices-v1.19.1, preserving the starter database while the earlier remote-deletion decision remains unresolved.
+No live accounts or databases were modified. Real device push remains paused. Main integration authorized on 19 October: retained all Docker/GHCR deployment files and the private starter snapshot. Public container builds exclude databases through the Docker allowlist. The existing Actions workflow tests main before publishing the versioned image.

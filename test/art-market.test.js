@@ -29,7 +29,7 @@ test('late bids extend the auction; unsold pieces return and cannot grant bonuse
  const other=object(f);assert.equal(f.call('art/list',{id:other,hours:6,reserve:200000}).status,200);f.advance(6*3600000+1);f.tick();assert.equal(f.q('SELECT state FROM art_objects WHERE id=?',other).state,'collection');assert.equal(f.call('art/list',{id:other,hours:6,reserve:200000}).status,200);
 });
 test('car expansion keeps one-per-model garages and weighted cheap-to-collector theft',()=>{
- assert.equal(stolenVehicles.length,50);assert.equal(cars.length,44);assert.equal(new Set(stolenVehicles.map(c=>c.id)).size,50);assert.equal(new Set(cars.map(c=>c.id)).size,44);assert.ok(cars.some(c=>c.id==='mercedes-300sl-roadster'));
+ assert.equal(stolenVehicles.length,50);assert.equal(cars.length,51);assert.equal(new Set(stolenVehicles.map(c=>c.id)).size,50);assert.equal(new Set(cars.map(c=>c.id)).size,51);assert.ok(cars.some(c=>c.id==='mercedes-300sl-roadster'));
  const weights=stolenVehicles.reduce((n,c)=>n+c.weight,0);assert.ok(stolenVehicles.filter(c=>c.value<500000).reduce((n,c)=>n+c.weight,0)/weights>.85);assert.equal(chooseVehicle(()=>1).id,stolenVehicles[0].id);assert.equal(chooseVehicle(()=>weights).id,'ferrari-f40');
 });
 test('autonomous bidders spend ordinary cash and receive the auction object on settlement',t=>{
