@@ -1,5 +1,8 @@
 // Static french game resources. Player-authored content is never translated.
 export const french=Object.freeze({
+"A more polished underworld":"Un monde criminel plus raffiné",
+"Premium panels, clearer collection cards and refined typography.":"Des panneaux luxueux, des fiches de collection plus claires et une typographie raffinée.",
+"Faster artwork loading and steadier scrolling during page actions.":"Des images qui chargent plus vite et une position de défilement plus stable pendant les actions.",
   "bull": "taureau",
   "dragon": "dragon",
   "crown": "couronne",
@@ -4138,7 +4141,7 @@ export const french=Object.freeze({
   "The most recently reported interface language is stored for Owner-only aggregate language statistics. Human accounts, bots and accounts without a reported language are counted separately.": "La dernière langue d’interface signalée est enregistrée pour des statistiques agrégées accessibles uniquement au propriétaire. Les comptes humains, les bots et les comptes sans langue signalée sont comptés séparément.",
   "French and German join the language selector, with localized rules, results and Luca guidance.": "Le français et l’allemand rejoignent le sélecteur de langue, avec les règles, les résultats et les conseils de Luca traduits.",
   "Your underworld, in five languages": "Votre pègre, en cinq langues",
-  "Mafia: The new Era © · v1.21.3": "Mafia: The new Era © · v1.21.3"
+  "Mafia: The new Era © · v1.22.0": "Mafia: The new Era © · v1.22.0"
 ,
 "{name} — unlocked":"{name} — débloqué",
 "{name} — requires {asset}":"{name} — nécessite {asset}"

@@ -1,3 +1,14 @@
+# 1.22.0 - 2026-10-21
+
+- Added black/Bordeaux premium surfaces, fine gold panel outlines, paired fading menu lines, refined typography and asset cards.
+- Unified action buttons with thin gold borders and made the menu toggle translucent.
+- Same-page actions retain scroll through asynchronous content and image loading; explicit navigation and manual scrolling take priority.
+- Prioritized page artwork and added smaller WebP delivery variants with original-image fallback.
+
+# 1.21.4 - 2026-10-20
+
+- Enlarged the app logo and added a black-and-gold Art Deco city background.
+
 # 1.21.3 - 2026-10-20
 
 - Installed app icons now use the in-game logo, with separate Apple and maskable sizes.

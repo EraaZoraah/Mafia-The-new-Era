@@ -1,4 +1,7 @@
 export const octoberDutch={
+"A more polished underworld":"Een verfijndere onderwereld",
+"Premium panels, clearer collection cards and refined typography.":"Luxe panelen, overzichtelijke bezittingenkaarten en verfijnde typografie.",
+"Faster artwork loading and steadier scrolling during page actions.":"Sneller ladende afbeeldingen en een stabielere scrollpositie bij pagina-acties.",
  'Buy MAX · {v7}':'Koop MAX · {v7}',
  'Drug runs':'Drugsruns','Gun shipments':'Wapentransporten',
  'Collections & finance desk':'Collecties & financiën',
@@ -143,7 +146,7 @@ Object.assign(octoberDutch,{"Breakout rank": "Ontsnappingsrang", "Respect rank":
 
 Object.assign(octoberDutch,{"Language usage": "Taalgebruik", "Language": "Taal", "Human accounts": "Menselijke accounts", "Bot accounts": "Botaccounts", "Total accounts": "Totaal accounts", "Reported language": "Taal gemeld", "Not reported yet": "Nog niet gemeld", "Share of human accounts": "Percentage menselijke accounts", "Refresh language usage": "Taalgebruik vernieuwen", "Most recently reported language per account. Human accounts and bots are counted separately. Unreported languages are not guessed. Deleted accounts are excluded.": "Laatst gemelde taal per account. Menselijke accounts en bots worden apart geteld. Niet-gemelde talen worden niet geraden. Verwijderde accounts tellen niet mee.", "Choose a supported language.": "Kies een ondersteunde taal.", "Owner access required.": "Alleen de Owner heeft toegang.", "English": "Engels", "Dutch": "Nederlands", "French": "Frans", "German": "Duits", "Spanish": "Spaans", "The most recently reported interface language is stored for Owner-only aggregate language statistics. Human accounts, bots and accounts without a reported language are counted separately.": "De laatst gemelde interfacetaal wordt opgeslagen voor taalstatistieken die alleen de Owner kan bekijken. Menselijke accounts, bots en accounts zonder gemelde taal worden apart geteld."});
 
-Object.assign(octoberDutch,{"French and German join the language selector, with localized rules, results and Luca guidance.": "Frans en Duits zijn beschikbaar in het taalmenu, met vertaalde spelregels, resultaten en Luca-adviezen.", "Your underworld, in five languages": "Jouw onderwereld, in vijf talen", "Mafia: The new Era © · v1.21.3": "Mafia: The new Era © · v1.21.3",
+Object.assign(octoberDutch,{"French and German join the language selector, with localized rules, results and Luca guidance.": "Frans en Duits zijn beschikbaar in het taalmenu, met vertaalde spelregels, resultaten en Luca-adviezen.", "Your underworld, in five languages": "Jouw onderwereld, in vijf talen", "Mafia: The new Era © · v1.22.0": "Mafia: The new Era © · v1.22.0",
 "{name} — unlocked":"{name} — ontgrendeld",
 "{name} — requires {asset}":"{name} — vereist {asset}"
 });

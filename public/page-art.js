@@ -18,5 +18,29 @@ export function applyPageArt(el,tab,user){
  if(tab==='profile'||tab==='dashboard'||tab==='families'||tab==='family-territory')return;
  const name=tab==='admin'?(user.role==='owner'?'banner-owner-v3.png':'banner-admin-v3.png'):pageArt[tab];if(!name)return;
  const existing=el.querySelector(':scope > img.section-art,:scope > img.premium-shop-banner,:scope > img.marriage-banner,:scope > section.family-hero > img');
- const img=existing&&existing.getAttribute('src')==='/images/'+name?existing:document.createElement('img');if(existing&&['airport','rivals'].includes(tab)&&existing.parentElement.matches('section.family-hero')){const hero=existing.parentElement;hero.before(existing);hero.classList.remove('family-hero');hero.classList.add('page-intro-panel');}if(existing&&img!==existing)existing.replaceWith(img);img.src='/images/'+name;img.alt=t('Page overview');img.className='section-art page-header-art';img.width=2172;img.height=724;img.dataset.bannerFocus=['referrals','achievements','employees','team-missions','family-chat','family-plans','combat','messages'].includes(tab)?'top':['armory','family-armory','business','home','car','garage','jet','helicopter','yacht','casino','art-market','auction-house'].includes(tab)?'center':'upper';if(!existing)el.prepend(img);
+ const img=existing&&existing.getAttribute('src')==='/images/'+name?existing:document.createElement('img');if(existing&&['airport','rivals'].includes(tab)&&existing.parentElement.matches('section.family-hero')){const hero=existing.parentElement;hero.before(existing);hero.classList.remove('family-hero');hero.classList.add('page-intro-panel');}if(existing&&img!==existing)existing.replaceWith(img);img.src='/images/'+name;img.alt=t('Page overview');img.className='section-art page-header-art';img.width=2172;img.height=724;img.loading='eager';img.fetchPriority='high';img.dataset.bannerFocus=['referrals','achievements','employees','team-missions','family-chat','family-plans','combat','messages'].includes(tab)?'top':['armory','family-armory','business','home','car','garage','jet','helicopter','yacht','casino','art-market','auction-house'].includes(tab)?'center':'upper';if(!existing)el.prepend(img);
+}
+
+export function pageArtSource(tab,user={}){
+ const name=tab==='admin'?(user.role==='owner'?'banner-owner-v3.png':'banner-admin-v3.png'):pageArt[tab];
+ return name?'/images/'+name:null;
+}
+const readyArt=new Map();
+export function warmPageArt(tab,user){
+ const src=pageArtSource(tab,user);if(!src||typeof Image==='undefined')return Promise.resolve();
+ if(!readyArt.has(src))readyArt.set(src,new Promise(resolve=>{
+  const image=new Image();image.fetchPriority='high';image.loading='eager';
+  const timer=setTimeout(resolve,1500);
+  const done=()=>{clearTimeout(timer);resolve();};
+  image.onerror=done;image.onload=()=>{if(image.decode)image.decode().catch(()=>{}).then(done);else done();};image.src=src;
+ }));
+ return readyArt.get(src);
+}
+
+export function prioritizeVisibleImages(el){
+ for(const image of el.querySelectorAll('img')){
+  if(image.closest('.brand,.profile-hero,.family-home-hero,.empire-hero')||image.matches('.page-header-art,.section-art')||image.getBoundingClientRect().top<window.innerHeight*2){
+   image.loading='eager';image.fetchPriority=image.matches('.page-header-art,.section-art')?'high':'auto';
+  }
+ }
 }

@@ -339,3 +339,4 @@ a[href^="#profile/"],.player-link,[data-presence-id]{color:#b9d5e8;text-shadow:n
 .language-stat-flag{width:28px;height:18px;object-fit:contain;vertical-align:middle;margin-right:8px}
 
 .profile-avatar.frame-skin-mr-noob{--skin-frame:#dbe8f4}
+.sidebar .navigation-search button{width:22px;min-width:22px;flex:0 0 22px}

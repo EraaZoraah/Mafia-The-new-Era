@@ -1,5 +1,6 @@
 // Historical 0.1.x milestone versions were assigned retrospectively. Keep published versions immutable.
 export const releaseNotes=[
+{"id": "2026-10-21-release-1.22.0", "announce": false, "date": "2026-10-21", "title": "A more polished underworld", "items": ["Premium panels, clearer collection cards and refined typography.", "Faster artwork loading and steadier scrolling during page actions."]},
 {"id":"2026-10-20-release-1.21.0","announce":true,"date":"2026-10-20","title":"Your underworld, in five languages","items":["French and German join the language selector, with localized rules, results and Luca guidance."]},
 {"id":"2026-10-20-release-1.20.0","announce":true,"date":"2026-10-20","title":"Welcome to the underworld, in Spanish","items":["Spanish joins English and Dutch in the flag menu.","Spanish interface, rules, catalog text, outcomes and local Luca guidance. Rank names, player content and dollar notation remain unchanged."]},
 {"id":"2026-10-20-release-1.19.8","announce":false,"date":"2026-10-20","title":"Smoother mobile controls","items":["Mobile inputs keep a readable size without automatic focus zoom.","Numeric fields show their maximum and adjust excessive values; invalid fields have visible feedback."]},

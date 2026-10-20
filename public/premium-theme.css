@@ -1,0 +1,73 @@
+/* Approved premium surfaces and paired menu inlays. */
+body{background:radial-gradient(ellipse at 84% 0%,#41301d33,transparent 55%),#0c1217}
+.sidebar .brand{padding:0;margin:-12px -16px 10px;position:relative}
+.sidebar .brand .game-logo-sidebar{content:url('/images/app-logo-v3.png');width:100%!important;max-width:none!important;display:block;aspect-ratio:1;object-fit:contain;margin:0;mask-image:linear-gradient(to bottom,#000 66%,#000b 80%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,#000 66%,#000b 80%,transparent 100%)}
+.top{border-bottom:1px solid #bd955342;padding-bottom:25px}
+.player-wallet,.panel,.stat,.empire-hero{position:relative;border:1px solid #a8864e90;border-radius:8px;box-shadow:inset 0 0 0 4px #0b1116,inset 0 0 0 5px #a27d3c32,0 14px 32px #0004}
+.player-wallet,.panel,.stat{background:linear-gradient(115deg,#1c242a,#111a21 70%)}
+.player-wallet:before,.panel:before,.stat:before,.empire-hero:before{content:'';position:absolute;pointer-events:none;z-index:3;inset:7px auto auto 7px;width:50px;height:50px;border-left:2px solid #edce89b0;border-top:2px solid #edce89b0;clip-path:polygon(0 13px,13px 0,100% 0,100% 2px,14px 2px,2px 14px,2px 100%,0 100%)}
+.player-wallet:after,.panel:after,.stat:after{content:'';position:absolute;pointer-events:none;right:7px;bottom:7px;width:50px;height:50px;border-right:2px solid #edce89b0;border-bottom:2px solid #edce89b0;clip-path:polygon(0 100%,calc(100% - 13px) 100%,100% calc(100% - 13px),100% 0,calc(100% - 2px) 0,calc(100% - 2px) calc(100% - 14px),calc(100% - 14px) calc(100% - 2px),0 calc(100% - 2px))}
+.panel{padding:32px}
+.intro-cue{background:linear-gradient(110deg,#413322,#1a252d 72%);border-color:#c2a06b}
+.empire-hero{overflow:hidden}
+#content h1,#content h2,#content h3{font-family:Georgia,'Times New Roman',serif;letter-spacing:-.035em;text-transform:none;font-weight:400}
+#content .eyebrow{font-family:system-ui,sans-serif;font-size:10px;letter-spacing:.24em;color:#cfb785}
+.player-wallet{background:linear-gradient(130deg,#272c2b,#171e23 55%,#11191f);border-color:#a289566e}
+.pill,.signature-badge{border-color:#b8995d55;background:linear-gradient(#bda06c0d,#0000);color:#dfcda4}
+.stat b{font-family:Georgia,serif;font-weight:400;color:#efddba}
+#content>.panel,.asset-card,.photo-card{background:linear-gradient(135deg,#252b2a,#151e25 55%,#10171d)}
+.btn{transition:background .18s,box-shadow .18s,transform .18s}
+.btn:not(.secondary){background:linear-gradient(115deg,#f2dfa8,#c6a56b);border:1px solid #efdaa1;box-shadow:inset 0 0 0 3px #b68f4a2b,0 4px 14px #0005;color:#30251a}
+.btn:not(.secondary):hover{box-shadow:inset 0 0 0 3px #ffeac440,0 6px 20px #bea16826;transform:translateY(-1px)}
+:is(.asset-card,.photo-card){border:1px solid #a5854c70;border-radius:9px;box-shadow:inset 0 0 0 4px #0c131855,0 14px 28px #0005;overflow:hidden}
+:is(.asset-card,.photo-card) .card-body{padding:25px}
+:is(.asset-card,.photo-card) h3{font-size:24px;color:#eeddb9;line-height:1.2;margin-bottom:12px}
+.asset-price{color:#dfc186;font-family:Georgia,serif;font-size:24px;letter-spacing:-.03em}
+:is(.asset-card,.photo-card) .btn{border-radius:5px;font-size:12px;letter-spacing:.025em}
+:is(.asset-card,.photo-card) small,:is(.asset-card,.photo-card) .muted{color:#a9aaa6}
+.photo-card .image-wrap{border-bottom:1px solid #b5935966}
+.photo-card .image-badge{background:#0b1219d9;border:1px solid #cfaf7466;color:#e6cfa2;letter-spacing:.14em;padding:7px 9px}
+.photo-card .title-unlock{border-top:1px solid #b5935930;background:#bfa26908;padding:14px;margin:18px 0;color:#dec79c}
+.photo-card .asset-price small{display:block;margin-top:4px;font:10px system-ui;color:#969f9f;letter-spacing:.14em;text-transform:uppercase}
+.footer,.sidebarfoot{color:#d6bd86}
+@media(max-width:760px){.sidebar .brand{margin:-8px -15px 6px}.panel{padding:25px}}
+@media(prefers-reduced-motion:reduce){.btn{transition:none}.btn:not(.secondary):hover{transform:none}}
+.sidebar{background-image:linear-gradient(100deg,#0a1015,#111a21)}
+.sidebar .nav{position:relative}
+.sidebar .nav:before,.sidebar .nav:after{content:'';position:absolute;top:64px;bottom:0;width:4px;pointer-events:none;background:linear-gradient(180deg,transparent,#cfad6c70 14%,#f3d9a3a8 35%,#b68e4b68 50%,#efd095a0 70%,transparent),linear-gradient(180deg,transparent,#b28a4c60 14%,#e8ca9080 35%,#9b753c50 50%,#e0bd7c88 70%,transparent);background-size:1px 100%,1px 100%;background-position:left top,right top;background-repeat:no-repeat;box-shadow:0 0 6px #e3c48a12}
+.sidebar .nav:before{left:-10px}.sidebar .nav:after{right:-10px}
+.sidebar .navigation-section{position:relative;border-bottom-color:#ba955636}
+.sidebar .navigation-section:before,.sidebar .navigation-section:after{content:'';position:absolute;bottom:-28px;width:9px;height:56px;pointer-events:none;z-index:1;background:linear-gradient(to bottom,transparent,#0d151bf2 38%,#0d151b 50%,#0d151bf2 62%,transparent)}
+.sidebar .navigation-section:before{left:-12px}.sidebar .navigation-section:after{right:-12px}
+.sidebar .navigation-section:last-of-type:before,.sidebar .navigation-section:last-of-type:after{display:none}
+
+/* Approved black/Bordeaux surfaces, restrained compared with the preview. */
+body{background:radial-gradient(ellipse at 88% 12%,#641d3a50,transparent 68%),radial-gradient(ellipse at 25% 85%,#4d172c32,transparent 65%),#100d11}
+.sidebar{background-image:linear-gradient(110deg,#100d11,#1a1118)}
+.sidebar .navigation-section:before,.sidebar .navigation-section:after{background:linear-gradient(to bottom,transparent,#171017f2 38%,#171017 50%,#171017f2 62%,transparent)}
+.player-wallet,.panel,.stat,.empire-hero{border:1px solid #b99a5c48;box-shadow:inset 0 0 0 1px #d8b67908,0 14px 32px #0004}
+.player-wallet,.panel,.stat,#content>.panel{background:linear-gradient(120deg,#311e28,#1d151e 75%)}
+.intro-cue{background:linear-gradient(110deg,#3d2530,#201720 72%)}
+.player-wallet:before,.panel:before,.stat:before,.empire-hero:before,.player-wallet:after,.panel:after,.stat:after{content:'';position:absolute;inset:7px 16px auto;pointer-events:none;z-index:3;width:auto;height:4px;border:0;clip-path:none;background:linear-gradient(90deg,transparent,#b58c4c66 15%,#f0d49bba 48%,#b58c4c66 85%,transparent),linear-gradient(90deg,transparent,#b58c4c40 15%,#e7c58070 48%,#b58c4c40 85%,transparent);background-size:100% 1px,100% 1px;background-position:left top,left bottom;background-repeat:no-repeat}
+.player-wallet:after,.panel:after,.stat:after{top:auto;bottom:7px}
+.panel .panel:before,.panel .panel:after{display:none}
+.asset-card,.photo-card{background:linear-gradient(135deg,#281e23,#17141b 65%);border-color:#b7975c3d}
+/* Shared action buttons: polished champagne, dark secondary, clear danger states. */
+.btn{border-radius:7px;font-weight:650;letter-spacing:.035em;transition:background .18s,border-color .18s,box-shadow .18s,transform .18s}
+.btn:not(.secondary):not(.danger){background:linear-gradient(115deg,#f0dfb5 0%,#d7bb83 45%,#c3a16b 100%);border:1px solid #efd9a5;box-shadow:inset 0 1px 0 #fff6,inset 0 0 0 3px #8c682b20,0 4px 12px #0004;color:#302417}
+.btn.secondary{background:linear-gradient(120deg,#30252b,#1b1920);border:1px solid #b99a5c65;box-shadow:inset 0 1px 0 #efd9a510,0 3px 10px #0003;color:#ead7ae}
+.btn.danger{background:linear-gradient(120deg,#73333d,#48232d);border:1px solid #c37b8370;color:#ffeaeb;box-shadow:inset 0 1px 0 #ffffff12,0 3px 10px #0003}
+.btn:not(:disabled):hover{border-color:#edcf8c;box-shadow:inset 0 1px 0 #fff3,0 4px 16px #d0aa5624;transform:translateY(-1px)}
+.btn:focus-visible{outline:2px solid #f0d394;outline-offset:3px}
+.btn:not(:disabled):active{transform:translateY(0);box-shadow:inset 0 2px 5px #0003}
+.btn:disabled{transform:none;box-shadow:none;opacity:.45;cursor:not-allowed}
+@media(prefers-reduced-motion:reduce){.btn{transition:none}.btn:not(:disabled):hover{transform:none}}
+/* Navigation wrappers must not create a second, thick gold button frame. */
+.navigation-card{padding:0;background:transparent;border:0;border-radius:7px}
+.navigation-card .btn,.intro-cue>.btn{background:linear-gradient(115deg,#f0dfb5 0%,#d7bb83 45%,#c3a16b 100%);color:#302417;border:1px solid #efd9a5;border-radius:7px;box-shadow:inset 0 1px 0 #fff3,0 4px 12px #0003!important}
+.btn:not(.secondary):not(.danger){box-shadow:inset 0 1px 0 #fff3,0 4px 12px #0003}
+.btn.secondary:not(.danger){background:linear-gradient(115deg,#f0dfb5 0%,#d7bb83 45%,#c3a16b 100%);color:#302417;border:1px solid #efd9a5;box-shadow:inset 0 1px 0 #fff3,0 4px 12px #0003}
+/* Keep the navigation toggle quiet while retaining a clear focus target. */
+#toggle-sidebar.btn{background:#100d1126;border:1px solid #d8bc7a24;color:#dcc89a99;box-shadow:none;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+#toggle-sidebar.btn:not(:disabled):hover{background:#19131b99;border-color:#d8bc7a65;color:#efdbaf;box-shadow:none;transform:none}
+#toggle-sidebar.btn:focus-visible{background:#19131bcc;color:#efdbaf;outline:2px solid #d8bc7a;outline-offset:3px}

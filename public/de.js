@@ -1,5 +1,8 @@
 // Static german game resources. Player-authored content is never translated.
 export const german=Object.freeze({
+"A more polished underworld":"Eine stilvollere Unterwelt",
+"Premium panels, clearer collection cards and refined typography.":"Hochwertige Oberflächen, übersichtlichere Sammlungskarten und verfeinerte Typografie.",
+"Faster artwork loading and steadier scrolling during page actions.":"Schneller ladende Bilder und eine stabilere Scrollposition bei Seitenaktionen.",
   "Mafia: The new Era © · v1.18.0": "Mafia: Die neue Ära © · v1.18.0",
   "New accounts can enter an existing friend's username during registration and receive $25,000,000 starting cash. The friend earns $50,000,000 after the new player reaches rank 5 and plays on three distinct UTC dates.": "Neue Konten können bei der Registrierung den Benutzernamen eines bestehenden Freundes eingeben und erhalten 25,000,000 $ Startgeld. Der Freund verdient 50,000,000 $, nachdem der neue Spieler Rang 5 erreicht und an drei verschiedenen UTC-Daten spielt.",
   "Optional: enter your friend’s player name for $25,000,000 starting cash. Your friend receives rewards after your qualification.": "Optional: Geben Sie den Spielernamen Ihres Freundes ein, um 25,000,000 $ Startgeld zu erhalten. Ihr Freund erhält nach Ihrer Qualifikation Belohnungen.",
@@ -4138,7 +4141,7 @@ export const german=Object.freeze({
   "The most recently reported interface language is stored for Owner-only aggregate language statistics. Human accounts, bots and accounts without a reported language are counted separately.": "Die zuletzt gemeldete Oberflächensprache wird für zusammengefasste Sprachstatistiken gespeichert, die nur der Owner sehen kann. Menschliche Konten, Bots und Konten ohne gemeldete Sprache werden getrennt gezählt.",
   "French and German join the language selector, with localized rules, results and Luca guidance.": "Französisch und Deutsch ergänzen die Sprachauswahl, mit übersetzten Regeln, Ergebnissen und Luca-Tipps.",
   "Your underworld, in five languages": "Deine Unterwelt, in fünf Sprachen",
-  "Mafia: The new Era © · v1.21.3": "Mafia: The new Era © · v1.21.3"
+  "Mafia: The new Era © · v1.22.0": "Mafia: The new Era © · v1.22.0"
 ,
 "{name} — unlocked":"{name} — freigeschaltet",
 "{name} — requires {asset}":"{name} — benötigt {asset}"
