@@ -1,3 +1,9 @@
+# 1.21.3 - 2026-10-20
+
+- Installed app icons now use the in-game logo, with separate Apple and maskable sizes.
+- Supporter one-time rewards are $75,000,000 and 100,000 XP; Grand Supporter rewards are $200,000,000 and 250,000 XP.
+- Existing rewards are retained; prices, duration and earnings bonuses are unchanged.
+
 # 1.21.2 - 2026-10-20
 
 - Refined Mr.Noob with tattoos, lightly tinted sunglasses and tidier grooming.

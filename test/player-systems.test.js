@@ -69,13 +69,13 @@ test('reset ends marriage and refunds bounties on target without duplicating ref
  const f=fixture(t);marry(f);post(f);f.run('UPDATE family_members SET family_id=2 WHERE user_id=2');assert.equal(f.call('admin/player-lifecycle',{id:3,action:'reset',confirmName:'DonTwo',confirm:true}).status,200);
  assert.equal(f.call('marriage').body.marriage,null);assert.equal(f.call('bounties/collect',{},4).body.reward,123456);assert.equal(f.call('bounties/collect',{},4).body.reward,0);
 });
-test('supporter grants enforce permissions, one-time rewards, exact triple rewards and expiry',t=>{
+test('supporter grants enforce permissions, one-time membership rewards and expiry',t=>{
  const f=fixture(t);assert.equal(grant(f,'supporter','MemberOne','supporter-grant-0001',2).status,403);
- const before=f.q('SELECT cash,xp FROM users WHERE id=1');assert.equal(grant(f).status,200);assert.equal(f.q('SELECT cash FROM users WHERE id=1').cash,before.cash+125000000);assert.equal(f.q('SELECT xp FROM users WHERE id=1').xp,before.xp+250000);
- assert.equal(grant(f).status,200);assert.equal(f.q('SELECT cash FROM users WHERE id=1').cash,before.cash+125000000);assert.equal(grant(f,'grand-supporter','DonOne','supporter-grant-0002').status,409);
+ const before=f.q('SELECT cash,xp FROM users WHERE id=1');assert.equal(grant(f).status,200);assert.equal(f.q('SELECT cash FROM users WHERE id=1').cash,before.cash+75000000);assert.equal(f.q('SELECT xp FROM users WHERE id=1').xp,before.xp+100000);
+ assert.equal(grant(f).status,200);assert.equal(f.q('SELECT cash FROM users WHERE id=1').cash,before.cash+75000000);assert.equal(grant(f,'grand-supporter','DonOne','supporter-grant-0002').status,409);
  assert.equal(f.call('presence?ids=1').body.players[0].supporter.tier,'silver');
  f.advance(30*86400000);assert.equal(f.call('presence?ids=1').body.players[0].supporter,null);
- assert.equal(grant(f,'grand-supporter','DonOne','supporter-grant-0003').status,200);assert.equal(f.q('SELECT cash FROM users WHERE id=1').cash,before.cash+500000000);assert.equal(f.q('SELECT xp FROM users WHERE id=1').xp,before.xp+1000000);
+ assert.equal(grant(f,'grand-supporter','DonOne','supporter-grant-0003').status,200);assert.equal(f.q('SELECT cash FROM users WHERE id=1').cash,before.cash+275000000);assert.equal(f.q('SELECT xp FROM users WHERE id=1').xp,before.xp+350000);
  assert.equal(f.call('shop').body.products[0].id,'supporter');assert.equal(f.call('shop').body.checkoutEnabled,false);
  f.run("UPDATE users SET role='admin' WHERE id=2");assert.equal(grant(f,'supporter','MemberOne','supporter-grant-0005',2).status,200);
 });

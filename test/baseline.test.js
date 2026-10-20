@@ -75,7 +75,7 @@ test('isolated prototype baseline', { timeout: 90000 }, async t => {
       assert.equal((await api('push')).status,401);
       const settings=await api('push',undefined,alice.cookie);assert.equal(settings.status,200);assert.equal(typeof settings.body.ready,'boolean');assert.equal(settings.body.privateKey,undefined);
       assert.equal((await api('push/save',{subscription:{endpoint:'http://127.0.0.1/private'}},alice.cookie)).status,400);
-      for(const file of ['/push-ui.js','/sw.js','/input-limits.js','/es.js','/fr.js','/de.js'])assert.equal((await fetch(base+file)).status,200);
+      for(const file of ['/push-ui.js','/sw.js','/input-limits.js','/es.js','/fr.js','/de.js','/manifest.webmanifest','/icons/app-logo-v2-192.png','/icons/app-logo-v2-512.png','/icons/app-logo-v2-maskable.png','/icons/app-logo-v2-apple.png'])assert.equal((await fetch(base+file)).status,200);
     });
     await t.test('login, password rejection, and logout revocation', async () => {
       assert.equal((await api('login', { login: 'Alice', password: 'wrong' })).status, 401);
