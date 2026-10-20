@@ -7,7 +7,7 @@ import {stolenVehicles} from '../vehicle-catalog.js';
 import {skins} from '../skins.js';
 import {cityGeography} from '../public/city-geography.js';
 test('Luca indexes every coin, public skin, recovered vehicle and city contour',()=>{
- const knowledge=gameKnowledge();for(const item of [...coins,...stolenVehicles,...skins.filter(s=>!s.ownerOnly)])assert.ok(knowledge.some(k=>k.title.includes(item.name)),item.name);
+ const knowledge=gameKnowledge();for(const item of [...coins,...stolenVehicles,...skins.filter(s=>!s.ownerOnly&&!s.grantOnly)])assert.ok(knowledge.some(k=>k.title.includes(item.name)),item.name);
  for(const [city,g] of Object.entries(cityGeography)){assert.ok(g.outline.length>100);assert.ok(knowledge.some(k=>k.title===city+' city map'&&k.text.includes(String(g.cells.length))));}
 });
 test('Luca uses actual pending car quotes, parking and warehouse capacity',t=>{

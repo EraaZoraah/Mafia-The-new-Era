@@ -1,3 +1,4 @@
+import {driverRanks} from './midnight-catalog.js';
 import {createHash} from 'node:crypto';
 import {MAX_CASH} from './money.js';
 import {employees,coins} from './city-expansion.js';
@@ -113,7 +114,7 @@ export function installStaffState(db,{transaction,clock,settleRaw,log}){
   if(!target||target.deleted_at)fail('Account not found.',404);
   if(scope==='personal'&&user.role==='admin'&&target.role==='owner')fail('Owner accounts are protected.',403);
   const sections=scope==='personal'?['employees','crypto','art','vehicles','racing','income']:['extensions','territories'];
-  if(req.method==='GET')return {sections:sections.map(section=>{const d=definitions[section],fields=structuredClone(d.fields);if(section==='territories')fields.id=options(all('SELECT id,city,slot,owner_id FROM city_territories ORDER BY city,slot').filter(r=>!r.owner_id||r.owner_id===id).map(r=>({id:r.id,name:r.city+' · #'+(r.slot+1)})));return {section,key:d.key,single:!!d.single,auto:!!d.auto,fields,rows:rows(section,id),revision:revision(section,id)}})};
+  if(req.method==='GET')return {sections:sections.map(section=>{const d=definitions[section],fields=structuredClone(d.fields);if(section==='territories')fields.id=options(all('SELECT id,city,slot,owner_id FROM city_territories ORDER BY city,slot').filter(r=>!r.owner_id||r.owner_id===id).map(r=>({id:r.id,name:r.city+' · #'+(r.slot+1)})));return {section,key:d.key,single:!!d.single,auto:!!d.auto,fields,rows:rows(section,id),revision:revision(section,id),...(section==='racing'?{ranks:driverRanks}:{} )}})};
   if(req.method!=='POST')fail('Unsupported request.',405);
   if(!sections.includes(b.section)||typeof b.reason!=='string'||b.reason.trim().length<3||b.reason.length>500)fail('Choose a section and enter a reason.');
   return transaction(()=>{

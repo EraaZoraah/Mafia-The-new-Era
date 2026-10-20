@@ -1,3 +1,21 @@
+# 1.21.1 - 2026-10-20
+
+- Added the exclusive Mr.Noob character skin and matching interchangeable frame.
+
+# 1.21.0 - 20 October 2026
+
+- French and German join the language selector, with localized rules, results and Luca guidance.
+
+# 1.20.0 - 20 October 2026
+
+- Spanish joins English and Dutch in the flag menu.
+- Spanish interface, rules, catalog text, outcomes and local Luca guidance. Rank names, player content and dollar notation remain unchanged.
+
+# 1.19.8 - 20 October 2026
+
+- Mobile inputs keep a readable size without automatic focus zoom.
+- Numeric fields show their maximum and adjust excessive values; invalid fields have visible feedback.
+
 # 1.19.7 - 19 October 2026
 
 - Clearer player identity colors and reliable bot labels in changing lists.

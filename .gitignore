@@ -40,3 +40,8 @@ Thumbs.db
 
 # Explicitly authorized private starter world; live databases remain ignored.
 !/starter-data/mafia.sqlite
+
+# Local one-time translation drafts; runtime resources live in public/es.js.
+/art/spanish/
+/art/fr/
+/art/de/

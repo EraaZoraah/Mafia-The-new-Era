@@ -29,7 +29,7 @@ export const botCommandBoundaries={
  'push/remove':'Browser-device notification preferences; no autonomous browser permission.',
  'shop/checkout':'Real payment is disabled for the game; bots never make real purchases.',
  'world-chat/hide':'Staff-only moderation.',
- 'presence/heartbeat':'The scheduler uses shared presence.touch/offline for sessions.',
+ 'presence/heartbeat':'The scheduler uses shared presence.touch/offline for sessions. Browser language reporting is human interface metadata; bots do not invent language usage.',
  'register':'Account provisioning is separate from autonomous play.',
  'login':'The scheduler authenticates an existing enabled player identity; no exposed passwords.',
  'logout':'The scheduler calls presence.offline; bots do not create browser sessions.',

@@ -1,6 +1,6 @@
 # Versioning
 
-Current release: **1.19.2** (`2026-10-19-release-1.19.2`).
+Current release: **1.21.1** (`2026-10-20-release-1.21.1`).
 
 `package.json` is the release version. `/api/health` exposes both the semantic
 version and the exact build identifier; the footer and changelog show versions
@@ -12,7 +12,7 @@ Historical development groups in `release-notes.js` have retrospectively assigne
 `0.1.x` numbers, from oldest to newest. These are reconstructed development
 milestones, not claims that those tags were published on GitHub. Future release
 entries must explicitly retain their assigned version; do not renumber history.
-No GitHub upload or tag has been made by this update.
+Release source is published to the main branch after validation.
 
 Use patch versions for fixes, minor versions for new compatible features, and
 major versions for breaking changes. Keep the package version, health version,

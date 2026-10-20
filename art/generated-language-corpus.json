@@ -2880,7 +2880,8 @@
   {
     "key": "Owner access required.",
     "files": [
-      "game.js"
+      "game.js",
+      "presence.js"
     ]
   },
   {
@@ -4121,6 +4122,12 @@
     "key": "Marriage ended. No wedding refund; both bonuses have stopped.",
     "files": [
       "player-systems.js"
+    ]
+  },
+  {
+    "key": "Choose a supported language.",
+    "files": [
+      "presence.js"
     ]
   },
   {

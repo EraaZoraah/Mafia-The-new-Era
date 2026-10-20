@@ -25,7 +25,7 @@ import {guideAnswer} from './game-guide.js';
 
 import {installCasinoExtra} from './casino-extra.js';
 
-import {installCityExpansion} from './city-expansion.js';
+import {installCityExpansion,breakoutRanks} from './city-expansion.js';
 
 import {installPlayerSystems,liquidationChance,backfireChance} from './player-systems.js';
 
@@ -53,7 +53,7 @@ import {installCommunity,familyCapacity} from './community.js';
 
 import {installProfiles} from './profiles.js';
 
-import {installUnderworld,detained,personalRespect} from './underworld.js';
+import {installUnderworld,detained,personalRespect,respectRanks} from './underworld.js';
 
 import {installTransfers} from './transfers.js';
 
@@ -551,9 +551,11 @@ export function installGame(db, { hash, log, json, onNotify=()=>{}, bribeRoll = 
 
     const {password,...safe}=user;
 
-    return {player:safe,mysteryJobs,mysteryOffer:q('SELECT * FROM mystery_offers WHERE user_id=?',id)||null,familyRole:q('SELECT family_role FROM family_members WHERE user_id=?',id)?.family_role||'member',titles:benefits(id).titles,possessions:owned(id),families:all('SELECT id,name FROM families ORDER BY name'),cooldowns:all('SELECT kind,available_at FROM actions WHERE user_id=?',id),familyId:q('SELECT family_id FROM family_members WHERE user_id=?',id)?.family_id||null};
+    return {player:safe,specialistRanks:{breakout:breakoutRanks,respect:respectRanks.map(r=>({...r,xp:r.points}))},numericLimits:playerNumericLimits(),mysteryJobs,mysteryOffer:q('SELECT * FROM mystery_offers WHERE user_id=?',id)||null,familyRole:q('SELECT family_role FROM family_members WHERE user_id=?',id)?.family_role||'member',titles:benefits(id).titles,possessions:owned(id),families:all('SELECT id,name FROM families ORDER BY name'),cooldowns:all('SELECT kind,available_at FROM actions WHERE user_id=?',id),familyId:q('SELECT family_id FROM family_members WHERE user_id=?',id)?.family_id||null};
 
   }
+
+  function playerNumericLimits(){return {cash:MAX_MONEY,bank:MAX_MONEY,xp:MAX_XP,breakout_xp:MAX_XP,drugs_xp:MAX_XP,guns_xp:MAX_XP,respect_received:MAX_XP,pending_income:MAX_MONEY,prison_until:8640000000000000,coma_until:8640000000000000,justice_protected_until:8640000000000000,report_until:8640000000000000,breakout_until:8640000000000000,personal_protection:10,muscle_uses:8,muscle_bonus:1500,muscle_until:8640000000000000,mystery_next_at:8640000000000000,family_join_after:8640000000000000,created_at:8640000000000000,energy_at:8640000000000000,health_at:8640000000000000,energy:ENERGY_LIMIT,health:100,heat:100,banned:1,hospital_until:8640000000000000,protected_until:8640000000000000,captured_until:8640000000000000};}
 
   function editPlayer(actor,body) {
 
@@ -563,7 +565,7 @@ export function installGame(db, { hash, log, json, onNotify=()=>{}, bribeRoll = 
 
     if(!changes||typeof changes!=='object'||Array.isArray(changes)) fail('Invalid changes');
 
-    const numeric={cash:MAX_MONEY,bank:MAX_MONEY,xp:MAX_XP,breakout_xp:MAX_XP,drugs_xp:MAX_XP,guns_xp:MAX_XP,respect_received:MAX_XP,pending_income:MAX_MONEY,prison_until:8640000000000000,coma_until:8640000000000000,justice_protected_until:8640000000000000,report_until:8640000000000000,breakout_until:8640000000000000,personal_protection:10,muscle_uses:8,muscle_bonus:1500,muscle_until:8640000000000000,mystery_next_at:8640000000000000,family_join_after:8640000000000000,created_at:8640000000000000,energy_at:8640000000000000,health_at:8640000000000000,energy:ENERGY_LIMIT,health:100,heat:100,banned:1,hospital_until:8640000000000000,protected_until:8640000000000000,captured_until:8640000000000000};
+    const numeric=playerNumericLimits();
 
     const allowed=new Set([...Object.keys(numeric),'username','email','city','role','password','familyId','possessions','resetCooldowns','familyRole','selected_title','cooldowns','revokeSessions','mysteryOffer']);
 
@@ -810,7 +812,7 @@ export function installGame(db, { hash, log, json, onNotify=()=>{}, bribeRoll = 
 
         const question=(new URL(req.url,'http://localhost').searchParams.get('q')||'').toLowerCase();
 
-        return json(res,200,guideAnswer(db,q('SELECT * FROM users WHERE id=?',user.id),question,clock(),{incomeClock:profile(q('SELECT * FROM users WHERE id=?',user.id)).incomeClock,referrals:/referral|aanbreng|verwijz|invite.*friend|vriend.*uitnodig/.test(question)?referrals.view(user.id):null,language:new URL(req.url,'http://localhost').searchParams.get('lang')==='nl'?'nl':'en',circuit:circuit.board(user.id),art:art.board(user.id),bribe:bribery.current(user.id),armory:logistics.inventory('personal',user.id),crimes:crimes.map(c=>crimeOffer(c,benefits(user.id))),ammoPrice:AMMO_PRICE,milestones:legacy.sync(user.id),daily:daily.route({method:'GET'},'/api/daily',{},user).jobs,market:logistics.marketAdvice(q('SELECT * FROM users WHERE id=?',user.id)),vehicles:vehicles.advice(user.id),family:/territor|verover|capture|gebied|map|kaart/.test(question||'')?empire.route('GET','/api/family',{},user).family:null}));
+        return json(res,200,guideAnswer(db,q('SELECT * FROM users WHERE id=?',user.id),question,clock(),{incomeClock:profile(q('SELECT * FROM users WHERE id=?',user.id)).incomeClock,referrals:/referral|referid|parrain|filleul|einlad|empfehl|werben|invit|aanbreng|verwijz|invite.*friend|vriend.*uitnodig/.test(question)?referrals.view(user.id):null,language:['nl','es','fr','de'].includes(new URL(req.url,'http://localhost').searchParams.get('lang'))?new URL(req.url,'http://localhost').searchParams.get('lang'):'en',circuit:circuit.board(user.id),art:art.board(user.id),bribe:bribery.current(user.id),armory:logistics.inventory('personal',user.id),crimes:crimes.map(c=>crimeOffer(c,benefits(user.id))),ammoPrice:AMMO_PRICE,milestones:legacy.sync(user.id),daily:daily.route({method:'GET'},'/api/daily',{},user).jobs,market:logistics.marketAdvice(q('SELECT * FROM users WHERE id=?',user.id)),vehicles:vehicles.advice(user.id),family:/territor|conqu|erober|gebiet|carte|karte|verover|capture|gebied|map|kaart/.test(question||'')?empire.route('GET','/api/family',{},user).family:null}));
 
       }
 

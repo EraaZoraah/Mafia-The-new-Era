@@ -1,5 +1,5 @@
 import {supporterBadge,supporterClass} from './name-badges.js';
-import {activeLocale as gameLocale} from './i18n.js';
+import {activeLocale as gameLocale,activeLanguage} from './i18n.js';
 import {html as lhtml,text as ltext} from './localization.js';
 import {staffTotals} from './staff-totals-ui.js';
 export function resolvePresenceStatus(cached,ownMembership,rendered){
@@ -28,7 +28,7 @@ export function createPresenceUI({api,getMe,esc,money}){
  }
  async function poll(){clearTimeout(timer);if(busy)return;if(!getMe()){cache.clear();return}busy=true;
   try{
-   if(!document.hidden){if(Date.now()-lastPulse>25000){await api('presence/heartbeat',{});lastPulse=Date.now();}
+   if(!document.hidden){if(Date.now()-lastPulse>25000){await api('presence/heartbeat',{language:activeLanguage});lastPulse=Date.now();}
     const ids=visibleIds();needsPoll=false;
     for(let i=0;i<ids.length;i+=100){const d=await api('presence?ids='+ids.slice(i,i+100).join(','));for(const id of ids.slice(i,i+100))cache.set(id,{id,bot:false,online:false,supporter:null,fetchedAt:Date.now()});for(const p of d.players)cache.set(p.id,{...p,fetchedAt:Date.now()})}paint();
    }
@@ -40,5 +40,10 @@ export function createPresenceUI({api,getMe,esc,money}){
   el.querySelector('details table').sortRemote=(index,direction)=>{populationSort=['username','xp','created_at','days_played','play_ms','last_seen'][index];populationDirection=direction;void population(el,filter,1)};
   el.querySelectorAll('[data-population]').forEach(b=>b.onclick=()=>population(el,b.dataset.population));el.querySelectorAll('[data-pop-page]').forEach(b=>b.onclick=()=>population(el,filter,Number(b.dataset.popPage)));el.querySelector('#refresh-population').onclick=()=>population(el,filter,page);
  }catch(e){el.textContent=e.message}}
- return {mount,population};
+ async function languageUsage(el){try{const d=await api('admin/languages');if(!el.isConnected)return;
+  const names={en:'English',nl:'Dutch',es:'Spanish',fr:'French',de:'German','':'Not reported yet'};
+  el.innerHTML=lhtml`<section class="panel"><h3>Language usage</h3><p>Most recently reported language per account. Human accounts and bots are counted separately. Unreported languages are not guessed. Deleted accounts are excluded.</p><div class="cards"><div class="stat"><small>Human accounts</small><b>${d.players.toLocaleString(gameLocale)}</b></div><div class="stat"><small>Reported language</small><b>${d.reported.toLocaleString(gameLocale)}</b></div><div class="stat"><small>Not reported yet</small><b>${(d.players-d.reported).toLocaleString(gameLocale)}</b></div><div class="stat"><small>Bot accounts</small><b>${d.bots.toLocaleString(gameLocale)}</b></div></div><div class="tablewrap"><table><thead><tr><th>Language</th><th>Human accounts</th><th>Share of human accounts</th><th>Bot accounts</th><th>Total accounts</th></tr></thead><tbody>${d.languages.map(row=>lhtml`<tr><td>${row.code?lhtml`<img class="language-stat-flag" src="/icons/flag-${row.code}.svg" alt=""> `:''}${esc(ltext(names[row.code]))}${row.code?' ('+row.code.toUpperCase()+')':''}</td><td>${row.players.toLocaleString(gameLocale)}</td><td data-sort-value="${row.percent}">${row.percent.toFixed(1)}%</td><td>${row.bots.toLocaleString(gameLocale)}</td><td>${row.total.toLocaleString(gameLocale)}</td></tr>`).join('')}</tbody></table></div><button class="btn secondary" data-refresh-language>Refresh language usage</button></section>`;
+  el.querySelector('[data-refresh-language]').onclick=()=>languageUsage(el);
+ }catch(error){el.textContent=error.message}}
+ return {mount,population,languageUsage};
 }

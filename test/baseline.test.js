@@ -22,7 +22,7 @@ test('isolated prototype baseline', { timeout: 90000 }, async t => {
     for (const name of ['territory-income.js','skins.js','money.js','staff-totals.js','bot-players.js','calendar-events.js','crew-operations.js','game-guide.js','casino-extra.js','city-expansion.js','release-notes.js','player-systems.js','presence.js','player-care.js','economy.js','diplomacy.js','auth-security.js', 'shop.js', 'season-events.js', 'server.js', 'owner-setup.js', 'package.json', 'catalog.js', 'game.js', 'progression.js', 'empire.js', 'empire-catalog.js', 'investments.js','owner-admin.js','staff-state.js','transfers.js','underworld.js','profiles.js','staff.js','community.js','logistics.js','daily.js','casino.js','purchases.js','family-wars.js','war-operations.js','territory-map.js','family-command.js','legacy.js']) {
       await copyFile(path.join(source, name), path.join(fixture, name));
     }
-    for(const name of ['income-cycle.js','referral-guide.js','referrals.js','push-notifications.js','circuit-guide.js','midnight-circuit.js','midnight-catalog.js','database-bootstrap.js','bribery.js','art-market.js','collector-cars.js','guide-nl.js','bot-capabilities.js','bot-autonomy.js','bank.js','game-knowledge.js','drug-markets.js','vehicle-catalog.js','vehicle-auctions.js','vehicles.js'])await copyFile(path.join(source,name),path.join(fixture,name));
+    for(const name of ['guide-locales.js','guide-es.js','income-cycle.js','referral-guide.js','referrals.js','push-notifications.js','circuit-guide.js','midnight-circuit.js','midnight-catalog.js','database-bootstrap.js','bribery.js','art-market.js','collector-cars.js','guide-nl.js','bot-capabilities.js','bot-autonomy.js','bank.js','game-knowledge.js','drug-markets.js','vehicle-catalog.js','vehicle-auctions.js','vehicles.js'])await copyFile(path.join(source,name),path.join(fixture,name));
     await cp(path.join(source, 'public'), path.join(fixture, 'public'), { recursive: true });
     // Port 0 avoids collisions. Only the disposable copy's startup log is instrumented.
     const { readFile, writeFile } = await import('node:fs/promises');
@@ -75,7 +75,7 @@ test('isolated prototype baseline', { timeout: 90000 }, async t => {
       assert.equal((await api('push')).status,401);
       const settings=await api('push',undefined,alice.cookie);assert.equal(settings.status,200);assert.equal(typeof settings.body.ready,'boolean');assert.equal(settings.body.privateKey,undefined);
       assert.equal((await api('push/save',{subscription:{endpoint:'http://127.0.0.1/private'}},alice.cookie)).status,400);
-      for(const file of ['/push-ui.js','/sw.js'])assert.equal((await fetch(base+file)).status,200);
+      for(const file of ['/push-ui.js','/sw.js','/input-limits.js','/es.js','/fr.js','/de.js'])assert.equal((await fetch(base+file)).status,200);
     });
     await t.test('login, password rejection, and logout revocation', async () => {
       assert.equal((await api('login', { login: 'Alice', password: 'wrong' })).status, 401);

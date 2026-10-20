@@ -3,6 +3,8 @@ export const ONLINE_WINDOW=90000;
 export function installPresence(db,{clock,fail,membership=()=>null,lucky=()=>null}){
  const q=(s,...a)=>db.prepare(s).get(...a),all=(s,...a)=>db.prepare(s).all(...a),run=(s,...a)=>db.prepare(s).run(...a);
  for(const field of ['last_seen','online_until','play_ms'])if(!all('PRAGMA table_info(users)').some(c=>c.name===field))db.exec('ALTER TABLE users ADD COLUMN '+field+' INTEGER NOT NULL DEFAULT 0');
+ if(!all('PRAGMA table_info(users)').some(c=>c.name==='ui_language'))db.exec("ALTER TABLE users ADD COLUMN ui_language TEXT NOT NULL DEFAULT ''");
+ const interfaceLanguages=['en','nl','es','fr','de'];
  db.exec('CREATE TABLE IF NOT EXISTS player_active_days(user_id INTEGER NOT NULL REFERENCES users(id),day TEXT NOT NULL,PRIMARY KEY(user_id,day))');
  function touch(id){const now=clock(),p=q('SELECT last_seen,online_until FROM users WHERE id=? AND banned=0 AND deleted_at=0',id);if(!p)return;
   const elapsed=p.last_seen&&p.online_until>now?Math.max(0,Math.min(60000,now-p.last_seen)):0;
@@ -11,12 +13,20 @@ export function installPresence(db,{clock,fail,membership=()=>null,lucky=()=>nul
  }
  const offline=id=>{touch(id);run('UPDATE users SET online_until=0 WHERE id=?',id);};
  function route(req,path,b,u){
-  if(path==='/api/presence/heartbeat'&&req.method==='POST'){touch(u.id);return {ok:true};}
+  if(path==='/api/presence/heartbeat'&&req.method==='POST'){if(b.language!==undefined&&!interfaceLanguages.includes(b.language))fail('Choose a supported language.');touch(u.id);if(b.language!==undefined)run('UPDATE users SET ui_language=? WHERE id=? AND ui_language<>?',b.language,u.id,b.language);return {ok:true};}
   if(path==='/api/presence'&&req.method==='GET'){
    const raw=new URL(req.url,'http://localhost').searchParams.get('ids')||'';
    if(!/^\d+(,\d+)*$/.test(raw)||raw.split(',').length>100)fail('Choose at most 100 player IDs.');
    const ids=[...new Set(raw.split(',').map(Number))];if(ids.some(id=>!Number.isSafeInteger(id)||id<1))fail('Invalid player ID.');
    return {players:all('SELECT id,banned,last_seen,online_until FROM users WHERE deleted_at=0 AND id IN ('+ids.map(()=>'?').join(',')+')',...ids).map(p=>({bot:!!q('SELECT 1 FROM bot_players WHERE user_id=?',p.id),id:p.id,lastSeen:p.last_seen,online:!p.banned&&p.online_until>clock(),supporter:membership(p.id),luckyWinner:lucky(p.id)}))};
+  }
+  if(path==='/api/admin/languages'&&req.method==='GET'){
+   if(u.role!=='owner')fail('Owner access required.',403);
+   const groups=all("SELECT ui_language code,EXISTS(SELECT 1 FROM bot_players b WHERE b.user_id=users.id) bot,COUNT(*) n FROM users WHERE deleted_at=0 GROUP BY ui_language,bot");
+   const totals={players:0,bots:0},map=new Map([...interfaceLanguages,''].map(code=>[code,{code,players:0,bots:0,total:0}]));
+   for(const group of groups){const key=interfaceLanguages.includes(group.code)?group.code:'';const row=map.get(key),kind=group.bot?'bots':'players';row[kind]+=group.n;row.total+=group.n;totals[kind]+=group.n;}
+   const rows=[...map.values()].map(row=>({...row,percent:totals.players?row.players/totals.players*100:0}));
+   return {serverTime:clock(),total:totals.players+totals.bots,...totals,reported:rows.filter(row=>row.code).reduce((n,row)=>n+row.players,0),languages:rows};
   }
   if(path==='/api/admin/population'&&req.method==='GET'){
    if(!['owner','admin'].includes(u.role))fail('Staff access required.',403);

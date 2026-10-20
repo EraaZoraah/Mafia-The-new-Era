@@ -22,9 +22,9 @@ test('translations preserve rank names, unknown player content and literal repla
  assert.equal(nl('Private message written by a player'),'Private message written by a player');
  assert.equal(nl('{xp} XP to go',{xp:123}),'Nog 123 XP');
  assert.equal(nl('Next: {rank}'),'Volgende: {rank}');
- assert.equal(createTranslator('fr')('Cash'),'Cash');
- for(const code of ['fr','de','es'])assert.equal(languages[code].ready,false);
- assert.throws(()=>createTranslator('__proto__'),RangeError);
+ assert.equal(createTranslator('fr')('Cash'),'Espèces');
+ for(const code of ['fr','de'])assert.equal(languages[code].ready,true);
+ assert.equal(languages.es.ready,true);assert.throws(()=>createTranslator('__proto__'),RangeError);
 });
 test('English remains default and reviewed Dutch is selectable',()=>{
  assert.equal(activeLanguage,'en');assert.equal(languages.en.ready,true);assert.equal(languages.nl.ready,true);

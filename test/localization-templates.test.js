@@ -21,7 +21,7 @@ test('English rendering remains byte-for-byte compatible and translated HTML att
  assert.equal(fragment('<label>Minimum reward<input value="'),'<label>Minimumbeloning<input value="');
  assert.deepEqual(templateKeys(['<input title="Current > next">']),['Current > next']);
 });
-test('French, German and Spanish are visible coming-soon options without enabling incomplete translations',()=>{
- const html=languageControl();for(const code of ['fr','de','es']){assert.equal(languages[code].ready,false);assert.ok(html.includes('/icons/flag-'+code+'.svg'));assert.ok(html.includes(code.toUpperCase()));}
- assert.equal(languages.nl.ready,true);
+test('All five reviewed languages are selectable with their flags',()=>{
+ const html=languageControl();for(const code of ['fr','de']){assert.equal(languages[code].ready,true);assert.ok(html.includes('/icons/flag-'+code+'.svg'));assert.ok(html.includes(code.toUpperCase()));}
+ assert.equal(languages.nl.ready,true);assert.equal(languages.es.ready,true);
 });

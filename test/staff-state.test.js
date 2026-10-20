@@ -2,6 +2,23 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {fixture} from './helpers/game-fixture.js';
 function edit(f,section,values,{id=2,scope='personal',actor=1,...extra}={}){const d=f.call(`admin/state?scope=${scope}&id=${id}`,undefined,actor);assert.equal(d.status,200);const s=d.body.sections.find(s=>s.section===section);return f.call('admin/state',{scope,targetId:id,section,operation:'save',values,reason:'Test correction',revision:s.revision,...extra},actor)}
+
+test('Owner can set every driver rank including self, without moving money or rewriting race history',t=>{
+ const f=fixture(t),section=f.call('admin/state?scope=personal&id=1').body.sections.find(s=>s.section==='racing');
+ assert.equal(section.ranks.length,15);
+ const cash=f.q('SELECT cash FROM users WHERE id=1').cash;
+ for(const rank of section.ranks){
+  assert.equal(edit(f,'racing',{xp:rank.xp,next_at:0},{id:1}).status,200);
+  const profile=f.call('circuit').body.profile;assert.equal(profile.rank.level,rank.level);assert.equal(profile.rank.name,rank.name);
+ }
+ assert.equal(f.q('SELECT cash FROM users WHERE id=1').cash,cash);
+ assert.equal(f.q('SELECT COUNT(*) n FROM circuit_races').n,0);
+ const player=f.call('admin/player?id=2').body;
+ assert.equal(player.specialistRanks.breakout.length,15);assert.equal(player.specialistRanks.respect.length,10);
+ const thresholds=player.specialistRanks;
+ assert.equal(f.call('admin/player',{id:2,changes:{breakout_xp:thresholds.breakout.at(-1).xp,respect_received:thresholds.respect.at(-1).xp}}).status,200);
+ assert.equal(f.q('SELECT breakout_xp FROM users WHERE id=2').breakout_xp,thresholds.breakout.at(-1).xp);
+});
 test('staff editors validate catalogs, ownership, caps and audit every change',t=>{
  const f=fixture(t);
  assert.equal(edit(f,'employees',{item_id:'runner',quantity:500}).status,200);

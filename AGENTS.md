@@ -1,6 +1,6 @@
 # Maintaining Mafia: The New Era
 
-- English is the default player language. Dutch localization is available through public/i18n.js and the explicit public/nl-*.js dictionaries; keep coverage complete when changing features. Keep existing accounts and game state intact.
+- English is the default player language. Dutch, Spanish, French and German localization are available through public/i18n.js and the explicit public/nl-*.js and public/es*.js, public/fr*.js and public/de*.js dictionaries; keep coverage complete when changing features. Keep existing accounts and game state intact.
 - Do not change balance unless the current request asks for it.
 - Personal Assistant is a local, free guide. Keep it current as part of every feature change:
   - Register every player page in `public/navigation.js`; the guide reads that same menu.
@@ -14,7 +14,7 @@
 
 - Before declaring a visual review complete, check both image contents and actual sharing. Different filenames do not establish uniqueness. Preserve reviewed SVGs when running legacy generators; use `scripts/full-art-audit.mjs` and `scripts/contact-art-audit.py` for the expanded inventory.
 
-- Language selector: English default, Dutch selectable; French/German/Spanish Coming soon. Maintain explicit translations for UI, validation/results, catalogs, rules, FAQ and local guide. Run the language audit and scenario checks on every changed feature. Keep rank names and user-authored content unchanged.
+- Language selector: English default; Dutch, Spanish, French and German selectable. All four non-English dictionaries and Luca locale adapters must follow every feature change. Maintain explicit translations for UI, validation/results, catalogs, rules, FAQ and local guide. Run the language audit and scenario checks on every changed feature. Keep rank names and user-authored content unchanged.
 
 - Autonomous players: register every new player mutation in `bot-capabilities.js` and implement a state-aware caller in `bot-autonomy.js`/`bot-players.js`. The route coverage test must pass. Do not automate staff powers, real payments, credential changes or invented support accusations. Preserve the bot badge, variable activity, ordinary server validation and global pause switch. Update Luca's live context and shared rulebook for every new mechanic; catalog items are indexed from their authoritative exports.
 

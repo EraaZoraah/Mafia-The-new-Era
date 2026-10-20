@@ -1,3 +1,4 @@
+import {localizedGuideQuery,localizedGuideReply} from './guide-locales.js';
 import {referralAdvice} from './referral-guide.js';
 import {circuitGuide} from './circuit-guide.js';
 import {guideAnswerNL} from './guide-nl.js';
@@ -86,9 +87,10 @@ export const guideTopics=[
 ];
 
 export function guideAnswer(db,u,question,time=Date.now(),context={}){
+ if(['es','fr','de'].includes(context.language))return localizedGuideReply(guideAnswer(db,u,localizedGuideQuery(question,context.language),time,{...context,language:'en',knowledgeLanguage:context.language}),u,context);
 
  const topicQuery=String(question||'').toLowerCase(),dutch=context.language==='nl';
- if(/language|dutch|nederlands|taal(?:keuze)?/.test(topicQuery))return {name:'Luca Moretti',mode:'local',answer:dutch?'Engels is standaard. Kies Nederlands (NL) via het vlagmenu boven Uitloggen. Frans, Duits en Spaans zijn Coming soon. Rangnamen, spelersinhoud, dollars en nummernotatie blijven ongewijzigd.':'English is the default. Select Dutch (NL) from the flag menu above Log out. French, German and Spanish are Coming soon. Rank names, player content, dollars and number punctuation stay unchanged.',links:[{tab:'faq',label:dutch?'FAQ':'FAQ'}],suggestions:[]};
+ if(/language|dutch|nederlands|taal(?:keuze)?/.test(topicQuery))return {name:'Luca Moretti',mode:'local',answer:dutch?'Engels is de standaardtaal. Kies Nederlands (NL), Spaans (ES), Frans (FR) of Duits (DE) via het vlagmenu boven Uitloggen. Rangnamen, door spelers geschreven inhoud, dollars en de bestaande nummernotatie blijven ongewijzigd.':'English is the default. Select Dutch (NL), Spanish (ES), French (FR) or German (DE) from the flag menu above Log out. Rank names, player content, dollars and number punctuation stay unchanged.',links:[{tab:'faq',label:dutch?'FAQ':'FAQ'}],suggestions:[]};
  if(/push|device notification|browser notification/.test(topicQuery))return {name:'Luca Moretti',mode:'local',answer:dutch?'Pushmeldingen op apparaten zijn voorlopig gepauzeerd. Meldingen in het spel blijven werken. Voor latere activering zijn HTTPS, VAPID-sleutels, toestemming en tests op echte apparaten nodig.':'Device push notifications are temporarily paused. In-game notices still work. Future activation needs HTTPS, VAPID keys, permission and real-device tests.',links:[{tab:'dashboard',label:'Dashboard'}],suggestions:[]};
  if(/income cap|24.hour|24 uur|inkomen.*(?:vol|limiet|claim)|passive.*(?:cap|collect)|hourly income/.test(topicQuery)){
   const elapsed=Math.floor((context.incomeClock?.elapsed||0)/3600000),saved='$'+Number(u.pending_income||0).toLocaleString('en-US'),detained=Math.max(u.prison_until||0,u.hospital_until||0)>time;
@@ -229,7 +231,7 @@ export function guideAnswer(db,u,question,time=Date.now(),context={}){
 
  const directMatches=guideTopics.filter(([, ,pattern])=>pattern.test(query)),directTopic=directMatches.find(x=>['family-compounds','family-territory','rivals','production','respect'].includes(x[0]))||directMatches.find(x=>!['missions','families'].includes(x[0]))||directMatches[0];
 
- const knowledge=findKnowledge(query);
+ const knowledge=findKnowledge(query,context.knowledgeLanguage||'en');
 
  if(query&&knowledge.length&&(!guideTopics.some(([, ,p])=>p.test(query))||knowledge[0].title.toLowerCase()===query||knowledge[0].score>=10))return {name:'Luca Moretti',mode:'local',knowledgeCount:gameKnowledge().length,answer:knowledge.map(k=>k.title+': '+k.text).join('\n\n'),links:[...(directTopic?[{tab:directTopic[0],label:directTopic[1]}]:[]),...knowledge.filter(k=>k.tab!==directTopic?.[0]).map(k=>({tab:k.tab,label:k.title}))].slice(0,3),suggestions:suggestions.slice(0,5)};
 

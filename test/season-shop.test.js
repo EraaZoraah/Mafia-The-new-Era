@@ -22,7 +22,7 @@ test('shop grants require staff, allow staff selves and Owner gifts, and are ide
  assert.equal(f.call('profile/settings',{...style,theme:'champagne',frame:'laurel',title:'shop:title:patron'},2).status,200);f.reset();assert.equal(f.call('profiles/2').body.player.appearance.frame,'laurel');
  f.run("UPDATE users SET role='admin' WHERE id=3");assert.equal(f.call('admin/shop/grant',{...b,recipient:'DonTwo'},3).status,200);assert.equal(f.call('admin/shop/grant',{...b,recipient:'DonOne',key:'test-admin-owner-gift'},3).status,200);
  assert.equal(f.call('admin/shop/grant',{...b,product:'complete-collection',key:'test-grant-key-full'}).status,200);assert.equal(f.q('SELECT COUNT(*) n FROM shop_entitlements WHERE user_id=2').n,9);assert.equal(f.call('admin/shop/grant',{...b,key:'test-grant-key-new'}).status,409);
- assert.ok(shopProducts.every(p=>Number.isSafeInteger(p.cents)&&p.cents>0));assert.equal(f.call('shop').body.checkoutEnabled,false);
+ assert.ok(shopProducts.every(p=>Number.isSafeInteger(p.cents)&&(p.ownerGrantOnly?p.cents===0:p.cents>0)));assert.equal(f.call('shop').body.checkoutEnabled,false);
  f.run("UPDATE users SET role='player' WHERE id=3");assert.equal(f.call('admin/shop/grant',{...b,key:'test-demoted-admin'},3).status,403);
 });
 test('season tick publishes once, awards once, preserves overflow and expires current honors',t=>{

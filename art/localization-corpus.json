@@ -1,5 +1,12 @@
 [
   {
+    "key": " — sets minimum points",
+    "files": [
+      "app.js"
+    ],
+    "translated": true
+  },
+  {
     "key": " — sets minimum XP",
     "files": [
       "app.js"
@@ -362,6 +369,20 @@
     "key": "{count} attempts · {rate}% successful against you",
     "files": [
       "community-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "{name} — requires {asset}",
+    "files": [
+      "app.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "{name} — unlocked",
+    "files": [
+      "app.js"
     ],
     "translated": true
   },
@@ -1881,6 +1902,13 @@
     "translated": true
   },
   {
+    "key": "Adjusted to limit",
+    "files": [
+      "input-limits.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Admin",
     "files": [
       "community-ui.js",
@@ -2631,6 +2659,13 @@
     "translated": true
   },
   {
+    "key": "Bot accounts",
+    "files": [
+      "presence-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Both Dons must agree. Allies cannot raid, capture territory, sabotage, launch assaults or declare war on each other. An active war must end before an alliance is accepted.",
     "files": [
       "care-ui.js"
@@ -3127,6 +3162,13 @@
     "translated": true
   },
   {
+    "key": "Check the highlighted fields before saving",
+    "files": [
+      "input-limits.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Checking your next move…",
     "files": [
       "guide-ui.js"
@@ -3137,6 +3179,13 @@
     "key": "Choose a conversation or start a new one.",
     "files": [
       "community-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Choose a driver rank or enter exact race XP. Save this section separately with a reason. Race results and escrow are not changed.",
+    "files": [
+      "owner-ui.js"
     ],
     "translated": true
   },
@@ -4949,6 +4998,13 @@
     "translated": true
   },
   {
+    "key": "Field",
+    "files": [
+      "input-limits.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "FIFTEEN CITIES. ONE UNDERWORLD.",
     "files": [
       "city-map-ui.js"
@@ -5449,6 +5505,13 @@
     "translated": true
   },
   {
+    "key": "Human accounts",
+    "files": [
+      "presence-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "if selected",
     "files": [
       "midnight-ui.js"
@@ -5853,6 +5916,20 @@
     "key": "Kick",
     "files": [
       "community-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Language",
+    "files": [
+      "presence-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Language usage",
+    "files": [
+      "presence-ui.js"
     ],
     "translated": true
   },
@@ -6310,7 +6387,7 @@
     "translated": true
   },
   {
-    "key": "Mafia: The new Era © · v1.19.6",
+    "key": "Mafia: The new Era © · v1.21.1",
     "files": [
       "app.js"
     ],
@@ -6425,6 +6502,13 @@
     "key": "Maturity",
     "files": [
       "investment-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Max",
+    "files": [
+      "input-limits.js"
     ],
     "translated": true
   },
@@ -6667,6 +6751,13 @@
     "key": "Most played activities",
     "files": [
       "care-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Most recently reported language per account. Human accounts and bots are counted separately. Unreported languages are not guessed. Deleted accounts are excluded.",
+    "files": [
+      "presence-ui.js"
     ],
     "translated": true
   },
@@ -7396,6 +7487,13 @@
     "key": "not hired",
     "files": [
       "empire-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Not reported yet",
+    "files": [
+      "presence-ui.js"
     ],
     "translated": true
   },
@@ -8672,6 +8770,13 @@
     "translated": true
   },
   {
+    "key": "Race rank — sets minimum XP",
+    "files": [
+      "owner-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Race rating",
     "files": [
       "midnight-ui.js"
@@ -9008,6 +9113,13 @@
     "translated": true
   },
   {
+    "key": "Refresh language usage",
+    "files": [
+      "presence-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Refresh market & arrivals",
     "files": [
       "vehicles-ui.js"
@@ -9173,6 +9285,13 @@
     "key": "Report a player, bug or issue privately to the Owner and Admin. Your reports and replies stay in your ticket history.",
     "files": [
       "care-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Reported language",
+    "files": [
+      "presence-ui.js"
     ],
     "translated": true
   },
@@ -9895,7 +10014,7 @@
     "translated": true
   },
   {
-    "key": "Set quantities from 0 to 1 for homes, or 0 to 4 for other assets. Zero removes an asset; grants do not charge cash. All changes are logged.",
+    "key": "Set quantities within the limit shown beside each asset. Zero removes an asset; grants do not charge cash. All changes are logged.",
     "files": [
       "app.js"
     ],
@@ -9926,6 +10045,13 @@
     "key": "Share intelligence, coordinate and build your legacy…",
     "files": [
       "family-command-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Share of human accounts",
+    "files": [
+      "presence-ui.js"
     ],
     "translated": true
   },
@@ -10660,6 +10786,13 @@
     "translated": true
   },
   {
+    "key": "The most recently reported interface language is stored for Owner-only aggregate language statistics. Human accounts, bots and accounts without a reported language are counted separately.",
+    "files": [
+      "care-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "THE NEW ERA",
     "files": [
       "feedback.js",
@@ -10848,6 +10981,13 @@
     "key": "Top three: $100,000,000 / $50,000,000 / $25,000,000 for the family treasury and 100 / 60 / 30 family respect. Winners receive a medal beside the family name and a title lasting until the next season ends, plus permanent archived trophies. Equal scores share a place and split the prize pool of occupied places; zero points earn no prize. Treasury overflow is kept pending and paid automatically when room becomes available. Rankings reset every 28 days. Cash, XP, territory and other possessions never reset.",
     "files": [
       "legacy-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Total accounts",
+    "files": [
+      "presence-ui.js"
     ],
     "translated": true
   },

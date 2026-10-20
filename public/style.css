@@ -328,3 +328,14 @@ footer,.footer,.sidebarfoot{color:#d8c190!important;text-align:center;line-heigh
 
 /* Ordinary player identities remain distinct from membership metals. */
 a[href^="#profile/"],.player-link,[data-presence-id]{color:#b9d5e8;text-shadow:none}
+
+/* Keep phone layouts at device width and avoid focus-triggered form zoom. */
+@media(max-width:760px),(pointer:coarse){input:not([type=checkbox]):not([type=radio]):not([type=range]),select,textarea{font-size:16px}}
+@media(max-width:760px){.main,#content,.panel,.grid2>*{min-width:0;max-width:100%}.grid2{grid-template-columns:minmax(0,1fr)}.formrow{flex-wrap:wrap}.formrow>*{min-width:0;max-width:100%}.header-balances{grid-template-columns:repeat(2,minmax(0,1fr))}.tablewrap{max-width:100%;overflow-x:auto}.player-header-actions{flex-wrap:wrap}.account-controls{margin-left:auto}}
+.input-limit-hint{display:block;color:#b9c8d2;font-size:12px;line-height:1.5;margin:4px 0 8px;overflow-wrap:anywhere}.input-limit-hint.adjusted{color:#f2d394}input[aria-invalid=true]{border-color:#ef8f88}.form-validation-summary{color:#ffb2a9;padding:12px;border:1px solid #884846;border-radius:8px;margin-bottom:16px}
+
+.staff-editor-shortcuts{display:flex;flex-wrap:wrap;gap:8px;padding:14px 0 24px}.staff-editor-shortcuts .btn{margin:0}
+
+.language-stat-flag{width:28px;height:18px;object-fit:contain;vertical-align:middle;margin-right:8px}
+
+.profile-avatar.frame-skin-mr-noob{--skin-frame:#dbe8f4}

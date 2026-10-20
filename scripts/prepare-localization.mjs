@@ -9,7 +9,7 @@ if(!bundled)throw Error('This development script requires a Node runtime with bu
 const mod={exports:{}};new Function('exports','module',bundled)(mod.exports,mod);
 const root=path.resolve(import.meta.dirname,'..'),dir=path.join(root,'public'),apply=process.argv.includes('--apply'),corpus=new Map();
 function add(key,file){if(!/[A-Za-z]{2}/.test(key.replace(/\{v\d+\}/g,'')))return;if(!corpus.has(key))corpus.set(key,new Set());corpus.get(key).add(file);}
-for(const file of readdirSync(dir).filter(f=>f.endsWith('.js')&&!/^(nl-|i18n|localization|city-geography|page-art|navigation|outcome-images)/.test(f))){
+for(const file of readdirSync(dir).filter(f=>f.endsWith('.js')&&!/^(nl-|(?:es|fr|de)(?:[.-])|i18n|localization|city-geography|page-art|navigation|outcome-images)/.test(f))){
  let source=readFileSync(path.join(dir,file),'utf8'),ast=mod.exports.parse(source,{ecmaVersion:'latest',sourceType:'module'}),edits=[],changed=false;
  const marked=new Set();
  const insert=(at,s)=>{edits.push({at,s});changed=true};

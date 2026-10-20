@@ -5,7 +5,7 @@ import {catalog} from './catalog.js';
 import {progression} from './progression.js';
 import {career} from './empire-catalog.js';
 export const profileOptions={avatars:skins,themes:['gold','silver','burgundy'],emblems:['crown','diamond','rose','wolf'],banners:[{id:'skyline',name:'City skyline',image:'/images/city-new-york.png'},{id:'estate',name:'Private estate',image:'/images/family-compound-estate.jpg'},{id:'marina',name:'Coastal compound',image:'/images/family-compound-palace.jpg'}]};
-export function installProfiles(db,{owned,profile,transaction,fail,clock,achievements=()=>[],themes=()=>[],honor=()=>null,frames=()=>['plain'],avatars=()=>skins.filter(s=>!s.cents&&!s.ownerOnly)}){
+export function installProfiles(db,{owned,profile,transaction,fail,clock,achievements=()=>[],themes=()=>[],honor=()=>null,frames=()=>['plain'],avatars=()=>skins.filter(s=>!s.cents&&!s.ownerOnly&&!s.grantOnly)}){
  const q=(s,...a)=>db.prepare(s).get(...a),run=(s,...a)=>db.prepare(s).run(...a);
  db.exec("CREATE TABLE IF NOT EXISTS player_profiles(user_id INTEGER PRIMARY KEY REFERENCES users(id),theme TEXT NOT NULL DEFAULT 'gold',emblem TEXT NOT NULL DEFAULT 'crown',banner TEXT NOT NULL DEFAULT 'skyline',bio TEXT NOT NULL DEFAULT '')");
  if(!db.prepare('PRAGMA table_info(player_profiles)').all().some(c=>c.name==='avatar'))db.exec("ALTER TABLE player_profiles ADD COLUMN avatar TEXT NOT NULL DEFAULT 'portrait-01'");

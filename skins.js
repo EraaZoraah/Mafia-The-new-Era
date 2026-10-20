@@ -16,3 +16,5 @@ export const defaultSkin=skins[0];
 export const legacySkin=id=>/^portrait-(0[1-9]|1[0-2])$/.test(id||'')?skins[(Math.max(1,Number(id.slice(-2)))-1)%6].id:id;
 
 skins.find(s=>s.id==='owner-goddess').image='/images/skin-owner-goddess-v3.png';
+
+skins.push({id:'mr-noob',name:'Mr.Noob',gender:'male',cents:0,grantOnly:true,image:'/images/skin-mr-noob.png',frame:'skin-mr-noob',frameName:'Mr.Noob',accent:'platinum'});

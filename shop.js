@@ -2,7 +2,7 @@ import {MAX_CASH} from './money.js';
 import {skins} from './skins.js';
 import {isStaff} from './staff.js';
 export const cosmetics=[
- ...skins.filter(s=>s.cents).flatMap(s=>[{id:'skin:'+s.id,kind:'skin',value:s.id,name:s.name},{id:'frame:'+s.frame,kind:'frame',value:s.frame,name:s.frameName}]),
+ ...skins.filter(s=>s.cents||s.grantOnly).flatMap(s=>[{id:'skin:'+s.id,kind:'skin',value:s.id,name:s.name},{id:'frame:'+s.frame,kind:'frame',value:s.frame,name:s.frameName}]),
  {id:'theme:champagne',kind:'theme',value:'champagne',name:'Champagne gold color'},
  {id:'theme:midnight',kind:'theme',value:'midnight',name:'Midnight blue color'},
  {id:'theme:velvet',kind:'theme',value:'velvet',name:'Velvet plum color'},
@@ -14,6 +14,7 @@ export const cosmetics=[
  {id:'title:velvet',kind:'title',value:'Velvet Society',name:'Velvet Society title'}
 ];
 export const shopProducts=[
+ ...skins.filter(s=>s.grantOnly).map(s=>({id:'skin-'+s.id,name:s.name,cents:0,ownerGrantOnly:true,section:'skins',items:['skin:'+s.id,'frame:'+s.frame],image:s.image,skin:s})),
  ...skins.filter(s=>s.cents).map(s=>({id:'skin-'+s.id,name:s.name,cents:s.cents,section:'skins',items:['skin:'+s.id,'frame:'+s.frame],image:s.image,skin:s})),
  {id:'energy-refill',name:'Fresh Start · Energy',cents:199,section:'rewards',items:[],rewards:{energy:500},image:'/images/premium-shop-v4.png'},
  {id:'xp-boost',name:'Street Experience · XP',cents:299,section:'rewards',items:[],rewards:{xp:50000},image:'/images/premium-shop-v4.png'},
@@ -37,7 +38,7 @@ export const shopProducts=[
  {id:'patron-pack',name:'City Patron Pack',cents:499,items:['theme:champagne','frame:laurel','title:patron'],image:'/images/premium-shop-v4.png'},
  {id:'night-pack',name:'Midnight Society Pack',cents:499,items:['theme:midnight','frame:platinum','title:night'],image:'/images/premium-shop-v4.png'},
  {id:'velvet-pack',name:'Velvet Collection Pack',cents:499,items:['theme:velvet','frame:artdeco','title:velvet'],image:'/images/premium-shop-v4.png'},
- {id:'complete-collection',name:'Frames, Colors & Titles Collection',cents:1199,items:cosmetics.filter(x=>!x.id.startsWith('skin:')&&!x.id.startsWith('frame:skin-')).map(x=>x.id),image:'/images/premium-shop-v4.png'}
+ {id:'complete-collection',name:'Frames, Colors & Titles Collection',cents:1199,items:cosmetics.filter(x=>!x.id.startsWith('skin:')&&!x.id.startsWith('frame:skin-')&&!skins.filter(s=>s.grantOnly).some(s=>x.id==='skin:'+s.id)).map(x=>x.id),image:'/images/premium-shop-v4.png'}
 ].sort((a,b)=>Number(!!b.supporter)-Number(!!a.supporter));
 export function installShop(db,{transaction,clock,fail,notify,promote=()=>{},settleRaw,energyMax=()=>100}){
  const q=(s,...v)=>db.prepare(s).get(...v),all=(s,...v)=>db.prepare(s).all(...v),run=(s,...v)=>db.prepare(s).run(...v);
@@ -50,16 +51,17 @@ export function installShop(db,{transaction,clock,fail,notify,promote=()=>{},set
  const bonus=id=>membership(id)?.tier==='gold'?1.25:membership(id)?1.10:1;
  const unlocked=(id,kind)=>{const ids=owned(id);return cosmetics.filter(c=>c.kind===kind&&ids.includes(c.id))};
  const titles=id=>unlocked(id,'title').map(x=>({id:'shop:'+x.id,name:x.value}));
- const avatars=id=>skins.filter(s=>s.ownerOnly?q('SELECT role FROM users WHERE id=?',id)?.role==='owner':!s.cents||owned(id).includes('skin:'+s.id));
+ const avatars=id=>skins.filter(s=>s.ownerOnly?q('SELECT role FROM users WHERE id=?',id)?.role==='owner':(!s.cents&&!s.grantOnly)||owned(id).includes('skin:'+s.id));
  const themes=id=>unlocked(id,'theme').map(x=>x.value),frames=id=>['plain',...unlocked(id,'frame').map(x=>x.value),...(q('SELECT role FROM users WHERE id=?',id)?.role==='owner'?['owner-diamond']:[])];
  function route(req,path,b,u){
-  if(req.method==='GET'&&path==='/api/shop')return {currency:'EUR',checkoutEnabled:false,checkoutMessage:'PayPal checkout is not configured. No payments are being accepted. Prices are a proposed launch catalog.',skins:skins.filter(s=>!s.ownerOnly).map(s=>({...s,owned:!s.cents||owned(u.id).includes('skin:'+s.id)})),products:shopProducts.map(p=>({...p,section:p.section||(p.supporter?'memberships':p.items.length>1?'packs':p.items[0]?.startsWith('frame:')?'frames':p.items[0]?.startsWith('theme:')?'colors':'packs'),items:p.items.map(id=>cosmetics.find(x=>x.id===id)),owned:p.rewards?false:p.supporter?!!membership(u.id):p.items.every(id=>owned(u.id).includes(id))})),membership:membership(u.id),owned:owned(u.id),canGrant:isStaff(u)};
+  if(req.method==='GET'&&path==='/api/shop')return {currency:'EUR',checkoutEnabled:false,checkoutMessage:'PayPal checkout is not configured. No payments are being accepted. Prices are a proposed launch catalog.',skins:skins.filter(s=>!s.ownerOnly&&!s.grantOnly).map(s=>({...s,owned:!s.cents||owned(u.id).includes('skin:'+s.id)})),products:shopProducts.filter(p=>!p.ownerGrantOnly||u.role==='owner').map(p=>({...p,section:p.section||(p.supporter?'memberships':p.items.length>1?'packs':p.items[0]?.startsWith('frame:')?'frames':p.items[0]?.startsWith('theme:')?'colors':'packs'),items:p.items.map(id=>cosmetics.find(x=>x.id===id)),owned:p.rewards?false:p.supporter?!!membership(u.id):p.items.every(id=>owned(u.id).includes(id))})),membership:membership(u.id),owned:owned(u.id),canGrant:isStaff(u)};
   if(path==='/api/shop/checkout'&&req.method==='POST')fail('Checkout is not available yet. No payment has been taken.',503);
   if(path==='/api/admin/shop'&&req.method==='GET'){if(!isStaff(u))fail('Staff access required.',403);return {grants:all('SELECT g.id,g.product_id,g.reason,g.created_at,a.username actor,t.username recipient FROM shop_grants g JOIN users a ON a.id=g.actor_id JOIN users t ON t.id=g.user_id ORDER BY g.id DESC LIMIT 100')}}
   if(path==='/api/admin/shop/grant'&&req.method==='POST')return transaction(()=>{
    if(!isStaff(u))fail('Only Owner and Admin can grant shop products.',403);
    const p=shopProducts.find(x=>x.id===b.product),target=typeof b.recipient==='string'?q('SELECT id FROM users WHERE username=? COLLATE NOCASE',b.recipient.trim()):null;
    if(!p||!target||typeof b.key!=='string'||!/^[a-zA-Z0-9-]{16,80}$/.test(b.key)||typeof b.reason!=='string'||!b.reason.trim()||b.reason.length>200)fail('Choose a player and product, and provide a reason of 1–200 characters.');
+   if(p.ownerGrantOnly&&u.role!=='owner')fail('Owner access required.',403);
    const old=q('SELECT * FROM shop_grants WHERE actor_id=? AND request_key=?',u.id,b.key);
    if(old){if(old.user_id!==target.id||old.product_id!==p.id||old.reason!==b.reason.trim())fail('This request key was already used for another grant.',409);return {ok:true,message:'This grant was already delivered.',image:p.image}}
    if(q('SELECT banned OR deleted_at inactive FROM users WHERE id=?',target.id).inactive)fail('Choose an active player.',409);
