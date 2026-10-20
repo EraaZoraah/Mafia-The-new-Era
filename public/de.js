@@ -2883,7 +2883,7 @@ export const german=Object.freeze({
   "A name worth knowing": "Ein wissenswerter Name",
   "Respected Name": "Respected Name",
   "Your first million": "Deine erste Million",
-  "Self Made": "Selbst gemacht",
+  "Self Made": "Aus eigener Kraft",
   "The collection": "Die Sammlung",
   "Private Collector": "Privatsammler",
   "Fortune favors the bold": "Das Glück begünstigt die Mutigen",
@@ -3817,7 +3817,7 @@ export const german=Object.freeze({
   "Next: {rank}": "Weiter: {rank}",
   "{xp} XP to go": "Noch {xp} XP",
   "Legacy distinction {count}": "Legacy-Unterscheidung {count}",
-  "YOUR CITY. YOUR LEGACY.": "DEINE STADT. IHR VERMÄCHTNIS.",
+  "YOUR CITY. YOUR LEGACY.": "IHRE STADT. IHR VERMÄCHTNIS.",
   "Build an empire that works for you.": "Bauen Sie ein Imperium auf, das für Sie funktioniert.",
   "Power has<br>a new address.": "Power hat<br>eine neue Adresse.",
   "Explore investments": "Entdecken Sie Investitionen",
@@ -4138,7 +4138,7 @@ export const german=Object.freeze({
   "The most recently reported interface language is stored for Owner-only aggregate language statistics. Human accounts, bots and accounts without a reported language are counted separately.": "Die zuletzt gemeldete Oberflächensprache wird für zusammengefasste Sprachstatistiken gespeichert, die nur der Owner sehen kann. Menschliche Konten, Bots und Konten ohne gemeldete Sprache werden getrennt gezählt.",
   "French and German join the language selector, with localized rules, results and Luca guidance.": "Französisch und Deutsch ergänzen die Sprachauswahl, mit übersetzten Regeln, Ergebnissen und Luca-Tipps.",
   "Your underworld, in five languages": "Deine Unterwelt, in fünf Sprachen",
-  "Mafia: The new Era © · v1.21.1": "Mafia: The new Era © · v1.21.1"
+  "Mafia: The new Era © · v1.21.2": "Mafia: The new Era © · v1.21.2"
 ,
 "{name} — unlocked":"{name} — freigeschaltet",
 "{name} — requires {asset}":"{name} — benötigt {asset}"

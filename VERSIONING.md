@@ -1,6 +1,6 @@
 # Versioning
 
-Current release: **1.21.1** (`2026-10-20-release-1.21.1`).
+Current release: **1.21.2** (`2026-10-20-release-1.21.2`).
 
 `package.json` is the release version. `/api/health` exposes both the semantic
 version and the exact build identifier; the footer and changelog show versions

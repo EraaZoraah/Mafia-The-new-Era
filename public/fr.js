@@ -2900,7 +2900,7 @@ export const french=Object.freeze({
   "A name worth knowing": "Un nom à connaître",
   "Respected Name": "Nom Respected",
   "Your first million": "Votre premier million",
-  "Self Made": "Fait maison",
+  "Self Made": "Parti de rien",
   "The collection": "La collection",
   "Private Collector": "Collectionneur privé",
   "Fortune favors the bold": "La fortune sourit aux audacieux",
@@ -4138,7 +4138,7 @@ export const french=Object.freeze({
   "The most recently reported interface language is stored for Owner-only aggregate language statistics. Human accounts, bots and accounts without a reported language are counted separately.": "La dernière langue d’interface signalée est enregistrée pour des statistiques agrégées accessibles uniquement au propriétaire. Les comptes humains, les bots et les comptes sans langue signalée sont comptés séparément.",
   "French and German join the language selector, with localized rules, results and Luca guidance.": "Le français et l’allemand rejoignent le sélecteur de langue, avec les règles, les résultats et les conseils de Luca traduits.",
   "Your underworld, in five languages": "Votre pègre, en cinq langues",
-  "Mafia: The new Era © · v1.21.1": "Mafia: The new Era © · v1.21.1"
+  "Mafia: The new Era © · v1.21.2": "Mafia: The new Era © · v1.21.2"
 ,
 "{name} — unlocked":"{name} — débloqué",
 "{name} — requires {asset}":"{name} — nécessite {asset}"

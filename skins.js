@@ -17,4 +17,4 @@ export const legacySkin=id=>/^portrait-(0[1-9]|1[0-2])$/.test(id||'')?skins[(Mat
 
 skins.find(s=>s.id==='owner-goddess').image='/images/skin-owner-goddess-v3.png';
 
-skins.push({id:'mr-noob',name:'Mr.Noob',gender:'male',cents:0,grantOnly:true,image:'/images/skin-mr-noob.png',frame:'skin-mr-noob',frameName:'Mr.Noob',accent:'platinum'});
+skins.push({id:'mr-noob',name:'Mr.Noob',gender:'male',cents:0,grantOnly:true,image:'/images/skin-mr-noob-v2.png',frame:'skin-mr-noob',frameName:'Mr.Noob',accent:'platinum'});

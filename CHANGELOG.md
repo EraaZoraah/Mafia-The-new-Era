@@ -1,3 +1,10 @@
+# 1.21.2 - 2026-10-20
+
+- Refined Mr.Noob with tattoos, lightly tinted sunglasses and tidier grooming.
+- Removed duplicated Support tickets menu text and corrected French/German cosmetic wording.
+- Corrected the visual-audit navigation check.
+- Completed regression, localization, asset and browser checks; see RELEASE-QA-1.21.2.md.
+
 # 1.21.1 - 2026-10-20
 
 - Added the exclusive Mr.Noob character skin and matching interchangeable frame.
