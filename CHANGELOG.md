@@ -1,3 +1,7 @@
+# 1.22.1 - 2026-10-21
+
+- Reduced Bordeaux tint in panels and balanced the subtle background glow.
+
 # 1.22.0 - 2026-10-21
 
 - Added black/Bordeaux premium surfaces, fine gold panel outlines, paired fading menu lines, refined typography and asset cards.
