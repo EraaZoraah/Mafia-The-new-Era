@@ -1,5 +1,6 @@
 // Historical 0.1.x milestone versions were assigned retrospectively. Keep published versions immutable.
 export const releaseNotes=[
+{"id": "2026-10-21-release-1.22.2", "announce": false, "date": "2026-10-21", "title": "A more polished underworld", "items": ["Darker panels with a subtle Bordeaux background glow."]},
 {"id": "2026-10-21-release-1.22.1", "announce": false, "date": "2026-10-21", "title": "A more polished underworld", "items": ["Darker panels with a subtle Bordeaux background glow."]},
 {"id": "2026-10-21-release-1.22.0", "announce": false, "date": "2026-10-21", "title": "A more polished underworld", "items": ["Premium panels, clearer collection cards and refined typography.", "Faster artwork loading and steadier scrolling during page actions."]},
 {"id":"2026-10-20-release-1.21.0","announce":true,"date":"2026-10-20","title":"Your underworld, in five languages","items":["French and German join the language selector, with localized rules, results and Luca guidance."]},

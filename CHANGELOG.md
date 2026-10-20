@@ -1,3 +1,7 @@
+# 1.22.2 - 2026-10-21
+
+- Neutral charcoal panels and a substantially reduced Bordeaux background glow.
+
 # 1.22.1 - 2026-10-21
 
 - Reduced Bordeaux tint in panels and balanced the subtle background glow.

@@ -4137,7 +4137,7 @@ export const spanish=Object.freeze({
   "The most recently reported interface language is stored for Owner-only aggregate language statistics. Human accounts, bots and accounts without a reported language are counted separately.": "Se guarda el último idioma de interfaz registrado para estadísticas agregadas que solo puede consultar el Owner. Las cuentas humanas, los bots y las cuentas sin idioma registrado se cuentan por separado.",
   "French and German join the language selector, with localized rules, results and Luca guidance.": "El francés y el alemán se añaden al selector de idiomas, con reglas, resultados y consejos de Luca traducidos.",
   "Your underworld, in five languages": "Tu mundo del crimen, en cinco idiomas",
-  "Mafia: The new Era © · v1.22.1": "Mafia: The new Era © · v1.22.1"
+  "Mafia: The new Era © · v1.22.2": "Mafia: The new Era © · v1.22.2"
 ,
 "{name} — unlocked":"{name} — desbloqueado",
 "{name} — requires {asset}":"{name} — requiere {asset}",

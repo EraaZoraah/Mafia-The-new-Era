@@ -42,16 +42,16 @@ body{background:radial-gradient(ellipse at 84% 0%,#41301d33,transparent 55%),#0c
 .sidebar .navigation-section:last-of-type:before,.sidebar .navigation-section:last-of-type:after{display:none}
 
 /* Approved black/Bordeaux surfaces, restrained compared with the preview. */
-body{background:radial-gradient(ellipse at 88% 12%,#581d3233,transparent 68%),radial-gradient(ellipse at 25% 85%,#44182a20,transparent 65%),#100d11}
-.sidebar{background-image:linear-gradient(110deg,#100d11,#1a1118)}
-.sidebar .navigation-section:before,.sidebar .navigation-section:after{background:linear-gradient(to bottom,transparent,#171017f2 38%,#171017 50%,#171017f2 62%,transparent)}
+body{background:radial-gradient(ellipse at 88% 12%,#481d2c12,transparent 68%),radial-gradient(ellipse at 25% 85%,#391b260c,transparent 65%),#0e1013}
+.sidebar{background-image:linear-gradient(110deg,#0e1014,#15151b)}
+.sidebar .navigation-section:before,.sidebar .navigation-section:after{background:linear-gradient(to bottom,transparent,#14151af2 38%,#14151a 50%,#14151af2 62%,transparent)}
 .player-wallet,.panel,.stat,.empire-hero{border:1px solid #b99a5c48;box-shadow:inset 0 0 0 1px #d8b67908,0 14px 32px #0004}
-.player-wallet,.panel,.stat,#content>.panel{background:linear-gradient(120deg,#211b22,#15151b 75%)}
-.intro-cue{background:linear-gradient(110deg,#2a2027,#18171e 72%)}
+.player-wallet,.panel,.stat,#content>.panel{background:linear-gradient(120deg,#1c1e23,#13161b 75%)}
+.intro-cue{background:linear-gradient(110deg,#242227,#16191e 72%)}
 .player-wallet:before,.panel:before,.stat:before,.empire-hero:before,.player-wallet:after,.panel:after,.stat:after{content:'';position:absolute;inset:7px 16px auto;pointer-events:none;z-index:3;width:auto;height:4px;border:0;clip-path:none;background:linear-gradient(90deg,transparent,#b58c4c66 15%,#f0d49bba 48%,#b58c4c66 85%,transparent),linear-gradient(90deg,transparent,#b58c4c40 15%,#e7c58070 48%,#b58c4c40 85%,transparent);background-size:100% 1px,100% 1px;background-position:left top,left bottom;background-repeat:no-repeat}
 .player-wallet:after,.panel:after,.stat:after{top:auto;bottom:7px}
 .panel .panel:before,.panel .panel:after{display:none}
-.asset-card,.photo-card{background:linear-gradient(135deg,#201b21,#15151b 65%);border-color:#b7975c3d}
+.asset-card,.photo-card{background:linear-gradient(135deg,#1c1e22,#13161b 65%);border-color:#b7975c3d}
 /* Shared action buttons: polished champagne, dark secondary, clear danger states. */
 .btn{border-radius:7px;font-weight:650;letter-spacing:.035em;transition:background .18s,border-color .18s,box-shadow .18s,transform .18s}
 .btn:not(.secondary):not(.danger){background:linear-gradient(115deg,#f0dfb5 0%,#d7bb83 45%,#c3a16b 100%);border:1px solid #efd9a5;box-shadow:inset 0 1px 0 #fff6,inset 0 0 0 3px #8c682b20,0 4px 12px #0004;color:#302417}
