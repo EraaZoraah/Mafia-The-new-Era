@@ -1,3 +1,4 @@
+import {resetTradePeriod} from './trade-summary.js';
 import {MAX_CASH} from './money.js';
 import {isStaff} from './staff.js';
 import {succeedDon} from './diplomacy.js';
@@ -53,10 +54,11 @@ export function installPlayerCare(db,{transaction,clock,fail,notify,settleRaw,ca
    }
    run('DELETE FROM art_theft_history WHERE user_id=?',target.id);run('DELETE FROM art_refunds WHERE user_id=?',target.id);run("UPDATE art_objects SET state='retired' WHERE user_id=?",target.id);run('DELETE FROM art_heist_cooldowns WHERE user_id=?',target.id);
   }
+  resetTradePeriod(db,target.id);
   succeedDon(db,target.id,clock,fail);
   run('INSERT INTO player_lifecycle(actor_id,target_id,kind,snapshot,created_at) VALUES(?,?,?,?,?)',actor.id,target.id,body.action,JSON.stringify(snapshot),clock());
   run("UPDATE crew_operations SET status='cancelled' WHERE leader_id=? AND status='recruiting'",target.id);
-  for(const table of ['income_cycles','vehicle_loot','purchased_car_bays','crew_members','employees','crypto_trade_history','crypto_wallet','gift_receipts','casino_extra_rounds','casino_extra_requests','expansion_requests','sessions','actions','possessions','archived_possessions','promotion_notifications','mystery_offers','investments','family_contributions','city_heat','family_recruitment','operation_history','casino_requests','casino_rounds','player_milestones','crime_big_scores','player_profiles','war_team_members','family_plan_members','player_notifications'])run('DELETE FROM '+table+' WHERE user_id=?',target.id);
+  for(const table of ['art_trade_receipts','vehicle_trade_receipts','income_cycles','vehicle_loot','purchased_car_bays','crew_members','employees','crypto_trade_history','crypto_wallet','gift_receipts','casino_extra_rounds','casino_extra_requests','expansion_requests','sessions','actions','possessions','archived_possessions','promotion_notifications','mystery_offers','investments','family_contributions','city_heat','family_recruitment','operation_history','casino_requests','casino_rounds','player_milestones','crime_big_scores','player_profiles','war_team_members','family_plan_members','player_notifications'])run('DELETE FROM '+table+' WHERE user_id=?',target.id);
   run("DELETE FROM armory_purchase_history WHERE scope='personal' AND owner_id=?",target.id);
   run('DELETE FROM vehicle_thefts WHERE user_id=?',target.id);if(q("SELECT 1 FROM sqlite_master WHERE name='push_devices'")){run('DELETE FROM push_devices WHERE user_id=?',target.id);run('DELETE FROM push_queue WHERE user_id=?',target.id);}
   // Preserve daily claims, donation/gift ledgers, chat, support and audit history to prevent replay farming.

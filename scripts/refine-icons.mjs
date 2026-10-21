@@ -22,7 +22,8 @@ const paths={
  'coin-silk':'M7 9l22-4 5 24-22 6zM7 9l9 9-4 17M16 18l18 11M16 18l13-13M13 12l13-3M17 26l10 3',
 };
 for(const [id,path] of Object.entries(paths)){
- const name='public/icons/'+id+'.svg';let body=`<path d="${path}"/>`,size=40;
+ if(id.startsWith('coin-'))continue;
+ const name='public/icons/'+id+'.svg';if(fs.existsSync(name)&&fs.readFileSync(name,'utf8').includes('data-premium-coin'))continue;let body=`<path d="${path}"/>`,size=40;
  if(id.startsWith('achievement-')){size=80;body='<circle cx="40" cy="40" r="36" stroke="#af925f"/><circle cx="40" cy="40" r="31" stroke="#6d5b3d"/><g transform="translate(20 19)">'+body+'</g>';}
  if(id.startsWith('coin-')){size=64;const symbol={raven:'RVN',ghost:'GHO',vesper:'VSP',silk:'SLK'}[id.slice(5)];body='<circle cx="32" cy="32" r="30"/><circle cx="32" cy="32" r="26" stroke="#6d5b3d"/><g transform="translate(12 6)">'+body+'</g><text x="32" y="56" text-anchor="middle" fill="#ead3a2" stroke="none" font-family="Georgia,serif" font-size="8">'+symbol+'</text>';}
  fs.writeFileSync(name,`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${size} ${size}" fill="none" stroke="#dfc38c" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${body}</svg>`);

@@ -1,4 +1,22 @@
-# 1.22.3 - 2026-10-21
+# Changelog
+
+## 1.24.0 — 2026-10-21
+
+- Luca detects clear question languages independently of the selected interface language, with local fallback and preserved account preferences.
+
+- Luca compares live fictional crypto quotes, recorded ranges, momentum, volatility, fees and personal purchase capacity without promising returns.
+
+- Four-hour per-coin charts and clear remaining-position purchase price, valuation and unrealized return.
+
+- New 3D jewelry-style coin artwork, optimized delivery copies and removal of obsolete coin SVGs.
+- Per-coin, per-drug and per-category trading summaries with recorded costs, proceeds, losses and inventory separation.
+- Distinct Best choice and Highest profit production labels; Luca can report current personal trading totals.
+
+- Readable horizontally scrolling tables on mobile, including staff overviews.
+- One catch-up announcement, translated and published once; later releases receive their own dispatch.
+- Fifteen premium minted crypto coin designs.
+- Live, affordable production and freight recommendations with Best choice labels.
+
 
 ## 1.23.0 — 2026-10-21
 
@@ -9,6 +27,8 @@
 - Five-minute crypto quotes, wider bounded volatility, safe price-history migration and refreshed guide/translations.
 - Wedding fee updated to $50 million.
 
+
+## 1.22.3 — 2026-10-21
 
 - Compact mobile language/logout controls beside player identity; account balances remain below.
 - Edge menu tab and a visible version footer in the mobile drawer.

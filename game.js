@@ -1,3 +1,6 @@
+import {guideLanguage} from './guide-language.js';
+import {isCryptoAnalysisQuestion} from './guide-crypto.js';
+import {isTradingQuestion} from './guide-trading.js';
 import {installIncomeCycles} from './income-cycle.js';
 import {installReferrals} from './referrals.js';
 import {installMidnightCircuit} from './midnight-circuit.js';
@@ -812,7 +815,10 @@ export function installGame(db, { hash, log, json, onNotify=()=>{}, bribeRoll = 
 
         const question=(new URL(req.url,'http://localhost').searchParams.get('q')||'').toLowerCase();
 
-        return json(res,200,guideAnswer(db,q('SELECT * FROM users WHERE id=?',user.id),question,clock(),{incomeClock:profile(q('SELECT * FROM users WHERE id=?',user.id)).incomeClock,referrals:/referral|referid|parrain|filleul|einlad|empfehl|werben|invit|aanbreng|verwijz|invite.*friend|vriend.*uitnodig/.test(question)?referrals.view(user.id):null,language:['nl','es','fr','de'].includes(new URL(req.url,'http://localhost').searchParams.get('lang'))?new URL(req.url,'http://localhost').searchParams.get('lang'):'en',circuit:circuit.board(user.id),art:art.board(user.id),bribe:bribery.current(user.id),armory:logistics.inventory('personal',user.id),crimes:crimes.map(c=>crimeOffer(c,benefits(user.id))),ammoPrice:AMMO_PRICE,milestones:legacy.sync(user.id),daily:daily.route({method:'GET'},'/api/daily',{},user).jobs,market:logistics.marketAdvice(q('SELECT * FROM users WHERE id=?',user.id)),vehicles:vehicles.advice(user.id),family:/territor|conqu|erober|gebiet|carte|karte|verover|capture|gebied|map|kaart/.test(question||'')?empire.route('GET','/api/family',{},user).family:null}));
+        const replyLanguage=guideLanguage(question,new URL(req.url,'http://localhost').searchParams.get('lang')||user.ui_language||'en');
+        const trading=isTradingQuestion(question)?{investments:empire.route('GET','/api/investments',{},user).accounts.find(a=>a.scope==='personal')?.trade,crypto:expansion.route({method:'GET',url:'/api/crypto'},'/api/crypto',{},user).trade,production:logistics.route({method:'GET',url:'/api/production'},'/api/production',{},user).trade}:null;
+        const reply=guideAnswer(db,q('SELECT * FROM users WHERE id=?',user.id),question,clock(),{trading,cryptoMarket:isCryptoAnalysisQuestion(question)?expansion.route({method:'GET',url:'/api/crypto'},'/api/crypto',{},user):null,incomeClock:profile(q('SELECT * FROM users WHERE id=?',user.id)).incomeClock,referrals:/referral|referid|parrain|filleul|einlad|empfehl|werben|invit|aanbreng|verwijz|invite.*friend|vriend.*uitnodig/.test(question)?referrals.view(user.id):null,language:replyLanguage.language,circuit:circuit.board(user.id),art:art.board(user.id),bribe:bribery.current(user.id),armory:logistics.inventory('personal',user.id),crimes:crimes.map(c=>crimeOffer(c,benefits(user.id))),ammoPrice:AMMO_PRICE,milestones:legacy.sync(user.id),daily:daily.route({method:'GET'},'/api/daily',{},user).jobs,market:trading||isCryptoAnalysisQuestion(question)?null:logistics.marketAdvice(q('SELECT * FROM users WHERE id=?',user.id)),vehicles:vehicles.advice(user.id),family:/territor|conqu|erober|gebiet|carte|karte|verover|capture|gebied|map|kaart/.test(question||'')?empire.route('GET','/api/family',{},user).family:null});
+        return json(res,200,{...reply,language:replyLanguage.language,languageSource:replyLanguage.source});
 
       }
 

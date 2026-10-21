@@ -1,3 +1,5 @@
+import {cryptoGuide} from './guide-crypto.js';
+import {tradingGuide} from './guide-trading.js';
 import {localizedGuideQuery,localizedGuideReply} from './guide-locales.js';
 import {referralAdvice} from './referral-guide.js';
 import {circuitGuide} from './circuit-guide.js';
@@ -87,6 +89,8 @@ export const guideTopics=[
 ];
 
 export function guideAnswer(db,u,question,time=Date.now(),context={}){
+ const crypto=cryptoGuide(question,u,time,context);if(crypto)return crypto;
+ const trading=tradingGuide(question,context);if(trading)return trading;
  if(['es','fr','de'].includes(context.language))return localizedGuideReply(guideAnswer(db,u,localizedGuideQuery(question,context.language),time,{...context,language:'en',knowledgeLanguage:context.language}),u,context);
 
  const topicQuery=String(question||'').toLowerCase(),dutch=context.language==='nl';

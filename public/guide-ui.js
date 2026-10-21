@@ -19,7 +19,7 @@ export function createGuideUI({api,getMe,esc,navigate}) {
    const generation=++request;feed.textContent=t('Checking your next move…');
    try{const d=await api('guide?q='+encodeURIComponent(question)+'&lang='+activeLanguage);if(generation!==request||!widget.isConnected)return;
     const card=x=>lhtml`<article class="guide-tip"><strong>${esc(x.label)}</strong>${x.text?lhtml`<p>${esc(x.text)}</p>`:''}<div><button class="btn small secondary" data-guide-show="${esc(x.tab)}">${t('Show me')}</button> <button class="btn small" data-guide-open="${esc(x.tab)}">${t('Open page')}</button></div></article>`;
-    feed.innerHTML=lhtml`<p>${esc(d.answer)}</p>${d.links.map(card).join('')}<h3>${t('Your next moves')}</h3>${d.suggestions.map(card).join('')}`;
+    feed.innerHTML=lhtml`<p lang="${esc(d.language||activeLanguage)}">${esc(d.answer)}</p>${d.links.map(card).join('')}<h3>${t('Your next moves')}</h3>${d.suggestions.map(card).join('')}`;
     feed.querySelectorAll('[data-guide-show]').forEach(button=>button.onclick=()=>{
      const target=revealNavigation(document,button.dataset.guideShow);
      if(!target)return;document.querySelectorAll('.guide-highlight').forEach(el=>el.classList.remove('guide-highlight'));

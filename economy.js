@@ -4,6 +4,7 @@ export function installEconomy(db,{clock,fail}){
  db.exec(`CREATE TABLE IF NOT EXISTS economy_context(id INTEGER PRIMARY KEY CHECK(id=1),source TEXT NOT NULL,at INTEGER NOT NULL);
  CREATE TABLE IF NOT EXISTS economy_ledger(id INTEGER PRIMARY KEY,scope TEXT NOT NULL,account_id INTEGER NOT NULL,source TEXT NOT NULL,cash_delta INTEGER NOT NULL,bank_delta INTEGER NOT NULL,xp_delta INTEGER NOT NULL,created_at INTEGER NOT NULL);
  CREATE INDEX IF NOT EXISTS economy_time ON economy_ledger(created_at,source);
+ CREATE INDEX IF NOT EXISTS economy_account_source ON economy_ledger(scope,account_id,source,id);
  CREATE TABLE IF NOT EXISTS economy_meta(key TEXT PRIMARY KEY,value TEXT NOT NULL);`);
  run("INSERT OR IGNORE INTO economy_meta VALUES('started_at',?)",String(clock()));run("INSERT OR REPLACE INTO economy_context VALUES(1,'system',?)",clock());
  db.exec(`CREATE TRIGGER IF NOT EXISTS economy_player_created AFTER INSERT ON users BEGIN INSERT INTO economy_ledger(scope,account_id,source,cash_delta,bank_delta,xp_delta,created_at) SELECT 'player',NEW.id,source,NEW.cash,NEW.bank,NEW.xp,at FROM economy_context WHERE id=1; END;

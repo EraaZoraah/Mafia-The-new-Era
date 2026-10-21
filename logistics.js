@@ -1,3 +1,4 @@
+import {summarizeTrade} from './trade-summary.js';
 import {vehicleStockStats} from './vehicle-catalog.js';
 import {cityDrugMarkets,cityFactors,transportModes,freightQuote} from './drug-markets.js';
 import {MAX_CASH} from './money.js';
@@ -134,18 +135,54 @@ export function installLogistics(db,{employeePower=()=>0,marriageBonus=()=>1,tra
  function market(drug,city='New York'){const hour=Math.floor(clock()/3600000);return {percent:hourlyPercent(drug,city,'sale'),productionPercent:hourlyPercent(drug,city,'production'),transportPercent:hourlyPercent(drug,city,'freight'),epoch:hour,until:(hour+1)*3600000};}
  function remaining(batch){return Math.max(0,batch.remaining_ms-Math.max(0,clock()-batch.updated_at-(batch.scope==='personal'?blockedMillis(batch.owner_id,batch.updated_at,clock()):0)));}
  function baseQuote(b,city){return Math.floor(b.base_value*cityFactors(city,products.findIndex(p=>p.id===b.drug_id)).sale*market(b.drug_id,city).percent/100);}
- function saleQuote(b,city,scope,id){const base=baseQuote(b,city),factor=scope==='personal'?marriageBonus(id):sundayBonus(clock());return base+Math.floor(Math.max(0,base-b.cost-b.freight_cost)*(factor-1));}
+ function saleQuote(b,city,scope,id,factor=scope==='personal'?marriageBonus(id):sundayBonus(clock())){const base=baseQuote(b,city);return base+Math.floor(Math.max(0,base-b.cost-b.freight_cost)*(factor-1));}
  function cargoQuote(b,city,mode){const offer=freightQuote(b.stock_city,city,mode,b.cost,b.units);if(!offer)return null;return {...offer,cost:Math.ceil(offer.cost*market(b.drug_id,b.stock_city).transportPercent*market(b.drug_id,city).transportPercent/10000)};}
  function finishFreight(scope,id){for(const b of all('SELECT * FROM production_batches WHERE scope=? AND owner_id=? AND sold_at=0 AND arrives_at>0 AND arrives_at<=?',scope,id,clock())){
   run("UPDATE production_batches SET stock_city=transit_to,transit_to='',arrives_at=0,sold_at=? WHERE id=?",b.intercepted?clock():0,b.id);
  }}
+ function productionTrade(scope,id){
+  const rows=all('SELECT * FROM production_batches WHERE scope=? AND owner_id=?',scope,id),names=new Map(products.map(p=>[p.id,p.name]));
+  return summarizeTrade(rows.map(b=>{const cost=b.cost+b.freight_cost,lost=!!b.sold_at&&!!b.intercepted,known=!!b.sold_at&&(lost||b.sale_value!==null);return {id:b.drug_id,name:names.get(b.drug_id),invested:cost,received:b.sale_value??0,closedCost:known?cost:0,closedReceived:known?(b.sale_value||0):0,losses:lost?cost:0};}),{realized:true,missing:rows.filter(b=>b.sold_at&&!b.intercepted&&b.sale_value===null).length,stock:products.map(p=>({id:p.id,name:p.name,cost:rows.filter(b=>b.drug_id===p.id&&!b.sold_at).reduce((n,b)=>n+b.cost+b.freight_cost,0)}))});
+ }
+ db.exec('CREATE INDEX IF NOT EXISTS production_trade_owner ON production_batches(scope,owner_id,sold_at)');
+ db.exec('CREATE TABLE IF NOT EXISTS production_trade_meta(key TEXT PRIMARY KEY)');
+ if(!q("SELECT 1 FROM production_trade_meta WHERE key='verified-sales-v1'"))transaction(()=>{
+  for(const b of all('SELECT * FROM production_batches WHERE sold_at>0 AND sale_value IS NULL AND intercepted=0')){
+   const table=b.scope==='family'?'family_events':'events',owner=b.scope==='family'?'family_id':'user_id';
+   if(!all('PRAGMA table_info('+table+')').some(c=>c.name==='message'))continue;
+   const matches=all('SELECT message FROM '+table+' WHERE '+owner+'=? AND created_at=?',b.owner_id,b.sold_at).map(r=>r.message.match(/^Sold production batch #(\d+) at \d+% for \$(\d+)\.$/)).filter(m=>m&&(Number(m[1])===b.id||Number(m[1])===b.batch_number)&&Number.isSafeInteger(Number(m[2])));
+   if(matches.length===1)run('UPDATE production_batches SET sale_value=? WHERE id=?',Number(matches[0][2]),b.id);
+  }
+  run("INSERT INTO production_trade_meta VALUES('verified-sales-v1')");
+ });
  function productionHistory(scope,id){return all('SELECT * FROM production_batches WHERE scope=? AND owner_id=? ORDER BY id DESC LIMIT 50',scope,id).map(b=>{const realized=b.intercepted&&b.sold_at?0:b.sale_value,investment=b.cost+b.freight_cost,netProfit=realized===null?null:realized-investment;return {...b,batchNumber:b.batch_number,saleValue:realized,netProfit,netMargin:netProfit===null?null:netProfit/Math.max(1,investment)*100,routes:all('SELECT * FROM production_routes WHERE batch_id=? ORDER BY id',b.id),intercepted:b.arrives_at>clock()?undefined:b.intercepted};});}
  function batches(scope,id){transaction(()=>{numberBatchGaps();finishFreight(scope,id)});return all('SELECT * FROM production_batches WHERE scope=? AND owner_id=? AND sold_at=0 ORDER BY id',scope,id).map(b=>{const saleValue=saleQuote(b,b.stock_city,scope,id);return {...b,batchNumber:b.batch_number,intercepted:undefined,remaining:remaining(b),market:market(b.drug_id,b.stock_city),saleValue,netProfit:saleValue-b.cost-b.freight_cost,netMargin:(saleValue-b.cost-b.freight_cost)/Math.max(1,b.cost+b.freight_cost)*100,destinations:cities.filter(c=>c!==b.stock_city).map(city=>({city,saleValue:saleQuote(b,city,scope,id),routes:transportModes.map(m=>cargoQuote(b,city,m)).filter(Boolean).map(r=>{const shipped={...b,freight_cost:b.freight_cost+r.cost},saleValue=saleQuote(shipped,city,scope,id),investment=b.cost+shipped.freight_cost,netProfit=saleValue-investment;return {...r,saleValue,netProfit,expectedProfit:saleValue*(1-r.risk)-investment,netMargin:netProfit/Math.max(1,investment)*100}})}))};});}
 
 
  function productionStorage(scope,id){const warehouses=scope==='personal'?q("SELECT COALESCE(SUM(quantity),0) n FROM possessions WHERE user_id=? AND item_id='production-warehouse'",id).n:q("SELECT COALESCE(SUM(quantity),0) n FROM family_assets WHERE family_id=? AND item_id='warehouse-production-family'",id).n;return {warehouses,capacity:warehouses*1000,used:q('SELECT COALESCE(SUM(units),0) n FROM production_batches WHERE scope=? AND owner_id=? AND sold_at=0',scope,id).n};}
- function productionCatalog(user,a){const xp=a.scope==='family'?q('SELECT drugs_xp FROM families WHERE id=?',a.ownerId).drugs_xp:user.drugs_xp,level=career('drugs',xp).level,factor=1+(level-1)*.03;
+ function productionCatalog(user,a){user={...user,city:cities.includes(user.city)?user.city:'New York'};const xp=a.scope==='family'?q('SELECT drugs_xp FROM families WHERE id=?',a.ownerId).drugs_xp:user.drugs_xp,level=career('drugs',xp).level,factor=1+(level-1)*.03;
   return products.map(p=>({...p,locked:level<p.level,market:market(p.id,user.city),city:user.city,cityFactors:cities.map(city=>({city,...cityFactors(city,products.indexOf(p)),market:market(p.id,city)})),terms:[6,12,24].map(hours=>({hours,cost:Math.ceil(p.cost*hours/6*cityFactors(user.city,products.indexOf(p)).production*market(p.id,user.city).productionPercent/100),baseValue:Math.floor(p.cost*hours/6*(1.3+hours/120)*factor)}))}));
+ }
+ function rankedProduction(user,a){
+  user={...user,city:cities.includes(user.city)?user.city:'New York'};
+  const funds=a.scope==='family'?q('SELECT treasury FROM families WHERE id=?',a.ownerId).treasury:user.cash;
+  const storage=productionStorage(a.scope,a.ownerId),hasSlot=batches(a.scope,a.ownerId).length<5,saleFactor=a.scope==='personal'?marriageBonus(a.ownerId):sundayBonus(clock());
+  const list=productionCatalog(user,a).map(p=>{
+   const offers=p.terms.flatMap(t=>{
+    const batch={drug_id:p.id,stock_city:p.city,base_value:t.baseValue,cost:t.cost,freight_cost:0,units:1};
+    return cities.flatMap(city=>{
+     const routes=city===p.city?[{mode:'local',name:'Local sale',cost:0,hours:0,risk:0}]:transportModes.map(mode=>cargoQuote(batch,city,mode)).filter(Boolean);
+     return routes.map(r=>{const shipped={...batch,freight_cost:r.cost},saleValue=saleQuote(shipped,city,a.scope,a.ownerId,saleFactor),totalCost=t.cost+r.cost,expectedProfit=saleValue*(1-r.risk)-totalCost;
+      return {hours:t.hours,destination:city,mode:r.mode,transport:r.name,transportHours:r.hours,risk:r.risk,cost:t.cost,transportCost:r.cost,saleValue,netProfit:saleValue-totalCost,expectedProfit,expectedPerHour:expectedProfit/(t.hours+r.hours),affordable:totalCost<=funds};});
+    });
+   }).sort((a,b)=>b.expectedPerHour-a.expectedPerHour);
+   const recommendation=offers.find(o=>o.affordable)||offers[0],mostProfitableOffer=[...offers].filter(o=>o.affordable).sort((a,b)=>b.netProfit-a.netProfit)[0]||[...offers].sort((a,b)=>b.netProfit-a.netProfit)[0];
+   const drugStock=q('SELECT COALESCE(SUM(units),0) n FROM production_batches WHERE scope=? AND owner_id=? AND drug_id=? AND sold_at=0',a.scope,a.ownerId,p.id).n;
+   const canStart=drugStock<1000&&!p.locked&&a.canManage&&hasSlot&&storage.used<storage.capacity&&!(user.prison_until>clock()||user.hospital_until>clock()||user.captured_until>clock()||user.health<10)&&recommendation.affordable;
+   return {...p,recommendation,mostProfitableOffer,canStart,terms:[...p.terms].sort((x,y)=>(y.hours===recommendation.hours)-(x.hours===recommendation.hours))};
+  }).sort((x,y)=>Number(y.canStart)-Number(x.canStart)||Number(x.locked)-Number(y.locked)||y.recommendation.expectedPerHour-x.recommendation.expectedPerHour);
+  const highest=[...list].filter(p=>p.canStart).sort((a,b)=>b.mostProfitableOffer.netProfit-a.mostProfitableOffer.netProfit)[0];
+  return list.map((p,i)=>({...p,bestChoice:i===0&&p.canStart,highestProfit:p.id===highest?.id}));
  }
  function cityHeat(id,city){const row=q('SELECT * FROM city_heat WHERE user_id=? AND city=?',id,city);return row?Math.max(0,row.heat-Math.floor(Math.max(0,clock()-row.updated_at)/3600000)):0;}
  function airport(id){const u=q('SELECT * FROM users WHERE id=?',id),jets=all("SELECT item_id,quantity FROM possessions WHERE user_id=? AND category='jet'",id),cooldown=q('SELECT available_at FROM actions WHERE user_id=? AND kind=?',id,'flight')?.available_at||0;return {currentCity:u.city,heat:u.heat,hasJet:jets.length>0,cooldown,serverTime:clock(),destinations:cities.map(city=>({city,heat:city===u.city?u.heat:cityHeat(id,city),...flightQuote(u.city,city)}))};}
@@ -166,7 +203,7 @@ export function installLogistics(db,{employeePower=()=>0,marriageBonus=()=>1,tra
    if(path!=='/api/armory'&&path!=='/api/production')fail('Method not allowed.',405);
    const a=account(user.id,params.get('scope')||'personal');
    if(path==='/api/armory')return {...a,...inventory(a.scope,a.ownerId),power:a.scope==='family'?familyPower(a.ownerId):personalPower(user.id),packs:ammoPacks,ammoMax:AMMO_MAX,ammoPrice:AMMO_PRICE,weaponMax:WEAPON_MAX,funds:a.scope==='family'?q('SELECT treasury FROM families WHERE id=?',a.ownerId).treasury:q('SELECT cash FROM users WHERE id=?',user.id).cash};
-   return {...a,products:productionCatalog(user,a),batches:batches(a.scope,a.ownerId),serverTime:clock(),currentCity:cities.includes(user.city)?user.city:'New York',cities,transportModes,freightHistory:productionHistory(a.scope,a.ownerId),productionSummary:all('SELECT drug_id,COUNT(*) batches,SUM(units) crates,SUM(cost) productionCost,SUM(freight_cost) transportCost FROM production_batches WHERE scope=? AND owner_id=? GROUP BY drug_id',a.scope,a.ownerId),storage:productionStorage(a.scope,a.ownerId),slotLimit:5,quoteEpoch:Math.floor(clock()/3600000),nextMarketUpdate:(Math.floor(clock()/3600000)+1)*3600000};
+   return {...a,funds:a.scope==='family'?q('SELECT treasury FROM families WHERE id=?',a.ownerId).treasury:user.cash,products:rankedProduction(user,a),batches:batches(a.scope,a.ownerId),serverTime:clock(),currentCity:cities.includes(user.city)?user.city:'New York',cities,transportModes,trade:productionTrade(a.scope,a.ownerId),freightHistory:productionHistory(a.scope,a.ownerId),productionSummary:all('SELECT drug_id,COUNT(*) batches,SUM(units) crates,SUM(cost) productionCost,SUM(freight_cost) transportCost FROM production_batches WHERE scope=? AND owner_id=? GROUP BY drug_id',a.scope,a.ownerId),storage:productionStorage(a.scope,a.ownerId),slotLimit:5,quoteEpoch:Math.floor(clock()/3600000),nextMarketUpdate:(Math.floor(clock()/3600000)+1)*3600000};
   }
   if(req.method!=='POST')fail('Method not allowed.',405);
   return transaction(()=>once(user.id,path,body,()=>{
@@ -211,8 +248,8 @@ export function installLogistics(db,{employeePower=()=>0,marriageBonus=()=>1,tra
  }
  function marketAdvice(user){
   const current=cities.includes(user.city)?user.city:'New York',flightBoard=airport(user.id),hasJet=flightBoard.hasJet,canFly=flightBoard.cooldown<=clock(),offers=[],profitBonus=marriageBonus(user.id);
-  const storage=productionStorage('personal',user.id),hasStorage=storage.used<storage.capacity;
-  for(const origin of cities){const a={scope:'personal',ownerId:user.id};for(const p of productionCatalog({...user,city:origin},a).filter(p=>!p.locked))for(const term of p.terms){
+  const storage=productionStorage('personal',user.id),hasStorage=storage.used<storage.capacity,atCap=new Set(all("SELECT drug_id FROM production_batches WHERE scope='personal' AND owner_id=? AND sold_at=0 GROUP BY drug_id HAVING SUM(units)>=1000",user.id).map(r=>r.drug_id));
+  for(const origin of cities){const a={scope:'personal',ownerId:user.id};for(const p of productionCatalog({...user,city:origin},a).filter(p=>!p.locked&&!atCap.has(p.id)))for(const term of p.terms){
    const b={drug_id:p.id,stock_city:origin,base_value:term.baseValue,cost:term.cost,freight_cost:0,units:1},flight=origin===current?0:flightBoard.destinations.find(c=>c.city===origin)?.cost||0;
    for(const destination of cities){const routes=destination===origin?[{name:'Local sale',mode:'local',cost:0,hours:0,risk:0}]:transportModes.map(m=>cargoQuote(b,destination,m)).filter(Boolean);
     for(const r of routes){const base=baseQuote(b,destination),saleValue=base+Math.floor(Math.max(0,base-b.cost-r.cost)*(profitBonus-1)),totalCost=term.cost+r.cost+flight,netProfit=saleValue-totalCost,expectedProfit=saleValue*(1-r.risk)-totalCost,hours=term.hours+r.hours;

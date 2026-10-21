@@ -21,6 +21,13 @@
     "translated": true
   },
   {
+    "key": " · Best shipping choice",
+    "files": [
+      "freight-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": " · Income paused during detention",
     "files": [
       "profile-ui.js"
@@ -611,20 +618,6 @@
     "translated": true
   },
   {
-    "key": "{v1} · {v2}% risk · net {v3} ({v4}%)",
-    "files": [
-      "freight-ui.js"
-    ],
-    "translated": true
-  },
-  {
-    "key": "{v1} · current sale quote before route costs {v2}",
-    "files": [
-      "freight-ui.js"
-    ],
-    "translated": true
-  },
-  {
     "key": "{v1} · LEVEL {v2}+",
     "files": [
       "empire-ui.js"
@@ -635,6 +628,13 @@
     "key": "{v1} {v2} · Treasury {v3} · {v4}",
     "files": [
       "empire-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "{v1} coin",
+    "files": [
+      "expansion-ui.js"
     ],
     "translated": true
   },
@@ -706,6 +706,20 @@
     "key": "{v1} XP to go",
     "files": [
       "premium.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "{v1}{v2} · {v3}% risk · net {v4} ({v5}%)",
+    "files": [
+      "freight-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "{v1}{v2} · current sale quote before route costs {v3}",
+    "files": [
+      "freight-ui.js"
     ],
     "translated": true
   },
@@ -1005,13 +1019,6 @@
     "translated": true
   },
   {
-    "key": "{v4} crates · Produced in {v5} · Stored in {v6}",
-    "files": [
-      "freight-ui.js"
-    ],
-    "translated": true
-  },
-  {
     "key": "{v4} Income, crimes, missions and acquisitions stop during your stay. Previously earned passive income is saved until release.",
     "files": [
       "underworld-ui.js"
@@ -1082,16 +1089,16 @@
     "translated": true
   },
   {
-    "key": "{v5} / {v6} bays · Six cars per garage. Stolen cars use separate Vehicle warehouses.",
+    "key": "{v5} avatar",
     "files": [
-      "vehicles-ui.js"
+      "profile-ui.js"
     ],
     "translated": true
   },
   {
-    "key": "{v5} avatar",
+    "key": "{v5} crates · Produced in {v6} · Stored in {v7}",
     "files": [
-      "profile-ui.js"
+      "freight-ui.js"
     ],
     "translated": true
   },
@@ -1125,6 +1132,13 @@
   },
   {
     "key": "{v6} · Current sale value {v7}",
+    "files": [
+      "vehicles-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "{v6} / {v7} bays · Six cars per garage. Stolen cars use separate Vehicle warehouses.",
     "files": [
       "vehicles-ui.js"
     ],
@@ -1176,13 +1190,6 @@
     "key": "{v7} base value{v8}",
     "files": [
       "empire-ui.js"
-    ],
-    "translated": true
-  },
-  {
-    "key": "{v7} coins · {v8} {v9}",
-    "files": [
-      "expansion-ui.js"
     ],
     "translated": true
   },
@@ -2484,6 +2491,20 @@
     "translated": true
   },
   {
+    "key": "Average purchase price",
+    "files": [
+      "crypto-chart-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Average purchase price includes the buy fee and uses the remaining position. Profit compares the current sale value after the sell fee with its purchase value; earned-profit bonuses are excluded until sale.",
+    "files": [
+      "crypto-chart-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Awaiting review",
     "files": [
       "referral-ui.js"
@@ -2579,6 +2600,20 @@
     "key": "Be the first to start the conversation.",
     "files": [
       "family-command-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Best choice",
+    "files": [
+      "logistics-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Best choice · Local sale",
+    "files": [
+      "freight-ui.js"
     ],
     "translated": true
   },
@@ -2849,11 +2884,11 @@
     "translated": true
   },
   {
-    "key": "Buy · {v11}",
+    "key": "Buy · {v12}",
     "files": [
       "expansion-ui.js"
     ],
-    "translated": true
+    "translated": false
   },
   {
     "key": "Buy 30 minutes of protection from player operations for $50,000.",
@@ -2900,7 +2935,7 @@
     "translated": true
   },
   {
-    "key": "Buy maximum · {v13}",
+    "key": "Buy maximum · {v14}",
     "files": [
       "expansion-ui.js"
     ],
@@ -3420,6 +3455,13 @@
     "translated": true
   },
   {
+    "key": "Coins held",
+    "files": [
+      "crypto-chart-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Collect ",
     "files": [
       "investment-ui.js"
@@ -3702,6 +3744,20 @@
     "translated": true
   },
   {
+    "key": "Cost still in stock",
+    "files": [
+      "trade-summary-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "COST STILL IN STOCK",
+    "files": [
+      "trade-summary-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Cost: {v6} · Base sale value: {v7}",
     "files": [
       "logistics-ui.js"
@@ -3879,6 +3935,13 @@
     "translated": true
   },
   {
+    "key": "Current market value",
+    "files": [
+      "crypto-chart-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Current password",
     "files": [
       "profile-ui.js"
@@ -3896,6 +3959,13 @@
     "key": "Current quotes expire {v14}. The rate shown is the entire term’s return, not an annual rate. Personal interest excludes prison/hospital hours; principal is preserved.",
     "files": [
       "investment-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Current sale value",
+    "files": [
+      "crypto-chart-ui.js"
     ],
     "translated": true
   },
@@ -4206,7 +4276,7 @@
     "translated": true
   },
   {
-    "key": "DRUGS CAREER LEVEL {v3}+ · MARKET {v4}%",
+    "key": "DRUGS CAREER LEVEL {v5}+ · MARKET {v6}%",
     "files": [
       "logistics-ui.js"
     ],
@@ -5260,6 +5330,13 @@
     "translated": true
   },
   {
+    "key": "Gold marks the best expected profit per hour. Platinum marks the highest net amount if delivered successfully, which may take longer or carry more risk. Both compare one crate at current quotes.",
+    "files": [
+      "logistics-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Gold wedding rings at a candlelit villa reception",
     "files": [
       "player-systems-ui.js"
@@ -5398,6 +5475,20 @@
     "key": "Highest combined Power first; net worth breaks ties.",
     "files": [
       "underworld-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Highest delivered net",
+    "files": [
+      "logistics-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Highest profit",
+    "files": [
+      "logistics-ui.js"
     ],
     "translated": true
   },
@@ -5719,9 +5810,17 @@
     "translated": true
   },
   {
+    "key": "INTERCEPTED CARGO COST",
+    "files": [
+      "trade-summary-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "INTERCEPTION RISK",
     "files": [
-      "freight-ui.js"
+      "freight-ui.js",
+      "logistics-ui.js"
     ],
     "translated": true
   },
@@ -6375,7 +6474,7 @@
     "translated": true
   },
   {
-    "key": "Mafia: The new Era © · v1.23.0",
+    "key": "Mafia: The new Era © · v1.24.0",
     "files": [
       "app.js"
     ],
@@ -6610,6 +6709,13 @@
     "key": "Memberships reward cash and XP once, with earnings and XP bonuses for 30 days. No automatic renewal. Skins change appearance, not your actual rank or family role.",
     "files": [
       "shop-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Merchandise",
+    "files": [
+      "trade-summary-ui.js"
     ],
     "translated": true
   },
@@ -6853,6 +6959,20 @@
       "care-ui.js",
       "casino-motion.js",
       "casino-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Net cash result",
+    "files": [
+      "trade-summary-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "NET CASH RESULT",
+    "files": [
+      "trade-summary-ui.js"
     ],
     "translated": true
   },
@@ -7299,7 +7419,7 @@
   {
     "key": "No open position",
     "files": [
-      "expansion-ui.js"
+      "crypto-chart-ui.js"
     ],
     "translated": true
   },
@@ -7482,6 +7602,13 @@
     "key": "Not enough cash",
     "files": [
       "bribery-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Not enough recorded quotes yet. The chart grows as new prices arrive.",
+    "files": [
+      "crypto-chart-ui.js"
     ],
     "translated": true
   },
@@ -7671,6 +7798,13 @@
     "key": "Online players",
     "files": [
       "presence-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Only available recorded history is shown; missing prices are not estimated.",
+    "files": [
+      "crypto-chart-ui.js"
     ],
     "translated": true
   },
@@ -8442,6 +8576,13 @@
     "translated": true
   },
   {
+    "key": "Price chart · 4 hours",
+    "files": [
+      "crypto-chart-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Prices update every five minutes. Normal moves can reach 6%, shocks can fall 65% or rise 35%, and rare rallies can rise 200% per update. Quotes remain positive and bounded; gains are not guaranteed.",
     "files": [
       "expansion-ui.js"
@@ -8611,7 +8752,7 @@
     "translated": true
   },
   {
-    "key": "Production warehouses: {v2} · Storage {v3} / {v4} crates. Each warehouse holds 1,000 unsold crates across all drugs. Buy personal warehouses under Personal assets → Warehouses; family warehouses under Family assets → Safehouses.",
+    "key": "Production warehouses: {v3} · Storage {v4} / {v5} crates. Each warehouse holds 1,000 unsold crates across all drugs. Buy personal warehouses under Personal assets → Warehouses; family warehouses under Family assets → Safehouses.",
     "files": [
       "logistics-ui.js"
     ],
@@ -8730,9 +8871,9 @@
     "translated": true
   },
   {
-    "key": "PURCHASE BASIS",
+    "key": "Purchase value",
     "files": [
-      "expansion-ui.js"
+      "crypto-chart-ui.js"
     ],
     "translated": true
   },
@@ -8895,6 +9036,13 @@
     "translated": true
   },
   {
+    "key": "Ranked by expected net profit per hour after costs and interception risk. Current quotes can change before sale.",
+    "files": [
+      "logistics-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Ranks & rewards",
     "files": [
       "premium.js"
@@ -8920,6 +9068,20 @@
     "files": [
       "expansion-ui.js",
       "investment-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Realized profit / loss",
+    "files": [
+      "trade-summary-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "REALIZED PROFIT / LOSS",
+    "files": [
+      "trade-summary-ui.js"
     ],
     "translated": true
   },
@@ -9001,6 +9163,20 @@
     "key": "Recipient:",
     "files": [
       "profile-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Recorded coin results",
+    "files": [
+      "trade-summary-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Recorded five-minute market quotes. Hover or focus a point for its price and time. Your local time is shown.",
+    "files": [
+      "crypto-chart-ui.js"
     ],
     "translated": true
   },
@@ -9463,6 +9639,13 @@
     "translated": true
   },
   {
+    "key": "Results by item",
+    "files": [
+      "trade-summary-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Resume all bots",
     "files": [
       "app.js"
@@ -9659,20 +9842,6 @@
     "key": "Sale value",
     "files": [
       "freight-ui.js"
-    ],
-    "translated": true
-  },
-  {
-    "key": "SALE VALUE",
-    "files": [
-      "expansion-ui.js"
-    ],
-    "translated": true
-  },
-  {
-    "key": "Sale value includes the spread; earned-profit bonuses are calculated on sale.",
-    "files": [
-      "expansion-ui.js"
     ],
     "translated": true
   },
@@ -9912,11 +10081,11 @@
     "translated": true
   },
   {
-    "key": "Sell · {v15}",
+    "key": "Sell · {v16}",
     "files": [
       "expansion-ui.js"
     ],
-    "translated": true
+    "translated": false
   },
   {
     "key": "Sell & replace a stored car",
@@ -10478,6 +10647,13 @@
     "key": "Successful war raid: 1 point · sabotage or joint assault: 2 · territory capture: 3. A failed attack gives the defender 1 point. Winning a war that had battles grants 25 extra season points.",
     "files": [
       "legacy-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Suggested route",
+    "files": [
+      "logistics-ui.js"
     ],
     "translated": true
   },
@@ -11082,6 +11258,20 @@
     "translated": true
   },
   {
+    "key": "Total invested",
+    "files": [
+      "trade-summary-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "TOTAL INVESTED",
+    "files": [
+      "trade-summary-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "TOTAL PASSIVE / HOUR",
     "files": [
       "premium.js"
@@ -11113,6 +11303,20 @@
     "key": "TOTAL PLAYERS",
     "files": [
       "presence-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Total received",
+    "files": [
+      "trade-summary-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "TOTAL RECEIVED",
+    "files": [
+      "trade-summary-ui.js"
     ],
     "translated": true
   },
@@ -11340,6 +11544,13 @@
     "key": "Unlocked by",
     "files": [
       "premium.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Unrealized profit / loss",
+    "files": [
+      "crypto-chart-ui.js"
     ],
     "translated": true
   },
@@ -12133,6 +12344,13 @@
     "key": "Your older collection has been retained. Buy garages to assign these cars automatically.",
     "files": [
       "vehicles-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Your open position",
+    "files": [
+      "crypto-chart-ui.js"
     ],
     "translated": true
   },

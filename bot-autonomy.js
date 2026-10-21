@@ -124,10 +124,10 @@ export function autonomousMove(c,domain){
  case 'freight':{
   const scope=manager&&random(0,2)?'family':'personal',p=get('production?scope='+scope);if(!p)return false;
   const budget=scope==='family'?family.treasury:u.cash,batch=p.batches.find(b=>b.remaining===0&&!(b.arrives_at>now));
-  if(batch){const routes=(batch.destinations||[]).flatMap(d=>(d.routes||[]).map(r=>({...r,city:d.city,saleValue:d.saleValue}))).filter(r=>r.cost<budget*.1&&(r.saleValue||0)*(1-r.risk)-r.cost>batch.saleValue);
+  if(batch){const routes=(batch.destinations||[]).flatMap(d=>(d.routes||[]).map(r=>({...r,city:d.city,saleValue:r.saleValue??d.saleValue}))).filter(r=>r.cost<budget*.1&&(r.saleValue||0)*(1-r.risk)-r.cost>batch.saleValue);
    const route=pick(routes);return route?send('production/ship',{scope,id:batch.id,city:route.city,mode:route.mode,quoteEpoch:p.quoteEpoch}):send('production/sell',{scope,id:batch.id,quoteEpoch:p.quoteEpoch});}
   if(!p.storage.capacity&&budget>45e6)return send(scope==='personal'?'assets/buy':'family/buy',scope==='personal'?{id:'production-warehouse',category:'garage'}:{id:'warehouse-production-family',quantity:1});
-  const product=pick(p.products.filter(x=>!x.locked)),term=pick(product?.terms.filter(t=>t.cost<budget*.02)||[]),room=p.storage.capacity-p.storage.used;
+  const product=(random(0,3)?p.products.find(x=>x.bestChoice):null)||pick(p.products.filter(x=>!x.locked)),terms=product?.terms.filter(t=>t.cost<budget*.02)||[],term=terms.find(t=>t.hours===product?.recommendation?.hours)||pick(terms),room=p.storage.capacity-p.storage.used;
   if(product&&term&&p.batches.length<5&&room>0){const own=p.batches.filter(b=>b.drug_id===product.id).reduce((n,b)=>n+b.units,0),units=Math.min(1000-own,room,Math.max(1,Math.floor(budget*.02/term.cost)));if(units>0)return send('production/start',{scope,product:product.id,hours:term.hours,units,quoteEpoch:p.quoteEpoch});}return false;
  }
  case 'vehicles':{

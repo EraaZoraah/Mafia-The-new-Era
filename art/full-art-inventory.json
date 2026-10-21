@@ -834,6 +834,48 @@
     "image": "/images/car-ferrari-250-gto.png"
   },
   {
+    "group": "personal",
+    "id": "escalade",
+    "name": "Cadillac Escalade",
+    "image": "/images/car-escalade.png"
+  },
+  {
+    "group": "personal",
+    "id": "maybach-s680",
+    "name": "Mercedes-Maybach S 680",
+    "image": "/images/car-maybach-s680.png"
+  },
+  {
+    "group": "personal",
+    "id": "phantom-extended",
+    "name": "Rolls-Royce Phantom Extended",
+    "image": "/images/car-phantom-extended.png"
+  },
+  {
+    "group": "personal",
+    "id": "phantom-limousine",
+    "name": "Rolls-Royce Phantom Limousine",
+    "image": "/images/car-phantom-limousine.png"
+  },
+  {
+    "group": "personal",
+    "id": "jaguar-xk120",
+    "name": "Jaguar XK120 Roadster",
+    "image": "/images/car-jaguar-xk120.png"
+  },
+  {
+    "group": "personal",
+    "id": "urus",
+    "name": "Lamborghini Urus",
+    "image": "/images/car-urus.png"
+  },
+  {
+    "group": "personal",
+    "id": "chiron",
+    "name": "Bugatti Chiron",
+    "image": "/images/car-chiron.png"
+  },
+  {
     "group": "crimes",
     "id": "courier",
     "name": "Discreet courier",
@@ -1401,19 +1443,25 @@
     "group": "skins",
     "id": "owner-goddess",
     "name": "The Mafia Goddess",
-    "image": "/images/skin-owner-goddess-v2.png"
+    "image": "/images/skin-owner-goddess-v3.png"
+  },
+  {
+    "group": "skins",
+    "id": "mr-noob",
+    "name": "Mr.Noob",
+    "image": "/images/skin-mr-noob-v2.png"
   },
   {
     "group": "page",
     "id": "referrals",
     "name": "referrals",
-    "image": "/images/page-referrals.png"
+    "image": "/images/banner-referrals-v3.png"
   },
   {
     "group": "page",
     "id": "family-directory",
     "name": "family-directory",
-    "image": "/images/page-family-directory.png"
+    "image": "/images/banner-family-directory-v3.png"
   },
   {
     "group": "page",
@@ -1425,7 +1473,7 @@
     "group": "page",
     "id": "auction-house",
     "name": "auction-house",
-    "image": "/images/page-art-market.png"
+    "image": "/images/banner-auction-house-v3.png"
   },
   {
     "group": "page",
@@ -1443,7 +1491,7 @@
     "group": "page",
     "id": "dashboard",
     "name": "dashboard",
-    "image": "/images/page-dashboard.png"
+    "image": "/images/banner-dashboard-v3.png"
   },
   {
     "group": "page",
@@ -1461,19 +1509,19 @@
     "group": "page",
     "id": "crypto",
     "name": "crypto",
-    "image": "/images/page-crypto.png"
+    "image": "/images/banner-crypto-v3.png"
   },
   {
     "group": "page",
     "id": "airport",
     "name": "airport",
-    "image": "/images/page-airport.png"
+    "image": "/images/banner-airport-v3.png"
   },
   {
     "group": "page",
     "id": "bulletins",
     "name": "bulletins",
-    "image": "/images/page-bulletins.png"
+    "image": "/images/banner-bulletins-v3.png"
   },
   {
     "group": "page",
@@ -1485,163 +1533,163 @@
     "group": "page",
     "id": "directory",
     "name": "directory",
-    "image": "/images/page-directory.png"
+    "image": "/images/banner-directory-v3.png"
   },
   {
     "group": "page",
     "id": "seasons",
     "name": "seasons",
-    "image": "/images/page-seasons.png"
+    "image": "/images/banner-seasons-v3.png"
   },
   {
     "group": "page",
     "id": "ranks",
     "name": "ranks",
-    "image": "/images/page-ranks.png"
+    "image": "/images/banner-ranks-v3.png"
   },
   {
     "group": "page",
     "id": "inventory",
     "name": "inventory",
-    "image": "/images/page-inventory.png"
+    "image": "/images/banner-inventory-v3.png"
   },
   {
     "group": "page",
     "id": "respect",
     "name": "respect",
-    "image": "/images/page-respect.png"
+    "image": "/images/banner-respect-v3.png"
   },
   {
     "group": "page",
     "id": "bank",
     "name": "bank",
-    "image": "/images/page-bank.png"
+    "image": "/images/banner-bank-v3.png"
   },
   {
     "group": "page",
     "id": "transfers",
     "name": "transfers",
-    "image": "/images/page-transfers.png"
+    "image": "/images/banner-transfers-v3.png"
   },
   {
     "group": "page",
     "id": "production",
     "name": "production",
-    "image": "/images/page-production.png"
+    "image": "/images/banner-production-v3.png"
   },
   {
     "group": "page",
     "id": "combat",
     "name": "combat",
-    "image": "/images/page-player-operations.png"
+    "image": "/images/banner-combat-v3.png"
   },
   {
     "group": "page",
     "id": "bounties",
     "name": "bounties",
-    "image": "/images/page-bounties.png"
+    "image": "/images/banner-bounties-v3.png"
   },
   {
     "group": "page",
     "id": "family-chat",
     "name": "family-chat",
-    "image": "/images/page-family-chat.png"
+    "image": "/images/banner-family-chat-v3.png"
   },
   {
     "group": "page",
     "id": "family-plans",
     "name": "family-plans",
-    "image": "/images/page-family-plans.png"
+    "image": "/images/banner-family-plans-v3.png"
   },
   {
     "group": "page",
     "id": "family-assets",
     "name": "family-assets",
-    "image": "/images/page-family-assets.png"
+    "image": "/images/banner-family-assets-v3.png"
   },
   {
     "group": "page",
     "id": "family-armory",
     "name": "family-armory",
-    "image": "/images/page-family-armory.png"
+    "image": "/images/banner-family-armory-v3.png"
   },
   {
     "group": "page",
     "id": "family-safehouses",
     "name": "family-safehouses",
-    "image": "/images/page-family-safehouses.png"
+    "image": "/images/banner-family-safehouses-v3.png"
   },
   {
     "group": "page",
     "id": "family-compounds",
     "name": "family-compounds",
-    "image": "/images/page-family-compounds.png"
+    "image": "/images/banner-family-compounds-v3.png"
   },
   {
     "group": "page",
     "id": "family-fleet",
     "name": "family-fleet",
-    "image": "/images/page-family-cars.png"
+    "image": "/images/banner-family-fleet-v3.png"
   },
   {
     "group": "page",
     "id": "family-upgrades",
     "name": "family-upgrades",
-    "image": "/images/page-family-security.png"
+    "image": "/images/banner-family-upgrades-v3.png"
   },
   {
     "group": "page",
     "id": "employees",
     "name": "employees",
-    "image": "/images/page-employees.png"
+    "image": "/images/banner-employees-v3.png"
   },
   {
     "group": "page",
     "id": "shipments",
     "name": "shipments",
-    "image": "/images/page-shipments.png"
+    "image": "/images/banner-shipments-v3.png"
   },
   {
     "group": "page",
     "id": "daily",
     "name": "daily",
-    "image": "/images/page-daily.png"
+    "image": "/images/banner-daily-v3.png"
   },
   {
     "group": "page",
     "id": "support",
     "name": "support",
-    "image": "/images/page-support.png"
+    "image": "/images/banner-support-v3.png"
   },
   {
     "group": "page",
     "id": "tickets",
     "name": "tickets",
-    "image": "/images/page-tickets.png"
+    "image": "/images/banner-tickets-v3.png"
   },
   {
     "group": "page",
     "id": "policy",
     "name": "policy",
-    "image": "/images/page-community.png"
+    "image": "/images/banner-policy-v3.png"
   },
   {
     "group": "page",
     "id": "rules",
     "name": "rules",
-    "image": "/images/page-rules.png"
+    "image": "/images/banner-rules-v3.png"
   },
   {
     "group": "page",
     "id": "faq",
     "name": "faq",
-    "image": "/images/page-faq.png"
+    "image": "/images/banner-faq-v3.png"
   },
   {
     "group": "page",
     "id": "casino",
     "name": "casino",
-    "image": "/images/casino-interior.png"
+    "image": "/images/banner-casino-v3.png"
   },
   {
     "group": "page",
@@ -1653,49 +1701,49 @@
     "group": "page",
     "id": "boutique",
     "name": "boutique",
-    "image": "/images/premium-shop-banner.png"
+    "image": "/images/premium-shop-v4.png"
   },
   {
     "group": "page",
     "id": "prison",
     "name": "prison",
-    "image": "/images/scene-arrest.jpg"
+    "image": "/images/banner-prison-v3.png"
   },
   {
     "group": "page",
     "id": "hospital",
     "name": "hospital",
-    "image": "/images/scene-coma.jpg"
+    "image": "/images/banner-hospital-v3.png"
   },
   {
     "group": "page",
     "id": "missions",
     "name": "missions",
-    "image": "/images/scene-operations.jpg"
+    "image": "/images/banner-missions-v3.png"
   },
   {
     "group": "page",
     "id": "underworld",
     "name": "underworld",
-    "image": "/images/scene-leaderboard.jpg"
+    "image": "/images/banner-underworld-v3.png"
   },
   {
     "group": "page",
     "id": "messages",
     "name": "messages",
-    "image": "/images/scene-messages.jpg"
+    "image": "/images/banner-messages-v3.png"
   },
   {
     "group": "page",
     "id": "rivals",
     "name": "rivals",
-    "image": "/images/scene-families.jpg"
+    "image": "/images/banner-rivals-v3.png"
   },
   {
     "group": "page",
     "id": "armory",
     "name": "armory",
-    "image": "/images/page-family-armory.png"
+    "image": "/images/banner-family-armory-v3.png"
   },
   {
     "group": "page",
@@ -1707,37 +1755,37 @@
     "group": "page",
     "id": "home",
     "name": "home",
-    "image": "/images/page-real-estate.png"
+    "image": "/images/banner-home-v3.png"
   },
   {
     "group": "page",
     "id": "car",
     "name": "car",
-    "image": "/images/page-cars.png"
+    "image": "/images/banner-car-v3.png"
   },
   {
     "group": "page",
     "id": "jet",
     "name": "jet",
-    "image": "/images/page-jets.png"
+    "image": "/images/banner-jet-v3.png"
   },
   {
     "group": "page",
     "id": "helicopter",
     "name": "helicopter",
-    "image": "/images/page-helicopters.png"
+    "image": "/images/banner-helicopter-v3.png"
   },
   {
     "group": "page",
     "id": "yacht",
     "name": "yacht",
-    "image": "/images/page-yachts.png"
+    "image": "/images/banner-yacht-v3.png"
   },
   {
     "group": "page",
     "id": "garage",
     "name": "garage",
-    "image": "/images/page-garages.png"
+    "image": "/images/banner-garage-v3.png"
   },
   {
     "group": "page",
@@ -1749,13 +1797,13 @@
     "group": "page",
     "id": "team-missions",
     "name": "team-missions",
-    "image": "/images/page-team-missions.png"
+    "image": "/images/banner-team-missions-v3.png"
   },
   {
     "group": "page",
     "id": "investments",
     "name": "investments",
-    "image": "/images/page-investments.png"
+    "image": "/images/banner-investments-v3.png"
   },
   {
     "group": "city",
@@ -2079,90 +2127,90 @@
     "group": "coin",
     "id": "omerta",
     "name": "Omerta",
-    "image": "/icons/coin-omerta.svg"
+    "image": "/images/crypto-coin-omerta-v2.png"
   },
   {
     "group": "coin",
     "id": "vendetta",
     "name": "Vendetta",
-    "image": "/icons/coin-vendetta.svg"
+    "image": "/images/crypto-coin-vendetta-v2.png"
   },
   {
     "group": "coin",
     "id": "sovereign",
     "name": "Sovereign",
-    "image": "/icons/coin-sovereign.svg"
+    "image": "/images/crypto-coin-sovereign-v2.png"
   },
   {
     "group": "coin",
     "id": "nightfall",
     "name": "Nightfall",
-    "image": "/icons/coin-nightfall.svg"
+    "image": "/images/crypto-coin-nightfall-v2.png"
   },
   {
     "group": "coin",
     "id": "vesper",
     "name": "Vesper",
-    "image": "/icons/coin-vesper.svg"
+    "image": "/images/crypto-coin-vesper-v2.png"
   },
   {
     "group": "coin",
     "id": "onyx",
     "name": "Onyx",
-    "image": "/icons/coin-onyx.svg"
+    "image": "/images/crypto-coin-onyx-v2.png"
   },
   {
     "group": "coin",
     "id": "crown",
     "name": "Crown",
-    "image": "/icons/coin-crown.svg"
+    "image": "/images/crypto-coin-crown-v2.png"
   },
   {
     "group": "coin",
     "id": "silk",
     "name": "Silk",
-    "image": "/icons/coin-silk.svg"
+    "image": "/images/crypto-coin-silk-v2.png"
   },
   {
     "group": "coin",
     "id": "harbor",
     "name": "Harbor",
-    "image": "/icons/coin-harbor.svg"
+    "image": "/images/crypto-coin-harbor-v2.png"
   },
   {
     "group": "coin",
     "id": "cipher",
     "name": "Cipher",
-    "image": "/icons/coin-cipher.svg"
+    "image": "/images/crypto-coin-cipher-v2.png"
   },
   {
     "group": "coin",
     "id": "ember",
     "name": "Ember",
-    "image": "/icons/coin-ember.svg"
+    "image": "/images/crypto-coin-ember-v2.png"
   },
   {
     "group": "coin",
     "id": "ghost",
     "name": "Ghost",
-    "image": "/icons/coin-ghost.svg"
+    "image": "/images/crypto-coin-ghost-v2.png"
   },
   {
     "group": "coin",
     "id": "vault",
     "name": "Vault",
-    "image": "/icons/coin-vault.svg"
+    "image": "/images/crypto-coin-vault-v2.png"
   },
   {
     "group": "coin",
     "id": "aureus",
     "name": "Aureus",
-    "image": "/icons/coin-aureus.svg"
+    "image": "/images/crypto-coin-aureus-v2.png"
   },
   {
     "group": "coin",
     "id": "raven",
     "name": "Raven",
-    "image": "/icons/coin-raven.svg"
+    "image": "/images/crypto-coin-raven-v2.png"
   }
 ]

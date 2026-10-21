@@ -1,0 +1,575 @@
+[
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "dashboard",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "daily",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "bulletins",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "messages",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "profile",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "marriage",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "achievements",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "ranks",
+    "tables": [
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 1172.4124755859375,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "respect",
+    "tables": [
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 591.4000244140625,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "referrals",
+    "tables": [
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 543.6625366210938,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "missions",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "art-market",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "team-missions",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "bounties",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 339.2375183105469,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "shipments",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 656.9625244140625,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "combat",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "production",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 367.4125061035156,
+        "wrapped": true
+      },
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 1012.0750122070312,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "security",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "inventory",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "employees",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "armory",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "business",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "home",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "garage",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "warehouses",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "car",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "helicopter",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "jet",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "yacht",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "families",
+    "tables": [
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 306.8000183105469,
+        "wrapped": true
+      },
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 547.7875366210938,
+        "wrapped": true
+      },
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 656.9625244140625,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "family-chat",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "family-plans",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "rivals",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "seasons",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 598.9750366210938,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "family-assets",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "family-territory",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "family-armory",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "family-safehouses",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "family-compounds",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "family-fleet",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "family-upgrades",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "bank",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "investments",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "crypto",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "auction-house",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "transfers",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "airport",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "circuit",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 305.20001220703125,
+        "wrapped": true
+      },
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 350.3625183105469,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "casino",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 287.4624938964844,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "directory",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 704.4000244140625,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "family-directory",
+    "tables": [
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 839.8624877929688,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "underworld",
+    "tables": [
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 528.6875,
+        "wrapped": true
+      },
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 528.6875,
+        "wrapped": true
+      },
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 803.7625122070312,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "hospital",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "prison",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "support",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "policy",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "rules",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "faq",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "boutique",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "tickets",
+    "tables": [],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "en",
+    "tab": "admin",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 493.4750061035156,
+        "wrapped": true
+      },
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 763.5875244140625,
+        "wrapped": true
+      },
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 725.6875,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  }
+]

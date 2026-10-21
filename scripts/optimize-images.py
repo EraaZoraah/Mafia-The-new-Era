@@ -14,8 +14,9 @@ for file in sorted(source.iterdir()):
     if not output.exists() or output.stat().st_mtime < file.stat().st_mtime:
         with Image.open(file) as opened:
             image = ImageOps.exif_transpose(opened).convert('RGBA' if 'A' in opened.getbands() else 'RGB')
-            image.thumbnail((1600, 1600), Image.Resampling.LANCZOS)
-            image.save(output, 'WEBP', quality=86, method=4)
+            coin = file.name.startswith('crypto-coin-')
+            image.thumbnail((512, 512) if coin else (1600, 1600), Image.Resampling.LANCZOS)
+            image.save(output, 'WEBP', quality=92 if coin else 86, method=4)
     if output.stat().st_size < file.stat().st_size:
         count += 1
         original_bytes += file.stat().st_size

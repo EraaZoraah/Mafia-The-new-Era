@@ -59,7 +59,7 @@ test('flights require a jet, server-priced funds, cooldown and freedom; returnin
  f.advance(3600000);f.run('UPDATE users SET prison_until=? WHERE id=1',f.time()+3600000);assert.equal(fly('Paris').status,409);
 });
 test('production locks cost and base value, respects ranks and completes after the selected term',t=>{
- const f=fixture(t,false);assert.equal(products.length,5);const p=f.call('production').body.products[0],term=p.terms[0],before=f.q('SELECT cash FROM users WHERE id=1').cash;
+ const f=fixture(t,false);assert.equal(products.length,5);const p=f.call('production').body.products[0],term=p.terms.find(t=>t.hours===6),before=f.q('SELECT cash FROM users WHERE id=1').cash;
  assert.equal(f.call('production/start',request({scope:'personal',product:'cocaine',hours:6,units:1})).status,403);
  for(const units of [0,-1,1001,1.5,'2'])assert.equal(f.call('production/start',request({scope:'personal',product:p.id,hours:6,units})).status,400);
  const body=request({scope:'personal',product:p.id,hours:6,units:2}),r=f.call('production/start',body);assert.equal(r.status,200);assert.equal(f.call('production/start',body).body.id,r.body.id);assert.equal(f.q('SELECT cash FROM users WHERE id=1').cash,before-term.cost*2);assert.equal(f.call('admin/economy').body.totals.players.production,'0');

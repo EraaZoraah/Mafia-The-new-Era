@@ -7,6 +7,7 @@ export function sortableValue(text){
 export function compareCells(a,b){a=sortableValue(a);b=sortableValue(b);return typeof a==='number'&&typeof b==='number'?a-b:collator.compare(String(a),String(b));}
 export function mountTableSorting(root){
  const bind=()=>root.querySelectorAll('table').forEach((table,tableIndex)=>{
+  if(!table.closest('.tablewrap')){const wrap=document.createElement('div');wrap.className='tablewrap';table.before(wrap);wrap.append(table);}
   if(table.dataset.sortBound)return;const headerRow=table.tHead?.rows[0]||table.rows[0],headers=headerRow?[...headerRow.cells].filter(c=>c.tagName==='TH'):[];if(!headers.length)return;table.dataset.sortBound='true';
   const key=(root.dataset.sortPage||'')+':'+tableIndex+':'+headers.map(h=>h.textContent.trim()).join('|');
   const apply=(index,direction,remember=true)=>{headers.forEach((h,i)=>{h.setAttribute('aria-sort',i===index?(direction==='asc'?'ascending':'descending'):'none');h.querySelector('.sort-arrow').textContent=i===index?(direction==='asc'?' ↑':' ↓'):' ↕'});if(remember)memory.set(key,{index,direction});

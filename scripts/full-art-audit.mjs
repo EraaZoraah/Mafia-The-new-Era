@@ -14,7 +14,7 @@ for(const [group,rows] of Object.entries({recoveredVehicles:stolenVehicles,perso
 for(const [id,image] of Object.entries(pageArt))items.push({group:'page',id,name:id,image:'/images/'+image});
 for(const city of cities)items.push({group:'city',id:city,name:city,image:cityImage(city)});
 for(const m of milestones)items.push({group:'achievement',id:m.id,name:m.name,image:'/icons/achievement-'+m.id+'.svg'});
-for(const c of coins)items.push({group:'coin',id:c.id,name:c.name,image:'/icons/coin-'+c.id+'.svg'});
+for(const c of coins)items.push({group:'coin',id:c.id,name:c.name,image:c.image});
 fs.writeFileSync('art/full-art-inventory.json',JSON.stringify(items,null,2));
 const svgFiles=fs.readdirSync('public/icons').filter(n=>n.endsWith('.svg'));
 const sets=[['navigation',svgFiles.filter(n=>n.startsWith('menu-')||['personal-assistant.svg'].includes(n))],['achievements-coins',svgFiles.filter(n=>!n.startsWith('menu-')&&!n.startsWith('prestige-')&&n!=='personal-assistant.svg')],['prestige',svgFiles.filter(n=>n.startsWith('prestige-')).sort((a,b)=>parseInt(a.slice(9))-parseInt(b.slice(9)))]];

@@ -1,0 +1,978 @@
+[
+  {
+    "documentWidth": 390,
+    "language": "nl",
+    "tab": "ranks",
+    "tables": [
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 1258.3375244140625,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "nl",
+    "tab": "respect",
+    "tables": [
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 631.1625366210938,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "nl",
+    "tab": "referrals",
+    "tables": [
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 592.0250244140625,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "nl",
+    "tab": "bounties",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 409.1000061035156,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "nl",
+    "tab": "shipments",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 668.4874877929688,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "nl",
+    "tab": "production",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 400.7625122070313,
+        "wrapped": true
+      },
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 1092.0250244140625,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "nl",
+    "tab": "families",
+    "tables": [
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 306.8000183105469,
+        "wrapped": true
+      },
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 610.5499877929688,
+        "wrapped": true
+      },
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 668.4874877929688,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "nl",
+    "tab": "seasons",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 729.9500122070312,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "nl",
+    "tab": "circuit",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 312.4375,
+        "wrapped": true
+      },
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 364.0500183105469,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "nl",
+    "tab": "casino",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 314.25,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "nl",
+    "tab": "directory",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 704.4000244140625,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "nl",
+    "tab": "family-directory",
+    "tables": [
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 893.5625,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "nl",
+    "tab": "underworld",
+    "tables": [
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 530.125,
+        "wrapped": true
+      },
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 530.125,
+        "wrapped": true
+      },
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 840.2000122070312,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "nl",
+    "tab": "admin",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 498.5375061035156,
+        "wrapped": true
+      },
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 793.5875244140625,
+        "wrapped": true
+      },
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 713.9375,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "es",
+    "tab": "ranks",
+    "tables": [
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 1286.5625,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "es",
+    "tab": "respect",
+    "tables": [
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 667.5499877929688,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "es",
+    "tab": "referrals",
+    "tables": [
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 611.8375244140625,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "es",
+    "tab": "bounties",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 422.5625,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "es",
+    "tab": "shipments",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 664.625,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "es",
+    "tab": "production",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 424.1750183105469,
+        "wrapped": true
+      },
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 1133.8499755859375,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "es",
+    "tab": "families",
+    "tables": [
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 306.8000183105469,
+        "wrapped": true
+      },
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 617.3250122070312,
+        "wrapped": true
+      },
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 664.625,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "es",
+    "tab": "seasons",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 725.2999877929688,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "es",
+    "tab": "circuit",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 366.2375183105469,
+        "wrapped": true
+      },
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 337.8374938964844,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "es",
+    "tab": "casino",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 362.2250061035156,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "es",
+    "tab": "directory",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 735.875,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "es",
+    "tab": "family-directory",
+    "tables": [
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 909.1875,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "es",
+    "tab": "underworld",
+    "tables": [
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 544.2250366210938,
+        "wrapped": true
+      },
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 544.2250366210938,
+        "wrapped": true
+      },
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 874.8125,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "es",
+    "tab": "admin",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 551.7000122070312,
+        "wrapped": true
+      },
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 837.9625244140625,
+        "wrapped": true
+      },
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 749.25,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "fr",
+    "tab": "ranks",
+    "tables": [
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 1343.3875732421875,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "fr",
+    "tab": "respect",
+    "tables": [
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 584.6500244140625,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "fr",
+    "tab": "referrals",
+    "tables": [
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 631.1124877929688,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "fr",
+    "tab": "bounties",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 399.8500061035156,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "fr",
+    "tab": "shipments",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 689.875,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "fr",
+    "tab": "production",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 411.1499938964844,
+        "wrapped": true
+      },
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 1096.800048828125,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "fr",
+    "tab": "families",
+    "tables": [
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 306.8000183105469,
+        "wrapped": true
+      },
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 654.1000366210938,
+        "wrapped": true
+      },
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 689.875,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "fr",
+    "tab": "seasons",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 696.9000244140625,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "fr",
+    "tab": "circuit",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 305.7875061035156,
+        "wrapped": true
+      },
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 374.2749938964844,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "fr",
+    "tab": "casino",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 303.4250183105469,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "fr",
+    "tab": "directory",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 746.2875366210938,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "fr",
+    "tab": "family-directory",
+    "tables": [
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 969.7374877929688,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "fr",
+    "tab": "underworld",
+    "tables": [
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 548.625,
+        "wrapped": true
+      },
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 548.625,
+        "wrapped": true
+      },
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 956.2125244140624,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "fr",
+    "tab": "admin",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 542.3125,
+        "wrapped": true
+      },
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 847.9625244140625,
+        "wrapped": true
+      },
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 767.0125122070312,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "de",
+    "tab": "ranks",
+    "tables": [
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 1524.0250244140625,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "de",
+    "tab": "respect",
+    "tables": [
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 649.7625122070312,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "de",
+    "tab": "referrals",
+    "tables": [
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 578.2750244140625,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "de",
+    "tab": "bounties",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 356.76251220703125,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "de",
+    "tab": "shipments",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 655.8500366210938,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "de",
+    "tab": "production",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 400.3000183105469,
+        "wrapped": true
+      },
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 1100.0999755859375,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "de",
+    "tab": "families",
+    "tables": [
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 306.8000183105469,
+        "wrapped": true
+      },
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 565.0750122070312,
+        "wrapped": true
+      },
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 655.8500366210938,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "de",
+    "tab": "seasons",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 640.125,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "de",
+    "tab": "circuit",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 328.25,
+        "wrapped": true
+      },
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 373.0375061035156,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "de",
+    "tab": "casino",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 325.9875183105469,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "de",
+    "tab": "directory",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 714.2125244140625,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "de",
+    "tab": "family-directory",
+    "tables": [
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 921.1124877929688,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "de",
+    "tab": "underworld",
+    "tables": [
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 539.1500244140625,
+        "wrapped": true
+      },
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 539.1500244140625,
+        "wrapped": true
+      },
+      {
+        "container": 357,
+        "unreadable": 0,
+        "width": 840.9125366210938,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  },
+  {
+    "documentWidth": 390,
+    "language": "de",
+    "tab": "admin",
+    "tables": [
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 559.8624877929688,
+        "wrapped": true
+      },
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 825.9874877929688,
+        "wrapped": true
+      },
+      {
+        "container": 305,
+        "unreadable": 0,
+        "width": 733.5125122070312,
+        "wrapped": true
+      }
+    ],
+    "width": 390
+  }
+]

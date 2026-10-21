@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { mkdtemp, copyFile, cp, rm } from 'node:fs/promises';
+import { mkdtemp, copyFile, cp, rm, readdir } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -19,10 +19,8 @@ test('isolated prototype baseline', { timeout: 90000 }, async t => {
   let server;
   let db;
   try {
-    for (const name of ['territory-income.js','skins.js','money.js','staff-totals.js','bot-players.js','calendar-events.js','crew-operations.js','game-guide.js','casino-extra.js','city-expansion.js','release-notes.js','player-systems.js','presence.js','player-care.js','economy.js','diplomacy.js','auth-security.js', 'shop.js', 'season-events.js', 'server.js', 'owner-setup.js', 'package.json', 'catalog.js', 'game.js', 'progression.js', 'empire.js', 'empire-catalog.js', 'investments.js','owner-admin.js','staff-state.js','transfers.js','underworld.js','profiles.js','staff.js','community.js','logistics.js','daily.js','casino.js','purchases.js','family-wars.js','war-operations.js','territory-map.js','family-command.js','legacy.js']) {
-      await copyFile(path.join(source, name), path.join(fixture, name));
-    }
-    for(const name of ['guide-locales.js','guide-es.js','income-cycle.js','referral-guide.js','referrals.js','push-notifications.js','circuit-guide.js','midnight-circuit.js','midnight-catalog.js','database-bootstrap.js','bribery.js','art-market.js','collector-cars.js','guide-nl.js','bot-capabilities.js','bot-autonomy.js','bank.js','game-knowledge.js','drug-markets.js','vehicle-catalog.js','vehicle-auctions.js','vehicles.js'])await copyFile(path.join(source,name),path.join(fixture,name));
+    // Include new runtime modules automatically; never copy live database state.
+    for(const name of (await readdir(source)).filter(name=>name.endsWith('.js')||name==='package.json'))await copyFile(path.join(source,name),path.join(fixture,name));
     await cp(path.join(source, 'public'), path.join(fixture, 'public'), { recursive: true });
     // Port 0 avoids collisions. Only the disposable copy's startup log is instrumented.
     const { readFile, writeFile } = await import('node:fs/promises');
