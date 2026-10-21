@@ -45,7 +45,7 @@ export const interfaceDutch={
  'Build your legacy ↗':'Bouw aan je nalatenschap ↗',
  'Businesses, residences, garages, cars and private aircraft. Build a collection that earns income, opens opportunities and carries your signature.':'Bedrijven, woningen, garages, auto’s en privévliegtuigen. Bouw een collectie op die inkomsten oplevert, kansen opent en jouw stempel draagt.',
  'Buy · {v11}':'Kopen · {v11}','Buy 30 minutes of protection from player operations for $50,000.':'Koop 30 minuten bescherming tegen spelersacties voor $50.000.',
- 'Buy MAX (up to 100)':'Koop MAX (tot 100)','Buy tickets':'Loten kopen','Cash on hand':'Contant geld','Change since previous 10-minute quote':'Verandering sinds de vorige tienminutenkoers',
+ 'Buy maximum (up to 100)':'Koop MAX (tot 100)','Buy tickets':'Loten kopen','Cash on hand':'Contant geld','Change since previous 5-minute quote':'Verandering sinds de vorige vijfminutenkoers',
  'Changelogs':'Wijzigingslogboeken',
  'Cinematic AI-generated artwork. Vehicles are artistic interpretations; aircraft names and prices are fictional game content.':'Filmisch, met AI gemaakt beeldmateriaal. Voertuigen zijn artistieke interpretaties; vliegtuignamen en prijzen zijn fictieve spelinhoud.',
  'City streets after dark':'Stadsstraten na zonsondergang',

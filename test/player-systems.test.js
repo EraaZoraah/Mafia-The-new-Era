@@ -7,6 +7,17 @@ const post=(f,amount=123456)=>f.call('bounties/post',{target:'DonTwo',amount,key
 const marry=f=>{assert.equal(f.call('marriage/invite',{target:'DonTwo'}).status,200);return f.call('marriage/respond',{id:1,action:'accept'},3)};
 const grant=(f,product='supporter',recipient='DonOne',key='supporter-grant-0001',id=1)=>f.call('admin/shop/grant',{product,recipient,key,reason:'Test membership'},id);
 
+test('new weddings quote fifty million and charge that amount only on acceptance',t=>{
+ const f=fixture(t),before=f.q('SELECT cash FROM users WHERE id=1').cash;
+ assert.equal(f.call('marriage').body.cost,50000000);
+ assert.equal(f.call('marriage/invite',{target:'DonTwo'}).status,200);
+ assert.equal(f.q('SELECT cost FROM marriage_invites WHERE id=1').cost,50000000);
+ assert.equal(f.q('SELECT cash FROM users WHERE id=1').cash,before);
+ assert.equal(f.call('marriage/respond',{id:1,action:'accept'},3).status,200);
+ assert.equal(f.q('SELECT cash FROM users WHERE id=1').cash,before-50000000);
+ assert.equal(f.call('marriage').body.bonusPercent,10);
+});
+
 test('funded bounties debit once, pay the successful hunter once and preserve total money',t=>{
  const f=fixture(t),sum=()=>f.q('SELECT SUM(cash) n FROM users').n;
  const before=sum();assert.equal(post(f).status,200);assert.equal(post(f).body.duplicate,true);assert.equal(sum(),before-123456);

@@ -25,6 +25,9 @@ export function installInvestments(db,{supporterBonus=()=>1,transaction,settleRa
   CREATE INDEX investments_personal ON investments(user_id,claimed);
   CREATE INDEX investments_family ON investments(family_id,claimed);
  `));
+ if(!all('PRAGMA table_info(investments)').some(c=>c.name==='earned_interest'))db.exec('ALTER TABLE investments ADD COLUMN earned_interest INTEGER');
+ for(const p of all('PRAGMA table_info(events)').some(c=>c.name==='message')?all('SELECT id,principal FROM investments WHERE claimed=1 AND earned_interest IS NULL'):[]){const record=q("SELECT message FROM events WHERE message LIKE ? ORDER BY created_at DESC,id DESC LIMIT 1",'Claimed investment #'+p.id+':%');const match=record?.message.match(/^Claimed investment #(\d+): \$(\d+) principal and \$(\d+) interest\.$/);if(match&&Number(match[1])===p.id&&Number(match[2])===p.principal)run('UPDATE investments SET earned_interest=? WHERE id=?',Number(match[3]),p.id);}
+ function performance(a){const rows=all('SELECT principal,earned_interest FROM investments WHERE '+a.column+'=? AND claimed=1 AND earned_interest IS NOT NULL',a.id),principal=rows.reduce((n,p)=>n+p.principal,0),profit=rows.reduce((n,p)=>n+p.earned_interest,0);return {profit,principal,margin:principal?profit/principal*100:0,count:rows.length};}
  function account(id,scope,manage=false){
   if(!['personal','family'].includes(scope))fail('Choose personal or family funds.');
   if(scope==='family'){const m=familyMember(id,manage);return {scope,id:m.family_id,column:'family_id',canManage:['don','capo'].includes(role(m))}}
@@ -44,7 +47,7 @@ export function installInvestments(db,{supporterBonus=()=>1,transaction,settleRa
   if(method==='GET'&&path==='/api/investments')return transaction(()=>{
    const personal=account(user.id,'personal'),member=q('SELECT family_id FROM family_members WHERE user_id=?',user.id);
    const accounts=[personal,...(member?[account(user.id,'family')]:[])];
-   return {limit:investmentLimit,accounts:accounts.map(a=>{const positions=investments(a);return {scope:a.scope,canManage:a.canManage,available:a.scope==='personal'?q('SELECT cash FROM users WHERE id=?',a.id).cash:q('SELECT treasury FROM families WHERE id=?',a.id).treasury,activePrincipal:positions.reduce((n,x)=>n+x.principal,0),positions,quotes:quotes(a)}})};
+   return {limit:investmentLimit,accounts:accounts.map(a=>{const positions=investments(a);return {performance:performance(a),scope:a.scope,canManage:a.canManage,available:a.scope==='personal'?q('SELECT cash FROM users WHERE id=?',a.id).cash:q('SELECT treasury FROM families WHERE id=?',a.id).treasury,activePrincipal:positions.reduce((n,x)=>n+x.principal,0),positions,quotes:quotes(a)}})};
   });
   if(method!=='POST'||!['/api/investments/open','/api/investments/claim'].includes(path))return null;
   return transaction(()=>{
@@ -66,7 +69,7 @@ export function installInvestments(db,{supporterBonus=()=>1,transaction,settleRa
    if(!position)fail('Investment not found or already claimed.',409);if(position.matures_at>clock())fail('This investment has not matured yet.',409);
    const earnedInterest=Math.floor(interest(position)*(position.user_id?supporterBonus(position.user_id):1)),payout=position.principal+earnedInterest;
    if(!run('UPDATE '+table+' SET '+field+'='+field+'+? WHERE id=? AND '+field+'<=?',payout,a.id,maxCash-payout).changes)fail('Make room in the receiving balance before claiming. Your investment is safe.',409);
-   run('UPDATE investments SET claimed=1 WHERE id=?',position.id);
+   run('UPDATE investments SET claimed=1,earned_interest=? WHERE id=?',earnedInterest,position.id);
    const message='Claimed investment #'+position.id+': $'+position.principal+' principal and $'+earnedInterest+' interest.';
    if(a.scope==='family')familyLog(a.id,user.username+': '+message);log(user.id,message);return {ok:true,payout,interest:earnedInterest};
   });

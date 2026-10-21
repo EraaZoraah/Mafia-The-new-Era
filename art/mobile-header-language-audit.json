@@ -1,0 +1,157 @@
+[
+  {
+    "lang": "en",
+    "metrics": [
+      {
+        "label": "Cash",
+        "overflow": false
+      },
+      {
+        "label": "Bank",
+        "overflow": false
+      },
+      {
+        "label": "Power",
+        "overflow": false
+      },
+      {
+        "label": "XP",
+        "overflow": false
+      },
+      {
+        "label": "Rounds",
+        "overflow": false
+      },
+      {
+        "label": "Energy",
+        "overflow": false
+      }
+    ],
+    "pageWidth": 320,
+    "width": 320
+  },
+  {
+    "lang": "nl",
+    "metrics": [
+      {
+        "label": "Contant",
+        "overflow": false
+      },
+      {
+        "label": "Bank",
+        "overflow": false
+      },
+      {
+        "label": "Kracht",
+        "overflow": false
+      },
+      {
+        "label": "XP",
+        "overflow": false
+      },
+      {
+        "label": "Kogels",
+        "overflow": false
+      },
+      {
+        "label": "Energie",
+        "overflow": false
+      }
+    ],
+    "pageWidth": 320,
+    "width": 320
+  },
+  {
+    "lang": "fr",
+    "metrics": [
+      {
+        "label": "Espèces",
+        "overflow": false
+      },
+      {
+        "label": "Banque",
+        "overflow": false
+      },
+      {
+        "label": "Puissance",
+        "overflow": false
+      },
+      {
+        "label": "XP",
+        "overflow": false
+      },
+      {
+        "label": "Munitions",
+        "overflow": false
+      },
+      {
+        "label": "Énergie",
+        "overflow": false
+      }
+    ],
+    "pageWidth": 320,
+    "width": 320
+  },
+  {
+    "lang": "de",
+    "metrics": [
+      {
+        "label": "Bargeld",
+        "overflow": false
+      },
+      {
+        "label": "Bank",
+        "overflow": false
+      },
+      {
+        "label": "Macht",
+        "overflow": false
+      },
+      {
+        "label": "XP",
+        "overflow": false
+      },
+      {
+        "label": "Patronen",
+        "overflow": false
+      },
+      {
+        "label": "Energie",
+        "overflow": false
+      }
+    ],
+    "pageWidth": 320,
+    "width": 320
+  },
+  {
+    "lang": "es",
+    "metrics": [
+      {
+        "label": "Efectivo",
+        "overflow": false
+      },
+      {
+        "label": "Banco",
+        "overflow": false
+      },
+      {
+        "label": "Poder",
+        "overflow": false
+      },
+      {
+        "label": "XP",
+        "overflow": false
+      },
+      {
+        "label": "Balas",
+        "overflow": false
+      },
+      {
+        "label": "Energía",
+        "overflow": false
+      }
+    ],
+    "pageWidth": 320,
+    "width": 320
+  }
+]

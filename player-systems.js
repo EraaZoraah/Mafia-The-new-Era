@@ -1,5 +1,5 @@
 import {MAX_CASH} from './money.js';
-export const WEDDING_COST=5000000,MARRIAGE_BONUS=.10;
+export const WEDDING_COST=50000000,MARRIAGE_BONUS=.10;
 export const liquidationChance=rounds=>Math.min(.90,.35+.55*(1-Math.exp(-(rounds-60)/1500)));
 export const backfireChance=rounds=>Math.min(.65,.65*(1-Math.exp(-rounds/1500)));
 export function installPlayerSystems(db,{transaction,clock,fail,settleRaw,available,notify}){

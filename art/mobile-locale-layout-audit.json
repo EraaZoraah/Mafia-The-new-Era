@@ -1,0 +1,1832 @@
+[
+  {
+    "lang": "es",
+    "page": "dashboard",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "daily",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "bulletins",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "messages",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "profile",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "marriage",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "achievements",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "ranks",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "respect",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "referrals",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "missions",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "art-market",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "team-missions",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "bounties",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "shipments",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "combat",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "production",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "security",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "inventory",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "employees",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "armory",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "business",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "home",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "garage",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "warehouses",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "car",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "helicopter",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "jet",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "yacht",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "families",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "family-chat",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "family-plans",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "rivals",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "seasons",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "family-assets",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "family-territory",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "family-armory",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "family-safehouses",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "family-compounds",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "family-fleet",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "family-upgrades",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "bank",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "investments",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "crypto",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "auction-house",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "transfers",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "airport",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "circuit",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "casino",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "directory",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "family-directory",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "underworld",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "hospital",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "prison",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "support",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "policy",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "rules",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "faq",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "boutique",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "tickets",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "es",
+    "page": "admin",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "dashboard",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "daily",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "bulletins",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "messages",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "profile",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "marriage",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "achievements",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "ranks",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "respect",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "referrals",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "missions",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "art-market",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "team-missions",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "bounties",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "shipments",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "combat",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "production",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "security",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "inventory",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "employees",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "armory",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "business",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "home",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "garage",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "warehouses",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "car",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "helicopter",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "jet",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "yacht",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "families",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "family-chat",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "family-plans",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "rivals",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "seasons",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "family-assets",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "family-territory",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "family-armory",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "family-safehouses",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "family-compounds",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "family-fleet",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "family-upgrades",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "bank",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "investments",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "crypto",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "auction-house",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "transfers",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "airport",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "circuit",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "casino",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "directory",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "family-directory",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "underworld",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "hospital",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "prison",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "support",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "policy",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "rules",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "faq",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "boutique",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "tickets",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "nl",
+    "page": "admin",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "dashboard",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "daily",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "bulletins",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "messages",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "profile",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "marriage",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "achievements",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "ranks",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "respect",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "referrals",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "missions",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "art-market",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "team-missions",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "bounties",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "shipments",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "combat",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "production",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "security",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "inventory",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "employees",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "armory",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "business",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "home",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "garage",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "warehouses",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "car",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "helicopter",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "jet",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "yacht",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "families",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "family-chat",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "family-plans",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "rivals",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "seasons",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "family-assets",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "family-territory",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "family-armory",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "family-safehouses",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "family-compounds",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "family-fleet",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "family-upgrades",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "bank",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "investments",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "crypto",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "auction-house",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "transfers",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "airport",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "circuit",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "casino",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "directory",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "family-directory",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "underworld",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "hospital",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "prison",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "support",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "policy",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "rules",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "faq",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "boutique",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "tickets",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "fr",
+    "page": "admin",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "dashboard",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "daily",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "bulletins",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "messages",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "profile",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "marriage",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "achievements",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "ranks",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "respect",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "referrals",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "missions",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "art-market",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "team-missions",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "bounties",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "shipments",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "combat",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "production",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "security",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "inventory",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "employees",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "armory",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "business",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "home",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "garage",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "warehouses",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "car",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "helicopter",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "jet",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "yacht",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "families",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "family-chat",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "family-plans",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "rivals",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "seasons",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "family-assets",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "family-territory",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "family-armory",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "family-safehouses",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "family-compounds",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "family-fleet",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "family-upgrades",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "bank",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "investments",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "crypto",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "auction-house",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "transfers",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "airport",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "circuit",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "casino",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "directory",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "family-directory",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "underworld",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "hospital",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "prison",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "support",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "policy",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "rules",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "faq",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "boutique",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "tickets",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "de",
+    "page": "admin",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "dashboard",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "daily",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "bulletins",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "messages",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "profile",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "marriage",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "achievements",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "ranks",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "respect",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "referrals",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "missions",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "art-market",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "team-missions",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "bounties",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "shipments",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "combat",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "production",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "security",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "inventory",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "employees",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "armory",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "business",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "home",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "garage",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "warehouses",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "car",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "helicopter",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "jet",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "yacht",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "families",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "family-chat",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "family-plans",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "rivals",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "seasons",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "family-assets",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "family-territory",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "family-armory",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "family-safehouses",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "family-compounds",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "family-fleet",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "family-upgrades",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "bank",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "investments",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "crypto",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "auction-house",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "transfers",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "airport",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "circuit",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "casino",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "directory",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "family-directory",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "underworld",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "hospital",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "prison",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "support",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "policy",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "rules",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "faq",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "boutique",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "tickets",
+    "clipped": [],
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "page": "admin",
+    "clipped": [],
+    "overflow": false
+  }
+]

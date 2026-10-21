@@ -28,7 +28,7 @@ export const guideTopics=[
 
  ['warehouses','Warehouses',/warehouse|opslag|magazijn|gestolen|stolen|garage|car theft/,'Vehicle warehouses hold twenty recovered vehicles each, with five warehouses maximum. Production warehouses provide one thousand total crates each across all drugs; buy them before production. Car theft awards a vehicle with 1–5 condition stars: Worn 55%, Used 25%, Good 13%, Perfect 6%, Pristine 1%. Model, condition, city and hourly quote determine its value. Sell, store or swap a stored car if full. Stored vehicles can be auctioned from Warehouses with your own minimum price, a non-refundable listing fee and 3% sale commission. Shipping between cities has a small interception risk. Purchased cars use separate six-bay garages and eighty-percent purchase-price resale.'],
 
- ['crypto','Crypto exchange',/crypto|coin|wallet/,'Trade fictional coins on Crypto exchange under Finances. Quotes update every ten minutes. Buy MAX respects cash and the $100 million purchase basis limit per coin. A 1% spread applies on each side.'],
+ ['crypto','Crypto exchange',/crypto|coin|wallet/,'Trade fictional coins on Crypto exchange under Finances. Quotes update every five minutes. Buy MAX respects cash and the $100 million purchase basis limit per coin. A 1% spread applies on each side.'],
 
  ['investments','Investments',/invest|beleg|rente/,'Invest personal or family funds for up to 72 hours, with up to $100 billion active principal and at most 8% total quoted return. Only Don and Capo manage family investments.'],
 
@@ -40,7 +40,7 @@ export const guideTopics=[
 
  ['employees','Employees',/employee|werknemer|staff income/,'Employee limits and specialties vary: some earn cash, some add Power, and your Personal Chauffeur earns respect. Income pauses in prison/hospital and stops after 24 active earning hours until all saved personal income is claimed.'],
 
- ['bank','Bank',/bank/,'The bank handles deposits and withdrawals. Crypto exchange and Investments have their own pages under Finances. Coins change price every ten minutes; buy and sell quotes include a 1% spread on each side. Investments lock at a quoted return for up to 72 hours, with a $100 billion principal cap.'],
+ ['bank','Bank',/bank/,'The bank handles deposits and withdrawals. Crypto exchange and Investments have their own pages under Finances. Coins change price every five minutes; buy and sell quotes include a 1% spread on each side. Investments lock at a quoted return for up to 72 hours, with a $100 billion principal cap.'],
 
  ['business','Businesses',/business|bedrijf|bedrijven|passi/,'Businesses pay passive income. Buy up to ten per type; extra copies cost more. The displayed hourly income includes your current bonuses. Previously earned income is kept when detained; new income stops during detention. Personal passive cash stops after 24 active earning hours until saved income is claimed.'],
 

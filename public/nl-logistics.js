@@ -15,7 +15,7 @@ export const logisticsDutch={
  'Ammunition in a presentation case':'Munitie in een presentatiekist','Ammunition quantity':'Hoeveelheid munitie','Ammunition supply':'Munitievoorraad',
  'Amount':'Bedrag','Armory saved.':'Wapenopslag opgeslagen.','ARMORY VALUE':'WAARDE WAPENOPSLAG','Available cash: {v0}. Energy:':'Beschikbaar contant: {v0}. Energie:',
  'Batch':'Partij','Batch #{v0} · {v1}':'Partij #{v0} · {v1}','BUILD YOUR OWN SUPPLY':'BOUW JE EIGEN VOORRAAD OP',
- 'Buy ammunition':'Munitie kopen','Buy MAX':'Koop MAX','Buy multiple':'Meerdere kopen','Cargo':'Lading','Cargo in transit to ':'Lading onderweg naar ',
+ 'Buy ammunition':'Munitie kopen','Buy maximum':'Koop MAX','Buy multiple':'Meerdere kopen','Cargo':'Lading','Cargo in transit to ':'Lading onderweg naar ',
  'City markets & cargo routes':'Stadsmarkten en transportroutes','Collection limit reached':'Collectielimiet bereikt','Compare all city markets':'Vergelijk alle stadsmarkten',
  'Compound extensions are included in assets. Family Power adds every member’s personal Power, family weapons, all family holdings and active family guards. Ammunition is consumable and does not increase Power.':'Uitbreidingen van het hoofdkwartier tellen mee als bezittingen. Familiekracht telt de persoonlijke kracht van alle leden, familiewapens, alle familiebezittingen en actieve familiebewaking op. Munitie wordt verbruikt en verhoogt de kracht niet.',
  'Cost {v0} · Sale range {v1}–{v2}':'Kosten {v0} · Verkoopbereik {v1}–{v2}','Cost: {v6} · Base sale value: {v7}':'Kosten: {v6} · Basisverkoopwaarde: {v7}',

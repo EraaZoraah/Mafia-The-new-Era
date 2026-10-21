@@ -338,16 +338,16 @@
     "translated": true
   },
   {
-    "key": "· Legacy distinction {v2}",
+    "key": "· Margin",
     "files": [
-      "premium.js"
+      "freight-ui.js"
     ],
     "translated": true
   },
   {
-    "key": "· Margin",
+    "key": "· Power {v19}",
     "files": [
-      "freight-ui.js"
+      "profile-ui.js"
     ],
     "translated": true
   },
@@ -639,23 +639,9 @@
     "translated": true
   },
   {
-    "key": "{v1} / {v2} OWNED",
-    "files": [
-      "empire-ui.js"
-    ],
-    "translated": true
-  },
-  {
     "key": "{v1} days",
     "files": [
       "care-ui.js"
-    ],
-    "translated": true
-  },
-  {
-    "key": "{v1} energy · {v2} rounds · Weapon tier {v3} · {v4}",
-    "files": [
-      "app.js"
     ],
     "translated": true
   },
@@ -684,13 +670,6 @@
     "key": "{v1} operation target",
     "files": [
       "family-command-ui.js"
-    ],
-    "translated": true
-  },
-  {
-    "key": "{v1} OWNED · {v2}",
-    "files": [
-      "empire-ui.js"
     ],
     "translated": true
   },
@@ -745,13 +724,6 @@
     "translated": true
   },
   {
-    "key": "{v10} per round · Available funds {v11}",
-    "files": [
-      "logistics-ui.js"
-    ],
-    "translated": true
-  },
-  {
     "key": "{v10} success chance",
     "files": [
       "empire-ui.js"
@@ -762,6 +734,13 @@
     "key": "{v11} family funds · 45 energy · 75 family rounds",
     "files": [
       "war-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "{v11} per round · Available funds {v12}",
+    "files": [
+      "logistics-ui.js"
     ],
     "translated": true
   },
@@ -815,13 +794,6 @@
     "translated": true
   },
   {
-    "key": "{v17} · Power {v18} {v19}",
-    "files": [
-      "profile-ui.js"
-    ],
-    "translated": true
-  },
-  {
     "key": "{v2} · {v3} · {v4} XP",
     "files": [
       "empire-ui.js"
@@ -857,6 +829,13 @@
     "translated": true
   },
   {
+    "key": "{v2} / {v3} OWNED",
+    "files": [
+      "empire-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "{v2} / 5 today{v3}. Resets at 00:00 UTC.",
     "files": [
       "underworld-ui.js"
@@ -874,14 +853,6 @@
     "key": "{v2} name and diamond · 30 days",
     "files": [
       "shop-ui.js"
-    ],
-    "translated": true
-  },
-  {
-    "key": "{v2} OWNED · {v3}",
-    "files": [
-      "empire-ui.js",
-      "premium.js"
     ],
     "translated": true
   },
@@ -914,6 +885,14 @@
     "translated": true
   },
   {
+    "key": "{v2}/{v3} OWNED · {v4}",
+    "files": [
+      "empire-ui.js",
+      "premium.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "{v21} Respect never grants purchasing authority. Your contribution history is retained if you leave and rejoin.",
     "files": [
       "empire-ui.js"
@@ -931,6 +910,13 @@
     "key": "{v3} · {v4} XP",
     "files": [
       "community-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "{v3} energy · {v4} rounds · Weapon tier {v5} · {v6}",
+    "files": [
+      "app.js"
     ],
     "translated": true
   },
@@ -956,13 +942,6 @@
     "translated": true
   },
   {
-    "key": "{v3} per employee · {v4}/{v5} hired",
-    "files": [
-      "expansion-ui.js"
-    ],
-    "translated": true
-  },
-  {
     "key": "{v3} SUCCESS · {v4} ENERGY",
     "files": [
       "empire-ui.js"
@@ -980,6 +959,20 @@
     "key": "{v3}. {v4} BASE RISK · {v5}% SUCCESS · {v6} ENERGY",
     "files": [
       "premium.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "{v3}/{v4} OWNED",
+    "files": [
+      "expansion-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "{v3}/{v4} OWNED · {v5}",
+    "files": [
+      "empire-ui.js"
     ],
     "translated": true
   },
@@ -1033,23 +1026,16 @@
     "translated": true
   },
   {
-    "key": "{v4} owned · {v5} base value",
-    "files": [
-      "profile-ui.js"
-    ],
-    "translated": true
-  },
-  {
-    "key": "{v4} owned · {v5} defense points{v6}{v7}",
-    "files": [
-      "empire-ui.js"
-    ],
-    "translated": true
-  },
-  {
     "key": "{v4} XP",
     "files": [
       "daily-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "{v4}/{v5} owned · {v6} base value",
+    "files": [
+      "profile-ui.js"
     ],
     "translated": true
   },
@@ -1103,30 +1089,9 @@
     "translated": true
   },
   {
-    "key": "{v5} / 5 owned · {v6}",
-    "files": [
-      "vehicles-ui.js"
-    ],
-    "translated": true
-  },
-  {
     "key": "{v5} avatar",
     "files": [
       "profile-ui.js"
-    ],
-    "translated": true
-  },
-  {
-    "key": "{v5} base value{v6}",
-    "files": [
-      "empire-ui.js"
-    ],
-    "translated": true
-  },
-  {
-    "key": "{v5} damage · {v6} minute cooldown",
-    "files": [
-      "app.js"
     ],
     "translated": true
   },
@@ -1166,6 +1131,13 @@
     "translated": true
   },
   {
+    "key": "{v6} per employee · {v7}/{v8} hired",
+    "files": [
+      "expansion-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "{v6} rounds · Weapon tier {v7}",
     "files": [
       "empire-ui.js"
@@ -1187,9 +1159,37 @@
     "translated": true
   },
   {
+    "key": "{v6}/{v7} owned · {v8}",
+    "files": [
+      "vehicles-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "{v6}/{v7} owned · {v8} defense points{v9}{v10}",
+    "files": [
+      "empire-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "{v7} base value{v8}",
+    "files": [
+      "empire-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "{v7} coins · {v8} {v9}",
     "files": [
       "expansion-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "{v7} damage · {v8} minute cooldown",
+    "files": [
+      "app.js"
     ],
     "translated": true
   },
@@ -1271,6 +1271,13 @@
     "translated": true
   },
   {
+    "key": "+{v10} defense points per copy",
+    "files": [
+      "empire-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "+{v10} points total",
     "files": [
       "premium.js"
@@ -1337,13 +1344,6 @@
     "key": "+{v8}% passive income",
     "files": [
       "app.js"
-    ],
-    "translated": true
-  },
-  {
-    "key": "+{v9} defense points per copy",
-    "files": [
-      "empire-ui.js"
     ],
     "translated": true
   },
@@ -1656,7 +1656,7 @@
     "translated": true
   },
   {
-    "key": "Access to {v9}",
+    "key": "Access to {v10}",
     "files": [
       "premium.js"
     ],
@@ -1701,13 +1701,6 @@
     "key": "Account security log",
     "files": [
       "app.js"
-    ],
-    "translated": true
-  },
-  {
-    "key": "Accounts",
-    "files": [
-      "staff-totals-ui.js"
     ],
     "translated": true
   },
@@ -2483,6 +2476,14 @@
     "translated": true
   },
   {
+    "key": "AVERAGE MARGIN",
+    "files": [
+      "expansion-ui.js",
+      "investment-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Awaiting review",
     "files": [
       "referral-ui.js"
@@ -2555,6 +2556,13 @@
   },
   {
     "key": "Batch #{v0} · {v1}",
+    "files": [
+      "freight-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Batches produced",
     "files": [
       "freight-ui.js"
     ],
@@ -2884,7 +2892,7 @@
     "translated": true
   },
   {
-    "key": "Buy MAX",
+    "key": "Buy maximum",
     "files": [
       "bulk-ui.js",
       "logistics-ui.js"
@@ -2892,21 +2900,21 @@
     "translated": true
   },
   {
-    "key": "Buy MAX · {v13}",
+    "key": "Buy maximum · {v13}",
     "files": [
       "expansion-ui.js"
     ],
     "translated": true
   },
   {
-    "key": "Buy MAX · {v14}",
+    "key": "Buy maximum · {v18}",
     "files": [
       "expansion-ui.js"
     ],
     "translated": true
   },
   {
-    "key": "Buy MAX · {v8}",
+    "key": "Buy maximum · {v8}",
     "files": [
       "expansion-ui.js"
     ],
@@ -3127,7 +3135,7 @@
     "translated": true
   },
   {
-    "key": "Change since previous 10-minute quote",
+    "key": "Change since previous 5-minute quote",
     "files": [
       "expansion-ui.js"
     ],
@@ -3724,6 +3732,7 @@
   {
     "key": "crates",
     "files": [
+      "freight-ui.js",
       "logistics-ui.js"
     ],
     "translated": true
@@ -3884,7 +3893,7 @@
     "translated": true
   },
   {
-    "key": "Current quotes expire {v11}. The rate shown is the entire term’s return, not an annual rate. Personal interest excludes prison/hospital hours; principal is preserved.",
+    "key": "Current quotes expire {v14}. The rate shown is the entire term’s return, not an annual rate. Personal interest excludes prison/hospital hours; principal is preserved.",
     "files": [
       "investment-ui.js"
     ],
@@ -3993,13 +4002,6 @@
     "key": "Delete without refund",
     "files": [
       "owner-ui.js"
-    ],
-    "translated": true
-  },
-  {
-    "key": "Delivered",
-    "files": [
-      "freight-ui.js"
     ],
     "translated": true
   },
@@ -5561,6 +5563,13 @@
     "translated": true
   },
   {
+    "key": "In stock",
+    "files": [
+      "freight-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "IN THE BANK",
     "files": [
       "app.js"
@@ -5640,7 +5649,7 @@
     "translated": true
   },
   {
-    "key": "Incoming player attacks are {v5} less likely to succeed. Successful non-liquidation attacks deal {v6} less damage and steal {v7} less cash.",
+    "key": "Incoming player attacks are {v6} less likely to succeed. Successful non-liquidation attacks deal {v7} less damage and steal {v8} less cash.",
     "files": [
       "empire-ui.js"
     ],
@@ -5745,7 +5754,7 @@
     "translated": true
   },
   {
-    "key": "Invest MAX · {v9}",
+    "key": "Invest MAX · {v12}",
     "files": [
       "investment-ui.js"
     ],
@@ -6060,20 +6069,6 @@
     "translated": true
   },
   {
-    "key": "Legacy {v2}",
-    "files": [
-      "profile-ui.js"
-    ],
-    "translated": true
-  },
-  {
-    "key": "Legacy {v3}",
-    "files": [
-      "profile-ui.js"
-    ],
-    "translated": true
-  },
-  {
     "key": "Legacy distinction",
     "files": [
       "app.js"
@@ -6261,13 +6256,6 @@
     "translated": true
   },
   {
-    "key": "Location / destination",
-    "files": [
-      "freight-ui.js"
-    ],
-    "translated": true
-  },
-  {
     "key": "Lock funds at the quoted rate",
     "files": [
       "investment-ui.js"
@@ -6387,7 +6375,7 @@
     "translated": true
   },
   {
-    "key": "Mafia: The new Era © · v1.22.3",
+    "key": "Mafia: The new Era © · v1.23.0",
     "files": [
       "app.js"
     ],
@@ -6876,6 +6864,20 @@
     "translated": true
   },
   {
+    "key": "Net margin",
+    "files": [
+      "freight-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Net profit",
+    "files": [
+      "freight-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Net worth",
     "files": [
       "underworld-ui.js"
@@ -7120,6 +7122,13 @@
     "key": "No available assets.",
     "files": [
       "underworld-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "No batches yet.",
+    "files": [
+      "freight-ui.js"
     ],
     "translated": true
   },
@@ -7382,13 +7391,6 @@
     "key": "No scoring families this season.",
     "files": [
       "legacy-ui.js"
-    ],
-    "translated": true
-  },
-  {
-    "key": "No shipments yet.",
-    "files": [
-      "freight-ui.js"
     ],
     "translated": true
   },
@@ -7884,6 +7886,13 @@
     "translated": true
   },
   {
+    "key": "Origin",
+    "files": [
+      "freight-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Owned — equip in My profile",
     "files": [
       "shop-ui.js"
@@ -8195,6 +8204,7 @@
       "legacy-ui.js",
       "presence-ui.js",
       "shop-ui.js",
+      "staff-totals-ui.js",
       "underworld-ui.js"
     ],
     "translated": true
@@ -8432,6 +8442,13 @@
     "translated": true
   },
   {
+    "key": "Prices update every five minutes. Normal moves can reach 6%, shocks can fall 65% or rise 35%, and rare rallies can rise 200% per update. Quotes remain positive and bounded; gains are not guaranteed.",
+    "files": [
+      "expansion-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Principal",
     "files": [
       "investment-ui.js"
@@ -8544,7 +8561,21 @@
     "translated": true
   },
   {
+    "key": "Production cost",
+    "files": [
+      "freight-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Production cost / sale value factors",
+    "files": [
+      "freight-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Production history",
     "files": [
       "freight-ui.js"
     ],
@@ -8664,7 +8695,7 @@
     "translated": true
   },
   {
-    "key": "Protection level {v1} / {v2}",
+    "key": "Protection level {v2} / {v3}",
     "files": [
       "empire-ui.js"
     ],
@@ -8885,6 +8916,14 @@
     "translated": true
   },
   {
+    "key": "REALIZED PROFIT",
+    "files": [
+      "expansion-ui.js",
+      "investment-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Reason",
     "files": [
       "care-ui.js",
@@ -8918,13 +8957,6 @@
     "key": "Recent auction results",
     "files": [
       "art-market-ui.js"
-    ],
-    "translated": true
-  },
-  {
-    "key": "Recent cargo movements",
-    "files": [
-      "freight-ui.js"
     ],
     "translated": true
   },
@@ -8969,6 +9001,29 @@
     "key": "Recipient:",
     "files": [
       "profile-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "RECORDED RESULTS",
+    "files": [
+      "expansion-ui.js",
+      "investment-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Recorded results only. Older unrecorded proceeds are not estimated.",
+    "files": [
+      "expansion-ui.js",
+      "investment-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Recorded sales only. Older unrecorded proceeds are not estimated.",
+    "files": [
+      "freight-ui.js"
     ],
     "translated": true
   },
@@ -9559,6 +9614,13 @@
     "translated": true
   },
   {
+    "key": "Route history",
+    "files": [
+      "freight-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Route unavailable.",
     "files": [
       "freight-ui.js"
@@ -9590,6 +9652,13 @@
     "key": "Sabotage defenses",
     "files": [
       "war-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Sale value",
+    "files": [
+      "freight-ui.js"
     ],
     "translated": true
   },
@@ -10335,7 +10404,7 @@
     "translated": true
   },
   {
-    "key": "Storage limit: {v9} rounds. Each player receives one sidearm and 100 rounds once as a starter kit.",
+    "key": "Storage limit: {v10} rounds. Each player receives one sidearm and 100 rounds once as a starter kit.",
     "files": [
       "logistics-ui.js"
     ],

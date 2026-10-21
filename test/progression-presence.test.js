@@ -10,7 +10,7 @@ test('presence uses server time, avoids duplicate playtime and records distinct 
  let p=f.call('profiles/2').body.player;assert.equal(p.playMillis,30000);assert.equal(p.daysPlayed,1);
  f.advance(90001);assert.equal(f.call('presence?ids=2').body.players[0].online,false);pulse();assert.equal(f.call('profiles/2').body.player.playMillis,30000);
  f.advance(86400000);pulse();assert.equal(f.call('profiles/2').body.player.daysPlayed,2);
- const d=f.call('admin/population?filter=online').body;assert.equal(d.online,1);assert.equal(d.players[0].id,2);assert.equal(d.players[0].playMillis,30000);assert.equal(d.total,4);
+ const d=f.call('admin/population?filter=online').body;assert.equal(d.online,1);assert.equal(d.players[0].id,2);assert.equal(d.players[0].playMillis,30000);assert.equal(d.total,3);
  assert.equal(f.call('admin/population',undefined,2).status,403);assert.equal(f.call('presence?ids=2,0').status,400);assert.equal(f.call('presence?ids=2;DELETE').status,400);
  f.run('UPDATE users SET banned=1 WHERE id=2');assert.equal(f.call('presence?ids=2').body.players[0].online,false);
 });

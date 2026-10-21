@@ -1,5 +1,15 @@
 # 1.22.3 - 2026-10-21
 
+## 1.23.0 — 2026-10-21
+
+- Refined mobile navigation, platinum assistant, rank and achievement emblems, family calligraphy and Burgundy crest.
+- Illustrated operations, consistent ownership limits and premium completed collection cards.
+- Per-player production numbering, route records, actual profits and clearer financial summaries.
+- Staff balances display names and remain separate from competitive player totals.
+- Five-minute crypto quotes, wider bounded volatility, safe price-history migration and refreshed guide/translations.
+- Wedding fee updated to $50 million.
+
+
 - Compact mobile language/logout controls beside player identity; account balances remain below.
 - Edge menu tab and a visible version footer in the mobile drawer.
 - Full-bleed app icons remove the padded maskable artwork border.

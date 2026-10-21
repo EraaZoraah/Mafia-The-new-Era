@@ -1,0 +1,22 @@
+import fs from 'node:fs';
+import {resolve} from 'node:path';
+import {fileURLToPath} from 'node:url';
+
+const seal=`<defs><linearGradient id="gold" x1="0" y1="0" x2=".85" y2="1"><stop stop-color="#fff6d3"/><stop offset=".12" stop-color="#cda45a"/><stop offset=".26" stop-color="#ffe7a4"/><stop offset=".38" stop-color="#81562d"/><stop offset=".49" stop-color="#e4ba70"/><stop offset=".57" stop-color="#fff0bd"/><stop offset=".7" stop-color="#b7823e"/><stop offset=".87" stop-color="#efd18c"/><stop offset="1" stop-color="#78502a"/></linearGradient><radialGradient id="enamel" cx=".32" cy=".2" r=".9"><stop stop-color="#44403a"/><stop offset=".4" stop-color="#211e1c"/><stop offset="1" stop-color="#0d1014"/></radialGradient><pattern id="brushed" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(25)"><path d="M0 0v4" stroke="#fff0b5" stroke-opacity=".06" stroke-width=".5"/></pattern><filter id="raised"><feDropShadow dx="0" dy="1" stdDeviation=".6" flood-color="#000" flood-opacity=".8"/></filter></defs><path d="M18 2h28l16 16v28L46 62H18L2 46V18z" fill="url(#gold)" stroke="#f9dfa0" stroke-width=".65" filter="url(#raised)"/><path d="M19 5h26l14 14v26L45 59H19L5 45V19z" fill="none" stroke="#5e3c20" stroke-width="1.1"/><path d="M21 9h22l12 12v22L43 55H21L9 43V21z" fill="url(#enamel)" stroke="#f0cb81" stroke-width=".8"/><path d="M21 9h22l12 12v22L43 55H21L9 43V21z" fill="url(#brushed)"/><path d="M23 12h18M12 23v18M23 52h18M52 23v18" fill="none" stroke="#ebce92" stroke-opacity=".3" stroke-width=".6"/><path d="M16 7l-9 9m41-9 9 9M7 48l9 9m32 0 9-9" stroke="#fff0b8" stroke-width=".85"/><path d="M16 10l-6 6m38-6 6 6M10 48l6 6m32 0 6-6" stroke="#7c542b" stroke-width=".65"/>`;
+export function generatePrestige(){
+ for(let n=1;n<=200;n++){
+  const size=n<10?29:n<100?25:21;
+  fs.writeFileSync(`public/icons/prestige-${n}.svg`,`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" data-luxury-seal="true"><title>Legacy distinction ${n}</title>${seal}<text x="32" y="33" text-anchor="middle" dominant-baseline="middle" fill="url(#gold)" font-size="${size}" font-weight="600" font-family="Georgia,serif">${n}</text></svg>\n`);
+ }
+}
+export function refineAchievements(){
+ for(const file of fs.readdirSync('public/icons').filter(x=>/^achievement-.*\.svg$/.test(x))){
+  const target='public/icons/'+file,source=fs.readFileSync(target,'utf8');
+  if(source.includes('data-luxury-seal')){const inner=source.match(/<svg x="12"[\s\S]*<\/svg>/)?.[0]?.replace(/<\/svg>\s*<\/svg>$/,'</svg>');if(!inner)throw new Error(file);fs.writeFileSync(target,`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" data-luxury-seal="true">${seal}${inner}</svg>\n`);continue;}
+  const root=source.match(/<svg\b([^>]*)>([\s\S]*)<\/svg>/);if(!root)throw new Error(file);
+  const view=root[1].match(/viewBox="([^"]+)"/)?.[1]||'0 0 80 80';
+  const body=root[2].replace(/<circle\b[^>]*cx="40"[^>]*r="(?:37|36|33|31)"[^>]*\/>/g,'');
+  fs.writeFileSync(target,`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" data-luxury-seal="true">${seal}<svg x="12" y="12" width="40" height="40" viewBox="${view}" fill="none" stroke="#ebcf91" stroke-width="${view.endsWith('32 32')?'1.5':'1.8'}" stroke-linecap="round" stroke-linejoin="round">${body}</svg></svg>\n`);
+ }
+}
+if(process.argv[1]&&fileURLToPath(import.meta.url)===resolve(process.argv[1])){generatePrestige();refineAchievements();console.log('Generated 200 numbered legacy seals and refined achievement seals.');}
