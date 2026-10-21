@@ -1,3 +1,9 @@
+# 1.22.3 - 2026-10-21
+
+- Compact mobile language/logout controls beside player identity; account balances remain below.
+- Edge menu tab and a visible version footer in the mobile drawer.
+- Full-bleed app icons remove the padded maskable artwork border.
+
 # 1.22.2 - 2026-10-21
 
 - Neutral charcoal panels and a substantially reduced Bordeaux background glow.

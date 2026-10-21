@@ -75,7 +75,7 @@ test('isolated prototype baseline', { timeout: 90000 }, async t => {
       assert.equal((await api('push')).status,401);
       const settings=await api('push',undefined,alice.cookie);assert.equal(settings.status,200);assert.equal(typeof settings.body.ready,'boolean');assert.equal(settings.body.privateKey,undefined);
       assert.equal((await api('push/save',{subscription:{endpoint:'http://127.0.0.1/private'}},alice.cookie)).status,400);
-      for(const file of ['/scroll-position.js','/premium-theme.css','/push-ui.js','/sw.js','/input-limits.js','/es.js','/fr.js','/de.js','/manifest.webmanifest','/icons/app-logo-v3-192.png','/icons/app-logo-v3-512.png','/icons/app-logo-v3-maskable.png','/icons/app-logo-v3-apple.png'])assert.equal((await fetch(base+file)).status,200);
+      for(const file of ['/scroll-position.js','/premium-theme.css','/push-ui.js','/sw.js','/input-limits.js','/es.js','/fr.js','/de.js','/manifest.webmanifest','/icons/app-logo-v4-192.png','/icons/app-logo-v4-512.png','/icons/app-logo-v4-maskable.png','/icons/app-logo-v4-apple.png'])assert.equal((await fetch(base+file)).status,200);
     });
     await t.test('modern artwork delivery is smaller while original image fallback remains available',async()=>{
       const optimized=await fetch(base+'/images/banner-home-v3.png',{headers:{Accept:'image/webp'}});

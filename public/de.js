@@ -4141,9 +4141,10 @@ export const german=Object.freeze({
   "The most recently reported interface language is stored for Owner-only aggregate language statistics. Human accounts, bots and accounts without a reported language are counted separately.": "Die zuletzt gemeldete Oberflächensprache wird für zusammengefasste Sprachstatistiken gespeichert, die nur der Owner sehen kann. Menschliche Konten, Bots und Konten ohne gemeldete Sprache werden getrennt gezählt.",
   "French and German join the language selector, with localized rules, results and Luca guidance.": "Französisch und Deutsch ergänzen die Sprachauswahl, mit übersetzten Regeln, Ergebnissen und Luca-Tipps.",
   "Your underworld, in five languages": "Deine Unterwelt, in fünf Sprachen",
-  "Mafia: The new Era © · v1.22.2": "Mafia: The new Era © · v1.22.2"
+  "Mafia: The new Era © · v1.22.3": "Mafia: The new Era © · v1.22.3"
 ,
 "{name} — unlocked":"{name} — freigeschaltet",
 "{name} — requires {asset}":"{name} — benötigt {asset}",
-"Darker panels with a subtle Bordeaux background glow.":"Dunklere Panels mit einem dezenten Bordeaux-Schimmer im Hintergrund."
+"Darker panels with a subtle Bordeaux background glow.":"Dunklere Panels mit einem dezenten Bordeaux-Schimmer im Hintergrund.",
+"Compact mobile account controls, an edge menu tab and full-bleed app icons.":"Kompakte mobile Kontosteuerung, ein seitlicher Men\u00fcreiter und randlose App-Symbole."
 });

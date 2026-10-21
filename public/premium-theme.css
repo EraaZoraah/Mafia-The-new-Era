@@ -71,3 +71,30 @@ body{background:radial-gradient(ellipse at 88% 12%,#481d2c12,transparent 68%),ra
 #toggle-sidebar.btn{background:#100d1126;border:1px solid #d8bc7a24;color:#dcc89a99;box-shadow:none;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
 #toggle-sidebar.btn:not(:disabled):hover{background:#19131b99;border-color:#d8bc7a65;color:#efdbaf;box-shadow:none;transform:none}
 #toggle-sidebar.btn:focus-visible{background:#19131bcc;color:#efdbaf;outline:2px solid #d8bc7a;outline-offset:3px}
+/* Compact account header and persistent edge drawer tab. */
+#toggle-sidebar.btn{top:46%;left:252px;min-width:28px;width:28px;height:68px;padding:0;border-radius:0 9px 9px 0;border-left:0;background:#16171be6;color:#d4bf8b;font-size:0;box-shadow:3px 0 14px #0003;z-index:85}
+#toggle-sidebar.btn:before{content:'‹';font:25px Georgia,serif}
+.sidebar-hidden #toggle-sidebar.btn{left:0}
+.sidebar-hidden #toggle-sidebar.btn:before{content:'›'}
+@media(min-width:761px){#toggle-sidebar.btn{left:252px}}
+@media(max-width:760px){
+ .shell>.main,.shell.sidebar-hidden>.main{padding-top:24px}
+ .top{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px 10px;align-items:start}
+ .top>div:first-child{grid-column:1;min-width:0}
+ .top .eyebrow{font-size:8px;letter-spacing:1.1px}
+ .top h2{font-size:17px;overflow-wrap:anywhere;margin-bottom:9px}
+ .top .staff-badge{font-size:8px;padding:3px 5px}
+ .top .signature-badge{margin-left:5px;font-size:8px}
+ .player-header-actions{display:contents}
+ .account-controls{grid-column:2;grid-row:1;display:flex;flex-direction:column;gap:6px;margin:0;min-width:70px}
+ .account-controls .language-control summary{padding:8px;border-radius:6px;font-size:11px;background:#15191bcc}
+ .account-controls .language-control img{width:20px;height:13px}
+ .account-controls #logout{padding:8px 10px;font-size:10px;min-height:32px}
+ .account-controls .language-options{min-width:230px}
+ .player-header-actions>.player-wallet{grid-column:1 / -1;grid-row:2;width:100%;padding:15px}
+ .header-balances{gap:8px 12px;font-size:11px}
+ .header-balances img{width:17px;height:17px}
+ .sidebarfoot{display:block;padding:20px 6px 10px;color:#bfa677;font-size:10px;line-height:1.8}
+ #toggle-sidebar.btn{left:calc(min(280px,85vw) - 28px)}
+ .sidebar-hidden #toggle-sidebar.btn{left:0}
+}

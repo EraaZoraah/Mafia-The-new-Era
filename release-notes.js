@@ -1,5 +1,6 @@
 // Historical 0.1.x milestone versions were assigned retrospectively. Keep published versions immutable.
 export const releaseNotes=[
+{"id": "2026-10-21-release-1.22.3", "announce": false, "date": "2026-10-21", "title": "A more polished underworld", "items": ["Compact mobile account controls, an edge menu tab and full-bleed app icons."]},
 {"id": "2026-10-21-release-1.22.2", "announce": false, "date": "2026-10-21", "title": "A more polished underworld", "items": ["Darker panels with a subtle Bordeaux background glow."]},
 {"id": "2026-10-21-release-1.22.1", "announce": false, "date": "2026-10-21", "title": "A more polished underworld", "items": ["Darker panels with a subtle Bordeaux background glow."]},
 {"id": "2026-10-21-release-1.22.0", "announce": false, "date": "2026-10-21", "title": "A more polished underworld", "items": ["Premium panels, clearer collection cards and refined typography.", "Faster artwork loading and steadier scrolling during page actions."]},
