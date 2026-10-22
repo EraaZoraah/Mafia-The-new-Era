@@ -1,4 +1,9 @@
 export const octoberDutch={
+"Back in the city":"Terug in de stad",
+"Fixed a loading-screen issue after the latest update. Responsive amounts and crypto Sell maximum remain available.":"Een probleem met het laadscherm na de laatste update is verholpen. Passende bedragen en Verkoop maximaal bij crypto blijven beschikbaar.",
+"New features · Back in the city":"Nieuwe functies · Terug in de stad",
+"Mafia: The new Era © · v1.25.3":"Mafia: The new Era © · v1.25.3",
+
 "New features · Clear numbers at every size":"Nieuwe functies · Duidelijke cijfers op elk scherm",
 
 "Sell maximum · {v29}":"Verkoop maximaal · {v29}",

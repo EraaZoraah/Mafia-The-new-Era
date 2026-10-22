@@ -1,5 +1,10 @@
 // Static spanish game resources. Player-authored content is never translated.
 export const spanish=Object.freeze({
+"Back in the city":"De vuelta en la ciudad",
+"Fixed a loading-screen issue after the latest update. Responsive amounts and crypto Sell maximum remain available.":"Corregido un problema con la pantalla de carga tras la última actualización. Los importes adaptables y Vender el máximo de criptomonedas siguen disponibles.",
+"New features · Back in the city":"Nuevas funciones · De vuelta en la ciudad",
+"Mafia: The new Era © · v1.25.3":"Mafia: The new Era © · v1.25.3",
+
 "New features · Clear numbers at every size":"Nuevas funciones · Cifras claras en cualquier pantalla",
 
 "Sell maximum · {v29}":"Vender el máximo · {v29}",

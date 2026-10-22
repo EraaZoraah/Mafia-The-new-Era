@@ -24,3 +24,5 @@
 - Personal passive cash uses income_cycles as the authoritative 24-active-hour collection budget. Keep businesses, employees, dashboard clock and Luca advice aligned. Custody pauses it; full collection resets it; preserve saved income on migration and partial/full-wallet collection.
 
 - Release announcements: the 1.24.0 catch-up dispatch summarizes earlier updates. Each future user-visible release must include one new translated releaseNotes entry with announce:true; preserve the idempotent release_announcements ledger. Exclude private staff capabilities and detailed cash/XP balance changes from public announcements.
+
+- Frontend startup verification must use the actual server.js HTTP allowlist, not only a permissive preview server. Keep the recursive browser import test in test/baseline.test.js passing when adding public modules; verify HTTP 200 and JavaScript MIME type for the entire app.js/pwa.js import graph.

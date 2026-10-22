@@ -60,6 +60,24 @@ test('isolated prototype baseline', { timeout: 90000 }, async t => {
       assert.equal((await api('health')).status, 200);
       assert.equal((await api('me')).status, 401);
     });
+    await t.test('every frontend module import is served by the production HTTP allowlist',async()=>{
+      const pending=['/app.js','/pwa.js'],seen=new Set();
+      while(pending.length){
+        const file=pending.pop();if(seen.has(file))continue;seen.add(file);
+        const response=await fetch(base+file);
+        assert.equal(response.status,200,'Missing browser module: '+file);
+        assert.match(response.headers.get('content-type')||'',/javascript/,'Incorrect module MIME type: '+file);
+        const source=await response.text();
+        const imports=[...source.matchAll(/\b(?:import|export)\s+(?:[^'";]*?\sfrom\s*)?['"]([^'"]+)['"]/g),...source.matchAll(/\bimport\s*\(\s*['"]([^'"]+)['"]/g)];
+        for(const [,specifier] of imports){
+          assert.ok(specifier.startsWith('.')||specifier.startsWith('/'),'Unexpected external browser import: '+specifier);
+          pending.push(new URL(specifier,base+file).pathname);
+        }
+      }
+      assert.ok(seen.has('/stat-fitting.js'),'The numeric tile module must be checked');
+      assert.ok(seen.size>30,'The full frontend dependency graph must be traversed');
+      assert.equal((await fetch(base+'/server.js')).status,404,'Server source must remain private');
+    });
     await t.test('registration ignores submitted owner role and enforces uniqueness', async () => {
       alice = await api('register', { username: 'Alice', email: 'alice@example.test', password, role: 'owner' });
       bob = await api('register', { username: 'Bob', email: 'bob@example.test', password });

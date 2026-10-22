@@ -1,5 +1,10 @@
 // Static german game resources. Player-authored content is never translated.
 export const german=Object.freeze({
+"Back in the city":"Zurück in der Stadt",
+"Fixed a loading-screen issue after the latest update. Responsive amounts and crypto Sell maximum remain available.":"Ein Problem mit dem Ladebildschirm nach dem letzten Update wurde behoben. Angepasste Beträge und Maximum verkaufen für Kryptowährungen bleiben verfügbar.",
+"New features · Back in the city":"Neue Funktionen · Zurück in der Stadt",
+"Mafia: The new Era © · v1.25.3":"Mafia: The new Era © · v1.25.3",
+
 "New features · Clear numbers at every size":"Neue Funktionen · Klare Zahlen auf jedem Bildschirm",
 
 "Sell maximum · {v29}":"Maximum verkaufen · {v29}",
