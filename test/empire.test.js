@@ -103,8 +103,8 @@ test('investment quotes fluctuate over time, stay stable on refresh, and longer 
 });
 
 test('personal investments lock principal, enforce the aggregate billion limit, and claim principal plus integer interest once',t=>{
- const f=fixture(t);f.run('UPDATE users SET cash=200000000000 WHERE id=1');const quote=f.call('investments').body.accounts[0].quotes[0],before=f.q('SELECT cash FROM users WHERE id=1').cash;
- const body={scope:'personal',amount:100000000000,hours:quote.hours,rateBps:quote.rateBps};
+ const f=fixture(t);f.run('UPDATE users SET cash=20000000000000 WHERE id=1');const quote=f.call('investments').body.accounts[0].quotes[0],before=f.q('SELECT cash FROM users WHERE id=1').cash;
+ const body={scope:'personal',amount:10000000000000,hours:quote.hours,rateBps:quote.rateBps};
  assert.equal(f.call('investments/open',{...body,rateBps:9999}).status,409);assert.equal(f.call('investments/open',{...body,hours:73}).status,400);
  const opened=f.call('investments/open',body);assert.equal(opened.status,200);assert.equal(f.q('SELECT cash FROM users WHERE id=1').cash,before-body.amount);
  assert.equal(f.call('investments/open',body).status,409);assert.equal(f.call('investments/claim',{scope:'personal',id:opened.body.id}).status,409);
@@ -113,7 +113,7 @@ test('personal investments lock principal, enforce the aggregate billion limit, 
 });
 
 test('family investments use the shared balance and allow only current Don/Capos to open and collect',t=>{
- const f=fixture(t);f.run('UPDATE families SET treasury=200000000000 WHERE id=1');const quote=f.call('investments',undefined,2).body.accounts.find(a=>a.scope==='family').quotes.at(-1),body={scope:'family',amount:100000000000,hours:72,rateBps:quote.rateBps};
+ const f=fixture(t);f.run('UPDATE families SET treasury=20000000000000 WHERE id=1');const quote=f.call('investments',undefined,2).body.accounts.find(a=>a.scope==='family').quotes.at(-1),body={scope:'family',amount:10000000000000,hours:72,rateBps:quote.rateBps};
  assert.equal(f.call('investments/open',body,2).status,403);f.call('family/role',{userId:2,role:'capo'});const before=f.q('SELECT treasury FROM families WHERE id=1').treasury;
  const opened=f.call('investments/open',body,2);assert.equal(opened.status,200);assert.equal(f.q('SELECT treasury FROM families WHERE id=1').treasury,before-body.amount);
  assert.equal(f.call('investments/open',{...body,amount:1}).status,409);f.advance(72*3600000);f.call('family/role',{userId:2,role:'member'});assert.equal(f.call('investments/claim',{scope:'family',id:opened.body.id},2).status,403);
@@ -152,7 +152,7 @@ test('Owner family edits transfer leadership and holdings atomically and record 
  assert.equal(f.call('admin/families',undefined,2).status,403);
 });
 test('Owner investment editing obeys account boundaries and caps without silently moving funds',t=>{
- const f=fixture(t),changes={principal:100000000000,rateBps:800,openedAt:f.time(),maturesAt:f.time()+72*3600000,claimed:0},cash=f.q('SELECT cash FROM users WHERE id=2').cash;
+ const f=fixture(t),changes={principal:10000000000000,rateBps:800,openedAt:f.time(),maturesAt:f.time()+72*3600000,claimed:0},cash=f.q('SELECT cash FROM users WHERE id=2').cash;
  assert.equal(f.call('admin/investment',{scope:'personal',targetId:2,operation:'save',changes},2).status,403);
  assert.equal(f.call('admin/investment',{scope:'personal',targetId:2,operation:'save',changes}).status,200);assert.equal(f.q('SELECT cash FROM users WHERE id=2').cash,cash);
  const id=f.call('admin/investments?scope=personal&id=2').body.investments[0].id;

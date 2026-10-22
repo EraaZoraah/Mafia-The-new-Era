@@ -33,7 +33,7 @@ export const guideTopics=[
 
  ['crypto','Crypto exchange',/crypto|coin|wallet/,'Trade fictional coins on Crypto exchange under Finances. Quotes update every five minutes. Buy MAX respects cash and the $10 trillion purchase basis limit per coin. A 1% spread applies on each side.'],
 
- ['investments','Investments',/invest|beleg|rente/,'Invest personal or family funds for up to 72 hours, with up to $100 billion active principal and at most 8% total quoted return. Only Don and Capo manage family investments.'],
+ ['investments','Investments',/invest|beleg|rente/,'Invest personal or family funds for up to 72 hours, with up to $10,000,000,000,000 active principal and at most 8% total quoted return. Only Don and Capo manage family investments.'],
 
  ['missions','Crimes',/crime|misdaad|misdaden|overval|earn|verdien/,'Crimes need energy, ammunition and the listed weapon tier. Your rank improves rewards and success. A Big Score has a 5% chance and triples the successful cash and XP reward.'],
 
@@ -43,7 +43,7 @@ export const guideTopics=[
 
  ['employees','Employees',/employee|werknemer|staff income/,'Employee limits and specialties vary: some earn cash, some add Power, and your Personal Chauffeur earns respect. Income pauses in prison/hospital and stops after 24 active earning hours until all saved personal income is claimed.'],
 
- ['bank','Bank',/bank/,'The bank handles deposits and withdrawals. Crypto exchange and Investments have their own pages under Finances. Coins change price every five minutes; buy and sell quotes include a 1% spread on each side. Investments lock at a quoted return for up to 72 hours, with a $100 billion principal cap.'],
+ ['bank','Bank',/bank/,'The bank handles deposits and withdrawals. Crypto exchange and Investments have their own pages under Finances. Coins change price every five minutes; buy and sell quotes include a 1% spread on each side. Investments lock at a quoted return for up to 72 hours, with a $10,000,000,000,000 principal cap.'],
 
  ['business','Businesses',/business|bedrijf|bedrijven|passi/,'Businesses pay passive income. Buy up to ten per type; extra copies cost more. The displayed hourly income includes your current bonuses. Previously earned income is kept when detained; new income stops during detention. Personal passive cash stops after 24 active earning hours until saved income is claimed.'],
 

@@ -2,7 +2,7 @@ import {summarizeTrade} from './trade-summary.js';
 export const investmentTerms=[
  {hours:6,minBps:80,maxBps:140},{hours:12,minBps:150,maxBps:240},{hours:24,minBps:280,maxBps:400},{hours:48,minBps:450,maxBps:600},{hours:72,minBps:650,maxBps:800},
 ];
-export const investmentLimit=100000000000;
+export const investmentLimit=10000000000000;
 const respectThresholds=[0n,100000n,1000000n,10000000n,100000000n,1000000000n,10000000000n];
 const respectNames=['New blood','Contributor','Trusted earner','Family benefactor','Inner circle','Pillar of the family','Legacy patron'];
 export function respect(total='0'){
@@ -18,11 +18,12 @@ export function installInvestments(db,{supporterBonus=()=>1,transaction,settleRa
   CREATE INDEX IF NOT EXISTS investments_family ON investments(family_id,claimed);
   CREATE TABLE IF NOT EXISTS investment_quotes(scope TEXT NOT NULL CHECK(scope IN ('personal','family')),account_id INTEGER NOT NULL,hours INTEGER NOT NULL,rate_bps INTEGER NOT NULL CHECK(rate_bps BETWEEN 0 AND 800),expires_at INTEGER NOT NULL,PRIMARY KEY(scope,account_id,hours));`));
  // Rebuild the old CHECK constraint atomically, retaining every existing position.
- if(!q("SELECT sql FROM sqlite_master WHERE name='investments'").sql.includes('100000000000'))transaction(()=>db.exec(`
-  CREATE TABLE investments_v2(id INTEGER PRIMARY KEY,user_id INTEGER REFERENCES users(id),family_id INTEGER REFERENCES families(id),principal INTEGER NOT NULL CHECK(principal BETWEEN 1 AND 100000000000),rate_bps INTEGER NOT NULL CHECK(rate_bps BETWEEN 0 AND 800),opened_at INTEGER NOT NULL,matures_at INTEGER NOT NULL,claimed INTEGER NOT NULL DEFAULT 0 CHECK(claimed IN (0,1)),CHECK((user_id IS NULL)!=(family_id IS NULL)));
-  INSERT INTO investments_v2 SELECT * FROM investments;
+ const hasInterest=all('PRAGMA table_info(investments)').some(c=>c.name==='earned_interest');
+ if(!/principal BETWEEN 1 AND 10000000000000\b/.test(q("SELECT sql FROM sqlite_master WHERE name='investments'").sql))transaction(()=>db.exec(`
+  CREATE TABLE investments_v3(id INTEGER PRIMARY KEY,user_id INTEGER REFERENCES users(id),family_id INTEGER REFERENCES families(id),principal INTEGER NOT NULL CHECK(principal BETWEEN 1 AND ${investmentLimit}),rate_bps INTEGER NOT NULL CHECK(rate_bps BETWEEN 0 AND 800),opened_at INTEGER NOT NULL,matures_at INTEGER NOT NULL,claimed INTEGER NOT NULL DEFAULT 0 CHECK(claimed IN (0,1)),earned_interest INTEGER,CHECK((user_id IS NULL)!=(family_id IS NULL)));
+  INSERT INTO investments_v3(id,user_id,family_id,principal,rate_bps,opened_at,matures_at,claimed,earned_interest) SELECT id,user_id,family_id,principal,rate_bps,opened_at,matures_at,claimed,${hasInterest?'earned_interest':'NULL'} FROM investments;
   DROP TABLE investments;
-  ALTER TABLE investments_v2 RENAME TO investments;
+  ALTER TABLE investments_v3 RENAME TO investments;
   CREATE INDEX investments_personal ON investments(user_id,claimed);
   CREATE INDEX investments_family ON investments(family_id,claimed);
  `));
@@ -57,7 +58,7 @@ export function installInvestments(db,{supporterBonus=()=>1,transaction,settleRa
    settleRaw(user.id);
    if(path==='/api/investments/open'){
     if(!Number.isSafeInteger(body.amount)||body.amount<1||body.amount>investmentLimit||!investmentTerms.some(t=>t.hours===body.hours))fail('Choose a valid amount and a supported term of up to 72 hours.');
-    const active=investments(a).reduce((n,x)=>n+x.principal,0);if(active+body.amount>investmentLimit)fail('Active investments are limited to $100 billion per account.',409);
+    const active=investments(a).reduce((n,x)=>n+x.principal,0);if(active+body.amount>investmentLimit)fail('Active investments are limited to $10,000,000,000,000 per account.',409);
     const quote=q('SELECT * FROM investment_quotes WHERE scope=? AND account_id=? AND hours=?',a.scope,a.id,body.hours);
     if(!quote||quote.expires_at<=clock()||body.rateBps!==quote.rate_bps)fail('Your quote expired or changed. Refresh investment rates before opening.',409);
     if(!run('UPDATE '+table+' SET '+field+'='+field+'-? WHERE id=? AND '+field+'>=?',body.amount,a.id,body.amount).changes)fail('Insufficient available funds.');

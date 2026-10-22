@@ -54,8 +54,8 @@ test('territory changes preserve aggregate assets and enforce ownership',t=>{
  assert.equal(f.q('SELECT owner_id FROM city_territories WHERE id=?',plot.id).owner_id,null);
  assert.equal(f.q('SELECT quantity FROM family_assets WHERE family_id=1 AND item_id=?',plot.item_id),undefined);
 });
-test('investment administration supports the real $100 billion cap',t=>{
- const f=fixture(t),changes={principal:100000000000,rateBps:800,openedAt:f.time(),maturesAt:f.time()+72*3600000,claimed:0};
+test('investment administration supports the real $10 trillion cap',t=>{
+ const f=fixture(t),changes={principal:10000000000000,rateBps:800,openedAt:f.time(),maturesAt:f.time()+72*3600000,claimed:0};
  assert.equal(f.call('admin/investment',{scope:'personal',targetId:2,operation:'save',changes}).status,200);
  assert.equal(f.call('admin/investment',{scope:'personal',targetId:2,operation:'save',changes:{...changes,principal:1}}).status,409);
 });

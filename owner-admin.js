@@ -64,7 +64,7 @@ export function installOwnerAdmin(db,{transaction,log,syncTerritory=()=>{},clock
    }else{
     if(body.operation!=='save')fail('Unknown investment operation.');const c=body.changes;
     if(!c||!integer(c.principal,investmentLimit)||c.principal<1||!integer(c.rateBps,800)||!integer(c.openedAt,8640000000000000)||!integer(c.maturesAt,8640000000000000)||c.maturesAt<c.openedAt||c.maturesAt-c.openedAt>72*3600000||![0,1].includes(c.claimed))fail('Invalid investment: positive principal, rate 0–8%, term up to 72 hours and valid claim state required.');
-    const active=q('SELECT COALESCE(SUM(principal),0) n FROM investments WHERE '+column+'=? AND claimed=0 AND id<>?',body.targetId,before?.id||0).n;if(!c.claimed&&active+c.principal>investmentLimit)fail('Active principal would exceed $100 billion.',409);
+    const active=q('SELECT COALESCE(SUM(principal),0) n FROM investments WHERE '+column+'=? AND claimed=0 AND id<>?',body.targetId,before?.id||0).n;if(!c.claimed&&active+c.principal>investmentLimit)fail('Active principal would exceed $10,000,000,000,000.',409);
     let id=before?.id;
     if(id)run('UPDATE investments SET principal=?,rate_bps=?,opened_at=?,matures_at=?,claimed=? WHERE id=?',c.principal,c.rateBps,c.openedAt,c.maturesAt,c.claimed,id);
     else id=Number(run('INSERT INTO investments('+column+',principal,rate_bps,opened_at,matures_at,claimed) VALUES(?,?,?,?,?,?)',body.targetId,c.principal,c.rateBps,c.openedAt,c.maturesAt,c.claimed).lastInsertRowid);

@@ -18,12 +18,12 @@ test('billion-runner storage migration retains existing crew and fractional inco
  assert.equal(result.body.cost,99999999900000);
  assert.equal(f.call('employees/hire',{item:'runner',quantity:1,key:randomUUID()}).status,400);
 });
-test('investments accept 100 billion, preserve old positions and enforce aggregate cap',t=>{
- const f=fixture(t);f.run('UPDATE users SET cash=200000000000 WHERE id=1');
+test('investments accept 10 trillion, preserve old positions and enforce aggregate cap',t=>{
+ const f=fixture(t);f.run('UPDATE users SET cash=20000000000000 WHERE id=1');
  const q=f.call('investments').body.accounts[0].quotes[0];
- const result=f.call('investments/open',{scope:'personal',amount:100000000000,hours:q.hours,rateBps:q.rateBps});assert.equal(result.status,200);
+ const result=f.call('investments/open',{scope:'personal',amount:10000000000000,hours:q.hours,rateBps:q.rateBps});assert.equal(result.status,200);
  assert.equal(f.call('investments/open',{scope:'personal',amount:1,hours:q.hours,rateBps:q.rateBps}).status,409);
- f.reset();assert.equal(f.call('investments').body.accounts[0].activePrincipal,100000000000);
+ f.reset();assert.equal(f.call('investments').body.accounts[0].activePrincipal,10000000000000);
  f.advance(q.hours*3600000);assert.equal(f.call('investments/claim',{scope:'personal',id:result.body.id}).status,200);
  assert.equal(f.call('investments/claim',{scope:'personal',id:result.body.id}).status,409);
 });

@@ -1,3 +1,4 @@
+import {investmentLimit} from './investments.js';
 import {musclePackages} from './empire-catalog.js';
 
 // Every personality can choose every domain. Preferences affect frequency, never permission.
@@ -118,7 +119,7 @@ export function autonomousMove(c,domain){
  case 'investments':{
   const accounts=get('investments')?.accounts.filter(a=>a.canManage)||[];
   for(const a of accounts){const p=a.positions.find(p=>p.matures_at<=now);if(p)return send('investments/claim',{scope:a.scope,id:p.id});}
-  const limit=get('investments')?.limit||100000000000;const a=pick(accounts.filter(a=>a.available>1e6&&a.activePrincipal<limit)),quote=pick(a?.quotes||[]);
+  const limit=get('investments')?.limit||investmentLimit;const a=pick(accounts.filter(a=>a.available>1e6&&a.activePrincipal<limit)),quote=pick(a?.quotes||[]);
   return a&&quote?send('investments/open',{scope:a.scope,amount:Math.min(limit-a.activePrincipal,Math.floor(a.available*.05)),hours:quote.hours,rateBps:quote.rateBps}):false;
  }
  case 'freight':{

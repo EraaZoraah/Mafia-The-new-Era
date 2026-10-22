@@ -400,16 +400,16 @@ test('isolated prototype baseline', { timeout: 90000 }, async t => {
     await t.test('investment and mystery endpoints resist duplicate requests over HTTP',async()=>{
       const id=alice.body.user.id;
       db.prepare('DELETE FROM police_bribes WHERE user_id=?').run(id);db.prepare('DELETE FROM custody WHERE user_id=?').run(id);
-      db.prepare('UPDATE users SET cash=300000000000,energy=0,energy_at=?,health=100,hospital_until=0,captured_until=0,mystery_next_at=? WHERE id=?').run(Date.now(),Date.now()-1,id);
+      db.prepare('UPDATE users SET cash=30000000000000,energy=0,energy_at=?,health=100,hospital_until=0,captured_until=0,mystery_next_at=? WHERE id=?').run(Date.now(),Date.now()-1,id);
       db.prepare('UPDATE possessions SET income_at=? WHERE user_id=?').run(Date.now(),id);
       assert.equal((await api('investments')).status,401);
       const rates=(await api('investments',undefined,alice.cookie)).body.accounts.find(a=>a.scope==='personal');
-      const quote=rates.quotes[0],body={scope:'personal',amount:60000000000,hours:6,rateBps:quote.rateBps};
+      const quote=rates.quotes[0],body={scope:'personal',amount:6000000000000,hours:6,rateBps:quote.rateBps};
       const opens=await Promise.all([api('investments/open',body,alice.cookie),api('investments/open',body,alice.cookie)]);
-      assert.deepEqual(opens.map(x=>x.status).sort(),[200,409]);assert.equal((await api('me',undefined,alice.cookie)).body.user.cash,240000000000);
+      assert.deepEqual(opens.map(x=>x.status).sort(),[200,409]);assert.equal((await api('me',undefined,alice.cookie)).body.user.cash,24000000000000);
       const position=opens.find(x=>x.status===200).body.id;db.prepare('UPDATE investments SET matures_at=? WHERE id=?').run(Date.now()-1,position);
       const claims=await Promise.all([api('investments/claim',{scope:'personal',id:position},alice.cookie),api('investments/claim',{scope:'personal',id:position},alice.cookie)]);
-      assert.deepEqual(claims.map(x=>x.status).sort(),[200,409]);assert.equal((await api('me',undefined,alice.cookie)).body.user.cash,300000000000+Math.floor(60000000000*quote.rateBps/10000));
+      assert.deepEqual(claims.map(x=>x.status).sort(),[200,409]);assert.equal((await api('me',undefined,alice.cookie)).body.user.cash,30000000000000+Math.floor(6000000000000*quote.rateBps/10000));
       assert.equal((await api('family/buy',{id:'safehouse-starter'},owner.cookie)).status,403);
       const offer=(await api('mystery',undefined,alice.cookie)).body.offer;assert.ok(offer);
       const results=await Promise.all([api('mystery/resolve',{id:offer.id,choice:'accept'},alice.cookie),api('mystery/resolve',{id:offer.id,choice:'accept'},alice.cookie)]);

@@ -25,14 +25,14 @@
     "files": [
       "freight-ui.js"
     ],
-    "translated": false
+    "translated": true
   },
   {
     "key": " · Highest profit",
     "files": [
       "freight-ui.js"
     ],
-    "translated": false
+    "translated": true
   },
   {
     "key": " · Income paused during detention",
@@ -728,14 +728,14 @@
     "files": [
       "freight-ui.js"
     ],
-    "translated": false
+    "translated": true
   },
   {
     "key": "{v1}{v2}{v3} · current sale quote before route costs {v4}",
     "files": [
       "freight-ui.js"
     ],
-    "translated": false
+    "translated": true
   },
   {
     "key": "{v10} {v11} · +{v12} XP · {v13}% {v14} · {v15}h {v16}",
@@ -1945,7 +1945,7 @@
     "translated": true
   },
   {
-    "key": "Administrative edits do not move cash. Adjust cash or treasury separately. Active principal remains capped at $100 billion.",
+    "key": "Administrative edits do not move cash. Adjust cash or treasury separately. Active principal remains capped at $10,000,000,000,000.",
     "files": [
       "owner-ui.js"
     ],
@@ -2895,7 +2895,7 @@
     "files": [
       "expansion-ui.js"
     ],
-    "translated": false
+    "translated": true
   },
   {
     "key": "Buy 30 minutes of protection from player operations for $50,000.",
@@ -2953,7 +2953,7 @@
     "files": [
       "expansion-ui.js"
     ],
-    "translated": false
+    "translated": true
   },
   {
     "key": "Buy maximum · {v8}",
@@ -3977,7 +3977,7 @@
     "translated": true
   },
   {
-    "key": "Current quotes expire {v14}. The rate shown is the entire term’s return, not an annual rate. Personal interest excludes prison/hospital hours; principal is preserved.",
+    "key": "Current quotes expire {v15}. The rate shown is the entire term’s return, not an annual rate. Personal interest excludes prison/hospital hours; principal is preserved.",
     "files": [
       "investment-ui.js"
     ],
@@ -5291,7 +5291,7 @@
     "files": [
       "expansion-ui.js"
     ],
-    "translated": false
+    "translated": true
   },
   {
     "key": "Game rules",
@@ -5866,7 +5866,7 @@
     "translated": true
   },
   {
-    "key": "Invest MAX · {v12}",
+    "key": "Invest maximum · {v13}",
     "files": [
       "investment-ui.js"
     ],
@@ -6372,7 +6372,7 @@
     "files": [
       "logistics-ui.js"
     ],
-    "translated": false
+    "translated": true
   },
   {
     "key": "Lock funds at the quoted rate",
@@ -6494,11 +6494,11 @@
     "translated": true
   },
   {
-    "key": "Mafia: The new Era © · v1.25.0",
+    "key": "Mafia: The new Era © · v1.25.1",
     "files": [
       "app.js"
     ],
-    "translated": false
+    "translated": true
   },
   {
     "key": "Mafia: The New Era is een online multiplayerspel. Maak opnieuw verbinding om door te spelen; offline worden geen acties verstuurd.",
@@ -10112,7 +10112,7 @@
     "files": [
       "expansion-ui.js"
     ],
-    "translated": false
+    "translated": true
   },
   {
     "key": "Sell & replace a stored car",
@@ -10862,7 +10862,7 @@
     "translated": true
   },
   {
-    "key": "The $100 billion limit covers all active principal per account, including matured positions awaiting collection. Personal and family limits are separate. Rates are quoted for 15 minutes and fixed when you invest. There is no early withdrawal.",
+    "key": "The $10,000,000,000,000 limit covers all active principal per account, including matured positions awaiting collection. Personal and family limits are separate. Rates are quoted for 15 minutes and fixed when you invest. There is no early withdrawal.",
     "files": [
       "investment-ui.js"
     ],
