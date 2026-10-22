@@ -203,3 +203,5 @@ html::-webkit-scrollbar,body::-webkit-scrollbar,.sidebar::-webkit-scrollbar{disp
 .coin-price{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:baseline;gap:8px}.coin-price-value{min-width:0}
 
 .coin-position dl>div{min-width:0}.coin-position dd .coin-position-value{font:inherit;color:inherit}
+
+button.sale-choice-card{display:block;width:100%;text-align:left;font:inherit;color:inherit;cursor:pointer;border:1px solid #b69b6555;white-space:normal}button.sale-choice-card.selected-sale-choice{border-color:#e3c68b;box-shadow:inset 0 0 0 1px #d7b97966;background:linear-gradient(130deg,#d6ba7326,#101920)}button.sale-choice-card:focus-visible{outline:2px solid #ead2a1;outline-offset:3px}

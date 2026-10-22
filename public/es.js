@@ -1,5 +1,17 @@
 // Static spanish game resources. Player-authored content is never translated.
 export const spanish=Object.freeze({
+"Set timer to 0":"Poner temporizador a 0",
+"Choose an unclaimed investment.":"Elige una inversión sin cobrar.",
+"Sell best choice":"Vender mejor opción",
+"Sell highest profit":"Vender mayor beneficio",
+"Choosing a drug market":"Elegir un mercado de drogas",
+"Destination demand rotates hourly and separately for each drug, so Dubai is not a permanent best market. Select Best choice or Highest profit on a ready batch; the selected tile is highlighted and the action uses that destination and transport. A foreign choice dispatches cargo; sell after arrival.":"La demanda del destino rota cada hora y por droga, así que Dubái no es siempre el mejor mercado. Selecciona Mejor opción o Mayor beneficio en un lote listo; la tarjeta se resalta y la acción usa ese destino y transporte. Una opción extranjera envía la carga; vende tras llegar.",
+"Choose your next market":"Elige tu próximo mercado",
+"Select Best choice or Highest profit on a ready drug batch; the action follows your highlighted destination and transport.":"Selecciona Mejor opción o Mayor beneficio en un lote listo; la acción usa el destino y transporte resaltados.",
+"Hourly demand now shifts separately for each drug across cities, creating more varied local and international trading opportunities.":"La demanda cambia cada hora y por droga entre ciudades, con oportunidades locales e internacionales más variadas.",
+"Mafia: The new Era © · v1.25.4":"Mafia: The new Era © · v1.25.4",
+"New features · Choose your next market":"Nuevas funciones · Elige tu próximo mercado",
+
 "Back in the city":"De vuelta en la ciudad",
 "Fixed a loading-screen issue after the latest update. Responsive amounts and crypto Sell maximum remain available.":"Corregido un problema con la pantalla de carga tras la última actualización. Los importes adaptables y Vender el máximo de criptomonedas siguen disponibles.",
 "New features · Back in the city":"Nuevas funciones · De vuelta en la ciudad",

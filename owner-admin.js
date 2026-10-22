@@ -59,7 +59,11 @@ export function installOwnerAdmin(db,{transaction,log,syncTerritory=()=>{},clock
    const before=body.id?q('SELECT * FROM investments WHERE id=? AND '+column+'=?',body.id,body.targetId):null;
    if(body.id&&!before)fail('Investment not found.',404);
    let after=null;
-   if(body.operation==='delete'){
+   if(body.operation==='mature'){
+    if(!before||before.claimed)fail('Choose an unclaimed investment.',409);
+    const now=clock();if(before.matures_at>now)run('UPDATE investments SET opened_at=MIN(opened_at,?),matures_at=? WHERE id=?',now,now,before.id);
+    after=q('SELECT * FROM investments WHERE id=?',before.id);
+   }else if(body.operation==='delete'){
     if(!before)fail('Choose an existing investment.');run('DELETE FROM investments WHERE id=?',before.id);
    }else{
     if(body.operation!=='save')fail('Unknown investment operation.');const c=body.changes;

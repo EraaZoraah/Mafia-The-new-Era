@@ -1,5 +1,17 @@
 // Static german game resources. Player-authored content is never translated.
 export const german=Object.freeze({
+"Set timer to 0":"Timer auf 0 setzen",
+"Choose an unclaimed investment.":"Wähle eine noch nicht abgeholte Investition.",
+"Sell best choice":"Beste Wahl verkaufen",
+"Sell highest profit":"Höchsten Gewinn verkaufen",
+"Choosing a drug market":"Einen Drogenmarkt wählen",
+"Destination demand rotates hourly and separately for each drug, so Dubai is not a permanent best market. Select Best choice or Highest profit on a ready batch; the selected tile is highlighted and the action uses that destination and transport. A foreign choice dispatches cargo; sell after arrival.":"Die Nachfrage am Ziel wechselt stündlich und für jede Droge getrennt. Dubai ist daher nicht dauerhaft der beste Markt. Wähle Beste Wahl oder Höchster Gewinn bei einer fertigen Charge; die gewählte Kachel wird markiert und die Aktion verwendet dieses Ziel und Transportmittel. Ein ausländisches Ziel versendet die Fracht; verkaufe nach der Ankunft.",
+"Choose your next market":"Wähle deinen nächsten Markt",
+"Select Best choice or Highest profit on a ready drug batch; the action follows your highlighted destination and transport.":"Wähle Beste Wahl oder Höchster Gewinn bei einer fertigen Charge; die Aktion folgt dem markierten Ziel und Transportmittel.",
+"Hourly demand now shifts separately for each drug across cities, creating more varied local and international trading opportunities.":"Die Nachfrage verschiebt sich stündlich und je Droge zwischen Städten, für abwechslungsreicheren lokalen und internationalen Handel.",
+"Mafia: The new Era © · v1.25.4":"Mafia: The new Era © · v1.25.4",
+"New features · Choose your next market":"Neue Funktionen · Wähle deinen nächsten Markt",
+
 "Back in the city":"Zurück in der Stadt",
 "Fixed a loading-screen issue after the latest update. Responsive amounts and crypto Sell maximum remain available.":"Ein Problem mit dem Ladebildschirm nach dem letzten Update wurde behoben. Angepasste Beträge und Maximum verkaufen für Kryptowährungen bleiben verfügbar.",
 "New features · Back in the city":"Neue Funktionen · Zurück in der Stadt",

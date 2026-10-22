@@ -1,4 +1,16 @@
 export const octoberDutch={
+"Set timer to 0":"Timer op 0 zetten",
+"Choose an unclaimed investment.":"Kies een nog niet geïnde investering.",
+"Sell best choice":"Verkoop beste keuze",
+"Sell highest profit":"Verkoop hoogste winst",
+"Choosing a drug market":"Een drugsmarkt kiezen",
+"Destination demand rotates hourly and separately for each drug, so Dubai is not a permanent best market. Select Best choice or Highest profit on a ready batch; the selected tile is highlighted and the action uses that destination and transport. A foreign choice dispatches cargo; sell after arrival.":"De vraag op de bestemming wisselt elk uur en per drug. Dubai is dus niet blijvend de beste markt. Selecteer Beste keuze of Hoogste winst bij een gereedstaande batch; de geselecteerde tegel licht op en de actie gebruikt die bestemming en dat vervoer. Een buitenlandse keuze verstuurt de lading; verkoop na aankomst.",
+"Choose your next market":"Kies je volgende markt",
+"Select Best choice or Highest profit on a ready drug batch; the action follows your highlighted destination and transport.":"Selecteer Beste keuze of Hoogste winst bij een gereedstaande drugsbatch; de actie volgt je gemarkeerde bestemming en vervoer.",
+"Hourly demand now shifts separately for each drug across cities, creating more varied local and international trading opportunities.":"De vraag verschuift elk uur per drug tussen steden, voor afwisselender lokale en internationale handel.",
+"Mafia: The new Era © · v1.25.4":"Mafia: The new Era © · v1.25.4",
+"New features · Choose your next market":"Nieuwe functies · Kies je volgende markt",
+
 "Back in the city":"Terug in de stad",
 "Fixed a loading-screen issue after the latest update. Responsive amounts and crypto Sell maximum remain available.":"Een probleem met het laadscherm na de laatste update is verholpen. Passende bedragen en Verkoop maximaal bij crypto blijven beschikbaar.",
 "New features · Back in the city":"Nieuwe functies · Terug in de stad",

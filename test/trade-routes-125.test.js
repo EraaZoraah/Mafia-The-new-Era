@@ -32,6 +32,7 @@ test('all new drug routes are shorter and have at most 15 percent interception',
 test('international sale recommendations use real batch quotes and shipping debits once',t=>{
  const f=fixture(t);ready(f);const start=f.call('production/start',{scope:'personal',product:'cannabis',hours:24,units:100,requestKey:'route-foreign-start-001'});assert.equal(start.status,200);f.advance(24*3600000);
  let foreign=0;for(let i=0;i<24;i++){const b=f.call('production').body.batches[0];if(b.saleChoices.best.mode!=='local')foreign++;f.advance(3600000);}assert.ok(foreign>0);
+ for(let wait=0;wait<30&&f.call('production').body.batches[0].saleChoices.best.mode==='local';wait++)f.advance(3600000);
  const d=f.call('production').body,b=d.batches[0],r=b.saleChoices.best;assert.notEqual(r.city,b.stock_city);assert.ok(r.netProfit>b.netProfit);const body={scope:'personal',id:b.id,city:r.city,mode:r.mode,quoteEpoch:d.quoteEpoch,requestKey:'route-foreign-dispatch-001'},cash=f.q('SELECT cash FROM users WHERE id=1').cash;
  const ship=f.call('production/ship',body);assert.equal(ship.status,200);assert.equal(f.call('production/ship',body).status,200);assert.equal(f.q('SELECT cash FROM users WHERE id=1').cash,cash-r.cost);assert.equal(f.q('SELECT arrives_at FROM production_batches WHERE id=?',b.id).arrives_at,f.time()+r.hours*3600000);
  assert.equal(f.call('production/sell',{scope:'personal',id:b.id,requestKey:'route-no-transit-sale-001'}).status,409);

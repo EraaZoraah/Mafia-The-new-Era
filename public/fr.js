@@ -1,5 +1,17 @@
 // Static french game resources. Player-authored content is never translated.
 export const french=Object.freeze({
+"Set timer to 0":"Mettre le délai à 0",
+"Choose an unclaimed investment.":"Choisissez un investissement non encaissé.",
+"Sell best choice":"Vendre meilleur choix",
+"Sell highest profit":"Vendre profit maximal",
+"Choosing a drug market":"Choisir un marché de drogue",
+"Destination demand rotates hourly and separately for each drug, so Dubai is not a permanent best market. Select Best choice or Highest profit on a ready batch; the selected tile is highlighted and the action uses that destination and transport. A foreign choice dispatches cargo; sell after arrival.":"La demande de destination tourne chaque heure et par drogue : Dubaï n’est donc pas toujours le meilleur marché. Sélectionnez Meilleur choix ou Profit maximal sur un lot prêt ; la tuile est surlignée et l’action utilise cette destination et ce transport. Un choix étranger expédie la cargaison ; vendez après l’arrivée.",
+"Choose your next market":"Choisissez votre prochain marché",
+"Select Best choice or Highest profit on a ready drug batch; the action follows your highlighted destination and transport.":"Sélectionnez Meilleur choix ou Profit maximal sur un lot prêt ; l’action suit la destination et le transport surlignés.",
+"Hourly demand now shifts separately for each drug across cities, creating more varied local and international trading opportunities.":"La demande évolue chaque heure et par drogue entre les villes, pour varier les échanges locaux et internationaux.",
+"Mafia: The new Era © · v1.25.4":"Mafia: The new Era © · v1.25.4",
+"New features · Choose your next market":"Nouvelles fonctionnalités · Choisissez votre prochain marché",
+
 "Back in the city":"De retour en ville",
 "Fixed a loading-screen issue after the latest update. Responsive amounts and crypto Sell maximum remain available.":"Correction du blocage sur l’écran de chargement après la dernière mise à jour. Les montants adaptatifs et Vendre le maximum restent disponibles.",
 "New features · Back in the city":"Nouvelles fonctionnalités · De retour en ville",

@@ -5,6 +5,7 @@ export function drugSalesGuide(question,user,time,context){
  if(!isDrugSalesQuestion(question)||!context.drugSales)return null;
  const d=context.drugSales,dict=dictionaries[context.language]||{},t=(s,a=[])=>(dict[s]||s).replace(/\{v(\d+)\}/g,(_,i)=>String(a[i]??'')),cash=n=>'$'+Math.floor(n).toLocaleString('en-US');
  const answer=[t('Best choice and Highest profit compare sale destinations for each owned batch, including local sale. Best choice uses expected net after interception risk; Highest profit uses net if delivered. Only affordable routes qualify. Shipping starts transport; sell the batch after arrival. Quotes can change.')];
+ answer.push(t('Destination demand rotates hourly and separately for each drug, so Dubai is not a permanent best market. Select Best choice or Highest profit on a ready batch; the selected tile is highlighted and the action uses that destination and transport. A foreign choice dispatches cargo; sell after arrival.'));
  const named=d.products.find(p=>String(question).toLowerCase().includes(p.id)||String(question).toLowerCase().includes(t(p.name).toLowerCase()));
  const batches=d.batches.filter(b=>!b.remaining&&b.arrives_at<=time&&(!named||b.drug_id===named.id));
  if(!batches.length)answer.push(t('No completed stock is ready for this sale comparison.'));

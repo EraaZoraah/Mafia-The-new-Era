@@ -4139,13 +4139,6 @@
     "translated": true
   },
   {
-    "key": "Dispatch best choice",
-    "files": [
-      "logistics-ui.js"
-    ],
-    "translated": true
-  },
-  {
     "key": "Dispatch cargo",
     "files": [
       "freight-ui.js"
@@ -6494,7 +6487,7 @@
     "translated": true
   },
   {
-    "key": "Mafia: The new Era © · v1.25.3",
+    "key": "Mafia: The new Era © · v1.25.4",
     "files": [
       "app.js"
     ],
@@ -10129,9 +10122,23 @@
     "translated": true
   },
   {
+    "key": "Sell best choice",
+    "files": [
+      "logistics-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Sell for {v6}",
     "files": [
       "vehicles-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Sell highest profit",
+    "files": [
+      "logistics-ui.js"
     ],
     "translated": true
   },
@@ -10289,6 +10296,13 @@
     "key": "Set quantities within the limit shown beside each asset. Zero removes an asset; grants do not charge cash. All changes are logged.",
     "files": [
       "app.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Set timer to 0",
+    "files": [
+      "owner-ui.js"
     ],
     "translated": true
   },
