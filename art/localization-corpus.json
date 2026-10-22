@@ -21,11 +21,18 @@
     "translated": true
   },
   {
-    "key": " · Best shipping choice",
+    "key": " · Best choice",
     "files": [
       "freight-ui.js"
     ],
-    "translated": true
+    "translated": false
+  },
+  {
+    "key": " · Highest profit",
+    "files": [
+      "freight-ui.js"
+    ],
+    "translated": false
   },
   {
     "key": " · Income paused during detention",
@@ -710,25 +717,25 @@
     "translated": true
   },
   {
-    "key": "{v1}{v2} · {v3}% risk · net {v4} ({v5}%)",
-    "files": [
-      "freight-ui.js"
-    ],
-    "translated": true
-  },
-  {
-    "key": "{v1}{v2} · current sale quote before route costs {v3}",
-    "files": [
-      "freight-ui.js"
-    ],
-    "translated": true
-  },
-  {
     "key": "{v1}{v2} XP",
     "files": [
       "community-ui.js"
     ],
     "translated": true
+  },
+  {
+    "key": "{v1}{v2}{v3} · {v4}% risk · net {v5} ({v6}%)",
+    "files": [
+      "freight-ui.js"
+    ],
+    "translated": false
+  },
+  {
+    "key": "{v1}{v2}{v3} · current sale quote before route costs {v4}",
+    "files": [
+      "freight-ui.js"
+    ],
+    "translated": false
   },
   {
     "key": "{v10} {v11} · +{v12} XP · {v13}% {v14} · {v15}h {v16}",
@@ -2604,16 +2611,16 @@
     "translated": true
   },
   {
-    "key": "Best choice",
+    "key": "Best choice · Local sale",
     "files": [
-      "logistics-ui.js"
+      "freight-ui.js"
     ],
     "translated": true
   },
   {
-    "key": "Best choice · Local sale",
+    "key": "Best choice and Highest profit compare sale destinations for each owned batch, including local sale. Best choice uses expected net after interception risk; Highest profit uses net if delivered. Only affordable routes qualify. Shipping starts transport; sell the batch after arrival. Quotes can change.",
     "files": [
-      "freight-ui.js"
+      "logistics-ui.js"
     ],
     "translated": true
   },
@@ -2884,7 +2891,7 @@
     "translated": true
   },
   {
-    "key": "Buy · {v12}",
+    "key": "Buy · {v17}",
     "files": [
       "expansion-ui.js"
     ],
@@ -2935,18 +2942,18 @@
     "translated": true
   },
   {
-    "key": "Buy maximum · {v14}",
+    "key": "Buy maximum · {v18}",
     "files": [
       "expansion-ui.js"
     ],
     "translated": true
   },
   {
-    "key": "Buy maximum · {v18}",
+    "key": "Buy maximum · {v19}",
     "files": [
       "expansion-ui.js"
     ],
-    "translated": true
+    "translated": false
   },
   {
     "key": "Buy maximum · {v8}",
@@ -3458,6 +3465,20 @@
     "key": "Coins held",
     "files": [
       "crypto-chart-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Coins to buy",
+    "files": [
+      "expansion-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Coins to sell",
+    "files": [
+      "expansion-ui.js"
     ],
     "translated": true
   },
@@ -4118,6 +4139,13 @@
     "translated": true
   },
   {
+    "key": "Dispatch best choice",
+    "files": [
+      "logistics-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Dispatch cargo",
     "files": [
       "freight-ui.js"
@@ -4276,7 +4304,7 @@
     "translated": true
   },
   {
-    "key": "DRUGS CAREER LEVEL {v5}+ · MARKET {v6}%",
+    "key": "DRUGS CAREER LEVEL {v3}+ · MARKET {v4}%",
     "files": [
       "logistics-ui.js"
     ],
@@ -4646,6 +4674,13 @@
     "key": "EXPAND YOUR HEADQUARTERS",
     "files": [
       "crew-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Expected net after risk",
+    "files": [
+      "freight-ui.js"
     ],
     "translated": true
   },
@@ -5252,11 +5287,11 @@
     "translated": true
   },
   {
-    "key": "Game cash only. No real deposits or withdrawals. Whole coins, a 1% buy markup and a 1% sell discount. Maximum $100 million purchase basis per coin.",
+    "key": "Game cash only. No real deposits or withdrawals. Whole coins, a 1% buy markup and a 1% sell discount. Maximum $10 trillion purchase basis per coin.",
     "files": [
       "expansion-ui.js"
     ],
-    "translated": true
+    "translated": false
   },
   {
     "key": "Game rules",
@@ -5326,13 +5361,6 @@
     "key": "Gold",
     "files": [
       "shop-ui.js"
-    ],
-    "translated": true
-  },
-  {
-    "key": "Gold marks the best expected profit per hour. Platinum marks the highest net amount if delivered successfully, which may take longer or carry more risk. Both compare one crate at current quotes.",
-    "files": [
-      "logistics-ui.js"
     ],
     "translated": true
   },
@@ -5475,20 +5503,6 @@
     "key": "Highest combined Power first; net worth breaks ties.",
     "files": [
       "underworld-ui.js"
-    ],
-    "translated": true
-  },
-  {
-    "key": "Highest delivered net",
-    "files": [
-      "logistics-ui.js"
-    ],
-    "translated": true
-  },
-  {
-    "key": "Highest profit",
-    "files": [
-      "logistics-ui.js"
     ],
     "translated": true
   },
@@ -5819,8 +5833,7 @@
   {
     "key": "INTERCEPTION RISK",
     "files": [
-      "freight-ui.js",
-      "logistics-ui.js"
+      "freight-ui.js"
     ],
     "translated": true
   },
@@ -6355,6 +6368,13 @@
     "translated": true
   },
   {
+    "key": "Local sale",
+    "files": [
+      "logistics-ui.js"
+    ],
+    "translated": false
+  },
+  {
     "key": "Lock funds at the quoted rate",
     "files": [
       "investment-ui.js"
@@ -6474,11 +6494,11 @@
     "translated": true
   },
   {
-    "key": "Mafia: The new Era © · v1.24.0",
+    "key": "Mafia: The new Era © · v1.25.0",
     "files": [
       "app.js"
     ],
-    "translated": true
+    "translated": false
   },
   {
     "key": "Mafia: The New Era is een online multiplayerspel. Maak opnieuw verbinding om door te spelen; offline worden geen acties verstuurd.",
@@ -6973,6 +6993,13 @@
     "key": "NET CASH RESULT",
     "files": [
       "trade-summary-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Net if delivered",
+    "files": [
+      "freight-ui.js"
     ],
     "translated": true
   },
@@ -9036,13 +9063,6 @@
     "translated": true
   },
   {
-    "key": "Ranked by expected net profit per hour after costs and interception risk. Current quotes can change before sale.",
-    "files": [
-      "logistics-ui.js"
-    ],
-    "translated": true
-  },
-  {
     "key": "Ranks & rewards",
     "files": [
       "premium.js"
@@ -9839,6 +9859,13 @@
     "translated": true
   },
   {
+    "key": "Sale proceeds before bonuses",
+    "files": [
+      "expansion-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Sale value",
     "files": [
       "freight-ui.js"
@@ -10081,7 +10108,7 @@
     "translated": true
   },
   {
-    "key": "Sell · {v16}",
+    "key": "Sell · {v26}",
     "files": [
       "expansion-ui.js"
     ],
@@ -10102,16 +10129,16 @@
     "translated": true
   },
   {
-    "key": "Sell completed batch",
+    "key": "Sell for {v6}",
     "files": [
-      "logistics-ui.js"
+      "vehicles-ui.js"
     ],
     "translated": true
   },
   {
-    "key": "Sell for {v6}",
+    "key": "Sell locally",
     "files": [
-      "vehicles-ui.js"
+      "logistics-ui.js"
     ],
     "translated": true
   },
@@ -10647,13 +10674,6 @@
     "key": "Successful war raid: 1 point · sabotage or joint assault: 2 · territory capture: 3. A failed attack gives the defender 1 point. Winning a war that had battles grants 25 extra season points.",
     "files": [
       "legacy-ui.js"
-    ],
-    "translated": true
-  },
-  {
-    "key": "Suggested route",
-    "files": [
-      "logistics-ui.js"
     ],
     "translated": true
   },
@@ -11244,6 +11264,13 @@
     "translated": true
   },
   {
+    "key": "Total cost",
+    "files": [
+      "expansion-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "TOTAL DAILY REWARDS",
     "files": [
       "daily-ui.js"
@@ -11388,6 +11415,13 @@
   },
   {
     "key": "Transport",
+    "files": [
+      "freight-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Transport cost",
     "files": [
       "freight-ui.js"
     ],

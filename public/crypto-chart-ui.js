@@ -1,9 +1,10 @@
+import {coinValue} from './crypto-math.js';
 import {html,text} from './localization.js';
 
 export function openPosition(wallet,coin){
  const quantity=wallet.quantity||0,basis=wallet.basis||0;
- const marketValue=quantity*coin.price,saleValue=quantity*coin.sell;
- return {quantity,basis,average:quantity?basis/quantity:0,marketValue,saleValue,gain:saleValue-basis,margin:basis?(saleValue-basis)/basis*100:0};
+ const display=n=>n<=BigInt(Number.MAX_SAFE_INTEGER)&&n>=-BigInt(Number.MAX_SAFE_INTEGER)?Number(n):n.toString(),market=coinValue(quantity,coin.price),sale=coinValue(quantity,coin.sell),gain=sale-BigInt(basis);
+ return {quantity,basis,average:quantity?basis/quantity:0,marketValue:display(market),saleValue:display(sale),gain:display(gain),margin:basis?Number(gain)/basis*100:0};
 }
 
 // Keep real quote times: an empty or partial history is never invented.

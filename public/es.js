@@ -1,5 +1,50 @@
 // Static spanish game resources. Player-authored content is never translated.
 export const spanish=Object.freeze({
+"Update announcements":"Anuncios de actualización",
+"After a new update, your first sign-in or app opening with an existing session opens Announcements & events. Once that page loads successfully, read receipts are saved per account. Later openings use Dashboard unless you follow a profile link or another update is unread. In-session navigation stays where you choose.":"Tras una actualización, el primer inicio de sesión o apertura de la app con sesión activa abre Anuncios y eventos. Al cargar correctamente se guarda la lectura por cuenta. Después se abre Dashboard, salvo un enlace de perfil u otra actualización no leída. La navegación durante la sesión se mantiene.",
+
+"New updates open Announcements & events on your first sign-in or app opening, then normal navigation resumes.":"Las nuevas actualizaciones abren Anuncios y eventos al iniciar sesión o abrir la app por primera vez; después vuelve la navegación normal.",
+
+" · Best choice":" · Mejor opción",
+" · Highest profit":" · Mayor beneficio",
+"{v1}{v2}{v3} · {v4}% risk · net {v5} ({v6}%)":"{v1}{v2}{v3} · {v4}% riesgo · neto {v5} ({v6}%)",
+"{v1}{v2}{v3} · current sale quote before route costs {v4}":"{v1}{v2}{v3} · venta actual antes del transporte {v4}",
+"Buy · {v17}":"Comprar · {v17}",
+"Buy maximum · {v19}":"Comprar máximo · {v19}",
+"Sell · {v26}":"Vender · {v26}",
+"Local sale":"Venta local",
+"Game cash only. No real deposits or withdrawals. Whole coins, a 1% buy markup and a 1% sell discount. Maximum $10 trillion purchase basis per coin.":"Solo dinero del juego. Sin depósitos ni retiradas reales. Monedas enteras, recargo de compra del 1% y descuento de venta del 1%. Coste máximo de $10,000,000,000,000 por moneda.",
+"Mafia: The new Era © · v1.25.0":"Mafia: The new Era © · v1.25.0",
+
+"Best choice and Highest profit compare sale destinations for each owned batch, including local sale. Best choice uses expected net after interception risk; Highest profit uses net if delivered. Only affordable routes qualify. Shipping starts transport; sell the batch after arrival. Quotes can change.":"Best choice y Highest profit comparan destinos de venta por lote propio, incluida la venta local. Best choice usa el neto esperado tras el riesgo; Highest profit usa el neto si llega. Solo cuentan rutas asequibles. El envío inicia el transporte; vende al llegar. Los precios pueden cambiar.",
+"Transport cost":"Coste de transporte",
+"Net if delivered":"Neto si se entrega",
+"Expected net after risk":"Neto esperado tras riesgo",
+"Dispatch best choice":"Enviar por Best choice",
+"Sell locally":"Vender localmente",
+"Coins to buy":"Monedas a comprar",
+"Coins to sell":"Monedas a vender",
+"Total cost":"Coste total",
+"Sale proceeds before bonuses":"Ingresos de venta antes de bonos",
+"Maximum purchase basis is $10 trillion per coin.":"El coste de compra máximo es $10,000,000,000,000 por moneda.",
+"Cargo travel and risk":"Tiempo y riesgo del transporte",
+"New drug shipments take 1–2 hours by plane, 4–8 hours by boat or 2 hours by regional truck. Base interception risk is 9%, 6% or 4% respectively. Destination and large-cargo inspection surcharges apply, with an absolute 15% ceiling. Existing dispatched cargo keeps its original arrival and outcome.":"Los nuevos envíos tardan 1–2 horas en avión, 4–8 en barco o 2 en camión regional. El riesgo base es 9%, 6% o 4%, respectivamente. Hay recargos por destino y carga grande, con un máximo absoluto del 15%. Los envíos existentes mantienen llegada y resultado originales.",
+"No completed stock is ready for this sale comparison.":"No hay existencias terminadas listas para comparar ventas.",
+"Batch #{v0} · {v1} · {v2} crates · {v3}.":"Lote #{v0} · {v1} · {v2} cajas · {v3}.",
+"{v0}: {v1} by {v2}, {v3}h; fee {v4}; net if delivered {v5}; expected net {v6}; interception {v7}%.":"{v0}: {v1} en {v2}, {v3}h; coste {v4}; neto al llegar {v5}; neto esperado {v6}; interceptación {v7}%.",
+"These are comparison quotes only. Your current role, custody or health prevents dispatch or sale.":"Son solo cotizaciones comparativas. Tu rol, detención o salud impide enviar o vender.",
+"Smarter routes, larger portfolios":"Mejores rutas, mayores carteras",
+"Compare Best choice and Highest profit destinations for every owned drug batch, with clearer shipping shortcuts and shorter, safer cargo routes.":"Compara destinos Best choice y Highest profit por lote, con accesos de envío claros y rutas más cortas y seguras.",
+"Expanded per-coin crypto purchase limits, live affordable quantities and separate buy/sell controls keep your portfolio easy to manage.":"Límites de compra ampliados por moneda, cantidades asequibles en vivo y controles separados de compra y venta facilitan gestionar tu cartera.",
+
+"Trade fictional coins on Crypto exchange under Finances. Quotes update every five minutes. Buy maximum respects cash and the $10 trillion purchase basis limit per coin. A 1% spread applies on each side.":"Opere con monedas ficticias en el intercambio de criptomonedas en Finanzas. Las cotizaciones se actualizan cada cinco minutos. Buy maximum respeta el efectivo y el límite base de compra de $10,000,000,000,000 por moneda. Se aplica un diferencial del 1% en cada lado.",
+
+"Maximum cost basis is $10 trillion per coin.":"La base de costo máximo es de $10,000,000,000,000 por moneda.",
+
+"Crypto exchange is a separate page under Finances, alongside Bank and Investments. Fifteen fictional coins update every five minutes. Whole coins only, with a 1% buy markup and 1% sell discount. Each coin allows at most $10 trillion purchase basis. Buy maximum respects available cash and that basis limit. Holdings display purchase basis, sale value and net percentage change. These are game assets, with no real withdrawals.":"El intercambio de criptomonedas es una página separada en Finanzas, junto con Banco e Inversiones. Quince monedas ficticias se actualizan cada cinco minutos. Solo monedas enteras, con un margen de beneficio de compra del 1 % y un descuento de venta del 1 %. Cada moneda permite una compra de como máximo $10,000,000,000,000. Buy maximum respeta el efectivo disponible y ese límite básico. Las tenencias muestran la base de compra, el valor de venta y el cambio porcentual neto. Estos son activos del juego, sin retiros reales.",
+
+"Game cash only. No real deposits or withdrawals. Whole coins, a 1% buy markup and a 1% sell discount. Maximum $10 trillion purchase basis per coin.":"Juego solo en efectivo. Sin depósitos ni retiros reales. Monedas enteras, un margen de compra del 1 % y un descuento de venta del 1 %. Compra máxima de $10,000,000,000,000 por moneda.",
+
 "Luca reply language":"Idioma de respuesta de Luca",
 "Luca recognizes clear questions in English, Dutch, Spanish, French and German and replies in that language without changing your game language. Short, ambiguous or mixed questions fall back to the selected interface language. Detection is local and may not recognize every wording.":"Luca reconoce preguntas claras en inglés, neerlandés, español, francés y alemán y responde en ese idioma sin cambiar el del juego. Las preguntas breves, ambiguas o mixtas usan el idioma de la interfaz. La detección es local y puede no reconocer todas las expresiones.",
 "Luca can answer clear questions in their own language while keeping your chosen game language.":"Luca puede responder a preguntas claras en su propio idioma sin cambiar el idioma del juego.",

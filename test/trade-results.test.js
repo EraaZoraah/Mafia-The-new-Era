@@ -59,11 +59,13 @@ test('art results include failed heists, appraisals, winning bids and net commis
  const s=f.call('art').body.trade;assert.equal(s.invested,String(50000+appraisal.body.cost));assert.equal(s.received,'92000');assert.equal(s.net,String(42000-appraisal.body.cost));assert.equal(f.call('art',undefined,2).body.trade.invested,'100000');
  resetTradePeriod(f.db,1);f.run('DELETE FROM art_trade_receipts WHERE user_id=1');assert.equal(f.call('art').body.trade.net,'0');f.advance(3600001);f.dice(9999);f.call('art/heist',{kind:'gallery'});assert.equal(f.call('art').body.trade.net,'-25000');
 });
-test('highest-profit and best-choice badges use different declared objectives and available offers',t=>{
- const f=fixture(t);productionWarehouse(f);f.run("UPDATE users SET city='New York',drugs_xp=1000000000 WHERE id=1");const products=f.call('production').body.products;
- const best=products.find(x=>x.bestChoice),highest=products.find(x=>x.highestProfit);assert.ok(best&&highest);
- for(const p of products.filter(x=>x.canStart)){assert.ok(best.recommendation.expectedPerHour>=p.recommendation.expectedPerHour);assert.ok(highest.mostProfitableOffer.netProfit>=p.mostProfitableOffer.netProfit);}
+test('sale badges belong to each completed batch and use actual costs and affordable routes',t=>{
+ const f=fixture(t);productionWarehouse(f);f.run("UPDATE users SET city='New York',drugs_xp=1000000000 WHERE id=1");
+ for(const product of ['cannabis','hashish'])assert.equal(f.call('production/start',{scope:'personal',product,hours:24,units:20,requestKey:'route-labels-'+product}).status,200);
+ f.advance(24*3600000);const d=f.call('production').body;assert.ok(!d.products.some(p=>p.bestChoice||p.highestProfit));
+ for(const b of d.batches){const {best,highest,routes}=b.saleChoices;assert.ok(best&&highest);for(const r of routes.filter(r=>r.affordable)){assert.ok(best.expectedProfit>=r.expectedProfit);assert.ok(highest.netProfit>=r.netProfit);}}
 });
+
 test('verified old production sale receipts restore totals without guessing or changing money',t=>{
  const f=fixture(t);productionWarehouse(f);const start=f.call('production/start',{scope:'personal',product:'cannabis',hours:6,units:1,requestKey:'historical-summary-start'});f.advance(6*3600000);
  const sale=f.call('production/sell',{scope:'personal',id:start.body.id,requestKey:'historical-summary-sale'});assert.equal(sale.status,200);
@@ -77,6 +79,6 @@ test('Luca reads personal totals from authoritative reports in every language',t
 });
 test('production recommendations and Luca exclude a drug already at its crate cap',t=>{
  const f=fixture(t);productionWarehouse(f);f.run("UPDATE users SET city='New York',drugs_xp=1000000000 WHERE id=1");assert.equal(f.call('production/start',{scope:'personal',product:'cannabis',hours:6,units:1000,requestKey:'at-cap-production-start'}).status,200);
- const d=f.call('production').body;assert.equal(d.products.find(p=>p.id==='cannabis').canStart,false);assert.equal(d.products.find(p=>p.id==='cannabis').bestChoice,false);assert.equal(d.products.find(p=>p.id==='cannabis').highestProfit,false);
+ const d=f.call('production').body;assert.equal(d.products.find(p=>p.id==='cannabis').canStart,false);assert.ok(!d.products.find(p=>p.id==='cannabis').bestChoice&&!d.products.find(p=>p.id==='cannabis').highestProfit);
  const guide=f.call('guide?q=best%20drug%20production').body;assert.notEqual(guide.market.bestAvailable?.product,'cannabis');
 });

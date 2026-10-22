@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.25.0 — 2026-10-22
+
+- Unread update announcements open on first sign-in or app opening with an existing session; read receipts keep later visits on normal pages.
+
+- Best choice and Highest profit now compare sale routes per owned drug batch, including local and international destinations, with a destination/mode/duration shortcut.
+- Shorter cargo travel and lower interception risks, capped at 15% for new drug shipments.
+- $10 trillion purchase basis per crypto coin, dynamic affordable input limits, direct maximum buying and independent selling fields.
+- Exact large crypto valuations and compatible small-number performance totals. Luca and autonomous trading use current limits and route quotes.
+
+
 ## 1.24.0 — 2026-10-21
 
 - Luca detects clear question languages independently of the selected interface language, with local fallback and preserved account preferences.

@@ -29,7 +29,7 @@ test('insufficient cash, full basis, custody and health remove available purchas
  assert.equal(analyzeCrypto(snapshot,{...u,prison_until:f.time()+1000},f.time()).filter(x=>x.eligible).length,0);
  assert.equal(analyzeCrypto(snapshot,{...u,hospital_until:f.time()+1000},f.time()).filter(x=>x.eligible).length,0);
  assert.equal(analyzeCrypto(snapshot,{...u,health:0},f.time()).filter(x=>x.eligible).length,0);
- snapshot.wallet=snapshot.coins.map(c=>({coin:c.id,basis:100000000,quantity:1}));assert.equal(analyzeCrypto(snapshot,u,f.time()).filter(x=>x.eligible).length,0);
+ snapshot.wallet=snapshot.coins.map(c=>({coin:c.id,basis:snapshot.limit,quantity:1}));assert.equal(analyzeCrypto(snapshot,u,f.time()).filter(x=>x.eligible).length,0);
 });
 test('partial, gapped or stale quotes cannot become eligible forecasts',t=>{
  const f=fixture(t),snapshot=seed(f),u=f.q('SELECT * FROM users WHERE id=1');

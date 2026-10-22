@@ -17,15 +17,15 @@ export const cityDrugMarkets={
  'São Paulo':[[.78,1.01],[.91,1.05],[.96,1.09],[.7,.98],[.94,1.1]]
 };
 export const transportModes=[
- {id:'boat',name:'Cargo boat',hours:8,risk:.16,costBps:450},
- {id:'plane',name:'Cargo plane',hours:2,risk:.26,costBps:850},
- {id:'truck',name:'Freight truck',hours:4,risk:.1,costBps:300}
+ {id:'boat',name:'Cargo boat',hours:4,risk:.06,costBps:450},
+ {id:'plane',name:'Cargo plane',hours:1,risk:.09,costBps:850},
+ {id:'truck',name:'Freight truck',hours:2,risk:.04,costBps:300}
 ];
 const regions=[['New York','Miami','Los Angeles','Chicago'],['London','Amsterdam','Paris','Rome','Istanbul'],['Dubai'],['Singapore','Hong Kong','Tokyo'],['Sydney'],['São Paulo']];
 export const truckRoute=(from,to)=>from!==to&&regions.some(r=>r.includes(from)&&r.includes(to));
 export function cityFactors(city,productIndex){const [production,sale]=(cityDrugMarkets[city]||cityDrugMarkets['New York'])[productIndex];return {production,sale};}
 export function freightQuote(from,to,mode,cost,units){
  if(from===to||!cityDrugMarkets[from]||!cityDrugMarkets[to]||mode.id==='truck'&&!truckRoute(from,to))return null;
- const distance=truckRoute(from,to)?1:2,inspection=to==='Dubai'?.05:to==='Singapore'||to==='Tokyo'?.03:0;
- return {mode:mode.id,name:mode.name,cost:Math.ceil(cost*mode.costBps/10000)+units*2500*distance,hours:mode.hours*distance,risk:Math.min(.6,mode.risk+inspection+(units>=500?.04:0))};
+ const distance=truckRoute(from,to)?1:2,inspection=to==='Dubai'?.02:to==='Singapore'||to==='Tokyo'?.01:0;
+ return {mode:mode.id,name:mode.name,cost:Math.ceil(cost*mode.costBps/10000)+units*2500*distance,hours:mode.hours*distance,risk:Math.min(.15,mode.risk+inspection+(units>=500?.02:0))};
 }

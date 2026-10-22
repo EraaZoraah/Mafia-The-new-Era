@@ -72,7 +72,7 @@ export function autonomousMove(c,domain){
   const partner=pick(peers().filter(p=>!q('SELECT 1 FROM marriage_members WHERE user_id=?',p.id)&&!q("SELECT 1 FROM marriage_invites WHERE sender_id=? AND recipient_id=? AND status='pending' AND expires_at>?",id,p.id,now)));return partner&&u.cash>20e6?send('marriage/invite',{target:partner.username}):false;
  });
  case 'crypto':{
-  const x=get('crypto'),coin=pick(x?.coins||[]);if(!coin)return false;const w=x.wallet.find(w=>w.coin===coin.id),sell=w?.quantity&&(coin.sell*w.quantity>w.basis*1.02||u.cash<1e5||random(0,4)===0),quantity=sell?Math.max(1,Math.floor(w.quantity/2)):Math.min(100,Math.floor(Math.min(u.cash*.005,1e8-(w?.basis||0))/coin.buy));return quantity>0?send('crypto/trade',{coin:coin.id,side:sell?'sell':'buy',quantity,epoch:coin.epoch}):false;
+  const x=get('crypto'),coin=pick(x?.coins||[]);if(!coin)return false;const w=x.wallet.find(w=>w.coin===coin.id),sell=w?.quantity&&(coin.sell*w.quantity>w.basis*1.02||u.cash<1e5||random(0,4)===0),quantity=sell?Math.max(1,Math.floor(w.quantity/2)):Math.min(100,Math.floor(Math.min(u.cash*.005,x.limit-(w?.basis||0))/coin.buy));return quantity>0?send('crypto/trade',{coin:coin.id,side:sell?'sell':'buy',quantity,epoch:coin.epoch}):false;
  }
  case 'respect':{
   if(family&&random(0,2)&&!q('SELECT 1 FROM family_respect_gifts WHERE user_id=? AND day=?',id,new Date(now).toISOString().slice(0,10)))return send('family/respect/give');
@@ -125,7 +125,7 @@ export function autonomousMove(c,domain){
   const scope=manager&&random(0,2)?'family':'personal',p=get('production?scope='+scope);if(!p)return false;
   const budget=scope==='family'?family.treasury:u.cash,batch=p.batches.find(b=>b.remaining===0&&!(b.arrives_at>now));
   if(batch){const routes=(batch.destinations||[]).flatMap(d=>(d.routes||[]).map(r=>({...r,city:d.city,saleValue:r.saleValue??d.saleValue}))).filter(r=>r.cost<budget*.1&&(r.saleValue||0)*(1-r.risk)-r.cost>batch.saleValue);
-   const route=pick(routes);return route?send('production/ship',{scope,id:batch.id,city:route.city,mode:route.mode,quoteEpoch:p.quoteEpoch}):send('production/sell',{scope,id:batch.id,quoteEpoch:p.quoteEpoch});}
+   const preferred=batch.saleChoices?.best,route=preferred&&random(0,3)!==0?(preferred.mode==='local'?null:preferred):pick(routes);return route?send('production/ship',{scope,id:batch.id,city:route.city,mode:route.mode,quoteEpoch:p.quoteEpoch}):send('production/sell',{scope,id:batch.id,quoteEpoch:p.quoteEpoch});}
   if(!p.storage.capacity&&budget>45e6)return send(scope==='personal'?'assets/buy':'family/buy',scope==='personal'?{id:'production-warehouse',category:'garage'}:{id:'warehouse-production-family',quantity:1});
   const product=(random(0,3)?p.products.find(x=>x.bestChoice):null)||pick(p.products.filter(x=>!x.locked)),terms=product?.terms.filter(t=>t.cost<budget*.02)||[],term=terms.find(t=>t.hours===product?.recommendation?.hours)||pick(terms),room=p.storage.capacity-p.storage.used;
   if(product&&term&&p.batches.length<5&&room>0){const own=p.batches.filter(b=>b.drug_id===product.id).reduce((n,b)=>n+b.units,0),units=Math.min(1000-own,room,Math.max(1,Math.floor(budget*.02/term.cost)));if(units>0)return send('production/start',{scope,product:product.id,hours:term.hours,units,quoteEpoch:p.quoteEpoch});}return false;

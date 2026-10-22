@@ -1,3 +1,4 @@
+import {cryptoBuyMaximum} from './public/crypto-math.js';
 import {coins} from './city-expansion.js';
 import {dutch,spanish,french,german} from './public/i18n.js';
 const dictionaries={nl:dutch,es:spanish,fr:french,de:german};
@@ -16,7 +17,7 @@ export function analyzeCrypto(snapshot,user,time){
   const moves=values.slice(1).map((v,i)=>(v/values[i]-1)*100),volatility=moves.length?Math.sqrt(moves.reduce((n,v)=>n+v*v,0)/moves.length):0;
   const rangePosition=high>low?Math.max(0,Math.min(100,(c.price-low)/(high-low)*100)):50;
   const wallet=snapshot.wallet.find(w=>w.coin===c.id)||{quantity:0,basis:0};
-  const maximum=Math.max(0,Math.min(100000000,Math.floor(user.cash/c.buy),Math.floor((snapshot.limit-wallet.basis)/c.buy)));
+  const maximum=cryptoBuyMaximum(c,wallet,user.cash,snapshot.limit);
   const detained=Math.max(user.prison_until||0,user.hospital_until||0)>time;
   const sufficient=history.length>=7&&history.at(-1)?.epoch*300000===end&&history.slice(-7).every((h,i,a)=>!i||h.epoch===a[i-1].epoch+1);
   // A transparent watchlist score, never a forecast or probability of profit.

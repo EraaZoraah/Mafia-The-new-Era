@@ -1,3 +1,4 @@
+import {drugSalesGuide} from './guide-drug-sales.js';
 import {cryptoGuide} from './guide-crypto.js';
 import {tradingGuide} from './guide-trading.js';
 import {localizedGuideQuery,localizedGuideReply} from './guide-locales.js';
@@ -30,7 +31,7 @@ export const guideTopics=[
 
  ['warehouses','Warehouses',/warehouse|opslag|magazijn|gestolen|stolen|garage|car theft/,'Vehicle warehouses hold twenty recovered vehicles each, with five warehouses maximum. Production warehouses provide one thousand total crates each across all drugs; buy them before production. Car theft awards a vehicle with 1–5 condition stars: Worn 55%, Used 25%, Good 13%, Perfect 6%, Pristine 1%. Model, condition, city and hourly quote determine its value. Sell, store or swap a stored car if full. Stored vehicles can be auctioned from Warehouses with your own minimum price, a non-refundable listing fee and 3% sale commission. Shipping between cities has a small interception risk. Purchased cars use separate six-bay garages and eighty-percent purchase-price resale.'],
 
- ['crypto','Crypto exchange',/crypto|coin|wallet/,'Trade fictional coins on Crypto exchange under Finances. Quotes update every five minutes. Buy MAX respects cash and the $100 million purchase basis limit per coin. A 1% spread applies on each side.'],
+ ['crypto','Crypto exchange',/crypto|coin|wallet/,'Trade fictional coins on Crypto exchange under Finances. Quotes update every five minutes. Buy MAX respects cash and the $10 trillion purchase basis limit per coin. A 1% spread applies on each side.'],
 
  ['investments','Investments',/invest|beleg|rente/,'Invest personal or family funds for up to 72 hours, with up to $100 billion active principal and at most 8% total quoted return. Only Don and Capo manage family investments.'],
 
@@ -91,6 +92,7 @@ export const guideTopics=[
 export function guideAnswer(db,u,question,time=Date.now(),context={}){
  const crypto=cryptoGuide(question,u,time,context);if(crypto)return crypto;
  const trading=tradingGuide(question,context);if(trading)return trading;
+ const sales=drugSalesGuide(question,u,time,context);if(sales)return sales;
  if(['es','fr','de'].includes(context.language))return localizedGuideReply(guideAnswer(db,u,localizedGuideQuery(question,context.language),time,{...context,language:'en',knowledgeLanguage:context.language}),u,context);
 
  const topicQuery=String(question||'').toLowerCase(),dutch=context.language==='nl';

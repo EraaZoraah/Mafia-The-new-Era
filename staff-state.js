@@ -1,3 +1,4 @@
+import {CRYPTO_BASIS_LIMIT,CRYPTO_QUANTITY_LIMIT} from './public/crypto-math.js';
 import {driverRanks} from './midnight-catalog.js';
 import {createHash} from 'node:crypto';
 import {MAX_CASH} from './money.js';
@@ -16,7 +17,7 @@ export function installStaffState(db,{transaction,clock,settleRaw,log}){
  const options=xs=>({type:'select',options:xs.map(x=>typeof x==='string'?{id:x,name:x}:x)});
  const definitions={
   employees:{table:'employees',key:'item_id',fields:{item_id:options(employees),quantity:num(1000000000,1)}},
-  crypto:{table:'crypto_wallet',key:'coin',fields:{coin:options(coins),quantity:num(100000000),basis:num(100000000)}},
+  crypto:{table:'crypto_wallet',key:'coin',fields:{coin:options(coins),quantity:num(CRYPTO_QUANTITY_LIMIT),basis:num(CRYPTO_BASIS_LIMIT)}},
   art:{table:'art_objects',key:'id',auto:true,where:" AND state='collection'",fields:{spec_id:options(artCatalog),authentic:num(1),condition:num(100,1),appraised:num(1)}},
   vehicles:{table:'vehicle_loot',key:'id',auto:true,where:" AND state IN ('stored','pending','transit')",fields:{vehicle_id:options(stolenVehicles),condition_stars:num(5,1),city:options(Object.keys(cityDrugMarkets))}},
   racing:{table:'race_profiles',key:'user_id',single:true,fields:{xp:num(1000000000),next_at:num(8640000000000000)}},

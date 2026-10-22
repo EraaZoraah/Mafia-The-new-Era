@@ -6,11 +6,11 @@ import {releaseNotes} from '../release-notes.js';
 import {rankedFreight} from '../public/freight-ui.js';
 import {coins} from '../city-expansion.js';
 const warehouse=f=>{f.run("UPDATE users SET city='New York',drugs_xp=1000000000 WHERE id=1");f.run("INSERT INTO possessions(user_id,category,item_id,quantity,acquired_at,income_at) VALUES(1,'garage','production-warehouse',5,0,0)");};
-test('production best choice is unlocked, funded and ordered by expected net profit per hour',t=>{
+test('production retains usable unlocked quotes without drug-type sale badges',t=>{
  const f=fixture(t);warehouse(f);const d=f.call('production').body;
- assert.equal(d.products.filter(p=>p.bestChoice).length,1);assert.equal(d.products[0].bestChoice,true);
+ assert.equal(d.products.some(p=>p.bestChoice||p.highestProfit),false);
  const best=d.products[0];assert.equal(best.canStart,true);assert.equal(best.terms[0].hours,best.recommendation.hours);
- for(const p of d.products.filter(p=>p.canStart))assert.ok(best.recommendation.expectedPerHour>=p.recommendation.expectedPerHour);
+ for(const p of d.products.filter(p=>p.canStart))assert.ok(p.recommendation.affordable);
  const before=f.q('SELECT cash FROM users WHERE id=1').cash;
  const started=f.call('production/start',{scope:'personal',product:best.id,hours:best.recommendation.hours,units:1,quoteEpoch:d.quoteEpoch,requestKey:'best-choice-start-0001'});
  assert.equal(started.status,200);assert.equal(before-f.q('SELECT cash FROM users WHERE id=1').cash,best.recommendation.cost);
