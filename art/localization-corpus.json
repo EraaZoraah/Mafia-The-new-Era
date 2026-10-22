@@ -6494,7 +6494,7 @@
     "translated": true
   },
   {
-    "key": "Mafia: The new Era © · v1.25.1",
+    "key": "Mafia: The new Era © · v1.25.2",
     "files": [
       "app.js"
     ],
@@ -10139,6 +10139,13 @@
     "key": "Sell locally",
     "files": [
       "logistics-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Sell maximum · {v29}",
+    "files": [
+      "expansion-ui.js"
     ],
     "translated": true
   },

@@ -1,5 +1,14 @@
 // Static french game resources. Player-authored content is never translated.
 export const french=Object.freeze({
+"New features · Clear numbers at every size":"Nouvelles fonctionnalités · Des chiffres lisibles sur chaque écran",
+
+"Sell maximum · {v29}":"Vendre le maximum · {v29}",
+"Sell maximum sells your entire holding of a crypto coin using the current quote, alongside the existing Buy maximum control.":"Vendre le maximum vend toutes vos unités d’une cryptomonnaie au cours actuel, à côté du bouton Acheter le maximum.",
+
+"Clear numbers at every size":"Des chiffres lisibles sur chaque écran",
+"Large balances automatically fit their statistic tiles on desktop and mobile, keeping complete amounts and negative results readable across trading and account overviews.":"Les soldes élevés s’adaptent automatiquement aux tuiles sur ordinateur et mobile, pour garder les montants complets et les résultats négatifs lisibles dans les aperçus commerciaux et personnels.",
+"Mafia: The new Era © · v1.25.2":"Mafia: The new Era © · v1.25.2",
+
 "New features · More room for your investments":"Nouvelles fonctionnalités · Plus de place pour vos investissements",
 "Current quotes expire {v15}. The rate shown is the entire term’s return, not an annual rate. Personal interest excludes prison/hospital hours; principal is preserved.":"Les cotations actuelles expirent {v15}. Le taux indiqué correspond au rendement de la durée entière et non à un taux annuel. L’intérêt personnel exclut les heures de prison/hôpital ; le principe est conservé.",
 "Invest maximum · {v13}":"Investir le maximum · {v13}",

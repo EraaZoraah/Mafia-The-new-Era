@@ -193,3 +193,13 @@ html::-webkit-scrollbar,body::-webkit-scrollbar,.sidebar::-webkit-scrollbar{disp
 .batch-sale-choices{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:16px 0}.sale-choice-card{padding:15px;border:1px solid #c5ab6b50;border-radius:12px;background:linear-gradient(130deg,#d6ba7311,#101920)}.sale-choice-card h4{margin:12px 0 6px;color:#e1c58d}.sale-choice-card p{font-size:.78rem;line-height:1.7;margin:6px 0}.production-batch>[data-best-sale]{width:100%;white-space:normal;line-height:1.5}.coin-card form[data-side=sell]{margin-top:18px;padding-top:15px;border-top:1px solid #c8ac6b30}
 
 .production-batch>[data-sell]{margin-top:10px}
+
+/* Keep complete numeric balances on one line; stat-fitting sizes them to their actual tile. */
+.stat{min-width:0}
+.stat>b.fit-stat-number,.stat>strong.fit-stat-number,.coin-trade-record strong.fit-stat-number,.coin-price-value.fit-stat-number,.coin-position-value.fit-stat-number{display:block;max-width:100%;white-space:nowrap;overflow-wrap:normal;word-break:normal;font-variant-numeric:tabular-nums}
+.trading-totals{grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr))}
+.coin-trade-record>div{min-width:0}
+
+.coin-price{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:baseline;gap:8px}.coin-price-value{min-width:0}
+
+.coin-position dl>div{min-width:0}.coin-position dd .coin-position-value{font:inherit;color:inherit}

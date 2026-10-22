@@ -1,4 +1,13 @@
 export const octoberDutch={
+"New features · Clear numbers at every size":"Nieuwe functies · Duidelijke cijfers op elk scherm",
+
+"Sell maximum · {v29}":"Verkoop maximaal · {v29}",
+"Sell maximum sells your entire holding of a crypto coin using the current quote, alongside the existing Buy maximum control.":"Verkoop maximaal verkoopt je volledige bezit van een cryptomunt tegen de actuele koers, naast de bestaande knop Koop maximaal.",
+
+"Clear numbers at every size":"Duidelijke cijfers op elk scherm",
+"Large balances automatically fit their statistic tiles on desktop and mobile, keeping complete amounts and negative results readable across trading and account overviews.":"Grote bedragen passen zich automatisch aan hun statistiektegels aan op desktop en mobiel. Volledige bedragen en negatieve resultaten blijven leesbaar in handels- en accountoverzichten.",
+"Mafia: The new Era © · v1.25.2":"Mafia: The new Era © · v1.25.2",
+
 "New features · More room for your investments":"Nieuwe functies · Meer ruimte voor je investeringen",
 "Current quotes expire {v15}. The rate shown is the entire term’s return, not an annual rate. Personal interest excludes prison/hospital hours; principal is preserved.":"Huidige offertes verlopen {v15}. Het getoonde percentage geldt voor de gehele looptijd, niet per jaar. Persoonlijke rente telt gevangenis- en ziekenhuisuren niet mee; je hoofdsom blijft behouden.",
 "Invest maximum · {v13}":"Investeer maximaal · {v13}",
