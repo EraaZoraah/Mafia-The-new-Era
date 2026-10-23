@@ -20,7 +20,7 @@ export const artCatalog=[
  ['sultan-manuscript', 'The Sultan Manuscript', 'antique', 22000000, 2],
  ['storm-at-sea', 'Storm at Sea', 'painting', 28000000, 2],
  ['platinum-crown', 'Platinum Crown', 'antique', 50000000, 1]
-].map(([id,name,kind,value,weight])=>({id,name,kind,value,weight,image:'/images/art-'+id+'.png'}));
+].map(([id,name,kind,value,weight])=>({id,name,kind,value:value*200,weight,image:'/images/art-'+id+'.png'}));
 const orderedArt=[...artCatalog].sort((a,b)=>a.value-b.value);
 export const artLootPools=[orderedArt.slice(0,7),orderedArt.slice(7,13),orderedArt.slice(13,19),orderedArt.slice(19,25)].map(pool=>pool.map((a,i)=>Object.assign(a,{weight:2**(pool.length-i-1)})));
 export const artHeists=[
@@ -28,7 +28,7 @@ export const artHeists=[
  {id:'estate',name:'Collector’s Estate',xp:50000,energy:45,ammo:200,tier:2,fee:180000,chance:.57,cooldown:7200000,rewardXp:500},
  {id:'museum',name:'The Midnight Exhibition',xp:500000,energy:70,ammo:500,tier:3,fee:1200000,chance:.42,cooldown:14400000,rewardXp:1500},
  {id:'treasury',name:'The Sovereign Collection',xp:1500000,energy:90,ammo:900,tier:3,fee:3000000,chance:.32,cooldown:21600000,rewardXp:3000}
-].map((h,i)=>({...h,loot:artLootPools[i]}));
+].map((h,i)=>({...h,failureCooldown:[300000,600000,1200000,1800000][i],loot:artLootPools[i]}));
 export const artCrownJewels=['diamond-phoenix','platinum-crown'];
 export const AUCTION_COMMISSION=.08;
 export const artHeistChance=(h,xp)=>Math.min(.9,h.chance+Math.min(.12,Math.log10(xp+1)*.015));
@@ -50,6 +50,11 @@ export function installArtMarket(db,{clock,transaction,fail,settleRaw,available,
   if(!reset||a.ends_at>=reset)run('INSERT OR IGNORE INTO art_trade_receipts(user_id,spec_id,spent,received,auction_id) VALUES(?,?,?,?,?)',id,object.spec_id,spent,received,a.id);
  }}
  if(!q("SELECT 1 FROM art_history_meta WHERE key='trade-receipts-v1'"))transaction(()=>{for(const a of all("SELECT * FROM art_auctions WHERE state='sold'"))recordSale(a,true);run("INSERT INTO art_history_meta VALUES('trade-receipts-v1')");});
+ db.exec('CREATE TABLE IF NOT EXISTS art_value_versions(version TEXT PRIMARY KEY)');
+ if(!q("SELECT 1 FROM art_value_versions WHERE version='2026-luxury-values'"))transaction(()=>{
+  for(const o of all('SELECT id,estimated_value FROM art_objects'))run('UPDATE art_objects SET estimated_value=? WHERE id=?',Number(BigInt(o.estimated_value)*200n>BigInt(MAX_CASH)?BigInt(MAX_CASH):BigInt(o.estimated_value)*200n),o.id);
+  run("INSERT INTO art_value_versions VALUES('2026-luxury-values')");
+ });
  const spec=o=>artCatalog.find(a=>a.id===o.spec_id),safe=o=>({...o,authentic:o.appraised?!!o.authentic:undefined,estimated_value:o.appraised?o.estimated_value:undefined,marketEstimate:Math.floor(spec(o).value*o.condition/100),...spec(o),id:o.id,serial:'ART-'+String(o.id).padStart(8,'0'),appraisalCost:Math.ceil(spec(o).value*.04)});
  function credit(id,n){if(!run('UPDATE users SET cash=cash+? WHERE id=? AND cash<=?',n,id,MAX_CASH-n).changes)fail('Not enough wallet space to settle this auction.',409)}
  function refund(id,n){const cash=q('SELECT cash FROM users WHERE id=?',id).cash,paid=Math.min(n,Math.max(0,MAX_CASH-cash));if(paid)credit(id,paid);if(n>paid)run('INSERT INTO art_refunds(user_id,amount) VALUES(?,?) ON CONFLICT(user_id) DO UPDATE SET amount=amount+excluded.amount',id,n-paid);}
@@ -77,7 +82,7 @@ export function installArtMarket(db,{clock,transaction,fail,settleRaw,available,
    consume(u.id,'personal',h.ammo,h.tier);if(!run('UPDATE users SET cash=cash-?,energy=energy-? WHERE id=? AND cash>=? AND energy>=?',h.fee,h.energy,u.id,h.fee,h.energy).changes)fail('Insufficient cash or energy.',409);
    run('INSERT INTO art_heist_cooldowns VALUES(?,?) ON CONFLICT(user_id) DO UPDATE SET until_at=excluded.until_at',u.id,clock()+h.cooldown);
    const success=roll()<Math.round(artHeistChance(h,u.xp)*10000);
-   if(!success){let bribe=null;if(roll()<3500){arrest(u.id,Math.ceil(h.energy/5));bribe=offerBribe(u.id,{label:h.name,referenceCash:h.fee*2});}log(u.id,'Art heist failed: '+h.name);return {ok:true,success:false,cost:h.fee,bribe,message:'The art heist failed. Your stake and supplies were lost.',image:bribe?.image||'/images/outcome-failed.png'};}
+   if(!success){run('UPDATE art_heist_cooldowns SET until_at=? WHERE user_id=?',clock()+h.failureCooldown,u.id);let bribe=null;if(roll()<3500){arrest(u.id,Math.ceil(h.energy/5));bribe=offerBribe(u.id,{label:h.name,referenceCash:h.fee*2});}log(u.id,'Art heist failed: '+h.name);return {ok:true,success:false,cost:h.fee,bribe,message:'The art heist failed. Your stake and supplies were lost.',image:bribe?.image||'/images/outcome-failed.png'};}
    const pool=h.loot;let ticket=draw(1,pool.reduce((n,x)=>n+x.weight,0));const a=pool.find(x=>(ticket-=x.weight)<=0)||pool.at(-1),authentic=roll()>=1200,condition=draw(65,100),value=Math.floor(a.value*condition/100*(authentic?1:.08));
    const xp=Math.floor(h.rewardXp*rewardBonus(u.id));run('UPDATE users SET xp=MIN(?,xp+?) WHERE id=?',MAX_XP,xp,u.id);promote(u.id);
    const result=run('INSERT INTO art_objects(user_id,spec_id,authentic,condition,estimated_value,created_at) VALUES(?,?,?,?,?,?)',u.id,a.id,authentic?1:0,condition,value,clock());run('INSERT INTO art_theft_history VALUES(?,?,?)',result.lastInsertRowid,u.id,a.id);log(u.id,'Recovered artwork #'+result.lastInsertRowid+': '+a.name);return {ok:true,success:true,xp,object:safe(q('SELECT * FROM art_objects WHERE id=?',result.lastInsertRowid)),message:'A unique artwork recovered. Appraise it before trading.',image:a.image};

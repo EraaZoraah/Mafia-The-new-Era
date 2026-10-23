@@ -1,4 +1,7 @@
-// Shared estimate and server execution formula; resource checks remain server-only.
+// Bounded Power advantage, defenses and geography; never guaranteed.
 export function territoryCaptureChance(attackPower,defenderPower,defenseReduction,factor=1){
- return Math.max(.01,Math.min(.55,.26*Math.sqrt(Math.max(1,attackPower)/Math.max(1,defenderPower))*(1-defenseReduction)*factor));
+ const edge=Math.log2(Math.max(1,attackPower)/Math.max(1,defenderPower));
+ const base=.50+.075*Math.max(-5,Math.min(5,edge));
+ const defense=1-Math.max(0,Math.min(.75,defenseReduction))*.35;
+ return Math.max(.05,Math.min(.90,base*defense*Math.max(.75,Math.min(1.15,factor))));
 }

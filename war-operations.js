@@ -34,17 +34,17 @@ export function installWarOperations(db,{clock,transaction,settleRaw,available,f
   const quote=raidQuote(from,target),attackPower=Math.round(quote.attackPower*(team?1+.15*(members.length-1):1));
   const chance=kind==='capture'?territoryMap.captureChance({...quote,familyId:from.id},item.plot):kind==='sabotage'?Math.min(.95,quote.chance+.10):raidChance(attackPower,quote.defenderPower,quote.defense.reduction);
   familyDebit(from.id,cost);for(const member of members){consume(member,'family',{tier:1,ammo});run('UPDATE users SET energy=energy-? WHERE id=?',energy,member)}
-  if(kind==='capture')territoryMap.recordAttempt(from.id);
+  if(kind==='capture')territoryMap.recordAttempt(from.id,item.plot.city);
   const success=roll()<chance*10000;let loot=0,detail='';
   if(success&&kind==='sabotage'){const until=Math.min(clock()+3600000,w.ends_at);run('INSERT INTO war_sabotage VALUES(?,?,?) ON CONFLICT(war_id,family_id) DO UPDATE SET until=excluded.until',w.id,target.id,until);detail='Raid defense halved until '+new Date(until).toISOString()+'. Vault protection is unchanged.'}
   if(success&&kind==='capture'){territoryMap.transfer(item.plot,from.id,target.id);detail='Captured '+item.plot.name+' in '+item.plot.city+'. Ownership and bonuses transferred.';}
   if(success&&kind==='joint assault'){loot=Math.min(MAX_CASH-(from.treasury-cost),Math.floor(quote.maxLoot*draw(50,100)/100));run('UPDATE families SET treasury=treasury+? WHERE id=?',loot,from.id);run('UPDATE families SET treasury=treasury-? WHERE id=?',loot,target.id);detail=members.length+' members fought together.'}
-  run('UPDATE families SET raid_until=? WHERE id=?',clock()+1800000,from.id);run('UPDATE families SET shield_until=? WHERE id=?',clock()+1200000,target.id);
+  run('UPDATE families SET raid_until=? WHERE id=?',clock()+900000,from.id);run('UPDATE families SET shield_until=? WHERE id=?',clock()+900000,target.id);
   const points=kind==='capture'?3:2;wars.record(from.id,target.id,id,success,loot,chance,attackPower,quote.defenderPower,kind,points,detail);
   for(const member of members)run('INSERT INTO operation_history(user_id,kind,success,created_at) VALUES(?,?,?,?)',member,kind,success?1:0,clock());
   if(team)run('INSERT INTO family_raid_history(attacker_family,target_family,success,loot,created_at) VALUES(?,?,?,?,?)',from.id,target.id,success?1:0,loot,clock());
   if(team)run("UPDATE war_teams SET status='completed' WHERE id=?",team.id);
-  const message=from.name+' launched '+kind+' against '+target.name+': '+(success?'success':'failed')+'. '+(success?points+' war points earned.':'Defender earns 1 war point.')+' '+detail;
+  const message=from.name+' launched '+kind+' against '+target.name+': '+(success?'success':'failed')+'. '+(success?points+' war points earned.':'No war points awarded for a failed operation.')+' '+detail;
   wars.inform(from.id,'War operation result',message);wars.inform(target.id,'Enemy war operation',message);
   return {success,message,chance,cost,reward:loot,energy,ammoUsed:ammo*members.length,image:item?.image||'/images/scene-families.jpg'};
  }

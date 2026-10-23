@@ -162,11 +162,11 @@ test('isolated prototype baseline', { timeout: 90000 }, async t => {
       alice = await api('login', { login: 'Alice', password });
       assert.equal(alice.status, 200);
     });
-    await t.test('catalog has expanded crimes, 51 cars, businesses and residences', async () => {
+    await t.test('catalog has expanded crimes, 60 cars, businesses and residences', async () => {
       const result=await api('catalog',undefined,alice.cookie);
       assert.equal(result.status,200);
       assert.ok(result.body.crimes.length>=13);
-      assert.equal(result.body.catalog.filter(x=>x.category==='car').length,51);
+      assert.equal(result.body.catalog.filter(x=>x.category==='car').length,60);
       assert.equal(result.body.catalog.filter(x=>x.category==='business').length,11);
       assert.equal(result.body.catalog.filter(x=>x.category==='home').length,12);
     });
@@ -333,9 +333,9 @@ test('isolated prototype baseline', { timeout: 90000 }, async t => {
       assert.equal((await api('title',{title:'jet:swift'},alice.cookie)).status,200);
       const user=(await api('me',undefined,alice.cookie)).body.user;
       assert.match(user.title,/Swift/);
-      assert.equal(user.benefits.energyMax,100+progression(user.xp).rankEnergyBonus);
+      assert.equal(user.benefits.energyMax,120+progression(user.xp).rankEnergyBonus);
       assert.equal(user.benefits.energyInterval,30000);
-      assert.equal(user.benefits.cooldownBps,310);
+      assert.equal(user.benefits.cooldownBps,290);
       assert.equal((await api('action',{kind:'airlift'},alice.cookie)).status,200);
       // This test checks aircraft access, independently of a random arrest on the previous attempt.
       db.prepare('UPDATE users SET prison_until=0,hospital_until=0,coma_until=0,captured_until=0,health=100 WHERE id=?').run(id);

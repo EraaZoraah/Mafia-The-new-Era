@@ -101,8 +101,8 @@ export function installStaffState(db,{transaction,clock,settleRaw,log}){
    if(!plot)fail('Territory not found.',404);
    if(plot.owner_id&&plot.owner_id!==id)fail('Release this territory from its current family first.',409);
    if(old&&old.id!==plot.id)fail('The item type cannot be changed.');
-   const counts=q('SELECT COUNT(*) total,SUM(captured) captured,SUM(city=?) city,SUM(city=? AND captured=0) purchased,SUM(item_id=?) kind FROM city_territories WHERE owner_id=? AND id<>?',plot.city,plot.city,plot.item_id,id,plot.id);
-   if(counts.city>=30||(!v.captured&&counts.purchased>=20)||(v.captured&&counts.captured>=10)||counts.kind>=(familyAssets.find(a=>a.id===plot.item_id)?.limit||25))fail('Territory ownership limit exceeded.');
+   const counts=q('SELECT COUNT(*) total,SUM(city=? AND captured=1) captured,SUM(city=?) city,SUM(city=? AND captured=0) purchased,SUM(item_id=?) kind FROM city_territories WHERE owner_id=? AND id<>?',plot.city,plot.city,plot.city,plot.item_id,id,plot.id);
+   if(counts.city>=35||(!v.captured&&counts.purchased>=25)||(v.captured&&counts.captured>=10))fail('Territory ownership limit exceeded.');
    run('UPDATE city_territories SET owner_id=?,captured=?,acquired_at=? WHERE id=?',id,v.captured,clock(),plot.id);territoryTotals(id);
   }
  }

@@ -24,4 +24,10 @@ function walk(n,file){if(!n||typeof n!=='object')return;
  for(const [k,v] of Object.entries(n))if(!['start','end'].includes(k)){if(Array.isArray(v))v.forEach(x=>walk(x,file));else if(v&&typeof v==='object')walk(v,file);}
 }
 for(const file of readdirSync(new URL('../',import.meta.url)).filter(f=>f.endsWith('.js')&&!f.startsWith('seed-')&&!f.startsWith('guide-')&&f!=='game-guide.js')){const source=readFileSync(new URL('../'+file,import.meta.url),'utf8');walk(mod.exports.parse(source,{ecmaVersion:'latest',sourceType:'module'}),file);}
+// Controlled local-variable messages and guide fragments outside the AST targets.
+for(const [key,file] of [
+ ['{v0} declared a 24-hour war on {v1}. Successful raids score one point; failed attacks award no points.','family-wars.js'],
+ ['{v0} launched {v1} against {v2}: failed. No war points awarded for a failed operation. {v3}','war-operations.js'],
+ ['Your family currently holds {v0}/10 conquered plots in {v1}. Treasury ${v2}.','game-guide.js']
+])rows.set(key,new Set([file]));
 const result=[...rows].map(([key,files])=>({key,files:[...files]}));writeFileSync(new URL('../art/generated-language-corpus.json',import.meta.url),JSON.stringify(result,null,2));writeFileSync(new URL('../public/generated-language-keys.js',import.meta.url),'// Generated from controlled server messages; never player content.\nexport const generatedLanguageKeys='+JSON.stringify(result.map(x=>x.key))+';\n');console.log('Generated message patterns: '+result.length);

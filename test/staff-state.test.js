@@ -26,7 +26,7 @@ test('staff editors validate catalogs, ownership, caps and audit every change',t
  assert.equal(edit(f,'employees',{item_id:'driver',quantity:2}).status,400);
  assert.equal(edit(f,'crypto',{coin:'omerta',quantity:100,basis:1000}).status,200);
  assert.equal(edit(f,'art',{spec_id:'canal-nocturne',authentic:1,condition:95,appraised:1}).status,200);
- assert.equal(f.q('SELECT estimated_value FROM art_objects WHERE user_id=2').estimated_value,237500);
+ assert.equal(f.q('SELECT estimated_value FROM art_objects WHERE user_id=2').estimated_value,47500000);
  assert.equal(f.q('SELECT COUNT(*) n FROM art_theft_history').n,0);
  assert.equal(edit(f,'racing',{xp:5000,next_at:0}).status,200);
  assert.equal(edit(f,'income',{active_ms:86400000,pending_income:123456}).status,200);

@@ -6,9 +6,9 @@ import {createBriberyUI} from './bribery-ui.js';
 export const silentNotification=n=>['Respect received',t('Respect received')].includes(n.title);
 export function createFeedback({api,getMe,esc,refresh}) {
  const police=createBriberyUI({api,getMe,esc,refresh});
- const queue=[],seen=new Set();let busy=false;
- function enqueue(item){if(item.id&&seen.has(item.id))return;if(item.id)seen.add(item.id);queue.push(item);}
- async function poll(){if(!getMe()||document.hidden||busy)return;busy=true;try{const b=await api('bribery');if(b.offer){police.offer(b.offer);if(b.offer.notificationId)seen.add(b.offer.notificationId)}const d=await api('notifications');const received=d.notifications.filter(n=>!seen.has(n.id));const fresh=[];for(const n of received){if(silentNotification(n)){await api('notifications/ack',{id:n.id});seen.add(n.id)}else if(document.querySelector('#midnight-circuit')&&[t('Midnight Circuit victory'),t('Midnight Circuit result')].includes(n.title)){await api('notifications/ack',{id:n.id});seen.add(n.id)}else if(n.title==='Private message received'&&document.querySelector('#conversation')){await api('notifications/ack',{id:n.id});seen.add(n.id)}else fresh.push(n)}for(const n of fresh)enqueue({...n,persistent:true});if(fresh.length)await refresh()}catch{}finally{busy=false}}
+ const queue=[],seen=new Set(),recentMessages=new Map();let busy=false;
+ function enqueue(item){const key=item.dedupeKey||item.id;if(key&&seen.has(key))return;if(key)seen.add(key);if(item.id)seen.add(item.id);queue.push(item);}
+ async function poll(){if(!getMe()||document.hidden||busy)return;busy=true;try{const b=await api('bribery');if(b.offer){police.offer(b.offer);if(b.offer.notificationId)seen.add(b.offer.notificationId)}const d=await api('notifications');const received=d.notifications.filter(n=>!seen.has(n.id));const fresh=[];for(const n of received){if((n.custodyId&&seen.has('custody:'+n.custodyId))||(recentMessages.get(n.message)||0)>Date.now()-20000){await api('notifications/ack',{id:n.id});seen.add(n.id)}else if(silentNotification(n)){await api('notifications/ack',{id:n.id});seen.add(n.id)}else if(document.querySelector('#midnight-circuit')&&[t('Midnight Circuit victory'),t('Midnight Circuit result')].includes(n.title)){await api('notifications/ack',{id:n.id});seen.add(n.id)}else if(n.title==='Private message received'&&document.querySelector('#conversation')){await api('notifications/ack',{id:n.id});seen.add(n.id)}else fresh.push(n)}for(const n of fresh)enqueue({...n,persistent:true,dedupeKey:n.custodyId?'custody:'+n.custodyId:undefined});if(fresh.length)await refresh()}catch{}finally{busy=false}}
  function pump(){
   if(!getMe()||!queue.length||document.querySelector('dialog[open]'))return;
   const item=queue.shift(),dialog=document.createElement('dialog');
@@ -21,14 +21,25 @@ export function createFeedback({api,getMe,esc,refresh}) {
    tools.querySelector('[data-loot-sell]').onclick=()=>finish('vehicles/sell',{id:v.id});tools.querySelector('[data-loot-store]').onclick=()=>finish('vehicles/store',{id:v.id,replaceId:Number(tools.querySelector('[data-loot-replace]').value)||undefined});tools.querySelector('[data-open-warehouses]').onclick=()=>{dialog.close();dialog.remove();document.querySelector('[data-tab="warehouses"]')?.click()};
    if(v.used>=v.capacity&&v.capacity){tools.querySelector('[data-replace-wrap]').hidden=false;tools.querySelector('[data-loot-store]').textContent=ltext('Sell selected & store this car');void api('vehicles').then(d=>{if(!dialog.isConnected)return;tools.querySelector('[data-loot-replace]').innerHTML+=d.entries.filter(x=>x.state==='stored'&&!x.auctioned).map(x=>lhtml`<option value="${x.id}">${esc(x.name)} · $${x.saleValue.toLocaleString(gameLocale)}</option>`).join('');}).catch(()=>{});}
   }
+  if(item.custodyId){
+   const bail=document.createElement('button');bail.className='btn';bail.textContent=t('Buy release now');dialog.append(bail);
+   const quote=async()=>{const d=await api('custody');return d.stays.find(s=>s.id===item.custodyId&&s.user_id===getMe().user.id)};
+   void quote().then(stay=>{if(stay&&bail.isConnected)bail.textContent=t('Buy release now')+' · $'+stay.cost.toLocaleString('en-US')}).catch(()=>{});
+   bail.onclick=async()=>{bail.disabled=true;try{const stay=await quote();if(!stay)throw Error(t('This stay has already ended.'));await api('custody/pay',{id:stay.id,maxCost:stay.cost,source:'personal'});if(item.persistent)await api('notifications/ack',{id:item.id});dialog.close();dialog.remove();await refresh();pump()}catch(e){dialog.querySelector('.outcome-error').textContent=e.message;bail.disabled=false}};
+   const prison=document.createElement('button');prison.className='btn secondary';prison.textContent=t('Open prison options');prison.onclick=()=>{dialog.close();dialog.remove();document.querySelector('[data-tab="prison"]')?.click()};dialog.append(prison);
+  }
   const position={x:window.scrollX,y:window.scrollY};document.body.append(dialog);dialog.showModal();window.scrollTo(position.x,position.y);
   const button=dialog.querySelector('button[autofocus]');
   if(item.error&&/not enough.*ammunition|onvoldoende.*munitie/i.test(item.message||'')){const link=document.createElement('button');link.className='btn secondary';link.textContent=ltext('Buy ammunition');link.onclick=()=>{dialog.close();dialog.remove();document.querySelector('[data-tab="'+(/family ammunition|familie.*munitie/i.test(item.message)?'family-armory':'armory')+'"]')?.click()};dialog.append(link)}
   const close=async()=>{button.disabled=true;try{if(item.action)await item.action();if(item.persistent)await api('notifications/ack',{id:item.id});dialog.close();dialog.remove();window.scrollTo(position.x,position.y);await refresh();pump()}catch(e){dialog.querySelector('.outcome-error').textContent=e.message;button.disabled=false}};
   const later=()=>{dialog.close();dialog.remove();if(item.id)seen.delete(item.id);item.onLater?.();window.scrollTo(position.x,position.y)};button.onclick=close;const laterButton=dialog.querySelector('[data-later]');if(laterButton)laterButton.onclick=later;dialog.oncancel=e=>{e.preventDefault();if(item.action)later();else void close()};
  }
- function result(route,body,r,context={}){
+ async function result(route,body,r,context={}){
+  for(const [message,time] of recentMessages)if(time<Date.now()-20000)recentMessages.delete(message);
+  if(r.message)recentMessages.set(r.message,Date.now());
+  if(route==='custody/pay')return;
   if(r.bribe){police.offer(r.bribe);if(r.bribe.notificationId)seen.add(r.bribe.notificationId);return;}
+  if(r.success===false){try{const d=await api('custody'),stay=d.stays.find(s=>s.user_id===getMe().user.id&&s.kind==='prison'&&s.started_at>=d.serverTime-15000);if(stay){enqueue({title:'You have been arrested',message:r.message,image:'/images/scene-arrest.jpg',error:true,custodyId:stay.id,dedupeKey:'custody:'+stay.id});return}}catch{}}
   if(r.vehicle){enqueue({title:r.bigScore?'BIG SCORE!':'Succes!',vehicle:r.vehicle,image:r.vehicle.image,message:t('Recovered {name} in {city}. Current sale value: ${value} · {xp} XP. Sell immediately or place it in your vehicle warehouse.',{name:r.vehicle.name,city:r.vehicle.city,value:r.vehicle.saleValue.toLocaleString(gameLocale),xp:r.xp||0})});return;}
   if(route==='art/heist'&&r.object){const o=r.object;enqueue({title:'Succes!',image:o.image,message:t('Recovered {name}. Unverified market estimate: ${value}. Condition: {condition}%. Appraisal is required to confirm authenticity and value.',{name:t(o.name),value:o.marketEstimate.toLocaleString(gameLocale),condition:o.condition})+' · +'+r.xp+' XP'});return;}
   const purchase=/assets\/buy|family\/buy|family\/map\/buy|armory\/buy|security\/|protection$/.test(route),parts=[];
@@ -41,5 +52,5 @@ export function createFeedback({api,getMe,esc,refresh}) {
   enqueue({title:r.bigScore?'BIG SCORE!':r.success===false?'Failed!':purchase?'Congratulations':r.declined?'Offer declined':'Succes!',message:[r.message||context.title||route.replaceAll('/',' · '),...parts].join('\n'),image,error:r.success===false});
  }
  setInterval(()=>{police.pump();pump()},350);setInterval(()=>void poll(),10000);
- return {enqueue,result,poll,clear(){police.clear();queue.length=0;seen.clear();document.querySelector('#outcome-dialog')?.remove()}};
+ return {enqueue,result,poll,clear(){police.clear();queue.length=0;seen.clear();recentMessages.clear();document.querySelector('#outcome-dialog')?.remove()}};
 }

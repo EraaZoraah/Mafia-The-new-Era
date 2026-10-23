@@ -77,7 +77,7 @@ test('permanent personal protection has a hard cap and changes actual PvP chance
 
 test('family defenses and vaults reduce real raids and preserve transferred money',t=>{
  const f=fixture(t),before=f.call('family/rivals').body.families.find(x=>x.id===2).defense;
- for(const item of familyAssets.filter(x=>x.category!=='Compounds'||x.id==='compound-palace'))f.run('INSERT INTO family_assets(family_id,item_id,quantity) VALUES(2,?,?)',item.id,item.limit);
+ for(const item of familyAssets.filter(x=>x.category!=='Compounds'||x.id==='compound-palace'))f.run('INSERT INTO family_assets(family_id,item_id,quantity) VALUES(2,?,?)',item.id,item.category==='Territory'?25:item.limit);
  const after=f.call('family/rivals').body.families.find(x=>x.id===2).defense;assert.equal(after.reduction,.75);assert.equal(after.lossReduction,.7);assert.ok(after.reduction>before.reduction);
  f.dice(3000);assert.equal(f.call('family/raid',{familyId:2}).body.success,false);
  assert.equal(f.call('family/raid',{familyId:2}).status,429);f.advance(31*60000);f.run('UPDATE users SET energy=100 WHERE id=1');f.dice(0);

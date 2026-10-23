@@ -45,7 +45,7 @@ test('every purchasable asset adds income or a real stacking benefit and an unlo
   assert.equal(all.energyMax,1000);
   assert.equal(all.energyInterval,21000);
   assert.equal(all.healthInterval,42000);
-  assert.equal(all.cooldownBps,1660);
+  assert.equal(all.cooldownBps,3480);
   assert.equal(catalog.find(x=>x.id==='fiat500').price,180000);
   assert.equal(catalog.find(x=>x.id==='coffee').income,120);
 });

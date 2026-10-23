@@ -1,8 +1,8 @@
 import {assertHostile,installDiplomacy,succeedDon} from './diplomacy.js';
 // All mutations run inside the caller's IMMEDIATE transaction.
 export function raidChance(attackerPower,defenderPower,defense=0){
- const a=Math.max(1,attackerPower),d=Math.max(1,defenderPower);
- return Math.max(.01,Math.min(.95,(a/(a+d))*(1-defense)));
+ const edge=Math.max(-5,Math.min(5,Math.log2(Math.max(1,attackerPower)/Math.max(1,defenderPower))));
+ return Math.max(.05,Math.min(.92,(.52+.075*edge)*(1-Math.max(0,Math.min(.75,defense))*.35)));
 }
 export function installFamilyWars(db,{clock,familyLog,notify,fail}){
  const q=(s,...a)=>db.prepare(s).get(...a),all=(s,...a)=>db.prepare(s).all(...a),run=(s,...a)=>db.prepare(s).run(...a);
@@ -33,14 +33,14 @@ export function installFamilyWars(db,{clock,familyLog,notify,fail}){
   if(truce(from.id,target.id)>clock())fail('A 24-hour ceasefire is still active between these families.',409);
   if(from.created_at>clock()-3600000||target.created_at>clock()-3600000)fail('New families have one hour of protection.',409);
   const result=run('INSERT INTO family_wars(attacker_id,defender_id,started_at,ends_at) VALUES(?,?,?,?)',from.id,target.id,clock(),clock()+86400000);
-  const message=from.name+' declared a 24-hour war on '+target.name+'. Successful raids score one point; failed raids score one point for the defending family.';
+  const message=from.name+' declared a 24-hour war on '+target.name+'. Successful raids score one point; failed attacks award no points.';
   inform(from.id,'War declared',message);inform(target.id,'War declared',message);return {ok:true,warId:Number(result.lastInsertRowid),message,image:'/images/scene-families.jpg'};
  }
  function surrender(id){settle();const w=active(id);if(!w)fail('Your family has no active war.',409);finish(w,'surrendered',w.attacker_id===id?w.defender_id:w.attacker_id);return {ok:true,message:'Your family surrendered. A 24-hour ceasefire is active.',image:'/images/scene-families.jpg'}}
  function record(from,target,actor,success,loot,chance,a,d,kind='raid',points=1,detail=''){
   const w=active(from);if(!w||![w.attacker_id,w.defender_id].includes(target))return null;
-  const side=from===w.attacker_id?'attacker':'defender',scorer=success?side:side==='attacker'?'defender':'attacker';
-  run(`UPDATE family_wars SET ${scorer}_score=${scorer}_score+?,${side}_loot=${side}_loot+? WHERE id=?`,success?points:1,loot,w.id);
+  const side=from===w.attacker_id?'attacker':'defender',scorer=side;
+  run(`UPDATE family_wars SET ${scorer}_score=${scorer}_score+?,${side}_loot=${side}_loot+? WHERE id=?`,success?points:0,loot,w.id);
   run('INSERT INTO family_war_battles(war_id,actor_id,attacker_id,success,loot,chance,attacker_power,defender_power,created_at,kind,detail) VALUES(?,?,?,?,?,?,?,?,?,?,?)',w.id,actor,from,success?1:0,loot,chance,a,d,clock(),kind,detail);return w.id;
  }
  function history(id){return all('SELECT w.*,a.name attacker_name,d.name defender_name FROM family_wars w JOIN families a ON a.id=w.attacker_id JOIN families d ON d.id=w.defender_id WHERE attacker_id=? OR defender_id=? ORDER BY w.id DESC LIMIT 20',id,id).map(w=>({...w,battles:all('SELECT b.*,u.username,f.name attacker_name FROM family_war_battles b JOIN users u ON u.id=b.actor_id JOIN families f ON f.id=b.attacker_id WHERE war_id=? ORDER BY b.id DESC LIMIT 50',w.id)}))}

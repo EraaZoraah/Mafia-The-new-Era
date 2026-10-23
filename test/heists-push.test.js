@@ -13,7 +13,7 @@ test('four exclusive ascending loot pools hold 7/6/6/6 objects with strictly dec
 });
 test('top art achievement requires two personally stolen certified originals and survives sale',t=>{
  const f=fixture(t);f.run('UPDATE users SET xp=2000000,energy=1000 WHERE id=1');f.dice(2000);f.high(true);
- const first=f.call('art/heist',{kind:'treasury'});assert.equal(first.status,200);assert.equal(first.body.object.spec_id,'diamond-phoenix');assert.equal(first.body.image,'/images/art-diamond-phoenix.png');assert.equal(first.body.object.marketEstimate,60000000);assert.equal(first.body.object.estimated_value,undefined);
+ const first=f.call('art/heist',{kind:'treasury'});assert.equal(first.status,200);assert.equal(first.body.object.spec_id,'diamond-phoenix');assert.equal(first.body.image,'/images/art-diamond-phoenix.png');assert.equal(first.body.object.marketEstimate,12000000000);assert.equal(first.body.object.estimated_value,undefined);
  const progress=id=>f.call('achievements',undefined,id).body.milestones.find(x=>x.id==='art-crown-jewels');
  assert.equal(progress(1).progress,0);assert.equal(f.call('art/appraise',{id:first.body.object.id}).status,200);assert.equal(progress(1).progress,1);
  f.advance(21600001);f.run('UPDATE users SET energy=1000 WHERE id=1');f.high((min,max)=>max===100?100:max-1);

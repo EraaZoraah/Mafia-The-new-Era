@@ -876,13 +876,13 @@
     ]
   },
   {
-    "key": "The ten-minute quote changed. Refresh prices.",
+    "key": "The five-minute quote changed. Refresh prices.",
     "files": [
       "city-expansion.js"
     ]
   },
   {
-    "key": "Maximum cost basis is $100 million per coin.",
+    "key": "Maximum purchase basis is $10 trillion per coin.",
     "files": [
       "city-expansion.js"
     ]
@@ -1944,13 +1944,13 @@
     ]
   },
   {
-    "key": "Je kunt per dagelijkse trekking maximaal {v0} loten kopen. Buy MAX houdt rekening met reeds gekochte loten en je beschikbare cash. Bots plaatsen geen berichten in familie- of wereldchat.",
+    "key": "Je kunt per dagelijkse trekking maximaal {v0} loten kopen. Buy maximum houdt rekening met reeds gekochte loten en je beschikbare cash. Bots plaatsen geen berichten in familie- of wereldchat.",
     "files": [
       "game-knowledge.js"
     ]
   },
   {
-    "key": "You can buy up to {v0} lottery tickets per daily draw. Buy MAX accounts for tickets already owned and available cash. Bots never post in family or world chat.",
+    "key": "You can buy up to {v0} lottery tickets per daily draw. Buy maximum accounts for tickets already owned and available cash. Bots never post in family or world chat.",
     "files": [
       "game-knowledge.js"
     ]
@@ -2178,7 +2178,7 @@
     ]
   },
   {
-    "key": "Fictional tradable coin. Ten-minute live buy/sell quotes include spread. Holdings track purchase basis and profit/loss. Recheck the current quote before trading; base reference {v0} is not an executable price.",
+    "key": "Fictional tradable coin. Five-minute live buy/sell quotes include spread. Holdings track purchase basis and profit/loss. Recheck the current quote before trading; base reference {v0} is not an executable price.",
     "files": [
       "game-knowledge.js"
     ]
@@ -2881,7 +2881,8 @@
     "key": "Owner access required.",
     "files": [
       "game.js",
-      "presence.js"
+      "presence.js",
+      "shop.js"
     ]
   },
   {
@@ -2991,7 +2992,7 @@
     ]
   },
   {
-    "key": "Active investments are limited to $100 billion per account.",
+    "key": "Active investments are limited to $10,000,000,000,000 per account.",
     "files": [
       "investments.js"
     ]
@@ -3264,7 +3265,7 @@
     ]
   },
   {
-    "key": "All five production slots are occupied. Sell a completed batch first.",
+    "key": "All five local production slots are occupied. Sell or dispatch a completed batch first.",
     "files": [
       "logistics.js"
     ]
@@ -3649,6 +3650,12 @@
     ]
   },
   {
+    "key": "Choose an unclaimed investment.",
+    "files": [
+      "owner-admin.js"
+    ]
+  },
+  {
     "key": "Choose an existing investment.",
     "files": [
       "owner-admin.js"
@@ -3667,7 +3674,7 @@
     ]
   },
   {
-    "key": "Active principal would exceed $100 billion.",
+    "key": "Active principal would exceed $10,000,000,000,000.",
     "files": [
       "owner-admin.js"
     ]
@@ -4783,30 +4790,6 @@
     ]
   },
   {
-    "key": "Territory capture attempts have a one-hour cooldown.",
-    "files": [
-      "territory-map.js"
-    ]
-  },
-  {
-    "key": "Only one successful territory capture per 24 hours.",
-    "files": [
-      "territory-map.js"
-    ]
-  },
-  {
-    "key": "Your family already holds ten conquered territories worldwide.",
-    "files": [
-      "territory-map.js"
-    ]
-  },
-  {
-    "key": "This family has a 24-hour territory recovery shield.",
-    "files": [
-      "territory-map.js"
-    ]
-  },
-  {
     "key": "Choose a map territory.",
     "files": [
       "territory-map.js"
@@ -4819,19 +4802,37 @@
     ]
   },
   {
-    "key": "Your family controls the maximum of thirty territories in this city.",
+    "key": "Territory capture attempts have a fifteen-minute cooldown in this city.",
+    "files": [
+      "territory-map.js"
+    ]
+  },
+  {
+    "key": "Only one successful territory capture per city per 24 hours.",
+    "files": [
+      "territory-map.js"
+    ]
+  },
+  {
+    "key": "Your family already holds ten conquered territories in this city.",
+    "files": [
+      "territory-map.js"
+    ]
+  },
+  {
+    "key": "This family has a 24-hour territory recovery shield in this city.",
+    "files": [
+      "territory-map.js"
+    ]
+  },
+  {
+    "key": "Your family controls the maximum of thirty-five territories in this city.",
     "files": [
       "territory-map.js"
     ]
   },
   {
     "key": "Newly acquired territory has one hour of protection.",
-    "files": [
-      "territory-map.js"
-    ]
-  },
-  {
-    "key": "Your family has reached the worldwide limit for this territory type.",
     "files": [
       "territory-map.js"
     ]
@@ -4867,25 +4868,19 @@
     ]
   },
   {
-    "key": "Select one to twenty different territories.",
+    "key": "Select one to twenty-five different territories.",
     "files": [
       "territory-map.js"
     ]
   },
   {
-    "key": "Only twenty territories per city may be bought. Capture to grow to thirty.",
+    "key": "Only twenty-five territories per city may be bought, plus ten conquered territories.",
     "files": [
       "territory-map.js"
     ]
   },
   {
     "key": "A selected territory is unavailable. Refresh the map.",
-    "files": [
-      "territory-map.js"
-    ]
-  },
-  {
-    "key": "Worldwide territory-type limit reached.",
     "files": [
       "territory-map.js"
     ]
@@ -5632,6 +5627,24 @@
     "key": "Assault cancelled. No resources were spent.",
     "files": [
       "war-operations.js"
+    ]
+  },
+  {
+    "key": "{v0} declared a 24-hour war on {v1}. Successful raids score one point; failed attacks award no points.",
+    "files": [
+      "family-wars.js"
+    ]
+  },
+  {
+    "key": "{v0} launched {v1} against {v2}: failed. No war points awarded for a failed operation. {v3}",
+    "files": [
+      "war-operations.js"
+    ]
+  },
+  {
+    "key": "Your family currently holds {v0}/10 conquered plots in {v1}. Treasury ${v2}.",
+    "files": [
+      "game-guide.js"
     ]
   }
 ]

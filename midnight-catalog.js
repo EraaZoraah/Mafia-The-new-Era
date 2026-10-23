@@ -13,7 +13,7 @@ export const raceClasses=[{id:'street',name:'Street',fee:2500,base:58,maxTune:2}
 export const driverProgress=xp=>{const rank=driverRanks.findLast(r=>xp>=r.xp)||driverRanks[0];return {...rank,next:driverRanks[rank.level]||null};};
 export function carPerformance(car){
  const id=car.id+' '+car.name,classic=/classic|1965|2cv|beetle|240 estate|325i e30|190 e|xjs|944|eldorado|azure|testarossa|countach|e-type|959|f40|280 sl|507|300 sl|db5|miura|2900|250 gt|57sc|xk120/i.test(id);
- const category=car.id==='urus'?raceClasses[1]:!classic&&/mclaren|ferrari|bugatti|lamborghini|rimac|koenigsegg|pagani|corvette|carrera gt|maserati mc20/i.test(id)?raceClasses[2]:/porsche|bmw m|amg|audi rs|gtr|gt-r|nsx|supra|maserati|bentley|aston|lexus lc|ferrari|lamborghini|300 sl|507|miura|250 gt|57sc|testarossa|countach|959|f40/i.test(id)?raceClasses[1]:raceClasses[0];
+ const category=car.id==='urus'?raceClasses[1]:!classic&&/mclaren|ferrari|bugatti|lamborghini|rimac|koenigsegg|pagani|corvette|carrera gt|maserati mc20|amg.one|valkyrie|gordon murray|hennessey|czinger|aspark/i.test(id)?raceClasses[2]:/porsche|bmw m|amg|audi rs|gtr|gt-r|nsx|supra|maserati|bentley|aston|lexus lc|ferrari|lamborghini|300 sl|507|miura|250 gt|57sc|testarossa|countach|959|f40/i.test(id)?raceClasses[1]:raceClasses[0];
  const bytes=createHash('sha256').update(car.id).digest(),stats=[0,1,2].map(i=>category.base+bytes[i]%13-6);if(classic){stats[0]+=3;stats[1]-=5;}
  return {class:category.id,className:category.name,handling:stats[0],acceleration:stats[1],reliability:stats[2],rating:Math.round(stats.reduce((a,b)=>a+b,0)/3*10),fee:category.fee,maxTune:category.maxTune};
 }

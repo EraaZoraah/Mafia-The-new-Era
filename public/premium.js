@@ -14,19 +14,19 @@ export function createPremiumUI({api,getMe,refresh,toast,esc,money,date,navigate
 
   function perkLines(item){
 
-    const lines=[];if(item.category==='garage')lines.push(item.storageKind?item.capacity+' storage capacity':'Six purchased-car bays');
+    const lines=[];if(item.category==='garage')lines.push(item.storageKind?ltext`${item.capacity} storage capacity`:ltext('Six purchased-car bays'));
 
-    if(item.income)lines.push(`${money(Math.floor(item.income*getMe().user.passiveIncomeMultiplier))} passive income / hour`);
+    if(item.income)lines.push(ltext`${money(Math.floor(item.income*getMe().user.passiveIncomeMultiplier))} passive income / hour`);
 
-    if(item.perks.rewardBps)lines.push(`+${pct(item.perks.rewardBps)} to all crime payouts`);
+    if(item.perks.rewardBps)lines.push(ltext`+${pct(item.perks.rewardBps)} to all crime payouts`);
 
-    if(item.perks.energyCapacity)lines.push(`+${item.perks.energyCapacity} maximum energy`);
+    if(item.perks.energyCapacity)lines.push(ltext`+${item.perks.energyCapacity} maximum energy`);
 
-    if(item.perks.energySpeed)lines.push(`Energy regenerates ${item.perks.energySpeed/1000}s faster`);
+    if(item.perks.energySpeed)lines.push(ltext`Energy regenerates ${item.perks.energySpeed/1000}s faster`);
 
-    if(item.perks.healthSpeed)lines.push(`Health regenerates ${item.perks.healthSpeed/1000}s faster`);
+    if(item.perks.healthSpeed)lines.push(ltext`Health regenerates ${item.perks.healthSpeed/1000}s faster`);
 
-    if(item.perks.cooldownBps)lines.push(`${pct(item.perks.cooldownBps)} shorter crime cooldowns`);
+    if(item.perks.cooldownBps)lines.push(ltext`${pct(item.perks.cooldownBps)} shorter crime cooldowns`);
 
     return lines;
 

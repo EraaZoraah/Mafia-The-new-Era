@@ -16,7 +16,7 @@ test('Luca uses actual pending car quotes, parking and warehouse capacity',t=>{
  f.run('UPDATE users SET prison_until=? WHERE id=1',f.time()+3600000);assert.match(f.call('guide?q=stolen%20vehicle').body.answer,/unavailable until release/);
 });
 test('Luca explains current family capture counts, cooldowns and role restrictions',t=>{
- const f=fixture(t);f.run('INSERT INTO family_capture_state(family_id,attempt_until,success_until,shield_until) VALUES(1,?,?,0)',f.time()+3600000,f.time()+86400000);
+ const f=fixture(t);f.run("UPDATE users SET city='New York'");f.run("INSERT INTO family_city_capture_state(family_id,city,attempt_until,success_until,shield_until) VALUES(1,'New York',?,?,0)",f.time()+3600000,f.time()+86400000);
  const r=f.call('guide?q=kan%20ik%20territorium%20veroveren',undefined,2);assert.equal(r.status,200);assert.match(r.body.answer,/0\/10/);assert.equal(r.body.language,'nl');assert.match(r.body.answer,/Wachttijd tot/);assert.match(r.body.answer,/Vraag je Don of Capo/);assert.equal(r.body.links[0].tab,'family-territory');
  const outsider=f.call('guide?q=city%20map',undefined,4);assert.match(outsider.body.answer,/Join a family first/);
  assert.match(f.call('guide?q=TERRITORY',undefined,2).body.answer,/Attempt cooldown until/);

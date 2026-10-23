@@ -33,7 +33,7 @@ export function installEmpire(db,{offerBribe=()=>null,detain=()=>{},supporterBon
    CREATE TABLE mystery_offers(id INTEGER PRIMARY KEY AUTOINCREMENT,user_id INTEGER NOT NULL UNIQUE REFERENCES users(id),kind TEXT NOT NULL,reward_min INTEGER NOT NULL,reward_max INTEGER NOT NULL,expires_at INTEGER NOT NULL);
    INSERT INTO mystery_offers SELECT * FROM mystery_offers_legacy;DROP TABLE mystery_offers_legacy;`);
  });
- if(!q("SELECT sql FROM sqlite_master WHERE name='family_assets'").sql.includes('BETWEEN 1 AND 25'))transaction(()=>{db.exec(`CREATE TABLE family_assets_new(family_id INTEGER NOT NULL REFERENCES families(id),item_id TEXT NOT NULL,quantity INTEGER NOT NULL CHECK(quantity BETWEEN 1 AND 25),PRIMARY KEY(family_id,item_id));INSERT INTO family_assets_new SELECT * FROM family_assets;DROP TABLE family_assets;ALTER TABLE family_assets_new RENAME TO family_assets;`)});
+ if(!q("SELECT sql FROM sqlite_master WHERE name='family_assets'").sql.includes('BETWEEN 1 AND 525'))transaction(()=>{db.exec(`CREATE TABLE family_assets_new(family_id INTEGER NOT NULL REFERENCES families(id),item_id TEXT NOT NULL,quantity INTEGER NOT NULL CHECK(quantity BETWEEN 1 AND 525),PRIMARY KEY(family_id,item_id));INSERT INTO family_assets_new SELECT * FROM family_assets;DROP TABLE family_assets;ALTER TABLE family_assets_new RENAME TO family_assets;`)});
  installDiplomacy(db);
  const membership=id=>q('SELECT m.*,f.leader_id FROM family_members m JOIN families f ON f.id=m.family_id WHERE m.user_id=?',id);
  if(!q("SELECT sql FROM sqlite_master WHERE name='family_members'").sql.includes("'consigliere'"))transaction(()=>{db.exec(`CREATE TABLE family_members_new(user_id INTEGER PRIMARY KEY REFERENCES users(id),family_id INTEGER NOT NULL REFERENCES families(id),family_role TEXT NOT NULL DEFAULT 'member' CHECK(family_role IN ('member','soldier','enforcer','consigliere','underboss','capo')));INSERT INTO family_members_new SELECT user_id,family_id,family_role FROM family_members;DROP TABLE family_members;ALTER TABLE family_members_new RENAME TO family_members;`)});
@@ -137,7 +137,7 @@ export function installEmpire(db,{offerBribe=()=>null,detain=()=>{},supporterBon
   const quote=raidQuote(from,target),chance=quote.chance,success=roll()<chance*10000;
   const stolen=success?Math.floor(quote.maxLoot*draw(50,100)/100):0;
   const warId=wars.record(from.id,target.id,id,success,stolen,chance,quote.attackPower,quote.defenderPower);
-  run('UPDATE users SET energy=energy-35 WHERE id=?',id);run('UPDATE families SET treasury=treasury+?,raid_until=? WHERE id=?',stolen,clock()+30*60000,from.id);run('UPDATE families SET treasury=treasury-?,shield_until=? WHERE id=?',stolen,clock()+20*60000,target.id);
+  run('UPDATE users SET energy=energy-35 WHERE id=?',id);run('UPDATE families SET treasury=treasury+?,raid_until=? WHERE id=?',stolen,clock()+15*60000,from.id);run('UPDATE families SET treasury=treasury-?,shield_until=? WHERE id=?',stolen,clock()+15*60000,target.id);
   run('INSERT INTO family_raid_history(attacker_family,target_family,success,loot,created_at) VALUES(?,?,?,?,?)',from.id,target.id,success?1:0,stolen,clock());
   run('INSERT INTO operation_history(user_id,kind,success,created_at) VALUES(?,?,?,?)',id,'family raid',success?1:0,clock());
   familyLog(from.id,u.username+' raided '+target.name+': '+(success?'success':'failed')+'. Treasury +$'+stolen+'.');

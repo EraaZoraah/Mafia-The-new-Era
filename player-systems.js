@@ -1,7 +1,7 @@
 import {MAX_CASH} from './money.js';
 export const WEDDING_COST=50000000,MARRIAGE_BONUS=.10;
 export const liquidationChance=rounds=>Math.min(.90,.35+.55*(1-Math.exp(-(rounds-60)/1500)));
-export const backfireChance=rounds=>Math.min(.65,.65*(1-Math.exp(-rounds/1500)));
+export const backfireChance=rounds=>Math.min(.35,.35*(1-Math.exp(-Math.max(0,rounds)/12000)));
 export function installPlayerSystems(db,{transaction,clock,fail,settleRaw,available,notify}){
  const q=(s,...a)=>db.prepare(s).get(...a),all=(s,...a)=>db.prepare(s).all(...a),run=(s,...a)=>db.prepare(s).run(...a),valid=n=>Number.isSafeInteger(n)&&n>0&&n<=1e12;
  db.exec(`CREATE TABLE IF NOT EXISTS bounties(id INTEGER PRIMARY KEY,sponsor_id INTEGER NOT NULL REFERENCES users(id),target_id INTEGER NOT NULL REFERENCES users(id),amount INTEGER NOT NULL CHECK(amount>0 AND amount<=1000000000000),status TEXT NOT NULL DEFAULT 'open',winner_id INTEGER REFERENCES users(id),paid INTEGER NOT NULL DEFAULT 0,created_at INTEGER NOT NULL,settled_at INTEGER NOT NULL DEFAULT 0,request_key TEXT NOT NULL,UNIQUE(sponsor_id,request_key));

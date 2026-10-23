@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.26.0 — 2026-10-23
+
+- Nine illustrated cars and five additional garages expand the purchased collection to sixty places, with eight exclusive models and extra utility perks.
+- Reviewed vehicle prices and capped collection benefits across personal and family fleets.
+- Territory limits and capture protections apply per city; failed attacks no longer reward inactivity with defender points.
+- Cargo in transit frees local production capacity; failed art heists have shorter retry timers.
+- Direct quoted bail from arrest notices and fewer repeated outcome popups.
+- Updated English, Dutch, Spanish, French and German rules, catalog resources and Luca guidance. Bot callers follow current city and cargo state.
+
 ## 1.25.0 — 2026-10-22
 
 - Unread update announcements open on first sign-in or app opening with an existing session; read receipts keep later visits on normal pages.

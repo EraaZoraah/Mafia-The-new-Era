@@ -54,9 +54,9 @@ test('art results include failed heists, appraisals, winning bids and net commis
  const f=fixture(t);f.dice(9999);const failed=f.call('art/heist',{kind:'gallery'});assert.equal(failed.body.success,false);assert.equal(f.call('art').body.trade.net,'-25000');
  f.advance(3600001);f.dice(2000);const recovered=f.call('art/heist',{kind:'gallery'}).body.object;
  const appraisal=f.call('art/appraise',{id:recovered.id});assert.equal(appraisal.status,200);
- f.call('art/list',{id:recovered.id,hours:6,reserve:100000});const auction=f.call('art').body.auctions[0];assert.equal(f.call('art/bid',{id:auction.id,amount:100000},2).status,200);
+ f.call('art/list',{id:recovered.id,hours:6,reserve:10000000});const auction=f.call('art').body.auctions[0];assert.equal(f.call('art/bid',{id:auction.id,amount:10000000},2).status,200);
  assert.equal(f.call('art',undefined,2).body.trade.invested,'0');f.advance(6*3600000);f.tick();
- const s=f.call('art').body.trade;assert.equal(s.invested,String(50000+appraisal.body.cost));assert.equal(s.received,'92000');assert.equal(s.net,String(42000-appraisal.body.cost));assert.equal(f.call('art',undefined,2).body.trade.invested,'100000');
+ const s=f.call('art').body.trade;assert.equal(s.invested,String(50000+appraisal.body.cost));assert.equal(s.received,'9200000');assert.equal(s.net,String(9150000-appraisal.body.cost));assert.equal(f.call('art',undefined,2).body.trade.invested,'10000000');
  resetTradePeriod(f.db,1);f.run('DELETE FROM art_trade_receipts WHERE user_id=1');assert.equal(f.call('art').body.trade.net,'0');f.advance(3600001);f.dice(9999);f.call('art/heist',{kind:'gallery'});assert.equal(f.call('art').body.trade.net,'-25000');
 });
 test('sale badges belong to each completed batch and use actual costs and affordable routes',t=>{

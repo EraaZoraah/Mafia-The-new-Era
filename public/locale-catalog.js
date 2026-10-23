@@ -638,6 +638,104 @@ export const localeCatalog=[
     "unlock": "Midnight getaway"
   },
   {
+    "id": "atelier",
+    "name": "Imperial Motor Atelier",
+    "description": "A luxury six-bay garage for purchased cars. Ten unique garages provide sixty collection places.",
+    "title": "Motor Curator · Imperial Motor Atelier",
+    "unlock": "Six purchased-car bays"
+  },
+  {
+    "id": "black-label",
+    "name": "Black Label Car Sanctuary",
+    "description": "A luxury six-bay garage for purchased cars. Ten unique garages provide sixty collection places.",
+    "title": "Motor Curator · Black Label Car Sanctuary",
+    "unlock": "Six purchased-car bays"
+  },
+  {
+    "id": "onyx-gallery",
+    "name": "Onyx Hypercar Gallery",
+    "description": "A luxury six-bay garage for purchased cars. Ten unique garages provide sixty collection places.",
+    "title": "Motor Curator · Onyx Hypercar Gallery",
+    "unlock": "Six purchased-car bays"
+  },
+  {
+    "id": "crown-vault",
+    "name": "Crown Automobile Vault",
+    "description": "A luxury six-bay garage for purchased cars. Ten unique garages provide sixty collection places.",
+    "title": "Motor Curator · Crown Automobile Vault",
+    "unlock": "Six purchased-car bays"
+  },
+  {
+    "id": "diamond-pavilion",
+    "name": "Diamond Sovereign Motor Pavilion",
+    "description": "A luxury six-bay garage for purchased cars. Ten unique garages provide sixty collection places.",
+    "title": "Motor Curator · Diamond Sovereign Motor Pavilion",
+    "unlock": "Six purchased-car bays"
+  },
+  {
+    "id": "amg-one",
+    "name": "Mercedes-AMG ONE",
+    "description": "Modern hypercar with price-scaled crime income. Requires one free garage bay.",
+    "title": "Collector · Mercedes-AMG ONE",
+    "unlock": "Midnight getaway"
+  },
+  {
+    "id": "t50",
+    "name": "Gordon Murray T.50",
+    "description": "Exclusive modern collection car. Adds energy capacity and shorter crime cooldowns, alongside its price-scaled crime-income perk. Requires one free garage bay.",
+    "title": "Exclusive Collector · Gordon Murray T.50",
+    "unlock": "Midnight getaway"
+  },
+  {
+    "id": "solus-gt",
+    "name": "McLaren Solus GT",
+    "description": "Exclusive modern collection car. Adds energy capacity and shorter crime cooldowns, alongside its price-scaled crime-income perk. Requires one free garage bay.",
+    "title": "Exclusive Collector · McLaren Solus GT",
+    "unlock": "Midnight getaway"
+  },
+  {
+    "id": "valkyrie",
+    "name": "Aston Martin Valkyrie",
+    "description": "Exclusive modern collection car. Adds energy capacity and shorter crime cooldowns, alongside its price-scaled crime-income perk. Requires one free garage bay.",
+    "title": "Exclusive Collector · Aston Martin Valkyrie",
+    "unlock": "Midnight getaway"
+  },
+  {
+    "id": "cc850",
+    "name": "Koenigsegg CC850",
+    "description": "Exclusive modern collection car. Adds energy capacity and shorter crime cooldowns, alongside its price-scaled crime-income perk. Requires one free garage bay.",
+    "title": "Exclusive Collector · Koenigsegg CC850",
+    "unlock": "Midnight getaway"
+  },
+  {
+    "id": "aspark-owl",
+    "name": "Aspark Owl",
+    "description": "Exclusive modern collection car. Adds energy capacity and shorter crime cooldowns, alongside its price-scaled crime-income perk. Requires one free garage bay.",
+    "title": "Exclusive Collector · Aspark Owl",
+    "unlock": "Midnight getaway"
+  },
+  {
+    "id": "venom-f5",
+    "name": "Hennessey Venom F5 Revolution Roadster",
+    "description": "Exclusive modern collection car. Adds energy capacity and shorter crime cooldowns, alongside its price-scaled crime-income perk. Requires one free garage bay.",
+    "title": "Exclusive Collector · Hennessey Venom F5 Revolution Roadster",
+    "unlock": "Midnight getaway"
+  },
+  {
+    "id": "czinger-21c",
+    "name": "Czinger 21C",
+    "description": "Exclusive modern collection car. Adds energy capacity and shorter crime cooldowns, alongside its price-scaled crime-income perk. Requires one free garage bay.",
+    "title": "Exclusive Collector · Czinger 21C",
+    "unlock": "Midnight getaway"
+  },
+  {
+    "id": "boat-tail",
+    "name": "Rolls-Royce Boat Tail",
+    "description": "Exclusive modern collection car. Adds energy capacity and shorter crime cooldowns, alongside its price-scaled crime-income perk. Requires one free garage bay.",
+    "title": "Exclusive Collector · Rolls-Royce Boat Tail",
+    "unlock": "Midnight getaway"
+  },
+  {
     "id": "courier",
     "name": "Discreet courier"
   },
@@ -1292,6 +1390,10 @@ export const localeCatalog=[
     "name": "Grand Supporter"
   },
   {
+    "id": "skin-mr-noob",
+    "name": "Mr.Noob"
+  },
+  {
     "id": "skin-capo-vittorio",
     "name": "Capo Vittorio"
   },
@@ -1570,6 +1672,11 @@ export const localeCatalog=[
     "id": "owner-goddess",
     "name": "The Mafia Goddess",
     "frameName": "Owner Diamond"
+  },
+  {
+    "id": "mr-noob",
+    "name": "Mr.Noob",
+    "frameName": "Mr.Noob"
   },
   {
     "id": "canal-nocturne",

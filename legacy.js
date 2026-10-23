@@ -73,8 +73,8 @@ export function installLegacy(db,{marriageBonus=()=>1,clock,transaction,fail,set
  function score(s){
   const rows=new Map(all('SELECT id,name FROM families').map(f=>[f.id,{familyId:f.id,name:f.name,points:0,wins:0,battles:0}]));
   for(const b of all('SELECT b.*,w.attacker_id war_attacker,w.defender_id war_defender FROM family_war_battles b JOIN family_wars w ON w.id=b.war_id WHERE b.created_at>=? AND b.created_at<?',s.starts_at,s.ends_at)){
-   const winner=b.success?b.attacker_id:b.attacker_id===b.war_attacker?b.war_defender:b.war_attacker,row=rows.get(winner);
-   if(row){row.points+=b.success?(b.kind==='capture'?3:b.kind==='sabotage'||b.kind==='joint assault'?2:1):1;row.battles++}
+   const row=rows.get(b.attacker_id);
+   if(row){row.points+=b.success?(b.kind==='capture'?3:b.kind==='sabotage'||b.kind==='joint assault'?2:1):0;row.battles++}
   }
   for(const w of all("SELECT winner_id FROM family_wars WHERE status<>'active' AND winner_id IS NOT NULL AND attacker_score+defender_score>0 AND ended_at>=? AND ended_at<?",s.starts_at,s.ends_at)){const row=rows.get(w.winner_id);if(row){row.wins++;row.points+=25}}
   const sorted=[...rows.values()].sort((a,b)=>b.points-a.points||a.name.localeCompare(b.name));let rank=0,previous=-1;return sorted.map((r,i)=>{if(r.points!==previous)rank=i+1;previous=r.points;return {...r,rank,trophy:r.points>0&&rank<=3?['Gold crown','Silver crest','Bronze rose'][rank-1]:''}});

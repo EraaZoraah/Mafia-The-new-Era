@@ -169,3 +169,31 @@ for(const [id,name,price] of [['executive','Executive Gallery Garage',7500000],[
 
 for(const car of collectorCars)car.perks.energyCapacity=Math.max(0,...cars.filter(c=>c.price<=car.price).map(c=>c.perks.energyCapacity||0));
 cars.push(...collectorCars);catalog.push(...collectorCars);
+
+// Ten individually owned six-bay garages: exactly sixty purchased-car places.
+for(const [id,name,price] of [
+ ['atelier','Imperial Motor Atelier',250000000],['black-label','Black Label Car Sanctuary',500000000],
+ ['onyx-gallery','Onyx Hypercar Gallery',1000000000],['crown-vault','Crown Automobile Vault',2000000000],
+ ['diamond-pavilion','Diamond Sovereign Motor Pavilion',4000000000]
+]){const item={id,name,category:'garage',price,income:0,limit:1,parkingCapacity:6,perks:{},title:'Motor Curator · '+name,unlock:'Six purchased-car bays',description:'A luxury six-bay garage for purchased cars. Ten unique garages provide sixty collection places.',image:'/images/garage-'+id+'.png'};garages.push(item);catalog.push(item);}
+for(const [i,[id,name,price]] of [
+ ['amg-one','Mercedes-AMG ONE',350000000],['t50','Gordon Murray T.50',1000000000],
+ ['solus-gt','McLaren Solus GT',1500000000],['valkyrie','Aston Martin Valkyrie',2000000000],
+ ['cc850','Koenigsegg CC850',3000000000],['aspark-owl','Aspark Owl',4000000000],
+ ['venom-f5','Hennessey Venom F5 Revolution Roadster',5000000000],['czinger-21c','Czinger 21C',7500000000],
+ ['boat-tail','Rolls-Royce Boat Tail',12500000000]
+].entries()){
+ const exclusive=i>0,item={id,name,price,category:'car',tier:exclusive?'Exclusive collection':'Hypercar',exclusive,income:0,limit:1,image:'/images/car-'+id+'.png',perks:exclusive?{energyCapacity:30+i*5,cooldownBps:20+i*10}:{energyCapacity:20},title:(exclusive?'Exclusive Collector':'Collector')+' · '+name,unlock:'Midnight getaway',description:exclusive?'Exclusive modern collection car. Adds energy capacity and shorter crime cooldowns, alongside its price-scaled crime-income perk. Requires one free garage bay.':'Modern hypercar with price-scaled crime income. Requires one free garage bay.'};cars.push(item);catalog.push(item);
+}
+// Basis points are additive and bounded by the existing ownership bonus cap.
+for(const car of cars)car.perks.rewardBps=Math.round(40+45*Math.log10(1+car.price/1000000));
+
+// Fictional collection prices: performance, luxury and rarity have distinct scales.
+const vehiclePrices={fiat500:180000,yaris:320000,golf:600000,civic:800000,model3:1200000,bmw330:2000000,audiS5:4000000,amg:6000000,m5:10000000,g63:18000000,'911':35000000,continental:40000000,ghost:55000000,cullinan:75000000,'750s':85000000,db12:95000000,temerario:110000000,revuelto:140000000,'12cilindri':175000000,nevera:220000000,jesko:260000000,utopia:300000000,f80:350000000,tourbillon:450000000,rs7:12000000,rsq8:18000000,'audi-a7':8500000,'bmw-m440':10000000,'mercedes-cle':12500000,'lexus-ls':15000000,'genesis-g90':17000000,'porsche-panamera':24000000,'maserati-granturismo':30000000,'bentley-flying-spur':45000000,'rolls-dawn':70000000,'mercedes-pagoda':9000000,'bmw-507':22000000,'mercedes-300sl-roadster':35000000,'aston-db5':45000000,'lamborghini-miura':75000000,'alfa-8c-classic':110000000,'ferrari-250-california':180000000,'bugatti-57sc':250000000,'ferrari-250-gto':450000000,escalade:16000000,'maybach-s680':38000000,'phantom-extended':65000000,'phantom-limousine':100000000,'jaguar-xk120':18000000,urus:24000000,chiron:240000000,'amg-one':550000000};
+for(const car of cars){if(vehiclePrices[car.id])car.price=vehiclePrices[car.id];car.perks.rewardBps=Math.round(40+45*Math.log10(1+car.price/1000000));}
+for(const [i,item] of helicopters.entries()){item.price=[35000000,120000000,380000000,850000000,2500000000][i];item.perks={cooldownBps:180+i*100,rewardBps:Math.round(40+40*Math.log10(1+item.price/1000000))};}
+for(const [i,item] of jets.entries()){item.price=[120000000,450000000,1200000000,3200000000,10000000000][i];item.perks={rewardBps:Math.round(90+70*Math.log10(1+item.price/1000000)),energyCapacity:20+i*10};}
+for(const [i,item] of yachts.entries()){item.price=[12000000,180000000,1200000000,4000000000,15000000000][i];item.perks={rewardBps:Math.round(80+80*Math.log10(1+item.price/1000000)),cooldownBps:100+i*40,energyCapacity:i*20};}
+
+// Energy convenience never falls when moving up the reviewed collection price ladder.
+let previousCarEnergy=0;for(const car of [...cars].sort((a,b)=>a.price-b.price)){car.perks.energyCapacity=Math.max(previousCarEnergy,car.perks.energyCapacity||0);previousCarEnergy=car.perks.energyCapacity;}

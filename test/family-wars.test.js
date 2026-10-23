@@ -4,9 +4,9 @@ import {fixture} from './helpers/game-fixture.js';
 import {raidChance} from '../family-wars.js';
 
 test('raid odds track relative Power, defense and a tiny underdog chance',()=>{
- assert.equal(raidChance(100,100),.5);assert.equal(raidChance(1,1000000),.01);
- assert.equal(raidChance(1000000,1),.95);assert.ok(raidChance(1000,100)>raidChance(100,100));
- assert.ok(raidChance(100,100,.75)<raidChance(100,100));assert.equal(raidChance(0,0),.5);
+ assert.equal(raidChance(100,100),.52);assert.equal(raidChance(1,1000000),.14500000000000002);
+ assert.equal(raidChance(1000000,1),.895);assert.ok(raidChance(1000,100)>raidChance(100,100));
+ assert.ok(raidChance(100,100,.75)<raidChance(100,100));assert.equal(raidChance(0,0),.52);
 });
 test('raid loot exceeds the old cap, stays below ten percent and conserves treasury cash',t=>{
  const f=fixture(t);f.high(true);const before=f.q('SELECT SUM(treasury) total FROM families').total;
@@ -16,12 +16,12 @@ test('raid loot exceeds the old cap, stays below ten percent and conserves treas
  const ammo=f.q("SELECT ammo FROM armory_accounts WHERE scope='family' AND owner_id=1").ammo;
  assert.equal(f.call('family/raid',{familyId:2}).status,429);assert.equal(f.q("SELECT ammo FROM armory_accounts WHERE scope='family' AND owner_id=1").ammo,ammo);
 });
-test('only leadership declares wars, duplicates are rejected and battles persist with both sides scoring',t=>{
+test('only leadership declares wars, duplicates are rejected and failed attacks do not grant free points',t=>{
  const f=fixture(t);assert.equal(f.call('family/war/declare',{familyId:2},2).status,403);assert.equal(f.call('family/war/declare',{familyId:1}).status,400);
  assert.equal(f.call('family/war/declare',{familyId:2}).status,200);assert.equal(f.call('family/war/declare',{familyId:2}).status,409);
  assert.equal(f.call('family/raid',{familyId:2}).body.success,true);
  f.advance(31*60000);f.dice(9999);f.run('UPDATE users SET energy=100');assert.equal(f.call('family/raid',{familyId:1},3).body.success,false);
- f.reset();const w=f.call('family/rivals').body.wars[0];assert.equal(w.attacker_score,2);assert.equal(w.defender_score,0);assert.equal(w.battles.length,2);assert.ok(w.battles.every(b=>b.attacker_power>0));
+ f.reset();const w=f.call('family/rivals').body.wars[0];assert.equal(w.attacker_score,1);assert.equal(w.defender_score,0);assert.equal(w.battles.length,2);assert.ok(w.battles.every(b=>b.attacker_power>0));
  f.advance(24*3600000);const ended=f.call('family/rivals').body.wars[0];assert.equal(ended.status,'completed');assert.equal(ended.winner_id,1);assert.equal(ended.ended_at,ended.ends_at);
  assert.equal(f.call('family/raid',{familyId:2}).status,409);
 });

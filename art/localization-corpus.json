@@ -569,6 +569,13 @@
     "translated": true
   },
   {
+    "key": "{v0} passive income / hour",
+    "files": [
+      "premium.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "{v0} principal + {v1} interest = {v2} at maturity.",
     "files": [
       "investment-ui.js"
@@ -593,6 +600,20 @@
     "key": "{v0} selected · approximately {v1}",
     "files": [
       "city-map-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "{v0} shorter crime cooldowns",
+    "files": [
+      "premium.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "{v0} storage capacity",
+    "files": [
+      "premium.js"
     ],
     "translated": true
   },
@@ -738,7 +759,7 @@
     "translated": true
   },
   {
-    "key": "{v10} {v11} · +{v12} XP · {v13}% {v14} · {v15}h {v16}",
+    "key": "{v10} {v11} · +{v12} XP · {v13}% {v14} · {v15}h {v16} · {v17}: {v18} {v19}",
     "files": [
       "art-market-ui.js"
     ],
@@ -1264,9 +1285,23 @@
     "translated": true
   },
   {
+    "key": "+{v0} maximum energy",
+    "files": [
+      "premium.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "+{v0} success points · {v1} runs left · expires {v2}",
     "files": [
       "empire-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "+{v0} to all crime payouts",
+    "files": [
+      "premium.js"
     ],
     "translated": true
   },
@@ -1969,6 +2004,13 @@
     "key": "AFTER DARK. ABOVE THE LIMIT.",
     "files": [
       "midnight-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "After failure",
+    "files": [
+      "art-market-ui.js"
     ],
     "translated": true
   },
@@ -2970,6 +3012,13 @@
     "translated": true
   },
   {
+    "key": "Buy release now",
+    "files": [
+      "feedback.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Buy selected territories",
     "files": [
       "city-map-ui.js"
@@ -2991,7 +3040,7 @@
     "translated": true
   },
   {
-    "key": "Buy while your family owns fewer than 20 territories in this city. Capture rival territory during a declared war to reach 30 in a city, with at most ten conquered territories held worldwide. The worldwide limit remains 25 of each territory type. Only the Don and Capos buy or capture. Every capture attempt has a one-hour cooldown. One successful capture per 24 hours; a defeated family receives 24 hours of territory protection. Losing a conquered plot frees a capture slot.",
+    "key": "Buy up to 25 territories per city, plus hold 10 conquered territories per city: 35 total. Limits cover all territory types together. Only Don and Capos buy or capture. Attempts have a 15-minute cooldown. One successful capture per city per 24 hours; the losing family gets a 24-hour territory shield in that city. Losing a conquered plot frees a capture slot.",
     "files": [
       "city-map-ui.js"
     ],
@@ -3135,7 +3184,7 @@
     "translated": true
   },
   {
-    "key": "Central territories reduce capture chance by 30%. An adjacent family plot increases it by 15%; entering a city without any foothold reduces it by 35%. Power, defenses, shared attack cooldowns and recovery shields still apply. Territory grants Power, defense and shipment success bonuses within the existing family caps.",
+    "key": "Central and isolated territory are harder to capture; an adjacent family plot helps. Combined geographic effects are bounded between a 25% penalty and a 15% bonus. Power, defenses, shared attack cooldowns and recovery shields still apply. Territory grants Power, defense and shipment success bonuses within the existing family caps.",
     "files": [
       "city-map-ui.js"
     ],
@@ -3337,6 +3386,13 @@
     "key": "City markets & cargo routes",
     "files": [
       "freight-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "City ownership: {v9} / 25 purchased + {v10} / 10 conquered",
+    "files": [
+      "city-map-ui.js"
     ],
     "translated": true
   },
@@ -3695,7 +3751,7 @@
     "translated": true
   },
   {
-    "key": "Conquered holdings: {v20} / 10 worldwide. Next attempt: {v21}. Next successful capture: {v22}.",
+    "key": "Conquered holdings: {v20} / 10 in this city. Next attempt: {v21}. Next successful capture: {v22}.",
     "files": [
       "city-map-ui.js"
     ],
@@ -4514,6 +4570,13 @@
     "translated": true
   },
   {
+    "key": "Energy regenerates {v0}s faster",
+    "files": [
+      "premium.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Energy transferred",
     "files": [
       "feedback.js"
@@ -4572,7 +4635,7 @@
     "translated": true
   },
   {
-    "key": "Estate defenses and active members reduce a rival raid’s success chance by up to 75%. Vaults and defenses reduce stolen funds by up to 70%. A raid can never destroy your purchased assets.",
+    "key": "Estate defenses and active members provide up to 75 defense points with a bounded effect on raid success. Vaults and defenses reduce stolen funds by up to 70%. A raid can never destroy your purchased assets.",
     "files": [
       "empire-ui.js"
     ],
@@ -5161,7 +5224,7 @@
     "translated": true
   },
   {
-    "key": "Five occupied slots per owner, including finished unsold batches. Personal timers pause in prison or hospital; family production continues. Only Don and Capo can start or sell family batches.",
+    "key": "Five local slots per owner, including finished unsold batches. Cargo in transit uses no local slots or warehouse space. Personal timers pause in prison or hospital; family production continues. Only Don and Capo can start or sell family batches.",
     "files": [
       "logistics-ui.js"
     ],
@@ -5444,6 +5507,13 @@
   },
   {
     "key": "Health",
+    "files": [
+      "premium.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Health regenerates {v0}s faster",
     "files": [
       "premium.js"
     ],
@@ -6487,7 +6557,7 @@
     "translated": true
   },
   {
-    "key": "Mafia: The new Era © · v1.25.4",
+    "key": "Mafia: The new Era © · v1.26.0",
     "files": [
       "app.js"
     ],
@@ -6816,6 +6886,13 @@
     "key": "Minimum sale price",
     "files": [
       "vehicles-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "minutes",
+    "files": [
+      "art-market-ui.js"
     ],
     "translated": true
   },
@@ -7956,6 +8033,13 @@
     "translated": true
   },
   {
+    "key": "Open prison options",
+    "files": [
+      "feedback.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Open profile",
     "files": [
       "community-ui.js"
@@ -8097,7 +8181,7 @@
     "translated": true
   },
   {
-    "key": "Paid from the shared treasury. Additional copies cost 35% more, or 10% for territory. Territory has a 25-per-type limit; other limits remain unchanged. Bonuses stack up to the displayed family limits. Only one master compound is allowed. Upgrading replaces your old base and credits 90% of its base catalog price; 10% is the moving fee.",
+    "key": "Paid from the shared treasury. Additional copies cost 35% more, or 10% for territory. Territory permits 25 purchased plus 10 conquered plots per city; other limits remain unchanged. Bonuses stack up to the displayed family limits. Only one master compound is allowed. Upgrading replaces your old base and credits 90% of its base catalog price; 10% is the moving fee.",
     "files": [
       "empire-ui.js"
     ],
@@ -10412,6 +10496,13 @@
     "translated": true
   },
   {
+    "key": "Six purchased-car bays",
+    "files": [
+      "premium.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Six standard Skins are free. Premium characters include a matching interchangeable frame.",
     "files": [
       "shop-ui.js"
@@ -11199,6 +11290,13 @@
     "translated": true
   },
   {
+    "key": "This stay has already ended.",
+    "files": [
+      "feedback.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Tickets",
     "files": [
       "expansion-ui.js"
@@ -11413,7 +11511,7 @@
     "translated": true
   },
   {
-    "key": "Transfer one selected territory and its bonuses to your family. Maximum ten conquered holdings worldwide and one successful capture per 24 hours. Every attempt has a one-hour cooldown; losing families receive a 24-hour territory shield. Maximum 25 of each type. Other assets cannot be captured.",
+    "key": "Transfer one selected territory and its bonuses to your family. Per city: buy 25 territories and hold 10 conquered territories. One successful capture per city per 24 hours. Attempts have a 15-minute cooldown; losing families receive a 24-hour shield in that city. Other assets cannot be captured.",
     "files": [
       "war-ui.js"
     ],
@@ -12019,13 +12117,6 @@
     "translated": true
   },
   {
-    "key": "Worldwide ownership: {v9} / 25 of this type",
-    "files": [
-      "city-map-ui.js"
-    ],
-    "translated": true
-  },
-  {
     "key": "Write a message…",
     "files": [
       "community-ui.js"
@@ -12108,7 +12199,7 @@
     "translated": true
   },
   {
-    "key": "You control {v1} territories ({v2} city blocks). Opponent: {v3} territories. All attacks share the 30-minute family cooldown and grant 20 minutes of recovery protection.",
+    "key": "You control {v1} territories ({v2} city blocks). Opponent: {v3} territories. All attacks share a 15-minute family cooldown and 15 minutes of recovery protection.",
     "files": [
       "war-ui.js"
     ],
