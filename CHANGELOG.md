@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.29.1 — 2026-10-24
+
+- Fix entrance CSS image URLs rejected by production static-file routing; retain automatic WebP negotiation and original PNG fallback.
+- Add production HTTP checks for all CSS backgrounds, catalog artwork, skins, icons and optimized variants.
+
+
 ## 1.29.0 — 2026-10-24
 
 - Personal activity timeline with account-scoped history, category filters, paginated records and exact cash/bank summaries.

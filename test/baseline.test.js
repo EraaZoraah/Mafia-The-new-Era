@@ -1,3 +1,4 @@
+import {deliveryInventory} from '../scripts/art-delivery-inventory.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { mkdtemp, copyFile, cp, rm, readdir } from 'node:fs/promises';
@@ -7,6 +8,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 import { spawn, spawnSync } from 'node:child_process';
 import { once } from 'node:events';
 import { DatabaseSync } from 'node:sqlite';
+import {existsSync} from 'node:fs';
 import http from 'node:http';
 import {ranks,distinctionStep,progression,prestigeThreshold} from '../progression.js';
 
@@ -93,6 +95,14 @@ test('isolated prototype baseline', { timeout: 90000 }, async t => {
       const settings=await api('push',undefined,alice.cookie);assert.equal(settings.status,200);assert.equal(typeof settings.body.ready,'boolean');assert.equal(settings.body.privateKey,undefined);
       assert.equal((await api('push/save',{subscription:{endpoint:'http://127.0.0.1/private'}},alice.cookie)).status,400);
       for(const file of ['/scroll-position.js','/premium-theme.css','/push-ui.js','/sw.js','/input-limits.js','/es.js','/fr.js','/de.js','/manifest.webmanifest','/icons/app-logo-v4-192.png','/icons/app-logo-v4-512.png','/icons/app-logo-v4-maskable.png','/icons/app-logo-v4-apple.png'])assert.equal((await fetch(base+file)).status,200);
+    });
+    await t.test('all three entrance backgrounds referenced by CSS load through production image delivery',async()=>{
+      const cssResponse=await fetch(base+'/style.css');assert.equal(cssResponse.status,200);const css=await cssResponse.text();
+      for(const name of ['welcome-empire-v4','login-empire-v4','register-empire-v5']){
+        const url='/images/'+name+'.png';assert.ok(css.includes(url));
+        for(const accept of ['image/webp','image/png']){const response=await fetch(base+url,{headers:{Accept:accept}});assert.equal(response.status,200,url);assert.equal(response.headers.get('content-type'),accept);const data=Buffer.from(await response.arrayBuffer());assert.equal(accept==='image/webp'?data.subarray(8,12).toString():data.subarray(1,4).toString(),accept==='image/webp'?'WEBP':'PNG');}
+      }
+      for(const match of css.matchAll(/url\(['"]?(\/images\/[^)'"\s]+)['"]?\)/g)){const response=await fetch(base+match[1]);assert.equal(response.status,200,'CSS image '+match[1]);}
     });
     await t.test('modern artwork delivery is smaller while original image fallback remains available',async()=>{
       const optimized=await fetch(base+'/images/banner-home-v3.png',{headers:{Accept:'image/webp'}});
@@ -355,15 +365,17 @@ test('isolated prototype baseline', { timeout: 90000 }, async t => {
       await api('income/claim',{},alice.cookie);
       assert.equal((await api('me',undefined,alice.cookie)).body.user.cash,before+240);
     });
-    await t.test('all selected artwork is served locally with matching JPEG or PNG signatures',async()=>{
+    await t.test('complete image inventory loads through production routes with correct formats and optimized fallbacks',async()=>{
       for(const file of ['asset-order.js','finance-controls.js','nl-oct17.js'])assert.equal((await fetch(base+'/'+file)).status,200,file);
-      const module=await fetch(base+'/page-art.js');assert.equal(module.status,200);assert.match(module.headers.get('content-type'),/javascript/);
-      const d=(await api('catalog',undefined,alice.cookie)).body;
-      for(const item of [...d.catalog,...d.crimes]){
-        const response=await fetch(base+item.image);assert.equal(response.status,200,item.image);const bytes=new Uint8Array(await response.arrayBuffer());
-        if(item.image.endsWith('.png')){assert.match(response.headers.get('content-type'),/image\/png/);assert.deepEqual([...bytes.slice(0,8)],[137,80,78,71,13,10,26,10]);}
-        else {assert.match(response.headers.get('content-type'),/image\/jpeg/);assert.equal(bytes[0],255);assert.equal(bytes[1],216);}
+      const inventory=deliveryInventory();assert.deepEqual(inventory.missing,[]);let optimizedCount=0;
+      for(const url of inventory.files){
+        const response=await fetch(base+url,{headers:{Accept:'image/png,image/jpeg,image/svg+xml'}});assert.equal(response.status,200,url);const bytes=Buffer.from(await response.arrayBuffer());
+        if(url.endsWith('.svg')){assert.match(response.headers.get('content-type'),/image\/svg\+xml/,url);assert.match(bytes.toString(),/<svg\b/,url);}
+        else if(url.endsWith('.png')){assert.match(response.headers.get('content-type'),/image\/png/,url);assert.deepEqual([...bytes.subarray(0,8)],[137,80,78,71,13,10,26,10],url);}
+        else{assert.match(response.headers.get('content-type'),/image\/jpeg/,url);assert.equal(bytes[0],255,url);assert.equal(bytes[1],216,url);}
+        if(url.startsWith('/images/')&&existsSync(path.join(source,'public/images/optimized',path.basename(url)+'.webp'))){const modern=await fetch(base+url,{headers:{Accept:'image/webp'}});assert.equal(modern.status,200,url);assert.equal(modern.headers.get('content-type'),'image/webp',url);assert.equal(modern.headers.get('vary'),'Accept');const data=Buffer.from(await modern.arrayBuffer());assert.equal(data.subarray(8,12).toString(),'WEBP',url);optimizedCount++;}
       }
+      t.diagnostic('Production artwork delivery: '+inventory.files.length+' local URLs and '+optimizedCount+' optimized WebP variants.');
     });
     await t.test('Owner quantities are validated atomically and collection limits prevent extra debits',async()=>{
       const id=alice.body.user.id;
