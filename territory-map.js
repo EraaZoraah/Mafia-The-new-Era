@@ -1,3 +1,4 @@
+import {cityPerks} from './territory-perks.js';
 import {territoryCaptureChance} from './public/territory-rules.js';
 import {allied} from './diplomacy.js';
 import {cityGeography} from './public/city-geography.js';
@@ -5,7 +6,7 @@ import {cities} from './logistics.js';
 import {familyAssets,familyPrice} from './empire-catalog.js';
 
 export const cityMaps=cities.map((name,i)=>({name,index:i,territoryCount:cityGeography[name].count,layout:['river','coast','coast','river','river','canals','river','river','strait','desert','islands','islands','bay','bay','river'][i],accent:['#bba075','#4bbdaf','#da9276','#839cc7','#a89acb','#daaf64','#b894ba','#c4aa7b','#78b9bf','#d9b779','#73b99b','#be8b91','#9caddd','#69b5cb','#9db47e'][i],subtitle:['Harbor boroughs','Coastal avenues','Pacific crossroads','Lakeside wards','Riverside boroughs','Canal districts','Riverbank quarters','Historic wards','Two shores','Desert metropolis','Island trade routes','Harbor islands','Bay wards','Coastal coves','Urban river districts'][i]}));
-const types=['territory-block','territory-block','territory-block','territory-district','territory-district','territory-harbor'];
+const types=['territory-block','territory-block','territory-block','territory-industry','territory-finance','territory-harbor'];
 const prefixes=['North','South','East','West','Central','Old','Upper','Lower','Grand','Royal'];
 export function installTerritoryMap(db,{clock,transaction,familyMember,settleRaw,available,familyDebit,familyLog,fail}){
  const q=(s,...a)=>db.prepare(s).get(...a),all=(s,...a)=>db.prepare(s).all(...a),run=(s,...a)=>db.prepare(s).run(...a);
@@ -16,9 +17,28 @@ export function installTerritoryMap(db,{clock,transaction,familyMember,settleRaw
  db.exec('CREATE TABLE IF NOT EXISTS family_city_capture_state(family_id INTEGER NOT NULL REFERENCES families(id),city TEXT NOT NULL,attempt_until INTEGER NOT NULL DEFAULT 0,success_until INTEGER NOT NULL DEFAULT 0,shield_until INTEGER NOT NULL DEFAULT 0,PRIMARY KEY(family_id,city))');
  if(migrateCaptureState)transaction(()=>{for(const s of all('SELECT * FROM family_capture_state'))for(const city of cities)run('INSERT OR IGNORE INTO family_city_capture_state VALUES(?,?,?,?,?)',s.family_id,city,Math.min(s.attempt_until,clock()+900000),s.success_until,s.shield_until)});
  transaction(()=>{for(const c of cityMaps){for(const old of all('SELECT * FROM city_territories WHERE city=? AND slot>=? AND owner_id IS NOT NULL',c.name,c.territoryCount)){const vacancy=q('SELECT * FROM city_territories WHERE city=? AND slot<? AND owner_id IS NULL ORDER BY (item_id=?) DESC,slot LIMIT 1',c.name,c.territoryCount,old.item_id);if(vacancy){run('DELETE FROM city_territories WHERE id=?',vacancy.id);run('UPDATE city_territories SET slot=? WHERE id=?',vacancy.slot,old.id)}}run('DELETE FROM city_territories WHERE city=? AND slot>=? AND owner_id IS NULL',c.name,c.territoryCount)}for(const c of cityMaps)for(let slot=0;slot<c.territoryCount;slot++){
-  const type=types[(slot+c.index*7)%6],suffix=type==='territory-block'?'Block':type==='territory-district'?'Exchange':'Docks';
+  const type=types[(slot+c.index*7)%6],suffix=type==='territory-block'?'Block':type==='territory-industry'?'Works':type==='territory-finance'?'Exchange':'Docks';
   run('INSERT OR IGNORE INTO city_territories(city,slot,item_id,name) VALUES(?,?,?,?)',c.name,slot,type,prefixes[(slot+c.index)%10]+' '+suffix+' '+(Math.floor(slot/10)+1));
  }});
+ // Idempotent conversion: keep plot identity, owner, capture provenance and all city shields.
+ db.exec('CREATE TABLE IF NOT EXISTS territory_versions(version TEXT PRIMARY KEY)');
+ if(!q("SELECT 1 FROM territory_versions WHERE version='four-sectors-v1'"))transaction(()=>{
+  db.exec('DROP TRIGGER IF EXISTS family_asset_limit_insert; DROP TRIGGER IF EXISTS family_asset_limit_update;');
+  const converted=new Map();
+  for(const p of all("SELECT * FROM city_territories WHERE item_id='territory-district'")){
+   const next=p.slot%2?'territory-finance':'territory-industry';
+   run('UPDATE city_territories SET item_id=?,name=? WHERE id=?',next,p.name.replace('Exchange',next==='territory-industry'?'Works':'Exchange'),p.id);
+   if(p.owner_id){const key=p.owner_id+':'+next;converted.set(key,(converted.get(key)||0)+1);}
+  }
+  for(const f of all("SELECT family_id,quantity FROM family_assets WHERE item_id='territory-district'")){
+   const a=converted.get(f.family_id+':territory-industry')||0,b=converted.get(f.family_id+':territory-finance')||0,extra=Math.max(0,f.quantity-a-b);
+   for(const [type,n] of [['territory-industry',a+Math.ceil(extra/2)],['territory-finance',b+Math.floor(extra/2)]])if(n)run('INSERT INTO family_assets VALUES(?,?,?) ON CONFLICT(family_id,item_id) DO UPDATE SET quantity=quantity+excluded.quantity',f.family_id,type,n);
+  }
+  run("DELETE FROM family_assets WHERE item_id='territory-district'");
+  // Redistribute only unowned land; existing family acquisitions keep their type and value.
+  for(const p of all('SELECT * FROM city_territories WHERE owner_id IS NULL')){const c=cityMaps.find(c=>c.name===p.city),type=types[(p.slot+c.index*7)%types.length];run('UPDATE city_territories SET item_id=? WHERE id=?',type,p.id);}
+  run("INSERT INTO territory_versions VALUES('four-sectors-v1')");
+ });
  const spec=id=>familyAssets.find(x=>x.id===id&&x.category==='Territory');
  const count=(familyId,city)=>q('SELECT COUNT(*) n FROM city_territories WHERE owner_id=? AND city=?',familyId,city).n;
  // Aggregate family holdings remain the source of existing economy/Power calculations.
@@ -89,7 +109,7 @@ export function installTerritoryMap(db,{clock,transaction,familyMember,settleRaw
  function captureChance(quote,p){return territoryCaptureChance(quote.attackPower,quote.defenderPower,quote.defense.reduction,factor(p,quote.familyId));}
  function view(id,city){
   if(!cities.includes(city))fail('Choose an airport city.');sync();const m=q('SELECT m.*,f.leader_id FROM family_members m JOIN families f ON f.id=m.family_id WHERE user_id=?',id),owned=m?holdings(m.family_id):[];
-  return {serverTime:clock(),cities:cityMaps,city:cityMaps.find(c=>c.name===city),familyId:m?.family_id||null,capture:m?captureState(m.family_id,city):null,canManage:!!m&&(m.leader_id===id||m.family_role==='capo'),ownedInCity:owned.filter(p=>p.city===city).length,treasury:m?q('SELECT treasury FROM families WHERE id=?',m.family_id).treasury:0,holdings:owned,purchasedInCity:owned.filter(p=>p.city===city&&!p.captured).length,worldLimit:525,purchaseLimit:25,controlLimit:35,
+  return {perks:cityPerks(db,'family',m?.family_id,city),cityPerks:cityMaps.map(c=>cityPerks(db,'family',m?.family_id,c.name)),serverTime:clock(),cities:cityMaps,city:cityMaps.find(c=>c.name===city),familyId:m?.family_id||null,capture:m?captureState(m.family_id,city):null,canManage:!!m&&(m.leader_id===id||m.family_role==='capo'),ownedInCity:owned.filter(p=>p.city===city).length,treasury:m?q('SELECT treasury FROM families WHERE id=?',m.family_id).treasury:0,holdings:owned,purchasedInCity:owned.filter(p=>p.city===city&&!p.captured).length,worldLimit:525,purchaseLimit:25,controlLimit:35,
    plots:all('SELECT p.*,f.name owner_name FROM city_territories p LEFT JOIN families f ON f.id=p.owner_id WHERE p.city=? ORDER BY slot',city).map(p=>({...p,relation:p.owner_id===null?'free':p.owner_id===m?.family_id?'own':m&&allied(db,m.family_id,p.owner_id)?'ally':'rival',recoveryUntil:p.owner_id?captureState(p.owner_id,city).shieldUntil:0,...{type:spec(p.item_id).name,image:spec(p.item_id).image,blocks:spec(p.item_id).blocks,defense:spec(p.item_id).defense,runBonus:spec(p.item_id).runBonus},price:familyPrice(spec(p.item_id),m?q('SELECT COUNT(*) n FROM city_territories WHERE owner_id=? AND city=? AND item_id=?',m.family_id,city,p.item_id).n:0),captureFactor:m?factor(p,m.family_id):1,protectedUntil:p.acquired_at+3600000}))};
  }
  return {sync,holdings,factor,captureTarget,transfer,buy,view,captureState,recordAttempt,captureChance};

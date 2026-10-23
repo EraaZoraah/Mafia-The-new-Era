@@ -27,7 +27,8 @@ export const familyAssets=[
 ].map(([id,name,category,price,limit,defense,runBonus,lossReduction,description])=>({id,name,category,price,limit:Math.min(4,limit),defense,runBonus,lossReduction,description,image:'/images/family-'+id+'.jpg'}));
 familyAssets.push(...[
  {id:'territory-block',name:'Street block',price:25000000,defense:2,runBonus:1,blocks:1,image:'/images/territory-block.jpg'},
- {id:'territory-district',name:'Commercial district',price:150000000,defense:5,runBonus:2,blocks:4,image:'/images/territory-district.jpg'},
+ {id:'territory-industry',name:'Industrial district',price:150000000,defense:5,runBonus:2,blocks:4,image:'/images/territory-industry.png'},
+ {id:'territory-finance',name:'Financial district',price:150000000,defense:5,runBonus:2,blocks:4,image:'/images/territory-finance.png'},
  {id:'territory-harbor',name:'Harbor territory',price:1000000000,defense:10,runBonus:4,blocks:12,image:'/images/territory-harbor.jpg'},
 ].map(x=>({...x,category:'Territory',limit:525,lossReduction:0,description:'Control '+x.blocks+(x.blocks===1?' city block.':' city blocks.')+' Adds family Power, defense and shipment success. Can be captured during a declared war.'})));
 export const musclePackages=[
@@ -67,3 +68,5 @@ for(const a of familyAssets){
 familyAssets.push({id:'warehouse-production-family',name:'Family Production Warehouse',category:'Safehouses',price:15000000,income:0,limit:5,defense:0,runBonus:0,lossReduction:0,description:'One thousand crates of shared family production storage. Five warehouses maximum.',image:'/images/warehouse-production.png'});
 
 for(const [i,item] of familyAssets.filter(a=>a.category==='Family cars').entries()){item.price=[125000000,250000000,450000000,750000000,1200000000,1800000000][i]||2000000000;item.runBonus=Math.min(8,2+i);}
+
+for(const a of familyAssets.filter(a=>a.category==='Territory'))a.description+=' '+({'territory-block':'Local drug sale margin +0.75% per plot, capped at 9% in this city.','territory-industry':'Drug production time -2.5% per plot, capped at 25% in this city.','territory-finance':'Crypto spreads and auction commission -2.5% per plot, capped at 25% in this city. Investments have no fee.','territory-harbor':'Boat cargo time -3% per plot at this endpoint, capped at 15%; both endpoints combine to 30%.'}[a.id]);

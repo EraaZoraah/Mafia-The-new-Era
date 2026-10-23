@@ -1,3 +1,4 @@
+import {businessPolicies} from '../business-policy.js';
 import {writeFileSync} from 'node:fs';
 import {catalog,crimes,pvpActions} from '../catalog.js';
 import {familyAssets,mysteryJobs,musclePackages,shipmentTiers} from '../empire-catalog.js';
@@ -13,7 +14,7 @@ import {cars,helicopters,jets} from '../catalog.js';
 import {skins} from '../skins.js';
 import {tuningModules} from '../midnight-catalog.js';
 import {createTranslator} from '../public/i18n.js';
-const entries=[...catalog,...crimes,...pvpActions,...familyAssets,...mysteryJobs,...musclePackages,...shipmentTiers,...weapons,...products,...crewMissions,...compoundUpgrades,...employees,...coins,...milestones,...shopProducts,...dailyJobs,...skins,...artCatalog,...artHeists,...stolenVehicles,...tuningModules,{id:"circuit:podium",name:"Midnight Champion"}].map(x=>Object.fromEntries(['id','name','description','title','unlock','frameName'].filter(k=>typeof x[k]==='string').map(k=>[k,x[k]])));
+const entries=[...catalog,...crimes,...pvpActions,...familyAssets,...mysteryJobs,...musclePackages,...shipmentTiers,...weapons,...products,...crewMissions,...compoundUpgrades,...employees,...coins,...milestones,...shopProducts,...dailyJobs,...skins,...artCatalog,...artHeists,...stolenVehicles,...tuningModules,...businessPolicies,{id:"circuit:podium",name:"Midnight Champion"}].map(x=>Object.fromEntries(['id','name','description','title','unlock','frameName'].filter(k=>typeof x[k]==='string').map(k=>[k,x[k]])));
 writeFileSync(new URL('../public/locale-catalog.js',import.meta.url),'// Generated from authoritative content, not player data.\nexport const localeCatalog='+JSON.stringify(entries,null,2)+';\n');
 const translate=createTranslator('nl'),titles={};for(const x of entries){for(const value of [x.title,x.frameName])if(value?.includes(' · ')){const [prefix,...rest]=value.split(' · ');titles[value]=translate(prefix)+' · '+translate(rest.join(' · '));}}
 writeFileSync(new URL('../public/nl-catalog-titles.js',import.meta.url),'// Generated title combinations; opaque player names never enter this resource.\nexport const catalogTitlesDutch='+JSON.stringify(titles,null,2)+';\n');

@@ -9,7 +9,7 @@ const plan=f=>({targetId:2,kind:'raid',city:'New York',scheduledAt:f.time()+3600
 
 test('maps use exactly the airport cities, with finite varied districts and public read access',t=>{
  const f=fixture(t),d=map(f);assert.deepEqual(d.cities.map(c=>c.name),cities);assert.equal(f.q('SELECT COUNT(*) n FROM city_territories').n,Object.values(cityGeography).reduce((n,c)=>n+c.count,0));
- for(const city of cities){const x=map(f,city,4);assert.equal(x.plots.length,cityGeography[city].count);assert.ok(x.plots.length>=40&&x.plots.length<=60);assert.ok(x.plots.some(p=>p.item_id==='territory-district'));assert.equal(x.familyId,null);assert.equal(x.canManage,false)}
+ for(const city of cities){const x=map(f,city,4);assert.equal(x.plots.length,cityGeography[city].count);assert.ok(x.plots.length>=40&&x.plots.length<=60);assert.ok(x.plots.some(p=>p.item_id==='territory-industry'));assert.equal(x.familyId,null);assert.equal(x.canManage,false)}
  assert.equal(f.call('family/map?city=Atlantis').status,400);
 });
 test('family buys twenty-five per city atomically, rejects conflicting ownership, and allows independent cities',t=>{
@@ -22,12 +22,12 @@ test('family buys twenty-five per city atomically, rejects conflicting ownership
  f.reset();assert.equal(map(f).holdings.length,31);
 });
 test('legacy holdings migrate once without changing treasury or quantities and reconcile reductions',t=>{
- const f=fixture(t);f.run("INSERT INTO family_assets VALUES(1,'territory-block',25),(1,'territory-district',25),(1,'territory-harbor',25)");const cash=f.q('SELECT treasury FROM families WHERE id=1').treasury;
+ const f=fixture(t);f.run("INSERT INTO family_assets VALUES(1,'territory-block',25),(1,'territory-industry',25),(1,'territory-harbor',25)");const cash=f.q('SELECT treasury FROM families WHERE id=1').treasury;
  f.reset();const before=map(f).holdings;assert.equal(before.length,75);assert.equal(f.q('SELECT treasury FROM families WHERE id=1').treasury,cash);f.reset();assert.deepEqual(map(f).holdings,before);
  f.run("UPDATE family_assets SET quantity=5 WHERE family_id=1 AND item_id='territory-block'");assert.equal(map(f).holdings.length,55);
 });
 test('capture takes the exact selected plot, obeys protection and stops at thirty-five in a city',t=>{
- const f=fixture(t);f.run('UPDATE families SET treasury=1000000000000');const d=map(f),blocks=d.plots.filter(p=>p.item_id==='territory-block'),districts=d.plots.filter(p=>p.item_id==='territory-district');assert.equal(buy(f,blocks.slice(0,25)).status,200);assert.equal(buy(f,districts.slice(0,11),3).status,200);assert.equal(f.call('family/war/declare',{familyId:2}).status,200);
+ const f=fixture(t);f.run('UPDATE families SET treasury=1000000000000');const d=map(f),blocks=d.plots.filter(p=>p.item_id==='territory-block'),districts=d.plots.filter(p=>p.item_id!=='territory-block');assert.equal(buy(f,blocks.slice(0,25)).status,200);assert.equal(buy(f,districts.slice(0,11),3).status,200);assert.equal(f.call('family/war/declare',{familyId:2}).status,200);
  assert.equal(f.call('family/war/capture',{familyId:2,plotId:districts[0].id}).status,409);f.advance(3600001);
  for(let n=0;n<10;n++){f.run('UPDATE users SET energy=100 WHERE id=1');const result=f.call('family/war/capture',{familyId:2,plotId:districts[n].id});assert.equal(result.status,200,JSON.stringify(result));assert.equal(result.body.success,true);assert.equal(f.q('SELECT owner_id FROM city_territories WHERE id=?',districts[n].id).owner_id,1);f.advance(86400001);f.run("UPDATE family_wars SET ends_at=? WHERE status='active'",f.time()+86400000)}
  assert.equal(map(f).ownedInCity,35);assert.equal(f.call('family/war/capture',{familyId:2,plotId:districts[10].id}).status,409);assert.equal(f.q('SELECT owner_id FROM city_territories WHERE id=?',districts[10].id).owner_id,2);

@@ -51,6 +51,7 @@
     "key": "Method not allowed.",
     "files": [
       "art-market.js",
+      "business-policy.js",
       "family-command.js",
       "logistics.js",
       "midnight-circuit.js",
@@ -176,7 +177,7 @@
     ]
   },
   {
-    "key": "Artwork listed. Bids are held in escrow; commission is 8%.",
+    "key": "Artwork listed. Bids are held in escrow; the quoted commission is locked.",
     "files": [
       "art-market.js"
     ]
@@ -389,6 +390,30 @@
     "key": "The officer accepted your bribe. You are free to continue.",
     "files": [
       "bribery.js"
+    ]
+  },
+  {
+    "key": "Choose an owned business and a valid policy.",
+    "files": [
+      "business-policy.js"
+    ]
+  },
+  {
+    "key": "Business policy unchanged.",
+    "files": [
+      "business-policy.js"
+    ]
+  },
+  {
+    "key": "Business policy can change once every 24 hours.",
+    "files": [
+      "business-policy.js"
+    ]
+  },
+  {
+    "key": "Business policy saved. Operations continue automatically.",
+    "files": [
+      "business-policy.js"
     ]
   },
   {
@@ -5342,7 +5367,7 @@
     ]
   },
   {
-    "key": "Vehicle listed. The listing fee is non-refundable; successful sales incur 3% commission.",
+    "key": "Vehicle listed. The listing fee is non-refundable; the quoted commission is locked.",
     "files": [
       "vehicle-auctions.js"
     ]

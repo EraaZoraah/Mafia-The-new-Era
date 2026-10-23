@@ -49,6 +49,8 @@ export function autonomousMove(c,domain){
   const w=pick(a.weapons.filter(w=>w.quantity<10000&&w.price<funds*.02));return w?send('armory/buy',{scope,kind:'weapon',item:w.id,quantity:1}):false;
  }
  case 'assets':{
+  const policies=get('business/policies');const change=pick(policies?.items.filter(a=>a.policy.changeAfter<=now)||[]);if(change&&random(0,100)<35)return send('business/policy',{item:change.item_id,policy:pick(['stable','illegal','launder'])});
+
   const v=get('vehicles'),item=pick(get('catalog')?.catalog.filter(a=>a.quantity<a.limit&&a.nextPrice<u.cash*.15&&(a.category!=='car'||v.garages.used<v.garages.capacity))||[]);return item?send('assets/buy',{category:item.category,id:item.id,quantity:1}):false;
  }
  case 'employees':{

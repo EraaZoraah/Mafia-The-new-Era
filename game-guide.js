@@ -1,3 +1,4 @@
+import {territoryGuide} from './territory-guide.js';
 import {drugSalesGuide} from './guide-drug-sales.js';
 import {cryptoGuide} from './guide-crypto.js';
 import {tradingGuide} from './guide-trading.js';
@@ -90,6 +91,7 @@ export const guideTopics=[
 ];
 
 export function guideAnswer(db,u,question,time=Date.now(),context={}){
+ const territory=territoryGuide(db,u,question,context.language);if(territory)return territory;
  const crypto=cryptoGuide(question,u,time,context);if(crypto)return crypto;
  const trading=tradingGuide(question,context);if(trading)return trading;
  const sales=drugSalesGuide(question,u,time,context);if(sales)return sales;

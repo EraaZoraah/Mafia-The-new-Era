@@ -1,3 +1,4 @@
+import {playerCityPerks} from './territory-perks.js';
 import {summarizeTrade,recordedTradeCosts} from './trade-summary.js';
 import {MAX_CASH,MAX_XP} from './money.js';
 export const artCatalog=[
@@ -42,10 +43,11 @@ export function installArtMarket(db,{clock,transaction,fail,settleRaw,available,
  CREATE INDEX IF NOT EXISTS art_due ON art_auctions(state,ends_at);`);
  db.exec(`CREATE TABLE IF NOT EXISTS art_theft_history(object_id INTEGER PRIMARY KEY REFERENCES art_objects(id),user_id INTEGER NOT NULL REFERENCES users(id),spec_id TEXT NOT NULL);`);
  db.exec('CREATE TABLE IF NOT EXISTS art_history_meta(key TEXT PRIMARY KEY)');
+ if(!all('PRAGMA table_info(art_auctions)').some(c=>c.name==='commission_bps'))db.exec('ALTER TABLE art_auctions ADD COLUMN commission_bps INTEGER NOT NULL DEFAULT 800');
  // Recover only documented heist provenance. Old collection ownership alone is not proof of theft.
  if(!q("SELECT 1 FROM art_history_meta WHERE key='theft-v1'")){if(all("PRAGMA table_info(events)").some(c=>c.name==='message'))for(const a of artCatalog)run("INSERT OR IGNORE INTO art_theft_history SELECT o.id,e.user_id,o.spec_id FROM art_objects o JOIN events e ON e.message='Recovered artwork #'||o.id||': '||? WHERE o.spec_id=?",a.name,a.id);run("INSERT INTO art_history_meta VALUES('theft-v1')");}
  db.exec('CREATE TABLE IF NOT EXISTS art_trade_receipts(id INTEGER PRIMARY KEY,user_id INTEGER NOT NULL REFERENCES users(id),spec_id TEXT NOT NULL,spent INTEGER NOT NULL,received INTEGER NOT NULL,auction_id INTEGER NOT NULL,UNIQUE(user_id,auction_id))');
- function recordSale(a,legacy=false){const object=q('SELECT spec_id FROM art_objects WHERE id=?',a.object_id),fee=Number(BigInt(a.bid)*8n/100n);for(const [id,spent,received] of [[a.seller_id,0,a.bid-fee],[a.bidder_id,a.bid,0]]){
+ function recordSale(a,legacy=false){const object=q('SELECT spec_id FROM art_objects WHERE id=?',a.object_id),fee=Number(BigInt(a.bid)*BigInt(a.commission_bps??800)/10000n);for(const [id,spent,received] of [[a.seller_id,0,a.bid-fee],[a.bidder_id,a.bid,0]]){
   const reset=legacy&&q("SELECT 1 FROM sqlite_master WHERE name='player_lifecycle'")?q('SELECT MAX(created_at) at FROM player_lifecycle WHERE target_id=?',id)?.at:0;
   if(!reset||a.ends_at>=reset)run('INSERT OR IGNORE INTO art_trade_receipts(user_id,spec_id,spent,received,auction_id) VALUES(?,?,?,?,?)',id,object.spec_id,spent,received,a.id);
  }}
@@ -62,7 +64,7 @@ export function installArtMarket(db,{clock,transaction,fail,settleRaw,available,
  function settle(){return transaction(()=>{for(const r of all('SELECT * FROM art_refunds WHERE amount>0')){const paid=Math.min(r.amount,Math.max(0,MAX_CASH-q('SELECT cash FROM users WHERE id=?',r.user_id).cash));if(paid){credit(r.user_id,paid);run('UPDATE art_refunds SET amount=amount-? WHERE user_id=?',paid,r.user_id);}}for(const a of all("SELECT * FROM art_auctions WHERE state='open' AND ends_at<=? ORDER BY id",clock())){
    if(!a.bidder_id){run("UPDATE art_auctions SET state='unsold' WHERE id=?",a.id);run("UPDATE art_objects SET state='collection' WHERE id=?",a.object_id);notify(a.seller_id,'Auction ended without bids','Your artwork has returned to your collection.','/images/banner-auction-house-v3.png');continue;}
    settleRaw(a.seller_id);settleRaw(a.bidder_id);
-   const fee=Number(BigInt(a.bid)*8n/100n),payout=a.bid-fee;
+   const fee=Number(BigInt(a.bid)*BigInt(a.commission_bps??800)/10000n),payout=a.bid-fee;
    // A full wallet delays settlement without losing bidder escrow or the artwork.
    if(q('SELECT cash FROM users WHERE id=?',a.seller_id).cash>MAX_CASH-payout)continue;
    credit(a.seller_id,payout);recordSale(a);run("UPDATE art_objects SET user_id=?,state='collection' WHERE id=?",a.bidder_id,a.object_id);run("UPDATE art_auctions SET state='sold' WHERE id=?",a.id);
@@ -73,7 +75,7 @@ export function installArtMarket(db,{clock,transaction,fail,settleRaw,available,
   for(const r of all('SELECT * FROM art_trade_receipts WHERE user_id=?',id))rows.push({id:r.spec_id,name:artCatalog.find(c=>c.id===r.spec_id)?.name||r.spec_id,invested:r.spent,received:r.received});
   return summarizeTrade(rows);
  }
- function board(id){settle();const u=q('SELECT * FROM users WHERE id=?',id),a=inventory('personal',id);return {trade:tradeSummary(id),serverTime:clock(),commission:AUCTION_COMMISSION,refundCredit:q('SELECT amount FROM art_refunds WHERE user_id=?',id)?.amount||0,bonus:bonuses(id),heists:artHeists.map(h=>({...h,loot:h.loot.map(x=>({id:x.id,name:x.name,value:x.value,image:x.image,probability:x.weight/h.loot.reduce((n,y)=>n+y.weight,0)})),successChance:artHeistChance(h,u.xp),rewardXp:Math.floor(h.rewardXp*rewardBonus(id)),available:u.xp>=h.xp&&u.energy>=h.energy&&u.cash>=h.fee&&a.ammo>=h.ammo&&a.tier>=h.tier&&u.health>=10&&Math.max(u.prison_until,u.hospital_until)<=clock()})),cooldownUntil:q('SELECT until_at FROM art_heist_cooldowns WHERE user_id=?',id)?.until_at||0,collection:all("SELECT * FROM art_objects WHERE user_id=? AND state='collection' ORDER BY id DESC",id).map(safe),auctions:all("SELECT a.*,u.username seller,v.username bidder FROM art_auctions a JOIN users u ON u.id=a.seller_id LEFT JOIN users v ON v.id=a.bidder_id WHERE a.state='open' ORDER BY a.ends_at").map(a=>({...a,object:safe(q('SELECT * FROM art_objects WHERE id=?',a.object_id)),nextBid:a.bid?Math.ceil(a.bid*1.05):a.reserve})),history:all("SELECT id,bid,state,ends_at FROM art_auctions WHERE (seller_id=? OR bidder_id=?) AND state<>'open' ORDER BY id DESC LIMIT 10",id,id)};}
+ function board(id){settle();const u=q('SELECT * FROM users WHERE id=?',id),a=inventory('personal',id);return {trade:tradeSummary(id),serverTime:clock(),commission:playerCityPerks(db,id).fees.artBps/10000,refundCredit:q('SELECT amount FROM art_refunds WHERE user_id=?',id)?.amount||0,bonus:bonuses(id),heists:artHeists.map(h=>({...h,loot:h.loot.map(x=>({id:x.id,name:x.name,value:x.value,image:x.image,probability:x.weight/h.loot.reduce((n,y)=>n+y.weight,0)})),successChance:artHeistChance(h,u.xp),rewardXp:Math.floor(h.rewardXp*rewardBonus(id)),available:u.xp>=h.xp&&u.energy>=h.energy&&u.cash>=h.fee&&a.ammo>=h.ammo&&a.tier>=h.tier&&u.health>=10&&Math.max(u.prison_until,u.hospital_until)<=clock()})),cooldownUntil:q('SELECT until_at FROM art_heist_cooldowns WHERE user_id=?',id)?.until_at||0,collection:all("SELECT * FROM art_objects WHERE user_id=? AND state='collection' ORDER BY id DESC",id).map(safe),auctions:all("SELECT a.*,u.username seller,v.username bidder FROM art_auctions a JOIN users u ON u.id=a.seller_id LEFT JOIN users v ON v.id=a.bidder_id WHERE a.state='open' ORDER BY a.ends_at").map(a=>({...a,object:safe(q('SELECT * FROM art_objects WHERE id=?',a.object_id)),nextBid:a.bid?Math.ceil(a.bid*1.05):a.reserve})),history:all("SELECT id,bid,state,ends_at FROM art_auctions WHERE (seller_id=? OR bidder_id=?) AND state<>'open' ORDER BY id DESC LIMIT 10",id,id)};}
  function route(req,path,b,user){if(!path.startsWith('/api/art'))return null;return transaction(()=>{
   settle();if(req.method==='GET'&&path==='/api/art')return board(user.id);if(req.method!=='POST')fail('Method not allowed.',405);const u=settleRaw(user.id);available(u);
   if(path==='/api/art/heist'){
@@ -93,7 +95,7 @@ export function installArtMarket(db,{clock,transaction,fail,settleRaw,available,
    if(!o.appraised)fail('Appraise the artwork before listing it.');if(![6,12,24].includes(b.hours)||!Number.isSafeInteger(b.reserve)||b.reserve<Math.max(1,Math.floor(o.estimated_value*.25))||b.reserve>o.estimated_value*3)fail('Choose 6, 12 or 24 hours and a reserve between 25% and 300% of appraised value.');
    if(q("SELECT COUNT(*) n FROM art_auctions WHERE seller_id=? AND state='open'",u.id).n>=5)fail('Maximum five active listings.',409);
    // Each serial is listed once; unsold pieces can be listed again.
-   const end=clock()+b.hours*3600000;run('INSERT INTO art_auctions(object_id,seller_id,reserve,ends_at,original_end) VALUES(?,?,?,?,?)',o.id,u.id,b.reserve,end,end);run("UPDATE art_objects SET state='auction' WHERE id=?",o.id);return {ok:true,message:'Artwork listed. Bids are held in escrow; commission is 8%.',image:a.image};
+   const end=clock()+b.hours*3600000;run('INSERT INTO art_auctions(object_id,seller_id,reserve,ends_at,original_end,commission_bps) VALUES(?,?,?,?,?,?)',o.id,u.id,b.reserve,end,end,playerCityPerks(db,u.id).fees.artBps);run("UPDATE art_objects SET state='auction' WHERE id=?",o.id);return {ok:true,message:'Artwork listed. Bids are held in escrow; the quoted commission is locked.',image:a.image};
   }
   if(path==='/api/art/bid'){
    if(!Number.isSafeInteger(b.id)||!Number.isSafeInteger(b.amount))fail('Choose a valid bid.');const a=q("SELECT * FROM art_auctions WHERE id=? AND state='open' AND ends_at>?",b.id,clock());if(!a)fail('Auction closed.',409);if(a.seller_id===u.id||a.bidder_id===u.id)fail('You cannot bid against yourself.',409);

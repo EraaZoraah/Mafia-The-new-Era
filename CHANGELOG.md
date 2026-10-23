@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.28.0 — 2026-10-23
+
+- Automatic stable, illegal and money-laundering business policies with deterministic inspections, bounded closures, 24-hour change cooldowns and separate generated/lost income records.
+- Four territory sectors in all fifteen cities; ownership-preserving migration from Commercial districts, with all capture provenance and shields retained.
+- Local street sale margins, industrial production-time savings, financial crypto/auction fee reductions and dual-endpoint harbor travel savings, using shared authoritative quotes.
+- City-by-city family perk overview, new industrial/financial artwork and desktop wallpaper.
+- Three distinct cinematic welcome, login and registration scenes with readable fades and optimized delivery.
+- Approved elegant gold branding throughout the game and install icons; transparent wordmark on homepage, sign-in and registration backgrounds.
+- Five-language resources, Luca live territory facts and autonomous policy selection.
+
+
 ## 1.27.0 — 2026-10-23
 
 - Specialist Circuit tuning adds separate handling, acceleration and reliability upgrade paths with class budgets.

@@ -4,7 +4,7 @@ export const botCapabilities={
  circuit:['circuit/solo','circuit/create','circuit/join','circuit/workshop'],
  art:['art/heist','art/appraise','art/list','art/bid'],
  bribery:['bribery/pay','bribery/decline'],
- crimes:['action'],pvp:['pvp'],supplies:['armory/buy'],assets:['assets/buy'],employees:['employees/hire'],
+ crimes:['action'],pvp:['pvp'],supplies:['armory/buy'],assets:['assets/buy','business/policy'],employees:['employees/hire'],
  shipments:['shipments/run'],familyAssets:['family/buy','compound/upgrade','family/donate'],
  teams:['team-missions/create','team-missions/join','team-missions/leave','team-missions/launch'],
  marriage:['marriage/invite','marriage/respond','marriage/divorce'],crypto:['crypto/trade'],
@@ -38,4 +38,4 @@ export const botCommandBoundaries={
  'family/request':'Reserved legacy route has no action handler; applications use families/join.'
 };
 // GET-only pages have no mutation to execute. Exploration/knowledge uses these views.
-export const botReadOnlyRoutes=['referrals','family-directory','push','circuit','art','bribery','empire','custody','underworld','health','me','leaderboard','crypto','employees','gifts','news','conversation','family/dashboard','statistics','inbox','players/search','compound/upgrades','daily','bulletins','notifications','family','family/map','family/possessions','family/rivals','mystery','assets','calendar','catalog','guide','players','world-chat','investments','achievements','directory','family/respect','seasons','airport','armory','production','support','support/ticket','player/progress','bounties','marriage','presence','shop','vehicles','team-missions','casino','casino-extra','respect','family/chat','family/plans','family/alliances'];
+export const botReadOnlyRoutes=['business/policies','referrals','family-directory','push','circuit','art','bribery','empire','custody','underworld','health','me','leaderboard','crypto','employees','gifts','news','conversation','family/dashboard','statistics','inbox','players/search','compound/upgrades','daily','bulletins','notifications','family','family/map','family/possessions','family/rivals','mystery','assets','calendar','catalog','guide','players','world-chat','investments','achievements','directory','family/respect','seasons','airport','armory','production','support','support/ticket','player/progress','bounties','marriage','presence','shop','vehicles','team-missions','casino','casino-extra','respect','family/chat','family/plans','family/alliances'];

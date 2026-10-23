@@ -998,6 +998,13 @@
     "translated": true
   },
   {
+    "key": "{v3}: Crypto {v4}% · {v5} {v6}% · {v7} {v8}% · {v9} 0%",
+    "files": [
+      "city-map-ui.js"
+    ],
+    "translated": false
+  },
+  {
     "key": "{v3}. {v4} BASE RISK · {v5}% SUCCESS · {v6} ENERGY",
     "files": [
       "premium.js"
@@ -2043,6 +2050,13 @@
     "translated": true
   },
   {
+    "key": "All cities and total coverage",
+    "files": [
+      "city-map-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "All families",
     "files": [
       "underworld-ui.js"
@@ -2339,6 +2353,13 @@
       "art-market-ui.js"
     ],
     "translated": true
+  },
+  {
+    "key": "Art auctions",
+    "files": [
+      "city-map-ui.js"
+    ],
+    "translated": false
   },
   {
     "key": "ART. POWER. PROVENANCE.",
@@ -2933,6 +2954,20 @@
     "translated": true
   },
   {
+    "key": "Business policies",
+    "files": [
+      "premium.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Business policy",
+    "files": [
+      "premium.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Businesses, residences, garages, cars and private aircraft. Build a collection that earns income, opens opportunities and carries your signature.",
     "files": [
       "app.js"
@@ -3050,6 +3085,13 @@
     "key": "Buy up to 25 territories per city, plus hold 10 conquered territories per city: 35 total. Limits cover all territory types together. Only Don and Capos buy or capture. Attempts have a 15-minute cooldown. One successful capture per city per 24 hours; the losing family gets a 24-hour territory shield in that city. Losing a conquered plot frees a capture slot.",
     "files": [
       "city-map-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Buy your first business to choose its policy.",
+    "files": [
+      "premium.js"
     ],
     "translated": true
   },
@@ -3317,6 +3359,13 @@
     "translated": true
   },
   {
+    "key": "Choose once per business type; every copy follows the same policy automatically. Changes have a 24-hour cooldown. Inspections affect only this business. Saved income and other assets are protected. Custody pauses income and the shared 24-active-hour limit still applies.",
+    "files": [
+      "premium.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Choose stored vehicle",
     "files": [
       "feedback.js"
@@ -3373,9 +3422,17 @@
     "translated": true
   },
   {
+    "key": "Cities with family territory",
+    "files": [
+      "city-map-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "City",
     "files": [
       "app.js",
+      "city-map-ui.js",
       "family-command-ui.js",
       "freight-ui.js",
       "legacy-ui.js"
@@ -3405,6 +3462,13 @@
   },
   {
     "key": "City ownership: {v9} / 25 purchased + {v10} / 10 conquered",
+    "files": [
+      "city-map-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "City perks benefit every family member and family production. They are local, not summed across cities. Street margin caps at 9%, industry at 25%, fee reduction at 25%, and boat time at 15% per endpoint (30% with both ports). Investments have no trading fee. Existing production and cargo keep their locked timers.",
     "files": [
       "city-map-ui.js"
     ],
@@ -4012,6 +4076,13 @@
     "translated": true
   },
   {
+    "key": "Current crypto spread per side",
+    "files": [
+      "expansion-ui.js"
+    ],
+    "translated": false
+  },
+  {
     "key": "Current destination sale value: {v5}. Net includes production and every paid freight fee. Prices can change before arrival; interception loses the cargo and fee.",
     "files": [
       "freight-ui.js"
@@ -4486,6 +4557,13 @@
       "family-command-ui.js"
     ],
     "translated": true
+  },
+  {
+    "key": "Effective trading fees in this city",
+    "files": [
+      "city-map-ui.js"
+    ],
+    "translated": false
   },
   {
     "key": "Email address",
@@ -5119,6 +5197,13 @@
     "translated": true
   },
   {
+    "key": "Family territory perks",
+    "files": [
+      "city-map-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Family territory shield until",
     "files": [
       "city-map-ui.js"
@@ -5192,6 +5277,13 @@
     "key": "File report",
     "files": [
       "underworld-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Financial districts",
+    "files": [
+      "city-map-ui.js"
     ],
     "translated": true
   },
@@ -5357,11 +5449,11 @@
     "translated": true
   },
   {
-    "key": "Game cash only. No real deposits or withdrawals. Whole coins, a 1% buy markup and a 1% sell discount. Maximum $10 trillion purchase basis per coin.",
+    "key": "Game cash only. No real deposits or withdrawals. Whole coins, a base 1% buy markup and a base 1% sell discount, reduced by local financial districts. Maximum $10 trillion purchase basis per coin.",
     "files": [
       "expansion-ui.js"
     ],
-    "translated": true
+    "translated": false
   },
   {
     "key": "Game rules",
@@ -5379,6 +5471,13 @@
   },
   {
     "key": "garage",
+    "files": [
+      "premium.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Generated income",
     "files": [
       "premium.js"
     ],
@@ -5464,6 +5563,13 @@
     "translated": true
   },
   {
+    "key": "Gross hourly income",
+    "files": [
+      "premium.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Gun shipments",
     "files": [
       "empire-ui.js"
@@ -5509,6 +5615,13 @@
     "key": "Handling",
     "files": [
       "midnight-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Harbors",
+    "files": [
+      "city-map-ui.js"
     ],
     "translated": true
   },
@@ -5866,6 +5979,13 @@
     "translated": true
   },
   {
+    "key": "Industrial districts",
+    "files": [
+      "city-map-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Install extension",
     "files": [
       "crew-ui.js"
@@ -5973,6 +6093,7 @@
   {
     "key": "Investments",
     "files": [
+      "city-map-ui.js",
       "expansion-ui.js"
     ],
     "translated": true
@@ -6432,6 +6553,13 @@
     "translated": true
   },
   {
+    "key": "LOCAL CONTROL. SHARED ADVANTAGES.",
+    "files": [
+      "city-map-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Local heat on arrival: {v3} / 100",
     "files": [
       "logistics-ui.js"
@@ -6572,11 +6700,11 @@
     "translated": true
   },
   {
-    "key": "Mafia: The new Era © · v1.27.0",
+    "key": "Mafia: The new Era © · v1.28.0",
     "files": [
       "app.js"
     ],
-    "translated": true
+    "translated": false
   },
   {
     "key": "Mafia: The New Era is een online multiplayerspel. Maak opnieuw verbinding om door te spelen; offline worden geen acties verstuurd.",
@@ -6898,11 +7026,11 @@
     "translated": true
   },
   {
-    "key": "Minimum bid increase: 5%. Bids are deducted immediately and refunded when outbid. Self-bidding is prohibited. Bids in the last two minutes extend the auction, up to 30 minutes beyond its original end. Seller commission: 8%. Settlement is automatic, including while players are offline. If a seller’s wallet is full, settlement waits safely.",
+    "key": "Minimum bid increase: 5%. Bids are deducted immediately and refunded when outbid. Self-bidding is prohibited. Bids in the last two minutes extend the auction, up to 30 minutes beyond its original end. Base seller commission: 8%; local financial districts reduce your listing quote. Settlement is automatic, including while players are offline. If a seller’s wallet is full, settlement waits safely.",
     "files": [
       "art-market-ui.js"
     ],
-    "translated": true
+    "translated": false
   },
   {
     "key": "Minimum reward",
@@ -7238,11 +7366,11 @@
     "translated": true
   },
   {
-    "key": "Next market update: {v0}",
+    "key": "Next market update: {v2}",
     "files": [
       "expansion-ui.js"
     ],
-    "translated": true
+    "translated": false
   },
   {
     "key": "Next minimum",
@@ -7255,6 +7383,13 @@
     "key": "Next minimum: {v10}",
     "files": [
       "vehicles-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Next policy change",
+    "files": [
+      "premium.js"
     ],
     "translated": true
   },
@@ -7697,11 +7832,11 @@
     "translated": true
   },
   {
-    "key": "Non-refundable listing fee: {v5} · Seller commission: 3%.",
+    "key": "Non-refundable listing fee: {v5} · {v6}: {v7}%.",
     "files": [
       "vehicles-ui.js"
     ],
-    "translated": true
+    "translated": false
   },
   {
     "key": "None",
@@ -8100,6 +8235,13 @@
     "key": "Opening a ticket marks it read for the shared staff inbox. Reply with a status to track its resolution.",
     "files": [
       "care-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Operating",
+    "files": [
+      "premium.js"
     ],
     "translated": true
   },
@@ -10158,6 +10300,13 @@
     "translated": true
   },
   {
+    "key": "Seizures and closure losses",
+    "files": [
+      "premium.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Select a term, review the quoted return and lock your funds.",
     "files": [
       "investment-ui.js"
@@ -10420,9 +10569,16 @@
     "translated": true
   },
   {
-    "key": "Set your own minimum price. Listing costs 0.25% of the current vehicle quote, minimum $500 and maximum $250,000, even if unsold. Successful sales incur 3% commission. Bids reserve cash and a warehouse bay. Outbid players are refunded; full wallets receive protected credit. Late bids extend the auction by up to two minutes, at most thirty extra minutes.",
+    "key": "Set your own minimum price. Listing costs 0.25% of the current vehicle quote, minimum $500 and maximum $250,000, even if unsold. Successful sales incur up to 3% commission, reduced by local financial districts. Bids reserve cash and a warehouse bay. Outbid players are refunded; full wallets receive protected credit. Late bids extend the auction by up to two minutes, at most thirty extra minutes.",
     "files": [
       "vehicles-ui.js"
+    ],
+    "translated": false
+  },
+  {
+    "key": "SET YOUR POLICY. LET IT RUN.",
+    "files": [
+      "premium.js"
     ],
     "translated": true
   },
@@ -10784,6 +10940,13 @@
     "translated": true
   },
   {
+    "key": "Street blocks",
+    "files": [
+      "city-map-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Style",
     "files": [
       "app.js"
@@ -10978,6 +11141,13 @@
     "key": "Team missions",
     "files": [
       "crew-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Temporarily closed",
+    "files": [
+      "premium.js"
     ],
     "translated": true
   },
@@ -11844,6 +12014,7 @@
   {
     "key": "Vehicle auctions",
     "files": [
+      "city-map-ui.js",
       "vehicles-ui.js"
     ],
     "translated": true
@@ -12325,6 +12496,14 @@
       "premium.js"
     ],
     "translated": true
+  },
+  {
+    "key": "Your current seller commission",
+    "files": [
+      "art-market-ui.js",
+      "vehicles-ui.js"
+    ],
+    "translated": false
   },
   {
     "key": "Your Don and Capos manage territory acquisitions.",

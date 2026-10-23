@@ -73,7 +73,7 @@ export function createPremiumUI({api,getMe,refresh,toast,esc,money,date,navigate
 
     const u=getMe().user,quantity=x.quantity||0;
 
-    const income=Math.min(1000000000000000,Math.floor(x.income*u.passiveIncomeMultiplier));
+    const income=Math.min(1000000000000000,Math.floor(x.income*u.passiveIncomeMultiplier*(x.businessPolicy?.multiplier||1)));
 
     return lhtml`<article class="mission photo-card ${quantity>=x.limit?'collection-complete':quantity?'owned':''}"><div class="image-wrap">${picture(x.image,x.name)}<span class="image-badge">${quantity}/${x.limit} OWNED · ${esc(x.storageKind?ltext(x.storageKind==='production'?'Production warehouses':'Vehicle warehouses'):x.category.toUpperCase())}</span></div><div class="card-body"><h3>${esc(x.name)}</h3>${x.description?lhtml('<p class="asset-description">')+esc(x.description)+lhtml('</p>'):''}<div class="asset-price">${money(inventory?Math.min(1000000000000000,Math.floor(x.income*u.passiveIncomeMultiplier*quantity)):quantity>=x.limit?x.price:x.nextPrice)}<small>${inventory?ltext(' total / hour'):quantity>=x.limit?ltext(' collection complete'):x.limit===1?ltext(' purchase price'):ltext(' next copy')}</small></div><ul class="asset-benefits">${perkLines(x).map(line=>lhtml('<li>')+line+lhtml(' per copy</li>')).join('')}<li>Access to ${esc(x.unlock)}</li></ul><div class="title-unlock"><span>SIGNATURE TITLE</span>${esc(x.title)}</div>${inventory&&x.category==='garage'?lhtml`<button class="btn secondary" data-open-storage="${x.storageKind?'warehouses':'garage'}">Open ${x.storageKind?ltext('warehouse'):ltext('garage')} contents ↗</button>`:''}<button class="btn" data-buy="${x.id}" data-category="${x.category}" ${quantity>=x.limit||u.cash<x.nextPrice?'disabled':''}>${quantity>=x.limit?ltext('Collection limit reached'):u.cash<x.nextPrice?ltext('Insufficient cash'):quantity?ltext('Acquire another · ')+money(x.nextPrice):ltext('Acquire asset ↗')}</button></div></article>`;
 
@@ -87,6 +87,14 @@ export function createPremiumUI({api,getMe,refresh,toast,esc,money,date,navigate
 
   }
 
+  async function businessPolicies(el){
+   const d=await api('business/policies');if(!el.isConnected)return;
+   const section=document.createElement('section');section.className='panel business-policy-panel';
+   section.innerHTML=lhtml`<div class="eyebrow">SET YOUR POLICY. LET IT RUN.</div><h2>Business policies</h2><p>Choose once per business type; every copy follows the same policy automatically. Changes have a 24-hour cooldown. Inspections affect only this business. Saved income and other assets are protected. Custody pauses income and the shared 24-active-hour limit still applies.</p><div class="policy-options">${d.policies.map(p=>lhtml`<article><h3>${esc(p.name)}</h3><strong>${p.multiplier.toFixed(1)}×</strong><p>${esc(p.description)}</p></article>`).join('')}</div>${d.items.length?d.items.map(a=>lhtml`<article class="business-policy-row"><h3>${esc(a.name)} · ${a.quantity}</h3><p>${ltext('Gross hourly income')}: ${money(a.grossHourly)} · ${a.operating?ltext('Operating'):ltext('Temporarily closed')}</p><p>${ltext('Generated income')}: ${money(a.totals.received)} · ${ltext('Seizures and closure losses')}: ${money(a.totals.withheld)}</p><label>${ltext('Business policy')}<select data-business-policy="${esc(a.item_id)}" ${a.policy.changeAfter>Date.now()+(getMe()._clockOffset||0)?'disabled':''}>${d.policies.map(p=>lhtml`<option value="${p.id}" ${p.id===a.policy.id?'selected':''}>${esc(p.name)}</option>`).join('')}</select></label>${a.policy.changeAfter?lhtml`<small>${ltext('Next policy change')}: ${date(a.policy.changeAfter)}</small>`:''}</article>`).join(''):lhtml('<p>Buy your first business to choose its policy.</p>')}`;
+   el.querySelector('.section-heading').after(section);
+   section.querySelectorAll('[data-business-policy]').forEach(input=>input.onchange=async()=>{try{await api('business/policy',{item:input.dataset.businessPolicy,policy:input.value});await refresh();}catch(e){toast(e.message,true)}await shop(el,'business')});
+  }
+
   async function shop(el,category){
 
     const labels={business:['THE BUSINESS DISTRICT','Income never sleeps.'],car:['THE MOTOR COLLECTION','Arrive on your terms.'],home:['EXCEPTIONAL ADDRESSES','Live above the ordinary.'],helicopter:['PRIVATE ROTOR COLLECTION','Own the skyline.'],jet:['THE PRIVATE FLEET','The world is within reach.'],garage:['THE PRIVATE GARAGES','A home for your collection.'],yacht:['THE PRIVATE MARINA','Your horizon. Your rules.']};
@@ -95,7 +103,7 @@ export function createPremiumUI({api,getMe,refresh,toast,esc,money,date,navigate
 
     el.innerHTML=lhtml`<div class="section-heading"><div><div class="eyebrow">${eyebrow}</div><h2>${title}</h2></div></div>${limits}`;
 
-    try{const d=await api('catalog');if(!el.isConnected)return;el.innerHTML+=lhtml('<div class="missions premium-grid">')+d.catalog.filter(x=>x.category===category&&!x.storageKind).sort((a,b)=>a.price-b.price).map(x=>assetCard(x)).join('')+lhtml('</div><p class="art-note">Cinematic AI-generated artwork. Vehicles are artistic interpretations; aircraft names and prices are fictional game content.</p>');await bindPurchases(el)}catch(error){toast(error.message,true)}
+    try{const d=await api('catalog');if(!el.isConnected)return;el.innerHTML+=lhtml('<div class="missions premium-grid">')+d.catalog.filter(x=>x.category===category&&!x.storageKind).sort((a,b)=>a.price-b.price).map(x=>assetCard(x)).join('')+lhtml('</div><p class="art-note">Cinematic AI-generated artwork. Vehicles are artistic interpretations; aircraft names and prices are fictional game content.</p>');await bindPurchases(el);if(category==='business')await businessPolicies(el)}catch(error){toast(error.message,true)}
 
   }
 

@@ -899,17 +899,22 @@ export const localeCatalog=[
   {
     "id": "territory-block",
     "name": "Street block",
-    "description": "Control 1 city block. Adds family Power, defense and shipment success. Can be captured during a declared war. Earns shared territory income for the family treasury."
+    "description": "Control 1 city block. Adds family Power, defense and shipment success. Can be captured during a declared war. Earns shared territory income for the family treasury. Local drug sale margin +0.75% per plot, capped at 9% in this city."
   },
   {
-    "id": "territory-district",
-    "name": "Commercial district",
-    "description": "Control 4 city blocks. Adds family Power, defense and shipment success. Can be captured during a declared war. Earns shared territory income for the family treasury."
+    "id": "territory-industry",
+    "name": "Industrial district",
+    "description": "Control 4 city blocks. Adds family Power, defense and shipment success. Can be captured during a declared war. Earns shared territory income for the family treasury. Drug production time -2.5% per plot, capped at 25% in this city."
+  },
+  {
+    "id": "territory-finance",
+    "name": "Financial district",
+    "description": "Control 4 city blocks. Adds family Power, defense and shipment success. Can be captured during a declared war. Earns shared territory income for the family treasury. Crypto spreads and auction commission -2.5% per plot, capped at 25% in this city. Investments have no fee."
   },
   {
     "id": "territory-harbor",
     "name": "Harbor territory",
-    "description": "Control 12 city blocks. Adds family Power, defense and shipment success. Can be captured during a declared war. Earns shared territory income for the family treasury."
+    "description": "Control 12 city blocks. Adds family Power, defense and shipment success. Can be captured during a declared war. Earns shared territory income for the family treasury. Boat cargo time -3% per plot at this endpoint, capped at 15%; both endpoints combine to 30%."
   },
   {
     "id": "safehouse-sanctuary",
@@ -2008,6 +2013,21 @@ export const localeCatalog=[
     "id": "reliability",
     "name": "Endurance engineering",
     "description": "Adds 1.5 reliability points per level and reduces mistake risk by 0.3 percentage points."
+  },
+  {
+    "id": "stable",
+    "name": "Stable operation",
+    "description": "Predictable business income without additional inspections."
+  },
+  {
+    "id": "illegal",
+    "name": "Illegal operation",
+    "description": "Higher income. Each operating hour has a 6% inspection chance: half that hour is seized, followed by one closed hour."
+  },
+  {
+    "id": "launder",
+    "name": "Money laundering",
+    "description": "Highest gross income and risk. Each operating hour has a 12% inspection chance: 80% of that hour is seized, followed by two closed hours."
   },
   {
     "id": "circuit:podium",

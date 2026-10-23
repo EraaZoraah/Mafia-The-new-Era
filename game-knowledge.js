@@ -1,3 +1,4 @@
+import {businessPolicies} from './business-policy.js';
 import {LOTTERY_MAX_TICKETS} from './casino-extra.js';
 import {familyCrests} from './community.js';
 import {referralEvent} from './referrals.js';
@@ -56,6 +57,7 @@ export function gameKnowledge(language='en'){
  for(const m of mysteryJobs)add('missions',m.name,m.description+' Optional contact mission: failure can cause prison. Invitations are not guaranteed.');
  for(const m of compoundUpgrades)add('family-compounds',m.name,`${m.description} Price ${dollars(m.price)}, Power ${m.power}. One permanent extension per family, retained when moving.`);
  for(const m of musclePackages)add('security',m.name,`Price ${dollars(m.price)}, lasts ${m.minutes} minutes for ${m.uses} attempts. Adds ${Math.round(m.bonus*100)} percentage points success.`);
+ for(const p of businessPolicies)add('business',p.name,p.description);
  for(const m of tuningModules)add('circuit',m.name,m.description);
  for(const r of ranks)add('ranks',r.name,`Rank ${r.level}/25, requires ${r.xp.toLocaleString('en-US')} cumulative XP. Active income factor ${r.incomeMultiplier}. Rank-up restores energy and adds 10 maximum energy within the cap.`);
  for(const [kind,rows] of Object.entries(careerRanks))for(const r of rows)add('shipments',kind+' '+r.name,`Career level ${r.level}/15, threshold ${r.xp} career XP, payout factor ${r.multiplier.toFixed(3)}. Personal and family careers progress separately.`);

@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {fixture} from './helpers/game-fixture.js';
 import {familyAssets} from '../empire-catalog.js';
-const start=f=>{f.run("INSERT INTO family_assets VALUES(1,'territory-block',1),(2,'territory-district',2)");assert.equal(f.call('family/war/declare',{familyId:2}).status,200)};
+const start=f=>{f.run("INSERT INTO family_assets VALUES(1,'territory-block',1),(2,'territory-industry',2)");assert.equal(f.call('family/war/declare',{familyId:2}).status,200)};
 const team=f=>{assert.equal(f.call('family/war/team/create',{familyId:2}).status,200);return f.q('SELECT id FROM war_teams').id};
 
 test('territory aggregate migration permits holdings across cities while preserving authority and bounds',t=>{
@@ -11,17 +11,17 @@ test('territory aggregate migration permits holdings across cities while preserv
  const power=f.call('family/dashboard').body.family.power.total;
  for(const item of familyAssets.filter(a=>a.category==='Territory')){assert.equal(item.limit,525);f.run('INSERT INTO family_assets VALUES(?,?,?)',1,item.id,25);}
  assert.throws(()=>f.run("UPDATE family_assets SET quantity=526 WHERE item_id='territory-block'"));
- f.reset();assert.equal(f.call('family').body.family.territory.reduce((n,x)=>n+x.quantity,0),75);assert.ok(f.call('family/dashboard').body.family.power.total>power);
+ f.reset();assert.equal(f.call('family').body.family.territory.reduce((n,x)=>n+x.quantity,0),100);assert.ok(f.call('family/dashboard').body.family.power.total>power);
  assert.equal(f.call('family/possessions').body.family.territory[0].quantity,25);
 });
 
 test('capture transfers exactly one territory, with cost, score, limits and replay protection',t=>{
  const f=fixture(t);start(f);const before=f.q('SELECT SUM(treasury) total FROM families').total;
- const result=f.call('family/war/capture',{familyId:2,itemId:'territory-district'});assert.equal(result.status,200);assert.equal(result.body.success,true);
- assert.equal(f.q("SELECT quantity FROM family_assets WHERE family_id=1 AND item_id='territory-district'").quantity,1);assert.equal(f.q("SELECT quantity FROM family_assets WHERE family_id=2 AND item_id='territory-district'").quantity,1);
+ const result=f.call('family/war/capture',{familyId:2,itemId:'territory-industry'});assert.equal(result.status,200);assert.equal(result.body.success,true);
+ assert.equal(f.q("SELECT quantity FROM family_assets WHERE family_id=1 AND item_id='territory-industry'").quantity,1);assert.equal(f.q("SELECT quantity FROM family_assets WHERE family_id=2 AND item_id='territory-industry'").quantity,1);
  assert.equal(f.q('SELECT attacker_score FROM family_wars').attacker_score,3);assert.equal(f.q('SELECT SUM(treasury) total FROM families').total,before-2500000);
- assert.equal(f.call('family/war/capture',{familyId:2,itemId:'territory-district'}).status,429);
- f.advance(900001);f.run("UPDATE family_assets SET quantity=25 WHERE family_id=1 AND item_id='territory-district'");assert.equal(f.call('family/war/capture',{familyId:2,itemId:'territory-district'}).status,200);
+ assert.equal(f.call('family/war/capture',{familyId:2,itemId:'territory-industry'}).status,429);
+ f.advance(900001);f.run("UPDATE family_assets SET quantity=25 WHERE family_id=1 AND item_id='territory-industry'");assert.equal(f.call('family/war/capture',{familyId:2,itemId:'territory-industry'}).status,200);
  f.advance(900001);assert.equal(f.call('family/war/capture',{familyId:2,itemId:'compound-palace'}).status,409);
 });
 test('sabotage halves defense temporarily, does not stack and expires on surrender',t=>{
@@ -56,5 +56,5 @@ test('victory bonus changes family shipment share only, is bounded and no-battle
  assert.equal(f.call('family/war/declare',{familyId:2}).status,200);assert.equal(f.call('family/war/surrender',{},3).status,200);assert.ok(f.call('family/dashboard').body.family.warStats.bonusUntil<f.time());
 });
 test('failed special operations charge once and award no free points without moving territory',t=>{
- const f=fixture(t);start(f);f.dice(9999);const r=f.call('family/war/capture',{familyId:2,itemId:'territory-district'});assert.equal(r.body.success,false);assert.equal(f.q("SELECT quantity FROM family_assets WHERE family_id=2 AND item_id='territory-district'").quantity,2);assert.equal(f.q('SELECT defender_score FROM family_wars').defender_score,0);
+ const f=fixture(t);start(f);f.dice(9999);const r=f.call('family/war/capture',{familyId:2,itemId:'territory-industry'});assert.equal(r.body.success,false);assert.equal(f.q("SELECT quantity FROM family_assets WHERE family_id=2 AND item_id='territory-industry'").quantity,2);assert.equal(f.q('SELECT defender_score FROM family_wars').defender_score,0);
 });

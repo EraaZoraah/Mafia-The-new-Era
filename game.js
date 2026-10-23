@@ -1,3 +1,4 @@
+import {installBusinessPolicy} from './business-policy.js';
 import {isDrugSalesQuestion} from './guide-drug-sales.js';
 import {guideLanguage} from './guide-language.js';
 import {isCryptoAnalysisQuestion} from './guide-crypto.js';
@@ -197,7 +198,7 @@ export function installGame(db, { hash, log, json, onNotify=()=>{}, bribeRoll = 
 
   });
 
-  let playerSystems=null,expansion=null,art=null,circuit=null;
+  let playerSystems=null,expansion=null,art=null,circuit=null,business=null;
 
   const supporterBonus=id=>shop.bonus(id)*sundayBonus(clock());
 
@@ -207,7 +208,7 @@ export function installGame(db, { hash, log, json, onNotify=()=>{}, bribeRoll = 
 
   const benefits=id=>{
 
-    const u=q('SELECT xp,respect_received FROM users WHERE id=?',id),perks=ownershipBenefits(owned(id)),standing=progression(u.xp),respect=personalRespect(u.respect_received);const employeeIncome=expansion?.stats(id).income||0;perks.income+=employeeIncome;standing.incomeMultiplier*=1+respect.incomeBonus;standing.incomeMultiplier*=1+(art?.bonuses(id).income||0);const marriage=marriageBonus(id),passive=passiveMultiplier(standing.incomeMultiplier)*marriage;standing.incomeMultiplier*=marriage;
+    const u=q('SELECT xp,respect_received FROM users WHERE id=?',id),perks=ownershipBenefits(owned(id)),standing=progression(u.xp),respect=personalRespect(u.respect_received);const employeeIncome=expansion?.stats(id).income||0;perks.income+=employeeIncome;for(const a of owned(id)){const item=catalog.find(c=>c.category==='business'&&c.id===a.item_id);if(item&&business)perks.income+=item.income*a.quantity*(business.policy(id,item.id).multiplier-1);}standing.incomeMultiplier*=1+respect.incomeBonus;standing.incomeMultiplier*=1+(art?.bonuses(id).income||0);const marriage=marriageBonus(id),passive=passiveMultiplier(standing.incomeMultiplier)*marriage;standing.incomeMultiplier*=marriage;
 
     return {...perks,...standing,marriageBonus:marriage,titles:[...(circuit?circuit.titles(id):[]),...(art?.bonuses(id).title?[{id:"art:collection",name:art.bonuses(id).title}]:[]),...perks.titles,...legacy.titles(id),...shop.titles(id)],respect,energyMax:Math.min(ENERGY_LIMIT,perks.energyMax+standing.rankEnergyBonus),baseIncome:perks.income,passiveIncomeMultiplier:passive,income:Math.min(MAX_MONEY,Math.floor((perks.income-employeeIncome)*passive+employeeIncome*marriage))};
 
@@ -309,6 +310,7 @@ export function installGame(db, { hash, log, json, onNotify=()=>{}, bribeRoll = 
 
       const item=catalog.find(x=>x.category===asset.category&&x.id===asset.item_id);if(!item)continue;
 
+      if(item.category==='business'&&business){const from=Math.max(asset.income_at,incomeWindow.from),end=Math.max(from,incomeWindow.to),result=business.accrue(asset,item,from,end,(a,b)=>perks.passiveIncomeMultiplier/supporterBonus(id)*passiveSupporter(id,a,b));earned=Math.min(MAX_MONEY,earned+result.earned);run('UPDATE possessions SET income_at=?,elapsed_remainder=?,income_remainder=? WHERE user_id=? AND category=? AND item_id=?',time,result.remainder,result.incomeRemainder,id,item.category,item.id);continue;}
       const from=Math.max(asset.income_at,incomeWindow.from),end=Math.max(from,incomeWindow.to),elapsed=Math.max(0,end-from),blocked=underworld.blockedMillis(id,from,end),active=Math.max(0,elapsed-blocked)+(asset.elapsed_remainder||0),minutes=Math.floor(active/60000);
 
       const numerator=BigInt(minutes)*BigInt(item.income)*BigInt(asset.quantity)*BigInt(Math.round(perks.passiveIncomeMultiplier/supporterBonus(id)*passiveSupporter(id,from,end)*1000000))+BigInt(asset.income_remainder);
@@ -788,6 +790,7 @@ export function installGame(db, { hash, log, json, onNotify=()=>{}, bribeRoll = 
   art=installArtMarket(db,{clock,transaction,fail,settleRaw,available,inventory:logistics.inventory,promote,rewardBonus:marriageBonus,consume:(id,scope,ammo,tier)=>logistics.consume(id,scope,{ammo,tier}),draw,roll,log,notify:underworld.notify,arrest:(id,minutes)=>underworld.detain(id,'prison',minutes*60000,1500000,'Arrested after an art heist.'),offerBribe:bribery.offer});
   circuit=installMidnightCircuit(db,{clock,transaction,fail,draw,settleRaw,available,vehicleBoard:vehicles.view,notify:underworld.notify,arrest:(id,minutes)=>underworld.detain(id,'prison',minutes*60000,500000,'Arrested after a Midnight Circuit race.'),offerBribe:bribery.offer,currentBribe:bribery.current});
 
+  business=installBusinessPolicy(db,{clock,transaction,settleRaw,available,fail,blockedMillis:underworld.blockedMillis,incomeMultiplier:id=>benefits(id).passiveIncomeMultiplier});
   const territoryIncome=installTerritoryIncome(db,{clock,transaction});
 
   function route(req,res,pathname,body,user) {
@@ -848,6 +851,7 @@ export function installGame(db, { hash, log, json, onNotify=()=>{}, bribeRoll = 
 
       const crewResult=crew.route(req,pathname,body,user);if(crewResult!==null)return json(res,200,crewResult);
 
+      const businessResult=business.route(req,pathname,body,user);if(businessResult!==null)return json(res,200,businessResult);
       const expansionResult=expansion.route(req,pathname,body,user);if(expansionResult!==null)return json(res,200,expansionResult);
 
       const playerResult=playerSystems.route(req,pathname,body,user);if(playerResult!==null)return json(res,200,playerResult);
@@ -920,7 +924,7 @@ export function installGame(db, { hash, log, json, onNotify=()=>{}, bribeRoll = 
 
           const quantity=possessions.find(a=>a.category===item.category&&a.item_id===item.id)?.quantity||0;
 
-          return {...item,quantity,nextPrice:purchasePrice(item,quantity)};
+          return {...item,businessPolicy:item.category==='business'?business.policy(user.id,item.id):null,quantity,nextPrice:purchasePrice(item,quantity)};
 
         }),crimes:crimes.map(x=>crimeOffer(x,perks)),pvpActions:pvpActions.map(x=>({...x,supplies:operationSupply('pvp',x)})),ranks});
 
