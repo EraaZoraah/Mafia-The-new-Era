@@ -1995,6 +1995,21 @@ export const localeCatalog=[
     "name": "Ferrari F40"
   },
   {
+    "id": "handling",
+    "name": "Precision suspension",
+    "description": "Adds 1.5 handling points per level. Best suited to technical corners."
+  },
+  {
+    "id": "acceleration",
+    "name": "Powertrain calibration",
+    "description": "Adds 1.5 acceleration points per level. Best suited to highway sprints."
+  },
+  {
+    "id": "reliability",
+    "name": "Endurance engineering",
+    "description": "Adds 1.5 reliability points per level and reduces mistake risk by 0.3 percentage points."
+  },
+  {
     "id": "circuit:podium",
     "name": "Midnight Champion"
   }

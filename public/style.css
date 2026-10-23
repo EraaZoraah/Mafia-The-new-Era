@@ -340,3 +340,7 @@ a[href^="#profile/"],.player-link,[data-presence-id]{color:#b9d5e8;text-shadow:n
 
 .profile-avatar.frame-skin-mr-noob{--skin-frame:#dbe8f4}
 .sidebar .navigation-search button{width:22px;min-width:22px;flex:0 0 22px}
+
+.circuit-workshop .mission.panel{padding:24px;min-width:0;display:flex;flex-direction:column}
+.circuit-workshop .mission h3{font-size:clamp(1.1rem,1.4vw,1.35rem);overflow-wrap:normal;word-break:normal;hyphens:auto}
+.circuit-workshop .mission .btn{margin-top:auto;width:100%}

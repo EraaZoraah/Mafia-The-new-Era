@@ -10,6 +10,18 @@ const rankNames=['Rookie Driver','Night Driver','Street Apprentice','Corner Cutt
 const thresholds=[0,50,140,280,500,800,1200,1750,2450,3300,4400,5800,7500,9600,12000];
 export const driverRanks=rankNames.map((name,i)=>({name,xp:thresholds[i],level:i+1,handlingBonus:Math.round(i*3/14*10)/10}));
 export const raceClasses=[{id:'street',name:'Street',fee:2500,base:58,maxTune:2},{id:'gt',name:'GT',fee:10000,base:72,maxTune:3},{id:'exotic',name:'Exotic',fee:25000,base:86,maxTune:3}];
+export const tuningModules=[
+ {id:'handling',name:'Precision suspension',description:'Adds 1.5 handling points per level. Best suited to technical corners.',stat:'handling',gain:1.5,column:'handling_tune'},
+ {id:'acceleration',name:'Powertrain calibration',description:'Adds 1.5 acceleration points per level. Best suited to highway sprints.',stat:'acceleration',gain:1.5,column:'acceleration_tune'},
+ {id:'reliability',name:'Endurance engineering',description:'Adds 1.5 reliability points per level and reduces mistake risk by 0.3 percentage points.',stat:'reliability',gain:1.5,column:'reliability_tune'}
+];
+export function applyRaceTuning(base,state={}){
+ const maxModuleLevel={street:3,gt:4,exotic:5}[base.class],moduleBudget=maxModuleLevel*2;
+ const tune=Math.max(0,Math.min(base.maxTune,state.tune||0));
+ const levels=Object.fromEntries(tuningModules.map(m=>[m.id,Math.max(0,Math.min(maxModuleLevel,state[m.column]||0))]));
+ const stats=Object.fromEntries(tuningModules.map(m=>[m.stat,base[m.stat]+tune+levels[m.id]*m.gain]));
+ return {...base,...stats,tune,tuningApplied:true,stockRating:base.rating,rating:Math.round((stats.handling+stats.acceleration+stats.reliability)/3*10),moduleLevels:levels,maxModuleLevel,moduleBudget,moduleUsed:Object.values(levels).reduce((a,b)=>a+b,0)};
+}
 export const driverProgress=xp=>{const rank=driverRanks.findLast(r=>xp>=r.xp)||driverRanks[0];return {...rank,next:driverRanks[rank.level]||null};};
 export function carPerformance(car){
  const id=car.id+' '+car.name,classic=/classic|1965|2cv|beetle|240 estate|325i e30|190 e|xjs|944|eldorado|azure|testarossa|countach|e-type|959|f40|280 sl|507|300 sl|db5|miura|2900|250 gt|57sc|xk120/i.test(id);
@@ -20,7 +32,7 @@ export function carPerformance(car){
 export const raceWeek=time=>{const d=new Date(time);return Date.UTC(d.getUTCFullYear(),d.getUTCMonth(),d.getUTCDate()-((d.getUTCDay()+6)%7));};
 
 export function raceProjection(car,route,strategy,setup,handlingBonus=0,mechanic=false){
- const penalty=[0,18,10,4,0,-1][car.stars],stats=[car.handling+handlingBonus,car.acceleration,car.reliability-penalty-car.wear*.15].map((v,i)=>v+setup.stats[i]+car.tune);
- const performance=stats.reduce((n,v,j)=>n+v*route.weights[j],0)+strategy.boost+(mechanic?1:0),risk=Math.max(.01,strategy.risk+penalty*.003+car.wear*.001-(mechanic?.035:0)-handlingBonus*.004);
+ const penalty=[0,18,10,4,0,-1][car.stars],stats=[car.handling+handlingBonus,car.acceleration,car.reliability-penalty-car.wear*.15].map((v,i)=>v+setup.stats[i]+(car.tuningApplied?0:car.tune||0));
+ const performance=stats.reduce((n,v,j)=>n+v*route.weights[j],0)+strategy.boost+(mechanic?1:0),risk=Math.max(.01,strategy.risk+penalty*.003+car.wear*.001-(mechanic?.035:0)-handlingBonus*.004-(car.moduleLevels?.reliability||0)*.003);
  return {performance,risk,expectedStageMs:105000-performance*400+risk*12000};
 }

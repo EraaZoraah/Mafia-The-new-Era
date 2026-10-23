@@ -1,6 +1,16 @@
 # Midnight Circuit — 16 October 2026
 
-Build `2026-10-16-midnight-circuit-1` adds a separate driving career under Crimes & missions → Midnight Circuit.
+Midnight Circuit is a separate driving career under City → Midnight Circuit. The specialist workshop was added in version 1.27.0.
+
+## Specialist workshop — 1.27.0
+
+- Precision suspension, Powertrain calibration and Endurance engineering each add 1.5 points to their own performance statistic per level. Reliability also reduces mistake risk by 0.3 percentage points per level, keeping the existing 1% minimum risk.
+- Street allows three levels per module and six total specialist levels; GT four and eight; Exotic five and ten. The shared budget prevents maximizing all three modules. Existing balanced tuning remains available separately and is preserved on migration.
+- Each new specialist level costs `class fee × 12 × new level²`. Current cost, level and class budget are displayed before purchase. A state revision and exact cost are validated atomically before charging. Stale or repeated purchase quotes cannot charge another upgrade.
+- Both balanced and specialist tuning are included in the effective rating used for multiplayer matching. Class never changes. Route weights, driver rank, condition, wear and strategy still influence the server result.
+- Installed tuning is saved in each entry snapshot. A pending race locks its car against repairs and upgrades; historical replays retain their original stages. No change to ownership, collection stars, resale basis or crime-income bonuses.
+- Highly worn cars can be repaired; the race eligibility restriction no longer incorrectly blocks repair itself. Preparation choices survive workshop purchases within the page.
+- Bots can buy modules through the same validated workshop. Luca receives a current affordable specialist quote from the authoritative board, excluding unavailable cars and custody. All three module descriptions and the full rulebook are localized in NL/ES/FR/DE.
 
 ## Playing
 

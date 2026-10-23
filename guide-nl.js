@@ -60,7 +60,7 @@ const topics=[
  ['rules','Spelregels & hulp',/regel|faq|privacy/,'De spelregels en FAQ beschrijven de actuele systemen. Luca is een lokale spelgids met gedeelde catalogi en live accountgegevens. Adviezen zijn geen acties en bieden geen garantie op de wiskundig optimale strategie.']
 ];
 export function guideAnswerNL(db,u,question,time,context={}){
- if(context.circuit&&/midnight|circuit|racing|street.?rac|straat.?rac|race\b|races\b|rijrang/.test(String(question||'').toLowerCase()))return circuitGuide(context.circuit,u,time,'nl');
+ if(context.circuit&&/midnight|circuit|racing|tuning|workshop|werkplaats|ophanging|specialist|street.?rac|straat.?rac|race\b|races\b|rijrang/.test(String(question||'').toLowerCase()))return circuitGuide(context.circuit,u,time,'nl');
  const query=String(question||'').toLowerCase(),goal=/xp|rang|ervaring/.test(String(question||'').toLowerCase())?'xp':/respect/.test(String(question||'').toLowerCase())?'respect':'cash',p=progression(u.xp),detained=Math.max(u.prison_until||0,u.hospital_until||0)>time,suggestions=[],links=[];
  const push=(tab,label,text)=>suggestions.push({tab,label,text});
  if(/territor|verover|gebied|kaart|map/.test(query)){

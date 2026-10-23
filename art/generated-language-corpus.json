@@ -3457,7 +3457,7 @@
     ]
   },
   {
-    "key": "Choose repair or tuning.",
+    "key": "Choose repair, balanced tuning or a specialist upgrade.",
     "files": [
       "midnight-circuit.js"
     ]
@@ -3470,6 +3470,18 @@
   },
   {
     "key": "This class has reached its tuning limit.",
+    "files": [
+      "midnight-circuit.js"
+    ]
+  },
+  {
+    "key": "Choose a valid specialist upgrade.",
+    "files": [
+      "midnight-circuit.js"
+    ]
+  },
+  {
+    "key": "This specialist upgrade or class budget is already full.",
     "files": [
       "midnight-circuit.js"
     ]

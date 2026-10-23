@@ -2575,6 +2575,13 @@
     "translated": true
   },
   {
+    "key": "Balanced tuning",
+    "files": [
+      "midnight-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Bank",
     "files": [
       "staff-totals-ui.js"
@@ -3348,6 +3355,13 @@
     "key": "Choose your Skin",
     "files": [
       "profile-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Choose your strengths: specialist upgrades share a class budget. Installed upgrades count towards matchmaking. They never change collection stars, resale value or crime income.",
+    "files": [
+      "midnight-ui.js"
     ],
     "translated": true
   },
@@ -6285,7 +6299,8 @@
   {
     "key": "Level",
     "files": [
-      "empire-ui.js"
+      "empire-ui.js",
+      "midnight-ui.js"
     ],
     "translated": true
   },
@@ -6557,7 +6572,7 @@
     "translated": true
   },
   {
-    "key": "Mafia: The new Era © · v1.26.0",
+    "key": "Mafia: The new Era © · v1.27.0",
     "files": [
       "app.js"
     ],
@@ -6690,9 +6705,23 @@
     "translated": true
   },
   {
+    "key": "Maximum level",
+    "files": [
+      "midnight-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Maximum loot",
     "files": [
       "empire-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Maximum per module",
+    "files": [
+      "midnight-ui.js"
     ],
     "translated": true
   },
@@ -10559,6 +10588,27 @@
     "translated": true
   },
   {
+    "key": "Specialist budget full",
+    "files": [
+      "midnight-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Specialist levels",
+    "files": [
+      "midnight-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Specialist workshop",
+    "files": [
+      "midnight-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Sponsor",
     "files": [
       "player-systems-ui.js"
@@ -10708,6 +10758,13 @@
     "key": "Stock location: ",
     "files": [
       "logistics-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Stock rating",
+    "files": [
+      "midnight-ui.js"
     ],
     "translated": true
   },
@@ -11610,13 +11667,6 @@
     "translated": true
   },
   {
-    "key": "Tuning",
-    "files": [
-      "midnight-ui.js"
-    ],
-    "translated": true
-  },
-  {
     "key": "Two-digit code",
     "files": [
       "expansion-ui.js"
@@ -11725,6 +11775,13 @@
     "key": "Upcoming & active events",
     "files": [
       "daily-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Upgrade",
+    "files": [
+      "midnight-ui.js"
     ],
     "translated": true
   },

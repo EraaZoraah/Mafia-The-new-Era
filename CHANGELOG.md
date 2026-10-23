@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.27.0 — 2026-10-23
+
+- Specialist Circuit tuning adds separate handling, acceleration and reliability upgrade paths with class budgets.
+- Installed balanced and specialist tuning now count towards multiplayer race rating.
+- Workshop quotes validate current state before payment; heavily worn cars can be repaired.
+- Preparation selections remain in place after workshop purchases. Bots and Luca use live module offers, with updated five-language rules and announcements.
+
 ## 1.26.0 — 2026-10-23
 
 - Nine illustrated cars and five additional garages expand the purchased collection to sixty places, with eight exclusive models and extra utility perks.
