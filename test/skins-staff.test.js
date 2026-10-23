@@ -5,7 +5,7 @@ import {skins} from '../skins.js';
 import {shopProducts} from '../shop.js';
 const style={theme:'gold',emblem:'crown',banner:'skyline',bio:'',title:''};
 test('skin entitlement gates selection, matching frames remain interchangeable, and legacy portraits migrate on read',t=>{
- const f=fixture(t);assert.equal(skins.length,23);assert.equal(skins.filter(s=>!s.cents&&!s.ownerOnly&&!s.grantOnly).length,6);assert.equal(skins.filter(s=>s.cents===399).length,12);assert.equal(skins.filter(s=>s.cents===599).length,2);skins.filter(s=>!s.grantOnly).forEach((s,i)=>assert.equal(s.gender,i%2?'female':'male'));
+ const f=fixture(t);assert.equal(skins.length,25);assert.equal(skins.filter(s=>!s.cents&&!s.ownerOnly&&!s.grantOnly).length,6);assert.equal(skins.filter(s=>s.cents===399).length,14);assert.equal(skins.filter(s=>s.cents===599).length,2);skins.filter(s=>!s.grantOnly).forEach((s,i)=>assert.equal(s.gender,i%2?'female':'male'));
  assert.equal(f.call('profile/settings',{...style,avatar:'godfather'},2).status,400);
  const b={recipient:'MemberOne',product:'skin-godfather',key:'skin-grant-test-0001',reason:'Skin test'};assert.equal(f.call('admin/shop/grant',b).status,200);assert.equal(f.call('admin/shop/grant',b).status,200);
  assert.equal(f.call('profile/settings',{...style,avatar:'godfather',frame:'skin-godfather'},2).status,200);f.reset();assert.equal(f.call('profiles/2',undefined,2).body.player.appearance.skin.id,'godfather');

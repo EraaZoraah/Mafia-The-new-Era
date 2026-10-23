@@ -1455,6 +1455,14 @@ export const localeCatalog=[
     "name": "The Godmother"
   },
   {
+    "id": "skin-matteo-bellini",
+    "name": "Matteo Bellini"
+  },
+  {
+    "id": "skin-elena-bellini",
+    "name": "Elena Bellini"
+  },
+  {
     "id": "energy-refill",
     "name": "Fresh Start · Energy"
   },
@@ -1682,6 +1690,16 @@ export const localeCatalog=[
     "id": "mr-noob",
     "name": "Mr.Noob",
     "frameName": "Mr.Noob"
+  },
+  {
+    "id": "matteo-bellini",
+    "name": "Matteo Bellini",
+    "frameName": "Emerald Signature · Matteo Bellini"
+  },
+  {
+    "id": "elena-bellini",
+    "name": "Elena Bellini",
+    "frameName": "Emerald Signature · Elena Bellini"
   },
   {
     "id": "canal-nocturne",

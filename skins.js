@@ -18,3 +18,7 @@ export const legacySkin=id=>/^portrait-(0[1-9]|1[0-2])$/.test(id||'')?skins[(Mat
 skins.find(s=>s.id==='owner-goddess').image='/images/skin-owner-goddess-v3.png';
 
 skins.push({id:'mr-noob',name:'Mr.Noob',gender:'male',cents:0,grantOnly:true,image:'/images/skin-mr-noob-v2.png',frame:'skin-mr-noob',frameName:'Mr.Noob',accent:'platinum'});
+
+for(const [id,name,gender] of [['matteo-bellini','Matteo Bellini','male'],['elena-bellini','Elena Bellini','female']])skins.push({id,name,gender,cents:399,image:'/images/skin-'+id+'.png',frame:'skin-'+id,frameName:'Emerald Signature · '+name,accent:'emerald'});
+
+skins.find(s=>s.id==='elena-bellini').image='/images/skin-elena-bellini-v2.png';

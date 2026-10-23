@@ -141,6 +141,8 @@ export function installLogistics(db,{employeePower=()=>0,marriageBonus=()=>1,tra
  function cargoQuote(b,city,mode){const offer=territoryFreight(db,b,city,freightQuote(b.stock_city,city,mode,b.cost,b.units));if(!offer)return null;return {...offer,cost:Math.ceil(offer.cost*market(b.drug_id,b.stock_city).transportPercent*market(b.drug_id,city).transportPercent/10000)};}
  function finishFreight(scope,id){for(const b of all('SELECT * FROM production_batches WHERE scope=? AND owner_id=? AND sold_at=0 AND arrives_at>0 AND arrives_at<=?',scope,id,clock())){
   run("UPDATE production_batches SET stock_city=transit_to,transit_to='',arrives_at=0,sold_at=? WHERE id=?",b.intercepted?clock():0,b.id);
+  const text=b.intercepted?'Drug cargo intercepted: '+b.units+' crates of '+products.find(p=>p.id===b.drug_id).name+' to '+b.transit_to+'. No additional cash charged.':'Drug cargo delivered: '+b.units+' crates of '+products.find(p=>p.id===b.drug_id).name+' to '+b.transit_to+'. Ready for sale.';
+  if(scope==='personal')log(id,text);else for(const member of all('SELECT user_id FROM family_members WHERE family_id=?',id))log(member.user_id,'Family cargo: '+text);
  }}
  function productionTrade(scope,id){
   const rows=all('SELECT * FROM production_batches WHERE scope=? AND owner_id=?',scope,id),names=new Map(products.map(p=>[p.id,p.name]));
@@ -266,5 +268,5 @@ export function installLogistics(db,{employeePower=()=>0,marriageBonus=()=>1,tra
   ]).sort((a,b)=>b.expectedProfit-a.expectedProfit);
   return {storage,asOf:clock(),until:(Math.floor(clock()/3600000)+1)*3600000,currentCity:current,units:1,slotsUsed:batches('personal',user.id).filter(b=>b.arrives_at<=clock()).length,bestAvailable:offers.find(o=>o.accessible&&o.affordable)||null,bestMarket:offers[0]||null,bestStock:stock[0]||null,hasJet};
  }
- return {route,consume,personalPower,familyPower,inventory,ensure,marketAdvice};
+ return {settleFreight:()=>transaction(()=>{for(const row of all('SELECT DISTINCT scope,owner_id FROM production_batches WHERE sold_at=0 AND arrives_at>0 AND arrives_at<=?',clock()))finishFreight(row.scope,row.owner_id)}),route,consume,personalPower,familyPower,inventory,ensure,marketAdvice};
 }

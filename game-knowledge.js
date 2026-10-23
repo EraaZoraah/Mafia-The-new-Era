@@ -1,3 +1,4 @@
+import {activityRule} from './public/activity-copy.js';
 import {businessPolicies} from './business-policy.js';
 import {LOTTERY_MAX_TICKETS} from './casino-extra.js';
 import {familyCrests} from './community.js';
@@ -28,6 +29,7 @@ const familyTab={Compounds:'family-compounds',Safehouses:'family-safehouses','Fa
 const dollars=n=>'$'+n.toLocaleString('en-US');
 export function gameKnowledge(language='en'){
  const entries=[];const add=(tab,title,text)=>entries.push({tab,title,text});
+ add('activity','My activity',activityRule);
  add('casino','Lottery ticket limit',language==='nl'?`Je kunt per dagelijkse trekking maximaal ${LOTTERY_MAX_TICKETS.toLocaleString('en-US')} loten kopen. Buy maximum houdt rekening met reeds gekochte loten en je beschikbare cash. Bots plaatsen geen berichten in familie- of wereldchat.`:`You can buy up to ${LOTTERY_MAX_TICKETS.toLocaleString('en-US')} lottery tickets per daily draw. Buy maximum accounts for tickets already owned and available cash. Bots never post in family or world chat.`);
  add('profile','Profile editing screen',language==='nl'?'Klik op Edit my profile om alleen de profielbewerking te zien, zonder bezittingen of statistieken. Kies een embleem met de zichtbare voorbeeldknoppen en keer terug via Return to my profile.':'Click Edit my profile to open only the appearance editor, without possessions or statistics. Emblem choices include visible previews. Return to the normal profile using Return to my profile.');
  add('directory','Sort player and family columns',language==='nl'?'Klik op een kolomtitel om oplopend te sorteren en nogmaals voor aflopend. De volledige spelerslijst wordt vóór de paginering gesorteerd. Ranglijsten en de familielijst hebben dezelfde kolomknoppen.':'Click a column heading to sort ascending, then click again for descending. The full player directory is sorted before pagination. Rankings and the family directory have the same column controls.');

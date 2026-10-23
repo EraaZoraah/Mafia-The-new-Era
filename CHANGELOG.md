@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.29.0 — 2026-10-24
+
+- Personal activity timeline with account-scoped history, category filters, paginated records and exact cash/bank summaries.
+- Login-window history, custody access and explicit handling of principal, transfers and historical coverage.
+- Matteo Bellini and Elena Bellini premium skins with matching frames.
+- Five-language interface and Luca explanations; bots retain ordinary recorded actions.
+
+
 ## 1.28.0 — 2026-10-23
 
 - Automatic stable, illegal and money-laundering business policies with deterministic inspections, bounded closures, 24-hour change cooldowns and separate generated/lost income records.

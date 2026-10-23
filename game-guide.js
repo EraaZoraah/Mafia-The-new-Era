@@ -1,3 +1,5 @@
+import {activityRule} from './public/activity-copy.js';
+import {createTranslator} from './public/i18n.js';
 import {territoryGuide} from './territory-guide.js';
 import {drugSalesGuide} from './guide-drug-sales.js';
 import {cryptoGuide} from './guide-crypto.js';
@@ -91,6 +93,8 @@ export const guideTopics=[
 ];
 
 export function guideAnswer(db,u,question,time=Date.now(),context={}){
+ if(/my activity|activity timeline|activiteit|activiteiten|actividad|activité|aktivität|aktivitat|what happened.*away|gebeurd.*offline/i.test(question)){const text=createTranslator(context.language||'en');return {name:'Luca Moretti',mode:'local',answer:text(activityRule),links:[{tab:'activity',label:text('My activity')}],suggestions:[]};}
+
  const territory=territoryGuide(db,u,question,context.language);if(territory)return territory;
  const crypto=cryptoGuide(question,u,time,context);if(crypto)return crypto;
  const trading=tradingGuide(question,context);if(trading)return trading;

@@ -123,5 +123,7 @@ export const catalogTitlesDutch={
   "Signature · Don Marcello": "Signatuurlijst · Don Marcello",
   "Signature · Donna Caterina": "Signatuurlijst · Donna Caterina",
   "Imperial rose · The Godfather": "Keizerlijke roos · The Godfather",
-  "Imperial rose · The Godmother": "Keizerlijke roos · The Godmother"
+  "Imperial rose · The Godmother": "Keizerlijke roos · The Godmother",
+  "Emerald Signature · Matteo Bellini": "Emerald Signature · Matteo Bellini",
+  "Emerald Signature · Elena Bellini": "Emerald Signature · Elena Bellini"
 };

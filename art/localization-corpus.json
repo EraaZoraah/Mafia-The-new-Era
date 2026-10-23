@@ -283,6 +283,7 @@
   {
     "key": " XP",
     "files": [
+      "activity-ui.js",
       "midnight-ui.js",
       "premium.js"
     ],
@@ -1002,7 +1003,7 @@
     "files": [
       "city-map-ui.js"
     ],
-    "translated": false
+    "translated": true
   },
   {
     "key": "{v3}. {v4} BASE RISK · {v5}% SUCCESS · {v6} ENERGY",
@@ -2359,7 +2360,7 @@
     "files": [
       "city-map-ui.js"
     ],
-    "translated": false
+    "translated": true
   },
   {
     "key": "ART. POWER. PROVENANCE.",
@@ -2605,6 +2606,7 @@
   {
     "key": "Bank",
     "files": [
+      "activity-ui.js",
       "staff-totals-ui.js"
     ],
     "translated": true
@@ -3175,11 +3177,19 @@
   {
     "key": "Cash",
     "files": [
+      "activity-ui.js",
       "app.js",
       "legacy-ui.js",
       "profile-ui.js",
       "staff-totals-ui.js",
       "transfers-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Cash and bank combined. Bank transfers cancel out. Family treasury is excluded. These are balance movements, not trading profit.",
+    "files": [
+      "activity-ui.js"
     ],
     "translated": true
   },
@@ -4080,7 +4090,7 @@
     "files": [
       "expansion-ui.js"
     ],
-    "translated": false
+    "translated": true
   },
   {
     "key": "Current destination sale value: {v5}. Net includes production and every paid freight fee. Prices can change before arrival; interception loses the cargo and fee.",
@@ -4563,7 +4573,7 @@
     "files": [
       "city-map-ui.js"
     ],
-    "translated": false
+    "translated": true
   },
   {
     "key": "Email address",
@@ -4981,6 +4991,13 @@
     "key": "Family breakout",
     "files": [
       "underworld-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Family cargo: {v0}",
+    "files": [
+      "activity-ui.js"
     ],
     "translated": true
   },
@@ -5453,7 +5470,7 @@
     "files": [
       "expansion-ui.js"
     ],
-    "translated": false
+    "translated": true
   },
   {
     "key": "Game rules",
@@ -6700,11 +6717,11 @@
     "translated": true
   },
   {
-    "key": "Mafia: The new Era © · v1.28.0",
+    "key": "Mafia: The new Era © · v1.29.0",
     "files": [
       "app.js"
     ],
-    "translated": false
+    "translated": true
   },
   {
     "key": "Mafia: The New Era is een online multiplayerspel. Maak opnieuw verbinding om door te spelen; offline worden geen acties verstuurd.",
@@ -7030,7 +7047,7 @@
     "files": [
       "art-market-ui.js"
     ],
-    "translated": false
+    "translated": true
   },
   {
     "key": "Minimum reward",
@@ -7141,6 +7158,13 @@
     "key": "Muted",
     "files": [
       "care-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "My activity",
+    "files": [
+      "activity-ui.js"
     ],
     "translated": true
   },
@@ -7346,6 +7370,7 @@
   {
     "key": "Next",
     "files": [
+      "activity-ui.js",
       "legacy-ui.js",
       "presence-ui.js"
     ],
@@ -7370,7 +7395,7 @@
     "files": [
       "expansion-ui.js"
     ],
-    "translated": false
+    "translated": true
   },
   {
     "key": "Next minimum",
@@ -7755,6 +7780,13 @@
     "translated": true
   },
   {
+    "key": "No recorded activity in this period.",
+    "files": [
+      "activity-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "No recorded activity in this window.",
     "files": [
       "care-ui.js"
@@ -7836,7 +7868,7 @@
     "files": [
       "vehicles-ui.js"
     ],
-    "translated": false
+    "translated": true
   },
   {
     "key": "None",
@@ -7884,6 +7916,13 @@
     "key": "Not reported yet",
     "files": [
       "presence-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "NOTHING HAPPENS UNNOTICED",
+    "files": [
+      "activity-ui.js"
     ],
     "translated": true
   },
@@ -8458,6 +8497,20 @@
     "translated": true
   },
   {
+    "key": "Period",
+    "files": [
+      "activity-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Period totals remain unchanged when filtering the timeline.",
+    "files": [
+      "activity-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "PERMANENT COLLECTION",
     "files": [
       "shop-ui.js"
@@ -8845,6 +8898,7 @@
   {
     "key": "Previous",
     "files": [
+      "activity-ui.js",
       "legacy-ui.js",
       "presence-ui.js"
     ],
@@ -9438,6 +9492,13 @@
     "key": "Recorded coin results",
     "files": [
       "trade-summary-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Recorded financial history begins: {v0}. Missing older transactions are not estimated.",
+    "files": [
+      "activity-ui.js"
     ],
     "translated": true
   },
@@ -10573,7 +10634,7 @@
     "files": [
       "vehicles-ui.js"
     ],
-    "translated": false
+    "translated": true
   },
   {
     "key": "SET YOUR POLICY. LET IT RUN.",
@@ -12063,6 +12124,13 @@
     "translated": true
   },
   {
+    "key": "View details",
+    "files": [
+      "activity-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "View online players",
     "files": [
       "presence-ui.js"
@@ -12354,6 +12422,7 @@
   {
     "key": "XP",
     "files": [
+      "activity-ui.js",
       "app.js",
       "empire-ui.js",
       "presence-ui.js",
@@ -12503,7 +12572,14 @@
       "art-market-ui.js",
       "vehicles-ui.js"
     ],
-    "translated": false
+    "translated": true
+  },
+  {
+    "key": "Your deals, risks and rewards in one personal timeline.",
+    "files": [
+      "activity-ui.js"
+    ],
+    "translated": true
   },
   {
     "key": "Your Don and Capos manage territory acquisitions.",

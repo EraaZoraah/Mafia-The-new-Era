@@ -1,5 +1,11 @@
 [
   {
+    "key": "Invalid activity filter.",
+    "files": [
+      "activity.js"
+    ]
+  },
+  {
     "key": "Not enough wallet space to settle this auction.",
     "files": [
       "art-market.js"
@@ -1963,6 +1969,12 @@
     ]
   },
   {
+    "key": "My activity",
+    "files": [
+      "game-knowledge.js"
+    ]
+  },
+  {
     "key": "Lottery ticket limit",
     "files": [
       "game-knowledge.js"
@@ -3179,6 +3191,12 @@
     "files": [
       "logistics.js",
       "underworld.js"
+    ]
+  },
+  {
+    "key": "Family cargo: {v0}",
+    "files": [
+      "logistics.js"
     ]
   },
   {

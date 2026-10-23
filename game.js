@@ -1,3 +1,4 @@
+import {installActivity} from './activity.js';
 import {installBusinessPolicy} from './business-policy.js';
 import {isDrugSalesQuestion} from './guide-drug-sales.js';
 import {guideLanguage} from './guide-language.js';
@@ -776,6 +777,7 @@ export function installGame(db, { hash, log, json, onNotify=()=>{}, bribeRoll = 
   const care=installPlayerCare(db,{transaction,clock,fail,notify:underworld.notify,settleRaw,cancelRaces:id=>circuit?.cancelPlayer(id)});
 
   economy=installEconomy(db,{clock,fail});
+  const activity=installActivity(db,{clock,fail});
 
   installBotSchema(db);
 
@@ -798,10 +800,11 @@ export function installGame(db, { hash, log, json, onNotify=()=>{}, bribeRoll = 
     try {
 
       guardStaff(db,user,pathname,body,req.url);
+      const activityResult=activity.route(req,pathname,body,user);if(activityResult!==null)return json(res,200,activityResult);
       if(req.method==='POST')referrals.guard(user.id,pathname);const referralResult=referrals.route(req,pathname,body,user);if(referralResult!==null)return json(res,200,referralResult);
 
 
-      if(pathname==='/api/bank'&&req.method==='POST')return json(res,200,bankMove(db,user.id,body,log));
+      if(pathname==='/api/bank'&&req.method==='POST')return json(res,200,economy.withSource('bank',()=>bankMove(db,user.id,body,log)));
 
       const bribeResult=bribery.route(req,pathname,body,user);if(bribeResult!==null)return json(res,200,bribeResult);
 
@@ -1046,7 +1049,7 @@ export function installGame(db, { hash, log, json, onNotify=()=>{}, bribeRoll = 
 
   }
 
-  return {registerReferral:referrals.registration,presence,recordActivity:economy.withSource,tick:()=>{referrals.settle();economy.withSource('midnight-circuit',circuit.settle);economy.withSource('art-auction',art.settle);economy.withSource('vehicle-auction',vehicles.settle);economy.withSource('territory-income',territoryIncome.settle);care.beta();expansion.publish();return economy.withSource('season',legacy.tick)},settle,route,owned,profile,notify:underworld.notify,blockedMillis:underworld.blockedMillis};
+  return {recordLogin:activity.login,registerReferral:referrals.registration,presence,recordActivity:economy.withSource,tick:()=>{logistics.settleFreight();vehicles.settleFreight();referrals.settle();economy.withSource('midnight-circuit',circuit.settle);economy.withSource('art-auction',art.settle);economy.withSource('vehicle-auction',vehicles.settle);economy.withSource('territory-income',territoryIncome.settle);care.beta();expansion.publish();return economy.withSource('season',legacy.tick)},settle,route,owned,profile,notify:underworld.notify,blockedMillis:underworld.blockedMillis};
 
 }
 

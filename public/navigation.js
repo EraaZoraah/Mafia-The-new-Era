@@ -1,6 +1,6 @@
 // The sidebar and Luca share this page catalog. Layout sections are presentation only.
 export const navigationSections=[
- {id:'overview',label:'Overview',items:[['dashboard','Dashboard'],['daily','Daily objectives'],['bulletins','Announcements & events'],['messages','Messages']]},
+ {id:'overview',label:'Overview',items:[['dashboard','Dashboard'],['activity','My activity'],['daily','Daily objectives'],['bulletins','Announcements & events'],['messages','Messages']]},
  {id:'world',label:'Your world',items:[
   {id:'character',label:'My character',items:[['profile','My profile'],['marriage','Marriage'],['achievements','Introduction & achievements'],['ranks','Ranks & rewards'],['respect','Player respect'],['referrals','Beta referrals']]},
   {id:'operations',label:'Crimes & missions',items:[['missions','Crimes'],['art-market','Art & antiquities'],['team-missions','Team missions'],['bounties','Bounties'],['shipments','Drugs & gun shipments'],['combat','Player operations'],['production','Drug production'],['security','Protection & muscle']]},

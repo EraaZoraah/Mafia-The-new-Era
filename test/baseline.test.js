@@ -59,6 +59,7 @@ test('isolated prototype baseline', { timeout: 90000 }, async t => {
     await t.test('health and unauthenticated access', async () => {
       assert.equal((await api('health')).status, 200);
       assert.equal((await api('me')).status, 401);
+      assert.equal((await api('activity')).status,401);
     });
     await t.test('every frontend module import is served by the production HTTP allowlist',async()=>{
       const pending=['/app.js','/pwa.js'],seen=new Set();
@@ -496,6 +497,7 @@ test('isolated prototype baseline', { timeout: 90000 }, async t => {
       const list=await api('referrals',undefined,good.cookie);assert.equal(list.status,200);assert.equal(list.body.rows[0].referrer,ref);
       assert.equal((await api('admin/referrals',undefined,good.cookie)).status,403);
       assert.equal((await api('family-directory',undefined,good.cookie)).status,200);
+      const journal=await api('activity?user=999&filter=money',undefined,good.cookie);assert.equal(journal.status,200);assert.equal(journal.body.totals.received,25000000);assert.ok(journal.body.entries.every(e=>e.category==='money'));assert.equal((await api('activity?period=invalid',undefined,good.cookie)).status,400);
     });
   } finally {
     db?.close();

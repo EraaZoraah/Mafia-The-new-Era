@@ -1,3 +1,4 @@
+import {activityRule} from './activity-copy.js';
 import {circuitRules} from './circuit-rules.js';
 import {html as lhtml,text as ltext} from './localization.js';
 
@@ -6,6 +7,7 @@ import {t} from './i18n.js';
 export function createRulesUI({esc,navigate}){
 
  const chapters=[
+ ['My activity',activityRule],
  ['Vehicle collection perks','Vehicle prices reflect luxury, performance and collectible rarity. Crime-income perks scale with catalog price, add together and obey the existing ownership bonus cap. Eight exclusive modern cars also add energy capacity and shorter crime cooldowns. Helicopters, jets and yachts offer progressively stronger utility perks; luxury vehicles provide no passive rent. Cars sell for 80% of their recorded paid price, not a revised catalog price.'],
  ['Art heist cooldowns','Successful art heists have cooldowns of 1, 2, 4 and 6 hours. Failed attempts wait only 5, 10, 20 and 30 minutes respectively. Genuine final-tier pieces have billion-dollar valuations; condition and authenticity still affect appraisal.'],
  ['Release from the arrest popup','An arrest popup offers Buy release now with a current quote. Payment uses personal cash and bank. Open prison options offers the full release and rescue choices. Closing the popup does not end detention.'],

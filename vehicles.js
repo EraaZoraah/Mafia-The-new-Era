@@ -67,5 +67,5 @@ export function installVehicles(db,{clock,transaction,settleRaw,available,fail,d
   }
   return {trade:b.trade,purchasedTrade:b.purchasedTrade,capacity:b.capacity,used:b.used,pending:b.entries.find(c=>c.state==='pending')||null,best,garageCapacity:b.garages.capacity,garageUsed:b.garages.used,until:b.marketUntil};
  }
- return {settle:()=>transaction(auctions.settle),route,theft,assertResolved,assertSpace,recordPurchase,view,warehouses,advice};
+ return {settleFreight:()=>transaction(()=>{for(const row of all("SELECT DISTINCT user_id FROM vehicle_loot WHERE state='transit' AND arrives_at<=?",clock()))finish(row.user_id)}),settle:()=>transaction(auctions.settle),route,theft,assertResolved,assertSpace,recordPurchase,view,warehouses,advice};
 }
