@@ -60,6 +60,7 @@ test('isolated prototype baseline', { timeout: 90000 }, async t => {
     t.beforeEach(()=>{if(db){db.exec("INSERT OR IGNORE INTO armory_accounts(scope,owner_id,ammo) SELECT 'personal',id,100000 FROM users; UPDATE armory_accounts SET ammo=100000; INSERT OR IGNORE INTO armory_weapons(scope,owner_id,weapon_id,quantity) SELECT 'personal',id,'sovereign-arsenal',1 FROM users; INSERT OR IGNORE INTO armory_accounts(scope,owner_id,ammo) SELECT 'family',id,100000 FROM families; INSERT OR IGNORE INTO armory_weapons(scope,owner_id,weapon_id,quantity) SELECT 'family',id,'sovereign-arsenal',1 FROM families;");db.prepare('UPDATE users SET prison_until=0').run();db.exec("DELETE FROM police_bribes WHERE custody_id IN (SELECT id FROM custody WHERE kind='prison'); DELETE FROM custody WHERE kind='prison'");}});
     await t.test('health and unauthenticated access', async () => {
       assert.equal((await api('health')).status, 200);
+      const font=await fetch(base+'/fonts/cinzel.ttf');assert.equal(font.status,200);assert.equal(font.headers.get('content-type'),'font/ttf');assert.ok((await font.arrayBuffer()).byteLength>10000);
       assert.equal((await api('me')).status, 401);
       assert.equal((await api('activity')).status,401);
     });

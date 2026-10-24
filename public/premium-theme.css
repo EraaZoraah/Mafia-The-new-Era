@@ -208,7 +208,9 @@ button.sale-choice-card{display:block;width:100%;text-align:left;font:inherit;co
 
 /* Edge fades preserve the original lettering and the opaque middle scene. */
 .sidebar .brand:after{content:"";position:absolute;inset:0;background:url('/images/game-logo-v5.png') center/contain no-repeat;clip-path:inset(48% 18% 14% 18%);pointer-events:none}
-.brand-footer{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;padding:9px 0 12px;text-align:center}
-.brand-footer .game-logo-footer{display:block;width:52px!important;height:20px!important;max-width:52px!important;object-fit:cover;margin:0;opacity:1;mask-image:none;-webkit-mask-image:none}
-.brand-footer .brand-slogan,.brand-footer .brand-version{font-family:Georgia,'Times New Roman',serif;font-size:3px!important;font-weight:400;line-height:1.25;letter-spacing:.6px;text-transform:uppercase;color:#d6bf91;margin:0}
-.brand-footer .brand-version{margin-top:1px}
+@font-face{font-family:'Mafia Signature';src:url('/fonts/cinzel.ttf') format('truetype');font-weight:400 900;font-style:normal;font-display:swap}
+/* Classical logo-style lettering, compact and readable. */
+.brand-footer{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;padding:16px 8px;text-align:center;max-width:100%}
+.brand-footer .brand-footer-name{font-family:'Mafia Signature',Georgia,serif;font-size:20px;line-height:1.2;font-weight:400;color:#e0c994;letter-spacing:.7px;text-transform:uppercase;text-shadow:0 1px 8px #d6ac5020}
+.brand-footer .brand-slogan,.brand-footer .brand-version{font-family:'Mafia Signature',Georgia,serif;font-size:10px;font-weight:400;line-height:1.2;letter-spacing:.6px;color:#d6bf91;margin:0;white-space:normal;overflow-wrap:normal;word-break:normal}
+.brand-footer .brand-version{font-size:10px;letter-spacing:.6px;color:#b9a580}

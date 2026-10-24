@@ -1,5 +1,6 @@
 // Historical 0.1.x milestone versions were assigned retrospectively. Keep published versions immutable.
 export const releaseNotes=[
+{"id": "2026-10-24-release-1.29.3", "version": "1.29.3", "announce": true, "date": "2026-10-24", "title": "A clearer signature", "items": ["Readable gold logo-style lettering replaces the small footer images, with a compact slogan and version."]},
 {"id": "2026-10-24-release-1.29.2", "version": "1.29.2", "announce": true, "date": "2026-10-24", "title": "Refined signature", "items": ["Refined menu logo edges and subtle signature footers throughout the game."]},
 {"id":"2026-10-24-release-1.29.1","version":"1.29.1","announce":true,"date":"2026-10-24","title":"Entrance artwork restored","items":["Homepage, sign-in and registration backgrounds now load through the game server, with optimized images and readable fades."]},
 {"id":"2026-10-24-release-1.29.0","version":"1.29.0","announce":true,"date":"2026-10-24","title":"Your empire, recorded","items":["Review your personal activity timeline with recorded balance movements, attacks, cargo notices and rewards.","Meet Matteo Bellini and Elena Bellini: two new premium skins with matching interchangeable frames."]},
