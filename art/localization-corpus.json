@@ -367,7 +367,7 @@
     "translated": true
   },
   {
-    "key": "({v9}%) · Net after paid costs {v10} ({v11}%)",
+    "key": "({v10}%) · Net after paid costs {v11} ({v12}%)",
     "files": [
       "logistics-ui.js"
     ],
@@ -816,6 +816,13 @@
     "translated": true
   },
   {
+    "key": "{v12}: {v13} · Next minimum: {v14}",
+    "files": [
+      "vehicles-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "{v13} XP on success · {v14}s cooldown",
     "files": [
       "premium.js"
@@ -1048,13 +1055,6 @@
     "translated": true
   },
   {
-    "key": "{v4} · Origin: {v5}",
-    "files": [
-      "logistics-ui.js"
-    ],
-    "translated": true
-  },
-  {
     "key": "{v4} Income, crimes, missions and acquisitions stop during your stay. Previously earned passive income is saved until release.",
     "files": [
       "underworld-ui.js"
@@ -1114,6 +1114,13 @@
     "key": "{v5} · {v6} city blocks",
     "files": [
       "city-map-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "{v5} · Origin: {v6}",
+    "files": [
+      "logistics-ui.js"
     ],
     "translated": true
   },
@@ -2087,13 +2094,6 @@
     "translated": true
   },
   {
-    "key": "Also show a one-time pop-up for this revision",
-    "files": [
-      "daily-ui.js"
-    ],
-    "translated": true
-  },
-  {
     "key": "Ammunition",
     "files": [
       "logistics-ui.js"
@@ -2356,6 +2356,13 @@
     "translated": true
   },
   {
+    "key": "Art & antiquities heists",
+    "files": [
+      "art-market-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Art auctions",
     "files": [
       "city-map-ui.js"
@@ -2540,6 +2547,13 @@
     "translated": true
   },
   {
+    "key": "Available capacity",
+    "files": [
+      "logistics-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Available cash: {v0}. Energy:",
     "files": [
       "transfers-ui.js"
@@ -2579,6 +2593,13 @@
     "key": "Awaiting review",
     "files": [
       "referral-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Back to family",
+    "files": [
+      "community-ui.js"
     ],
     "translated": true
   },
@@ -2727,6 +2748,7 @@
   {
     "key": "BIG SCORE!",
     "files": [
+      "feedback.js",
       "premium.js"
     ],
     "translated": true
@@ -2964,6 +2986,13 @@
   },
   {
     "key": "Business policy",
+    "files": [
+      "premium.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Business policy & results",
     "files": [
       "premium.js"
     ],
@@ -3727,6 +3756,13 @@
     "translated": true
   },
   {
+    "key": "Compare cargo routes",
+    "files": [
+      "logistics-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Compare one drug",
     "files": [
       "freight-ui.js"
@@ -3923,7 +3959,7 @@
     "translated": true
   },
   {
-    "key": "Cost: {v6} · Base sale value: {v7}",
+    "key": "Cost: {v7} · Base sale value: {v8}",
     "files": [
       "logistics-ui.js"
     ],
@@ -3954,7 +3990,8 @@
     "key": "crates",
     "files": [
       "freight-ui.js",
-      "logistics-ui.js"
+      "logistics-ui.js",
+      "vehicles-ui.js"
     ],
     "translated": true
   },
@@ -4067,7 +4104,8 @@
   {
     "key": "Current bid",
     "files": [
-      "art-market-ui.js"
+      "art-market-ui.js",
+      "vehicles-ui.js"
     ],
     "translated": true
   },
@@ -5438,6 +5476,13 @@
     "translated": true
   },
   {
+    "key": "From",
+    "files": [
+      "underworld-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "FROM THE DESK OF THE UNDERWORLD",
     "files": [
       "daily-ui.js"
@@ -6151,7 +6196,7 @@
     "translated": true
   },
   {
-    "key": "Issued by {v5}",
+    "key": "Issued by {v6}",
     "files": [
       "daily-ui.js"
     ],
@@ -6175,6 +6220,13 @@
     "key": "Join & approve costs",
     "files": [
       "crew-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Join a family first.",
+    "files": [
+      "community-ui.js"
     ],
     "translated": true
   },
@@ -6598,6 +6650,13 @@
     "translated": true
   },
   {
+    "key": "Local stock",
+    "files": [
+      "logistics-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Lock funds at the quoted rate",
     "files": [
       "investment-ui.js"
@@ -6703,6 +6762,13 @@
     "translated": true
   },
   {
+    "key": "Mafia The new Era ©",
+    "files": [
+      "app.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Mafia: The New Era",
     "files": [
       "app.js"
@@ -6713,13 +6779,6 @@
     "key": "MAFIA: THE NEW ERA · PLAYER CARE",
     "files": [
       "care-ui.js"
-    ],
-    "translated": true
-  },
-  {
-    "key": "Mafia: The new Era © · v1.29.1",
-    "files": [
-      "app.js"
     ],
     "translated": true
   },
@@ -7401,13 +7460,6 @@
     "key": "Next minimum",
     "files": [
       "art-market-ui.js"
-    ],
-    "translated": true
-  },
-  {
-    "key": "Next minimum: {v10}",
-    "files": [
-      "vehicles-ui.js"
     ],
     "translated": true
   },
@@ -8158,6 +8210,13 @@
     "translated": true
   },
   {
+    "key": "Only the Don and Capos may manage the family.",
+    "files": [
+      "community-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Open",
     "files": [
       "app.js",
@@ -8211,6 +8270,13 @@
     "key": "Open contracts",
     "files": [
       "player-systems-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Open drug production",
+    "files": [
+      "vehicles-ui.js"
     ],
     "translated": true
   },
@@ -8370,7 +8436,7 @@
     "translated": true
   },
   {
-    "key": "Owner and Admin can create, edit and archive messages. Publication starts and ends automatically. Events are informational: describe the activity and rules here; this editor does not change payouts or game settings. Dates below use your local time zone. Each saved revision can trigger one pop-up per player while active.",
+    "key": "Owner and Admin can create, edit and archive messages. Publication starts and ends automatically. Events are informational: describe the activity and rules here; this editor does not change payouts or game settings. Dates below use your local time zone. Each saved revision appears in the unread announcement counter.",
     "files": [
       "daily-ui.js"
     ],
@@ -8624,13 +8690,6 @@
     "translated": true
   },
   {
-    "key": "Plan an art heist",
-    "files": [
-      "art-market-ui.js"
-    ],
-    "translated": true
-  },
-  {
     "key": "Plan an attack ↗",
     "files": [
       "legacy-ui.js"
@@ -8774,6 +8833,13 @@
   },
   {
     "key": "points crime success",
+    "files": [
+      "premium.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Policy guide",
     "files": [
       "premium.js"
     ],
@@ -8975,6 +9041,13 @@
     "translated": true
   },
   {
+    "key": "Private message received",
+    "files": [
+      "feedback.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Private messages",
     "files": [
       "app.js"
@@ -9066,6 +9139,13 @@
     "translated": true
   },
   {
+    "key": "Production storage capacity",
+    "files": [
+      "vehicles-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Production term",
     "files": [
       "logistics-ui.js"
@@ -9075,6 +9155,7 @@
   {
     "key": "Production warehouses",
     "files": [
+      "logistics-ui.js",
       "premium.js",
       "vehicles-ui.js"
     ],
@@ -9526,6 +9607,13 @@
     "translated": true
   },
   {
+    "key": "Recorded sales & production history",
+    "files": [
+      "freight-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Recorded sales only. Older unrecorded proceeds are not estimated.",
     "files": [
       "freight-ui.js"
@@ -9662,6 +9750,13 @@
     "key": "Referrers",
     "files": [
       "referral-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Refresh",
+    "files": [
+      "art-market-ui.js"
     ],
     "translated": true
   },
@@ -9961,6 +10056,20 @@
     "translated": true
   },
   {
+    "key": "Respect history",
+    "files": [
+      "underworld-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Respect ranks & bonuses",
+    "files": [
+      "underworld-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Respect received",
     "files": [
       "feedback.js"
@@ -10207,6 +10316,13 @@
     "key": "Save backfire",
     "files": [
       "player-systems-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Save business policy",
+    "files": [
+      "premium.js"
     ],
     "translated": true
   },
@@ -11001,6 +11117,13 @@
     "translated": true
   },
   {
+    "key": "Stored vehicle collection",
+    "files": [
+      "vehicles-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Street blocks",
     "files": [
       "city-map-ui.js"
@@ -11603,7 +11726,8 @@
     "files": [
       "app.js",
       "empire-ui.js",
-      "shop-ui.js"
+      "shop-ui.js",
+      "underworld-ui.js"
     ],
     "translated": true
   },
@@ -11632,6 +11756,13 @@
     "key": "Titles are displayed beside your rank and on the leaderboard.",
     "files": [
       "premium.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "To",
+    "files": [
+      "underworld-ui.js"
     ],
     "translated": true
   },
@@ -12475,6 +12606,13 @@
     "translated": true
   },
   {
+    "key": "You are free to play again",
+    "files": [
+      "feedback.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "You are here",
     "files": [
       "logistics-ui.js"
@@ -12513,6 +12651,14 @@
     "key": "You earned {v4}. The city is taking notice.",
     "files": [
       "app.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "You hold the highest bid",
+    "files": [
+      "art-market-ui.js",
+      "vehicles-ui.js"
     ],
     "translated": true
   },
@@ -12743,7 +12889,7 @@
     "translated": true
   },
   {
-    "key": "Your listing or leading bid",
+    "key": "Your listing",
     "files": [
       "vehicles-ui.js"
     ],

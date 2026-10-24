@@ -286,7 +286,7 @@ export function installGame(db, { hash, log, json, onNotify=()=>{}, bribeRoll = 
 
   function settleRaw(...args){return economy?economy.withSource('passive',()=>settleRawImpl(...args)):settleRawImpl(...args)}
 
-  function settleRawImpl(id,time=clock(),collect=true) {
+  function settleRawImpl(id,time=clock(),collect=false) {
 
     let user=q('SELECT * FROM users WHERE id=?',id);if(!user)return null;const perks=benefits(id);
 
@@ -332,7 +332,7 @@ export function installGame(db, { hash, log, json, onNotify=()=>{}, bribeRoll = 
 
   }
 
-  const settle = (id,collect=true)=>transaction(()=>settleRaw(id,clock(),collect));
+  const settle = (id,collect=false)=>transaction(()=>settleRaw(id,clock(),collect));
 
   const owned = id=>all('SELECT category,item_id,quantity,acquired_at FROM possessions WHERE user_id=?',id);
 
@@ -812,7 +812,7 @@ export function installGame(db, { hash, log, json, onNotify=()=>{}, bribeRoll = 
 
       casinoExtra.settle();
 
-      if(pathname==='/api/income/claim'&&req.method==='POST')return json(res,200,transaction(()=>{const before=q('SELECT cash FROM users WHERE id=?',user.id).cash;const u=settleRaw(user.id);available(u);const amount=u.cash-before;return {ok:true,payout:amount,message:amount?'All available personal hourly income collected.':'All available hourly income has already been credited automatically. Family income is credited directly to its treasury.',image:'/images/banner-bank-v3.png'};}));
+      if(pathname==='/api/income/claim'&&req.method==='POST')return json(res,200,transaction(()=>{const before=q('SELECT cash FROM users WHERE id=?',user.id).cash;const u=settleRaw(user.id,clock(),true);available(u);const amount=u.cash-before;return {ok:true,payout:amount,message:amount?'All available personal hourly income collected.':'No personal hourly income is available to claim. Family income is credited directly to its treasury.',image:'/images/banner-bank-v3.png'};}));
 
       if(pathname==='/api/calendar'&&req.method==='GET'){const event=sundayEvent(clock());return json(res,200,{...event,seen:!!q('SELECT 1 FROM news_seen WHERE user_id=? AND token=?',user.id,'sunday:'+event.id)});}
 
@@ -843,7 +843,7 @@ export function installGame(db, { hash, log, json, onNotify=()=>{}, bribeRoll = 
 
       const restricted=detained(q('SELECT * FROM users WHERE id=?',user.id),clock());
 
-      if(req.method==='POST'&&restricted&&!['/api/world-chat/send','/api/world-chat/hide','/api/family/chat/send','/api/conversation/read','/api/profile/settings','/api/custody/pay','/api/notifications/ack','/api/promotion/ack','/api/messages','/api/bank','/api/news/read'].includes(pathname)&&!pathname.startsWith('/api/admin/'))fail('Prison or hospital: income and activities are suspended. Arrange your release first.',409);
+      if(req.method==='POST'&&restricted&&!['/api/world-chat/send','/api/world-chat/hide','/api/family/chat/send','/api/conversation/read','/api/profile/settings','/api/custody/pay','/api/notifications/ack','/api/promotion/ack','/api/messages','/api/bank','/api/news/read','/api/chat/read'].includes(pathname)&&!pathname.startsWith('/api/admin/'))fail('Prison or hospital: income and activities are suspended. Arrange your release first.',409);
 
       const artResult=art.route(req,pathname,body,user);if(artResult!==null)return json(res,200,artResult);
 

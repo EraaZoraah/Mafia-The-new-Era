@@ -112,9 +112,9 @@ test('backfire without tier 3 weapon spends no rounds; insufficient attacker amm
 test('marriage passive income begins at acceptance and production quote equals payout with profit bonus',t=>{
  const f=fixture(t),asset=catalog.find(a=>a.category==='business');
  f.run('INSERT INTO possessions(user_id,category,item_id,acquired_at,income_at) VALUES(?,?,?,?,?)',1,asset.category,asset.id,f.time(),f.time());
- f.advance(3600000);const cash=f.q('SELECT cash FROM users WHERE id=1').cash;marry(f);
+ f.advance(3600000);const cash=f.q('SELECT cash FROM users WHERE id=1').cash;marry(f);f.call('income/claim',{});
  assert.equal(f.q('SELECT cash FROM users WHERE id=1').cash,cash+asset.income-WEDDING_COST);
- const after=f.q('SELECT cash FROM users WHERE id=1').cash;f.advance(3600000);f.settle(1);assert.equal(f.q('SELECT cash FROM users WHERE id=1').cash,after+Math.floor(asset.income*1.10));
+ const after=f.q('SELECT cash FROM users WHERE id=1').cash;f.advance(3600000);f.call('income/claim',{});assert.equal(f.q('SELECT cash FROM users WHERE id=1').cash,after+Math.floor(asset.income*1.10));
  f.run("INSERT OR IGNORE INTO possessions(user_id,category,item_id,acquired_at,income_at) VALUES(1,'garage','production-warehouse',0,0)");const start=f.call('production/start',{scope:'personal',product:'cannabis',hours:6,units:1,requestKey:'production-marriage-0001'});assert.equal(start.status,200);f.advance(6*3600000);
  const batch=f.call('production?scope=personal').body.batches[0],base=Math.floor(batch.base_value*cityFactors(batch.stock_city,0,batch.market.epoch).sale*batch.market.percent/100);assert.equal(batch.saleValue,base+Math.floor((base-batch.cost)*.10));
  const sell=f.call('production/sell',{scope:'personal',id:batch.id,requestKey:'production-marriage-0002'});assert.equal(sell.status,200);assert.equal(sell.body.payout,batch.saleValue);

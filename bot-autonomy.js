@@ -208,6 +208,7 @@ export function autonomousMove(c,domain){
   if(manager&&family.guard_until<=now&&family.treasury>10e6)return send('family/guards');return false;
  }
  case 'communication':return sporadic('social',86400000,()=>{
+  const unread=get('unread');if(unread?.world)return send('chat/read',{channel:'world',lastId:unread.worldLast});if(unread?.family)return send('chat/read',{channel:'family',lastId:unread.familyLast});
   const inbox=get('inbox'),thread=inbox?.threads.find(t=>t.unread);if(thread){get('conversation?id='+thread.peer.id);act('conversation/read',{peerId:thread.peer.id,lastId:thread.last.id});return send('messages',{recipient:thread.peer.username,message:peers().some(p=>p.id===thread.peer.id)?'Supplies first, then we make our next move.':'I am an automated game character. You can invite me to team missions or interact through my profile.'});}
   const p=pick(peers());return p?send('messages',{recipient:p.username,message:'Ready to build an empire? Check the team mission board.'}):false;
  });

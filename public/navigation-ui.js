@@ -47,3 +47,12 @@ export function revealNavigation(root,tab){
  const target=[...root.querySelectorAll('.nav [data-tab]')].find(b=>b.dataset.tab===tab);if(!target)return null;
  const group=target.closest('details');if(group){root.querySelectorAll('[data-menu-group]').forEach(other=>{if(other!==group)other.open=false});group.open=true;}return target;
 }
+
+// Receipts persist on the server; polling never marks a closed channel as read.
+export function installUnreadBadges({api,getMe}){
+ let busy=false;
+ const paint=(node,count)=>{if(!node)return;node.querySelector(':scope > .unread-count')?.remove();node.classList.toggle('has-unread',count>0);if(count>0){const badge=document.createElement('span');badge.className='unread-count';badge.textContent=count.toLocaleString('en-US');node.append(badge)}const group=node.closest('details');if(group)group.classList.toggle('has-unread-group',!!group.querySelector('.has-unread'));};
+ async function update(){if(busy||!getMe()||document.hidden)return;busy=true;try{const user=getMe().user.id,[d,n]=await Promise.all([api('unread'),api('news')]);if(getMe()?.user.id!==user)return;paint(document.querySelector('.nav [data-tab="messages"]'),d.messages);paint(document.querySelector('.nav [data-tab="family-chat"]'),d.family);paint(document.querySelector('.nav [data-tab="bulletins"]'),n.unreadCount);paint(document.querySelector('#world-chat-toggle'),d.world);}catch{}finally{busy=false}}
+ document.addEventListener('game:channel-read',async e=>{const {channel,lastId}=e.detail||{};try{await api('chat/read',{channel,lastId});await update()}catch{}});
+ document.addEventListener('game:unread-refresh',()=>void update());setInterval(()=>void update(),10000);return update;
+}

@@ -181,9 +181,9 @@ for(const [i,[id,name,price]] of [
  ['solus-gt','McLaren Solus GT',1500000000],['valkyrie','Aston Martin Valkyrie',2000000000],
  ['cc850','Koenigsegg CC850',3000000000],['aspark-owl','Aspark Owl',4000000000],
  ['venom-f5','Hennessey Venom F5 Revolution Roadster',5000000000],['czinger-21c','Czinger 21C',7500000000],
- ['boat-tail','Rolls-Royce Boat Tail',12500000000]
+ ['boat-tail','Bugatti La Voiture Noire',12500000000]
 ].entries()){
- const exclusive=i>0,item={id,name,price,category:'car',tier:exclusive?'Exclusive collection':'Hypercar',exclusive,income:0,limit:1,image:'/images/car-'+id+'.png',perks:exclusive?{energyCapacity:30+i*5,cooldownBps:20+i*10}:{energyCapacity:20},title:(exclusive?'Exclusive Collector':'Collector')+' · '+name,unlock:'Midnight getaway',description:exclusive?'Exclusive modern collection car. Adds energy capacity and shorter crime cooldowns, alongside its price-scaled crime-income perk. Requires one free garage bay.':'Modern hypercar with price-scaled crime income. Requires one free garage bay.'};cars.push(item);catalog.push(item);
+ const exclusive=i>0,item={id,name,price,category:'car',tier:exclusive?'Exclusive collection':'Hypercar',exclusive,income:0,limit:1,image:id==='boat-tail'?'/images/car-la-voiture-noire.png':'/images/car-'+id+'.png',perks:exclusive?{energyCapacity:30+i*5,cooldownBps:20+i*10}:{energyCapacity:20},title:(exclusive?'Exclusive Collector':'Collector')+' · '+name,unlock:'Midnight getaway',description:exclusive?'Exclusive modern collection car. Adds energy capacity and shorter crime cooldowns, alongside its price-scaled crime-income perk. Requires one free garage bay.':'Modern hypercar with price-scaled crime income. Requires one free garage bay.'};cars.push(item);catalog.push(item);
 }
 // Basis points are additive and bounded by the existing ownership bonus cap.
 for(const car of cars)car.perks.rewardBps=Math.round(40+45*Math.log10(1+car.price/1000000));

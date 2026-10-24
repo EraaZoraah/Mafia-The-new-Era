@@ -43,7 +43,7 @@ test('Sunday applies only on UTC Sundays and calendar acknowledgement is per pla
 });
 test('passive income crosses Sunday midnight without boosting Saturday hours',t=>{
  const f=fixture(t);f.advance(Date.UTC(2026,9,17,23)-f.time());f.call('employees/hire',{item:'runner',quantity:1,key:'calendar-employee-test'});
- const cash=f.q('SELECT cash FROM users WHERE id=1').cash;f.advance(2*3600000);f.settle(1);assert.equal(f.q('SELECT cash FROM users WHERE id=1').cash-cash,7000);
+ const cash=f.q('SELECT cash FROM users WHERE id=1').cash;f.advance(2*3600000);f.call('income/claim',{});assert.equal(f.q('SELECT cash FROM users WHERE id=1').cash-cash,7000);
 });
 test('lottery Lucky Winner lasts 24 hours from draw, not collection',t=>{
  const f=fixture(t),d=f.call('casino-extra').body.lottery;f.call('lottery/buy',{day:d.day,quantity:1,key:'lottery-emblem-test'});f.advance(d.ends_at-f.time());
@@ -58,6 +58,6 @@ test('five-player mission pays all five once and failure still consumes approved
  for(const r of result.body.rewards){assert.equal(r.cash,0);assert.equal(r.xp,750);assert.equal(f.q('SELECT cash FROM users WHERE id=?',r.id).cash,10000000000-8000);assert.equal(f.q('SELECT energy FROM users WHERE id=?',r.id).energy,65)}
  assert.equal(f.q("SELECT ammo FROM armory_accounts WHERE scope='personal' AND owner_id=5").ammo,300);
 });
-test('only marked new-feature releases become automatic announcements, once',t=>{
- const f=fixture(t);f.tick();f.tick();const rows=f.db.prepare("SELECT * FROM bulletins WHERE title LIKE 'New features%'").all();assert.equal(rows.length,releaseNotes.filter(n=>n.announce).length);assert.ok(rows.some(r=>/Luca Moretti/.test(r.body)));assert.ok(rows.some(r=>/Twenty full-body Skins/.test(r.body)));for(const row of rows)assert.doesNotMatch(row.body,/wedding costs|staff|payout.*percent/i);
+test('current snapshot becomes one automatic announcement, once',t=>{
+ const f=fixture(t);f.tick();f.tick();const rows=f.db.prepare("SELECT * FROM bulletins WHERE title LIKE 'New features%'").all();assert.equal(rows.length,1);assert.ok(rows.some(r=>/Luca/.test(r.body)));assert.ok(rows.some(r=>/skins/i.test(r.body)));assert.ok(rows.some(r=>/claim button/.test(r.body)));for(const row of rows)assert.doesNotMatch(row.body,/wedding costs|staff|payout.*percent/i);
 });

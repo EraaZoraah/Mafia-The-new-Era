@@ -214,3 +214,22 @@ button.sale-choice-card{display:block;width:100%;text-align:left;font:inherit;co
 .brand-footer .brand-footer-name{font-family:'Mafia Signature',Georgia,serif;font-size:20px;line-height:1.2;font-weight:400;color:#e0c994;letter-spacing:.7px;text-transform:uppercase;text-shadow:0 1px 8px #d6ac5020}
 .brand-footer .brand-slogan,.brand-footer .brand-version{font-family:'Mafia Signature',Georgia,serif;font-size:10px;font-weight:400;line-height:1.2;letter-spacing:.6px;color:#d6bf91;margin:0;white-space:normal;overflow-wrap:normal;word-break:normal}
 .brand-footer .brand-version{font-size:10px;letter-spacing:.6px;color:#b9a580}
+
+.brand-footer .brand-footer-name{font-size:17px}
+.main>.footer,.welcome>footer{width:100%;box-sizing:border-box;text-align:center;align-self:stretch;grid-column:1/-1}
+.profile-hero>img{opacity:.68!important;mask-image:linear-gradient(90deg,transparent,#000 58%)}
+.leading-bid{border-color:#e7cc8a!important;box-shadow:inset 0 0 0 1px #cfb67970,0 0 18px #c5a75d18!important}
+.big-score-celebration{border:1px solid #efce80;background:radial-gradient(ellipse at 50% 20%,#80612666,transparent 65%),#111820;box-shadow:0 0 55px #e5b85835}
+.big-score-celebration h2{color:#f4d58f;letter-spacing:2px}.big-score-emblem{display:block;width:100px;height:100px;object-fit:contain;margin:12px auto}.big-score-celebration:after{content:"✦  ·  ✧  ·  ✦";display:block;text-align:center;color:#ecd18d;letter-spacing:10px;padding:12px}
+.unread-count{display:inline-flex;align-items:center;justify-content:center;min-width:20px;padding:2px 5px;border-radius:20px;background:#d7bc7d;color:#151b20;font:600 11px system-ui;margin-left:auto;line-height:1.4}.has-unread{background:linear-gradient(90deg,#d2ad4e22,transparent)!important;color:#ead59f!important;box-shadow:inset 2px 0 #d1ad63}.has-unread-group>summary{color:#e8d095!important}
+.business-policy-row{margin-top:14px;padding:12px;border-top:1px solid #bea66f44}.business-policy-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px}.business-policy-stats strong{display:block;font-size:15px}.asset-contents{border-top:1px solid #bfa57144;margin-top:16px;padding-top:12px}.asset-contents>.missions{grid-template-columns:1fr}.asset-contents .casino-game-art{height:auto;max-height:160px;object-fit:contain}
+.vip-protection-card .image-wrap{aspect-ratio:auto;height:auto}.vip-protection-card img{height:auto;max-height:none;object-fit:contain}
+
+.vip-protection{display:grid;grid-template-columns:minmax(180px,40%) minmax(0,1fr);gap:12px 24px;align-items:center}.vip-protection .vip-protection-art{grid-row:1/5;width:100%;height:auto!important;max-height:none!important;object-fit:contain!important}.vip-protection h3,.vip-protection p{margin:0}.vip-protection .btn{justify-self:start}@media(max-width:600px){.vip-protection{display:block}.vip-protection .vip-protection-art{margin-bottom:12px}}
+
+.business-policy-stats>span{padding:10px;background:#090f153d;border:1px solid #b59a5d25;border-radius:5px;font-size:11px;color:#aeb9bf}.business-policy-stats strong{color:#dec58d;margin-top:5px}.business-policy-row>h3{display:none}
+
+#content:has([data-product])>.missions{align-items:start}.production-batch{min-width:0}.production-batch h3{font-size:17px}.production-batch .batch-sale-choices{grid-template-columns:1fr}.production-batch .sale-choice-card{min-width:0}.production-batch p{font-size:12px;line-height:1.6}.production-batch .btn{white-space:normal;width:100%;margin-top:8px}.production-capacity{color:#d5c39d;font-size:12px}.recorded-sales{margin-top:18px}
+#world-chat-toggle{display:inline-flex;align-items:center;gap:8px}#world-chat-toggle>.unread-count{margin-left:3px;flex:none}
+
+.big-score-celebration{scrollbar-width:none}.big-score-celebration::-webkit-scrollbar{display:none}

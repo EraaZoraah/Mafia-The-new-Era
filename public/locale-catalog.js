@@ -730,9 +730,9 @@ export const localeCatalog=[
   },
   {
     "id": "boat-tail",
-    "name": "Rolls-Royce Boat Tail",
+    "name": "Bugatti La Voiture Noire",
     "description": "Exclusive modern collection car. Adds energy capacity and shorter crime cooldowns, alongside its price-scaled crime-income perk. Requires one free garage bay.",
-    "title": "Exclusive Collector · Rolls-Royce Boat Tail",
+    "title": "Exclusive Collector · Bugatti La Voiture Noire",
     "unlock": "Midnight getaway"
   },
   {

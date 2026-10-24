@@ -201,14 +201,14 @@ test('coma fees decline, accrued income is preserved and no passive income accru
  const before=f.q('SELECT cash,pending_income FROM users WHERE id=2');f.advance(36*3600000);let p=f.call('admin/player?id=2').body.player;assert.equal(p.cash,before.cash);assert.equal(p.pending_income,before.pending_income);assert.equal(p.health,0);
  const stay=f.call('custody').body.stays.find(c=>c.user_id===2);assert.equal(stay.cost,500000);
  f.run('UPDATE users SET cash=0,bank=100000000 WHERE id=2');assert.equal(f.call('custody/pay',{id:stay.id,maxCost:50000000,source:'bank'},2).status,200);assert.equal(f.q('SELECT bank FROM users WHERE id=2').bank,99500000);assert.equal(f.call('custody/pay',{id:stay.id,maxCost:50000000,source:'bank'},2).status,409);
- p=f.call('admin/player?id=2').body.player;assert.equal(p.health,100);const releasedCash=p.cash;f.advance(3600000);assert.equal(f.call('admin/player?id=2').body.player.cash,releasedCash+120);
+ p=f.call('admin/player?id=2').body.player;assert.equal(p.health,100);const releasedCash=p.cash;f.advance(3600000);assert.equal(f.call('admin/player?id=2').body.player.cash,releasedCash);assert.equal(f.call('income/claim',{},2).body.payout,124);assert.equal(f.q('SELECT cash FROM users WHERE id=2').cash,releasedCash+124);
 });
 
 test('uncollected passive income survives an incoming arrest and offline natural release excludes the sentence',t=>{
  const f=fixture(t);f.run("INSERT INTO possessions(user_id,category,item_id,quantity,acquired_at,income_at) VALUES(2,'business','coffee',1,?,?)",f.time()-120000,f.time()-120000);
  const original=f.q('SELECT cash FROM users WHERE id=2').cash;assert.equal(f.call('custody/report',{target:'MemberOne',hours:1}).status,200);let p=f.call('admin/player?id=2').body.player;assert.equal(p.cash,original-100000);assert.equal(p.pending_income,4);
  f.advance(30*60000);p=f.call('admin/player?id=2').body.player;assert.equal(p.pending_income,4);assert.equal(p.cash,original-100000);
- f.advance(90*60000);p=f.call('admin/player?id=2').body.player;assert.equal(p.prison_until,0);assert.equal(p.pending_income,0);assert.equal(p.cash,original-100000+124); // 62 active minutes at current rank, including fractional carry.
+ f.advance(90*60000);p=f.call('admin/player?id=2').body.player;assert.equal(p.prison_until,0);assert.equal(p.pending_income,124);assert.equal(p.cash,original-100000);assert.equal(f.call('income/claim',{},2).body.payout,124);assert.equal(f.q('SELECT cash FROM users WHERE id=2').cash,original-100000+124); // 62 active minutes at current rank, including fractional carry.
  assert.equal(f.call('custody/report',{target:'MemberOne',hours:1},3).status,409);
 });
 

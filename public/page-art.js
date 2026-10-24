@@ -1,6 +1,6 @@
 import {t} from './i18n.js';
 export const cityImage=city=>'/images/city-'+city.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replaceAll(' ','-')+'.png';
-export const pageArt={activity:'banner-activity.png',referrals:'banner-referrals-v3.png','family-directory':'banner-family-directory-v3.png',circuit:'midnight-circuit-overview.png','auction-house':'banner-auction-house-v3.png','art-market':'art-collection-overview-v2.png',
+export const pageArt={'family-edit':'banner-family-assets-v3.png',activity:'banner-activity.png',referrals:'banner-referrals-v3.png','family-directory':'banner-family-directory-v3.png',circuit:'midnight-circuit-overview.png','auction-house':'banner-auction-house-v3.png','art-market':'art-collection-overview-v2.png',
  warehouses:'page-warehouses.png',dashboard:'banner-dashboard-v3.png',login:'page-login.png',register:'page-register.png',
  'crypto':'banner-crypto-v3.png',
  'airport':'banner-airport-v3.png',
