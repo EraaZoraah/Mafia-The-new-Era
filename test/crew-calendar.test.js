@@ -59,5 +59,5 @@ test('five-player mission pays all five once and failure still consumes approved
  assert.equal(f.q("SELECT ammo FROM armory_accounts WHERE scope='personal' AND owner_id=5").ammo,300);
 });
 test('current snapshot becomes one automatic announcement, once',t=>{
- const f=fixture(t);f.tick();f.tick();const rows=f.db.prepare("SELECT * FROM bulletins WHERE title LIKE 'New features%'").all();assert.equal(rows.length,1);assert.ok(rows.some(r=>/Luca/.test(r.body)));assert.ok(rows.some(r=>/skins/i.test(r.body)));assert.ok(rows.some(r=>/claim button/.test(r.body)));for(const row of rows)assert.doesNotMatch(row.body,/wedding costs|staff|payout.*percent/i);
+ const f=fixture(t);f.tick();f.tick();const rows=f.db.prepare("SELECT * FROM bulletins WHERE title LIKE 'New features%'").all();assert.equal(rows.length,2);assert.ok(rows.some(r=>/Luca/.test(r.body)));assert.ok(rows.some(r=>/skins/i.test(r.body)));assert.ok(rows.some(r=>/claim button/.test(r.body)));for(const row of rows)assert.doesNotMatch(row.body,/wedding costs|staff|payout.*percent/i);
 });

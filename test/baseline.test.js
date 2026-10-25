@@ -247,6 +247,8 @@ test('isolated prototype baseline', { timeout: 90000 }, async t => {
       const before=(await api('me',undefined,alice.cookie)).body.user.cash;
       db.prepare("UPDATE possessions SET income_at=?,elapsed_remainder=0 WHERE user_id=? AND category='business'").run(Date.now()-3650000,alice.body.user.id);
       db.prepare('DELETE FROM income_cycles WHERE user_id=?').run(alice.body.user.id);db.prepare('UPDATE users SET income_claim_at=? WHERE id=?').run(Date.now()-3650000,alice.body.user.id);
+      await api('news/read',{tokens:[]},alice.cookie);
+      assert.equal((await api('me',undefined,alice.cookie)).body.user.cash,before,'POST requests must not collect passive income');
       await api('income/claim',{},alice.cookie);
       assert.equal((await api('me',undefined,alice.cookie)).body.user.cash,before+240);
       assert.equal((await api('me',undefined,alice.cookie)).body.user.cash,before+240);
@@ -363,6 +365,8 @@ test('isolated prototype baseline', { timeout: 90000 }, async t => {
         db.prepare("UPDATE possessions SET income_at=?,elapsed_remainder=0 WHERE user_id=? AND category='business'").run(Date.now()-61000,id);
         await api('me',undefined,alice.cookie);
       }
+      await api('news/read',{tokens:[]},alice.cookie);
+      assert.equal((await api('me',undefined,alice.cookie)).body.user.cash,before,'POST requests must not collect passive income');
       await api('income/claim',{},alice.cookie);
       assert.equal((await api('me',undefined,alice.cookie)).body.user.cash,before+240);
     });

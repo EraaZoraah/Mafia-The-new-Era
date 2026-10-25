@@ -2985,13 +2985,6 @@
     "translated": true
   },
   {
-    "key": "Business policy",
-    "files": [
-      "premium.js"
-    ],
-    "translated": true
-  },
-  {
     "key": "Business policy & results",
     "files": [
       "premium.js"
@@ -3116,13 +3109,6 @@
     "key": "Buy up to 25 territories per city, plus hold 10 conquered territories per city: 35 total. Limits cover all territory types together. Only Don and Capos buy or capture. Attempts have a 15-minute cooldown. One successful capture per city per 24 hours; the losing family gets a 24-hour territory shield in that city. Losing a conquered plot frees a capture slot.",
     "files": [
       "city-map-ui.js"
-    ],
-    "translated": true
-  },
-  {
-    "key": "Buy your first business to choose its policy.",
-    "files": [
-      "premium.js"
     ],
     "translated": true
   },
@@ -5539,13 +5525,6 @@
     "translated": true
   },
   {
-    "key": "Generated income",
-    "files": [
-      "premium.js"
-    ],
-    "translated": true
-  },
-  {
     "key": "Get closer to 21 than the dealer. Aces count as 1 or 11; face cards as 10. Fresh shuffled 52-card deck per round. Dealer stands on all 17s. Natural blackjack pays 3:2 profit, other wins 1:1; a push returns your stake. Hit and stand only.",
     "files": [
       "casino-ui.js"
@@ -6699,6 +6678,13 @@
     "translated": true
   },
   {
+    "key": "Loss percentage",
+    "files": [
+      "premium.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Lower ↓",
     "files": [
       "casino-ui.js"
@@ -7303,6 +7289,13 @@
     "key": "NET CASH RESULT",
     "files": [
       "trade-summary-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Net generated income is gross income minus seizures and closure losses. It accumulates as saved income until you claim it manually. Loss percentage is measured against gross income.",
+    "files": [
+      "premium.js"
     ],
     "translated": true
   },
@@ -10320,13 +10313,6 @@
     "translated": true
   },
   {
-    "key": "Save business policy",
-    "files": [
-      "premium.js"
-    ],
-    "translated": true
-  },
-  {
     "key": "Save family",
     "files": [
       "owner-ui.js"
@@ -10473,13 +10459,6 @@
     "key": "Security & muscle",
     "files": [
       "empire-ui.js"
-    ],
-    "translated": true
-  },
-  {
-    "key": "Seizures and closure losses",
-    "files": [
-      "premium.js"
     ],
     "translated": true
   },
