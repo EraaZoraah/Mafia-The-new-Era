@@ -238,3 +238,10 @@ button.sale-choice-card{display:block;width:100%;text-align:left;font:inherit;co
 .business-policy-buttons{display:grid;grid-template-columns:1fr;gap:8px;margin:14px 0}.business-policy-buttons .btn{display:flex;justify-content:space-between;gap:8px;white-space:normal}.business-policy-buttons .policy-selected,.business-policy-buttons .policy-selected:disabled{opacity:1;border-color:#e5c77e;box-shadow:inset 0 0 16px #d4ae4726,0 0 9px #d4ae4720;background:linear-gradient(120deg,#514326,#25231c);color:#f2dca5}
 .brand-footer .brand-footer-name{font-size:14px;letter-spacing:.35px;white-space:nowrap}.brand-footer .brand-slogan,.brand-footer .brand-version{font-size:9px;line-height:1.2}.family-summary>.family-operating-stats{grid-column:1/-1;width:100%;margin-top:16px}
 .family-summary{flex-wrap:wrap}.family-summary>.family-operating-stats{flex:0 0 100%;min-width:0;box-sizing:border-box}
+
+/* Business results use full-width ledger rows rather than narrow statistic tiles. */
+.business-policy-stats{display:flex;flex-direction:column;gap:0;min-width:0;border:1px solid #b59a5d35;border-radius:7px;background:#090f153d;overflow:hidden}
+.business-result-line{display:grid;grid-template-columns:minmax(0,1fr) max-content;align-items:center;gap:10px;min-height:64px;padding:10px;box-sizing:border-box;border-bottom:1px solid #b59a5d25}
+.business-result-line:last-child{border-bottom:0}
+.business-result-line>span{font-size:11px;line-height:1.4;color:#aeb9bf;min-width:0;overflow-wrap:normal;word-break:normal}
+.business-policy-stats .business-result-line>strong{display:block;margin:0;font-family:'Segoe UI',sans-serif;font-size:15px;line-height:1.3;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right;overflow-wrap:normal;word-break:normal;color:#dec58d}
