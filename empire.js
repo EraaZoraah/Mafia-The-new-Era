@@ -95,20 +95,20 @@ export function installEmpire(db,{offerBribe=()=>null,detain=()=>{},supporterBon
   });
  }
  function mystery(id){return transaction(()=>{
-  const user=q('SELECT * FROM users WHERE id=?',id),now=clock();let offer=q('SELECT * FROM mystery_offers WHERE user_id=?',id);
-  if(offer&&offer.expires_at<=now){run('DELETE FROM mystery_offers WHERE user_id=?',id);offer=null;run('UPDATE users SET mystery_next_at=? WHERE id=?',now+draw(20,45)*60000,id);}
-  else if(!offer&&!user.mystery_next_at){run('UPDATE users SET mystery_next_at=? WHERE id=?',now+draw(5,12)*60000,id);}
-  else if(!offer&&user.mystery_next_at<=now){
+  const user=q('SELECT * FROM users WHERE id=?',id),now=clock(),session=q('SELECT * FROM player_online_sessions WHERE user_id=?',id);let offer=q('SELECT * FROM mystery_offers WHERE user_id=?',id);
+  if(offer&&offer.expires_at<=now){run('DELETE FROM mystery_offers WHERE user_id=?',id);offer=null;}
+  if(!session||user.online_until<=now||session.active_ms<600000||user.prison_until>now||user.hospital_until>now)return {offer:null,nextInMs:Math.max(0,600000-(session?.active_ms||0))};
+  if(!offer&&session.active_ms>=session.next_contact_ms){
    const job=mysteryJobs[draw(0,mysteryJobs.length-1)],mult=progression(user.xp).incomeMultiplier*(1+personalRespect(user.respect_received).incomeBonus);
    run('INSERT INTO mystery_offers(user_id,kind,reward_min,reward_max,expires_at) VALUES(?,?,?,?,?)',id,job.id,Math.min(MAX_CASH,Math.floor(12000*mult)),Math.min(MAX_CASH,Math.floor(20000*mult)),now+10*60000);
-   run('UPDATE users SET mystery_next_at=? WHERE id=?',now+draw(20,45)*60000,id);offer=q('SELECT * FROM mystery_offers WHERE user_id=?',id);
+   run('UPDATE player_online_sessions SET next_contact_ms=? WHERE user_id=?',session.active_ms+900000,id);run('UPDATE users SET mystery_next_at=? WHERE id=?',now+900000,id);offer=q('SELECT * FROM mystery_offers WHERE user_id=?',id);
   }
-  return {offer:offer?{...offer,reward_min:Math.floor(offer.reward_min*marriageBonus(id)),reward_max:Math.floor(offer.reward_max*marriageBonus(id)),...mysteryJobs.find(j=>j.id===offer.kind),id:offer.id,chance:.85,energy:0,supplies:operationSupply('mystery')}:null};
+  return {nextInMs:Math.max(0,(q('SELECT next_contact_ms FROM player_online_sessions WHERE user_id=?',id)?.next_contact_ms||600000)-session.active_ms),offer:offer?{...offer,reward_min:Math.floor(offer.reward_min*marriageBonus(id)),reward_max:Math.floor(offer.reward_max*marriageBonus(id)),...mysteryJobs.find(j=>j.id===offer.kind),id:offer.id,chance:.85,energy:0,supplies:operationSupply('mystery')}:null};
  })}
  function resolveMystery(id,body){if(!integer(body.id,1)||!['accept','decline'].includes(body.choice))fail('Choose whether to accept this offer.');return transaction(()=>{
   const offer=q('SELECT * FROM mystery_offers WHERE id=? AND user_id=?',body.id,id);if(!offer)fail('This invitation is no longer available.',409);if(offer.expires_at<=clock())fail('This invitation has expired.',409);
   const user=settleRaw(id);if(body.choice==='accept')available(user);
-  run('DELETE FROM mystery_offers WHERE id=?',offer.id);run('UPDATE users SET mystery_next_at=? WHERE id=?',clock()+draw(20,45)*60000,id);
+  run('DELETE FROM mystery_offers WHERE id=?',offer.id);
   if(body.choice==='decline')return {declined:true,reward:0};
   const ammoUsed=consume(id,'personal',operationSupply('mystery'));
   const success=roll()<8500,reward=success?Math.min(MAX_CASH-user.cash,Math.floor(draw(offer.reward_min,offer.reward_max)*marriageBonus(id))):0;

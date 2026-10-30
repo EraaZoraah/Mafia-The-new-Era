@@ -1,3 +1,4 @@
+import {robberyQuote} from './robbery.js';
 import {investmentLimit} from './investments.js';
 import {musclePackages} from './empire-catalog.js';
 
@@ -40,7 +41,7 @@ export function autonomousMove(c,domain){
  }
  case 'pvp':{
   const a=get('armory'),board=get('catalog'),targets=get('players')?.players.filter(p=>p.xp>=500&&p.protected_until<=now&&p.hospital_until<=now&&!q("SELECT 1 FROM users WHERE id=? AND (role<>'player' OR prison_until>?)",p.id,now)&&!q('SELECT 1 FROM family_members a JOIN family_members b ON a.family_id=b.family_id WHERE a.user_id=? AND b.user_id=?',id,p.id));
-  const target=pick(targets||[]),job=pick(board?.pvpActions.filter(j=>j.energy<=u.energy&&j.supplies.ammo<=a.ammo&&j.supplies.tier<=a.tier)||[]);
+  const eligible=targets||[];const ranked=eligible.map(p=>({...p,robbery:robberyQuote(u,p,profile(u).power.total,profile(q('SELECT * FROM users WHERE id=?',p.id)).power.total)})).sort((a,b)=>b.robbery.chance-a.robbery.chance);const target=pick(ranked.slice(0,Math.max(1,Math.ceil(ranked.length/2)))),job=pick(board?.pvpActions.filter(j=>!q("SELECT 1 FROM actions WHERE user_id=? AND kind IN ('pvp',?) AND available_at>?",id,'pvp:'+j.id,now)&&j.energy<=u.energy&&j.supplies.ammo<=a.ammo&&j.supplies.tier<=a.tier)||[]);
   return u.xp>=500&&target&&job?send('pvp',{target:target.username,kind:job.id,...(job.id==='liquidate'?{rounds:Math.min(10000,Math.max(60,Math.floor(a.ammo*.05))),anonymous:u.cash>50e6&&!!random(0,2)}:{})}):false;
  }
  case 'supplies':{
@@ -99,6 +100,7 @@ export function autonomousMove(c,domain){
   const title=p.benefits.titles.at(-1);if(title&&title.id!==u.selected_title)return send('title',{title:title.id});
   const news=get('news');if(news?.unread)return send('news/read',{tokens:news.tokens});
   const event=get('calendar');if(event?.active&&!event.seen)return send('calendar/ack',{id:event.id});
+  const inbox=get('notifications/inbox?filter=unread');if(inbox?.unread>3&&inbox.latestId)return send('notifications/read-all',{beforeId:inbox.latestId});
   const notification=get('notifications')?.notifications?.[0];if(notification)return send('notifications/ack',{id:notification.id});
   return sporadic('income',3600000,()=>send('income/claim'));
  }

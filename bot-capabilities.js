@@ -10,7 +10,7 @@ export const botCapabilities={
  marriage:['marriage/invite','marriage/respond','marriage/divorce'],crypto:['crypto/trade'],
  respect:['respect/give','family/respect/give'],chat:['messages','conversation/read','chat/read'],
  mystery:['mystery/resolve'],territory:['family/map/buy','family/war/capture'],
- rewards:['daily/claim','achievements/claim','gifts/collect','bounties/collect','income/claim','promotion/ack','notifications/ack','news/read','calendar/ack'],
+ rewards:['daily/claim','achievements/claim','gifts/collect','bounties/collect','income/claim','promotion/ack','notifications/ack','notifications/read-all','news/read','calendar/ack'],
  banking:['bank'],casino:['casino/start','casino/action','casino-extra/play','casino-extra/draw','casino-extra/collect','lottery/buy','lottery/collect'],
  investments:['investments/open','investments/claim'],freight:['production/start','production/ship','production/sell'],
  vehicles:['vehicles/auction/list','vehicles/auction/bid','vehicles/store','vehicles/sell','vehicles/ship','vehicles/car/sell'],appearance:['profile/settings','title'],
@@ -38,4 +38,4 @@ export const botCommandBoundaries={
  'family/request':'Reserved legacy route has no action handler; applications use families/join.'
 };
 // GET-only pages have no mutation to execute. Exploration/knowledge uses these views.
-export const botReadOnlyRoutes=['unread','activity','business/policies','referrals','family-directory','push','circuit','art','bribery','empire','custody','underworld','health','me','leaderboard','crypto','employees','gifts','news','conversation','family/dashboard','statistics','inbox','players/search','compound/upgrades','daily','bulletins','notifications','family','family/map','family/possessions','family/rivals','mystery','assets','calendar','catalog','guide','players','world-chat','investments','achievements','directory','family/respect','seasons','airport','armory','production','support','support/ticket','player/progress','bounties','marriage','presence','shop','vehicles','team-missions','casino','casino-extra','respect','family/chat','family/plans','family/alliances'];
+export const botReadOnlyRoutes=['notifications/inbox','family-public','unread','activity','business/policies','referrals','family-directory','push','circuit','art','bribery','empire','custody','underworld','health','me','leaderboard','crypto','employees','gifts','news','conversation','family/dashboard','statistics','inbox','players/search','compound/upgrades','daily','bulletins','notifications','family','family/map','family/possessions','family/rivals','mystery','assets','calendar','catalog','guide','players','world-chat','investments','achievements','directory','family/respect','seasons','airport','armory','production','support','support/ticket','player/progress','bounties','marriage','presence','shop','vehicles','team-missions','casino','casino-extra','respect','family/chat','family/plans','family/alliances'];

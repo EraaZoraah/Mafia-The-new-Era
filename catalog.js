@@ -128,8 +128,8 @@ export function ownershipBenefits(possessions){
 }
 export const pvpActions = [
   {id:'attack',name:'Attack player',energy:20,chance:.70,damage:25,share:0,cap:0,cooldown:120000},
-  {id:'rob',name:'Rob player',energy:25,chance:.55,damage:10,share:.10,cap:1000000000000000,cooldown:180000},
-  {id:'liquidate',name:'Liquidation attempt',energy:40,chance:.35,damage:100,share:0,cap:0,cooldown:600000},
+  {id:'rob',name:'Rob player',energy:25,chance:.55,damage:10,share:1,cap:1000000000000000,cooldown:300000,successCooldown:1800000},
+  {id:'liquidate',name:'Liquidation attempt',energy:40,chance:.35,damage:100,share:0,cap:0,cooldown:1800000,successCooldown:86400000},
   {id:'hostage',name:'Hostage operation',energy:35,chance:.40,damage:15,share:0,cap:10000000,cooldown:300000},
 ];
 

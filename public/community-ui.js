@@ -11,7 +11,7 @@ export const crestMarkup=crest=>{
 export function createCommunityUI({api,getMe,refresh,toast,esc,money,date}){
  let counter=0,peerId=null;
  function bindSearch(input){if(input.dataset.searchBound)return;input.dataset.searchBound='true';const list=document.createElement('datalist');list.id='player-suggestions-'+(++counter);input.setAttribute('list',list.id);input.autocomplete='off';input.after(list);let timer,version=0;
-  const update=async()=>{const v=++version;try{const d=await api('players/search?q='+encodeURIComponent(input.value.trim()));if(!input.isConnected||v!==version)return;list.innerHTML=d.players.map(p=>lhtml`<option value="${esc(p.username)}">${p.role==='owner'?ltext('Owner · '):p.role==='admin'?ltext('Admin · '):''}${p.xp.toLocaleString(gameLocale)} XP</option>`).join('');}catch{}};
+  const update=async()=>{const v=++version;try{const staff=input.dataset.playerSearchScope==='staff',d=await api(staff?'admin?search='+encodeURIComponent(input.value.trim()):'players/search?q='+encodeURIComponent(input.value.trim()));if(!input.isConnected||v!==version)return;list.innerHTML=(staff?d.users:d.players).map(p=>lhtml`<option value="${esc(p.username)}">${p.role==='owner'?ltext('Owner · '):p.role==='admin'?ltext('Admin · '):''}${p.xp.toLocaleString(gameLocale)} XP</option>`).join('');}catch{}};
   input.addEventListener('input',()=>{clearTimeout(timer);timer=setTimeout(update,120)});input.addEventListener('focus',()=>void update());
  }
  const bindAll=()=>document.querySelectorAll('input[name="target"],input[name="recipient"],input#target,input[data-player-search]').forEach(bindSearch);

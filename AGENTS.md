@@ -26,3 +26,7 @@
 - Release announcements: the 1.24.0 catch-up dispatch summarizes earlier updates. Each future user-visible release must include one new translated releaseNotes entry with announce:true; preserve the idempotent release_announcements ledger. Exclude private staff capabilities and detailed cash/XP balance changes from public announcements.
 
 - Frontend startup verification must use the actual server.js HTTP allowlist, not only a permissive preview server. Keep the recursive browser import test in test/baseline.test.js passing when adding public modules; verify HTTP 200 and JavaScript MIME type for the entire app.js/pwa.js import graph.
+
+- Personal hourly income supports manual claims at any time plus persistent two-hour server-scheduled auto-claims, including offline players. Manual claims do not reset the auto schedule. Custody pauses accrual/payment; wallet overflow stays saved. Keep the 24-active-hour accrual safety cap when collection cannot complete.
+
+- Incoming background events belong in the persistent notification inbox, not outcome dialogs. Preserve own risky-action results. NPC contact cadence uses presence session time: first ten minutes, then fifteen online minutes between offers; offline time cannot accelerate it.

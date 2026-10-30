@@ -1,3 +1,4 @@
+import {robberyQuote,robberyShare} from './robbery.js';
 import {installActivity} from './activity.js';
 import {installBusinessPolicy} from './business-policy.js';
 import {isDrugSalesQuestion} from './guide-drug-sales.js';
@@ -332,6 +333,15 @@ export function installGame(db, { hash, log, json, onNotify=()=>{}, bribeRoll = 
 
   }
 
+  db.exec('CREATE TABLE IF NOT EXISTS income_auto_claims(user_id INTEGER PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE,next_at INTEGER NOT NULL); CREATE INDEX IF NOT EXISTS income_auto_due ON income_auto_claims(next_at)');
+  run('INSERT OR IGNORE INTO income_auto_claims SELECT id,? FROM users',clock()+7200000);
+  function autoIncome(){return transaction(()=>{
+   const now=clock();run('INSERT OR IGNORE INTO income_auto_claims SELECT id,? FROM users WHERE deleted_at=0',now+7200000);
+   for(const row of all('SELECT a.* FROM income_auto_claims a JOIN users u ON u.id=a.user_id WHERE a.next_at<=? AND u.deleted_at=0 AND u.banned=0',now)){
+    settleRaw(row.user_id,now,true);
+    run('UPDATE income_auto_claims SET next_at=? WHERE user_id=?',row.next_at+(Math.floor((now-row.next_at)/7200000)+1)*7200000,row.user_id);
+   }
+  });}
   const settle = (id,collect=false)=>transaction(()=>settleRaw(id,clock(),collect));
 
   const owned = id=>all('SELECT category,item_id,quantity,acquired_at FROM possessions WHERE user_id=?',id);
@@ -444,7 +454,7 @@ export function installGame(db, { hash, log, json, onNotify=()=>{}, bribeRoll = 
 
     return transaction(()=>{
 
-      const user=settleRaw(id); available(user); ready(id,'pvp');
+      const user=settleRaw(id); available(user); ready(id,'pvp');ready(id,'pvp:'+spec.id);
 
       const found=q('SELECT id FROM users WHERE username=? AND banned=0',body.target);
 
@@ -480,13 +490,15 @@ export function installGame(db, { hash, log, json, onNotify=()=>{}, bribeRoll = 
 
       const targetRank=(progression(target.xp).rankLevel-1)/24,hostage=spec.id==='hostage';
 
-      const chance=(hostage?.65-.40*targetRank:spec.id==='liquidate'?liquidationChance(rounds):spec.chance)*(1-protection.chanceReduction)*(1-personalRespect(target.respect_received).defenseBonus);
+      const robbery=spec.id==='rob'?robberyQuote(user,target,logistics.personalPower(id).total,logistics.personalPower(target.id).total):null;
+      const chance=(hostage?.65-.40*targetRank:spec.id==='liquidate'?liquidationChance(rounds):robbery?robbery.chance:spec.chance)*(1-protection.chanceReduction)*(1-personalRespect(target.respect_received).defenseBonus);
 
       const success=roll()<chance*10000,quality=hostage&&success?draw(50,100):0;
 
       const hostageMaximum=Math.round(100000+9900000*targetRank**2);
 
-      const stolen=success?Math.min(Math.floor((spec.id==='rob'?target.cash*.10:hostage?Math.min(target.cash,hostageMaximum*quality/100):0)*(1-protection.lossReduction)),MAX_MONEY-user.cash):0;
+      const lootShare=success&&robbery?robberyShare(robbery,draw,protection.lossReduction):0;
+      const stolen=success?Math.min(Math.floor(spec.id==='rob'?target.cash*lootShare:(hostage?Math.min(target.cash,hostageMaximum*quality/100):0)*(1-protection.lossReduction)),MAX_MONEY-user.cash):0;
 
       run('INSERT INTO operation_history(user_id,kind,success,created_at) VALUES(?,?,?,?)',id,'pvp:'+spec.id,success?1:0,clock());
 
@@ -538,13 +550,14 @@ export function installGame(db, { hash, log, json, onNotify=()=>{}, bribeRoll = 
 
       promote(id,user.xp);
 
-      cooldown(id,'pvp',spec.cooldown);
+      const cooldownMs=success?(spec.successCooldown||spec.cooldown):spec.cooldown;
+      cooldown(id,'pvp:'+spec.id,cooldownMs);
 
       log(id,`${spec.name} against ${target.username}: ${success?'success':'failed'}. Loot: $${stolen}. Anonymity fee: $${anonymousFee}.`);
 
       log(target.id,`${actorName}: ${spec.name.toLowerCase()} ${success?'succeeded':'failed'}. Cash lost: $${stolen}.`);
 
-      return {success,backfireRounds,backfireSuccess,bountyReward:bounty.paid,bountyPending:bounty.pending,anonymousFee,ammoUsed,chance,quality,hostageMaximum,reward:stolen,healthLost:success?0:Math.min(user.health-1,spec.id==='liquidate'?25:15),image:spec.id==='liquidate'&&success?'/images/scene-coma.jpg':'/images/scene-operations.jpg',message:(backfireSuccess?'Return fire put you in a coma too. ':'')+(success?(spec.id==='liquidate'?'Liquidation succeeded. The target is in a 72-hour coma.':`${spec.name} succeeded. Loot: ${stolen}.`):'The operation failed. You lost '+Math.min(user.health-1,spec.id==='liquidate'?25:15)+' health.')};
+      return {success,cooldownMs,lootShare,backfireRounds,backfireSuccess,bountyReward:bounty.paid,bountyPending:bounty.pending,anonymousFee,ammoUsed,chance,quality,hostageMaximum,reward:stolen,healthLost:success?0:Math.min(user.health-1,spec.id==='liquidate'?25:15),image:spec.id==='liquidate'&&success?'/images/scene-coma.jpg':'/images/scene-operations.jpg',message:(backfireSuccess?'Return fire put you in a coma too. ':'')+(success?(spec.id==='liquidate'?'Liquidation succeeded. The target is in a 72-hour coma.':`${spec.name} succeeded. Loot: ${stolen}.`):'The operation failed. You lost '+Math.min(user.health-1,spec.id==='liquidate'?25:15)+' health.')};
 
     });
 
@@ -658,9 +671,9 @@ export function installGame(db, { hash, log, json, onNotify=()=>{}, bribeRoll = 
 
       if('cooldowns' in changes){
 
-        if(!Array.isArray(changes.cooldowns)||changes.cooldowns.length>crimes.length+4)fail('Invalid cooldowns');const seen=new Set();
+        if(!Array.isArray(changes.cooldowns)||changes.cooldowns.length>crimes.length+8)fail('Invalid cooldowns');const seen=new Set();
 
-        for(const c of changes.cooldowns){if(!c||![...crimes.map(x=>x.id),'pvp','shipment:drugs','shipment:guns','flight'].includes(c.kind)||seen.has(c.kind)||!integer(c.available_at,0,8640000000000000))fail('Invalid cooldown');seen.add(c.kind);}
+        for(const c of changes.cooldowns){if(!c||![...crimes.map(x=>x.id),'pvp',...pvpActions.map(x=>'pvp:'+x.id),'shipment:drugs','shipment:guns','flight'].includes(c.kind)||seen.has(c.kind)||!integer(c.available_at,0,8640000000000000))fail('Invalid cooldown');seen.add(c.kind);}
 
         run('DELETE FROM actions WHERE user_id=?',body.id);for(const c of changes.cooldowns)run('INSERT INTO actions(user_id,kind,available_at) VALUES(?,?,?)',body.id,c.kind,c.available_at);audit.cooldowns=changes.cooldowns;
 
@@ -843,7 +856,7 @@ export function installGame(db, { hash, log, json, onNotify=()=>{}, bribeRoll = 
 
       const restricted=detained(q('SELECT * FROM users WHERE id=?',user.id),clock());
 
-      if(req.method==='POST'&&restricted&&!['/api/world-chat/send','/api/world-chat/hide','/api/family/chat/send','/api/conversation/read','/api/profile/settings','/api/custody/pay','/api/notifications/ack','/api/promotion/ack','/api/messages','/api/bank','/api/news/read','/api/chat/read'].includes(pathname)&&!pathname.startsWith('/api/admin/'))fail('Prison or hospital: income and activities are suspended. Arrange your release first.',409);
+      if(req.method==='POST'&&restricted&&!['/api/world-chat/send','/api/world-chat/hide','/api/family/chat/send','/api/conversation/read','/api/profile/settings','/api/custody/pay','/api/notifications/ack','/api/notifications/read-all','/api/promotion/ack','/api/messages','/api/bank','/api/news/read','/api/chat/read'].includes(pathname)&&!pathname.startsWith('/api/admin/'))fail('Prison or hospital: income and activities are suspended. Arrange your release first.',409);
 
       const artResult=art.route(req,pathname,body,user);if(artResult!==null)return json(res,200,artResult);
 
@@ -875,7 +888,7 @@ export function installGame(db, { hash, log, json, onNotify=()=>{}, bribeRoll = 
 
       const profileResult=profiles.route(req.method,pathname,body,user);if(profileResult!==null)return json(res,200,profileResult);
 
-      const worldResult=underworld.route(req.method,pathname,body,user);if(worldResult!==null){if(worldResult.topFamilies)worldResult.topFamilies=worldResult.topFamilies.map(f=>({...f,honor:legacy.honor(f.id)}));return json(res,200,worldResult);}
+      const worldResult=underworld.route(req.method,pathname,body,user,req);if(worldResult!==null){if(worldResult.topFamilies)worldResult.topFamilies=worldResult.topFamilies.map(f=>({...f,honor:legacy.honor(f.id)}));return json(res,200,worldResult);}
 
       const transferResult=transfers.route(req.method,pathname,body,user);if(transferResult!==null)return json(res,200,transferResult);
 
@@ -1049,7 +1062,7 @@ export function installGame(db, { hash, log, json, onNotify=()=>{}, bribeRoll = 
 
   }
 
-  return {recordLogin:activity.login,registerReferral:referrals.registration,presence,recordActivity:economy.withSource,tick:()=>{logistics.settleFreight();vehicles.settleFreight();referrals.settle();economy.withSource('midnight-circuit',circuit.settle);economy.withSource('art-auction',art.settle);economy.withSource('vehicle-auction',vehicles.settle);economy.withSource('territory-income',territoryIncome.settle);care.beta();expansion.publish();return economy.withSource('season',legacy.tick)},settle,route,owned,profile,notify:underworld.notify,blockedMillis:underworld.blockedMillis};
+  return {recordLogin:activity.login,registerReferral:referrals.registration,presence,recordActivity:economy.withSource,tick:()=>{autoIncome();logistics.settleFreight();vehicles.settleFreight();referrals.settle();economy.withSource('midnight-circuit',circuit.settle);economy.withSource('art-auction',art.settle);economy.withSource('vehicle-auction',vehicles.settle);economy.withSource('territory-income',territoryIncome.settle);care.beta();expansion.publish();return economy.withSource('season',legacy.tick)},settle,route,owned,profile,notify:underworld.notify,blockedMillis:underworld.blockedMillis};
 
 }
 

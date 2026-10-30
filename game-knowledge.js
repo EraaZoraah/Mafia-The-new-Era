@@ -1,3 +1,4 @@
+import {automaticIncomeRule,robberyRule,familyPublicRule} from './public/activity-copy.js';
 import {activityRule} from './public/activity-copy.js';
 import {businessPolicies} from './business-policy.js';
 import {LOTTERY_MAX_TICKETS} from './casino-extra.js';
@@ -36,7 +37,7 @@ export function gameKnowledge(language='en'){
 
  for(const crest of familyCrests)add('family',crest+' family crest',language==='nl'?'De Don of Capo kiest dit familiewapen via My family → Edit family. Opgeslagen op het familieprofiel en in de familielijst. Alleen uiterlijk; geen bonus.':'The Don or Capo selects this family crest through My family → Edit family. Saved on the family profile and in the family directory. Cosmetic only; no bonus.');
  add('referrals',referralEvent.name,`Registration referral bonus: $${referralEvent.starter}; referrer reward: $${referralEvent.reward} after rank ${referralEvent.rank} and ${referralEvent.days} distinct active UTC days. Five qualified human friends earn 30 free Supporter days; ten earn 30 free Grand Supporter days, once each. No purchase cash/XP. Existing paid membership time is preserved. Suspicious network/email aliases require staff review; bots never qualify. Player-to-player spending stays locked until qualification and review. Staff referral overview lists every link and totals.`);
- add('family-directory','All families','Browse every family, including your own, without joining one first. Search names and compare members, assets, Power, net worth and drugs/guns ranks. This is separate from the top ten rankings.');
+ add('family-directory','All families','Click a family name in All families to open its public profile, with members, roles, Power, careers and possessions. Private requests, chat, staff controls and management permissions remain restricted.');
  add('circuit','Midnight Circuit',circuitRules);
  for(const r of raceRoutes)add('circuit',r.name,r.description);
  for(const r of driverRanks)add('circuit',r.name,'Driver XP '+r.xp+'. Racing handling bonus +'+r.handlingBonus.toFixed(1)+'.');

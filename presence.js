@@ -5,9 +5,11 @@ export function installPresence(db,{clock,fail,membership=()=>null,lucky=()=>nul
  for(const field of ['last_seen','online_until','play_ms'])if(!all('PRAGMA table_info(users)').some(c=>c.name===field))db.exec('ALTER TABLE users ADD COLUMN '+field+' INTEGER NOT NULL DEFAULT 0');
  if(!all('PRAGMA table_info(users)').some(c=>c.name==='ui_language'))db.exec("ALTER TABLE users ADD COLUMN ui_language TEXT NOT NULL DEFAULT ''");
  const interfaceLanguages=['en','nl','es','fr','de'];
+ db.exec('CREATE TABLE IF NOT EXISTS player_online_sessions(user_id INTEGER PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE,active_ms INTEGER NOT NULL DEFAULT 0,next_contact_ms INTEGER NOT NULL DEFAULT 600000)');
  db.exec('CREATE TABLE IF NOT EXISTS player_active_days(user_id INTEGER NOT NULL REFERENCES users(id),day TEXT NOT NULL,PRIMARY KEY(user_id,day))');
  function touch(id){const now=clock(),p=q('SELECT last_seen,online_until FROM users WHERE id=? AND banned=0 AND deleted_at=0',id);if(!p)return;
   const elapsed=p.last_seen&&p.online_until>now?Math.max(0,Math.min(60000,now-p.last_seen)):0;
+  if(p.online_until<=now)run('INSERT INTO player_online_sessions VALUES(?,0,600000) ON CONFLICT(user_id) DO UPDATE SET active_ms=0,next_contact_ms=600000',id);else run('INSERT INTO player_online_sessions VALUES(?,?,600000) ON CONFLICT(user_id) DO UPDATE SET active_ms=active_ms+excluded.active_ms',id,elapsed);
   run('UPDATE users SET play_ms=play_ms+?,last_seen=?,online_until=? WHERE id=?',elapsed,now,now+ONLINE_WINDOW,id);
   run('INSERT OR IGNORE INTO player_active_days VALUES(?,?)',id,new Date(now).toISOString().slice(0,10));
  }

@@ -13,3 +13,17 @@ export function createActivityUI({api,esc,money,date}){
  }
  return {page:show};
 }
+
+export function createNotificationsUI({api,esc,date}){
+ let page=1,filter='all',generation=0;
+ async function show(el){const g=++generation,d=await api('notifications/inbox?page='+page+'&filter='+filter);if(!el.isConnected||g!==generation)return;
+  el.innerHTML=lhtml`<div class="eyebrow">YOUR UNDERWORLD DISPATCHES</div><h1>Notification panel</h1><p>Attacks, hospital stays, family events and other important news are saved here instead of interrupting your game.</p><section class="panel notification-tools"><strong>${d.unread} ${t('Unread notifications')}</strong><div class="formrow"><button class="btn ${filter==='all'?'':'secondary'}" data-notification-filter="all">All notifications</button><button class="btn ${filter==='unread'?'':'secondary'}" data-notification-filter="unread">Unread notifications</button><button class="btn secondary" id="notifications-read-all" ${d.unread?'':'disabled'}>Mark all as read</button></div></section><div class="notification-feed">${d.notifications.map(n=>lhtml`<article class="panel notification-entry ${n.read_at?'':'notification-unread'}"><img src="${esc(n.image||'/images/outcome-notice.png')}" alt=""><div><div class="notification-meta"><time>${date(n.created_at)}</time><span>${t(n.read_at?'Read':'Unread')}</span></div><h3>${esc(t(n.title))}</h3><p>${esc(translateGenerated(n.message,activeLanguage))}</p><div class="formrow">${n.read_at?'':lhtml`<button class="btn secondary small" data-notification-read="${n.id}">Mark as read</button>`}${n.actionTab?lhtml`<button class="btn secondary small" data-tab="${n.actionTab}">${t(n.actionTab==='prison'?'Prison':n.actionTab==='hospital'?'Hospital':'Rival families')}</button>`:''}</div></div></article>`).join('')||lhtml('<section class="panel"><p>No notifications to show.</p></section>')}</div><div class="activity-pagination"><button class="btn secondary" id="notifications-prev" ${page<=1?'disabled':''}>Previous</button><span>${page} / ${d.pages}</span><button class="btn secondary" id="notifications-next" ${page>=d.pages?'disabled':''}>Next</button></div>`;
+  const reload=()=>show(el).catch(e=>{if(el.isConnected)el.insertAdjacentHTML('afterbegin',lhtml`<p class="notice error">${esc(e.message)}</p>`)});
+  el.querySelectorAll('[data-notification-filter]').forEach(b=>b.onclick=()=>{filter=b.dataset.notificationFilter;page=1;void reload()});
+  el.querySelectorAll('[data-notification-read]').forEach(b=>b.onclick=async()=>{b.disabled=true;try{await api('notifications/ack',{id:Number(b.dataset.notificationRead)});await reload()}catch(e){b.disabled=false;el.insertAdjacentHTML('afterbegin',lhtml`<p role="alert">${esc(e.message)}</p>`)}});
+  el.querySelector('#notifications-read-all').onclick=async e=>{e.target.disabled=true;try{await api('notifications/read-all',{beforeId:d.latestId});await reload()}catch(error){e.target.disabled=false;el.insertAdjacentHTML('afterbegin',lhtml`<p role="alert">${esc(error.message)}</p>`)}};
+  el.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>document.querySelector('.nav [data-tab="'+b.dataset.tab+'"]')?.click());
+  el.querySelector('#notifications-prev').onclick=()=>{page--;void reload()};el.querySelector('#notifications-next').onclick=()=>{page++;void reload()};
+ }
+ return {page:show};
+}

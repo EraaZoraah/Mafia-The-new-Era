@@ -1,12 +1,12 @@
 <!-- Current deployment note -->
-**1.30.2 installation:** run `npm ci` in this folder before `npm start`. The implemented referral event is documented in [REFERRAL-BETA.md](REFERRAL-BETA.md). Optional push configuration and the original historical proposal are documented in [ART-HEISTS-AND-PUSH.md](ART-HEISTS-AND-PUSH.md). Preserve your existing data folder and server environment.
+**1.31.0 installation:** run `npm ci` in this folder before `npm start`. The implemented referral event is documented in [REFERRAL-BETA.md](REFERRAL-BETA.md). Optional push configuration and the original historical proposal are documented in [ART-HEISTS-AND-PUSH.md](ART-HEISTS-AND-PUSH.md). Preserve your existing data folder and server environment.
 
 # Mafia: The New Era
 
 For versioned GHCR images and safe Portainer re-pull updates, see [DEPLOYMENT.md](DEPLOYMENT.md) and [compose.yml](compose.yml).
 The source repository stays private; public images exclude the private starter database.
 
-Current version: **1.30.2**, build `2026-10-25-release-1.30.2`. See [OCTOBER-17-REFINEMENTS.md](OCTOBER-17-REFINEMENTS.md), [VERSIONING.md](VERSIONING.md) and [CHANGELOG.md](CHANGELOG.md).
+Current version: **1.31.0**, build `2026-10-30-release-1.31.0`. See [OCTOBER-17-REFINEMENTS.md](OCTOBER-17-REFINEMENTS.md), [VERSIONING.md](VERSIONING.md) and [CHANGELOG.md](CHANGELOG.md).
 
 ## Current corrections — 1.19.5
 
@@ -28,7 +28,7 @@ Login and registration use dedicated full-page artwork, a gradient fade and a da
 
 The opening page now uses a single non-repeating background with a gradient fade for readable text. Login and registration artwork are unchanged.
 
-Personal business and employee cash accrues for at most 24 active earning hours in a collection cycle. Browsing, signing in and server restarts cannot extend a full cycle. Prison/coma pause the clock. Full collection starts a new cycle. Existing saved income remains intact; wallet limits never discard it. Family treasury earnings are separate.
+Personal business and employee cash supports manual collection at any time and automatic server collection every two hours, including offline players. Each operation has a persistent schedule; manual collection does not shift it. Accrual retains the 24-active-hour safety cap if a wallet is full or automatic payment cannot complete. Browsing, signing in and server restarts cannot extend a full cycle. Prison/coma pause the clock. Full collection starts a new cycle. Existing saved income remains intact; wallet limits never discard it. Family treasury earnings are separate.
 
 English is default; Dutch is available above Log out. French/German/Spanish are Coming soon. Luca reads the updated rules/catalogs and account state in English and Dutch. Ranks, player-authored content, dollars and numeric punctuation remain unchanged.
 
@@ -127,7 +127,7 @@ See [PROFILES.md](PROFILES.md) for customizable public player profiles, direct t
 
 - Messages now have an inbox, conversation history, unread counts, direct replies and clickable profiles. Username inputs offer prefix matching.
 - Owner/Admin badges and a protected Admin Panel replace the former Moderator role. Admins cannot promote themselves to Owner, edit their own role, or modify Owner accounts or families containing an Owner.
-- Robbery transfers up to 10% of target cash without a fixed dollar cap. Hostage difficulty and ransom scale with normal target rank, reaching $10 million for a perfect top-rank operation before protection and cash limits.
+- Robbery transfers 10-100% of target cash, within the attacker wallet capacity. Relative normal rank and Power determine success and loot distribution; full theft is a rare 0.1-1% conditional event before protection. Robbery cooldown is 5 minutes after failure or 30 minutes after success; liquidation uses 30 minutes after failure or 24 hours after success, independently of the target. Hostage difficulty and ransom scale with normal target rank, reaching $10 million for a perfect top-rank operation before protection and cash limits.
 - Failed NPC crimes apply a bounded cash fine or a 5–60 minute arrest. Dashboard statistics track attempts, successes, arrests and comas; attempt history starts with this update.
 - Families can choose a theme, motto and one of five crests, invite players, approve applications or accept open recruitment. The dashboard includes an organizational family tree, holdings, wealth and raid statistics.
 - Family member capacity increases from 15 to 30 with the average of the two career ranks. Compound bonuses add 2 / 7 / 20 places, with a maximum of 50. Joining is checked atomically against available places.
@@ -233,3 +233,7 @@ Historical build: `2026-10-16-dutch-foundation-1`. See DUTCH-LOCALIZATION.md. Th
 
 ## City control & vehicle collections — 16 October 2026
 Historical build: `2026-10-16-territory-vehicles-1`. See TERRITORY-AND-VEHICLES.md for migration, storage/capture rules, verification, geographic licensing and the additive fifty-bot script for separate hosts. Deploy the full build and restart Node; preserve data and environment files.
+
+## Notification inbox
+
+Important incoming events are saved under My activity → Notification panel with unread counts and persistent read receipts. Own risky-action success/failure dialogs remain. Optional NPC contacts first appear after ten online-session minutes, then every fifteen online minutes from the previous offer. Offline time does not count; a new session starts with a ten-minute wait. Existing offers expire after ten minutes and do not reroll on refresh. Real device push remains paused.

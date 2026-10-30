@@ -270,7 +270,7 @@ test('isolated prototype baseline', { timeout: 90000 }, async t => {
       assert.equal(result.status,200);
       assert.equal(db.prepare('SELECT SUM(cash) cash FROM users').get().cash,before);
       assert.equal((await api('me',undefined,alice.cookie)).body.user.energy,75);
-      assert.equal((await api('pvp',{kind:'attack',target:'Bob'},alice.cookie)).status,429);
+      assert.equal((await api('pvp',{kind:'rob',target:'Bob'},alice.cookie)).status,429);
       assert.equal((await api('protection',{},alice.cookie)).status,200);
       assert.equal((await api('protection',{},alice.cookie)).status,409);
     });
@@ -297,7 +297,7 @@ test('isolated prototype baseline', { timeout: 90000 }, async t => {
       const engine=installGame(db,{bigScoreRoll:()=>9999,hash:()=>{throw Error('Not used');},log:()=>{},json:(_res,status,body)=>({status,body}),roll:()=>roll});
       assert.deepEqual(db.prepare('SELECT cash,bank FROM users ORDER BY id').all(),before);
       for(const kind of ['attack','rob','liquidate','hostage']){
-        db.prepare('DELETE FROM actions WHERE kind=?').run('pvp');
+        db.prepare('DELETE FROM actions WHERE kind LIKE ?').run('pvp%');
         db.prepare('UPDATE users SET xp=1000,cash=100000,energy=100,health=100,hospital_until=0,protected_until=0,captured_until=0,energy_at=?,health_at=?').run(Date.now(),Date.now());
         const result=engine.route({method:'POST'},null,'/api/pvp',{kind,target:'Bob'},{id:alice.body.user.id});
         assert.equal(result.status,200);
@@ -305,12 +305,12 @@ test('isolated prototype baseline', { timeout: 90000 }, async t => {
         const target=db.prepare('SELECT * FROM users WHERE username=?').get('Bob');
         assert.ok(target.protected_until>Date.now());
         assert.equal(db.prepare('SELECT SUM(cash) total FROM users').get().total,200000);
-        if(kind==='rob')assert.equal(result.body.reward,10000);
+        if(kind==='rob')assert.ok(result.body.reward>=10000&&result.body.reward<=100000);
         if(kind==='hostage'){assert.ok(result.body.reward>0&&result.body.reward<=100000);assert.ok(target.captured_until>Date.now());}
         if(kind==='liquidate'){assert.equal(target.health,0);assert.ok(target.hospital_until>Date.now());}
       }
       roll=9999;
-      db.prepare("DELETE FROM actions WHERE kind='pvp'").run();
+      db.prepare("DELETE FROM actions WHERE kind LIKE 'pvp%'").run();
       db.prepare('UPDATE users SET energy=100,health=100,hospital_until=0,protected_until=0,captured_until=0').run();
       const result=engine.route({method:'POST'},null,'/api/pvp',{kind:'attack',target:'Bob'},{id:alice.body.user.id});
       assert.equal(result.body.success,false);
@@ -447,6 +447,7 @@ test('isolated prototype baseline', { timeout: 90000 }, async t => {
       const claims=await Promise.all([api('investments/claim',{scope:'personal',id:position},alice.cookie),api('investments/claim',{scope:'personal',id:position},alice.cookie)]);
       assert.deepEqual(claims.map(x=>x.status).sort(),[200,409]);assert.equal((await api('me',undefined,alice.cookie)).body.user.cash,30000000000000+Math.floor(6000000000000*quote.rateBps/10000));
       assert.equal((await api('family/buy',{id:'safehouse-starter'},owner.cookie)).status,403);
+      db.prepare('INSERT INTO player_online_sessions VALUES(?,600000,600000) ON CONFLICT(user_id) DO UPDATE SET active_ms=600000,next_contact_ms=600000').run(id);db.prepare('UPDATE users SET online_until=? WHERE id=?').run(Date.now()+90000,id);
       const offer=(await api('mystery',undefined,alice.cookie)).body.offer;assert.ok(offer);
       const results=await Promise.all([api('mystery/resolve',{id:offer.id,choice:'accept'},alice.cookie),api('mystery/resolve',{id:offer.id,choice:'accept'},alice.cookie)]);
       assert.deepEqual(results.map(x=>x.status).sort(),[200,409]);assert.equal((await api('me',undefined,alice.cookie)).body.user.energy,0);

@@ -1,6 +1,6 @@
 // The sidebar and Luca share this page catalog. Layout sections are presentation only.
 export const navigationSections=[
- {id:'overview',label:'Overview',items:[['dashboard','Dashboard'],['activity','My activity'],['daily','Daily objectives'],['bulletins','Announcements & events'],['messages','Messages']]},
+ {id:'overview',label:'Overview',items:[['dashboard','Dashboard'],['activity','My activity'],['notifications','Notification panel'],['daily','Daily objectives'],['bulletins','Announcements & events'],['messages','Messages']]},
  {id:'world',label:'Your world',items:[
   {id:'character',label:'My character',items:[['profile','My profile'],['marriage','Marriage'],['achievements','Introduction & achievements'],['respect','Player respect'],['referrals','Beta referrals']]},
   {id:'personal',label:'My empire',aliases:['Personal assets'],items:[['inventory','My possessions'],['employees','Employees'],['armory','Weapons & ammunition'],['business','Businesses'],['home','Real estate'],['garage','Private garages'],['warehouses','Warehouses'],['car','Cars'],['helicopter','Helicopters'],['jet','Private jets'],['yacht','Yachts']]},
@@ -12,4 +12,5 @@ export const navigationSections=[
  ]},
  {id:'extras',label:'Extras & staff',items:[['boutique','Premium shop'],['tickets','Support tickets'],['admin','Owner Panel']]}
 ];
+export const detailPages={'family-profile':{label:'Family profile',parent:'family-directory'}};
 export const menu=navigationSections.flatMap(section=>section.items);

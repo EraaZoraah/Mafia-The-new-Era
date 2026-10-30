@@ -72,7 +72,7 @@ test('permanent personal protection has a hard cap and changes actual PvP chance
  assert.equal(f.call('empire',undefined,2).body.personal.protection.chanceReduction,.4);
  f.dice(5000);assert.equal(f.call('pvp',{kind:'attack',target:'MemberOne'}).body.success,false);
  f.db.exec('DELETE FROM actions');f.run('UPDATE users SET protected_until=0,health=100,energy=100');f.dice(0);
- const before=f.q('SELECT cash FROM users WHERE id=2').cash,result=f.call('pvp',{kind:'rob',target:'MemberOne'},3);assert.equal(result.body.success,true);assert.ok(result.body.reward<=10000000000*.10*.70);assert.equal(f.q('SELECT cash FROM users WHERE id=2').cash,before-result.body.reward);assert.equal(f.q('SELECT health FROM users WHERE id=2').health,93);
+ const before=f.q('SELECT cash FROM users WHERE id=2').cash,result=f.call('pvp',{kind:'rob',target:'MemberOne'},3);assert.equal(result.body.success,true);assert.ok(result.body.reward>=Math.floor(before*.10)&&result.body.reward<=before);assert.ok(result.body.chance<.55);assert.equal(f.q('SELECT cash FROM users WHERE id=2').cash,before-result.body.reward);assert.equal(f.q('SELECT health FROM users WHERE id=2').health,93);
 });
 
 test('family defenses and vaults reduce real raids and preserve transferred money',t=>{
@@ -87,11 +87,11 @@ test('family defenses and vaults reduce real raids and preserve transferred mone
 });
 
 test('mystery offers do not reroll on refresh, cost no energy, expire and pay only once to their owner',t=>{
- const f=fixture(t);assert.equal(f.call('mystery',undefined,2).body.offer,null);f.advance(6*60000);const offer=f.call('mystery',undefined,2).body.offer;assert.ok(offer);assert.deepEqual(f.call('mystery',undefined,2).body.offer,offer);f.reset();assert.equal(f.call('mystery',undefined,2).body.offer.id,offer.id);
+ const f=fixture(t);const online=minutes=>{f.game.presence.touch(2);for(let n=0;n<minutes*2;n++){f.advance(30000);f.game.presence.touch(2)}};assert.equal(f.call('mystery',undefined,2).body.offer,null);online(10);const offer=f.call('mystery',undefined,2).body.offer;assert.ok(offer);assert.deepEqual(f.call('mystery',undefined,2).body.offer,offer);f.reset();assert.equal(f.call('mystery',undefined,2).body.offer.id,offer.id);
  assert.equal(f.call('mystery/resolve',{id:offer.id,choice:'accept'},3).status,409);
  f.run('UPDATE users SET energy=0,energy_at=? WHERE id=2',f.time());const before=f.q('SELECT cash FROM users WHERE id=2').cash;
  const result=f.call('mystery/resolve',{id:offer.id,choice:'accept'},2);assert.equal(result.status,200);assert.equal(result.body.reward,offer.reward_min);assert.equal(f.q('SELECT cash FROM users WHERE id=2').cash,before+offer.reward_min);assert.equal(f.q('SELECT energy FROM users WHERE id=2').energy,0);assert.equal(f.call('mystery/resolve',{id:offer.id,choice:'accept'},2).status,409);
- f.advance(21*60000);const expired=f.call('mystery',undefined,2).body.offer;assert.notEqual(expired.id,offer.id);assert.equal(f.call('mystery/resolve',{id:offer.id,choice:'accept'},2).status,409);f.advance(11*60000);assert.equal(f.call('mystery/resolve',{id:expired.id,choice:'accept'},2).status,409);assert.equal(f.call('mystery',undefined,2).body.offer,null);
+ online(15);const expired=f.call('mystery',undefined,2).body.offer;assert.notEqual(expired.id,offer.id);assert.equal(f.call('mystery/resolve',{id:offer.id,choice:'accept'},2).status,409);f.advance(11*60000);assert.equal(f.call('mystery/resolve',{id:expired.id,choice:'accept'},2).status,409);assert.equal(f.call('mystery',undefined,2).body.offer,null);
 });
 
 test('investment quotes fluctuate over time, stay stable on refresh, and longer terms have higher bounded rates',t=>{
@@ -290,7 +290,7 @@ test('Admins can manage ordinary players but cannot reach Owner through any admi
  assert.equal(f.q('SELECT role FROM users WHERE id=1').role,'owner');assert.equal(f.q('SELECT cash FROM users WHERE id=4').cash,123456);
 });
 test('robbery has no fixed cap; perfect hostage payout scales with rank and respects conservation',t=>{
- const f=fixture(t);f.run('UPDATE users SET cash=100000000,personal_protection=0 WHERE id=2');const r=f.call('pvp',{kind:'rob',target:'MemberOne'},3);assert.equal(r.body.reward,10000000);assert.equal(f.q('SELECT cash FROM users WHERE id=2').cash,90000000);
+ const f=fixture(t);f.run('UPDATE users SET cash=100000000,personal_protection=0 WHERE id=2');const r=f.call('pvp',{kind:'rob',target:'MemberOne'},3);assert.equal(r.body.reward,100000000);assert.equal(f.q('SELECT cash FROM users WHERE id=2').cash,0);
  f.advance(600001);f.run('UPDATE users SET energy=100 WHERE id=1');f.high(true);f.run('UPDATE users SET xp=?,cash=100000000,protected_until=0 WHERE id=2',ranks.at(-1).xp);const high=f.call('pvp',{kind:'hostage',target:'MemberOne'},3);assert.equal(high.body.reward,10000000);assert.equal(high.body.quality,100);
  f.advance(600001);f.run('UPDATE users SET energy=100 WHERE id=1');f.run('UPDATE users SET xp=650,protected_until=0,captured_until=0 WHERE id=2');const low=f.call('pvp',{kind:'hostage',target:'MemberOne'},3);assert.ok(low.body.reward<high.body.reward);assert.ok(low.body.chance>high.body.chance);
 });

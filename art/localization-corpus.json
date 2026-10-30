@@ -189,6 +189,13 @@
     "translated": true
   },
   {
+    "key": " minute cooldown",
+    "files": [
+      "app.js"
+    ],
+    "translated": true
+  },
+  {
     "key": " next copy",
     "files": [
       "premium.js"
@@ -1237,7 +1244,7 @@
     "translated": true
   },
   {
-    "key": "{v7} damage · {v8} minute cooldown",
+    "key": "{v7} damage · {v8}",
     "files": [
       "app.js"
     ],
@@ -2072,6 +2079,13 @@
     "translated": true
   },
   {
+    "key": "All notifications",
+    "files": [
+      "activity-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "All players",
     "files": [
       "legacy-ui.js",
@@ -2454,6 +2468,13 @@
     "translated": true
   },
   {
+    "key": "Attacks, hospital stays, family events and other important news are saved here instead of interrupting your game.",
+    "files": [
+      "activity-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Attempt a breakout",
     "files": [
       "underworld-ui.js"
@@ -2508,6 +2529,13 @@
     "key": "Automatic",
     "files": [
       "app.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Automatic collection every two hours, including while offline.",
+    "files": [
+      "premium.js"
     ],
     "translated": true
   },
@@ -3924,6 +3952,20 @@
     "translated": true
   },
   {
+    "key": "Cooldown: 30 min on failure; 24 hours on success",
+    "files": [
+      "app.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Cooldown: 5 min on failure; 30 min on success",
+    "files": [
+      "app.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Cost {v0} · Sale range {v1}–{v2}",
     "files": [
       "logistics-ui.js"
@@ -5019,6 +5061,13 @@
     "translated": true
   },
   {
+    "key": "Family careers",
+    "files": [
+      "underworld-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Family cargo: {v0}",
     "files": [
       "activity-ui.js"
@@ -5135,7 +5184,8 @@
   {
     "key": "Family possessions",
     "files": [
-      "empire-ui.js"
+      "empire-ui.js",
+      "underworld-ui.js"
     ],
     "translated": true
   },
@@ -5818,6 +5868,13 @@
     "key": "Hold",
     "files": [
       "expansion-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Hospital",
+    "files": [
+      "activity-ui.js"
     ],
     "translated": true
   },
@@ -6671,7 +6728,7 @@
     "translated": true
   },
   {
-    "key": "Loot: up to 10% of target cash · no fixed cap",
+    "key": "Loot: 10–100% of target cash; full cash is rare. Rank and Power affect the odds.",
     "files": [
       "app.js"
     ],
@@ -6828,6 +6885,20 @@
     "key": "Map zoom",
     "files": [
       "city-map-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Mark all as read",
+    "files": [
+      "activity-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Mark as read",
+    "files": [
+      "activity-ui.js"
     ],
     "translated": true
   },
@@ -7293,7 +7364,7 @@
     "translated": true
   },
   {
-    "key": "Net generated income is gross income minus seizures and closure losses. It accumulates as saved income until you claim it manually. Loss percentage is measured against gross income.",
+    "key": "Net generated income is gross income minus seizures and closure losses. Personal hourly income is saved until you claim it, and the server also collects it into cash automatically every two hours, even while you are offline. Manual claims remain available at any time and do not move the automatic schedule. Prison and coma pause earnings and automatic payment. Full wallets keep unpaid income saved. The 24-active-hour accumulation cap remains a safety limit if automatic collection cannot complete.",
     "files": [
       "premium.js"
     ],
@@ -7741,6 +7812,13 @@
     "translated": true
   },
   {
+    "key": "No notifications to show.",
+    "files": [
+      "activity-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "No open bounties. The streets are quiet.",
     "files": [
       "player-systems-ui.js"
@@ -7966,6 +8044,13 @@
   },
   {
     "key": "NOTHING HAPPENS UNNOTICED",
+    "files": [
+      "activity-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Notification panel",
     "files": [
       "activity-ui.js"
     ],
@@ -8400,6 +8485,13 @@
     "translated": true
   },
   {
+    "key": "owned",
+    "files": [
+      "underworld-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Owned — equip in My profile",
     "files": [
       "shop-ui.js"
@@ -8769,6 +8861,7 @@
     "key": "Player operations",
     "files": [
       "app.js",
+      "legacy-ui.js",
       "profile-ui.js"
     ],
     "translated": true
@@ -8981,6 +9074,13 @@
     "key": "Principal",
     "files": [
       "investment-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Prison",
+    "files": [
+      "activity-ui.js"
     ],
     "translated": true
   },
@@ -9442,6 +9542,13 @@
     "key": "Ranks & rewards",
     "files": [
       "premium.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Read",
+    "files": [
+      "activity-ui.js"
     ],
     "translated": true
   },
@@ -10171,6 +10278,7 @@
   {
     "key": "Rival families",
     "files": [
+      "activity-ui.js",
       "empire-ui.js"
     ],
     "translated": true
@@ -10209,7 +10317,8 @@
     "files": [
       "app.js",
       "community-ui.js",
-      "staff-totals-ui.js"
+      "staff-totals-ui.js",
+      "underworld-ui.js"
     ],
     "translated": true
   },
@@ -12029,6 +12138,14 @@
     "translated": true
   },
   {
+    "key": "Unavailable",
+    "files": [
+      "legacy-ui.js",
+      "profile-ui.js"
+    ],
+    "translated": true
+  },
+  {
     "key": "Unclaimed",
     "files": [
       "owner-ui.js"
@@ -12088,6 +12205,20 @@
     "key": "Unlocked by",
     "files": [
       "premium.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Unread",
+    "files": [
+      "activity-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "Unread notifications",
+    "files": [
+      "activity-ui.js"
     ],
     "translated": true
   },
@@ -13088,6 +13219,13 @@
     "key": "Your trophy cabinet",
     "files": [
       "midnight-ui.js"
+    ],
+    "translated": true
+  },
+  {
+    "key": "YOUR UNDERWORLD DISPATCHES",
+    "files": [
+      "activity-ui.js"
     ],
     "translated": true
   },

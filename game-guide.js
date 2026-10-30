@@ -1,3 +1,4 @@
+import {notificationRule,automaticIncomeRule,robberyRule} from './public/activity-copy.js';
 import {activityRule} from './public/activity-copy.js';
 import {createTranslator} from './public/i18n.js';
 import {territoryGuide} from './territory-guide.js';
@@ -93,12 +94,16 @@ export const guideTopics=[
 ];
 
 export function guideAnswer(db,u,question,time=Date.now(),context={}){
+ if(/notification|melding|notific|benachricht|myster|misterio|npc|extra.*missi|geheim.*auftrag/.test(String(question||'').toLowerCase()))return {name:'Luca Moretti',mode:'local',answer:createTranslator(context.language||'en')(notificationRule),links:[{tab:'notifications',label:createTranslator(context.language||'en')('Notification panel')}],suggestions:[]};
  if(/my activity|activity timeline|activiteit|activiteiten|actividad|activité|aktivität|aktivitat|what happened.*away|gebeurd.*offline/i.test(question)){const text=createTranslator(context.language||'en');return {name:'Luca Moretti',mode:'local',answer:text(activityRule),links:[{tab:'activity',label:text('My activity')}],suggestions:[]};}
 
  const territory=territoryGuide(db,u,question,context.language);if(territory)return territory;
  const crypto=cryptoGuide(question,u,time,context);if(crypto)return crypto;
  const trading=tradingGuide(question,context);if(trading)return trading;
  const sales=drugSalesGuide(question,u,time,context);if(sales)return sales;
+ if(/berov|besteel|robbery|rob player|robo|robar|voler|braqu|beraub|raub/.test(String(question||'').toLowerCase()))return {name:'Luca Moretti',mode:'local',answer:createTranslator(context.language||'en')(robberyRule),links:[{tab:'combat',label:'Player operations'}],suggestions:[]};
+ if(/(?:auto|offline).*(?:income|inkomen|ingres|revenu|einnahm)|(?:income|inkomen|ingres|revenu|einnahm).*(?:auto|offline)/.test(String(question||'').toLowerCase()))return {name:'Luca Moretti',mode:'local',answer:createTranslator(context.language||'en')(automaticIncomeRule),links:[{tab:'dashboard',label:'Dashboard'}],suggestions:[]};
+ if(['es','fr','de'].includes(context.language)&&/auto|offline|income cap|passiv|ingresos.*hora|revenus.*hora|stundeneinkommen/.test(String(question||'').toLowerCase()))return {name:'Luca Moretti',mode:'local',answer:createTranslator(context.language)(automaticIncomeRule),links:[{tab:'dashboard',label:'Dashboard'}],suggestions:[]};
  if(['es','fr','de'].includes(context.language))return localizedGuideReply(guideAnswer(db,u,localizedGuideQuery(question,context.language),time,{...context,language:'en',knowledgeLanguage:context.language}),u,context);
 
  const topicQuery=String(question||'').toLowerCase(),dutch=context.language==='nl';
@@ -106,7 +111,7 @@ export function guideAnswer(db,u,question,time=Date.now(),context={}){
  if(/push|device notification|browser notification/.test(topicQuery))return {name:'Luca Moretti',mode:'local',answer:dutch?'Pushmeldingen op apparaten zijn voorlopig gepauzeerd. Meldingen in het spel blijven werken. Voor latere activering zijn HTTPS, VAPID-sleutels, toestemming en tests op echte apparaten nodig.':'Device push notifications are temporarily paused. In-game notices still work. Future activation needs HTTPS, VAPID keys, permission and real-device tests.',links:[{tab:'dashboard',label:'Dashboard'}],suggestions:[]};
  if(/income cap|24.hour|24 uur|inkomen.*(?:vol|limiet|claim)|passive.*(?:cap|collect)|hourly income/.test(topicQuery)){
   const elapsed=Math.floor((context.incomeClock?.elapsed||0)/3600000),saved='$'+Number(u.pending_income||0).toLocaleString('en-US'),detained=Math.max(u.prison_until||0,u.hospital_until||0)>time;
-  return {name:'Luca Moretti',mode:'local',answer:dutch?'Persoonlijk passief geld stopt na 24 actieve verdienuren totdat je al het opgeslagen inkomen claimt. Pagina’s openen of opnieuw inloggen omzeilt dit niet. Coma en gevangenis pauzeren de teller. Nu: '+elapsed+'/24 uur; opgeslagen '+saved+'.'+(detained?' Regel eerst je vrijlating.':' Claim via Dashboard.'): 'Personal passive cash stops after 24 active earning hours until all saved income is claimed. Browsing or signing in cannot bypass the cap. Coma and prison pause the clock. Current cycle: '+elapsed+'/24 hours; saved '+saved+'.'+(detained?' Arrange release first.':' Collect on Dashboard.'),links:[{tab:'dashboard',label:'Dashboard'}],suggestions:[]};
+  return {name:'Luca Moretti',mode:'local',answer:createTranslator(context.language||'en')(automaticIncomeRule)+'\n'+(dutch?'Persoonlijk passief geld stopt na 24 actieve verdienuren totdat je al het opgeslagen inkomen claimt. Pagina’s openen of opnieuw inloggen omzeilt dit niet. Coma en gevangenis pauzeren de teller. Nu: '+elapsed+'/24 uur; opgeslagen '+saved+'.'+(detained?' Regel eerst je vrijlating.':' Claim via Dashboard.'): 'Personal passive cash stops after 24 active earning hours until all saved income is claimed. Browsing or signing in cannot bypass the cap. Coma and prison pause the clock. Current cycle: '+elapsed+'/24 hours; saved '+saved+'.'+(detained?' Arrange release first.':' Collect on Dashboard.')),links:[{tab:'dashboard',label:'Dashboard'}],suggestions:[]};
  }
  if(/referral|aanbreng|verwijz|invite.*friend|vriend.*uitnodig/.test(String(question||'').toLowerCase()))return referralAdvice(context.referrals,context.language);
  if(context.language==='nl')return guideAnswerNL(db,u,question,time,context);

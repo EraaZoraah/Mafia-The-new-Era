@@ -1,0 +1,3 @@
+Built-in imagegen. Prompt: Photorealistic panoramic luxury mafia intelligence dispatch room, black marble desk, brass telephone, cream envelopes with burgundy wax seals, discreet communications console, warm gold lamp, nighttime city windows. Black, charcoal, gold, restrained burgundy. 3:1 banner, all subjects inside central horizontal band. No people, text, logos or watermarks.
+Original: public/images/banner-notifications-v1.png
+Delivery: public/images/optimized/banner-notifications-v1.png.webp
